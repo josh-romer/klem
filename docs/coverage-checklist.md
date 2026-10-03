@@ -3440,9 +3440,20 @@ review remains open under the completion review below.
   explicitly assigns 서툰 to 서툴다 rather than 서투르다. The complete earlier
   [paradigm explanation, pp. 125–126](https://www.korean.go.kr/nkview/nklife/2007_3/2007_0311.pdf)
   agrees. Preserve both heads and the existing short-stem path; a lexical alias
-  would contradict this inflection evidence. The other 21 observations remain
-  unreviewed, including source-written 뒤얽히여, phonetic-looking 앙뭅니다,
-  apparent truncations, changed base spelling and the 삐뚤빼뚤/삐뚤삐뚤 group.
+  would contradict this inflection evidence. That frozen audit retains its
+  original one-reviewed/21-unreviewed state. A subsequent
+  [six-case spelling review](../tests/fixtures/phonetic-paradigm-sources.json)
+  adjudicates 극악함니다, 뒤얽히여, 모라치어, 앙뭅니다, 찌저지어 and
+  찌저지니 against the unchanged native heads. These are agent applications of
+  the reviewed spelling provisions, not explicit FAQ judgments of those tokens.
+  Stable written stems/endings, ㄹ deletion and 아/어 spelling distinguish the
+  standard written companions from nasalization and permitted [여] pronunciation.
+  Current NIKL answers of
+  [2026-07-14](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=333779)
+  and [2026-04-21](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=329760)
+  corroborate the relevant pronunciation scopes. Fifteen observations remain
+  unreviewed, including truncations, changed base spelling and the
+  삐뚤빼뚤/삐뚤삐뚤 group; independent Korean-language review remains pending.
   Current full dictionary views still show 서툰 under the long head and
   뒤얽히여 as a written application. Persistence is not orthographic approval;
   pronunciation fields and spelling fields require separate review. Add scoped
@@ -3456,6 +3467,25 @@ review remains open under the completion review below.
   The [verification record](remaining-paradigm-evaluation.json) keeps the scoped
   judgments, all three CLI dictionary modes and their complete outputs separate
   from the unchanged original discovery count and remaining source reviews.
+  The later [extraction tool](../tools/phonetic_paradigm_preflight.py) freezes
+  five complete native entries, their English-only import projection, all
+  source spelling/pronunciation fields and 24 full before outputs. Twelve new
+  ledger cases require six standard written companions and forbid only six
+  named head/ending mappings. Raw identity and alternate candidates remain
+  visible; no production spelling normalization or alias is added. Three
+  [offline regression tests](../tests/phonetic_paradigms.rs) cover native import
+  preservation, Unicode, candidate retention, ledger bindings and library/CLI
+  parity for both dictionary filters. The
+  [follow-up verification](phonetic-paradigm-evaluation.json) preserves all 72
+  full-dictionary CLI responses and their 36 scoped judgments. All earlier case
+  and source objects and the original unrecovered count of 22 remain unchanged.
+  All 781 Nix release tests, three host flake checks, formatting, Clippy and nine
+  inventory tests pass; packaged CLI/server bytes match the previous package.
+  The next review has now located all three expert-reviewed senses for the
+  separate [삐뚤빼뚤하다 head](https://opendict.korean.go.kr/dictionary/view?sense_no=184452&viewType=confirm),
+  with source-response hashes and existing raw candidate indices retained in
+  the follow-up record. Its four source observations remain pending until their
+  judgments and regressions are bound individually.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

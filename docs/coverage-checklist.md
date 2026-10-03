@@ -3425,7 +3425,7 @@ review remains open under the completion review below.
   named source paradigm, not a claim that every ㄼ stem is irregular.
   ㄼ pronunciation before 하 and the separate ㄶ/ㅀ shortening scope stay open.
 
-- [ ] **COV-021p — Remaining written-source observations and head discrepancies.**
+- [x] **COV-021p — Remaining written-source observations and head discrepancies.**
   Review the remaining 22 original entry/form observations before treating any
   as required gold or adding spelling recovery. The
   [frozen source audit](remaining-paradigm-source-preflight.json) assigns stable
@@ -3451,9 +3451,13 @@ review remains open under the completion review below.
   Current NIKL answers of
   [2026-07-14](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=333779)
   and [2026-04-21](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=329760)
-  corroborate the relevant pronunciation scopes. Fifteen observations remain
-  unreviewed, including truncations, changed base spelling and the
-  삐뚤빼뚤/삐뚤삐뚤 group; independent Korean-language review remains pending.
+  corroborate the relevant pronunciation scopes. That follow-up retains its
+  historical fifteen-pending state. A final
+  [written-source review](../tests/fixtures/source-head-sources.json) now binds
+  all fifteen remaining observations to individual scoped judgments: seven
+  source-head discrepancies, seven written-base conflicts and one truncated
+  formal-ending field. The original 22 observations all have agent dispositions;
+  independent Korean-language review remains pending under the broader audit.
   Current full dictionary views still show 서툰 under the long head and
   뒤얽히여 as a written application. Persistence is not orthographic approval;
   pronunciation fields and spelling fields require separate review. Add scoped
@@ -3484,8 +3488,53 @@ review remains open under the completion review below.
   The next review has now located all three expert-reviewed senses for the
   separate [삐뚤빼뚤하다 head](https://opendict.korean.go.kr/dictionary/view?sense_no=184452&viewType=confirm),
   with source-response hashes and existing raw candidate indices retained in
-  the follow-up record. Its four source observations remain pending until their
-  judgments and regressions are bound individually.
+  the follow-up record. Four new required paths retain that separately attested
+  head. The three independently listed native heads 격하되다, 고착되다 and
+  고하다 likewise retain their own inflections; none becomes an alias for the
+  listed discovery head. The source fields themselves are unchanged.
+  [Four offline tests](../tests/source_heads.rs) preserve fourteen complete
+  native entries, all original spelling/pronunciation fields, Unicode,
+  candidate order, both dictionary filters and CLI parity. A deliberately
+  partial external-provider test keeps the three expert-reviewed senses
+  independent of the complete KRDict entry, demonstrating that the alternate
+  head can pass filtering when supplied by another dictionary. Its absence
+  from the pinned KRDict snapshot is recorded as a dictionary gap, not an
+  invalid lemma or authorization to rewrite the snapshot.
+  Thirty-seven new ledger cases add 22 required and fifteen forbidden paths.
+  [Final review verification](source-head-evaluation.json) retains 228 complete
+  CLI responses for 76 surfaces, 111 scoped mode checks, all earlier case/source
+  objects, the original unrecovered count of 22, and the complete formal-ending
+  sources for the truncation judgment. All original source/gold/baseline objects
+  remain unchanged. All 785 Nix release tests, three host flake checks,
+  formatting, Clippy and nine inventory tests pass. Packaged CLI/server bytes
+  match the previous package. **Bounded written-source review complete:** all
+  22 original entry/form observations have individually identified scoped agent
+  judgments and regressions, without relabeling the unchanged original misses
+  as recovered pairs. Independent Korean-language review, the separate POS
+  issue below, and the full parent checklist remain open.
+
+- [ ] **COV-021q — Independently evidenced native POS conflicts.** The pinned
+  complete krdict:600930 entry labels 발그스레하다 as 동사, while the complete
+  [expert-reviewed source](https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm)
+  labels it 형용사. Preserve both source identities and the original native
+  label. Review the effect on ending/prefinal attachment and dictionary filters
+  before choosing an annotation policy; standard-written judgments in COV-021p
+  do not repair POS or license a blanket definition-based class guess. The
+  [primary review metadata](../tests/fixtures/source-head-primary-reviews.json)
+  preserves the external URL/response hash and explicitly separates this issue
+  from the written-form observations. Test actual component ownership, each
+  affected boundary, sparse/legacy entries, CLI/API agreement and earlier
+  hypotheses before applying any independently sourced class evidence.
+  The [frozen source preflight](native-pos-source-preflight.json) now records
+  all three current dictionary modes for 46 authored diagnostic surfaces.
+  The native verb label rejects the 으냐 path in 발그스레하냐 and the 구나
+  path in 발그스레하구나. Three explicitly authored
+  [POS controls](native-pos-diagnostic-controls.json), with the original complete
+  native entry preserved separately, isolate four differing named-head paths:
+  는, 으냐, 구나 and 느냐. These controls are not source repairs, required gold
+  or a selected annotation policy. A global unknown-POS fallback also relaxes
+  coarse lexical roles; any policy must retain known predicate/nominal roles,
+  independent entry evidence and actual component ownership.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

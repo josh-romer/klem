@@ -33,7 +33,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "b254bf1cc896bd16248d90319e33e937ae969c8ec9cafa8860dd51a9710a489d",
+    "docs/coverage-checklist.md": "c3e0c0b6da28c8e76ee2b97d27f7555ff0310e0a60fdce302745f63cc2637046",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -72,7 +72,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "5ba9d2e2e48b58c77c759de66a1e88e9b8d6f9aede710548270ea41e8cf3ebf6",
-    "docs/inventory-reviews.json": "505bf7c0946673eb7b851651f31381d6a0cff076744af267b1d9881be53738f1",
+    "docs/inventory-reviews.json": "9687651662050840b41d868f3e27f4b0b482072a209a70a1a4cb3ff03b17ad36",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -328,9 +328,12 @@
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
     "tools/adjectival_allomorph_compare.py": "1793d7193cea57e8a82db9af4881a75c73673b0aea4a70ba81e7d8433b9b6e9f",
     "tools/adjectival_allomorph_runtime.py": "bd48472d74ad22d713a935242b79924008e59b1185badccdc2bccbbfe6cbe2bd",
+    "tools/emphatic_ending_compare.py": "d529a277b4a17dad4a2e8f6a917d0e0b1c21048c77e279342be5284e5bfbb9d7",
     "tools/emphatic_ending_corpora.py": "504b94fbc8c7ea41649ba79dfa0ae14d3476db9a30e546cf58c76b17266bac28",
     "tools/emphatic_ending_diagnostics.py": "83c6d6377c4415503abc0aeecc41b1a039e21de597ecc77de8f867b11fc4a35a",
+    "tools/emphatic_ending_queue.py": "2fed8172d407789455d6f7a6200d2af3fd5f30e62e1bb6d0f48f51a283730dff",
     "tools/emphatic_ending_regressions.py": "4ddc9fa68614e93f6cb84af2cf0c305421d49391b6a7dde1d93ca60e23d0832f",
+    "tools/emphatic_ending_runtime.py": "bc9f366a9713a26d8c7dab4cfcf0be3b6d1307cecc3f00ff24324331c82c47c3",
     "tools/gam_question_compare.py": "61ffcc148c8838a0726b0cacdd7159556d30faebd5644f61266d099d2bd5cf9e",
     "tools/gam_question_corpora.py": "a305207ab649ea7df3c3e9c667890a1aca6bd8992e3f70f5e241615157f532ea",
     "tools/gam_question_runtime.py": "45f01a55ea5562cebd2ebb75789af64021cbdefea286baf8879112b4ebf1625c",
@@ -338,6 +341,7 @@
     "web/tests/adjectival-allomorph.mjs": "953c6080b3d52c25248b86e2efbe9d20d3a25fb8386b4d91028fd06cd6a065f7",
     "web/tests/browser.mjs": "74b4d87386348a0cedda170356868d57a8b3d1bd89b859d4e7516dd6066fdb2e",
     "web/tests/caution-ending.mjs": "40f695825c5bceec04ed1b4eac0db1900390c80dc976ad86788aa624205a6607",
+    "web/tests/emphatic-ending.mjs": "910e741d845e1dce49a3ffb7b2ed5af740727d04f3b3cd9bbf968fee32612195",
     "web/tests/gam-question.mjs": "bb1ff574a025d1a6fd926511241f2d5f0a0e3bfe6cfbb25ab21d4fc8a016fa85"
   },
   "counts": {
@@ -27168,8 +27172,8 @@
         "checklist": [
           "COV-017bw"
         ],
-        "scope": "-게끔 retains verb/adjective stems, honorifics, derived 답다 and source-backed 하다/되다 joins. The causative past guard uses only the immediate owner; standalone unlisted prefinals remain raw with Unknown native assessments. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity.",
-        "remaining": "Complete broad stream comparisons and packaged runtime/browser verification remain pending; the four held-out reports preserve all original gold and recover five 게끔 misses. Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict.",
+        "scope": "-게끔 retains verb/adjective stems, honorifics, derived 답다 and source-backed 하다/되다 joins. The causative past guard uses only the immediate owner; standalone unlisted prefinals remain raw with Unknown native assessments. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity. Eight broad comparisons preserve prior paths/native fields/spacing across 1,128,312 records. Packaged evidence checks 181 full native endpoints, 264 encoded judgments, 18 cache/filter streams and 1,343 ordered shapes; six browser exports, nine diagrams and three ending-source links pass, with inspected mobile layout.",
+        "remaining": "Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. The four held-out reports preserve all original gold and recover five 게끔 misses. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict; the two old compatibility exclusions remain explicitly recorded.",
         "evidence": [
           {
             "path": "tests/emphatic_endings.rs",
@@ -27197,6 +27201,18 @@
           },
           {
             "path": "tools/emphatic_ending_diagnostics.py"
+          },
+          {
+            "path": "tools/emphatic_ending_compare.py"
+          },
+          {
+            "path": "tools/emphatic_ending_runtime.py"
+          },
+          {
+            "path": "tools/emphatic_ending_queue.py"
+          },
+          {
+            "path": "web/tests/emphatic-ending.mjs"
           }
         ],
         "judgments": [
@@ -28449,8 +28465,8 @@
         "checklist": [
           "COV-017bw"
         ],
-        "scope": "-고말고 retains verb/adjective stems, honorific/past boundaries, derived 답다 and explicit copulas without choosing a contextual sense. The original novel supports an outer 요 path. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity.",
-        "remaining": "Complete broad stream comparisons and packaged runtime/browser verification remain pending; the four held-out reports preserve all original gold and recover five 게끔 misses. Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict.",
+        "scope": "-고말고 retains verb/adjective stems, honorific/past boundaries, derived 답다 and explicit copulas without choosing a contextual sense. The original novel supports an outer 요 path. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity. Eight broad comparisons preserve prior paths/native fields/spacing across 1,128,312 records. Packaged evidence checks 181 full native endpoints, 264 encoded judgments, 18 cache/filter streams and 1,343 ordered shapes; six browser exports, nine diagrams and three ending-source links pass, with inspected mobile layout.",
+        "remaining": "Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. The four held-out reports preserve all original gold and recover five 게끔 misses. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict; the two old compatibility exclusions remain explicitly recorded.",
         "evidence": [
           {
             "path": "tests/emphatic_endings.rs",
@@ -28478,6 +28494,18 @@
           },
           {
             "path": "tools/emphatic_ending_diagnostics.py"
+          },
+          {
+            "path": "tools/emphatic_ending_compare.py"
+          },
+          {
+            "path": "tools/emphatic_ending_runtime.py"
+          },
+          {
+            "path": "tools/emphatic_ending_queue.py"
+          },
+          {
+            "path": "web/tests/emphatic-ending.mjs"
           }
         ],
         "judgments": [
@@ -45569,8 +45597,8 @@
         "checklist": [
           "COV-017bw"
         ],
-        "scope": "-다마다 retains verb/adjective stems, honorific/past boundaries, derived 답다 and explicit copulas without choosing a contextual sense. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity.",
-        "remaining": "Complete broad stream comparisons and packaged runtime/browser verification remain pending; the four held-out reports preserve all original gold and recover five 게끔 misses. Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict.",
+        "scope": "-다마다 retains verb/adjective stems, honorific/past boundaries, derived 답다 and explicit copulas without choosing a contextual sense. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity. Eight broad comparisons preserve prior paths/native fields/spacing across 1,128,312 records. Packaged evidence checks 181 full native endpoints, 264 encoded judgments, 18 cache/filter streams and 1,343 ordered shapes; six browser exports, nine diagrams and three ending-source links pass, with inspected mobile layout.",
+        "remaining": "Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. The four held-out reports preserve all original gold and recover five 게끔 misses. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict; the two old compatibility exclusions remain explicitly recorded.",
         "evidence": [
           {
             "path": "tests/emphatic_endings.rs",
@@ -45598,6 +45626,18 @@
           },
           {
             "path": "tools/emphatic_ending_diagnostics.py"
+          },
+          {
+            "path": "tools/emphatic_ending_compare.py"
+          },
+          {
+            "path": "tools/emphatic_ending_runtime.py"
+          },
+          {
+            "path": "tools/emphatic_ending_queue.py"
+          },
+          {
+            "path": "web/tests/emphatic-ending.mjs"
           }
         ],
         "judgments": [

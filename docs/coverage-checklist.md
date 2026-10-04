@@ -1884,8 +1884,8 @@ review remains open under the completion review below.
   the historical package evidence.
   Contextual sense/register selection and independent Korean review remain open.
 
-- [ ] **COV-017bw — Emphatic purpose -게끔 and affirmative -고말고/-다마다.**
-  **Partial: parser rules and individual regressions implemented.** The
+- [x] **COV-017bw — Emphatic purpose -게끔 and affirmative -고말고/-다마다.**
+  **Bounded modern paths and source/corpus/runtime audits complete.** The
   [immutable preflight](emphatic-ending-source-preflight.json.gz) scans all 56,555
   native entries and preserves 36 spelling observations, 162 complete native
   owners, 155 prior words in three dictionary filters, 14 original annotated
@@ -1924,8 +1924,23 @@ review remains open under the completion review below.
   change has a stable ID and its original source/case occurrences; contextual
   and independent judgments remain pending. [Its verifier](../tools/emphatic_ending_diagnostics.py)
   replays every changed record offline, including independently analyzed spacing
-  segments and their full native owners. Complete broad stream comparisons and
-  packaged CLI/API/browser checks remain pending.
+  segments and their full native owners. [Eight broad stream comparisons](emphatic-ending-observations.json.gz)
+  cover 1,128,312 records across raw/headword/compatible candidate and novel
+  inputs, including novel spacing modes. Only the novel's 있고말고,
+  그렇고말고요 and 그렇고말고 gain candidates (15 changed occurrences across
+  five modes); prior paths, native assessments and spacing order remain intact.
+  [Packaged CLI/API evidence](emphatic-ending-packaged-runtime.json.gz) retains
+  181 full native endpoint checks, 264 encoded judgments, 18 complete cache/filter
+  streams with exact UTF-8 offsets and 1,343 ordered Rust component shapes.
+  [Browser evidence](emphatic-ending-packaged-browser.json) verifies six exports
+  of 309 records, nine diagrams, all three ending-source links, no page errors
+  and no mobile horizontal overflow; the mobile screenshot was inspected.
+  The reader displays 하+어/었 as 하+여/였 while exports preserve canonical
+  morphemes. [Broad](../tools/emphatic_ending_compare.py),
+  [runtime](../tools/emphatic_ending_runtime.py) and
+  [browser](../tools/emphatic_ending_queue.py) offline gates run in Nix.
+  Historical implementation texts bind these reports without requiring future
+  shared parser/catalog changes to overwrite the evidence.
   Unlisted prefinals, additional connectors,
   copula omission, contextual sense/register and independent review remain open.
   The [offline verifier](../tools/emphatic_ending_audit.py) runs in Nix; its

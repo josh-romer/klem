@@ -196,8 +196,12 @@
                 ./tools/emphatic_ending_regressions.py
                 ./tools/emphatic_ending_corpora.py
                 ./tools/emphatic_ending_diagnostics.py
+                ./tools/emphatic_ending_compare.py
+                ./tools/emphatic_ending_runtime.py
+                ./tools/emphatic_ending_queue.py
                 ./src/engine.rs ./src/grammar.rs
                 ./web/tests/gam-question.mjs
+                ./web/tests/emphatic-ending.mjs
                 ./examples/audit_adjectival_allomorph.rs
                 ./web/tests/adjectival-allomorph.mjs
                 ./tools/adjectival_allomorph.rs
@@ -277,6 +281,9 @@
             python tools/emphatic_ending_regressions.py --verify
             python tools/emphatic_ending_corpora.py --verify
             python tools/emphatic_ending_diagnostics.py --verify
+            python tools/emphatic_ending_compare.py --verify
+            python tools/emphatic_ending_runtime.py --verify
+            python tools/emphatic_ending_queue.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

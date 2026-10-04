@@ -3314,7 +3314,8 @@ review remains open under the completion review below.
   sources are unchanged. This audit does not certify the remaining representations.
 
 - [ ] **COV-019ag — Lexical 되다 in represented auxiliary constructions.**
-  **Newly tracked representation gap:** joined 살게끔되어있다 and
+  **Partial: immutable source/candidate preflight and retention checks complete;
+  role alternatives not yet implemented.** Joined 살게끔되어있다 and
   타당하게끔되었다 have source-backed raw paths, but the parser's legacy
   auxiliary role for 되다 conflicts with KRDict verb entry 89858. Headword
   filtering retains them; compatibility filtering rejects that role. Review
@@ -3326,6 +3327,37 @@ review remains open under the completion review below.
   independent before/after CLI, corpus and reader-visible evidence. The two
   exact current policy conflicts are retained in
   [dictionary-attachments.json](../tests/fixtures/dictionary-attachments.json).
+  The [pre-change snapshot](doeda-role-source-preflight.json.gz) scans all 56,555
+  native entries, preserving 4,449 literal spelling observations with their
+  complete example groups, 5,335 full native owners/readings and all 4,787
+  original/independently analyzed/joined words in three filters with spacing.
+  Six original corpus files contribute 20 joined rows and 1,441 adjacent spaced
+  pairs with complete sentences and unchanged ten-column annotations; 184 novel
+  occurrences retain complete paragraphs and exact UTF-8 locations. Literal
+  matches are observations, not contextual gold or automatic grammatical licenses.
+  The original right-owner annotations likewise differ: GSD uses verb VV tags,
+  while KAIST predominantly uses auxiliary px tags. Keep each corpus's own tags
+  and the two source-attributed representations instead of repairing either gold.
+  [81 individually named proposals](../tests/fixtures/doeda-role-sources.json)
+  separate 78 lexical-role alternatives from three scoped connector projection
+  controls; the latter do not declare all other native complements impossible.
+  The 35-entry finite native importer fixture is explicitly separate from the
+  complete scan archive. [Two retention tests](../tests/doeda_role_sources.rs)
+  preserve every finite-cohort prior candidate/native reading/order across
+  NFC/NFD and three cache budgets, and verify all 35 complete native imports.
+  Entry 89858 has 22 senses with original IDs 1–19 and 21–23; that numbering
+  remains unchanged. Its verb senses 12–17 list -게, while NIKL's
+  [2025-03-28 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=312009&pageIndex=1)
+  describes -게 되다 as a main-plus-auxiliary construction after verbs or
+  adjectives. Both classifications remain visible; neither licenses replacing
+  historical paths or borrowing adjective entry 48214's class. Other native
+  -도록/-기로/-어야/-면/-어도/-어서는 complements are explicit separate
+  dependencies. [The offline gate](../tools/doeda_role_audit.py) verifies the
+  archive and adapter; optional --dictionary/--cli reproduces the full native
+  scan, original corpus/novel selections and every prior CLI record. Current
+  alternatives, broad before/after comparisons, full held-out recall, ordered
+  reader exports/source links, contextual judgments and independent Korean
+  review remain pending.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

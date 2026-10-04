@@ -199,6 +199,7 @@
                 ./tools/emphatic_ending_compare.py
                 ./tools/emphatic_ending_runtime.py
                 ./tools/emphatic_ending_queue.py
+                ./tools/doeda_role_audit.py
                 ./src/engine.rs ./src/grammar.rs
                 ./web/tests/gam-question.mjs
                 ./web/tests/emphatic-ending.mjs
@@ -284,6 +285,7 @@
             python tools/emphatic_ending_compare.py --verify
             python tools/emphatic_ending_runtime.py --verify
             python tools/emphatic_ending_queue.py --verify
+            python tools/doeda_role_audit.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

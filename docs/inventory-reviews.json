@@ -23643,10 +23643,12 @@
       "source_sha256": "51a909b23c1aa628e744a05d50388f7939b00d4b813dc839da5f08c6168b65e8",
       "status": "scoped",
       "checklist": [
-        "COV-019p"
+        "COV-019p",
+        "COV-019ad",
+        "COV-019ae"
       ],
-      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only. COV-019ad adds a finite native-identity immediate-left verbal requirement, assessed per entry through represented 지-negatives. Raw hypotheses and native fields are unchanged; verb homonyms and later verbal owners remain.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad finite batch verification passes; independent Korean-language review remains pending. COV-019ae separately tracks source tensions concerning tense, right endings, honorific placement and lexical adjective subsets; existing inflection judgments are not silently repaired.",
       "evidence": [
         {
           "path": "tests/continuation_aux.rs",
@@ -23670,6 +23672,16 @@
         },
         {
           "path": "docs/continuation-aux-evaluation.json"
+        },
+        {
+          "path": "tests/continuation_left.rs",
+          "test": "individual_entry_classes_filter_only_the_authored_paths"
+        },
+        {
+          "path": "tests/fixtures/continuation-left-entry-judgments.json"
+        },
+        {
+          "path": "docs/continuation-left-source-review.json"
         }
       ],
       "judgments": [
@@ -23724,10 +23736,12 @@
       "source_sha256": "63cc1a3e3af226bf8742e2be893eec00c88fb270bb6e9a9e264a9015dbf15187",
       "status": "scoped",
       "checklist": [
-        "COV-019p"
+        "COV-019p",
+        "COV-019ad",
+        "COV-019ae"
       ],
-      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only. COV-019ad adds a finite native-identity immediate-left verbal requirement, assessed per entry through represented 지-negatives. Raw hypotheses and native fields are unchanged; verb homonyms and later verbal owners remain.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad finite batch verification passes; independent Korean-language review remains pending. COV-019ae separately tracks source tensions concerning tense, right endings, honorific placement and lexical adjective subsets; existing inflection judgments are not silently repaired.",
       "evidence": [
         {
           "path": "tests/continuation_aux.rs",
@@ -23751,6 +23765,16 @@
         },
         {
           "path": "docs/continuation-aux-evaluation.json"
+        },
+        {
+          "path": "tests/continuation_left.rs",
+          "test": "individual_entry_classes_filter_only_the_authored_paths"
+        },
+        {
+          "path": "tests/fixtures/continuation-left-entry-judgments.json"
+        },
+        {
+          "path": "docs/continuation-left-source-review.json"
         }
       ],
       "judgments": [
@@ -23822,10 +23846,11 @@
       "status": "scoped",
       "checklist": [
         "COV-019p",
-        "COV-019ad"
+        "COV-019ad",
+        "COV-019ae"
       ],
-      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad freezes immediate-left class diagnostics, including the still-compatible adjective-headed 좋아내다/question-do paths. No new policy judgment or raw exclusion is made in that preflight.",
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only. COV-019ad adds a finite native-identity immediate-left verbal requirement, assessed per entry through represented 지-negatives. Raw hypotheses and native fields are unchanged; verb homonyms and later verbal owners remain.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad freezes immediate-left class diagnostics, including the still-compatible adjective-headed 좋아내다/question-do paths. No new policy judgment or raw exclusion is made in that preflight. COV-019ad finite batch verification passes; independent Korean-language review remains pending. COV-019ae separately tracks source tensions concerning tense, right endings, honorific placement and lexical adjective subsets; existing inflection judgments are not silently repaired.",
       "evidence": [
         {
           "path": "tests/continuation_aux.rs",
@@ -23852,6 +23877,16 @@
         },
         {
           "path": "docs/continuation-left-source-preflight.json"
+        },
+        {
+          "path": "tests/continuation_left.rs",
+          "test": "individual_entry_classes_filter_only_the_authored_paths"
+        },
+        {
+          "path": "tests/fixtures/continuation-left-entry-judgments.json"
+        },
+        {
+          "path": "docs/continuation-left-source-review.json"
         }
       ],
       "judgments": [
@@ -23910,10 +23945,12 @@
       "source_sha256": "6869a0725b35d5afe81416c926c7c69f221caa444434f8249b351286aed7ee24",
       "status": "scoped",
       "checklist": [
-        "COV-019p"
+        "COV-019p",
+        "COV-019ad",
+        "COV-019ae"
       ],
-      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only. COV-019ad adds a finite native-identity immediate-left verbal requirement, assessed per entry through represented 지-negatives. Raw hypotheses and native fields are unchanged; verb homonyms and later verbal owners remain.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad finite batch verification passes; independent Korean-language review remains pending. COV-019ae separately tracks source tensions concerning tense, right endings, honorific placement and lexical adjective subsets; existing inflection judgments are not silently repaired.",
       "evidence": [
         {
           "path": "tests/continuation_aux.rs",
@@ -23937,6 +23974,16 @@
         },
         {
           "path": "docs/continuation-aux-evaluation.json"
+        },
+        {
+          "path": "tests/continuation_left.rs",
+          "test": "individual_entry_classes_filter_only_the_authored_paths"
+        },
+        {
+          "path": "tests/fixtures/continuation-left-entry-judgments.json"
+        },
+        {
+          "path": "docs/continuation-left-source-review.json"
         }
       ],
       "judgments": [
@@ -23987,10 +24034,12 @@
       "source_sha256": "88a3a620a404a85e382c9d1154e4f141e0c4898b5d695158646425e4ba7140a6",
       "status": "scoped",
       "checklist": [
-        "COV-019p"
+        "COV-019p",
+        "COV-019ad",
+        "COV-019ae"
       ],
-      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only. COV-019ad adds a finite native-identity immediate-left verbal requirement, assessed per entry through represented 지-negatives. Raw hypotheses and native fields are unchanged; verb homonyms and later verbal owners remain.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad finite batch verification passes; independent Korean-language review remains pending. COV-019ae separately tracks source tensions concerning tense, right endings, honorific placement and lexical adjective subsets; existing inflection judgments are not silently repaired.",
       "evidence": [
         {
           "path": "tests/continuation_aux.rs",
@@ -24014,6 +24063,16 @@
         },
         {
           "path": "docs/continuation-aux-evaluation.json"
+        },
+        {
+          "path": "tests/continuation_left.rs",
+          "test": "individual_entry_classes_filter_only_the_authored_paths"
+        },
+        {
+          "path": "tests/fixtures/continuation-left-entry-judgments.json"
+        },
+        {
+          "path": "docs/continuation-left-source-review.json"
         }
       ],
       "judgments": [

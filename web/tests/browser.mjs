@@ -6046,6 +6046,8 @@ try {
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   const writtenVowelSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/written-vowel-sources.json"),"utf8"));
+  const continuationWrittenUpdates = JSON.parse(await readFile(resolve(root,"tests/fixtures/continuation-left-written-vowel-judgments.json"),"utf8"));
+  assert.equal(continuationWrittenUpdates.cases.length,5);
   const writtenVowelCases = recipientLedger.cases.filter(c => c.id.startsWith("written-vowel-"));
   assert.equal(writtenVowelCases.length,274);
   for (const c of writtenVowelCases) {
@@ -6057,7 +6059,10 @@ try {
     const i = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(i >= 0,c.id);
     for (const j of c.entry_judgments) {
       const entry = token.dictionary.readings[i].lemmas[0].entries.find(e => e.id === j.id);assert.ok(entry,c.id);
-      assert.equal(entry.status,j.status,c.id);assert.deepEqual(entry.conflicts,j.conflicts,c.id);
+      const update = continuationWrittenUpdates.cases.find(u => u.id === c.id && u.entry_id === j.id);
+      if(update) { assert.deepEqual(update.before,j,c.id);assert.deepEqual(update.lemmas,c.lemmas);assert.deepEqual(update.morphemes,c.morphemes); }
+      const expected = update?.after ?? j;
+      assert.equal(entry.status,expected.status,c.id);assert.deepEqual(entry.conflicts,expected.conflicts,c.id);
     }
   }
   for (const e of writtenVowelSource.source_entries) {
@@ -6096,16 +6101,20 @@ try {
 
 
   const writtenVowelCompatSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/written-vowel-compat-sources.json"),"utf8"));
+  const continuationCompatUpdates = JSON.parse(await readFile(resolve(root,"tests/fixtures/continuation-left-vowel-compat-judgments.json"),"utf8"));
+  assert.equal(continuationCompatUpdates.cases.length,28);
   const writtenVowelCompatTokens = new Map();
   for (const c of writtenVowelCompatSource.cases) {
     if (!writtenVowelCompatTokens.has(c.surface)) writtenVowelCompatTokens.set(c.surface,(await (await post("analyze",{text:c.surface})).json()).records[0]);
     const token = writtenVowelCompatTokens.get(c.surface);
     const indices = token.analysis.analyses.flatMap((a,i) => auxiliaryPath(a,c) ? [i] : []);
     assert.deepEqual(indices,c.before_candidate_indices,c.id);
+    const update = continuationCompatUpdates.cases.find(u => u.original_case.id === c.id);
+    if(update)assert.deepEqual(update.original_case,c,c.id);
     for (const i of indices) {
       const entry = token.dictionary.readings[i].lemmas[0].entries.find(e => e.id === c.owner_id);assert.ok(entry,c.id);
-      assert.equal(entry.status,c.expected_entry_status,c.id);
-      assert.deepEqual(entry.conflicts,c.expected_entry_status === "incompatible" ? [{rule:"lexical_spelling",morpheme_index:0}] : [],c.id);
+      assert.equal(entry.status,update?.after.status ?? c.expected_entry_status,c.id);
+      assert.deepEqual(entry.conflicts,update?.after.conflicts ?? (c.expected_entry_status === "incompatible" ? [{rule:"lexical_spelling",morpheme_index:0}] : []),c.id);
     }
   }
   for (const e of writtenVowelCompatSource.source_entries) assert.deepEqual((await (await post("entry",{id:e.id})).json()).entry,e,e.id);

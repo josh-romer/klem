@@ -57,6 +57,7 @@ impl Fixture {
             "krdict-complex-bieup.json",
             "krdict-source-head.json",
             "krdict-auxiliary-inventory.json",
+            "krdict-continuation-left.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -204,7 +205,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2086, 1706)
+        (2107, 1741)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

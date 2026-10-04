@@ -28,6 +28,7 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `bare_adjectival_question` | Bare lexical predicates with 으냐/으냐고/으냐는/으냐며/으냐면서/으냐니/으냔 | 길으냐니 → 긷다 + 으냐니 conflicts; 좋으냐니 remains. |
 | `intention_verb` | Eleven reviewed verbal intention forms, shared with the engine | 좋으려다가 conflicts; 크려는 retains verbal 크다. |
 | `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
+| `continuation_verb` | Six source-scoped connectors before five native continuation auxiliaries | 좋아내다 conflicts; 커내다 retains the verb homonym. |
 | `habitual_condition_verb` | Canonical 을라치면, directly or through 지-negatives | Known adjective entries conflict; attested 있다 and verbal 늦다 remain. Different auxiliaries reset the dependency. |
 | `bare_copular_ending` | Seventeen exact factual 라-family endings at a bare lexical predicate boundary | 누이다 + 라고 conflicts; 누이다 + 으라고 and 누이 + 이다 + 라고 remain. |
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
@@ -1011,3 +1012,18 @@ immediate-left class audit remains COV-019ad; 좋아내느냐도 is retained as 
 not a required grammatical reading. [Individual alternatives](question-additive-review-queue.json)
 retain actual raw indices, ordered components, entry assessments and both filter
 memberships. Every contextual interpretation and register remains unjudged.
+
+COV-019ad's [source review](continuation-left-source-review.json) adds
+`continuation_verb` for exact native auxiliary identities 내다2 (60625), 나다2
+(62134), 나가다2 (26813), 버리다2 (62601) and 치우다2 (74290). The connector
+is 어, with 고 also reviewed for 나다. It checks each left entry separately;
+커내다 retains the verb entry without lending that class to its adjective
+homonym. Explicit copulas and 답다 derivations conflict. Represented 지-negatives
+carry the dependency to the lexical owner, while another auxiliary starts its
+own owner. A later conflict does not erase the class needed to assess an
+intervening negative. Missing classes and other providers remain unknown.
+Existing conflicts take precedence, and raw candidates/native fields are intact.
+The 56 filter judgments and 276 individual entry judgments are independently
+tracked; they do not certify contextual meaning or register. 가다 and 오다
+have adjective evidence and are outside this restriction. The guide's further
+inflection and lexical restrictions remain open under COV-019ae.

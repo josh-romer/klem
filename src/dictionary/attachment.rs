@@ -31,6 +31,8 @@ pub enum AttachmentRule {
     IntentionVerb,
     ResultTransferVerb,
     RepetitiveVerb,
+    /// Five reviewed continuation auxiliaries require a verbal left owner.
+    ContinuationVerb,
     NeuraVerb,
     AuxiliaryClass,
     NegativeLexicalClass,
@@ -160,7 +162,15 @@ fn negative_lexical_class(
         let mut verb = false;
         let mut adjective = false;
         for entry in &slot.entries {
-            if entry.status == Compatibility::Incompatible {
+            // A later continuation conflict does not erase the lexical class
+            // needed to assess this intervening negative's own entry. Spelling,
+            // role and other earlier conflicts still disqualify the evidence.
+            if entry.status == Compatibility::Incompatible
+                && entry
+                    .conflicts
+                    .iter()
+                    .any(|c| c.rule != AttachmentRule::ContinuationVerb)
+            {
                 continue;
             }
             match matches
@@ -251,6 +261,76 @@ fn bare_copular_ending(form: &str) -> bool {
 // Compute the requirement once, then assess each headword entry independently.
 fn expressive_hada_connector(analysis: &Analysis, rest: &[Component]) -> Option<usize> {
     eo_auxiliary_connector(analysis, rest, "하다")
+}
+
+// Scope this requirement to the reviewed native auxiliary identities. In
+// particular, adjective examples of 가다 and 오다 prohibit a family-wide
+// "continuation means verb" inference. Only represented 지-negatives carry
+// the dependency back to an earlier owner; all other auxiliaries reset it.
+// The caller classifies its own suffixes, while a later suffix resets ownership.
+fn continuation_verb_connector(
+    annotation: &Annotation,
+    analysis: &Analysis,
+    mut rest: &[Component],
+) -> Option<usize> {
+    let mut first = true;
+    loop {
+        let next = rest.iter().position(|c| matches!(c, Component::Lemma(_)))?;
+        let morphs = &rest[..next];
+        if !first
+            && morphs.iter().any(|c| {
+                matches!(c, Component::Morpheme(i)
+                if analysis.morphemes[*i].kind == MorphemeKind::Suffix)
+            })
+        {
+            return None;
+        }
+        let connector = morphs.iter().find_map(|c| match c {
+            Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
+                Some(*i)
+            }
+            _ => None,
+        })?;
+        let Component::Lemma(index) = rest[next] else {
+            return None;
+        };
+        let lemma = &analysis.lemmas[index];
+        if lemma.kind != LemmaKind::Auxiliary {
+            return None;
+        }
+        let form = analysis.morphemes[connector].form.as_str();
+        let native_id = match (lemma.text.as_str(), form) {
+            ("내다", "어") => "krdict:60625",
+            ("나다", "어" | "고") => "krdict:62134",
+            ("나가다", "어") => "krdict:26813",
+            ("버리다", "어") => "krdict:62601",
+            ("치우다", "어") => "krdict:74290",
+            _ => "",
+        };
+        if !native_id.is_empty()
+            && annotation
+                .lemmas
+                .iter()
+                .find(|m| m.lemma == *lemma)
+                .is_some_and(|m| {
+                    m.entries.iter().any(|entry| {
+                        entry.entry.id == native_id
+                            && entry.entry.headword == lemma.text
+                            && entry.entry.homonym == "2"
+                            && entry.entry.pos == "보조 동사"
+                            && entry.effective_pos() == "보조 동사"
+                    })
+                })
+        {
+            return Some(connector);
+        }
+        if form != "지" || !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+        {
+            return None;
+        }
+        first = false;
+        rest = &rest[next + 1..];
+    }
 }
 
 // Both expressive 하다 and repetitive 대다 depend on the lexical head
@@ -588,6 +668,12 @@ impl Annotation {
                     if analysis.morphemes[*i].kind == MorphemeKind::Suffix
                     && analysis.morphemes[*i].form == "답다")
             });
+            let unclassified_derivation = !derived_adjective
+                && morphs.iter().any(|c| {
+                    matches!(c, Component::Morpheme(i)
+                    if analysis.morphemes[*i].kind == MorphemeKind::Suffix)
+                });
+            let continuation_connector = continuation_verb_connector(self, analysis, rest);
             // Tense evidence belongs to the connector's immediate owner,
             // never to an earlier lexical head through a negative auxiliary.
             let intention_prefinal = intention_connector.is_some()
@@ -1423,6 +1509,29 @@ impl Annotation {
                         // Known role, ending and spelling conflicts above
                         // take precedence; no contextual sense is selected.
                         status = Compatibility::Unknown;
+                    }
+                    if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        && let Some(i) = continuation_connector
+                    {
+                        // Judge this entry's class, never a shared homonym's.
+                        // A copula and reviewed 답다 derivation are explicit
+                        // nonverbal owners. Other derivations and unknown POS
+                        // cannot lend the base's class to the derived owner.
+                        let nonverbal = !unclassified_derivation
+                            && (derived_adjective || lemma.kind == LemmaKind::Copula
+                                || matches!(pos, "형용사" | "보조 형용사"));
+                        if nonverbal {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict {
+                                rule: AttachmentRule::ContinuationVerb,
+                                morpheme_index: Some(i),
+                            });
+                        } else if (unclassified_derivation
+                            || !matches!(pos, "동사" | "보조 동사"))
+                            && status == Compatibility::Compatible
+                        {
+                            status = Compatibility::Unknown;
+                        }
                     }
                     EntryAssessment {
                         id: matched.entry.id.clone(),

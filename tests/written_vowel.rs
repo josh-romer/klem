@@ -159,6 +159,13 @@ fn finite_vowel_recovery_preserves_ambiguity_unicode_prefinal_and_auxiliary_owne
 
 #[test]
 fn written_vowel_dictionary_source_cache_filters_and_cli_preserve_both_lexical_classes() {
+    // Preserve the original vowel-recovery fixture. COV-019ad separately
+    // records the five source-backed adjective/버리다 policy changes.
+    let updates: Value = serde_json::from_str(include_str!(
+        "fixtures/continuation-left-written-vowel-judgments.json"
+    ))
+    .unwrap();
+    assert_eq!(updates["cases"].as_array().unwrap().len(), 5);
     let fixture = Fixture::new("policies");
     let db = fixture.open();
     let mut cached = DictionarySession::new(&db, 1 << 20);
@@ -173,16 +180,32 @@ fn written_vowel_dictionary_source_cache_filters_and_cli_preserve_both_lexical_c
         let a = word.analyses.iter().find(|a| matches(a, c)).unwrap();
         let annotation = cached.annotate(&word).unwrap();
         for j in c["entry_judgments"].as_array().unwrap() {
+            let update = updates["cases"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .find(|u| u["id"] == c["id"] && u["entry_id"] == j["id"]);
+            let expected = if let Some(u) = update {
+                assert_eq!(u["before"], *j);
+                assert_eq!(u["lemmas"], c["lemmas"]);
+                assert_eq!(u["morphemes"], c["morphemes"]);
+                &u["after"]
+            } else {
+                j
+            };
             let entry = annotation.assess(a).lemmas[0]
                 .entries
                 .iter()
                 .find(|e| e.id == j["id"].as_str().unwrap())
                 .unwrap()
                 .clone();
-            assert_eq!(serde_json::to_value(entry.status).unwrap(), j["status"]);
+            assert_eq!(
+                serde_json::to_value(entry.status).unwrap(),
+                expected["status"]
+            );
             assert_eq!(
                 serde_json::to_value(entry.conflicts).unwrap(),
-                j["conflicts"]
+                expected["conflicts"]
             );
         }
         for (flag, filter) in [
@@ -198,7 +221,16 @@ fn written_vowel_dictionary_source_cache_filters_and_cli_preserve_both_lexical_c
             if let Some(filter) = filter {
                 annotated.filter(&mut expected, filter);
             }
-            assert!(expected.analyses.iter().any(|a| matches(a, c)), "{surface}");
+            let changed = updates["cases"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .any(|u| u["id"] == c["id"]);
+            assert_eq!(
+                expected.analyses.iter().any(|a| matches(a, c)),
+                filter != Some(DictionaryFilter::Compatible) || !changed,
+                "{surface}"
+            );
             let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
             command
                 .args(["word", surface, "--dictionary"])

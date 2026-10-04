@@ -147,6 +147,11 @@ fn every_native_vowel_entry_retains_all_sources_and_its_own_positive_forms() {
 }
 #[test]
 fn every_frozen_probe_keeps_raw_order_and_checks_the_actual_vowel_owner() {
+    let updates: Value = serde_json::from_str(include_str!(
+        "fixtures/continuation-left-vowel-compat-judgments.json"
+    ))
+    .unwrap();
+    assert_eq!(updates["cases"].as_array().unwrap().len(), 28);
     let f = sources();
     let engine = Lemmatizer::new();
     let fixture = Fixture::new("probes");
@@ -176,7 +181,16 @@ fn every_frozen_probe_keeps_raw_order_and_checks_the_actual_vowel_owner() {
     }
     let mut present = 0;
     let mut conflicts = 0;
+    let mut continuation_conflicts = 0;
     for c in f["cases"].as_array().unwrap() {
+        let update = updates["cases"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|u| u["original_case"]["id"] == c["id"]);
+        if let Some(u) = update {
+            assert_eq!(u["original_case"], *c);
+        }
         let (word, annotation) = &words[c["surface"].as_str().unwrap()];
         let indices: Vec<_> = word
             .analyses
@@ -199,17 +213,25 @@ fn every_frozen_probe_keeps_raw_order_and_checks_the_actual_vowel_owner() {
                 .find(|e| e.id == c["owner_id"].as_str().unwrap())
                 .unwrap();
             assert_eq!(
-                serde_json::to_value(e.status).unwrap(),
-                c["expected_entry_status"],
+                &serde_json::to_value(e.status).unwrap(),
+                update.map_or(&c["expected_entry_status"], |u| &u["after"]["status"]),
                 "{}",
                 c["id"]
             );
             if e.status == Compatibility::Incompatible {
-                conflicts += 1;
-                assert_eq!(
-                    serde_json::to_value(&e.conflicts).unwrap(),
-                    serde_json::json!([{"rule":"lexical_spelling","morpheme_index":0}])
-                );
+                if let Some(u) = update {
+                    continuation_conflicts += 1;
+                    assert_eq!(
+                        serde_json::to_value(&e.conflicts).unwrap(),
+                        u["after"]["conflicts"]
+                    );
+                } else {
+                    conflicts += 1;
+                    assert_eq!(
+                        serde_json::to_value(&e.conflicts).unwrap(),
+                        serde_json::json!([{"rule":"lexical_spelling","morpheme_index":0}])
+                    );
+                }
             } else {
                 assert!(e.conflicts.is_empty());
             }
@@ -217,7 +239,9 @@ fn every_frozen_probe_keeps_raw_order_and_checks_the_actual_vowel_owner() {
                 (DictionaryFilter::Headword, true),
                 (
                     DictionaryFilter::Compatible,
-                    e.status != Compatibility::Incompatible,
+                    update.map_or(e.status != Compatibility::Incompatible, |u| {
+                        u["compatible_retained"] == true
+                    }),
                 ),
             ] {
                 let mut filtered = word.clone();
@@ -243,6 +267,7 @@ fn every_frozen_probe_keeps_raw_order_and_checks_the_actual_vowel_owner() {
         }
     }
     assert_eq!((present, conflicts), (1761, 801));
+    assert_eq!(continuation_conflicts, 28);
 }
 struct Custom<'a> {
     base: &'a SqliteDictionary,

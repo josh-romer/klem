@@ -2804,23 +2804,59 @@ review remains open under the completion review below.
   Broader ending/prefinal/internal-particle, left lexical subsets, source sense,
   context/register and independent Korean-language review remain required.
 
-- [ ] **COV-019ad — Continuation auxiliary immediate-left classes.**
-  The [frozen preflight](continuation-left-source-preflight.json) preserves
-  the complete native 내다 auxiliary entry 60625 and eleven diagnostic
-  surfaces in all three CLI modes. Its attachment note says 동사 뒤에서;
-  the current 좋아내다 and 좋아내느냐도 predicate/auxiliary paths nevertheless
-  remain compatible. The COV-019p connector audit explicitly left these
-  lexical-class restrictions open. Review complete source examples and
-  independent grammar evidence before adding finite per-entry judgments.
-  Distinguish the immediate owner, verb/adjective homonyms, represented
-  negatives, later auxiliary/copula owners and missing or conflicting source
-  classes. Preserve every raw path; a future filter restriction must name
-  the affected entry and connector, keep Unknown visible and retain all
-  unrelated assessments. Do not extend one entry's note to every auxiliary;
-  other continuation entries have conflicting adjective examples. Add source
-  and individual policy regressions, corpus/broad-stream comparisons,
-  CLI/library/cache parity, browser exports and Nix/runtime verification.
-  These observations are an unresolved policy audit, not new validity gold.
+- [x] **COV-019ad — Finite continuation auxiliary immediate-left classes.**
+  The [initial preflight](continuation-left-source-preflight.json) identified
+  still-compatible 좋아내다 and 좋아내느냐도 paths. The
+  [complete source review](continuation-left-source-review.json) binds six
+  connectors to five exact native auxiliary identities, with the NIKL guide's
+  adjective exclusions independently inspected. `continuation_verb` now checks
+  each left entry separately. Verb homonyms survive; adjectives, explicit
+  copulas and 답다 derivations conflict. 지-negatives carry the dependency;
+  other auxiliaries and copulas reset ownership. A later conflict does not
+  erase the class needed to assess an intervening negative. Unknown classes
+  and other providers remain visible. 가다/오다 adjective evidence prevents
+  extending the restriction to the whole continuation family.
+  Fifty-six append-only filter cases and 276 individual entry judgments are
+  separate from raw validity gold. Thirty-three explicitly named historical
+  test-policy updates preserve both original spelling fixtures, including
+  independently supported verb homonyms. The 188-surface CLI/API cohort keeps
+  all raw paths/order/native fields and tracks 263 entry changes/111 exclusions.
+  The [broader queue](continuation-left-broad-review-queue.json) records all
+  469 changed entry paths and 124 exclusions across eight complete streams
+  (1,128,312 records), with actual raw indices and complete native evidence.
+  All four held-out raw corpus reports are byte-identical; all 98 selected
+  gold groups preserve their memberships in every dictionary mode. This
+  lemma-group check includes lexical homonyms and does not certify POS/senses.
+  Rust/Clippy/fmt, full-corpus, Nix release/inventory, packaged runtime, complete
+  browser and 188-word packaged NFC/NFD/filter/export/mobile checks pass.
+  Every contextual reading remains unjudged. Broader lexical subsets,
+  inflection/source tensions (COV-019ae), existing gold residuals (COV-019af),
+  context/register and independent Korean-language review remain open under
+  COV-019. This finite class audit does not certify the entire family.
+
+- [ ] **COV-019ae — Continuation inflection and source tensions.**
+  The NIKL 2014 grammar guide's printed pages 372–373 restrict 고 나다 to
+  particular nonfinal constructions, locate honorifics on the preceding owner,
+  and restrict tense on both owners. Page 527 restricts tense before 어 버리다.
+  Page 544 licenses some adjective 어 오다 uses and rejects other lexical
+  combinations. These are distinct from the COV-019ad class requirement.
+  Preserve the [original-output preflight](continuation-inflection-source-preflight.json)
+  and existing source/gold judgments, including any disagreement with these
+  guide restrictions. Audit complete examples, exact owners, contractions,
+  prefinals, endings, context/register and lexical alternatives before adding
+  finite per-entry policy judgments. No blanket family or adjective ban follows.
+
+- [ ] **COV-019af — Continuation-headed gold residuals.**
+  The [unchanged gold preflight](continuation-gold-residual-preflight.json)
+  preserves six existing raw lemma-group misses from the 98-row dictionary
+  audit: 드러난다/드러나며, 잘하시내요/편이내요 and
+  짜증낼/짜증내시네. Their original XPOS distinguishes auxiliary and lexical
+  uses; the shared headword 내다 does not make every row an auxiliary.
+  Audit complete original sentences, lexicalized spellings, nominal + lexical
+  verb compounds, source segmentation and possible nonstandard forms before
+  adding source-backed regressions. Keep original gold and input spelling.
+  No silent typo correction, generic spelling rule or arbitrary compound
+  segmentation follows from these observations; contextual judgments remain open.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

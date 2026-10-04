@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ad",
+  "reviewed": "2026-10-03",
+  "before_revision": "73b888bb231420b2568002f99976345549c22672",
+  "review_status": "Agent-authored finite class review; independent Korean-language review pending.",
+  "native_decisions": [
+    {
+      "id": "krdict:60625",
+      "connectors": [
+        "어"
+      ],
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60625",
+      "decision": "Verb-only immediate-left class note, with complete native examples retained. This does not establish contextual meaning, all lexical subsets, or unrestricted right inflection."
+    },
+    {
+      "id": "krdict:62134",
+      "connectors": [
+        "어",
+        "고"
+      ],
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62134",
+      "decision": "Verb-only immediate-left class note, with complete native examples retained. This does not establish contextual meaning, all lexical subsets, or unrestricted right inflection."
+    },
+    {
+      "id": "krdict:26813",
+      "connectors": [
+        "어"
+      ],
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26813",
+      "decision": "Verb-only immediate-left class note, with complete native examples retained. This does not establish contextual meaning, all lexical subsets, or unrestricted right inflection."
+    },
+    {
+      "id": "krdict:62601",
+      "connectors": [
+        "어"
+      ],
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62601",
+      "decision": "Verb-only immediate-left class note, with complete native examples retained. This does not establish contextual meaning, all lexical subsets, or unrestricted right inflection."
+    },
+    {
+      "id": "krdict:74290",
+      "connectors": [
+        "어"
+      ],
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74290",
+      "decision": "Verb-only immediate-left class note, with complete native examples retained. This does not establish contextual meaning, all lexical subsets, or unrestricted right inflection."
+    }
+  ],
+  "excluded_from_new_policy": [
+    {
+      "id": "krdict:28764",
+      "decision": "Native adjective examples prevent a blanket verb-only exclusion."
+    },
+    {
+      "id": "krdict:69517",
+      "decision": "The guide licenses some adjective combinations and rejects others. A lexical/sense review is required; its broad heading cannot license a universal adjective ban."
+    }
+  ],
+  "guide": {
+    "title": "한국어교육 문법·표현 내용 개발 연구(3단계)",
+    "report_number": "국립국어원 2014-01-49",
+    "author": "양명희",
+    "submission_date": "2014-12-12",
+    "url": "https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf",
+    "pdf_sha256": "f6558a802b61115ead3ed20af9ecd7cf7b56f94e4c5a3342bf67f40bf0811268",
+    "rendered_pages": [
+      {
+        "physical_page": 387,
+        "printed_page": 373,
+        "path": "/tmp/klem-continuation-left-nada-page-387.png",
+        "sha256": "3e08750846e9f6841bdc9500a2a2096865cbc2f023852296d79d13a69ba72f5e",
+        "visually_inspected": true
+      },
+      {
+        "physical_page": 541,
+        "printed_page": 527,
+        "path": "/tmp/klem-continuation-left-beorida-page-541.png",
+        "sha256": "5e4fa3d35725aed23fe18713ea4e17c70bc77a8fb77a82adc98b589fec78a07a",
+        "visually_inspected": true
+      },
+      {
+        "physical_page": 558,
+        "printed_page": 544,
+        "path": "/tmp/klem-continuation-left-oda-page-558.png",
+        "sha256": "2bce3456e4367271dd07178eeef5b96418127e576dda7fdd066a8ae566df77b9",
+        "visually_inspected": true
+      }
+    ],
+    "class_evidence": "Sections 3.6.2 and 3.6.30 explicitly exclude adjectives before 고 나다 and 어 버리다. Section 3.6.33 licenses some adjective state-onset uses of 어 오다 while rejecting other adjective combinations.",
+    "additional_unimplemented_restrictions": "Printed pages 372–373 restrict 고 나다 right endings, honorific placement and tense on both owners. Page 527 restricts tense before 어 버리다. Page 544 distinguishes lexical adjective subsets and temporal uses of 어 오다. These require independent policy audits; existing judgments remain unchanged."
+  },
+  "fixture_counts": {
+    "complete_native_entries": 55,
+    "frozen_surfaces": 160,
+    "authored_policy_cases": 56,
+    "individual_entry_judgments": 276,
+    "required": 21,
+    "forbidden": 35
+  },
+  "implementation": "Entry-specific conflict rule continuation_verb for six connectors belonging to five exact native identities. 지-negatives carry the class dependency; other auxiliaries and copulas reset ownership. Explicit 답다 remains adjectival through licensed nominal suffixes. Unknown POS/providers remain visible. Existing conflicts, raw paths and native fields are preserved.",
+  "remaining": [
+    "Full contextual and lexical-subset review",
+    "Other source restrictions and contradictions",
+    "Broader right endings, prefinals and particles",
+    "Independent Korean-language review"
+  ],
+  "historical_policy_updates": {
+    "written_vowel": 5,
+    "written_vowel_compat": 28,
+    "distinct_entry_paths": 28,
+    "original_fixture_objects_unchanged": true,
+    "reason": "Two existing test suites encoded the previous attachment policy. Separate authored updates record only the source-backed continuation class change, preserving their original spelling judgments, indices and compatible verbal homonyms."
+  },
+  "runtime_counts": {
+    "surfaces": 188,
+    "cli_word_responses": 1128,
+    "api_word_responses": 188,
+    "native_entries": 82,
+    "policy_cases": 89,
+    "dictionary_ledger_cases": 56,
+    "historical_policy_updates": 33,
+    "changed_entries": 263,
+    "removed_paths": 111
+  },
+  "verification": "The finite class batch passes complete Rust, Nix host, CLI/API, browser, broad-stream and corpus checks; see continuation-left-evaluation.json. Independent Korean-language and broader source/context review remain open."
+}

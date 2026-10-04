@@ -1197,7 +1197,12 @@
     "complex-bieup-source-89859": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89859",
     "complex-bieup-source-14103": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=14103",
     "complex-bieup-source-77700": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77700",
-    "complex-bieup-source-71363": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71363"
+    "complex-bieup-source-71363": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71363",
+    "continuation-left-60625": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60625",
+    "continuation-left-62134": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62134",
+    "continuation-left-26813": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26813",
+    "continuation-left-62601": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62601",
+    "continuation-left-74290": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74290"
   },
   "cases": [
     {"id": "rikka-attachment-verb", "surface": "먹으리까", "judgments": [{"id": "path", "lemmas": ["먹다"], "lemma_kinds": ["predicate"], "morphemes": ["으리까"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "rikka-1", "reason": "Compatible-filter scope: 리까 permits lexical adjectives and both 멀다 homonyms. Known written paradigms select local regular/irregular boundary evidence; raw/headword hypotheses are preserved."}]},
@@ -20890,6 +20895,1696 @@
           "verdict": "forbidden",
           "source": "independent-pos-600930",
           "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-verb",
+      "surface": "먹어내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-adjective",
+      "surface": "좋아내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-homonyms",
+      "surface": "커내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-copula",
+      "surface": "학생이어내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-verbal-negative",
+      "surface": "먹지않아내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-adjectival-negative",
+      "surface": "좋지않아내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "않다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-derived-adjective",
+      "surface": "학생다워내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-내다-어-derived-negative",
+      "surface": "학생답지않아내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "않다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-verb",
+      "surface": "먹어나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-adjective",
+      "surface": "좋아나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-homonyms",
+      "surface": "커나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-copula",
+      "surface": "학생이어나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-verbal-negative",
+      "surface": "먹지않아나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-adjectival-negative",
+      "surface": "좋지않아나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "않다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-derived-adjective",
+      "surface": "학생다워나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-어-derived-negative",
+      "surface": "학생답지않아나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "않다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "지",
+            "어",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-verb",
+      "surface": "먹고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-adjective",
+      "surface": "좋고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-homonyms",
+      "surface": "크고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-copula",
+      "surface": "학생이고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-verbal-negative",
+      "surface": "먹지않고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-adjectival-negative",
+      "surface": "좋지않고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "않다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-derived-adjective",
+      "surface": "학생답고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나다-고-derived-negative",
+      "surface": "학생답지않고나니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "않다",
+            "나다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "지",
+            "고",
+            "으니"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62134",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-verb",
+      "surface": "먹어나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-adjective",
+      "surface": "좋아나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-homonyms",
+      "surface": "커나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-copula",
+      "surface": "학생이어나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-verbal-negative",
+      "surface": "먹지않아나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-adjectival-negative",
+      "surface": "좋지않아나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "않다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-derived-adjective",
+      "surface": "학생다워나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-나가다-어-derived-negative",
+      "surface": "학생답지않아나가다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "않다",
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-26813",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-verb",
+      "surface": "먹어버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-adjective",
+      "surface": "좋아버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-homonyms",
+      "surface": "커버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-copula",
+      "surface": "학생이어버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-verbal-negative",
+      "surface": "먹지않아버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-adjectival-negative",
+      "surface": "좋지않아버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "않다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-derived-adjective",
+      "surface": "학생다워버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-버리다-어-derived-negative",
+      "surface": "학생답지않아버리다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "않다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-62601",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-verb",
+      "surface": "먹어치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-adjective",
+      "surface": "좋아치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-homonyms",
+      "surface": "커치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-copula",
+      "surface": "학생이어치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-verbal-negative",
+      "surface": "먹지않아치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-adjectival-negative",
+      "surface": "좋지않아치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "않다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-derived-adjective",
+      "surface": "학생다워치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-치우다-어-derived-negative",
+      "surface": "학생답지않아치우다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "않다",
+            "치우다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "답다",
+            "지",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-74290",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-question-do-adjective",
+      "surface": "좋아내느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-independent-pos-adjective",
+      "surface": "발그스레해내다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "발그스레하다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-right-prefinal-먹어냈다",
+      "surface": "먹어냈다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-right-prefinal-먹어내겠다",
+      "surface": "먹어내겠다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "겠",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-right-prefinal-먹어내시다",
+      "surface": "먹어내시다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-right-prefinal-좋아냈다",
+      "surface": "좋아냈다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-right-prefinal-좋아내겠다",
+      "surface": "좋아내겠다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "겠",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-left-right-prefinal-좋아내시다",
+      "surface": "좋아내시다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "continuation-left-60625",
+          "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
         }
       ]
     }

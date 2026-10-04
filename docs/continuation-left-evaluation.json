@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ad",
+  "parent": "COV-019",
+  "reviewed": "2026-10-03",
+  "before_revision": "73b888bb231420b2568002f99976345549c22672",
+  "scope": "Six immediate-left verb-class boundaries for five exact native continuation auxiliaries. This changes finite dictionary assessment/filtering only; it is not contextual grammar certification.",
+  "source_review": {
+    "path": "docs/continuation-left-source-review.json",
+    "sha256": "653e972918f994e22e0f78a796afebe3f8e50a6db756890a0c43a785942797c7"
+  },
+  "initial_preflight": {
+    "path": "docs/continuation-left-source-preflight.json",
+    "sha256": "68952e488f5f2fe750185dc7596bd5b0b52797706608a95c05a3b886163c4721"
+  },
+  "runtime_counts": {
+    "surfaces": 188,
+    "cli_word_responses": 1128,
+    "api_word_responses": 188,
+    "native_entries": 82,
+    "policy_cases": 89,
+    "dictionary_ledger_cases": 56,
+    "historical_policy_updates": 33,
+    "changed_entries": 263,
+    "removed_paths": 111
+  },
+  "broader_counts": {
+    "records": 1128312,
+    "changed_entries": 469,
+    "filtered_paths": 124,
+    "changed_surfaces": 204,
+    "complete_native_entries": 59
+  },
+  "dictionary_ledger": {
+    "before_cases": 3792,
+    "after_cases": 3848,
+    "required": 2107,
+    "forbidden": 1741,
+    "appended_required": 21,
+    "appended_forbidden": 35,
+    "all_prior_objects_and_sources_preserved": true
+  },
+  "raw_validity_ledger": {
+    "cases": 12709,
+    "required": 9311,
+    "forbidden": 3412,
+    "sha256": "8f43f8a8f1d25fc27cd2063968d1ce4fec6e2a9f6047147fb0a84e2414ef9863",
+    "unchanged": true
+  },
+  "historical_policy_updates": {
+    "written_vowel": 5,
+    "written_vowel_compat": 28,
+    "distinct_entry_paths": 28,
+    "original_source_fixtures_unchanged": true,
+    "spelling_conflicts_and_verb_homonyms_preserved": true
+  },
+  "corpora": {
+    "full_raw_gold_reports_byte_identical": true,
+    "raw_report": {
+      "path": "docs/continuation-left-corpora.json",
+      "sha256": "6199e755b7d63ca5a899c16e805b62af72a17c8709b51c73fc1fd7f73e24c48f"
+    },
+    "dictionary_report": {
+      "path": "docs/continuation-left-dictionary-corpora.json.gz",
+      "sha256": "b4ca8a02c72951de746338a1b63add5a47ec78fb5c3ad23c9508c286c4ac7908"
+    },
+    "selected_headword_groups": 98,
+    "all_dictionary_mode_gold_memberships_preserved": true,
+    "original_grouped_gold_matches": {
+      "all": 92,
+      "headword": 91,
+      "compatible": 91
+    },
+    "existing_raw_misses": 6,
+    "remaining_preflight": {
+      "path": "docs/continuation-gold-residual-preflight.json",
+      "sha256": "7900602b4f5a23f8dbc5495141b39694ee2cf9ed19742d0465ab57f4d2c9b71a"
+    },
+    "limitation": "This selection includes lexical homonyms as well as auxiliaries; lemma-group membership does not certify contextual senses or precise POS identities."
+  },
+  "rust_tests": {
+    "all_targets": 807,
+    "doctests": 1,
+    "nix_release": 808,
+    "pinned_full_corpus_gate": "passed separately"
+  },
+  "gates": {
+    "full_rust": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-cargo-final.log",
+      "sha256": "f358e32c1a762986e37991ddab91e4e9927ea27630a5a72f3430a1c61e8ccd2d"
+    },
+    "doctests": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-doctests.log",
+      "sha256": "641de43b10f3a8e355dab18576d3fdccc75e015885499c0ce5ca73659b7bff40"
+    },
+    "clippy": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-clippy.log",
+      "sha256": "36b955dda11a48191d467e95a84cb6dd1316b662c4f98bda8e3b5668eb810b12"
+    },
+    "fmt": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "historical_policy_updates": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-historical-updates.log",
+      "sha256": "6e0ea224a6dcab895b32650d803b79fa6db587cb9044d9fb3a9a8925d82bfa6d"
+    },
+    "pinned_full_corpus": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-pinned-corpus.log",
+      "sha256": "b938ab78b79dfba5799afeb08d73d0b41e340eb6d02ec7b0ae9123fd23f06a49"
+    },
+    "nix_release_and_host_checks": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-flake-final.log",
+      "sha256": "dc12ccad157923332cdc5d1c849fadcd768135ce967e307bbfe4719c1eb07ee3"
+    },
+    "nix_final_inventory_inputs": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-flake-inventory-final.log",
+      "sha256": "14d77610f3364652133756c28002cf5d8fb158e09f95c6fe0d040225f0a70343"
+    },
+    "full_packaged_browser": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-browser-full-final.log",
+      "sha256": "cf94a284c40b052c02baf4603323ca26850e1dba200e79cb92581ea619ba0dd5"
+    },
+    "packaged_browser_cohort": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-browser-packaged.log",
+      "sha256": "7cc1bb1c4b1f0ed07ae8374c492e3a42c088ea096b0f267d2ada5de0d58348c9"
+    },
+    "debug_browser_cohort": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-browser-final.log",
+      "sha256": "c983fa883d1f5fbd5d7887f630c7ddb0ff7fe55f6b5130ebee54dd0c3a5c9fb5"
+    },
+    "packaged_runtime": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-packaged-runtime.log",
+      "sha256": "35eb9021bd75e7b14051b980453b6f8a6a98ca74fd6c814f44c2078cbb5a63b2"
+    },
+    "broad_streams": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-broad.log",
+      "sha256": "c3c961f306a2779983b0a76ea4ba4649185abb4aaf9a58c7960c470f3fb62a5c"
+    },
+    "broad_native_evidence": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-broad-queue.log",
+      "sha256": "781a711cd1a4909a08a2187b464df0da1447091526e17a49ebcb69e9d196c404"
+    },
+    "final_nix_inputs_and_corpus_verifier": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-flake-complete.log",
+      "sha256": "6f287614c418ccfdf9ff8269364a91bc2f05f24077a33c0d3eacb73a587c9a95"
+    },
+    "persistent_preview": {
+      "status": "passed",
+      "path": "/tmp/klem-continuation-left-preview-runtime.log",
+      "sha256": "35eb9021bd75e7b14051b980453b6f8a6a98ca74fd6c814f44c2078cbb5a63b2"
+    }
+  },
+  "runtime_artifacts": {
+    "debug": {
+      "path": "docs/continuation-left-runtime.json.gz",
+      "sha256": "bddcee4629bf6f0cc3a38b24478997aecfb6e0625292c63140437eaba213d622"
+    },
+    "packaged": {
+      "path": "docs/continuation-left-packaged-runtime.json.gz",
+      "sha256": "fffc1e730e5c21888e5b7b00b1c1327d730176f728409feba9405502189cb856"
+    },
+    "individual_queue": {
+      "path": "docs/continuation-left-review-queue.json",
+      "sha256": "2d05cc6494c65a1476a849cc2e91344201be703720cd2eb650303e04ac2e21d0"
+    },
+    "broad_runtime": {
+      "path": "docs/continuation-left-broad-runtime.json.gz",
+      "sha256": "0aa9437974c9e7d9dd087923a80795957d737bfe97285f091acc8a1b9a4a378d"
+    },
+    "broad_queue": {
+      "path": "docs/continuation-left-broad-review-queue.json",
+      "sha256": "0d913673c41975719bff0bf37f39c411168c79ef4bb749d65915d337c794f203"
+    },
+    "observations": {
+      "path": "docs/continuation-left-observations.json",
+      "sha256": "57583bb76833d7a2b1afd23f229296f8eb62b48009de728125924205c2dd16ec"
+    },
+    "preview": {
+      "path": "docs/continuation-left-preview-runtime.json.gz",
+      "sha256": "fffc1e730e5c21888e5b7b00b1c1327d730176f728409feba9405502189cb856"
+    }
+  },
+  "nix": {
+    "host": "x86_64-linux",
+    "cli": "/nix/store/4vqi9q25qnadr6zlzyq6syzxlla5a4nx-klem-0.1.0/bin/klem",
+    "cli_sha256": "d0128f027ed84335232c7e263e120c93a8ac026cd1a6359e2c5d3142c4ffec70",
+    "assets": "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+    "other_architectures": "Declared outputs; builds not run on this host."
+  },
+  "timings": {
+    "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+    "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+    "pairs": [
+      {
+        "before": 1.925620615016669,
+        "after": 1.8775964560045395
+      },
+      {
+        "after": 1.8323417580104433,
+        "before": 1.8511781750130467
+      },
+      {
+        "before": 1.830057133018272,
+        "after": 1.7922293830197304
+      }
+    ],
+    "limitation": "Alternating paired novel diagnostics under concurrent browser verification on this machine. Full stream outputs are verified separately. These timings do not establish a performance or complexity guarantee."
+  },
+  "corrections": [
+    "Full-suite verification found historical vowel-recovery tests encoding the previous compatibility policy. Five and twenty-eight named updates are separate from the unchanged original fixtures; raw candidates and old spelling conflicts remain intact.",
+    "The initial Nix check was explicitly stopped after that known Cargo failure; its terminal status was verified. The updated Nix run passed.",
+    "The new browser test initially compared canonical 어/답다 against established 여/답 display forms. Only named display expectations were corrected; canonical CLI/export paths were preserved.",
+    "The complete browser suite required the same exact historical policy updates as Rust and then passed with the Nix binaries."
+  ],
+  "remaining": [
+    "COV-019ae additional inflection and lexical/source tensions",
+    "COV-019af six existing raw gold residuals and original annotation/spelling audit",
+    "Broader continuation lexical subsets, context and register",
+    "Independent Korean-language review",
+    "All other open requirements in coverage-checklist.md"
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:8081",
+    "process_proof": {
+      "path": "/tmp/klem-continuation-left-preview-process.json",
+      "sha256": "e79fe94e530e0867a66fd58e3a4d6769a43e29eb5871fda4e065c3923a8b3026"
+    },
+    "web_package": "/nix/store/y7qzcr0wznm4v2mpjlld93fh7ngg2y5b-klem-web",
+    "cli_app_matches_verified_word": true
+  }
+}

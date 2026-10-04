@@ -176,6 +176,7 @@
                 ./tools/reported_retrospective_additional.py
                 ./tools/reported_retrospective_queue.py
                 ./tools/reported_retrospective_runtime.py
+                ./tools/adjectival_allomorph_audit.py
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -234,6 +235,7 @@
             python tools/caution_ending_audit.py --verify
             python tools/future_question_audit.py --verify
             python tools/reported_retrospective_queue.py --verify
+            python tools/adjectival_allomorph_audit.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

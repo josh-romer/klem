@@ -1787,7 +1787,26 @@ review remains open under the completion review below.
   restricting this adjectival component to non-ㄹ closed stems. Freeze every
   affected older family and native homonym before correcting its boundaries;
   preserve general 냐, irregular closed-stem recovery and prior analyses that
-  meet their own source notes. Broader spelling and attachment review stays open.
+  meet their own source notes. **Preflight frozen and verified:**
+  [source audit](adjectival-allomorph-audit.md),
+  [immutable snapshot](adjectival-allomorph-source-preflight.json.gz),
+  [matrix and original judgments](../tests/fixtures/adjectival-allomorph-preflight.json),
+  [explicit derived-spelling correction](../tests/fixtures/adjectival-allomorph-derived-supplement.json),
+  [baseline evaluation](adjectival-allomorph-preflight-evaluation.json), and
+  [offline/full-source verifier](../tools/adjectival_allomorph_audit.py).
+  The freeze covers 18 canonical families / 20 native owners and all 40 grammar
+  homonyms, 1,703 native spelling observations, 1,399 prior words in three CLI
+  filters, 289 original corpus tokens from all six local KAIST/GSD splits and
+  1,700 complete native entries. The supplemented 396-case structural matrix
+  retains all 216 required proposals before editing the parser and exposes
+  53 forbidden canonical aliases. All 26 old required selectors are archived
+  verbatim, including the wrong 85921 citation on 기냔다. The original draft's
+  18 regular-ㅂ derived proposals are explicitly corrected to forbidden and
+  supplemented with required 아이다우냐-family recoveries; the original freeze
+  is unchanged. The flake runs the evidence verifier. **Remaining:** ordered-
+  owner correction, explicit ledger/test overlays, implementation, individual
+  loss tracking, complete stream/corpus comparisons and packaged validation.
+  Broader spelling and attachment review stays open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

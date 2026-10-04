@@ -208,6 +208,7 @@
                 ./tools/doeda_role_compare.py
                 ./tools/doeda_role_runtime.py
                 ./tools/doeda_role_browser.py
+                ./tools/doeda_complement_audit.py
                 ./src/engine.rs ./src/grammar.rs
                 ./web/tests/gam-question.mjs
                 ./web/tests/emphatic-ending.mjs
@@ -303,6 +304,7 @@
             python tools/doeda_role_compare.py --verify
             python tools/doeda_role_runtime.py --verify
             python tools/doeda_role_browser.py --verify
+            python tools/doeda_complement_audit.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

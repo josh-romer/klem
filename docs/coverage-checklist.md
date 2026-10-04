@@ -3422,6 +3422,8 @@ review remains open under the completion review below.
   the exact frozen implementation without redefining contextual correctness.
 
 - [ ] **COV-019ah — Further lexical 되다 complement constructions.**
+  **Partial: complete sources and pre-change regression baseline frozen;
+  parser implementation pending.**
   The complete KRDict 89858 senses retained by COV-019ag also list -도록/-기로
   (sense 17), -어야 (18), -면 (19), and -어도/-어서는 안 (21). These are separate
   dependencies beyond the implemented -게/-게끔 roles. Joined 행복해야된다,
@@ -3432,6 +3434,43 @@ review remains open under the completion review below.
   source-listed construction's verbal/adjectival/copular classes and particles.
   Cover Unicode, native homonyms, original candidate/assessment order and
   CLI/reader outputs; do not infer arbitrary connectors or repair original gold.
+  [The preflight](doeda-complement-source-preflight.json.gz) scans all 56,555
+  native entries and preserves 3,659 literal observations, including 996 with
+  negative 안 bridges. All 4,385 native owners/readings are complete, including
+  every proposed lexical head and the component sources. Three complete
+  before streams retain 9,130 records each for all 4,565 independently analyzed
+  and joined surfaces. Literal 야/면/도 matches can be noun/particle lookalikes;
+  no source occurrence is automatically treated as a grammatical license.
+  Six original corpus files retain 37 joined rows, 223 adjacent spaced pairs
+  and 95 three-token negative bridges, with complete sentences and unchanged
+  ten-column annotations. Twenty-five novel occurrences retain full paragraphs
+  and exact character/UTF-8 spans. Auxiliary and lexical native annotations are
+  preserved independently rather than repaired to match another source.
+  [412 named proposals](../tests/fixtures/doeda-complement-sources.json) separate
+  404 required construction paths from eight scoped connector/allomorph controls;
+  no proposed path is present before implementation. KRDict 89858 senses
+  17/18/19/21 remain verbs. NIKL's
+  [2025-07-18 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318411)
+  separately lists main-verb 도록/기로 uses and auxiliary necessity, conditional
+  and permission/prohibition uses, explicitly including predicate/copula stems.
+  Both roles are proposed where sourced; no auxiliary POS is invented in KRDict.
+  Scheduled 기로 uses preserve 기 + 로, retaining the unrelated cause/concession
+  ending's original notes without lending them to a decision reading.
+  Eighteen separately marked probes retain scheduled adjective/copula questions,
+  left prefinals, internal particles, earlier auxiliaries, long negation and
+  standalone compounds. The primary teaching guide's prohibition/request contexts
+  and modal/register restrictions remain attributed observations, not blanket
+  lexical exclusions. Future contextual sense/register review remains required.
+  [The 95-entry importer fixture](../tests/fixtures/krdict-doeda-complement.json)
+  includes 22 full component sources and preserves adverb 안, both noun homonyms,
+  both 안되다 compound classes and both 되다 homonyms independently. It is an
+  explicit finite subset of the complete scan archive. [Two retention tests](../tests/doeda_complement_sources.rs)
+  check all imports and prior candidates/native readings/order across NFC/NFD and
+  three cache budgets. [The offline verifier](../tools/doeda_complement_audit.py)
+  checks source/adapter identity, every original sentence/span and all three
+  before filters; --dictionary/--cli separately replays the complete scan and
+  current packaged baseline. Production rules, subsequent candidate/corpus
+  comparisons, CLI/reader evidence and independent Korean review remain pending.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

@@ -137,6 +137,14 @@ carry `rule: "spacing.bare_noun_lexical_verb"`. Existing case-phrase alternative
 use the shared search budget first. Whole-word candidates remain available, and
 dictionary membership does not determine the intended spacing or meaning.
 
+For lexical `나다`, the same search offers 39 source-reviewed noun pairs,
+including **집난 → 집 난**, **사람나고 → 사람 나고**, **돈났지 → 돈 났지**,
+and literal blood **피나는 → 피 나는**. These carry
+`rule: "spacing.bare_noun_main_nada"`; auxiliary `나다` cannot supply the
+main-verb evidence. The registered effort verb `피나다` remains a separate
+reading. See the [coverage tracker](docs/coverage-checklist.md) for source
+reviews and pending ending dependencies.
+
 ## Browser app
 
 Paste a Korean sentence, select a word, and explore its grouped analyses and

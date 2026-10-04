@@ -88,7 +88,8 @@ const BARE_PAIRS: &[(&str, &str)] = &[
 const BARE_RULE: &str = "spacing.bare_noun_lexical_verb";
 
 // COV-020r: exact native noun identities, supported by the complete groups in
-// docs/lexical-nada-source-review.json. Main 나다 is 62210/homonym 1; auxiliary
+// docs/lexical-nada-source-review.json and lexical-nada-listed-review.json.
+// Main 나다 is 62210/homonym 1; auxiliary
 // 62134/homonym 2 cannot supply this proof. Homonyms remain visible separately.
 const NADA_PAIRS: &[(&str, &str, &str)] = &[
     ("경사", "krdict:30554", "2"),
@@ -126,6 +127,10 @@ const NADA_PAIRS: &[(&str, &str, &str)] = &[
     ("교통사고", "krdict:35968", "0"),
     ("생각", "krdict:58162", "0"),
     ("냄새", "krdict:58180", "0"),
+    ("집", "krdict:71358", "1"),
+    ("사람", "krdict:58161", "0"),
+    ("돈", "krdict:17204", "1"),
+    ("피", "krdict:73269", "1"),
 ];
 const NADA_RULE: &str = "spacing.bare_noun_main_nada";
 

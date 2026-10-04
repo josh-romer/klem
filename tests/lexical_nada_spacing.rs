@@ -19,6 +19,58 @@ const RULE: &str = "spacing.bare_noun_main_nada";
 fn evidence() -> Value {
     serde_json::from_str(include_str!("fixtures/lexical-nada-spacing.json")).unwrap()
 }
+fn listed_evidence() -> Value {
+    serde_json::from_str(include_str!("fixtures/lexical-nada-listed.json")).unwrap()
+}
+fn regression_cases() -> Vec<Value> {
+    let original = evidence();
+    let listed = listed_evidence();
+    let superseded: BTreeSet<_> = listed["superseded_exclusions"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .map(|row| row["original_case_id"].as_str().unwrap())
+        .collect();
+    assert_eq!(
+        superseded,
+        BTreeSet::from([
+            "lexical-nada-excluded-template-05",
+            "lexical-nada-excluded-template-09"
+        ])
+    );
+    for row in listed["superseded_exclusions"].as_array().unwrap() {
+        let old = original["cases"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|case| case["id"] == row["original_case_id"])
+            .unwrap();
+        assert_eq!(old["verdict"], "forbidden");
+        assert_eq!(old["surface"], row["surface"]);
+        let replacement = listed["cases"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|case| case["supersedes"] == old["id"])
+            .unwrap();
+        assert_eq!(replacement["verdict"], "required");
+        assert_eq!(replacement["segments"], row["replacement_segments"]);
+        assert_eq!(
+            replacement["source_discovery_ids"],
+            row["source_discovery_ids"]
+        );
+    }
+    let mut cases: Vec<_> = original["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|case| !superseded.contains(case["id"].as_str().unwrap()))
+        .cloned()
+        .collect();
+    cases.extend(listed["cases"].as_array().unwrap().iter().cloned());
+    assert_eq!(cases.len(), 373);
+    cases
+}
 struct Fixture(PathBuf);
 impl Fixture {
     fn new(tag: &str) -> Self {
@@ -29,6 +81,8 @@ impl Fixture {
             "krdict-lexical-nada-spacing.json",
             "krdict-lexical-nada-dependencies.json",
             "krdict-lexical-nada-priority.json",
+            "krdict-lexical-nada-listed.json",
+            "krdict-lexical-nada-listed-additional.json",
         ] {
             let data: Value = serde_json::from_str(
                 &fs::read_to_string(PathBuf::from("tests/fixtures").join(name)).unwrap(),
@@ -106,6 +160,41 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
         }
     }
     let engine = Lemmatizer::new();
+    let listed = listed_evidence();
+    let additional: Value = serde_json::from_str(include_str!(
+        "fixtures/lexical-nada-listed-additional-native.json"
+    ))
+    .unwrap();
+    for (id, native) in listed["complete_native_entries"]
+        .as_object()
+        .unwrap()
+        .iter()
+        .chain(
+            additional["complete_native_entries"]
+                .as_object()
+                .unwrap()
+                .iter(),
+        )
+    {
+        let mut expected = native.clone();
+        for sense in expected["senses"].as_array_mut().unwrap() {
+            sense["translations"]
+                .as_array_mut()
+                .unwrap()
+                .retain(|t| t["language"] == "영어");
+        }
+        assert_eq!(
+            serde_json::to_value(db.entry(id).unwrap().unwrap()).unwrap(),
+            expected,
+            "{id}"
+        );
+    }
+    for (surface, before) in listed["before_raw_words"].as_object().unwrap() {
+        let before: WordAnalysis = serde_json::from_value(before.clone()).unwrap();
+        for text in [surface.clone(), surface.nfd().collect::<String>()] {
+            assert_eq!(engine.analyze_word(&text).unwrap(), before, "{surface}");
+        }
+    }
     let mut changed = BTreeSet::new();
     assert_eq!(evidence["before_raw_words"].as_object().unwrap().len(), 389);
     for (surface, before) in evidence["before_raw_words"].as_object().unwrap() {
@@ -258,12 +347,12 @@ fn every_native_pair_inflection_prefix_and_exclusion_has_independent_unicode_spa
     let fixture = Fixture::new("cases");
     let db = fixture.open();
     let engine = Arc::new(Lemmatizer::new());
-    let cases = evidence();
+    let cases = regression_cases();
     let mut covered = BTreeSet::new();
     for cache in [0, 1, 4096] {
         let mut words = Session::new(engine.clone(), cache);
         let mut dictionary = DictionarySession::new(&db, cache);
-        for case in cases["cases"].as_array().unwrap() {
+        for case in &cases {
             for nfd in [false, true] {
                 let text = case["surface"].as_str().unwrap();
                 let text = if nfd {
@@ -296,6 +385,12 @@ fn every_native_pair_inflection_prefix_and_exclusion_has_independent_unicode_spa
                         "{}",
                         case["id"]
                     );
+                } else if case["verdict"] == "pending_right_morphology" {
+                    assert!(matches!(
+                        case["segments"][1].as_str().unwrap(),
+                        "날지도" | "났다던데"
+                    ));
+                    assert!(case["dependency"].as_str().is_some());
                 } else {
                     let hypothesis = suggestions
                         .alternatives
@@ -392,7 +487,7 @@ fn every_native_pair_inflection_prefix_and_exclusion_has_independent_unicode_spa
             }
         }
     }
-    assert_eq!(covered.len(), 35);
+    assert_eq!(covered.len(), 39);
 }
 
 struct Provider<'a> {
@@ -445,37 +540,45 @@ impl Dictionary for Provider<'_> {
 fn exact_native_fields_cannot_be_borrowed_from_auxiliary_unknown_or_other_homonym_entries() {
     let fixture = Fixture::new("identity");
     let db = fixture.open();
-    for id in ["krdict:66370", "krdict:62210"] {
-        for (field, value) in [
-            ("id", "test:generic-known-entry"),
-            ("headword", "another-head"),
-            ("homonym", "999"),
-            ("pos", ""),
-            ("pos", "품사 없음"),
-            ("pos", "형용사"),
-            ("pos", "보조 동사"),
-            ("remove", ""),
-        ] {
-            let provider = Provider {
-                db: &db,
-                change: Some((id, field, value)),
-                extra_nominal: false,
-            };
-            let mut dictionary = DictionarySession::new(&provider, 0);
-            let mut words = Session::new(Arc::new(Lemmatizer::new()), 0);
-            let result = suggest(
-                &mut words,
-                &mut dictionary,
-                "사고났다",
-                0,
-                SpacingLimits::default(),
-            )
-            .unwrap();
-            assert!(result.complete);
-            assert!(
-                !result.alternatives.iter().any(|h| h.rule == Some(RULE)),
-                "{id}/{field}/{value}"
-            );
+    for (surface, noun_id) in [
+        ("사고났다", "krdict:66370"),
+        ("집난", "krdict:71358"),
+        ("사람나고", "krdict:58161"),
+        ("돈났지", "krdict:17204"),
+        ("피나는지", "krdict:73269"),
+    ] {
+        for id in [noun_id, "krdict:62210"] {
+            for (field, value) in [
+                ("id", "test:generic-known-entry"),
+                ("headword", "another-head"),
+                ("homonym", "999"),
+                ("pos", ""),
+                ("pos", "품사 없음"),
+                ("pos", "형용사"),
+                ("pos", "보조 동사"),
+                ("remove", ""),
+            ] {
+                let provider = Provider {
+                    db: &db,
+                    change: Some((id, field, value)),
+                    extra_nominal: false,
+                };
+                let mut dictionary = DictionarySession::new(&provider, 0);
+                let mut words = Session::new(Arc::new(Lemmatizer::new()), 0);
+                let result = suggest(
+                    &mut words,
+                    &mut dictionary,
+                    surface,
+                    0,
+                    SpacingLimits::default(),
+                )
+                .unwrap();
+                assert!(result.complete);
+                assert!(
+                    !result.alternatives.iter().any(|h| h.rule == Some(RULE)),
+                    "{id}/{field}/{value}"
+                );
+            }
         }
     }
     // The noun's other genuine homonym (thought) and auxiliary 나다 remain
@@ -492,6 +595,14 @@ fn exact_native_fields_cannot_be_borrowed_from_auxiliary_unknown_or_other_homony
             .iter()
             .any(|e| e.id == "krdict:62134")
     );
+    for (head, id) in [("집", "krdict:78367"), ("돈", "krdict:91736")] {
+        assert!(
+            db.lookup(head)
+                .unwrap()
+                .iter()
+                .any(|e| e.id == id && e.pos == "의존 명사")
+        );
+    }
 }
 
 #[test]
@@ -580,6 +691,79 @@ fn both_prior_spacing_families_keep_their_hypotheses_and_remaining_budget_priori
 }
 
 #[test]
+fn new_pairs_preserve_registered_pi_verb_and_every_prior_spacing_choice() {
+    let fixture = Fixture::new("listed-priority");
+    let db = fixture.open();
+    let before: Value =
+        serde_json::from_str(include_str!("fixtures/lexical-nada-listed-priority.json")).unwrap();
+    let mut words = Session::new(Arc::new(Lemmatizer::new()), 4096);
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    for (surface, original) in before["before_words"].as_object().unwrap() {
+        let mut original = original.clone();
+        fixture_fingerprint(&mut original, db.fingerprint());
+        let offset = original["span"]["start"].as_u64().unwrap() as usize;
+        let actual = suggest(
+            &mut words,
+            &mut dictionary,
+            surface,
+            offset,
+            SpacingLimits::default(),
+        )
+        .unwrap();
+        let prior = original["spacing"]["alternatives"].as_array().unwrap();
+        let actual: Vec<Value> = actual
+            .alternatives
+            .iter()
+            .map(|h| serde_json::to_value(h).unwrap())
+            .collect();
+        let retained: Vec<_> = actual.iter().filter(|h| prior.contains(h)).collect();
+        assert_eq!(retained, prior.iter().collect::<Vec<_>>(), "{surface}");
+        let budget = original["spacing"]["segment_probes"].as_u64().unwrap() as usize;
+        let bounded = suggest(
+            &mut words,
+            &mut dictionary,
+            surface,
+            offset,
+            SpacingLimits {
+                segment_probes: budget,
+                ..Default::default()
+            },
+        )
+        .unwrap();
+        assert!(bounded.segment_probes <= budget);
+        let bounded = serde_json::to_value(bounded.alternatives).unwrap();
+        assert_eq!(
+            bounded.as_array().unwrap(),
+            prior,
+            "{surface}: prior probe priority"
+        );
+    }
+    let raw = words.analyze_word("피나는").unwrap();
+    let annotation = dictionary.annotate(&raw).unwrap();
+    assert!(raw.analyses.iter().any(|a| {
+        a.lemmas[0].text == "피나다"
+            && annotation.assess(a).lemmas[0]
+                .entries
+                .iter()
+                .any(|e| e.id == "krdict:83815" && e.status != Compatibility::Incompatible)
+    }));
+    let literal = suggest(
+        &mut words,
+        &mut dictionary,
+        "피나는",
+        0,
+        SpacingLimits::default(),
+    )
+    .unwrap();
+    assert!(
+        literal
+            .alternatives
+            .iter()
+            .any(|h| h.rule == Some(RULE) && h.spaced == "피 나는")
+    );
+}
+
+#[test]
 fn repeated_ambiguous_prefixes_and_explicit_limits_remain_bounded() {
     let fixture = Fixture::new("bounds");
     let db = fixture.open();
@@ -656,7 +840,7 @@ fn cli_filters_preserve_original_words_and_every_separate_spacing_option() {
     let db = fixture.open();
     let mut dictionary = DictionarySession::new(&db, 4096);
     let mut words = Session::new(Arc::new(Lemmatizer::new()), 4096);
-    for case in evidence()["cases"].as_array().unwrap() {
+    for case in &regression_cases() {
         for nfd in [false, true] {
             let text = case["surface"].as_str().unwrap();
             let text = if nfd {

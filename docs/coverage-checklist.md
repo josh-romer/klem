@@ -3356,8 +3356,9 @@ review remains open under the completion review below.
   budgets, filters and individual alternative tracking. Other omitted-space
   noun/main-verb combinations remain open under COV-020; COV-020q's four-pair
   completion does not establish them.
-  **The initial 35-pair implementation and engineering verification are complete;
-  review of the remaining native source cohort remains open.** The
+  **Partial: 39 finite pairs and the listed-cohort source-context review are
+  implemented and verified. Two right-ending dependencies, registered-whole
+  construction review and the wider native source cohort remain open.** The
   [immutable source preflight](lexical-nada-source-preflight.json.gz) preserves
   all 32 main-entry senses in native order, 185 case-marked noun heads, 5,218
   individually identified spelling discoveries across 775 noun heads, and
@@ -3427,11 +3428,52 @@ review remains open under the completion review below.
   to country/tree/wood, and supply no tooth-noun/main-나다 pair license. This
   changes no candidate policy and asserts no blanket exclusion of 이 + 나다.
   [Its offline verifier](../tools/lexical_nada_country_tree_review.py) checks
-  every original ID and complete group in Nix. Together with the original 36
-  reviewed discoveries, 239 of the 631 listed-cohort occurrences have an authored
-  source-context disposition; 392 still need that review. Contextual gold and
-  independent review remain pending. Supported new 집/사람/돈/literal 피 pairs,
-  registered-whole spelling tensions and the broader source cohort remain open.
+  every original ID and complete group in Nix. That checkpoint, together with
+  the original 36 reviewed discoveries, covered 239 of the 631 listed-cohort
+  occurrences; the next ledger records the remaining 392 dispositions.
+  [The complete listed-cohort review](lexical-nada-listed-review.json) preserves
+  every original occurrence ID and complete group, distinguishing 244 bare-pair
+  occurrences, 57 registered-whole construction boundaries and 330 captures of
+  other roles/right words. Buying with 사다 + 고 나다, demonstrative 이,
+  하다's 해, pronouns, dates, weather and 나가다/나오다 occurrences do not
+  become pair licenses merely because their spelling matches the discovery scan.
+  The 16 spaced 신 occurrences remain a construction boundary: the linked
+  May 2026 NIKL guidance treats 신나다 as a registered whole word and separately
+  permits 신이 나다. No automatic contextual or independent judgment is inferred.
+  Four native-supported pairs now extend the exact inventory to 39: 집 71358/1,
+  사람 58161/0, 돈 17204/1 and literal 피 73269/1. 사람's proverb supplies birth
+  evidence, distinct from the original case-marked departure sense; 돈's metaphor
+  does not select a unique sense. The registered effort verb 피나다 remains intact.
+  Only historical exclusions `lexical-nada-excluded-template-05` and `-09` are
+  explicitly superseded by the later source licenses; the original fixture stays
+  unchanged. [266 individual cases](../tests/fixtures/lexical-nada-listed.json)
+  cover all 244 bare-pair occurrences, independent inflections and prefixes:
+  264 are required and two retain named right-morphology dependencies.
+  The [new immutable preflight](lexical-nada-listed-preflight.json.gz),
+  [additional native owners](../tests/fixtures/lexical-nada-listed-additional-native.json)
+  and [27 priority baselines](../tests/fixtures/lexical-nada-listed-priority.json)
+  preserve 304 original raw words and 439 complete native entries, including
+  the distinct bound-noun 집/돈 homonyms. Eight integration tests verify exact
+  importer projections, identity isolation, all 373 combined cases, NFC/NFD
+  spans, caches, CLI filters, whole words and every prior spacing choice.
+  [Full-stream comparisons](lexical-nada-listed-observations.json.gz) retain
+  32 individual spacing additions (96 diagnostic occurrences) and 236 probe-count
+  changes. All 1,128,312 records preserve raw candidates, assessments and prior
+  spacing order; the novel gains no options and loses none. Debug and Nix outputs
+  match. All four [held-out reports](lexical-nada-listed-corpora.json), including
+  66,570 gold rows and every summary metric, remain byte-identical.
+  [Packaged HTTP checks](lexical-nada-listed-packaged-runtime.json) verify
+  439 full native endpoints, 532 encoded case checks and 27 filter/cache streams.
+  [Nine browser exports](lexical-nada-listed-packaged-browser.json) match the CLI;
+  five selected diagrams, all four noun links, main 나다 and whole 피나다 links,
+  and inspected mobile layout pass. Nix runs 845 release tests with zero failures
+  (one downloaded-corpus test ignored; the four corpus reports run separately).
+  [The offline evidence gate](../tools/lexical_nada_listed_queue.py) is included
+  in the flake. Remaining named dependencies are
+  `lexical-nada-discovery-ef9a33c60226f6c9ba4fe452` (사고 날지도, 을지 + 도)
+  and `lexical-nada-discovery-7b1f871bde65cd5d1aeba52a` (발표 났다던데,
+  reported retrospective expression). The 57 construction boundaries, 4,587
+  discoveries outside this cohort and all contextual/independent review remain open.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

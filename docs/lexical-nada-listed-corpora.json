@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020r",
+  "corpora": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "converted_rows": 22220,
+      "report_lines": 22221,
+      "before_report_sha256": "083c815cb02c53b3a5f1cca9a31a547169fe9c5e79d46c1d4b0c3de744597083",
+      "after_report_sha256": "083c815cb02c53b3a5f1cca9a31a547169fe9c5e79d46c1d4b0c3de744597083",
+      "all_gold_rows_identical": true,
+      "all_summary_fields_identical": true,
+      "changed_summary_fields": []
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "converted_rows": 24490,
+      "report_lines": 24491,
+      "before_report_sha256": "8bb630b11258dfbf013b95fe4134d5a8237f2da1b22b4a03e13dfc56e9bc13a7",
+      "after_report_sha256": "8bb630b11258dfbf013b95fe4134d5a8237f2da1b22b4a03e13dfc56e9bc13a7",
+      "all_gold_rows_identical": true,
+      "all_summary_fields_identical": true,
+      "changed_summary_fields": []
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "converted_rows": 9989,
+      "report_lines": 9990,
+      "before_report_sha256": "4b495ec83dbe7e8c67155e2c6a606747bb506c547891688df3a76c51e3076815",
+      "after_report_sha256": "4b495ec83dbe7e8c67155e2c6a606747bb506c547891688df3a76c51e3076815",
+      "all_gold_rows_identical": true,
+      "all_summary_fields_identical": true,
+      "changed_summary_fields": []
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "converted_rows": 9871,
+      "report_lines": 9872,
+      "before_report_sha256": "ff33e00a386d99c065c4ee07d793b1e2eff3872f494eecb40c0421e4cc0f7fb8",
+      "after_report_sha256": "ff33e00a386d99c065c4ee07d793b1e2eff3872f494eecb40c0421e4cc0f7fb8",
+      "all_gold_rows_identical": true,
+      "all_summary_fields_identical": true,
+      "changed_summary_fields": []
+    }
+  ],
+  "previous_report_sha256": "458448d2383b10bd256027d7f5e0230880f583d154be54241739c10434de3920",
+  "evaluator_sha256": "97555ca76f86493eaa006332d217d31aea3505dbce03f1870c9726241b60e145"
+}

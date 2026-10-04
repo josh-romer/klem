@@ -146,6 +146,12 @@
                 ./tools/lexical_nada_runtime.py
                 ./tools/lexical_nada_queue.py
                 ./tools/lexical_nada_country_tree_review.py
+                ./tools/lexical_nada_listed_review.py
+                ./tools/lexical_nada_listed_fixtures.py
+                ./tools/lexical_nada_listed_compare.py
+                ./tools/lexical_nada_listed_runtime.py
+                ./tools/lexical_nada_listed_additional.py
+                ./tools/lexical_nada_listed_queue.py
                 ./tools/rya_boundary_audit.py
                 ./tools/rya_boundary_regressions.py
                 ./tools/rya_boundary_compare.py
@@ -168,6 +174,7 @@
                 ./web/tests/continuation-inflection.mjs
                 ./web/tests/bare-noun-spacing.mjs
                 ./web/tests/lexical-nada.mjs
+                ./web/tests/lexical-nada-listed.mjs
                 ./web/tests/rya-boundary.mjs
                 ./web/tests/rya-copula.mjs
                 ./web/tests/caution-ending.mjs
@@ -203,6 +210,9 @@
             python tools/lexical_nada_priority.py --verify
             python tools/lexical_nada_queue.py --verify
             python tools/lexical_nada_country_tree_review.py --verify
+            python tools/lexical_nada_listed_review.py --verify
+            python tools/lexical_nada_listed_fixtures.py --verify
+            python tools/lexical_nada_listed_queue.py --verify
             python tools/rya_boundary_audit.py --verify
             python tools/rya_boundary_regressions.py --verify
             python tools/rya_boundary_queue.py --verify

@@ -2223,6 +2223,16 @@ pub(crate) enum PredicateClass {
     Copula,
 }
 
+// KRDict 89858 treats the -게 되다 senses as verbs; NIKL separately
+// describes an auxiliary construction. This class belongs only to the new
+// attributed lexical role, leaving every historical auxiliary use unchanged.
+pub(crate) fn lexical_doeda_role(lemma: &Lemma, connector: Option<&str>, rules: &[String]) -> bool {
+    lemma.kind == LemmaKind::Predicate
+        && lemma.text == "되다"
+        && matches!(connector, Some("게" | "게끔"))
+        && rules.iter().any(|r| r == "lexical.doeda.complement")
+}
+
 // Classes belong to a particular auxiliary use, not every homonym of a lemma.
 // Unclassified lexical heads stay unknown; negative auxiliaries inherit a
 // known preceding class. KRDict's 54-entry inventory supplies these classes.
@@ -2282,7 +2292,9 @@ fn finite_intention_auxiliary(stem: &str, morphs: &[Morpheme]) -> bool {
 }
 
 fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
-    if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary) {
+    if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary)
+        && !a.rules.iter().any(|r| r == "lexical.doeda.complement")
+    {
         return true;
     }
     let mut cursor = 0;
@@ -2387,6 +2399,8 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             )
         } else if lemma.kind == LemmaKind::Copula {
             Some(PredicateClass::Copula)
+        } else if lexical_doeda_role(lemma, connector, &a.rules) {
+            Some(PredicateClass::Verb)
         } else {
             None
         };
@@ -4697,6 +4711,80 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
     }
 }
 
+fn add_lexical_doeda_roles(out: &mut Vec<Analysis>) {
+    // Project only already validated -게/-게끔 links. Original paths and
+    // their evidence stay intact; nominal/copula expansion and outer endings
+    // have finished, so the ordered components identify each actual owner.
+    let original_count = out.len();
+    for original in 0..original_count {
+        let base = &out[original];
+        if !base
+            .lemmas
+            .iter()
+            .any(|l| l.kind == LemmaKind::Auxiliary && l.text == "되다")
+        {
+            continue;
+        }
+        let Some(components) = base.breakdown() else {
+            continue;
+        };
+        let mut slots = Vec::new();
+        let mut connector = None;
+        for component in components {
+            match component {
+                crate::breakdown::Component::Lemma(i) => {
+                    if base.lemmas[i].kind == LemmaKind::Auxiliary
+                        && base.lemmas[i].text == "되다"
+                        && matches!(connector, Some("게" | "게끔"))
+                    {
+                        slots.push(i);
+                    }
+                    connector = None;
+                }
+                crate::breakdown::Component::Morpheme(i)
+                    if base.morphemes[i].kind == MorphemeKind::Ending =>
+                {
+                    connector = Some(base.morphemes[i].form.as_str());
+                }
+                _ => {}
+            }
+        }
+        if slots.is_empty() {
+            continue;
+        }
+        let mut variant = base.clone();
+        variant.rules.push("lexical.doeda.complement".into());
+        // Binary enumeration without shifts, recursion or an arbitrary role
+        // cutoff. Each link can keep its auxiliary role or take the lexical
+        // alternative independently, including multiple 되다 owners.
+        loop {
+            let mut cursor = 0;
+            while let Some(&slot) = slots.get(cursor) {
+                if variant.lemmas[slot].kind == LemmaKind::Auxiliary {
+                    variant.lemmas[slot].kind = LemmaKind::Predicate;
+                    break;
+                }
+                variant.lemmas[slot].kind = LemmaKind::Auxiliary;
+                cursor += 1;
+            }
+            if cursor == slots.len() {
+                break;
+            }
+            let mut candidate = variant.clone();
+            if !candidate
+                .lemmas
+                .iter()
+                .any(|l| l.kind == LemmaKind::Auxiliary)
+            {
+                candidate.rules.retain(|r| r != "auxiliary");
+            }
+            if auxiliary_inflections_allowed(&mut candidate) {
+                out.push(candidate);
+            }
+        }
+    }
+}
+
 pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
     if word.is_empty() {
         return Err(Error::EmptyWord);
@@ -4804,6 +4892,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
             })
             || auxiliary_inflections_allowed(a)
     });
+    add_lexical_doeda_roles(&mut out);
     // Noun/adverb -이 homonyms retain distinct functions despite identical
     // lemma/morpheme fields. Other semantic duplicates share rule names, but spelling paths remain
     // alternatives. A derivation with no spelling obligation subsumes others.

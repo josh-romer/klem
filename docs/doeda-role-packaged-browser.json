@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ag",
+  "cli_sha256": "fe49fed194602d228addf8d9828165925e65220980c4cfa4de5d26497e41e7f2",
+  "engine_sha256": "f88d77fd318f1296f0ffd3740ced649b1da2fe52e0d4447b0347fd55ff0f96ea",
+  "catalog_sha256": "2da5c961feb74234f50e3955cbee444e5f5123a1bd46dd63967aff3f2e70db28",
+  "browser_tool_sha256": "aff396fefa3a14819e3db17ad57c5ff27e815864952d94ac64be3c0243d08204",
+  "words": 81,
+  "cases": 81,
+  "checks": [
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "records": 161
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "records": 161
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "records": 161
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "records": 161
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "records": 161
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "records": 161
+    }
+  ],
+  "errors": [],
+  "allExportsMatchCli": true,
+  "rendered": [
+    "먹게되었다",
+    "좋게됩니다",
+    "살게끔되어있다",
+    "먹으시게끔되었습니다"
+  ],
+  "endingEntryIds": [
+    "88382",
+    "88382"
+  ],
+  "roleChecks": [
+    {
+      "word": "먹게되었다",
+      "lexicalEntryId": "89858",
+      "kind": "predicate",
+      "passed": true
+    },
+    {
+      "word": "먹게되었다",
+      "historicalAuxiliaryRetained": true,
+      "compatibleLexicalRetained": true,
+      "passed": true
+    },
+    {
+      "word": "좋게됩니다",
+      "lexicalEntryId": "89858",
+      "kind": "predicate",
+      "passed": true
+    },
+    {
+      "word": "살게끔되어있다",
+      "lexicalEntryId": "89858",
+      "kind": "predicate",
+      "passed": true
+    },
+    {
+      "word": "먹으시게끔되었습니다",
+      "lexicalEntryId": "89858",
+      "kind": "predicate",
+      "passed": true
+    }
+  ],
+  "mobileNoHorizontalOverflow": true,
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

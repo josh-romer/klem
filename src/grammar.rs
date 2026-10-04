@@ -1667,6 +1667,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "lexical.mal.complement" => {
             "Retain lexical 말다 after a cessative or source-listed paired alternative complement; preserve both predicates and their own endings."
         }
+        "lexical.doeda.complement" => {
+            "A lexical verb reading of 되다 after -게/-게끔. The earlier predicate and 되다 retain their own endings; a separate auxiliary reading may also be available."
+        }
         "lexical.mal.nominal" => {
             "Retain lexical 말다 after nominal contrast, an explicit object, or a source-listed bare object in joined input; ordinary word spacing is not inferred."
         }

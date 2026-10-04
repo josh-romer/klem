@@ -1,0 +1,1182 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ag",
+  "source_sha256": "3736bb18618c1c4e825ddf6d9d9a988d7eb3a303eed8b3d935a16c1d13671cac",
+  "original_fixture_sha256": {
+    "tests/fixtures/native-pos-sources.json": "d00f171a7f8a674322325c93390c52f0e8c6d964721f89b2633e34360825b784",
+    "tests/fixtures/native-pos-boundaries.json": "ab993b8e1b76c84d110ca59414e21b51ff5bbb0975ed1aff262be1c0c553c262"
+  },
+  "before_cli_sha256": "5eafd9dcd13616026b98ef794fb938680fbac97d60c9785ad96fc72ac01a109f",
+  "cli_sha256": "0b81fb43227146ba7f608fe1de3c3cec710332799b43d7419a8063cf999ae361",
+  "engine_sha256": "f88d77fd318f1296f0ffd3740ced649b1da2fe52e0d4447b0347fd55ff0f96ea",
+  "scope": "Explicit additions to historical native-POS cohorts. Original snapshots and all class judgments remain unchanged; the source-backed role alternatives have exact original raw parents. Earlier reviewed allomorph removals remain a separate overlay.",
+  "changes": [
+    {
+      "surface": "발그스레하게되는",
+      "original": {
+        "normalized": "발그스레하게되는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게될다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "original_paths": [
+        "tests/fixtures/native-pos-boundaries.json"
+      ],
+      "before": {
+        "normalized": "발그스레하게되는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게될다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "발그스레하게되는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut",
+              "lexical.doeda.complement"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "lexical.doeda.complement"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하게될다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "lexical.doeda.complement"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "added": [
+        {
+          "id": "doeda-role-historical-495a621906143f909f6c54cf",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut",
+              "lexical.doeda.complement"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending"
+        },
+        {
+          "id": "doeda-role-historical-f847014ce79cbd2007bd22de",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "lexical.doeda.complement"
+            ],
+            "unchanged": false
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending"
+        },
+        {
+          "id": "doeda-role-historical-3747c6074c626f3fbe11bdc5",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "lexical.doeda.complement"
+            ],
+            "unchanged": false
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending"
+        }
+      ]
+    }
+  ],
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

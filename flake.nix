@@ -200,9 +200,18 @@
                 ./tools/emphatic_ending_runtime.py
                 ./tools/emphatic_ending_queue.py
                 ./tools/doeda_role_audit.py
+                ./tools/doeda_role_regressions.py
+                ./tools/doeda_role_diagnostics.py
+                ./tools/doeda_role_historical.py
+                ./tools/doeda_role_stress.py
+                ./tools/doeda_role_corpora.py
+                ./tools/doeda_role_compare.py
+                ./tools/doeda_role_runtime.py
+                ./tools/doeda_role_browser.py
                 ./src/engine.rs ./src/grammar.rs
                 ./web/tests/gam-question.mjs
                 ./web/tests/emphatic-ending.mjs
+                ./web/tests/doeda-role.mjs
                 ./examples/audit_adjectival_allomorph.rs
                 ./web/tests/adjectival-allomorph.mjs
                 ./tools/adjectival_allomorph.rs
@@ -286,6 +295,14 @@
             python tools/emphatic_ending_runtime.py --verify
             python tools/emphatic_ending_queue.py --verify
             python tools/doeda_role_audit.py --verify
+            python tools/doeda_role_regressions.py --verify
+            python tools/doeda_role_diagnostics.py --verify
+            python tools/doeda_role_historical.py --verify
+            python tools/doeda_role_stress.py --verify
+            python tools/doeda_role_corpora.py --verify
+            python tools/doeda_role_compare.py --verify
+            python tools/doeda_role_runtime.py --verify
+            python tools/doeda_role_browser.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

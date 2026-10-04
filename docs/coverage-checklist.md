@@ -3314,8 +3314,8 @@ review remains open under the completion review below.
   sources are unchanged. This audit does not certify the remaining representations.
 
 - [ ] **COV-019ag — Lexical 되다 in represented auxiliary constructions.**
-  **Partial: immutable source/candidate preflight and retention checks complete;
-  role alternatives not yet implemented.** Joined 살게끔되어있다 and
+  **Partial: source-scoped lexical alternatives and individual regressions
+  implemented and validated; contextual/sense and independent review pending.** Joined 살게끔되어있다 and
   타당하게끔되었다 have source-backed raw paths, but the parser's legacy
   auxiliary role for 되다 conflicts with KRDict verb entry 89858. Headword
   filtering retains them; compatibility filtering rejects that role. Review
@@ -3354,10 +3354,84 @@ review remains open under the completion review below.
   -도록/-기로/-어야/-면/-어도/-어서는 complements are explicit separate
   dependencies. [The offline gate](../tools/doeda_role_audit.py) verifies the
   archive and adapter; optional --dictionary/--cli reproduces the full native
-  scan, original corpus/novel selections and every prior CLI record. Current
-  alternatives, broad before/after comparisons, full held-out recall, ordered
-  reader exports/source links, contextual judgments and independent Korean
-  review remain pending.
+  scan, original corpus/novel selections and every prior CLI record. Contextual
+  judgments and independent Korean review remain pending.
+  The implementation preserves each original auxiliary path and adds independent
+  lexical-verb alternatives after validated -게/-게끔 links. Its new
+  lexical.doeda.complement provenance scopes the verb class and the adjective
+  homonym's known conflict to that owner; standalone adjectival 되다 and all
+  historical native assessments remain unchanged. Repeated owners enumerate
+  all role combinations without recursion, integer shifts or a role cutoff.
+  [Five integration tests](../tests/doeda_role_sources.rs) verify all 81 paths,
+  78 required / three scoped controls in both central ledgers, dictionary-filter
+  survival, exact native homonym conflicts, NFC/NFD, three cache budgets,
+  CLI/library parity and all eight roles for three 되다 owners.
+  [The source diagnostic checkpoint](doeda-role-diagnostics.json.gz) compares
+  all 4,787 words in three complete streams of 9,574 records, preserving every
+  prior candidate/reading/native slot and spacing order. It tracks 5,531 distinct
+  added candidates, 199 new spacing options and three work-metadata changes with
+  stable occurrence IDs; every new candidate has an exact original raw parent.
+  Its 2,067 referenced native identities retain complete sources, including
+  84 additional owners for independently analyzed spacing segments.
+  [The offline verifier](../tools/doeda_role_diagnostics.py) replays every
+  changed record and independent segment. Contextual and independent judgments
+  remain pending; this structural audit does not certify precision.
+  Separate [native-POS](../tests/fixtures/doeda-role-historical.json) and
+  [stress](../tests/fixtures/doeda-role-stress.json) overlays preserve the original
+  fixtures and all their historical hashes. They explicitly track three new
+  paths for 발그스레하게되는 and two for 먹게되었다, each with an exact original
+  parent. Original native-POS class judgments and older stress spelling/grammar
+  layers remain intact; the memory-limited long-token and repeated-chain tests
+  pass. Their [historical](../tools/doeda_role_historical.py) and
+  [stress](../tools/doeda_role_stress.py) offline gates independently replay the
+  additions without regenerating either original snapshot.
+  [Four complete held-out reports](doeda-role-corpora.json.gz) preserve all
+  66,570 original KAIST/GSD gold outcomes, recovered groups and recall fields.
+  Only KAIST test mean candidate count changes, from 5.986443446304614 to
+  5.986525112290731; other summary values are identical. The
+  [offline corpus gate](../tools/doeda_role_corpora.py) checks every original
+  row and both complete report hashes. This measures raw recovery and ambiguity,
+  leaving dictionary-filter and contextual correctness as separate requirements.
+  The x86_64 Linux Nix flake check passes with 875 release tests, zero failures
+  and one ignored downloaded-corpus test; the four full held-out reports above
+  were run separately. Clippy, formatting and the offline source/ledger gates pass.
+  The NIKL [2014 teaching guide](https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=한국어교육%20문법표현%20내용개발%20연구_3단계.pdf),
+  printed pages 549 and 553 (PDF indices 562 and 566), contrasts process and
+  result readings. Page 553 accepts the difficult-situation example but marks
+  the price, warm-heart and attractive-face examples unsuitable in its compared
+  state-change reading. The extracted text and rendered page 553 were inspected
+  in the same PDF whose SHA-256 is retained by COV-017bw. These are contextual
+  observations needing sense review, not universal bans on those adjective heads
+  or permission to erase other dictionary senses. Contextual and independent
+  Korean-language review therefore remain open.
+  [Eight complete broad comparisons](doeda-role-observations.json.gz) retain
+  all 1,128,312 candidate/novel records byte-identically, including all five novel
+  filters/spacing modes. Packaged and debug output hashes agree in every stream
+  and their complete source diagnostic payloads agree; binary provenance differs.
+  The [packaged runtime audit](doeda-role-packaged-runtime.json.gz) checks all
+  5,419 full native endpoints, 162 NFC/NFD judgments, eighteen cache/filter streams
+  and 766 distinct actual ordered Rust component shapes for the finite 81-word
+  cohort. Its full raw records independently determine both dictionary filters.
+  [Browser evidence](doeda-role-packaged-browser.json) preserves six CLI-matching
+  exports, four rendered diagrams, separate lexical/auxiliary selections,
+  compatibility-filter survival and KRDict verb/ending source clicks. Desktop
+  and mobile breakdown screenshots were inspected; no script errors or horizontal
+  overflow occur. The [broad](../tools/doeda_role_compare.py),
+  [runtime](../tools/doeda_role_runtime.py) and
+  [browser](../tools/doeda_role_browser.py) offline gates bind these checks to
+  the exact frozen implementation without redefining contextual correctness.
+
+- [ ] **COV-019ah — Further lexical 되다 complement constructions.**
+  The complete KRDict 89858 senses retained by COV-019ag also list -도록/-기로
+  (sense 17), -어야 (18), -면 (19), and -어도/-어서는 안 (21). These are separate
+  dependencies beyond the implemented -게/-게끔 roles. Joined 행복해야된다,
+  출발하기로되었다, 표시하도록되어있다, 가면된다 and 먹어도된다 currently
+  lack separate 되다 paths. Freeze all native examples and original corpus
+  contexts before implementation. Retain lexical heads and their own inflections,
+  preserve the intervening 안 representation independently, and review each
+  source-listed construction's verbal/adjectival/copular classes and particles.
+  Cover Unicode, native homonyms, original candidate/assessment order and
+  CLI/reader outputs; do not infer arbitrary connectors or repair original gold.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

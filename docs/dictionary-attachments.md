@@ -12,6 +12,17 @@ The browser prefers a homonym supported by that particular reading for its short
 gloss; all dictionary entries and their senses remain available for inspection.
 This does not select a sense from sentence context.
 
+`-게/-게끔 되다` offers a separate lexical-verb role backed by KRDict 89858,
+alongside the existing auxiliary representation described by NIKL. Compatibility
+filtering retains the lexical role and leaves the historical auxiliary role's
+known native POS conflict intact. The adjective homonym 48214 remains in lookup
+results with a conflict for this particular lexical construction; standalone
+adjectival 되다 is unchanged. Each owner's endings and later auxiliaries remain
+separate. The [source archive](doeda-role-source-preflight.json.gz) preserves
+both classifications and original corpus tags; the
+[individual regressions](../tests/doeda_role_sources.rs) cover the two roles,
+Unicode, caching, dictionary filtering and ordered components.
+
 ## Evidence and decisions
 
 The [source review](dictionary-attachment-evaluation.json) retains the pinned

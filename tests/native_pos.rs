@@ -350,6 +350,8 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
         "fixtures/adjectival-allomorph-policy-corrections.json"
     ))
     .unwrap();
+    let role_additions: Value =
+        serde_json::from_str(include_str!("fixtures/doeda-role-historical.json")).unwrap();
     for case in policy["cases"].as_array().unwrap() {
         let corrected = corrections["superseded"]
             .as_array()
@@ -378,7 +380,34 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
         expected
             .analyses
             .retain(|a| !allomorph::reviewed_removal(a));
-        assert_eq!(word, expected, "{surface}");
+        if let Some(change) = role_additions["changes"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|r| r["surface"] == surface.as_str())
+        {
+            // Keep the original snapshot and the earlier spelling correction
+            // separate. Only this explicit source-backed role overlay advances
+            // the expected output; the old class judgments below stay intact.
+            assert_eq!(change["original"], *frozen);
+            assert_eq!(serde_json::to_value(&expected).unwrap(), change["before"]);
+            assert_eq!(serde_json::to_value(&word).unwrap(), change["after"]);
+            let retained: Vec<_> = word
+                .analyses
+                .iter()
+                .filter(|a| expected.analyses.contains(a))
+                .cloned()
+                .collect();
+            assert_eq!(retained, expected.analyses);
+            assert!(
+                word.analyses
+                    .iter()
+                    .filter(|a| !expected.analyses.contains(a))
+                    .all(|a| a.rules.iter().any(|r| r == "lexical.doeda.complement"))
+            );
+        } else {
+            assert_eq!(word, expected, "{surface}");
+        }
         assert_eq!(
             word,
             engine

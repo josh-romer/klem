@@ -169,8 +169,9 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     let raw = validity::evaluate(&suite).unwrap();
     // COV-017bu explicitly corrects eight previously required aliases. The
     // already-forbidden 기다리냐느니 alias has the same sourced boundary.
-    // These nine paths now fail generation; every other dictionary conflict
-    // must still exist before the optional lexical filter is applied.
+    // These nine paths now fail generation. Later explicit structural controls
+    // are identified below; all remaining lexical conflicts must still exist
+    // before the optional dictionary filter is applied.
     let changes: serde_json::Value = serde_json::from_str(include_str!(
         "fixtures/adjectival-allomorph-policy-corrections.json"
     ))
@@ -192,6 +193,19 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
         .map(|c| format!("{}-policy", c["id"].as_str().unwrap()))
         .collect();
     structural_ids.extend(emphatic_boundaries.iter().map(String::as_str));
+    let doeda: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/doeda-role-sources.json")).unwrap();
+    let doeda_boundaries: Vec<_> = doeda["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["scope"] == "connector_projection_boundary")
+        .map(|c| format!("{}-policy", c["id"].as_str().unwrap()))
+        .collect();
+    // These three controls forbid only the new projection's provenance on
+    // other connectors. They are absent in raw output as well as after filtering.
+    assert_eq!(doeda_boundaries.len(), 3);
+    structural_ids.extend(doeda_boundaries.iter().map(String::as_str));
     let mut structural = self::suite();
     structural
         .cases
@@ -200,7 +214,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(boundaries.passed(), "{:?}", boundaries.violations);
     assert_eq!(
         (boundaries.required_total, boundaries.forbidden_total),
-        (0, 32)
+        (0, 35)
     );
     assert_eq!(
         raw.forbidden_present,
@@ -243,7 +257,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2210, 1776)
+        (2288, 1779)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

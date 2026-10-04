@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ag",
+  "source_sha256": "3736bb18618c1c4e825ddf6d9d9a988d7eb3a303eed8b3d935a16c1d13671cac",
+  "original_sha256": "c447aff04e1d3a56bf0ee54707e4c27c00a61d255b49707ce2a46104859d5e50",
+  "before_cli_sha256": "5eafd9dcd13616026b98ef794fb938680fbac97d60c9785ad96fc72ac01a109f",
+  "cli_sha256": "0b81fb43227146ba7f608fe1de3c3cec710332799b43d7419a8063cf999ae361",
+  "engine_sha256": "f88d77fd318f1296f0ffd3740ced649b1da2fe52e0d4447b0347fd55ff0f96ea",
+  "scope": "Exact stress role-addition overlay. The complete original snapshot records and all older grammar/spelling hashes remain unchanged; the new role candidates have original structural parents.",
+  "changes": [
+    {
+      "surface": "먹게되었다",
+      "original_snapshot": {
+        "word": "먹게되었다",
+        "sha256": "b1533d19f41acfaa176dcf468b909d1b4407276b649639772305ceed7b30da82",
+        "previous_sha256": "c4bbfa5c35dfb0ec1265243783385d0b23c901624e742bbf6d9ed90e361850e6",
+        "change": "COV-011: additive 하-deletion predicate hypotheses; prior analyses and provenance retained. Unknown lexical roots are not dictionary-verified.",
+        "before_digeut_siot_sha256": "22e1b33e80e57fb349785b68875e1f27c1eafcdb459f0b60aee02efa8efd0588",
+        "digeut_siot_change": "Only owned ㄷ/ㅅ spelling requirements added; pre-existing candidates, rule IDs and ㅎ requirements preserved.",
+        "before_written_vowel_compat_sha256": "035d1b052584408adafce979cb4a94198b46f1086883387d3a42ed6c6424052f",
+        "reviewed_changes": [
+          {
+            "checklist": "COV-021k",
+            "before_sha256": "035d1b052584408adafce979cb4a94198b46f1086883387d3a42ed6c6424052f",
+            "after_sha256": "b1533d19f41acfaa176dcf468b909d1b4407276b649639772305ceed7b30da82",
+            "scope": "Only local written-vowel spelling obligations added to existing hypotheses. Unknown fabricated lexical stems remain unknown; candidates, ordering, lemmas, morphemes and all prior rules/spelling obligations are unchanged.",
+            "evidence": "tests/fixtures/written-vowel-compat-snapshot-audit.json"
+          }
+        ]
+      },
+      "before": {
+        "normalized": "먹게되었다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "먹게되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되어다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되으다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.eu",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "written_vowel_eo"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게됫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "irregular.siot",
+              "prefinal.past"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "siot_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "먹게되었다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "먹게되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되어다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되었하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게되으다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.eu",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "written_vowel_eo"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게됫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "irregular.siot",
+              "prefinal.past"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "siot_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "lexical.doeda.complement",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "lexical.doeda.complement",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "before_jsonl_sha256": "b1533d19f41acfaa176dcf468b909d1b4407276b649639772305ceed7b30da82",
+      "after_jsonl_sha256": "eab98cf38836e636a8e59a5dae04f92e6039a4ac4c780b7543d16e86e32fd67e",
+      "added": [
+        {
+          "id": "doeda-role-historical-7dfa7dfa570baca56d39dd98",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "lexical.doeda.complement",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending"
+        },
+        {
+          "id": "doeda-role-historical-240879c70ae684c81ec876c9",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "lexical.doeda.complement",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending"
+        }
+      ]
+    }
+  ],
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

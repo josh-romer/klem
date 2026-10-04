@@ -1,7 +1,7 @@
 //! Scoped lexical attachment evidence, separate from dictionary-free generation.
 //! See docs/dictionary-attachments.md for sources, exceptions and exclusions.
 use super::{Annotation, Compatibility};
-use crate::engine::{PredicateClass, auxiliary_class};
+use crate::engine::{PredicateClass, auxiliary_class, lexical_doeda_role};
 use crate::{
     Analysis, LemmaKind, MorphemeKind, SpellingClass, SpellingRecovery, WordAnalysis,
     breakdown::Component,
@@ -642,6 +642,11 @@ impl Annotation {
             let morphs = &rest[..end];
             components = &rest[end..];
             let lemma = &analysis.lemmas[*index];
+            let lexical_doeda = lexical_doeda_role(
+                lemma,
+                connector.map(|i| analysis.morphemes[i].form.as_str()),
+                &analysis.rules,
+            );
             let class = match lemma.kind {
                 LemmaKind::Auxiliary => auxiliary_class(
                     lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
@@ -649,6 +654,7 @@ impl Annotation {
                     previous_class,
                 ),
                 LemmaKind::Copula => Some(PredicateClass::Copula),
+                LemmaKind::Predicate if lexical_doeda => Some(PredicateClass::Verb),
                 _ => None,
             };
             let negative_lexical = if class.is_none()
@@ -745,6 +751,13 @@ impl Annotation {
                 .map(|matched| {
                     let mut status = matched.pos_compatibility;
                     let pos = matched.effective_pos();
+                    // The lexical construction follows the verb senses in
+                    // KRDict 89858. Preserve the adjective homonym in lookup
+                    // results, with its own known role conflict. Historical
+                    // auxiliary paths and unknown provider POS stay unchanged.
+                    if lexical_doeda && pos == "형용사" {
+                        status = Compatibility::Incompatible;
+                    }
                     // This independently sourced analysis explicitly names a
                     // bound noun, unlike the broad nominal role used by whole
                     // words. Preserve every lookup entry but record the known

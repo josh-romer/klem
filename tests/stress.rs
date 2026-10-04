@@ -22,10 +22,49 @@ fn output_matches_reviewed_snapshots() {
     }
     let snapshots: Vec<Snapshot> =
         serde_json::from_str(include_str!("fixtures/optimization.json")).unwrap();
+    let roles: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/doeda-role-stress.json")).unwrap();
     let engine = Lemmatizer::new();
     for snapshot in snapshots {
         let result = engine.analyze_word(&snapshot.word).unwrap();
-        let mut previous_grammar = history::project_word(&result);
+        let legacy = if let Some(change) = roles["changes"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|r| r["surface"] == snapshot.word)
+        {
+            assert_eq!(change["original_snapshot"]["sha256"], snapshot.sha256);
+            assert_eq!(change["before_jsonl_sha256"], snapshot.sha256);
+            assert_eq!(serde_json::to_value(&result).unwrap(), change["after"]);
+            let before: klem::WordAnalysis =
+                serde_json::from_value(change["before"].clone()).unwrap();
+            let retained: Vec<_> = result
+                .analyses
+                .iter()
+                .filter(|a| before.analyses.contains(a))
+                .cloned()
+                .collect();
+            assert_eq!(retained, before.analyses);
+            assert!(
+                result
+                    .analyses
+                    .iter()
+                    .filter(|a| !before.analyses.contains(a))
+                    .all(|a| a.rules.iter().any(|r| r == "lexical.doeda.complement"))
+            );
+            let mut json = serde_json::to_vec(&result).unwrap();
+            json.push(b'\n');
+            assert_eq!(
+                format!("{:x}", Sha256::digest(json)),
+                change["after_jsonl_sha256"].as_str().unwrap()
+            );
+            before
+        } else {
+            result.clone()
+        };
+        // Audit all older grammar/spelling layers against their exact original
+        // word. The additive role output above has its own explicit snapshot.
+        let mut previous_grammar = history::project_word(&legacy);
         if let Some(expected) = snapshot.before_written_vowel_compat_sha256 {
             // Every metadata change is individually preserved in the COV-021k
             // snapshot audit. Check the exact pre-change output before all
@@ -39,7 +78,7 @@ fn output_matches_reviewed_snapshots() {
                 snapshot.word
             );
         } else {
-            assert_eq!(previous_grammar, result);
+            assert_eq!(previous_grammar, legacy);
         }
         if let Some(expected) = snapshot.before_written_vowel_sha256 {
             // COV-021j's added open-ㅕ hypotheses were reviewed individually
@@ -140,7 +179,7 @@ fn output_matches_reviewed_snapshots() {
                 snapshot.word
             );
         }
-        let mut json = serde_json::to_vec(&result).unwrap();
+        let mut json = serde_json::to_vec(&legacy).unwrap();
         json.push(b'\n');
         assert_eq!(
             format!("{:x}", Sha256::digest(json)),

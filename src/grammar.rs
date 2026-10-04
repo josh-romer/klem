@@ -466,6 +466,11 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "게",
     "게끔",
     "어야",
+    // Source-listed 되다 complements; their own link checks restrict joins.
+    "도록",
+    "어도",
+    "어서",
+    "어서는",
     "은",
     "는",
     "을",
@@ -1669,6 +1674,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "lexical.doeda.complement" => {
             "A lexical verb reading of 되다 after -게/-게끔. The earlier predicate and 되다 retain their own endings; a separate auxiliary reading may also be available."
+        }
+        "lexical.doeda.extended" => {
+            "Retain lexical verb 되다 after a source-listed scheduled, necessity, conditional or permission/prohibition complement, preserving each owner's own inflection."
+        }
+        "auxiliary.doeda.extended" => {
+            "A separately attributed auxiliary 되다 reading after necessity, conditional or permission/prohibition complements; dictionary verb classification is preserved independently."
+        }
+        "doeda.negative_bridge" => {
+            "Retain intervening negative adverb 안 before 되다 as its own component; it neither supplies a predicate ending nor replaces the lexical compound 안되다."
         }
         "lexical.mal.nominal" => {
             "Retain lexical 말다 after nominal contrast, an explicit object, or a source-listed bare object in joined input; ordinary word spacing is not inferred."

@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "source_fixture_sha256": "e069a758943e1d991e3ecfd8bc6050e53be7369bdf8491232c4302a86f8cf004",
+  "reason": "The preflight proposed 빨가도 as a vowel-ending form of 빨갛다. Native KRDict 71070 lists 빨개; NIKL confirms its 아 contraction. Preserve the original proposal and replace only that exact path with a scoped negative control, adding 빨개도 as the positive form. Unrelated lexical hypotheses remain unjudged.",
+  "sources": [
+    "krdict:71070",
+    "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=328236"
+  ],
+  "corrections": [
+    {
+      "original": {
+        "id": "doeda-complement-ad93aa35f5a8059810903e83",
+        "surface": "빨가도된다",
+        "lemmas": [
+          "빨갛다",
+          "되다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "predicate"
+        ],
+        "morphemes": [
+          "어도",
+          "는다"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "verdict": "required",
+        "source": "krdict:89858",
+        "native_sense": "21",
+        "family": "permission",
+        "required_rules": [
+          "lexical.doeda.extended"
+        ],
+        "scope": "source_attributed_construction_proposal",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "replacement_control": {
+        "id": "doeda-complement-ad93aa35f5a8059810903e83-corrected-control",
+        "surface": "빨가도된다",
+        "lemmas": [
+          "빨갛다",
+          "되다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "predicate"
+        ],
+        "morphemes": [
+          "어도",
+          "는다"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "verdict": "forbidden",
+        "source": "krdict:89858",
+        "native_sense": "21",
+        "family": "hieut-vowel-control",
+        "required_rules": [
+          "lexical.doeda.extended"
+        ],
+        "scope": "scoped_construction_control",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "replacement_positive": {
+        "id": "doeda-complement-ad93aa35f5a8059810903e83-corrected-vowel",
+        "surface": "빨개도된다",
+        "lemmas": [
+          "빨갛다",
+          "되다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "predicate"
+        ],
+        "morphemes": [
+          "어도",
+          "는다"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "verdict": "required",
+        "source": "krdict:89858",
+        "native_sense": "21",
+        "family": "permission",
+        "required_rules": [
+          "lexical.doeda.extended"
+        ],
+        "scope": "source_attributed_construction_proposal",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      }
+    },
+    {
+      "original": {
+        "id": "doeda-complement-e2def56ced4933bebe00fbe0",
+        "surface": "빨가도된다",
+        "lemmas": [
+          "빨갛다",
+          "되다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "어도",
+          "는다"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "verdict": "required",
+        "source": "nikl-qna-318411",
+        "native_sense": "21",
+        "family": "permission",
+        "required_rules": [
+          "auxiliary.doeda.extended"
+        ],
+        "scope": "source_attributed_construction_proposal",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "replacement_control": {
+        "id": "doeda-complement-e2def56ced4933bebe00fbe0-corrected-control",
+        "surface": "빨가도된다",
+        "lemmas": [
+          "빨갛다",
+          "되다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "어도",
+          "는다"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "verdict": "forbidden",
+        "source": "nikl-qna-318411",
+        "native_sense": "21",
+        "family": "hieut-vowel-control",
+        "required_rules": [
+          "auxiliary.doeda.extended"
+        ],
+        "scope": "scoped_construction_control",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "replacement_positive": {
+        "id": "doeda-complement-e2def56ced4933bebe00fbe0-corrected-vowel",
+        "surface": "빨개도된다",
+        "lemmas": [
+          "빨갛다",
+          "되다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "어도",
+          "는다"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "verdict": "required",
+        "source": "nikl-qna-318411",
+        "native_sense": "21",
+        "family": "permission",
+        "required_rules": [
+          "auxiliary.doeda.extended"
+        ],
+        "scope": "source_attributed_construction_proposal",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      }
+    }
+  ],
+  "before_additional_words": {
+    "빨개도된다": {
+      "analysis": {
+        "normalized": "빨개도된다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "빨개도되다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빨개도된다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빨개도된다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빨개도된다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빨개도될다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "빨개도되다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "빨개도된다",
+              "kind": "unclassified"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "빨개도된다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "빨개도된다다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "빨개도될다",
+              "kind": "predicate"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "baseline_cli": "/nix/store/gfipbnpiii4lgf6jq9207hc8vqb6zcar-klem-0.1.0/bin/klem",
+  "baseline_cli_sha256": "fe49fed194602d228addf8d9828165925e65220980c4cfa4de5d26497e41e7f2"
+}

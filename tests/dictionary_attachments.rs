@@ -59,6 +59,7 @@ impl Fixture {
             "krdict-auxiliary-inventory.json",
             "krdict-continuation-left.json",
             "krdict-emphatic-ending.json",
+            "krdict-doeda-complement.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -206,6 +207,42 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     // other connectors. They are absent in raw output as well as after filtering.
     assert_eq!(doeda_boundaries.len(), 3);
     structural_ids.extend(doeda_boundaries.iter().map(String::as_str));
+    let complement: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/doeda-complement-sources.json")).unwrap();
+    let corrections: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/doeda-complement-corrections.json")).unwrap();
+    let mut complement_boundaries: Vec<_> = complement["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["verdict"] == "forbidden")
+        .map(|c| format!("{}-policy", c["id"].as_str().unwrap()))
+        .collect();
+    complement_boundaries.extend(
+        corrections["corrections"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|c| {
+                format!(
+                    "{}-policy",
+                    c["replacement_control"]["id"].as_str().unwrap()
+                )
+            }),
+    );
+    let bridge: serde_json::Value = serde_json::from_str(include_str!(
+        "fixtures/doeda-complement-bridge-boundaries.json"
+    ))
+    .unwrap();
+    complement_boundaries.extend(
+        bridge["cases"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|c| format!("{}-policy", c["id"].as_str().unwrap())),
+    );
+    assert_eq!(complement_boundaries.len(), 11);
+    structural_ids.extend(complement_boundaries.iter().map(String::as_str));
     let mut structural = self::suite();
     structural
         .cases
@@ -214,7 +251,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(boundaries.passed(), "{:?}", boundaries.violations);
     assert_eq!(
         (boundaries.required_total, boundaries.forbidden_total),
-        (0, 35)
+        (0, 46)
     );
     assert_eq!(
         raw.forbidden_present,
@@ -257,7 +294,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2288, 1779)
+        (2518, 1964)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

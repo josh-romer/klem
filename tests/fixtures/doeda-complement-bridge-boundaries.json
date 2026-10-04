@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ah",
+  "scope": "The complete source-cohort replay exposed a post-complement bridge being recovered as a stand-alone prefix before an unrelated auxiliary. Forbid this exact scoped-rule path; do not classify ordinary separate-word 안 되다, lexical 안되다, or sentence context as ungrammatical.",
+  "cases": [
+    {
+      "id": "doeda-complement-standalone-negative-auxiliary-boundary",
+      "surface": "안되겠지만",
+      "lemmas": [
+        "안",
+        "되다",
+        "말다"
+      ],
+      "lemma_kinds": [
+        "adverbial",
+        "predicate",
+        "auxiliary"
+      ],
+      "morphemes": [
+        "겠",
+        "지",
+        "어",
+        "는"
+      ],
+      "morpheme_kinds": [
+        "prefinal",
+        "ending",
+        "ending",
+        "particle"
+      ],
+      "verdict": "forbidden",
+      "source": "krdict:71372",
+      "native_sense": "1",
+      "family": "negative-bridge-scope-control",
+      "required_rules": [
+        "doeda.negative_bridge"
+      ],
+      "scope": "scoped_construction_control",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ]
+}

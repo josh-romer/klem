@@ -2160,3 +2160,19 @@ has 109 required and 23 forbidden paths; compatibility policy separately has
 conflicts for auxiliary 되다 versus KRDict's verb entry 89858. These conflicts
 are representation limits, not judgments that the original constructions are
 ungrammatical; broader role review remains COV-019ag work.
+
+
+`doeda-complement-sources.json` and `krdict-doeda-complement.json` retain the
+immutable COV-019ah preflight: 95 complete native entries, 22 full component
+sources, original sense IDs 17/18/19/21 and all 412 initial proposals. The source
+archive retains every translation; importer translations are projected to
+English. `doeda-complement-corrections.json` explicitly preserves the two
+mistaken 빨가도 proposals and their native-paradigm-based corrections to 빨개도;
+the original fixture remains unchanged. `doeda-complement-bridge-boundaries.json`
+records an individual scoped-rule leak found by full source replay. The effective
+raw ledger contains 404 required paths and eleven controls. Dictionary policy
+contains 230 required lexical paths and 185 controls or native auxiliary-role
+conflicts. Native source POS, senses, forms and all example groups remain
+unchanged. Attribution: National Institute of Korean Language, Korean Basic
+Dictionary, CC BY-SA 2.0 KR. Authored construction tests are not contextual gold
+or an independent Korean-language review.

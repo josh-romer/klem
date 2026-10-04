@@ -1,7 +1,7 @@
 //! Scoped lexical attachment evidence, separate from dictionary-free generation.
 //! See docs/dictionary-attachments.md for sources, exceptions and exclusions.
 use super::{Annotation, Compatibility};
-use crate::engine::{PredicateClass, auxiliary_class, lexical_doeda_role};
+use crate::engine::{PredicateClass, auxiliary_class, doeda_negative_bridge, lexical_doeda_role};
 use crate::{
     Analysis, LemmaKind, MorphemeKind, SpellingClass, SpellingRecovery, WordAnalysis,
     breakdown::Component,
@@ -1807,6 +1807,9 @@ impl Annotation {
             // does. A dictionary homonym must not lend its lexical class to a
             // different reading. Copulas reset the previous class; 답다 is an
             // explicitly adjectival derivation, unlike general 하다 suffixes.
+            if doeda_negative_bridge(analysis, *index) {
+                continue;
+            }
             previous_class = if morphs.iter().any(|c| {
                 matches!(c, Component::Morpheme(i)
                     if analysis.morphemes[*i].kind == MorphemeKind::Suffix

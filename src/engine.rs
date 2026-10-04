@@ -438,7 +438,7 @@ fn adverb_derivation(word: &str) -> Option<Analysis> {
 #[derive(Clone)]
 struct Predicate {
     stem: String,
-    // Following predicates retain their lexical or auxiliary role.
+    // Following predicates and intervening adverbs retain their own role.
     following: Vec<(String, LemmaKind)>,
     leading_lemmas: Vec<Lemma>,
     morphs: Vec<Morpheme>,
@@ -2206,11 +2206,16 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
         add_copulas(p, &mut out);
     }
     for a in &mut out {
-        a.lemmas.extend(
-            p.following
-                .iter()
-                .map(|(s, kind)| lemma(format!("{s}다"), *kind)),
-        );
+        a.lemmas.extend(p.following.iter().map(|(s, kind)| {
+            lemma(
+                if *kind == LemmaKind::Adverbial {
+                    s.clone()
+                } else {
+                    format!("{s}다")
+                },
+                *kind,
+            )
+        }));
     }
     out.retain_mut(auxiliary_inflections_allowed);
     out
@@ -2223,14 +2228,30 @@ pub(crate) enum PredicateClass {
     Copula,
 }
 
-// KRDict 89858 treats the -게 되다 senses as verbs; NIKL separately
+// KRDict 89858 treats these 되다 senses as verbs; NIKL separately
 // describes an auxiliary construction. This class belongs only to the new
 // attributed lexical role, leaving every historical auxiliary use unchanged.
 pub(crate) fn lexical_doeda_role(lemma: &Lemma, connector: Option<&str>, rules: &[String]) -> bool {
     lemma.kind == LemmaKind::Predicate
         && lemma.text == "되다"
-        && matches!(connector, Some("게" | "게끔"))
-        && rules.iter().any(|r| r == "lexical.doeda.complement")
+        && ((matches!(connector, Some("게" | "게끔"))
+            && rules.iter().any(|r| r == "lexical.doeda.complement"))
+            || (matches!(
+                connector,
+                Some("도록" | "기" | "어야" | "으면" | "어도" | "어" | "어서" | "어서는")
+            ) && rules.iter().any(|r| r == "lexical.doeda.extended")))
+}
+
+// The adverb owns no inflection. Preserve the actual preceding predicate's
+// connector through this explicitly attributed bridge, without lending it to
+// arbitrary adverbs, compounds or later unrelated owners.
+pub(crate) fn doeda_negative_bridge(a: &Analysis, index: usize) -> bool {
+    a.lemmas[index].kind == LemmaKind::Adverbial
+        && a.lemmas[index].text == "안"
+        && a.lemmas.get(index + 1).is_some_and(|l| {
+            l.text == "되다" && matches!(l.kind, LemmaKind::Predicate | LemmaKind::Auxiliary)
+        })
+        && a.rules.iter().any(|r| r == "doeda.negative_bridge")
 }
 
 // Classes belong to a particular auxiliary use, not every homonym of a lemma.
@@ -2256,6 +2277,13 @@ pub(crate) fn auxiliary_class(
             }
             _ => None,
         },
+        "되" if matches!(
+            connector,
+            Some("어야" | "으면" | "어도" | "어서" | "어서는" | "어")
+        ) =>
+        {
+            Some(Verb)
+        }
         "하" => match connector {
             Some("어" | "게" | "게끔" | "어야" | "으려" | "으려고" | "고자" | "으면") => {
                 Some(Verb)
@@ -2293,7 +2321,12 @@ fn finite_intention_auxiliary(stem: &str, morphs: &[Morpheme]) -> bool {
 
 fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary)
-        && !a.rules.iter().any(|r| r == "lexical.doeda.complement")
+        && !a.rules.iter().any(|r| {
+            matches!(
+                r.as_str(),
+                "lexical.doeda.complement" | "lexical.doeda.extended"
+            )
+        })
     {
         return true;
     }
@@ -2305,7 +2338,10 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     let mut previous_relational_copula = false;
     let mut previous_non_honorific_prefinal = false;
     let mut previous_past_prefinal = false;
-    for lemma in &a.lemmas {
+    for (lemma_index, lemma) in a.lemmas.iter().enumerate() {
+        if doeda_negative_bridge(a, lemma_index) {
+            continue;
+        }
         // NIKL's verbal/adjectival -게 하다 constructions also permit
         // emphatic -게끔 하다: past belongs to right-hand 하다. Scope this
         // new join's control to the immediately preceding represented owner;
@@ -4012,15 +4048,78 @@ fn lexical_mal_link(left: &Predicate, right: &Predicate, branch_end: Option<&str
             && branch_end.is_some_and(paired))
 }
 
+#[derive(Clone, Copy)]
+struct PredicateLink {
+    role: LemmaKind,
+    rule: &'static str,
+    paired_branch: bool,
+}
+
+// KRDict 89858 senses 17/18/19/21. Each particle belongs to the
+// immediately preceding connector; the cause/concession ending 기로 is not
+// used to manufacture the decision construction 기 + 로.
+fn extended_doeda_link(left: &Predicate, right: &Predicate) -> Option<PredicateLink> {
+    if right.stem != "되"
+        || !(right.leading_lemmas.is_empty()
+            || (right.leading_lemmas.len() == 1
+                && right.leading_lemmas[0] == lemma("안", LemmaKind::Adverbial)))
+    {
+        return None;
+    }
+    let index = left
+        .morphs
+        .iter()
+        .rposition(|m| m.kind == MorphemeKind::Ending)?;
+    let connector = left.morphs[index].form.as_str();
+    let particles = &left.morphs[index + 1..];
+    let particle = |form: &str| {
+        particles.len() == 1
+            && particles[0].kind == MorphemeKind::Particle
+            && particles[0].form == form
+    };
+    let scheduled =
+        (connector == "도록" && particles.is_empty()) || (connector == "기" && particle("로"));
+    let extended = (matches!(connector, "어야" | "으면" | "어도") && particles.is_empty())
+        || (connector == "어" && (particle("야") || particle("도")))
+        || (!right.leading_lemmas.is_empty()
+            && ((connector == "어서" && particle("는"))
+                || (connector == "어서는" && particles.is_empty())));
+    if scheduled {
+        Some(PredicateLink {
+            role: LemmaKind::Predicate,
+            rule: "lexical.doeda.extended",
+            paired_branch: false,
+        })
+    } else if extended {
+        Some(PredicateLink {
+            role: LemmaKind::Auxiliary,
+            rule: "auxiliary.doeda.extended",
+            paired_branch: false,
+        })
+    } else {
+        None
+    }
+}
+
 fn predicate_link(
     left: &Predicate,
     right: &Predicate,
     branch_end: Option<&str>,
-) -> Option<LemmaKind> {
+) -> Option<PredicateLink> {
     if lexical_mal_link(left, right, branch_end) {
-        Some(LemmaKind::Predicate)
+        Some(PredicateLink {
+            role: LemmaKind::Predicate,
+            rule: "lexical.mal.complement",
+            paired_branch: !lexical_mal_link(left, right, None),
+        })
+    } else if let Some(link) = extended_doeda_link(left, right) {
+        Some(link)
     } else if right.leading_lemmas.is_empty() && auxiliary_link(left, right) {
-        Some(LemmaKind::Auxiliary)
+        Some(PredicateLink {
+            role: LemmaKind::Auxiliary,
+            rule: "auxiliary",
+            paired_branch: false,
+        })
     } else {
         None
     }
@@ -4156,11 +4255,15 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
 // bounded to one reviewed slot and leave the packed search iterative.
 fn connector_predicates(word: &str) -> Vec<Predicate> {
     let mut out = predicates(word);
-    for particle in ["들", "도", "만", "는", "야", "나", "가", "를"] {
+    for particle in ["들", "도", "만", "는", "야", "나", "가", "를", "로"] {
         if let Some(base) = word.strip_suffix(particle) {
             for mut p in predicates(base) {
                 let ending = &p.morphs.last().unwrap().form;
-                if p.connector && (ending == "기" || before_particle(ending, particle)) {
+                if p.connector
+                    && ((particle == "로" && ending == "기")
+                        || (particle != "로"
+                            && (ending == "기" || before_particle(ending, particle))))
+                {
                     p.morphs.push(morph(particle, MorphemeKind::Particle));
                     p.rules.push("particle".into());
                     out.push(p);
@@ -4193,6 +4296,23 @@ fn connector_predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph("를", MorphemeKind::Particle));
                 p.rules
                     .extend(["particle".into(), "particle.contraction.l".into()]);
+                out.push(p);
+            }
+        }
+    }
+    out
+}
+
+// Negative 안 is recovered only on the right of a validated complement.
+// Keeping it out of prefix bases prevents an unrelated following auxiliary
+// from manufacturing a stand-alone adverb + 되다 split (안되겠지만).
+fn predicate_tails(word: &str) -> Vec<Predicate> {
+    let mut out = connector_predicates(word);
+    if let Some(base) = word.strip_prefix("안") {
+        for mut p in connector_predicates(base) {
+            if p.stem == "되" {
+                p.leading_lemmas.push(lemma("안", LemmaKind::Adverbial));
+                p.rules.push("doeda.negative_bridge".into());
                 out.push(p);
             }
         }
@@ -4599,14 +4719,15 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
             let right = &word[boundaries[start]..boundaries[end]];
             let tails = tails_cache.entry(right).or_insert_with(|| {
                 Rc::new(
-                    connector_predicates(right)
+                    predicate_tails(right)
                         .into_iter()
                         .filter(|p| {
-                            p.leading_lemmas.is_empty()
-                                && (p.stem == "말"
-                                    || grammar::AUXILIARY_CONNECTORS
-                                        .iter()
-                                        .any(|c| aux_allowed(&p.stem, c)))
+                            p.stem == "되"
+                                || (p.leading_lemmas.is_empty()
+                                    && (p.stem == "말"
+                                        || grammar::AUXILIARY_CONNECTORS
+                                            .iter()
+                                            .any(|c| aux_allowed(&p.stem, c))))
                         })
                         .collect(),
                 )
@@ -4664,8 +4785,8 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                 let mut rules: BTreeSet<&str> = base.rules.iter().map(String::as_str).collect();
                 let mut previous = base;
                 for tail in path.iter().rev() {
-                    let role = predicate_link(previous, tail, branch_end).unwrap();
-                    if role == LemmaKind::Predicate && !lexical_mal_link(previous, tail, None) {
+                    let link = predicate_link(previous, tail, branch_end).unwrap();
+                    if link.paired_branch {
                         rules.insert("lexical.mal.paired_branch");
                     }
                     if joined
@@ -4675,18 +4796,20 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                     {
                         rules.insert("auxiliary.internal_particle");
                     }
-                    joined.following.push((tail.stem.clone(), role));
+                    joined
+                        .following
+                        .extend(tail.leading_lemmas.iter().map(|l| (l.text.clone(), l.kind)));
+                    joined.following.push((tail.stem.clone(), link.role));
                     joined.following.extend(tail.following.iter().cloned());
                     joined
                         .spellings
                         .extend(shifted_spellings(&tail.spellings, joined.morphs.len()));
                     joined.morphs.extend(tail.morphs.iter().cloned());
                     rules.extend(tail.rules.iter().map(String::as_str));
-                    rules.insert(if role == LemmaKind::Predicate {
-                        "lexical.mal.complement"
-                    } else {
-                        "auxiliary"
-                    });
+                    rules.insert(link.rule);
+                    if link.role == LemmaKind::Auxiliary {
+                        rules.insert("auxiliary");
+                    }
                     joined.connector = tail.connector;
                     previous = tail;
                 }
@@ -4712,7 +4835,7 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
 }
 
 fn add_lexical_doeda_roles(out: &mut Vec<Analysis>) {
-    // Project only already validated -게/-게끔 links. Original paths and
+    // Project only already validated, source-listed 되다 links. Original paths and
     // their evidence stay intact; nominal/copula expansion and outer endings
     // have finished, so the ordered components identify each actual owner.
     let original_count = out.len();
@@ -4733,13 +4856,26 @@ fn add_lexical_doeda_roles(out: &mut Vec<Analysis>) {
         for component in components {
             match component {
                 crate::breakdown::Component::Lemma(i) => {
-                    if base.lemmas[i].kind == LemmaKind::Auxiliary
-                        && base.lemmas[i].text == "되다"
-                        && matches!(connector, Some("게" | "게끔"))
+                    if base.lemmas[i].kind == LemmaKind::Auxiliary && base.lemmas[i].text == "되다"
                     {
-                        slots.push(i);
+                        let rule = if matches!(connector, Some("게" | "게끔")) {
+                            Some("lexical.doeda.complement")
+                        } else if matches!(
+                            connector,
+                            Some("어야" | "으면" | "어도" | "어" | "어서" | "어서는")
+                        ) && base.rules.iter().any(|r| r == "auxiliary.doeda.extended")
+                        {
+                            Some("lexical.doeda.extended")
+                        } else {
+                            None
+                        };
+                        if let Some(rule) = rule {
+                            slots.push((i, rule));
+                        }
                     }
-                    connector = None;
+                    if !doeda_negative_bridge(base, i) {
+                        connector = None;
+                    }
                 }
                 crate::breakdown::Component::Morpheme(i)
                     if base.morphemes[i].kind == MorphemeKind::Ending =>
@@ -4753,13 +4889,13 @@ fn add_lexical_doeda_roles(out: &mut Vec<Analysis>) {
             continue;
         }
         let mut variant = base.clone();
-        variant.rules.push("lexical.doeda.complement".into());
+
         // Binary enumeration without shifts, recursion or an arbitrary role
         // cutoff. Each link can keep its auxiliary role or take the lexical
         // alternative independently, including multiple 되다 owners.
         loop {
             let mut cursor = 0;
-            while let Some(&slot) = slots.get(cursor) {
+            while let Some(&(slot, _)) = slots.get(cursor) {
                 if variant.lemmas[slot].kind == LemmaKind::Auxiliary {
                     variant.lemmas[slot].kind = LemmaKind::Predicate;
                     break;
@@ -4771,6 +4907,17 @@ fn add_lexical_doeda_roles(out: &mut Vec<Analysis>) {
                 break;
             }
             let mut candidate = variant.clone();
+            for &(slot, rule) in &slots {
+                if candidate.lemmas[slot].kind == LemmaKind::Predicate {
+                    candidate.rules.push(rule.into());
+                }
+            }
+            if !slots.iter().any(|&(slot, rule)| {
+                rule == "lexical.doeda.extended"
+                    && candidate.lemmas[slot].kind == LemmaKind::Auxiliary
+            }) {
+                candidate.rules.retain(|r| r != "auxiliary.doeda.extended");
+            }
             if !candidate
                 .lemmas
                 .iter()

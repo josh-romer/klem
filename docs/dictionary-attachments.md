@@ -23,6 +23,19 @@ both classifications and original corpus tags; the
 [individual regressions](../tests/doeda_role_sources.rs) cover the two roles,
 Unicode, caching, dictionary filtering and ordered components.
 
+
+Further source-listed 되다 constructions also preserve a lexical verb role:
+-도록 and scheduled 기 + 로, necessity -어야, conditional -(으)면,
+permission -어도 and prohibition -어서 + 는 + 안. The negative adverb stays
+separate from the lexical compound 안되다. Necessity, conditional and
+permission/prohibition additionally retain NIKL's auxiliary interpretation;
+KRDict still calls these senses verbs, so its original POS conflict excludes
+that role under `--dict-compatible`. The lexical reading remains available.
+[The source archive](doeda-complement-source-preflight.json.gz) and
+[regression cases](../tests/doeda_complement_sources.rs) preserve both sources,
+component order, original candidates and independent dictionary homonyms.
+Contextual senses and register are not selected by this policy.
+
 ## Evidence and decisions
 
 The [source review](dictionary-attachment-evaluation.json) retains the pinned

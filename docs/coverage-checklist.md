@@ -3422,14 +3422,15 @@ review remains open under the completion review below.
   the exact frozen implementation without redefining contextual correctness.
 
 - [ ] **COV-019ah — Further lexical 되다 complement constructions.**
-  **Partial: complete sources and pre-change regression baseline frozen;
-  parser implementation pending.**
+  **Partial: source-listed connectors, negative bridge and attributed role
+  alternatives implemented and packaged checks passed; broad corpus/context
+  review pending.**
   The complete KRDict 89858 senses retained by COV-019ag also list -도록/-기로
   (sense 17), -어야 (18), -면 (19), and -어도/-어서는 안 (21). These are separate
   dependencies beyond the implemented -게/-게끔 roles. Joined 행복해야된다,
-  출발하기로되었다, 표시하도록되어있다, 가면된다 and 먹어도된다 currently
-  lack separate 되다 paths. Freeze all native examples and original corpus
-  contexts before implementation. Retain lexical heads and their own inflections,
+  출발하기로되었다, 표시하도록되어있다, 가면된다 and 먹어도된다 originally
+  lacked separate 되다 paths and now recover. Native examples and original
+  corpus contexts were frozen before implementation. Retain lexical heads and their own inflections,
   preserve the intervening 안 representation independently, and review each
   source-listed construction's verbal/adjectival/copular classes and particles.
   Cover Unicode, native homonyms, original candidate/assessment order and
@@ -3446,9 +3447,18 @@ review remains open under the completion review below.
   ten-column annotations. Twenty-five novel occurrences retain full paragraphs
   and exact character/UTF-8 spans. Auxiliary and lexical native annotations are
   preserved independently rather than repaired to match another source.
-  [412 named proposals](../tests/fixtures/doeda-complement-sources.json) separate
-  404 required construction paths from eight scoped connector/allomorph controls;
-  no proposed path is present before implementation. KRDict 89858 senses
+  [412 original proposals](../tests/fixtures/doeda-complement-sources.json) remain
+  unchanged. [Explicit corrections](../tests/fixtures/doeda-complement-corrections.json)
+  preserve the two mistaken 빨가도 vowel proposals: native 71070 and
+  [NIKL's 2026-03-17 explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=328236)
+  supply 빨개; both 빨개도 role paths replace them as positive tests and the old
+  exact paths become scoped controls. A separately named
+  [negative-bridge boundary](../tests/fixtures/doeda-complement-bridge-boundaries.json)
+  records the full-cohort discovery that the new bridge must not become a
+  stand-alone prefix before an unrelated auxiliary. This scoped exclusion does
+  not adjudicate ordinary separate-word 안 되다. The effective ledger has 404
+  required paths and eleven controls; all original proposals were absent before
+  implementation. KRDict 89858 senses
   17/18/19/21 remain verbs. NIKL's
   [2025-07-18 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318411)
   separately lists main-verb 도록/기로 uses and auxiliary necessity, conditional
@@ -3464,13 +3474,44 @@ review remains open under the completion review below.
   [The 95-entry importer fixture](../tests/fixtures/krdict-doeda-complement.json)
   includes 22 full component sources and preserves adverb 안, both noun homonyms,
   both 안되다 compound classes and both 되다 homonyms independently. It is an
-  explicit finite subset of the complete scan archive. [Two retention tests](../tests/doeda_complement_sources.rs)
-  check all imports and prior candidates/native readings/order across NFC/NFD and
-  three cache budgets. [The offline verifier](../tools/doeda_complement_audit.py)
+  explicit finite subset of the complete scan archive. [Five regression tests](../tests/doeda_complement_sources.rs)
+  check full imports, prior candidates/native readings/order, all 415 effective
+  cases, NFC/NFD, three cache budgets and CLI/library/filter parity. A mixed
+  four-owner chain retains all sixteen independent roles and each connector's
+  own provenance. Negative 안 owns no ending and preserves the actual preceding
+  predicate's class through the link. Scheduled 기 + 로 stays componentized;
+  the unrelated cause/concession ending does not license this decision reading.
+  Lexical paths retain native verb compatibility and an explicit adjective
+  homonym conflict. The separately sourced auxiliary paths keep KRDict's native
+  lexical-role conflict: policy adds 230 required lexical paths and 185 controls
+  or role conflicts, while raw generation retains all 404 sourced alternatives. [The offline verifier](../tools/doeda_complement_audit.py)
   checks source/adapter identity, every original sentence/span and all three
   before filters; --dictionary/--cli separately replays the complete scan and
-  current packaged baseline. Production rules, subsequent candidate/corpus
-  comparisons, CLI/reader evidence and independent Korean review remain pending.
+  original packaged baseline. [The complete source comparison](doeda-complement-diagnostics.json.gz)
+  retains all 9,130 records per filter: 2,614 raw, 2,529 headword and 2,528
+  compatibility records change. All original candidates, native fields/readings
+  and relative order remain exact. The 30,661 distinct changes comprise 30,528
+  attributed candidate additions and 133 spacing additions; each has a stable ID
+  and its cohort occurrence, with contextual/independent judgments pending.
+  The 382 independent spacing words and 76 additional complete native entries
+  are archived separately. No arbitrary candidate cutoff was introduced.
+  [Packaged checks](doeda-complement-packaged-checks.json.gz) retain the complete
+  implementation texts, Nix log (880 passed / zero failed / one ignored), 830
+  encoded API judgments, 95 full native endpoints, and nine browser exports over
+  three bounded NFC/NFD batches. All exports match the release CLI. Six rendered
+  diagrams preserve scheduled 기 + 로, necessity's native 하 + 여 display,
+  copular condition, permission, separate negative 안 and later 있다; lexical
+  source 89858 and adverb 71372 clicks, role selection, compatibility filtering
+  and desktop/mobile layout pass. Screenshots were visually inspected; all
+  contexts and sense/register choices remain unjudged.
+  [The browser regression](../web/tests/doeda-complement.mjs) replays these checks;
+  [the offline verifier](../tools/doeda_complement_package.py) binds them to their
+  historical implementation and original proposals/corrections. Complete debug
+  and Nix source-diagnostic streams, native entries and change records match
+  exactly; the committed checkpoint uses the release CLI's hash.
+  Full broad streams, fresh held-out corpus comparisons and contextual/sense/
+  register and independent Korean review remain pending; frozen source contexts
+  are not promoted to judged gold.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

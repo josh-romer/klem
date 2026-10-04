@@ -193,10 +193,24 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
         let before: WordAnalysis = serde_json::from_value(before.clone()).unwrap();
         for text in [surface.clone(), surface.nfd().collect::<String>()] {
             let actual = engine.analyze_word(&text).unwrap();
-            if matches!(surface.as_str(), "날지도" | "사고날지도") {
-                let source: Value =
-                    serde_json::from_str(include_str!("fixtures/future-question-sources.json"))
-                        .unwrap();
+            if matches!(
+                surface.as_str(),
+                "날지도" | "사고날지도" | "났다던데" | "발표났다던데"
+            ) {
+                let (source_file, rule, form) = if surface.contains("던데") {
+                    (
+                        include_str!("fixtures/reported-retrospective-sources.json"),
+                        "ending.reporting_retrospective",
+                        "다던데",
+                    )
+                } else {
+                    (
+                        include_str!("fixtures/future-question-sources.json"),
+                        "particle.future_question",
+                        "을지",
+                    )
+                };
+                let source: Value = serde_json::from_str(source_file).unwrap();
                 assert_eq!(
                     source["before_words"][surface]["analysis"],
                     serde_json::to_value(&before).unwrap()
@@ -215,12 +229,8 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
                     .filter(|a| !before.analyses.contains(a))
                     .collect();
                 assert!(!added.is_empty());
-                assert!(
-                    added
-                        .iter()
-                        .all(|a| a.rules.iter().any(|r| r == "particle.future_question")
-                            && a.morphemes.iter().any(|m| m.form == "을지"))
-                );
+                assert!(added.iter().all(|a| a.rules.iter().any(|r| r == rule)
+                    && a.morphemes.iter().any(|m| m.form == form)));
             } else {
                 assert_eq!(actual, before, "{surface}");
             }
@@ -236,6 +246,9 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
                 "나랴" | "연기나랴" => Some(("ending.rya", "으랴")),
                 "날라" | "사고날라" => Some(("ending.caution", "을라")),
                 "날지도" | "사고날지도" => Some(("particle.future_question", "을지")),
+                "났다던데" | "발표났다던데" => {
+                    Some(("ending.reporting_retrospective", "다던데"))
+                }
                 _ => None,
             };
             if let Some((rule, form)) = dependency {
@@ -285,7 +298,9 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
             "날라".to_owned(),
             "사고날라".to_owned(),
             "날지도".to_owned(),
-            "사고날지도".to_owned()
+            "사고날지도".to_owned(),
+            "났다던데".to_owned(),
+            "발표났다던데".to_owned()
         ])
     );
 }
@@ -420,7 +435,10 @@ fn every_native_pair_inflection_prefix_and_exclusion_has_independent_unicode_spa
                         case["id"]
                     );
                 } else if case["verdict"] == "pending_right_morphology"
-                    && case["surface"] != "사고날지도"
+                    && !matches!(
+                        case["surface"].as_str().unwrap(),
+                        "사고날지도" | "발표났다던데"
+                    )
                 {
                     assert!(matches!(
                         case["segments"][1].as_str().unwrap(),

@@ -1,39 +1,88 @@
-//! COV-018ab: future questions retain their endings before noun-clause particles.
+//! Contracted recalled reports retain native attachment distinctions and prior paths.
 use klem::dictionary::{
-    Dictionary, DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict,
+    Compatibility, Dictionary, DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict,
 };
 use klem::{Analysis, Lemmatizer, Session, WordAnalysis};
 use serde_json::Value;
 use std::{fs, path::PathBuf, process::Command, sync::Arc};
 use unicode_normalization::UnicodeNormalization;
 
-const RULE: &str = "particle.future_question";
+const RULE: &str = "ending.reporting_retrospective";
 fn evidence() -> Value {
     let mut fixture: Value =
-        serde_json::from_str(include_str!("fixtures/future-question-sources.json")).unwrap();
-    let supplement: Value = serde_json::from_str(include_str!(
-        "fixtures/future-question-corpus-supplement.json"
+        serde_json::from_str(include_str!("fixtures/reported-retrospective-sources.json")).unwrap();
+    let followers: Value = serde_json::from_str(include_str!(
+        "fixtures/reported-retrospective-followers.json"
     ))
     .unwrap();
-    for (surface, before) in supplement["before_words"].as_object().unwrap() {
-        if let Some(original) = fixture["before_words"]
+    fixture["cases"]
+        .as_array_mut()
+        .unwrap()
+        .extend(followers["cases"].as_array().unwrap().iter().cloned());
+    let corrections: Value = serde_json::from_str(include_str!(
+        "fixtures/reported-retrospective-corrections.json"
+    ))
+    .unwrap();
+    for change in corrections["superseded"].as_array().unwrap() {
+        let old = fixture["cases"]
+            .as_array_mut()
+            .unwrap()
+            .iter_mut()
+            .find(|c| c["id"] == change["original"]["id"])
+            .unwrap();
+        assert_eq!(*old, change["original"]);
+        *old = change["replacement"].clone();
+    }
+    fixture["cases"]
+        .as_array_mut()
+        .unwrap()
+        .extend(corrections["cases"].as_array().unwrap().iter().cloned());
+    for (surface, before) in corrections["before_words"].as_object().unwrap() {
+        if let Some(previous) = fixture["before_words"]
             .as_object_mut()
             .unwrap()
             .insert(surface.clone(), before.clone())
         {
-            assert_eq!(
-                original, *before,
-                "{surface}: supplement rewrote its baseline"
-            );
+            assert_eq!(previous, *before);
         }
     }
-    for source in supplement["corpora"].as_array().unwrap() {
-        for token in source["tokens"].as_array().unwrap() {
-            fixture["corpora"].as_array_mut().unwrap().push(serde_json::json!({
-                "source": source["source"],
-                "sentences": [{"complete_sentence": token["complete_sentence"], "matched_tokens": [token["source_row"]]}]
-            }));
+    for entry in corrections["complete_native_entries"]
+        .as_object()
+        .unwrap()
+        .values()
+    {
+        let mut entry = entry.clone();
+        for sense in entry["senses"].as_array_mut().unwrap() {
+            sense["translations"]
+                .as_array_mut()
+                .unwrap()
+                .retain(|t| t["language"] == "영어");
         }
+        fixture["source_entries"]
+            .as_array_mut()
+            .unwrap()
+            .push(entry);
+    }
+    let additional: Value = serde_json::from_str(include_str!(
+        "fixtures/reported-retrospective-additional-native.json"
+    ))
+    .unwrap();
+    for entry in additional["complete_native_entries"]
+        .as_object()
+        .unwrap()
+        .values()
+    {
+        let mut entry = entry.clone();
+        for sense in entry["senses"].as_array_mut().unwrap() {
+            sense["translations"]
+                .as_array_mut()
+                .unwrap()
+                .retain(|t| t["language"] == "영어");
+        }
+        fixture["source_entries"]
+            .as_array_mut()
+            .unwrap()
+            .push(entry);
     }
     fixture
 }
@@ -41,16 +90,17 @@ struct Fixture(PathBuf);
 impl Fixture {
     fn new(tag: &str) -> Self {
         let path = std::env::temp_dir().join(format!(
-            "klem-future-question-{tag}-{}.db",
+            "klem-reported-retrospective-{tag}-{}.db",
             std::process::id()
         ));
         import_krdict(
             &[
-                PathBuf::from("tests/fixtures/krdict-future-question.json"),
-                PathBuf::from("tests/fixtures/krdict-future-question-additional.json"),
+                PathBuf::from("tests/fixtures/krdict-reported-retrospective.json"),
+                PathBuf::from("tests/fixtures/krdict-reported-retrospective-corrections.json"),
+                PathBuf::from("tests/fixtures/krdict-reported-retrospective-additional.json"),
             ],
             &path,
-            "future-question-test",
+            "reported-retrospective-test",
         )
         .unwrap();
         Self(path)
@@ -85,28 +135,11 @@ fn complete_native_sources_survive_import_without_contextual_relabeling() {
             *entry
         );
     }
-    let additional: Value = serde_json::from_str(include_str!(
-        "fixtures/future-question-additional-native.json"
-    ))
-    .unwrap();
-    for (id, entry) in additional["complete_native_entries"].as_object().unwrap() {
-        let mut expected = entry.clone();
-        for sense in expected["senses"].as_array_mut().unwrap() {
-            sense["translations"]
-                .as_array_mut()
-                .unwrap()
-                .retain(|t| t["language"] == "영어");
-        }
-        assert_eq!(
-            serde_json::to_value(db.entry(id).unwrap().unwrap()).unwrap(),
-            expected
-        );
-    }
     let cases = fixture["cases"].as_array().unwrap();
-    assert_eq!(cases.len(), 70);
+    assert_eq!(cases.len(), 182);
     assert_eq!(
         cases.iter().filter(|c| c["verdict"] == "required").count(),
-        58
+        135
     );
     for case in cases {
         assert_eq!(case["contextual_verdict"], "unjudged");
@@ -142,36 +175,18 @@ fn individual_paths_unicode_cache_filters_and_cli_agree() {
                         assert!(a.breakdown().is_some(), "{}", case["id"]);
                         assert!(a.rules.iter().any(|r| r == RULE));
                         assert!(a.rules.iter().all(|r| klem::rule_explanation(r).is_some()));
-                        // A following particle must inherit the independent ending's
-                        // owner judgments, including Unknowns and auxiliary ownership.
-                        let mut core = a.clone();
-                        core.morphemes.pop();
-                        let core_surface = &surface[..surface.len()
-                            - case["morphemes"]
-                                .as_array()
-                                .unwrap()
-                                .last()
-                                .unwrap()
-                                .as_str()
-                                .unwrap()
-                                .len()];
-                        let original: WordAnalysis = serde_json::from_value(
-                            fixture["before_words"][core_surface]["analysis"].clone(),
-                        )
-                        .unwrap();
-                        let owner = original
-                            .analyses
-                            .iter()
-                            .position(|old| {
-                                old.lemmas == core.lemmas && old.morphemes == core.morphemes
-                            })
-                            .unwrap_or_else(|| {
-                                panic!("{}: no independent ending path", case["id"])
-                            });
-                        assert_eq!(
-                            serde_json::to_value(annotation.assess(a)).unwrap(),
-                            fixture["before_words"][core_surface]["dictionary"]["readings"][owner],
-                            "{}",
+                        let assessed = annotation.assess(a);
+                        let status = match case["ending_owner_status"].as_str().unwrap() {
+                            "compatible" => Compatibility::Compatible,
+                            "incompatible" => Compatibility::Incompatible,
+                            "unknown" => Compatibility::Unknown,
+                            other => panic!("unexpected source judgment {other}"),
+                        };
+                        let owner = assessed.lemmas.last().unwrap();
+                        assert!(
+                            (owner.entries.is_empty() && status == Compatibility::Unknown)
+                                || owner.entries.iter().any(|e| e.status == status),
+                            "{}: {assessed:?}",
                             case["id"]
                         );
                     }
@@ -218,7 +233,7 @@ fn all_prior_words_retain_paths_order_and_dictionary_assessments() {
     let mut dictionary = DictionarySession::new(&db, 4096);
     let engine = Lemmatizer::new();
     let fixture = evidence();
-    assert_eq!(fixture["before_words"].as_object().unwrap().len(), 382);
+    assert_eq!(fixture["before_words"].as_object().unwrap().len(), 605);
     for (surface, before) in fixture["before_words"].as_object().unwrap() {
         let old: WordAnalysis = serde_json::from_value(before["analysis"].clone()).unwrap();
         for text in [surface.clone(), surface.nfd().collect::<String>()] {
@@ -240,38 +255,41 @@ fn all_prior_words_retain_paths_order_and_dictionary_assessments() {
                 );
             }
             for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
-                if matches!(surface.as_str(), "났다던데" | "발표났다던데") {
-                    // This later source-backed overlay preserves the original
-                    // future-question freeze and its exact native assessments.
-                    let later: Value = serde_json::from_str(include_str!(
-                        "fixtures/reported-retrospective-sources.json"
-                    ))
-                    .unwrap();
-                    assert_eq!(later["before_words"][surface], *before);
-                    assert!(
-                        a.rules
-                            .iter()
-                            .any(|r| r == "ending.reporting_retrospective")
-                    );
-                    assert!(a.morphemes.iter().any(|m| m.form == "다던데"));
-                    continue;
-                }
                 assert!(a.rules.iter().any(|r| r == RULE), "{surface}: {a:?}");
-                let end = a.morphemes.iter().position(|m| m.form == "을지").unwrap();
-                assert!(end + 1 < a.morphemes.len());
+                assert!(
+                    a.morphemes
+                        .iter()
+                        .any(|m| m.kind == klem::MorphemeKind::Ending
+                            && matches!(
+                                m.form.as_str(),
+                                "다던"
+                                    | "다던데"
+                                    | "는다던"
+                                    | "는다던데"
+                                    | "라던"
+                                    | "라던데"
+                                    | "으라던"
+                                    | "으라던데"
+                                    | "자던"
+                                    | "자던데"
+                                    | "냐던데"
+                                    | "느냐던데"
+                                    | "으냐던데"
+                            ))
+                );
             }
         }
     }
 }
 
 #[test]
-fn tracked_native_accident_dependency_gains_main_nada_spacing_with_utf8_spans() {
+fn tracked_native_announcement_dependency_gains_main_nada_spacing_with_utf8_spans() {
     let file = Fixture::new("spacing");
     let db = file.open();
     for cache in [0, 1, 4096] {
         let mut words = Session::new(Arc::new(Lemmatizer::new()), cache);
         let mut dictionary = DictionarySession::new(&db, cache);
-        for original in ["사고날지도", "학교에서사고날지도"] {
+        for original in ["발표났다던데", "학교에서발표났다던데"] {
             for text in [original.to_owned(), original.nfd().collect()] {
                 let prefix = "前🙂「";
                 let input = format!("{prefix}{text}」");
@@ -284,9 +302,9 @@ fn tracked_native_accident_dependency_gains_main_nada_spacing_with_utf8_spans() 
                 )
                 .unwrap();
                 let expected = if original.starts_with("학교") {
-                    vec!["학교에서", "사고", "날지도"]
+                    vec!["학교에서", "발표", "났다던데"]
                 } else {
-                    vec!["사고", "날지도"]
+                    vec!["발표", "났다던데"]
                 };
                 let option = suggestions
                     .alternatives
@@ -313,7 +331,7 @@ fn tracked_native_accident_dependency_gains_main_nada_spacing_with_utf8_spans() 
                             && a.morphemes
                                 .iter()
                                 .map(|m| m.form.as_str())
-                                .eq(["을지", "도"])
+                                .eq(["었", "다던데"])
                             && right.dictionary.assess(a).lemmas[0]
                                 .entries
                                 .iter()
@@ -332,12 +350,12 @@ fn tracked_native_accident_dependency_gains_main_nada_spacing_with_utf8_spans() 
 mod corpus;
 
 #[test]
-fn original_annotated_question_tokens_keep_their_gold_and_gain_lexical_recovery() {
+fn original_annotations_preserve_existing_matches_and_expose_conversion_disagreements() {
     let fixture = evidence();
     let engine = Lemmatizer::new();
     let mut total = 0;
-    let mut old_matches = 0;
-    let mut new_matches = 0;
+    let mut before_matches = 0;
+    let mut after_matches = 0;
     for source in fixture["corpora"].as_array().unwrap() {
         let kind = if source["source"].as_str().unwrap().contains("/kaist/") {
             corpus::Corpus::Kaist
@@ -360,31 +378,58 @@ fn original_annotated_question_tokens_keep_their_gold_and_gain_lexical_recovery(
                         .any(|line| line == fields.join("\t"))
                 );
                 let corpus::Conversion::Gold(gold) = corpus::convert(&fields, kind) else {
-                    panic!("unsupported original annotation: {fields:?}");
+                    panic!("{fields:?}");
                 };
                 let old: WordAnalysis =
                     serde_json::from_value(fixture["before_words"][fields[1]]["analysis"].clone())
                         .unwrap();
-                let old_match = old
-                    .analyses
-                    .iter()
-                    .any(|a| a.lemmas.iter().map(|l| &l.text).eq(gold.iter()));
-                old_matches += usize::from(old_match);
                 let new = engine.analyze_word(fields[1]).unwrap();
-                let new_match = new
-                    .analyses
-                    .iter()
-                    .any(|a| a.lemmas.iter().map(|l| &l.text).eq(gold.iter()));
-                assert!(!old_match || new_match, "lost original gold: {fields:?}");
-                new_matches += usize::from(new_match);
+                let matches = |word: &WordAnalysis| {
+                    word.analyses
+                        .iter()
+                        .any(|a| a.lemmas.iter().map(|l| &l.text).eq(gold.iter()))
+                };
+                let b = matches(&old);
+                let a = matches(&new);
+                assert!(!b || a, "lost original annotation: {fields:?}");
+                println!("{}: {gold:?}: {b} -> {a}", fields[1]);
                 total += 1;
+                before_matches += usize::from(b);
+                after_matches += usize::from(a);
             }
         }
     }
-    assert_eq!(total, 50);
-    assert_eq!(old_matches, 1);
-    assert_eq!(new_matches, 50);
+    assert_eq!(total, 12);
+    assert_eq!(before_matches, 4);
+    assert_eq!(after_matches, 11);
     println!(
-        "Original annotation matches: {old_matches} before, {new_matches} after, {total} tokens"
+        "Original annotation matches: {before_matches} before, {after_matches} after, {total} tokens"
     );
+}
+
+#[test]
+fn closed_adjectival_report_retains_irregular_stems_without_open_or_rieul_aliases() {
+    let fixture: Value = serde_json::from_str(include_str!(
+        "fixtures/reported-retrospective-boundaries.json"
+    ))
+    .unwrap();
+    let engine = Arc::new(Lemmatizer::new());
+    for cache in [0, 1, 4096] {
+        let mut session = Session::new(engine.clone(), cache);
+        for case in fixture["cases"].as_array().unwrap() {
+            for text in [
+                case["surface"].as_str().unwrap().to_owned(),
+                case["surface"].as_str().unwrap().nfd().collect(),
+            ] {
+                let word = session.analyze_word(&text).unwrap();
+                let found = word.analyses.iter().any(|a| path(a, case));
+                assert_eq!(
+                    found,
+                    case["verdict"] == "required",
+                    "{}: {word:?}",
+                    case["id"]
+                );
+            }
+        }
+    }
 }

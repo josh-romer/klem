@@ -1,0 +1,5999 @@
+{
+  "schema_version": 1,
+  "source_sha256": "de3658cee4c0bc212c287030af872eaf4eb8ebf8e3072f3a9e96eef6f43e44f3",
+  "lmf_sha256": "ec5b622470643a01bd11370b0138a5952ea51ad066245d2fcb9e2d3e873e4d36",
+  "before_cli_sha256": "93af0d63bed453cc43480a624825586fc39505def18af2aafdcc6fefb3dc53f9",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "superseded": [
+    {
+      "original": {
+        "id": "reported-retrospective-3713e8cf6d77ad4ece986e29",
+        "surface": "학생이리라던",
+        "lemmas": [
+          "학생",
+          "이다"
+        ],
+        "lemma_kinds": [
+          "nominal",
+          "copula"
+        ],
+        "morphemes": [
+          "으리",
+          "라던"
+        ],
+        "verdict": "forbidden",
+        "ending_owner_status": null,
+        "origin": "authored_structural_case",
+        "required_rule": "ending.reporting_retrospective",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "replacement": {
+        "id": "reported-retrospective-3713e8cf6d77ad4ece986e29",
+        "surface": "학생이리라던",
+        "lemmas": [
+          "학생",
+          "이다"
+        ],
+        "lemma_kinds": [
+          "nominal",
+          "copula"
+        ],
+        "morphemes": [
+          "으리",
+          "라던"
+        ],
+        "verdict": "required",
+        "ending_owner_status": "unknown",
+        "origin": "copular_extension_of_native_conjectural_report_unjudged",
+        "required_rule": "ending.reporting_retrospective",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "reason": "The narrower -라던 note alone does not justify excluding conjectural reports: native complete groups attest 이기리라던 and 나누리라던. The copular extension remains Unknown."
+    }
+  ],
+  "native_evidence": [
+    {
+      "id": "reported-retrospective-native-b7256e35109bf9f33c958a59",
+      "entry": "krdict:26318",
+      "sense": "4",
+      "group": 4,
+      "text_index": 0,
+      "surface": "이기리라던",
+      "complete_group": [
+        "축구 경기에서 우리 반이 이기리라던 기대는 초반부터 산산이 부서졌다."
+      ],
+      "text": "축구 경기에서 우리 반이 이기리라던 기대는 초반부터 산산이 부서졌다.",
+      "char_span": [
+        14,
+        19
+      ],
+      "span": {
+        "start": 34,
+        "end": 49
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-retrospective-native-07c63e8d18642522a15d0729",
+      "entry": "krdict:55367",
+      "sense": "1",
+      "group": 2,
+      "text_index": 0,
+      "surface": "나누리라던",
+      "complete_group": [
+        "오래 변치 않는 우정을 나누리라던 맹서와 기대는 허무해졌다."
+      ],
+      "text": "오래 변치 않는 우정을 나누리라던 맹서와 기대는 허무해졌다.",
+      "char_span": [
+        13,
+        18
+      ],
+      "span": {
+        "start": 31,
+        "end": 46
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "cases": [
+    {
+      "id": "reported-retrospective-15602b8b7dd75fa4e1711e87",
+      "surface": "이기리라던",
+      "lemmas": [
+        "이기다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으리",
+        "라던"
+      ],
+      "verdict": "required",
+      "ending_owner_status": "compatible",
+      "required_rule": "ending.reporting_retrospective",
+      "origin": "native_conjectural_report",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-retrospective-4b8ce0844e3f386a90bf7f21",
+      "surface": "나누리라던",
+      "lemmas": [
+        "나누다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으리",
+        "라던"
+      ],
+      "verdict": "required",
+      "ending_owner_status": "compatible",
+      "required_rule": "ending.reporting_retrospective",
+      "origin": "native_conjectural_report",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-retrospective-c8a45f982f66fe03d29719c2",
+      "surface": "아팠더라던데",
+      "lemmas": [
+        "아프다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "었",
+        "더",
+        "라던데"
+      ],
+      "verdict": "required",
+      "ending_owner_status": "compatible",
+      "required_rule": "ending.reporting_retrospective",
+      "origin": "past_before_source_listed_retrospective",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "before_streams": {
+    "all": [
+      {
+        "surface": "나누리라던",
+        "span": {
+          "start": 0,
+          "end": 15
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "나누리라던",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_prefinal",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "boundary.regular",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "던",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라더",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라더",
+                  "kind": "adverbial"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending",
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라던",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라덜다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "나누리라덯다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "나누리라",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라더",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라더",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라더다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라던",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라덜다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "나누리라덯다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 1,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 15,
+          "end": 16
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "아팠더라던데",
+        "span": {
+          "start": 16,
+          "end": 34
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "아팠더라던데",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_prefinal",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "던데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "boundary.regular",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "던데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라더",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라던덯다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라던데",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라던데다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라덜다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "아팠더라덯다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은데",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "아팠더라",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라더",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라더다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라던덯다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라던데",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라던데다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라덜다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "아팠더라덯다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 2,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 34,
+          "end": 35
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "이기리라던",
+        "span": {
+          "start": 35,
+          "end": 50
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "이기리라던",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_prefinal",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "boundary.regular",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "던",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라더",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라더",
+                  "kind": "adverbial"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending",
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라던",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라덜다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "이기리라덯다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "이기리라",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라더",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라더",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라더다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라던",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라덜다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이기리라덯다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 1,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 50,
+          "end": 51
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "학생이리라던",
+        "span": {
+          "start": 51,
+          "end": 69
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "학생이리라던",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_prefinal",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "boundary.regular",
+                "ending",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "던",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라더",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라더",
+                  "kind": "adverbial"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending",
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라던",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라덜다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생이리라덯다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "학생이리라",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라더",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라더",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라더다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라던",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라덜다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "학생이리라덯다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 2,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      }
+    ],
+    "headword": [
+      {
+        "surface": "나누리라던",
+        "span": {
+          "start": 0,
+          "end": 15
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "나누리라던",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 1,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 15,
+          "end": 16
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "아팠더라던데",
+        "span": {
+          "start": 16,
+          "end": 34
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "아팠더라던데",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 2,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 34,
+          "end": 35
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "이기리라던",
+        "span": {
+          "start": 35,
+          "end": 50
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "이기리라던",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 1,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 50,
+          "end": 51
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "학생이리라던",
+        "span": {
+          "start": 51,
+          "end": 69
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "학생이리라던",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 2,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      }
+    ],
+    "compatible": [
+      {
+        "surface": "나누리라던",
+        "span": {
+          "start": 0,
+          "end": 15
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "나누리라던",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 1,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 15,
+          "end": 16
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "아팠더라던데",
+        "span": {
+          "start": 16,
+          "end": 34
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "아팠더라던데",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 2,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 34,
+          "end": 35
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "이기리라던",
+        "span": {
+          "start": 35,
+          "end": 50
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "이기리라던",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 1,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      },
+      {
+        "surface": " ",
+        "span": {
+          "start": 50,
+          "end": 51
+        },
+        "kind": "whitespace",
+        "analysis": null,
+        "dictionary": null
+      },
+      {
+        "surface": "학생이리라던",
+        "span": {
+          "start": 51,
+          "end": 69
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "학생이리라던",
+          "analyses": []
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [],
+          "readings": []
+        },
+        "spacing": {
+          "rule": "spacing.nominal_case_predicate",
+          "alternatives": [],
+          "complete": true,
+          "limited_by": [],
+          "segment_probes": 2,
+          "limits": {
+            "token_chars": 64,
+            "segment_probes": 256,
+            "alternatives": 16
+          }
+        }
+      }
+    ]
+  },
+  "before_words": {
+    "나누리라던": {
+      "analysis": {
+        "normalized": "나누리라던",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "나누리라",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_prefinal",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "boundary.regular",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "던",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라더",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라더",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라던",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라덜다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나누리라덯다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "나누리라",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라더",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라더",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라더다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라던",
+              "kind": "unclassified"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라덜다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "나누리라덯다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이다",
+              "kind": "copula"
+            },
+            "entries": [
+              {
+                "id": "krdict:86118",
+                "headword": "이다",
+                "homonym": "3",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:86232",
+                "headword": "이다",
+                "homonym": "2",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:92457",
+                "headword": "이다",
+                "homonym": "1",
+                "pos": "동사",
+                "pos_compatibility": "incompatible"
+              }
+            ]
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:86118",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:86232",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:92457",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "아팠더라던데": {
+      "analysis": {
+        "normalized": "아팠더라던데",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_prefinal",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "던데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "boundary.regular",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "던데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라더",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라던덯다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라던데",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라던데다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라덜다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아팠더라덯다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "아팠더라",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라더",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라더다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라던덯다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라던데",
+              "kind": "unclassified"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라던데다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라덜다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "아팠더라덯다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이다",
+              "kind": "copula"
+            },
+            "entries": [
+              {
+                "id": "krdict:86118",
+                "headword": "이다",
+                "homonym": "3",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:86232",
+                "headword": "이다",
+                "homonym": "2",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:92457",
+                "headword": "이다",
+                "homonym": "1",
+                "pos": "동사",
+                "pos_compatibility": "incompatible"
+              }
+            ]
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:86118",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:86232",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:92457",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:86118",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:86232",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:92457",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:86118",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:86232",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:92457",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "이기리라던": {
+      "analysis": {
+        "normalized": "이기리라던",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "이기리라",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_prefinal",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "boundary.regular",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "던",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라더",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라더",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라던",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라덜다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "이기리라덯다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "이기리라",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라더",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라더",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라더다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라던",
+              "kind": "unclassified"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라덜다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이기리라덯다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "이다",
+              "kind": "copula"
+            },
+            "entries": [
+              {
+                "id": "krdict:86118",
+                "headword": "이다",
+                "homonym": "3",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:86232",
+                "headword": "이다",
+                "homonym": "2",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:92457",
+                "headword": "이다",
+                "homonym": "1",
+                "pos": "동사",
+                "pos_compatibility": "incompatible"
+              }
+            ]
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:86118",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:86232",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:92457",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "학생이리라던": {
+      "analysis": {
+        "normalized": "학생이리라던",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_prefinal",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "더",
+                "kind": "prefinal"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "boundary.regular",
+              "ending",
+              "prefinal.retrospective"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "던",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라더",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라더",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라더다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라던",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라덜다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생이리라덯다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "이다",
+              "kind": "copula"
+            },
+            "entries": [
+              {
+                "id": "krdict:86118",
+                "headword": "이다",
+                "homonym": "3",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:86232",
+                "headword": "이다",
+                "homonym": "2",
+                "pos": "조사",
+                "pos_compatibility": "compatible"
+              },
+              {
+                "id": "krdict:92457",
+                "headword": "이다",
+                "homonym": "1",
+                "pos": "동사",
+                "pos_compatibility": "incompatible"
+              }
+            ]
+          },
+          {
+            "lemma": {
+              "text": "학생이리라",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라더",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라더",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라더다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라던",
+              "kind": "unclassified"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라덜다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "학생이리라덯다",
+              "kind": "predicate"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:86118",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:86232",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:92457",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "complete_native_entries": {
+    "krdict:29749": {
+      "id": "krdict:29749",
+      "headword": "나누다",
+      "homonym": "0",
+      "pos": "동사",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=29749",
+      "level": "초급",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [],
+      "forms": [
+        {
+          "kind": "발음",
+          "written": "",
+          "pronunciations": [
+            "나누다"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "나누어",
+          "pronunciations": []
+        },
+        {
+          "kind": "활용",
+          "written": "나누니",
+          "pronunciations": []
+        }
+      ],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "원래 하나였던 것을 둘 이상의 부분이나 조각이 되게 하다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "хуваах, хэрчих, зүсэх",
+              "definition": "угийн нэг байсан зүйлийг хоёр болон түүнээс дээш хэсэг буюу хэрчим болгох."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يُقسّم",
+              "definition": "يجعل الشيءَ الذي كان واحدًا جزءين أو أكثر"
+            },
+            {
+              "language": "중국어",
+              "lemma": "分为，分成",
+              "definition": "使原来的一个整体变成两个以上的部分或碎块。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chia, phân, phân chia, chia ra, phân ra",
+              "definition": "Làm cho cái gì đó vốn là một trở thành hai phần hoặc hai miếng trở lên."
+            },
+            {
+              "language": "타이어",
+              "lemma": "แบ่ง, แบ่งออก",
+              "definition": "ทำให้สิ่งที่เคยเป็นอันเดียวกัน แบ่งออกเป็นส่วนหรือชิ้นที่มีมากกว่าสองส่วนขึ้นไป"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "membagi",
+              "definition": "membuat menjadi dua atau lebih bagian atau potongan sesuatu yang sebelumnya satu "
+            },
+            {
+              "language": "러시아어",
+              "lemma": "делить; разделять",
+              "definition": "Разъединять одно целое на две или более части или куски. "
+            },
+            {
+              "language": "영어",
+              "lemma": "divide; split",
+              "definition": "To divide something that was one into two or more parts or pieces."
+            },
+            {
+              "language": "일본어",
+              "lemma": "わける【分ける】。わる【割る】。ぶんかつする【分割する】",
+              "definition": "一つにまとまっている物をいくつかの部分にする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "séparer",
+              "definition": "Faire en sorte qu'une chose qui formait un tout, soit divisée en deux ou plusieurs parties ou morceaux."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "dividir, trocear, cortar, fraccionar, partir",
+              "definition": "Partir en dos o más partes o pedazos que conformaban uno solo."
+            }
+          ],
+          "examples": [
+            [
+              "고기를 나누다."
+            ],
+            [
+              "구역을 나누다."
+            ],
+            [
+              "나무토막을 나누다."
+            ],
+            [
+              "빵을 나누다."
+            ],
+            [
+              "둘로 나누다."
+            ],
+            [
+              "몇 개로 나누다."
+            ],
+            [
+              "반으로 나누다."
+            ],
+            [
+              "고르게 나누다."
+            ],
+            [
+              "잘게 나누다."
+            ],
+            [
+              "어머니는 빵을 크게 둘로 나누시더니 한 덩어리를 내게 주셨다."
+            ],
+            [
+              "나는 케이크를 열 조각으로 나누어 사람들에게 한 조각씩 주었다."
+            ],
+            [
+              "그는 큰 도화지에 연필로 금을 긋더니 종이를 세 면으로 나누어 그림을 그렸다."
+            ],
+            [
+              "우리 반을 두 팀으로 나누어야 한대.",
+              "어떻게 나눈대?"
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 3으로 나누다"
+          ]
+        },
+        {
+          "id": "2",
+          "definition": "여러 가지가 섞인 것을 어떤 기준에 따라 둘 이상의 부류가 되게 구분하거나 분류하다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ангилах, ялгах, хуваах",
+              "definition": "хоорондоо холилдсон зүйлийг ямар нэг хэмжүүрийн дагуу хоёр болон түүнээс дээш төрөл зүйлд ялган хуваах."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يُصنِّف",
+              "definition": "يفرِز أو يُبوِّب مجموعة مختلطة من عدة أشياء وفقًا لمعيار معيّن لتكون صنفين أو أكثر "
+            },
+            {
+              "language": "중국어",
+              "lemma": "分类，区分",
+              "definition": "根据某种标准把多个掺杂在一起的东西分化或归类为两个以上的种类。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "phân chia, phân loại",
+              "definition": "Phân biệt hay phân loại nhiều thứ trộn lẫn với nhau thành hai loại trở lên theo một tiêu chuẩn nào đó."
+            },
+            {
+              "language": "타이어",
+              "lemma": "จำแนก, จัดหมวดหมู่",
+              "definition": "จำแนกหรือจัดหมวดหมู่สิ่งที่หลายอย่างปะปนอยู่ ตามเกณฑ์ที่กำหนด เพื่อให้เป็นสองหมวดขึ้นไป"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "membagi, mengklasifikasikan ",
+              "definition": "membagi atau mengklasifikasikan benda-benda yang bercampur aduk menjadi dua kriteria lebih sesuai dengan standar tertentu "
+            },
+            {
+              "language": "러시아어",
+              "lemma": "разделять; сортировать",
+              "definition": "Классифицировать или сортировать что-либо на два или несколько видов по каким-либо критериям."
+            },
+            {
+              "language": "영어",
+              "lemma": "classify; sort",
+              "definition": "To classify or group a mixture of many things according to a certain standard."
+            },
+            {
+              "language": "일본어",
+              "lemma": "わける【分ける】。ぶんるいする【分類する】",
+              "definition": "ある基準に沿って二つ以上の部類になるように区分したり分類したりする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "diviser, séparer, classer",
+              "definition": "Distinguer ou catégoriser un mélange de deux ou plusieurs choses différentes, selon un certain critère."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "dividir, clasificar, ordenar, organizar, separar, catalogar, encasillar, coordinar",
+              "definition": "Ordenar o clasificar en dos o más categorías una mezcla de varias cosas según una cierta norma."
+            }
+          ],
+          "examples": [
+            [
+              "기간별로 나누다."
+            ],
+            [
+              "원인별로 나누다."
+            ],
+            [
+              "유형별로 나누다."
+            ],
+            [
+              "형태별로 나누다."
+            ],
+            [
+              "두 편으로 나누다."
+            ],
+            [
+              "여러 등급으로 나누다."
+            ],
+            [
+              "세밀하게 나누다."
+            ],
+            [
+              "화상은 다친 정도에 따라 일 도, 이 도, 삼 도로 나누어 치료를 한다."
+            ],
+            [
+              "김 선생님은 학생들의 오답을 유형별로 나누어 학생들의 실수 유형을 분석했다."
+            ],
+            [
+              "우리 회사에서는 영업 실적에 따라 몇 등급으로 나누어 월급을 지급하기로 했다."
+            ],
+            [
+              "그는 사람들이 가져온 물건을 쓸 수 있는 물건과 그렇지 못한 물건으로 나누어 놓았다."
+            ],
+            [
+              "틀린 문제들을 유형별로 나누어서 공부를 해 봐.",
+              "그렇게 해 볼게. "
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 3으로 나누다"
+          ]
+        },
+        {
+          "id": "3",
+          "definition": "수학에서 나눗셈을 하다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "хуваах",
+              "definition": "математикт хуваах үйлдэл хийх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يقسِم",
+              "definition": "يقسم في الرياضيّات"
+            },
+            {
+              "language": "중국어",
+              "lemma": "除以",
+              "definition": "在数学里使用除法。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chia",
+              "definition": "Thực hiện phép chia trong toán học."
+            },
+            {
+              "language": "타이어",
+              "lemma": "หาร",
+              "definition": "ทำการหารในทางคณิตศาสตร์"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "membagi",
+              "definition": "membagi angka dalam matematika "
+            },
+            {
+              "language": "러시아어",
+              "lemma": "делить",
+              "definition": "(матем.) Производить деление."
+            },
+            {
+              "language": "영어",
+              "lemma": "divide",
+              "definition": "To divide in math."
+            },
+            {
+              "language": "일본어",
+              "lemma": "わる【割る】",
+              "definition": "算数で割り算をする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "diviser",
+              "definition": "Faire une division, en mathématiques."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "dividir, hacer división",
+              "definition": "En matemáticas, realizar una división."
+            }
+          ],
+          "examples": [
+            [
+              "나눈 값."
+            ],
+            [
+              "나눈 몫."
+            ],
+            [
+              "나누고 남은 나머지."
+            ],
+            [
+              "백을 십으로 나눈 몫은 십이다."
+            ],
+            [
+              "4를 10으로 나누면 0.4라는 몫이 나온다."
+            ],
+            [
+              "십을 삼으로 나누고 남은 나머지는 일이다."
+            ],
+            [
+              "분모의 사로 분자의 이십을 나누면 값이 오가 된다."
+            ],
+            [
+              "백을 이십으로 나누면 얼마야?",
+              "오가 되지. "
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 3으로 나누다"
+          ]
+        },
+        {
+          "id": "4",
+          "definition": "각각의 몫을 따로 주다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "хуваарилах",
+              "definition": "тус бүрд нь хувийг нь өгөх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يوزّع",
+              "definition": "يُعطِي كلَّ سهم كلَّ على حدة"
+            },
+            {
+              "language": "중국어",
+              "lemma": "分配，分",
+              "definition": "分别给予各自的一份儿。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "phân chia",
+              "definition": "Cho riêng từng phần."
+            },
+            {
+              "language": "타이어",
+              "lemma": "แบ่ง, แบ่งส่วน, แบ่งปัน",
+              "definition": "แบ่งปันส่วนของแต่ละฝ่ายให้ต่างหาก"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "membagi, membagikan ",
+              "definition": "memberikan bagian masing-masing "
+            },
+            {
+              "language": "러시아어",
+              "lemma": "раздавать; разделять",
+              "definition": "Выделять каждому его долю по отдельности. "
+            },
+            {
+              "language": "영어",
+              "lemma": "distribute; allot",
+              "definition": "To give each share separately."
+            },
+            {
+              "language": "일본어",
+              "lemma": "分ける【分ける】。わる【割る】。ぶんぱいする【分配する】",
+              "definition": "それぞれの分を与える。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "distribuer, partager",
+              "definition": "Donner à chacun sa part."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "repartir, dividir, distribuir, asignar, prorratear, racionar",
+              "definition": "Repartir su parte."
+            }
+          ],
+          "examples": [
+            [
+              "나누어 가지다."
+            ],
+            [
+              "나누어 주다."
+            ],
+            [
+              "돈을 나누다."
+            ],
+            [
+              "이익을 나누다."
+            ],
+            [
+              "일을 나누다."
+            ],
+            [
+              "고르게 나누다."
+            ],
+            [
+              "공평하게 나누다."
+            ],
+            [
+              "그들은 오늘 받은 일당을 사람 수대로 공평하게 나누어 가졌다."
+            ],
+            [
+              "나는 동업을 해서 번 돈을 그와 똑같이 나누어 가졌기 때문에 우리는 어떤 불만도 없다."
+            ],
+            [
+              "늘어난 만큼의 일은 사원들에게 공평하게 나누었지만 내가 해야 할 일이 좀 더 많았다."
+            ],
+            [
+              "그는 투자를 통해 얻은 이익금을 투자 금액에 따라 차등을 두어 투자자에게 나누어 주었다."
+            ],
+            [
+              "오늘 번 돈은 공평하게 나누어 가지자.",
+              "좋은 생각이야."
+            ]
+          ],
+          "notes": [
+            "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 2를 3에/에게 나누다",
+            "1이 (2와) 3을 나누다"
+          ]
+        },
+        {
+          "id": "5",
+          "definition": "음식을 함께 먹거나 갈라 먹다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "хувааж идэх, хувааж уух, хамт хооллох, хамт юм уух",
+              "definition": "ямар нэг зүйлийг хамтдаа идэж уух буюу тойруулан идэх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يشارك شخصًا في",
+              "definition": "يتناول الطعام مع شخص أو يتقاسمه معه "
+            },
+            {
+              "language": "중국어",
+              "lemma": "一起吃，分享",
+              "definition": "一同或分着吃食物。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chia phần, chia nhau",
+              "definition": "Ăn chung hoặc chia thức ăn ra ăn."
+            },
+            {
+              "language": "타이어",
+              "lemma": "กินด้วยกัน, ดื่มด้วยกัน",
+              "definition": "แบ่งอาหารกันกินหรือกินด้วยกัน"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "berbagi",
+              "definition": "memakan makanan bersama atau saling memberi makanan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "разделить; кушать или пить вместе; делиться едой",
+              "definition": "Разделить вместе трапезу."
+            },
+            {
+              "language": "영어",
+              "lemma": "share",
+              "definition": "To share or divide food."
+            },
+            {
+              "language": "일본어",
+              "lemma": "わけあう【分け合う】。わかちあう【分かち合う】",
+              "definition": "一緒に食べたり、分けて食べたりする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Manger tous ensemble ou se partager de la nourriture."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "compartir, partir, repartir, racionar",
+              "definition": "Comer juntos o partir un alimento para comer juntos."
+            }
+          ],
+          "examples": [
+            [
+              "술을 나누다."
+            ],
+            [
+              "식사를 나누다."
+            ],
+            [
+              "음식을 나누다."
+            ],
+            [
+              "저녁을 나누다."
+            ],
+            [
+              "차를 한잔 나누다."
+            ],
+            [
+              "커피를 나누다."
+            ],
+            [
+              "괜찮으시다면 저녁이라도 함께 나누는 것은 어떨까요?"
+            ],
+            [
+              "시간이 되시면 우리 차라도 한잔 나누면서 얘기할까요?"
+            ],
+            [
+              "그는 오래간만에 만난 친구들과 술집에서 술을 한잔 나누고 있었다."
+            ],
+            [
+              "어머니는 동네 사람들과 나누려고 부침개를 많이 부치셨다."
+            ],
+            [
+              "아, 승규 씨 오랜만입니다!",
+              "네, 반갑습니다. 어디 가서 커피 한잔 나누며 잠시 이야기나 할까요?"
+            ]
+          ],
+          "notes": [
+            "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 (2와) 3을 나누다"
+          ]
+        },
+        {
+          "id": "6",
+          "definition": "말이나 이야기, 인사 등을 주고받다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "салах ёс гүйцэтгэх, ярилцах, солилцох, мэндлэх",
+              "definition": "харилцан ярьж хөөрөх буюу мэндэлж ёслох."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يتبادل",
+              "definition": "يعطي ويتسلم كلمات أو أحاديث أو تحيّات  "
+            },
+            {
+              "language": "중국어",
+              "lemma": "交流，交换，交谈",
+              "definition": "互相说话、谈论或问候等。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "trao đổi",
+              "definition": "Trao đổi lời nói, câu chuyện, sự chào hỏi…"
+            },
+            {
+              "language": "타이어",
+              "lemma": "ทักทายกัน, พูดคุยกัน, คุยกัน",
+              "definition": "แลกเปลี่ยนคำพูด สนทนา หรือทักทาย เป็นต้น"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "berbagi, membagi",
+              "definition": "saling memberi dan menerima perkataan atau cerita, salam, dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "обмениваться",
+              "definition": "Обмениваться словами, рассказами, приветствиями и т.п. "
+            },
+            {
+              "language": "영어",
+              "lemma": "exchange",
+              "definition": "To exchange words, conversations, greetings, etc."
+            },
+            {
+              "language": "일본어",
+              "lemma": "かわす【交わす】",
+              "definition": "言葉や話、挨拶などをやりとりする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "discuter ensemble",
+              "definition": "S'échanger des propos, une histoire, des salutations, etc."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "compartir, intercambiar, cambiar",
+              "definition": "Intercambiarse palabras, opiniones, saludos, etc.."
+            }
+          ],
+          "examples": [
+            [
+              "귀엣말을 나누다."
+            ],
+            [
+              "담소를 나누다."
+            ],
+            [
+              "대화를 나누다."
+            ],
+            [
+              "말을 나누다."
+            ],
+            [
+              "얘기를 나누다."
+            ],
+            [
+              "의견을 나누다."
+            ],
+            [
+              "인사를 나누다."
+            ],
+            [
+              "잡담을 나누다."
+            ],
+            [
+              "나는 오랜만에 만난 그와 두 시간 동안 담소를 나누었다."
+            ],
+            [
+              "지수는 민준이와 책 이야기를 나누며 친해져 결국 연인 사이로 발전했다."
+            ],
+            [
+              "승규는 이사를 가기 전에 동네 친구들과 마지막으로 인사를 나누고 헤어졌다."
+            ],
+            [
+              "선생님들은 오랫동안 학교 문제에 대한 의견을 나누었지만 아직 결론이 나지 않았다."
+            ],
+            [
+              "어디에 갔었어?",
+              "친구랑 잠깐 집 앞에서 이야기를 나누고 왔어. "
+            ]
+          ],
+          "notes": [
+            "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 (2와) 3을 나누다"
+          ]
+        },
+        {
+          "id": "7",
+          "definition": "기쁨, 즐거움, 고통, 괴로움 등의 감정을 함께하다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "зовлон жаргалаа ярилцах, сэтгэлээ хуваалцах, хамтдаа баярлах",
+              "definition": "баяр хөөр, уйтгар гуниг, зовлон шаналал зэрэг сэтгэлээ хуваалцах."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يشارك شخصًا في",
+              "definition": "يشترك ويتقاسم مع شخص العواطف من سعادة وفرح وألم وكرب  "
+            },
+            {
+              "language": "중국어",
+              "lemma": "分担，分享",
+              "definition": "共同享受幸福、快乐或承担伤痛、痛苦等情感。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chia sẻ, sẻ chia",
+              "definition": "Cùng nhau những tình cảm như nỗi vui mừng, niềm vui, nỗi khổ, nỗi buồn..."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ร่วมทุกข์ร่วมสุข, แบ่งปัน",
+              "definition": "มีความรู้สึก เช่น ความดีใจ ความเพลิดเพลิน ความเจ็บปวด ความทุกข์ทรมาน ร่วมกัน"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "berbagi",
+              "definition": "bersama-sama merasakan kegembiraan, kesenangan, kesedihan, penderitaan, dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "делить; разделять",
+              "definition": "Вместе испытывать чувство радости, веселья, страдания, печали и т.п."
+            },
+            {
+              "language": "영어",
+              "lemma": "share",
+              "definition": "To share emotion such as happiness, joy, pain, distress, etc."
+            },
+            {
+              "language": "일본어",
+              "lemma": "わけあう【分け合う】。わかちあう【分かち合う】",
+              "definition": "喜びや楽しみ、苦痛、苦しみなどの感情を共にする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "partager",
+              "definition": "S'échanger un sentiment, comme le bonheur, la joie, la douleur, la souffrance, etc."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "compartir, asociarse, unirse, acompañar",
+              "definition": "Compartir la alegría, placer, dolor, pena, etc.."
+            }
+          ],
+          "examples": [
+            [
+              "고민을 나누다."
+            ],
+            [
+              "고통을 나누다."
+            ],
+            [
+              "기쁨을 나누다."
+            ],
+            [
+              "사랑을 나누다."
+            ],
+            [
+              "슬픔을 나누다."
+            ],
+            [
+              "우정을 나누다."
+            ],
+            [
+              "정을 나누다."
+            ],
+            [
+              "친분을 나누다."
+            ],
+            [
+              "가족과 나누다."
+            ],
+            [
+              "친구와 나누다."
+            ],
+            [
+              "나는 지수와 친형제보다 더 깊은 정을 나누며 같이 살았다."
+            ],
+            [
+              "승규와 나는 십 년을 넘게 우정을 나누어 온 친구 사이이다."
+            ],
+            [
+              "슬픔은 나누면 반으로 줄어들고 기쁨은 나누면 두 배가 된다."
+            ],
+            [
+              "우리 부부는 이십 년 동안 기쁨과 슬픔을 함께 나누며 지금까지 살아왔다."
+            ],
+            [
+              "네가 같이 기뻐해 줘서 너무 좋아.",
+              "기쁨은 나누면 두 배가 된다고 하잖아?"
+            ]
+          ],
+          "notes": [
+            "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 (2와) 3을 나누다"
+          ]
+        },
+        {
+          "id": "8",
+          "definition": "악수나 키스 등의 행동을 함께 하다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "тэврэлдэх, үнсэлцэх, гар барилцах",
+              "definition": "гар барих буюу үнсэх зэрэг нэг үйл хөдлөлийг хамт хийх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يفعل معًا",
+              "definition": "يفعل معًا أفعالا مثل مصافحة  أو قبلة "
+            },
+            {
+              "language": "중국어",
+              "lemma": "握，接，拥",
+              "definition": "互相握手或接吻等，做肢体接触。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cùng",
+              "definition": "Cùng thực hiện một hành động như trượt tuyết hay bắt tay..."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ทำด้วยกัน, ทำร่วมกัน",
+              "definition": "ทำพฤติกรรม เช่น จับมือหรือจูบ  ร่วมกัน"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "melakukan bersama",
+              "definition": "melakukan tindakan seperti jabat tangan atau ciuman dsb bersama-sama"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "обмениваться",
+              "definition": "Вместе совершать какое-либо действие (пожатие рук, поцелуй и т.п.). "
+            },
+            {
+              "language": "영어",
+              "lemma": "do together",
+              "definition": "To do something such as shake hands, kiss, etc., together."
+            },
+            {
+              "language": "일본어",
+              "lemma": "かわす【交わす】",
+              "definition": "握手やキスなどの行動を共にする。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "S'échanger une poignée de main, un baiser, etc."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "compartir, intercambiar",
+              "definition": "Intercambiar acciones como estrecharse las manos, besarse, etc.."
+            }
+          ],
+          "examples": [
+            [
+              "악수를 나누다."
+            ],
+            [
+              "키스를 나누다."
+            ],
+            [
+              "포옹을 나누다."
+            ],
+            [
+              "나는 처음 만난 그와 악수를 나누며 간단히 인사를 했다"
+            ],
+            [
+              "지수와 승규는 뜨거운 키스를 나누며 서로의 사랑을 확인하였다."
+            ],
+            [
+              "나는 그녀가 무척 사랑스러워서 당장이라도 사랑의 포옹을 나누고 싶었다."
+            ],
+            [
+              "아는 사람이에요?",
+              "아니요. 하지만 관련 업계의 사람이라서 악수를 나누고 명함도 주고받았어요."
+            ]
+          ],
+          "notes": [
+            "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 (2와) 3을 나누다"
+          ]
+        },
+        {
+          "id": "9",
+          "definition": "혈연 관계에 있다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "цусан төрөл",
+              "definition": "мах цусны холбоотой байх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يرتبط بالأصل",
+              "definition": "يتّصل بشخص عن طريق الدمّ والقرابة"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "有血缘关系。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cùng mang",
+              "definition": "Có quan hệ huyết thống."
+            },
+            {
+              "language": "타이어",
+              "lemma": "เกี่ยวข้องทางสายเลือด, สัมพันธ์กัน, มีร่วมกัน",
+              "definition": "มีความสัมพันธ์กันทางสายเลือด"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "bersaudara",
+              "definition": "memiliki hubungan darah "
+            },
+            {
+              "language": "러시아어",
+              "lemma": "быть кровными родственниками",
+              "definition": "Иметь кровные отношения."
+            },
+            {
+              "language": "영어",
+              "lemma": "be related by birth",
+              "definition": "To be related by blood."
+            },
+            {
+              "language": "일본어",
+              "lemma": "わける【分ける】",
+              "definition": "血縁の関係にある。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Avoir un lien de sang."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "ser parentesco",
+              "definition": "Tener relaciones de parentesco."
+            }
+          ],
+          "examples": [
+            [
+              "피를 나눈 사람."
+            ],
+            [
+              "피를 나눈 자매."
+            ],
+            [
+              "피를 나눈 형제."
+            ],
+            [
+              "피를 나누다."
+            ],
+            [
+              "피와 살을 나누다."
+            ],
+            [
+              "그는 피와 살을 나눈 부모도 몰라볼 정도로 많이 망가져 있었다."
+            ],
+            [
+              "비록 나는 그와 피를 나누지 않았지만 우리는 형제와 다름없었다."
+            ],
+            [
+              "아무리 피를 나눈 형제들이라도 돈 앞에서는 달라지는 경우가 있더라.",
+              "그러니까. 진짜 무서운 일이야."
+            ]
+          ],
+          "notes": [
+            "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 (2와) 3을 나누다"
+          ]
+        }
+      ]
+    },
+    "krdict:71609": {
+      "id": "krdict:71609",
+      "headword": "이기다",
+      "homonym": "2",
+      "pos": "동사",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71609",
+      "level": "고급",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [],
+      "forms": [
+        {
+          "kind": "발음",
+          "written": "",
+          "pronunciations": [
+            "이기다"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "이기어",
+          "pronunciations": [
+            "이기어",
+            "이기여"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "이기니",
+          "pronunciations": []
+        }
+      ],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "흙이나 가루 등에 물을 부어 반죽하다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "зуурах, нухах, холих, хутгах",
+              "definition": "шороо, нунтаг зэрэгт ус хийж зуурах."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يعجن",
+              "definition": "يخلط التراب أو الطحين أو غيره بالماء"
+            },
+            {
+              "language": "중국어",
+              "lemma": "和",
+              "definition": "往土或粉末里倒入水搅拌。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "nhào trộn",
+              "definition": "Cho nước vào đất hay bột rồi trộn và nhào nặn."
+            },
+            {
+              "language": "타이어",
+              "lemma": "นวด(แป้ง, ดิน)",
+              "definition": "เทน้ำใส่แป้งหรือดิน เป็นต้น ผสมแล้วปั้น"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "mengaduk, menguleni, menguli",
+              "definition": "menyiram tanah atau bubuk dsb dengan air, mencampurnya, dan membuat adonan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "месить; замешивать",
+              "definition": "Мять, разминать глину, порошок и т.п., перемешивая с жидкостью."
+            },
+            {
+              "language": "영어",
+              "lemma": "knead",
+              "definition": "To make dough or paste by mixing soil, powder, etc., with water."
+            },
+            {
+              "language": "일본어",
+              "lemma": "こねる【捏ねる】",
+              "definition": "土や粉などに水を加えて練る。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "pétrir, malaxer",
+              "definition": "Mettre de l'eau dans de la terre, de la poudre, etc. et mélanger le tout."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "amasar",
+              "definition": "Hacer masa mezclando harina, tierra, etc. con agua."
+            }
+          ],
+          "examples": [
+            [
+              "물감을 이기다."
+            ],
+            [
+              "밀가루를 이기다."
+            ],
+            [
+              "쌀가루를 이기다."
+            ],
+            [
+              "진흙을 이기다."
+            ],
+            [
+              "물에 이기다."
+            ],
+            [
+              "유민이는 물과 잘 이긴 쌀가루로 떡을 쪘다. "
+            ],
+            [
+              "어머니는 밀가루를 물에 이겨서 피자 반죽을 만들었다."
+            ],
+            [
+              "민준이는 팔레트에 없는 색을 만들기 위해 두 색의 물감들을 잘 이겼다."
+            ]
+          ],
+          "notes": [
+            "'3과'가 없으면 2에 복수를 나타내는 말이 온다."
+          ],
+          "patterns": [
+            "1이 2를 3에 이기다",
+            "1이 2를 (3과) 이기다"
+          ]
+        },
+        {
+          "id": "2",
+          "definition": "칼 등으로 마구 찧어서 다지다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "татах, бяцлах, нунтаглах",
+              "definition": "хутгаар учиргүй нүдэж жижиглэх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "يفرمه ويفتته كثيرا بسكين"
+            },
+            {
+              "language": "중국어",
+              "lemma": "捣碎",
+              "definition": "用刀等胡乱地捣烂。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "giã nhỏ, băm nhỏ",
+              "definition": "Băm nhuyễn bằng dao..."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ตำ, บด, สับ, โขลก",
+              "definition": "ตำแล้วสับด้วยมีด เป็นต้น อย่างสะเปะสะปะ"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "merajang, mencincang, menumbuk, menghaluskan",
+              "definition": "menumbuk dan merajang dengan pisau dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Мелко рубить что-либо, сильно надавливая ножом или т.п. предметом."
+            },
+            {
+              "language": "영어",
+              "lemma": "mince",
+              "definition": "To hash something by pounding it with a knife, etc."
+            },
+            {
+              "language": "일본어",
+              "lemma": "みじんぎりにする【微塵切りにする】。おろす【卸す】",
+              "definition": "包丁などで細かく切り刻む。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "moudre, écraser, hacher",
+              "definition": "Piler et broyer quelque chose avec un couteau, etc."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "picar, moler",
+              "definition": "Reducir un cuerpo sólido machacando con utensilios como el cuchillo."
+            }
+          ],
+          "examples": [
+            [
+              "고기를 이기다."
+            ],
+            [
+              "고추를 이기다."
+            ],
+            [
+              "깨를 이기다."
+            ],
+            [
+              "마늘을 이기다."
+            ],
+            [
+              "양파를 이기다."
+            ],
+            [
+              "파를 이기다."
+            ],
+            [
+              "어머니는 부침개에 잘게 이긴 고추를 넣어 매콤한 맛을 냈다."
+            ],
+            [
+              "요리사는 칼국수를 고소하게 만들기 위해 국물에 깨를 이겨서 넣었다."
+            ],
+            [
+              "마늘은 언제 넣을까요? ",
+              "찌개가 끓으면 이긴 마늘을 한 숟가락 넣어 주세요. "
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 이기다"
+          ]
+        },
+        {
+          "id": "3",
+          "definition": "빨래 등을 이리저리 뒤집어 가며 두드리다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "нүдэх",
+              "definition": "угаасан юмыг ийш тийш нь эргүүлэнгээ нүдэх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "يقلّب ويضرب ملابس مغسولة أو غيرها بشكل جيد"
+            },
+            {
+              "language": "중국어",
+              "lemma": "鞣",
+              "definition": "来回翻动敲打衣服。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "đập, dần",
+              "definition": "Lật qua lại và đập lên những thứ như quần áo giặt."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ทุบ(ผ้าที่ซัก)",
+              "definition": "สลับด้านแล้วทุบ เสื้อผ้าที่ซัก เป็นต้น"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "mengucek, mengucek-ngucek",
+              "definition": "membolak-balik ke sana kemari dan memukulkan cucian dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Выбивать бельё для стирки и т.п., выворачивая его в разные стороны."
+            },
+            {
+              "language": "영어",
+              "lemma": "beat",
+              "definition": "To beat laundry while turning them over repeatedly."
+            },
+            {
+              "language": "일본어",
+              "lemma": "(対訳語無し)",
+              "definition": "洗濯物などを引っ繰り返しながら叩く。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Frapper le linge, etc. en le tournant de tous les côtés."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "sacudir",
+              "definition": "Dar golpes dando vueltas de un lado a otro cosas como la ropa."
+            }
+          ],
+          "examples": [
+            [
+              "바지를 이기다."
+            ],
+            [
+              "옷을 이기다."
+            ],
+            [
+              "이불을 이기다."
+            ],
+            [
+              "어머니는 옷이 구겨지지 않도록 빨래를 이겨서 널었다."
+            ],
+            [
+              "어머니가 방망이로 빨래를 이기는 소리에 민준이는 잠에서 깼다."
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 이기다"
+          ]
+        }
+      ]
+    },
+    "krdict:71688": {
+      "id": "krdict:71688",
+      "headword": "이기다",
+      "homonym": "1",
+      "pos": "동사",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71688",
+      "level": "초급",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [],
+      "forms": [
+        {
+          "kind": "발음",
+          "written": "",
+          "pronunciations": [
+            "이기다"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "이기어",
+          "pronunciations": [
+            "이기어/이기여"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "이기니",
+          "pronunciations": []
+        }
+      ],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "내기나 시합, 싸움 등에서 상대를 누르고 더 좋은 결과를 내다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ялах",
+              "definition": "мөрийцөх болон уралдаан тэмцээн, хэрүүл зодоонд эсрэг талыг буулган авч, хүссбэн  үр дүндээ хүрэх."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يفوز",
+              "definition": "يكسب الرهان، مسابقة، مصارعة ويسجّل نتيجة أحسن على الطرف الآخر"
+            },
+            {
+              "language": "중국어",
+              "lemma": "赢，战胜，打败",
+              "definition": "在打赌、竞赛或战争等中压制对手，创造佳绩。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "thắng",
+              "definition": "Lấn át đối phương và giành được kết quả tốt đẹp hơn trong cá cược, thi đấu hay các cuộc đọ sức v.v..."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ชนะ, พิชิต",
+              "definition": "ได้ผลลัพธ์ที่ดีกว่าโดยกดขี่ฝ่ายตรงข้ามในการท้าพนัน การแข่งขัน การต่อสู้  เป็นต้น"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "menang",
+              "definition": "mengalahkan lawan lalu meraih hasil yang lebih baik dalam taruhan atau pertandingan, pertarungan, dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "побеждать; одерживать победу; выигрывать",
+              "definition": "Показывать более высокие результаты, подавив противника в споре, состязаниях, драке и т.п."
+            },
+            {
+              "language": "영어",
+              "lemma": "win; beat; defeat",
+              "definition": "To beat and perform better than one's opponent in a bet, match, fight, etc."
+            },
+            {
+              "language": "일본어",
+              "lemma": "かつ【勝つ】。うちかつ【打ち勝つ】。まかす【負かす】",
+              "definition": "賭け事・試合・ケンカなどで、相手を制して良い結果を出す。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "gagner, remporter, gagner la victoire, vaincre, triompher de, l'emporter sur",
+              "definition": "Lors d’un pari, d’un match, d’une lutte, etc., battre la partie adverse et obtenir un meilleur résultat qu’elle."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "vencer, ganar",
+              "definition": "Obtener un mejor resultado derrotando al contrincante en una apuesta, competencia o pelea."
+            }
+          ],
+          "examples": [
+            [
+              "상대편을 이기다."
+            ],
+            [
+              "적을 이기다."
+            ],
+            [
+              "친구에게 이기다."
+            ],
+            [
+              "경기에서 이기다."
+            ],
+            [
+              "선거에서 이기다."
+            ],
+            [
+              "시합에서 이기다."
+            ],
+            [
+              "전쟁에서 이기다."
+            ],
+            [
+              "나는 월드컵 우승 팀을 맞히는 내기에서 친구들에게 이겼다."
+            ],
+            [
+              "운동회에서 우리 반이 다른 반들을 이기고 우승을 차지했다."
+            ],
+            [
+              "이미 우리와 상대 팀의 점수 차가 커서 이 경기는 우리 팀이 이긴 것이나 마찬가지다."
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2에/에게/를 이기다"
+          ]
+        },
+        {
+          "id": "2",
+          "definition": "감정이나 욕망 등을 억누르다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ялан дийлэх",
+              "definition": "сэтгэл хөдлөл, хүсэл шуналаа дарах."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يصبر",
+              "definition": "يضبط انفعالاته أو رغباته أو غيرها"
+            },
+            {
+              "language": "중국어",
+              "lemma": "克制，忍住，抵制",
+              "definition": "抑制感情或欲望等。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chế ngự",
+              "definition": "Kìm nén được tình cảm hay dục vọng..."
+            },
+            {
+              "language": "타이어",
+              "lemma": "เอาชนะ, อดกลั้น",
+              "definition": "อดกลั้นความรู้สึก ความปรารถนา เป็นต้น"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "mengatasi, menahan",
+              "definition": "menahan perasaan, hasrat, dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "преодолевать; переносить",
+              "definition": "Подавлять чувства, желание и т.п."
+            },
+            {
+              "language": "영어",
+              "lemma": "overcome; suppress",
+              "definition": "To suppress a feeling, desire, etc."
+            },
+            {
+              "language": "일본어",
+              "lemma": "うちかつ【打ち勝つ】。おさえる【抑える】",
+              "definition": "感情・欲望などを抑える。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "maintenir, contrôler, réprimer, refréner",
+              "definition": "Contenir une émotion, un désir, etc."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "vencer, reprimir",
+              "definition": "Dominar las pasiones, impulsos o sentimientos."
+            }
+          ],
+          "examples": [
+            [
+              "슬픔을 이기다."
+            ],
+            [
+              "유혹을 이기다."
+            ],
+            [
+              "궁금함을 못 이기다."
+            ],
+            [
+              "분을 못 이기다."
+            ],
+            [
+              "욕구를 못 이기다."
+            ],
+            [
+              "우리는 식욕을 못 이기고 결국 폭식을 하고 말았다."
+            ],
+            [
+              "그는 한 달 만에 동생을 잃은 슬픔을 이기고 마음을 다잡았다."
+            ],
+            [
+              "대회에서 우승을 차지한 선수가 기쁜 마음을 이기지 못하고 소리를 질렀다."
+            ],
+            [
+              "민준아, 너는 툭하면 화내는 그런 성격을 고칠 필요가 있어.",
+              "그건 나도 아는데 화를 좀처럼 못 이기겠어."
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 이기다"
+          ]
+        },
+        {
+          "id": "3",
+          "definition": "어려움을 참고 견디어 내다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "даван туулах",
+              "definition": "хүнд хэцүүг тэсвэрлэн гарах."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "يصبر",
+              "definition": "يتحمّل المصائب ويتغلّب عليها"
+            },
+            {
+              "language": "중국어",
+              "lemma": "克服，征服",
+              "definition": "强忍并战胜困难。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chiến thắng",
+              "definition": "Kiên trì và chịu đựng được sự khó khăn nào đó."
+            },
+            {
+              "language": "타이어",
+              "lemma": "เอาชนะ, อดทน, ฝ่าฟัน",
+              "definition": "อดกลั้นและอดทนความยากลำบาก"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "mengatasi, bertahan, menahan",
+              "definition": "bersabar dan bertahan kesulitan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "переносить; выдерживать",
+              "definition": "Претерпевать и преодолевать трудности."
+            },
+            {
+              "language": "영어",
+              "lemma": "stand; endure; survive",
+              "definition": "To stand and endure difficulties."
+            },
+            {
+              "language": "일본어",
+              "lemma": "のりこえる【乗り越える】。こくふくする【克服する】。かちぬく【勝ち抜く】",
+              "definition": "困難に耐えて、乗り切る。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "surmonter, vaincre, supporter",
+              "definition": "Supporter avec patience une difficulté."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "vencer, aguantar, resistir",
+              "definition": "Resistir la situación soportando una dificultad."
+            }
+          ],
+          "examples": [
+            [
+              "고난을 이기다."
+            ],
+            [
+              "고통을 이기다."
+            ],
+            [
+              "괴로움을 이기다."
+            ],
+            [
+              "더위를 이기다."
+            ],
+            [
+              "병을 이기다."
+            ],
+            [
+              "아픔을 이기다."
+            ],
+            [
+              "삼계탕을 먹는 것은 더위를 이기는 하나의 방법이다.   "
+            ],
+            [
+              "정 회장은 지금의 훌륭한 사업가가 되기까지 많은 역경을 이겨 냈다."
+            ],
+            [
+              "일이 너무 힘들어서 당장이라도 그만두고 싶다.",
+              "그렇지만 지금 힘든 걸 이겨 내고 일을 마무리 지으면 더 큰 성취감을 느낄 수 있을 거야."
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 이기다"
+          ]
+        },
+        {
+          "id": "4",
+          "definition": "몸을 바로 세우거나 가누다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "дийлэх, даах",
+              "definition": "биеэ зөв тэгш байлгах."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "يقف مستقيما ويحافظ على توازن الجسم"
+            },
+            {
+              "language": "중국어",
+              "lemma": "支撑",
+              "definition": "将身体挺直或扶正。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "làm chủ",
+              "definition": "Đứng thẳng và giữ vững cơ thể."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ตั้ง(ตัว), ทรง(ตัว)",
+              "definition": "ตั้งตัวขึ้นหรือทรงตัวให้ตรง"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "berdiri tegap",
+              "definition": "berdiri atau menegakkan tubuh dengan benar"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "выдерживать",
+              "definition": "Выпрямлять или хорошо владеть телом."
+            },
+            {
+              "language": "영어",
+              "lemma": "hold; keep",
+              "definition": "To keep one's body upright or balanced."
+            },
+            {
+              "language": "일본어",
+              "lemma": "ささえる【支える】",
+              "definition": "正しい姿勢を保ったり、体を支える。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Se tenir droit ou en équilibre."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "enderezar",
+              "definition": "Poner verticalmente o derecho el cuerpo."
+            }
+          ],
+          "examples": [
+            [
+              "몸을 이길 기운."
+            ],
+            [
+              "몸을 이길 힘."
+            ],
+            [
+              "몸을 이기지 못하다."
+            ],
+            [
+              "지수는 현기증을 느끼고 몸을 이기지 못한 채 쓰러졌다."
+            ],
+            [
+              "술을 적당히 마셔야지 몸도 이기지 못할 만큼 마시면 어떻게 해?"
+            ],
+            [
+              "남편은 회식 자리에서 술을 얼마나 마셨는지 제 몸도 이기지 못했다."
+            ],
+            [
+              "하루 종일 아무 것도 먹지 못한 그는 자신의 몸을 이길 힘도 없는 듯했다."
+            ],
+            [
+              "이기지도 못할 술을 왜 그렇게 마셨니? ",
+              "오늘 여자 친구와 헤어졌어. "
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 2를 이기다"
+          ]
+        }
+      ]
+    }
+  },
+  "raw_source_sha256": {
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e"
+  },
+  "license": {
+    "name": "한국어기초사전; CC BY-SA 2.0 KR",
+    "url": "https://krdict.korean.go.kr/kor/help/helpCopyRightInfo",
+    "scope": "Native dictionary data; examples, spellings, sense order and all translation languages are preserved."
+  },
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

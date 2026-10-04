@@ -641,10 +641,36 @@ pub(crate) fn quoted_conditional_question(form: &str) -> bool {
     matches!(form, "냐면" | "느냐면" | "으냐면")
 }
 pub(crate) fn verbal_quoted_question(form: &str) -> bool {
-    verbal_quoted_question_exclamation(form) || form == "느냐면"
+    verbal_quoted_question_exclamation(form) || matches!(form, "느냐면" | "느냐던데")
 }
 pub(crate) fn quoted_question_report(form: &str) -> bool {
-    quoted_question_exclamation(form) || quoted_conditional_question(form)
+    quoted_question_exclamation(form)
+        || quoted_conditional_question(form)
+        || matches!(form, "냐던데" | "느냐던데" | "으냐던데")
+}
+
+// These native report contractions have separate statement, command,
+// proposal and question licenses. No implicit reporting 하다 is a lemma.
+pub(crate) fn reporting_retrospective(form: &str) -> bool {
+    matches!(
+        form,
+        "다던"
+            | "다던데"
+            | "는다던"
+            | "는다던데"
+            | "라던"
+            | "라던데"
+            | "으라던"
+            | "으라던데"
+            | "자던"
+            | "자던데"
+            | "냐던데"
+            | "느냐던데"
+            | "으냐던데"
+    )
+}
+pub(crate) fn plain_reporting_retrospective(form: &str) -> bool {
+    matches!(form, "다던" | "다던데")
 }
 
 pub(crate) fn literary_na_ending(form: &str) -> bool {
@@ -877,6 +903,8 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다든가"
             | "는다네"
             | "는다는데"
+            | "는다던"
+            | "는다던데"
             | "는다며"
             | "는다면서"
             | "는다니"
@@ -913,6 +941,7 @@ pub(crate) fn adjectival_question(form: &str) -> bool {
             | "으냐니까"
             | "으냐느니"
             | "으냐면"
+            | "으냐던데"
             | "으냐는구나"
             | "으냐는군"
             | "으냐더군"
@@ -1175,6 +1204,22 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // Native retrospective reports: commands permit honorifics,
+                // proposals are bare, plain statements permit 시/었/겠.
+                // Apply this only to the immediate predicate's own markers.
+                if (matches!(ending.form, "으라던" | "으라던데")
+                    && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
+                    || (matches!(ending.form, "자던" | "자던데") && !p.morphs.is_empty())
+                    || (plain_reporting_retrospective(ending.form)
+                        && p.morphs.iter().any(|m| {
+                            !honorific_prefinal(&m.form)
+                                && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+                        }))
+                    || (ending.form == "라던"
+                        && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
+                {
+                    continue;
+                }
                 // Quoted -며/-면서 families have separate prefinal licenses.
                 if (matches!(ending.form, "으라며" | "으라면서")
                     && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
@@ -1335,6 +1380,14 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                     continue;
                 }
                 if ending.form == "느냐고" && p.morphs.iter().any(|m| m.form == "더") {
+                    continue;
+                }
+                // KRDict 86361: this canonical adjective report takes a
+                // non-ㄹ closed underlying stem. EuZero remains useful for
+                // irregular 추우냐 -> 춥다, but not 아프냐/기냐 aliases.
+                if ending.form == "으냐던데"
+                    && crate::hangul::coda(&p.stem).is_some_and(|t| matches!(t, 0 | 8))
+                {
                     continue;
                 }
                 if adjectival_question(ending.form) && !p.morphs.is_empty() {
@@ -1600,6 +1653,8 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                                 | "라든가"
                                 | "라네"
                                 | "라는데"
+                                | "라던"
+                                | "라던데"
                                 | "라며"
                                 | "라면서"
                                 | "라니"
@@ -1609,7 +1664,7 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                     && !p.morphs.last().is_some_and(|m| {
                         honorific_prefinal(&m.form)
                             || (m.form == "더"
-                                && !matches!(ending.form, "라는" | "라야" | "라야만"))
+                                && !matches!(ending.form, "라는" | "라야" | "라야만" | "라던"))
                     })
                 {
                     continue;
@@ -1783,6 +1838,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 {
                     p.rules.push("ending.reporting_polite".into());
                 }
+                if reporting_retrospective(ending.form) {
+                    p.rules.push("ending.reporting_retrospective".into());
+                }
                 if matches!(
                     ending.form,
                     "다네"
@@ -1878,6 +1936,10 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
         "라든가",
         "라네",
         "라는데",
+        // Native 26318/55367 attest conjectural -리라던 despite
+        // the shorter grammar entry's narrower attachment note.
+        "라던",
+        "라던데",
         "라며",
         "라면서",
         "라니",
@@ -1929,6 +1991,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                         }
                         if ending == "랍니다" {
                             p.rules.push("ending.reporting_polite".into());
+                        }
+                        if reporting_retrospective(ending) {
+                            p.rules.push("ending.reporting_retrospective".into());
                         }
                         if matches!(ending, "라네" | "라는데") {
                             p.rules.push("ending.reporting_ne".into());
@@ -2507,7 +2572,11 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             if matches!(class, Some(PredicateClass::Adjective))
                 && matches!(
                     m.form.as_str(),
-                    "으라며"
+                    "으라던"
+                        | "으라던데"
+                        | "자던"
+                        | "자던데"
+                        | "으라며"
                         | "으라면서"
                         | "으라니"
                         | "으라느니"
@@ -2572,6 +2641,8 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                                         | "다든가"
                                         | "다네"
                                         | "다는데"
+                                        | "다던"
+                                        | "다던데"
                                         | "다며"
                                         | "다면서"
                                         | "단다"
@@ -2650,7 +2721,11 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 || activity_reason(&m.form)
                 || matches!(
                     m.form.as_str(),
-                    "으라며"
+                    "으라던"
+                        | "으라던데"
+                        | "자던"
+                        | "자던데"
+                        | "으라며"
                         | "으라면서"
                         | "으라니"
                         | "으라느니"
@@ -2809,6 +2884,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "더라는군"
                 | "다네"
                 | "다는데"
+                | "다던"
+                | "다던데"
+                | "냐던데"
                 | "으되"
                 | "더라네"
                 | "더라는데"
@@ -2984,7 +3062,11 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 || activity_reason(&m.form)
                 || matches!(
                     m.form.as_str(),
-                    "으라며"
+                    "으라던"
+                        | "으라던데"
+                        | "자던"
+                        | "자던데"
+                        | "으라며"
                         | "으라면서"
                         | "으라니"
                         | "으라느니"
@@ -3084,6 +3166,9 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "는다네"
                 | "다는데"
                 | "는다는데"
+                | "다던"
+                | "다던데"
+                | "으냐던데"
                 | "다거나"
                 | "는다거나"
                 | "다든가"
@@ -3988,6 +4073,8 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 | "으랍니다"
                 | "으라네"
                 | "으라는데"
+                | "으라던"
+                | "으라던데"
                 | "으라며"
                 | "으라면서"
                 | "으라니"
@@ -4245,6 +4332,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 || short_report(ending)
                 || reporting_go(ending)
                 || quoted_conditional_question(ending)
+                // Native 한다던데요 and NIKL teaching examples license
+                // polite statement reports; other report followers stay separate.
+                || matches!(ending, "다던데" | "는다던데" | "라던데" | "으라던데"
+                    | "자던데" | "냐던데" | "느냐던데" | "으냐던데")
                 || reporting_myeo(ending)
                 || reporting_ni(ending)
                 || matches!(

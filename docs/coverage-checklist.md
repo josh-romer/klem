@@ -223,7 +223,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bm implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–bm and COV-017bt implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1733,6 +1733,62 @@ review remains open under the completion review below.
   in Nix. Wider prefinal/follower and omission licenses, contextual sense/register
   selection and independent Korean review remain open.
 
+- [x] **COV-017bt — Contracted reported retrospective statements, commands,
+  proposals and questions.** Thirteen canonical endings retain
+  separate present verb, plain statement, factual copular, command, proposal
+  and question attachment rules. Factual -라던 and -라던데 preserve their
+  different prefinal licenses; source-listed class extensions remain Unknown.
+  The [immutable preflight](reported-retrospective-source-preflight.json.gz)
+  retains 613 spelling observations, 604 prior words, 12 original annotated
+  tokens and 487 complete native entries. These observations are not contextual
+  gold. [Seven polite follower cases](../tests/fixtures/reported-retrospective-followers.json)
+  retain narrower source notes separately from the core freeze.
+  [Integration regressions](../tests/reported_retrospectives.rs) cover all 182
+  individual cases, NFC/NFD, caches, dictionary filters and CLI parity, plus
+  every prior candidate and native assessment. Original annotation matches
+  increase from four to eleven of twelve; the unchanged 노래라던지 miss and
+  the 놀자+던 conversion remain visible rather than rewriting their gold.
+  Explicit overlays in [the lexical 나다 tests](../tests/lexical_nada_spacing.rs)
+  recover 발표 / 났다던데 and preserve both historical pending fixtures.
+  [Explicit source corrections](../tests/fixtures/reported-retrospective-corrections.json)
+  retain the earlier exclusion and the two native expectation reports that
+  override it; the conjectural copular extension stays Unknown. Earlier past
+  before source-listed -더- is retained as a separate case. Viewer labels link
+  all fifteen exact native expression identities. Five additional
+  [boundary selectors](../tests/fixtures/reported-retrospective-boundaries.json)
+  preserve valid general 냐 and irregular 추우냐 reports while excluding
+  open/ㄹ-stem canonical 으냐 aliases; their pre-fix draft records remain visible.
+  [Eight full-stream comparisons](reported-retrospective-observations.json.gz)
+  preserve all 1,128,312 records' previous candidates, native assessments and
+  spacing order. The 2,299 individual changes contain 2,268 candidates and 31
+  spacing options, with original contexts and pending judgments; host release
+  and Nix reports agree exactly apart from binary hashes.
+  [Additional native sources](../tests/fixtures/reported-retrospective-additional-native.json)
+  retain all 418 exposed entries, bringing the source union to 908.
+  [Four held-out reports](reported-retrospective-corpora.json) preserve all
+  66,570 original rows and previous component sets; 않는다던 newly recovers.
+  The host Nix release suite passes 856 tests (zero failures, one downloaded-
+  corpus test ignored); the complete held-out reports run separately.
+  [Packaged HTTP checks](reported-retrospective-packaged-runtime.json) verify
+  all 908 native endpoints and 374 encoded candidate judgments.
+  [Eighteen browser exports](reported-retrospective-packaged-browser.json)
+  match the CLI across all 612 words; nine selected diagrams, both present-
+  report links and inspected mobile layout pass. The local preview runs the
+  tested package; the final fixture build's CLI/web executables are byte-identical.
+  Contextual and independent review remain open under the parent inventory;
+  COV-017bu separately tracks the older adjectival-question allomorph audit.
+  The [evidence gate](../tools/reported_retrospective_queue.py) runs in the flake; no implicit reporting 하다 is inserted.
+
+- [ ] **COV-017bu — Adjectival-question canonical allomorph audit.**
+  The retrospective family now rejects open and ㄹ stems for its distinct
+  canonical 으냐 component. Older families still need the same source audit:
+  아프냐고 / 기냐고 currently also emit 아프다 / 길다 + 으냐고 as Compatible,
+  despite native [79258](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79258)
+  restricting this adjectival component to non-ㄹ closed stems. Freeze every
+  affected older family and native homonym before correcting its boundaries;
+  preserve general 냐, irregular closed-stem recovery and prior analyses that
+  meet their own source notes. Broader spelling and attachment review stays open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -2313,8 +2369,8 @@ review remains open under the completion review below.
   reports run separately. The [offline evidence gate](../tools/future_question_queue.py)
   runs in the flake and keeps every contextual/independent judgment pending.
   COV-018ab remains open for other question endings, attachment/register and
-  contextual/independent review; the lexical 나다 reported-retrospective
-  dependency also remains open.
+  contextual/independent review. COV-017bt separately resolves the lexical
+  나다 reported-retrospective dependency through a source-backed test overlay.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
@@ -3517,9 +3573,9 @@ review remains open under the completion review below.
   in the flake. COV-018ae now resolves
   `lexical-nada-discovery-ef9a33c60226f6c9ba4fe452` (사고 날지도, 을지 + 도)
   through an explicit source-backed test overlay; the historical pending fixture
-  remains unchanged. The remaining named right-morphology dependency is
-  `lexical-nada-discovery-7b1f871bde65cd5d1aeba52a` (발표 났다던데,
-  reported retrospective expression). The 57 construction boundaries, 4,587
+  remains unchanged. COV-017bt now resolves the other named dependency,
+  `lexical-nada-discovery-7b1f871bde65cd5d1aeba52a` (발표 났다던데),
+  through another explicit overlay; the immutable pending row remains visible. The 57 construction boundaries, 4,587
   discoveries outside this cohort and all contextual/independent review remain open.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮

@@ -170,6 +170,12 @@
                 ./tools/future_question_additional.py
                 ./tools/future_question_runtime.py
                 ./tools/future_question_queue.py
+                ./tools/reported_retrospective_audit.py
+                ./tools/reported_retrospective_corrections.py
+                ./tools/reported_retrospective_compare.py
+                ./tools/reported_retrospective_additional.py
+                ./tools/reported_retrospective_queue.py
+                ./tools/reported_retrospective_runtime.py
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -184,6 +190,7 @@
                 ./web/tests/rya-copula.mjs
                 ./web/tests/caution-ending.mjs
                 ./web/tests/future-question.mjs
+                ./web/tests/reported-retrospective.mjs
               ];
             };
           } ''
@@ -226,6 +233,7 @@
             python tools/rya_copula_queue.py --verify
             python tools/caution_ending_audit.py --verify
             python tools/future_question_audit.py --verify
+            python tools/reported_retrospective_queue.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

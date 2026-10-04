@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bt / COV-020r",
+  "previous_report_sha256": "79dab5f1a3ba56aac6be43ba1a2eeab372852cfab7c4424b10bbfa33bb499461",
+  "evaluator_sha256": "7e1260959f7f52e77f83a83191e85fe3aff04f770d218f45abbb6a11905e547d",
+  "corpora": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "converted_rows": 22220,
+      "report_lines": 22221,
+      "before_report_sha256": "663bbfb2a21bcf9560833620c6e88e1669a981259da91bf5333a444c552e86d0",
+      "after_report_sha256": "2af495ba47423a40f72b6239fef3a234fd1057db6c24b5f8afbbe7ddcdb8bd73",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "input": {
+          "before": "/home/josh/projects/klem/data/corpora/kaist/ko_kaist-ud-dev.conllu",
+          "after": "data/corpora/kaist/ko_kaist-ud-dev.conllu"
+        }
+      },
+      "changes": []
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "converted_rows": 24490,
+      "report_lines": 24491,
+      "before_report_sha256": "355d3b693eea3827eae02585f60cd8d42e0994134a2157d32434a7bf601d8534",
+      "after_report_sha256": "64fbceccdbc01dccfeb7d45ada86ea800447b988794f63b7ea70983d6b00cb32",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "input": {
+          "before": "/home/josh/projects/klem/data/corpora/kaist/ko_kaist-ud-test.conllu",
+          "after": "data/corpora/kaist/ko_kaist-ud-test.conllu"
+        },
+        "grouped_matches": {
+          "before": 24400,
+          "after": 24401
+        },
+        "recovered_gold_lemmas": {
+          "before": 25939,
+          "after": 25940
+        },
+        "transformed_matches": {
+          "before": 18125,
+          "after": 18126
+        },
+        "grouped_lemma_recall": {
+          "before": 0.9963250306247448,
+          "after": 0.9963658636178032
+        },
+        "lemma_recall": {
+          "before": 0.9967720862314107,
+          "after": 0.9968105137762748
+        },
+        "transformed_grouped_recall": {
+          "before": 0.9950590172934395,
+          "after": 0.9951139171012902
+        },
+        "mean_candidates": {
+          "before": 5.985994283380972,
+          "after": 5.986239281339322
+        }
+      },
+      "changes": [
+        {
+          "id": "reported-retrospective-corpus-6cf54d228eca67317959845b",
+          "before": {
+            "id": "id:MH2_0110-s105/9",
+            "surface": "않는다던",
+            "expected": [
+              "않다"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:MH2_0110-s105/9",
+            "surface": "않는다던",
+            "expected": [
+              "않다"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          },
+          "source_row": [
+            "9",
+            "않는다던",
+            "않",
+            "AUX",
+            "px+etm",
+            "_",
+            "8",
+            "aux",
+            "_",
+            "OrigLemma=않+는다던|Translit=.anh.neun.da.deon|LTranslit=.anh"
+          ],
+          "complete_sentence": "# sent_id = MH2_0110-s105\n# text = 6 대주에 뻗어 있던, 그래서 해가 지지 않는다던 대영제국이 다시 작은 섬나라로 움츠러들었다.\n# translit = 6 .dae.ju.e .bbeod.eo .iss.deon, .geu.rae.seo .hae.ga .ji.ji .anh.neun.da.deon .dae.yeong.je.gug.i .da.si .jag.eun .seom.na.ra.ro .um.cheu.reo.deul.eoss.da.\n1\t6\t6\tNUM\tnnc\t_\t2\tnummod\t_\tTranslit=6|LTranslit=6\n2\t대주에\t대주+에\tADV\tncn+jca\t_\t3\tobl\t_\tTranslit=.dae.ju.e|LTranslit=.dae.ju+.e\n3\t뻗어\t뻗+어\tVERB\tpvg+ecx\t_\t8\tdep\t_\tTranslit=.bbeod.eo|LTranslit=.bbeod+.eo\n4\t있던\t있\tAUX\tpx+etm\t_\t3\taux\t_\tOrigLemma=있+던|SpaceAfter=No|Translit=.iss.deon|LTranslit=.iss\n5\t,\t,\tPUNCT\tsp\t_\t4\tpunct\t_\tTranslit=,|LTranslit=,\n6\t그래서\t그래서\tADV\tmag\t_\t8\tadvmod\t_\tTranslit=.geu.rae.seo|LTranslit=.geu.rae.seo\n7\t해가\t해+가\tNOUN\tncn+jcs\t_\t8\tnsubj\t_\tTranslit=.hae.ga|LTranslit=.hae+.ga\n8\t지지\t지+지\tVERB\tpvg+ecx\t_\t10\tdep\t_\tTranslit=.ji.ji|LTranslit=.ji+.ji\n9\t않는다던\t않\tAUX\tpx+etm\t_\t8\taux\t_\tOrigLemma=않+는다던|Translit=.anh.neun.da.deon|LTranslit=.anh\n10\t대영제국이\t대영제국+이\tNOUN\tncn+jcs\t_\t14\tnsubj\t_\tTranslit=.dae.yeong.je.gug.i|LTranslit=.dae.yeong.je.gug+.i\n11\t다시\t다시\tADV\tmag\t_\t14\tadvmod\t_\tTranslit=.da.si|LTranslit=.da.si\n12\t작은\t작+ㄴ\tADJ\tpaa+etm\t_\t13\tamod\t_\tTranslit=.jag.eun|LTranslit=.jag+ㄴ\n13\t섬나라로\t섬+나라+로\tADV\tncn+ncn+jca\t_\t14\tadvcl\t_\tTranslit=.seom.na.ra.ro|LTranslit=.seom+.na.ra+.ro\n14\t움츠러들었다\t움츠리+어+들+었+다\tVERB\tpvg+ecx+px+ep+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.um.cheu.reo.deul.eoss.da|LTranslit=.um.cheu.ri+.eo+.deul+.eoss+.da\n15\t.\t.\tPUNCT\tsf\t_\t14\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending"
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "converted_rows": 9989,
+      "report_lines": 9990,
+      "before_report_sha256": "95a5040041459f006847ddbf4c8a3a5446886fde95fdb14ef4e8211229f1a9c3",
+      "after_report_sha256": "4c1ee7ebb9bc50f2678bd4524e6838a46832eaedb6f3d31e1c5185455d3e3fdc",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "input": {
+          "before": "/home/josh/projects/klem/data/corpora/gsd/ko_gsd-ud-dev.conllu",
+          "after": "data/corpora/gsd/ko_gsd-ud-dev.conllu"
+        }
+      },
+      "changes": []
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "converted_rows": 9871,
+      "report_lines": 9872,
+      "before_report_sha256": "517604c411cf9f6b99bcfaa4777df21c6e6364c401f807253155df50ed9eeac8",
+      "after_report_sha256": "cc82d2d90fd3182e9d69af8e4cef50467a48d239fd0e813186f65ba97f1e8ef8",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "input": {
+          "before": "/home/josh/projects/klem/data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "after": "data/corpora/gsd/ko_gsd-ud-test.conllu"
+        }
+      },
+      "changes": []
+    }
+  ],
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

@@ -250,6 +250,8 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라든가"
             | "라네"
             | "라는데"
+            | "라던"
+            | "라던데"
             | "라며"
             | "라면서"
             | "라니"
@@ -1018,6 +1020,7 @@ impl Annotation {
                                 form,
                                 "단다" | "다지" | "다죠" | "다지만" | "다니까" | "다느니" | "대"
                                     | "다는구나" | "다는군" | "다더군" | "다더군요"
+                                    | "다던" | "다던데"
                             )
                             && verb
                         {
@@ -1155,7 +1158,7 @@ impl Annotation {
                             }
                         } else if adjective
                             && lemma.text == "아니다"
-                            && (matches!(form, "으라니" | "으라느니")
+                            && (matches!(form, "으라니" | "으라느니" | "으라던" | "으라던데")
                                 || crate::engine::quoted_command_exclamation(form))
                         {
                             // Preserve factual 라니. Do not generalize this to
@@ -1227,12 +1230,14 @@ impl Annotation {
                     if lemma.kind == LemmaKind::Predicate
                         && status == Compatibility::Unknown
                         && let Some(i) = ending
-                        && crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
+                        && (crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
+                            || crate::engine::reporting_retrospective(&analysis.morphemes[i].form))
                     {
                         let form = analysis.morphemes[i].form.as_str();
                         let rule = if crate::engine::present_declarative(form) && pos == "보조 형용사" {
                             Some(AttachmentRule::PresentDeclarativeVerb)
-                        } else if bare && crate::engine::plain_quoted_exclamation(form)
+                        } else if bare && (crate::engine::plain_quoted_exclamation(form)
+                            || crate::engine::plain_reporting_retrospective(form))
                             && pos == "보조 동사"
                             && !matches!(lemma.text.as_str(), "있다" | "계시다" | "않다" | "아니하다" | "못하다")
                         { Some(AttachmentRule::BareAdjectivalReport) } else { None };
@@ -1243,17 +1248,28 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && let Some(i) = ending
-                        && crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
+                        && (crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
+                            || crate::engine::plain_reporting_retrospective(&analysis.morphemes[i].form)
+                            || matches!(analysis.morphemes[i].form.as_str(), "라던" | "라던데"))
                     {
                         let form = analysis.morphemes[i].form.as_str();
                         let listed: &[&str] = if crate::engine::present_declarative(form) {
                             &["시"]
-                        } else { &["시", "었", "겠"] };
+                        } else if form == "라던" {
+                            if morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if analysis.morphemes[*j].form == "으리")) {
+                                &["시", "었", "겠", "으리"]
+                            } else { &["시"] }
+                        }
+                        else if form == "라던데" { &["시", "더", "으리", "었", "겠"] }
+                        else { &["시", "었", "겠"] };
                         // Listing -시- in an adjective report's note does not
                         // establish a verb's present report without -ㄴ다/-는다.
                         // Preserve the hypothesis without certifying that class
                         // extension. Past/modal reports have separate evidence.
-                        let honorific_verb_report = crate::engine::plain_quoted_exclamation(form)
+                        let honorific_verb_report = (crate::engine::plain_quoted_exclamation(form)
+                            || crate::engine::plain_reporting_retrospective(form)
+                            || matches!(form, "라던" | "라던데"))
                             && matches!(pos, "동사" | "보조 동사")
                             && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
                                 if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
@@ -1264,6 +1280,31 @@ impl Annotation {
                             if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
                                 && !listed.contains(&analysis.morphemes[*j].form.as_str())))
                             || honorific_verb_report
+                        { status = Compatibility::Unknown; }
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "라던"
+                        && !matches!(pos, "동사" | "보조 동사")
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].form == "으리"))
+                    {
+                        // Native expectation reports attest verbal (으)리라던.
+                        // Their copular/adjectival class extensions are hypotheses.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::reporting_retrospective(&analysis.morphemes[i].form)
+                        && analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요")
+                    {
+                        // The polite source notes are narrower than their core
+                        // report entries. Bare verbal 냐 and honorific commands
+                        // remain hypotheses, rather than certified extensions.
+                        let form = analysis.morphemes[i].form.as_str();
+                        if (form == "냐던데" && bare && matches!(pos, "동사" | "보조 동사"))
+                            || (form == "으라던데" && morphs.iter().any(|c|
+                                matches!(c, Component::Morpheme(j)
+                                    if analysis.morphemes[*j].kind == MorphemeKind::Prefinal)))
                         { status = Compatibility::Unknown; }
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending

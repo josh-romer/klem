@@ -97,7 +97,10 @@ mod tests {
         }
         let _cleanup = Cleanup(path.clone());
         import_krdict(
-            &[PathBuf::from("tests/fixtures/krdict-grammar-labels.json")],
+            &[
+                PathBuf::from("tests/fixtures/krdict-grammar-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-reported-retrospective-labels.json"),
+            ],
             &path,
             "grammar-label-source-test",
         )

@@ -106,9 +106,14 @@ class Audit:
             "candidate loss/order",
         )
         added = [a for a in new if a not in old]
+        forms = (
+            (self.dependency_form,)
+            if isinstance(self.dependency_form, str)
+            else self.dependency_form
+        )
         for a in added:
             assert self.dependency_rule in a["rules"] and any(
-                m["form"] == self.dependency_form for m in a["morphemes"]
+                m["form"] in forms for m in a["morphemes"]
             ), a
         for key in before.keys() - {"analyses", "dictionary", "breakdowns"}:
             assert before[key] == after[key], key

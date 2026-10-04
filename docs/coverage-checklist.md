@@ -1650,6 +1650,50 @@ review remains open under the completion review below.
   in Nix. Sense/register judgments and the separately observed vowel-final
   지위랴 copula reading remain unjudged rather than inferred from these checks.
 
+  **Vowel-final omitted-copula hypotheses implemented and verified:** 지위랴
+  now retains 지위 + 이다 + 으랴, including separate 마는/만 followers.
+  KRDict 79260's explicit 이다 license and NIKL's general
+  [vowel-final copula omission guidance, printed page 40](https://www.korean.go.kr/common/download.do?c_file_name=5c43a081-403a-47bf-ba5e-3430389c39a4_0.pdf&file_path=etcData&o_file_name=%EA%B5%AD%EB%A6%BD%EA%B5%AD%EC%96%B4%EC%9B%90_%EA%B0%80%EB%82%98%EB%8B%A4%EC%A0%84%ED%99%94%EC%97%90%EB%AC%BC%EC%96%B4%EB%B3%B4%EC%95%98%EC%96%B4%EC%9A%94.pdf)
+  support preserving this composition as a hypothesis; neither source directly
+  settles its Rya-specific attachment or historical register. The new
+  `copula.omitted_rya` provenance keeps the immediate copula owner Unknown,
+  preserving existing conflicts and earlier nominal/predicate/auxiliary
+  assessments. Vowel-final boundaries, separate copula roles and nominalization
+  composition are covered by [30 stable finite cases](../tests/fixtures/rya-copula-regressions.json).
+  Explicit copulas and lexical Rya alternatives remain unchanged. Seven
+  forbidden judgments target individual wrong-boundary/polite hypotheses;
+  they do not ban ambiguous words or alter the exhaustive raw API.
+
+  [The source freeze](rya-copula-source-preflight.json.gz) preserves 128 original
+  diagnostic words in every filter, all 69 previous native spelling discoveries,
+  143 complete native owners and all 33 novel spelling occurrences with spans
+  and contexts. [An append-only supplement](../tests/fixtures/rya-copula-additional-native.json)
+  keeps the 18 additional full native owners exposed by the new hypotheses.
+  [Five integration tests](../tests/rya_copulas.rs) verify importer parity for
+  both source sets, NFC/NFD, exact lemma groups/morpheme order/provenance,
+  original paths and assessments/order, copula-owned uncertainty and 18
+  CLI/library cache/filter streams. The full Nix release suite passes all 840
+  tests, alongside debug regressions, Clippy, formatting and the full pinned
+  corpus regression. All four [held-out reports](rya-copula-corpora.json), with
+  66,570 converted rows and every summary, retain their prior hashes.
+  [The individual observation ledger](rya-copula-observations.json.gz) retains
+  133 distinct candidate additions across 280 occurrences and all 44 involved
+  native owners. The three full candidate evaluation streams are unchanged;
+  the novel changes 33 raw and 10 records under either dictionary filter,
+  including both spacing streams. All eight streams (1,128,312 records)
+  preserve old raw paths, native assessments, known conflicts and spacing
+  options/order; debug and packaged-release evidence agree.
+  [Packaged runtime checks](rya-copula-packaged-runtime.json) verify 161 complete
+  native API entries, all 30 cases in both Unicode encodings and 18 cache/filter
+  streams. [Six browser exports](rya-copula-packaged-browser.json) match the CLI;
+  omitted/explicit copulas, preserved lexical selection for 나랴, exact
+  predicate-copula entry 86232 and mobile layout pass without errors and were
+  visually inspected. [The offline verifier](../tools/rya_copula_queue.py)
+  checks source/fixture identity and each individual observation plus recorded
+  runtime, browser and corpus evidence in Nix. Linguistic sense/register
+  judgments and independent review remain pending; Unknown hypotheses are
+  retained by filters that exclude known conflicts, without certifying them.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

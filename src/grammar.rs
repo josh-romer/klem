@@ -1024,6 +1024,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             // 리까 lists 이다 attachment; omitted 이 keeps the existing
             // vowel-final nominal condition and never inflects the nominal.
             ("리까", "으리까", 0),
+            // KRDict 79260 licenses 이다; NIKL documents vowel-final 이
+            // omission generally. Keep their unreviewed Rya composition as
+            // an explicitly marked hypothesis, with Unknown attachment.
+            ("랴", "으랴", 0),
             ("걸", "은걸", 4),
             ("걸", "을걸", 8),
             ("던걸", "던걸", 0),
@@ -1913,6 +1917,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
         "copula.omitted_ending" => {
             "Restore omitted copular 이 after a vowel-final nominal before a reviewed ending; the nominal is not a conjugated verb stem."
+        }
+        "copula.omitted_rya" => {
+            "Retain a vowel-final nominal plus omitted 이다 before -랴 as a hypothesis from the copula license and general omission rule; Rya-specific attachment and register remain unreviewed, with dictionary compatibility Unknown."
         }
         "copula.omitted_honorific" => {
             "Restore omitted copular 이 before honorific 시 after a vowel-final nominal; preserve the normal prefinal order and ending restrictions."

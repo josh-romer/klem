@@ -2107,3 +2107,19 @@ before production edits: first two aligned target heads per POS/following-tag
 category. All previous 14 matches remain identical. Attribution: UD Korean
 KAIST/GSD contributors and source corpora, r2.15; corpus-derived text/evaluations
 CC BY-SA 4.0, separate from the dictionary license.
+# Omitted-copula Rya follow-up
+
+`rya-copula-regressions.json` and `krdict-rya-copula.json` preserve 128 original
+word analyses and native assessments, 143 complete English native LMF entries,
+and 30 stable finite cases. The corresponding source freeze in
+`docs/rya-copula-source-preflight.json.gz` retains all translation languages,
+the earlier 69 native spelling discoveries and 33 complete novel observations.
+KRDict 79260 explicitly allows the copula; NIKL's *가나다전화에 물어보았어요*,
+printed page 40, documents vowel-final copula omission generally. Combining
+these licenses before Rya remains an attachment/register hypothesis, with
+Unknown copula compatibility and all prior conflicts preserved. The exact
+lemma groups in these cases test hypotheses without certifying sentence senses.
+Native dictionary material is attributed to NIKL under CC BY-SA 2.0 KR, as above.
+The two `rya-copula-additional` fixtures retain another 18 full native owners
+exposed by the new hypotheses; they add source data without rewriting the
+original 143-entry freeze. Import parity checks both sets independently.

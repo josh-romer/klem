@@ -1391,9 +1391,11 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending
                         && analysis.morphemes[i].form == "으랴"
-                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                        && ((lemma.kind == LemmaKind::Copula
+                            && analysis.rules.iter().any(|r| r == "copula.omitted_rya"))
+                            || morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
                             if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
-                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠")))
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠"))))
                     {
                         // The four native -랴/-으랴 entries cover rhetorical,
                         // offer and enumerative senses collectively. Their
@@ -1401,6 +1403,8 @@ impl Annotation {
                         // immediate-owner extensions remain hypotheses without
                         // certifying an unreviewed sense or register. A prior
                         // auxiliary owner's markers do not supply this test.
+                        // General vowel-final copula omission plus the Rya
+                        // copula license is similarly an unreviewed composition.
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending

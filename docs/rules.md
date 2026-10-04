@@ -3691,6 +3691,18 @@ has complete corpus/novel, browser/API and packaged runtime evidence in
 
 Canonical 으랴 now permits the source-listed concessive particle 마는 and its
 short 만 form: 있으랴마는 → 있다 + 으랴 + 마는 and 알랴만 → 알다 + 으랴 + 만.
+
+Vowel-final nominal copula omission before 랴 is retained as an explicitly
+unreviewed composition: 지위랴 → 지위 + 이다 + 으랴, with separate 마는/만
+followers where applicable. KRDict 79260 licenses 이다, while NIKL's
+[가나다전화에 물어보았어요, printed page 40](https://www.korean.go.kr/common/download.do?c_file_name=5c43a081-403a-47bf-ba5e-3430389c39a4_0.pdf&file_path=etcData&o_file_name=%EA%B5%AD%EB%A6%BD%EA%B5%AD%EC%96%B4%EC%9B%90_%EA%B0%80%EB%82%98%EB%8B%A4%EC%A0%84%ED%99%94%EC%97%90%EB%AC%BC%EC%96%B4%EB%B3%B4%EC%95%98%EC%96%B4%EC%9A%94.pdf)
+documents omission generally, using formal-ending examples. These separate
+licenses do not establish this Rya-specific attachment or historical register.
+`copula.omitted_rya` records that distinction; the copula's dictionary status
+remains Unknown, with established conflicts unchanged. Earlier predicate and
+auxiliary owners keep their own assessments. The nominal is never subjected to
+predicate irregular recovery, and the ordinary omitted-copula vowel boundary
+still applies. Explicit 이 copulas and lexical -랴 candidates remain separate.
 The ending and particle retain separate components and source labels; arbitrary
 nominal 마는 and unlicensed immediate 요 are not generated for the tested
 owners. The new `rya-boundary-*` fixtures preserve all four ending sources, both

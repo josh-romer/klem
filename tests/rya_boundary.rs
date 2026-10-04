@@ -147,7 +147,9 @@ fn original_raw_paths_and_known_conflicts_survive_with_unreviewed_prefinals_unkn
                 for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
                     assert!(
                         a.rules.iter().any(|r| r == "ending.rya")
-                            && a.rules.iter().any(|r| r == "particle.concessive"),
+                            && a.rules.iter().any(|r| {
+                                r == "particle.concessive" || r == "copula.omitted_rya"
+                            }),
                         "{surface}: {a:?}"
                     );
                 }

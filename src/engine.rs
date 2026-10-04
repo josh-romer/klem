@@ -1698,6 +1698,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if ending.form == "으랴" {
                     p.rules.push("ending.rya".into());
+                    if matches!(ending.boundary, Boundary::OmittedCopula(_)) {
+                        p.rules.push("copula.omitted_rya".into());
+                    }
                 }
                 if ending.form == "으되" {
                     p.rules.push("ending.contrast_doe".into());

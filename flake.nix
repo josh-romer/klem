@@ -150,6 +150,10 @@
                 ./tools/rya_boundary_compare.py
                 ./tools/rya_boundary_runtime.py
                 ./tools/rya_boundary_queue.py
+                ./tools/rya_copula_audit.py
+                ./tools/rya_copula_compare.py
+                ./tools/rya_copula_runtime.py
+                ./tools/rya_copula_queue.py
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -160,6 +164,7 @@
                 ./web/tests/bare-noun-spacing.mjs
                 ./web/tests/lexical-nada.mjs
                 ./web/tests/rya-boundary.mjs
+                ./web/tests/rya-copula.mjs
               ];
             };
           } ''
@@ -194,6 +199,8 @@
             python tools/rya_boundary_audit.py --verify
             python tools/rya_boundary_regressions.py --verify
             python tools/rya_boundary_queue.py --verify
+            python tools/rya_copula_audit.py --verify
+            python tools/rya_copula_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

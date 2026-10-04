@@ -62,6 +62,10 @@ pub enum AttachmentRule {
     BareCopularEnding,
     BareAdjectivalReport,
     BareVerbalQuestion,
+    /// KRDict 73878/73888: bare adjectival/copular -ㄴ감/-은감.
+    BareRefutingAdjective,
+    /// KRDict 73879: bare verbal/existential -는감.
+    BareRefutingVerb,
     LexicalSpelling,
     ShortStemEnding,
 }
@@ -1706,6 +1710,55 @@ impl Annotation {
                                 morpheme_index: Some(i),
                             });
                         }
+                    }
+                    if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        && let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "은감" | "는감" | "던감")
+                    {
+                        // Use this ending's immediate owner. The lexical head
+                        // cannot supply an auxiliary/copula's POS. Preserve
+                        // unknown roles and unreviewed prefinal extensions.
+                        let form = analysis.morphemes[i].form.as_str();
+                        let prefinals: Vec<_> = morphs.iter().filter_map(|c| match c {
+                            Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Prefinal => Some(analysis.morphemes[*j].form.as_str()),
+                            _ => None,
+                        }).collect();
+                        let owner = if derived_adjective {
+                            Some(PredicateClass::Adjective)
+                        } else if unclassified_derivation {
+                            None
+                        } else if class.or(negative_lexical).is_some() {
+                            class.or(negative_lexical)
+                        } else if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {
+                            match pos {
+                                "형용사" | "보조 형용사" => Some(PredicateClass::Adjective),
+                                "동사" | "보조 동사" => Some(PredicateClass::Verb),
+                                _ => None,
+                            }
+                        } else { None };
+                        let rule = if prefinals.is_empty() && form == "은감"
+                            && matches!(owner, Some(PredicateClass::Verb))
+                        { Some(AttachmentRule::BareRefutingAdjective) }
+                        else if prefinals.is_empty() && form == "는감"
+                            && (matches!(owner, Some(PredicateClass::Copula))
+                                || (matches!(owner, Some(PredicateClass::Adjective))
+                                    && !matches!(lemma.text.as_str(), "있다" | "없다" | "계시다")))
+                        { Some(AttachmentRule::BareRefutingVerb) }
+                        else { None };
+                        if let Some(rule) = rule {
+                            // Compounded existential heads and negative
+                            // paradigms need a separate distribution review.
+                            if (form == "는감" && (lemma.text.ends_with("있다") || lemma.text.ends_with("없다")))
+                                || matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                            { status = Compatibility::Unknown; }
+                            else {
+                                status = Compatibility::Incompatible;
+                                conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                            }
+                        } else if status == Compatibility::Compatible
+                            && prefinals.iter().any(|p| if form == "은감" { *p != "시" }
+                                else { !matches!(*p, "시" | "었" | "겠") })
+                        { status = Compatibility::Unknown; }
                     }
                     EntryAssessment {
                         id: matched.entry.id.clone(),

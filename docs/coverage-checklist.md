@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 430 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/017bu/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 285 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 434 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/017bu–bv/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 281 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1840,6 +1840,42 @@ review remains open under the completion review below.
   runtime package. The final-ending source 79258 has an explicit scoped inventory
   disposition, retaining its distinct homonym and contextual limits.
   Broader spelling and attachment review stays open.
+
+- [x] **COV-017bv — Refuting questions -ㄴ감/-은감/-는감/-던감.**
+  **Implemented and verified within the native source scope.** The [immutable source preflight](gam-question-source-preflight.json.gz)
+  preserves four complete native ending entries, 249 spelling observations,
+  89 prior words in three dictionary filters, ten unchanged annotated corpus
+  rows and 242 complete native owners. All ten corpus observations are annotated
+  nouns, not contextual gold for question endings. The [69-case matrix](../tests/fixtures/gam-question-sources.json)
+  contains 57 required paths and 12 exact boundary exclusions; sentence
+  interpretation and independent Korean review remain pending. Both ㄴ/은
+  spellings normalize to 은감, retaining the source identities 73878/73888;
+  는감 and 던감 retain separate ending components. Regression coverage is in
+  [gam_questions.rs](../tests/gam_questions.rs). Native bare-owner dictionary conflicts are tracked separately (four required /
+  two forbidden paths); unlisted prefinal extensions stay Unknown. Four integration
+  tests verify NFC/NFD, caches, complete native imports, prior candidate retention
+  and CLI/filter parity. Negative and compound existential distribution, unlisted
+  prefinal/outer-particle or omitted-copula extensions remain parent inventory work.
+  [Eight complete stream comparisons](gam-question-observations.json.gz) preserve
+  all 1,128,312 candidate/novel records byte-for-byte. The 89-word source cohort
+  separately gains 463 distinct candidates and one spacing hypothesis across
+  three filters, retaining every prior path, native assessment and spacing order.
+  Each change has a stable ID and pending contextual/independent judgments;
+  the new 불신감 → 불 / 신감 spacing remains an unjudged hypothesis.
+  [The observation verifier](../tools/gam_question_compare.py) replays the entire
+  source cohort offline, including independently analyzed spacing segments.
+  [Four held-out reports](gam-question-corpora.json.gz) preserve all 66,570
+  original ordered gold rows and recovered component sets; only candidate means
+  change. [Packaged API checks](gam-question-packaged-runtime.json) verify all
+  300 complete native endpoints, 138 encoded judgments and 18 cache/filter streams.
+  [Six browser exports](gam-question-packaged-browser.json) match the CLI;
+  nine diagrams, all four ending-source links and inspected mobile layout pass.
+  The host and Nix Rust suites each pass 865 tests (zero failures, one downloaded-
+  corpus test ignored); the complete held-out reports are run separately.
+  All four ending entries now have scoped manual dispositions. The
+  [offline source verifier](../tools/gam_question_audit.py) and
+  [packaged evidence gate](../tools/gam_question_queue.py) run in Nix.
+  Contextual sense/register selection and independent Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

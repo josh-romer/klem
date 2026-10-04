@@ -35389,6 +35389,430 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:73878",
+      "source_sha256": "ebd0876540ef00798a732bff1825fd71556aa8f67ab48373631cda023ebb35f6",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bv"
+      ],
+      "scope": "Attached -ㄴ감 follows open/ㄹ adjectives, explicit copulas and honorific 시; canonical 은감 retains this distinct native identity. All four complete native entries, all 18 example groups, original corpus observations, candidate/filter/spacing histories, held-out gold rows and packaged API/browser behavior are retained.",
+      "remaining": "Contextual question/sense/register selection, negative and compound existential distributions, unlisted prefinal/outer-particle or omitted-copula extensions, and independent Korean review remain open under the parent inventory. Source examples and spelling matches are not automatically contextual gold.",
+      "evidence": [
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "all_named_paths_unicode_and_cache_budgets_agree"
+        },
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "central_regressions_and_dictionary_owner_classes_agree"
+        },
+        {
+          "path": "tests/fixtures/krdict-gam-question-labels.json"
+        },
+        {
+          "path": "tools/gam_question_compare.py"
+        },
+        {
+          "path": "tools/gam_question_corpora.py"
+        },
+        {
+          "path": "tools/gam_question_runtime.py"
+        },
+        {
+          "path": "web/tests/gam-question.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "gam-question-dbbabe4194f03f2ba2731702",
+          "judgment": "gam-question-dbbabe4194f03f2ba2731702-path"
+        },
+        {
+          "case": "gam-question-a15da3ac6d5c0a56a2026804",
+          "judgment": "gam-question-a15da3ac6d5c0a56a2026804-path"
+        },
+        {
+          "case": "gam-question-cd59cc686cb5db828ffa97be",
+          "judgment": "gam-question-cd59cc686cb5db828ffa97be-path"
+        },
+        {
+          "case": "gam-question-bd5174711e7c42875b0ab8c6",
+          "judgment": "gam-question-bd5174711e7c42875b0ab8c6-path"
+        },
+        {
+          "case": "gam-question-3dfc941117da3d5b7cf736a9",
+          "judgment": "gam-question-3dfc941117da3d5b7cf736a9-path"
+        },
+        {
+          "case": "gam-question-2e2e5dae273774f8134f4a59",
+          "judgment": "gam-question-2e2e5dae273774f8134f4a59-path"
+        },
+        {
+          "case": "gam-question-b674f330bfaecd9275768dde",
+          "judgment": "gam-question-b674f330bfaecd9275768dde-path"
+        },
+        {
+          "case": "gam-question-22d83cb01af23cff965324e9",
+          "judgment": "gam-question-22d83cb01af23cff965324e9-path"
+        },
+        {
+          "case": "gam-question-03064c4d3809eb3c351fa413",
+          "judgment": "gam-question-03064c4d3809eb3c351fa413-path"
+        },
+        {
+          "case": "gam-question-6f9832b59d9744a82f109f44",
+          "judgment": "gam-question-6f9832b59d9744a82f109f44-path"
+        },
+        {
+          "case": "gam-question-e6683486ef536b3eaf845f4b",
+          "judgment": "gam-question-e6683486ef536b3eaf845f4b-path"
+        },
+        {
+          "case": "gam-question-83f5fbb6e0f9bc9c19ebfedc",
+          "judgment": "gam-question-83f5fbb6e0f9bc9c19ebfedc-path"
+        },
+        {
+          "case": "gam-question-3580a2fcef1a63c4bb8a918c",
+          "judgment": "gam-question-3580a2fcef1a63c4bb8a918c-path"
+        },
+        {
+          "case": "gam-question-9c30b0e23e45217e902d1d65",
+          "judgment": "gam-question-9c30b0e23e45217e902d1d65-path"
+        },
+        {
+          "case": "gam-question-5d18ec2c72acdeeb80e8d3ac",
+          "judgment": "gam-question-5d18ec2c72acdeeb80e8d3ac-path"
+        },
+        {
+          "case": "gam-question-7ca1402609b0eaefbf3a7c5e",
+          "judgment": "gam-question-7ca1402609b0eaefbf3a7c5e-path"
+        },
+        {
+          "case": "gam-question-6afbecd9d27b44a8aa2f716a",
+          "judgment": "gam-question-6afbecd9d27b44a8aa2f716a-path"
+        },
+        {
+          "case": "gam-question-c2640e4f2ae2f9bdd7d8f415",
+          "judgment": "gam-question-c2640e4f2ae2f9bdd7d8f415-path"
+        },
+        {
+          "case": "gam-question-f323bcde90afecf73757adb6",
+          "judgment": "gam-question-f323bcde90afecf73757adb6-path"
+        },
+        {
+          "case": "gam-question-946d7a52099bc7d1fb2a77a7",
+          "judgment": "gam-question-946d7a52099bc7d1fb2a77a7-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73888",
+      "source_sha256": "3c1f400e4612e5db9ac92f7dd0ff4b77bf88c5bbfa015b54e02e457195177368",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bv"
+      ],
+      "scope": "Full -은감 selects a non-ㄹ closed adjective boundary; bare lexical verb conflicts remain separately visible to optional dictionary filtering. All four complete native entries, all 18 example groups, original corpus observations, candidate/filter/spacing histories, held-out gold rows and packaged API/browser behavior are retained.",
+      "remaining": "Contextual question/sense/register selection, negative and compound existential distributions, unlisted prefinal/outer-particle or omitted-copula extensions, and independent Korean review remain open under the parent inventory. Source examples and spelling matches are not automatically contextual gold.",
+      "evidence": [
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "all_named_paths_unicode_and_cache_budgets_agree"
+        },
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "central_regressions_and_dictionary_owner_classes_agree"
+        },
+        {
+          "path": "tests/fixtures/krdict-gam-question-labels.json"
+        },
+        {
+          "path": "tools/gam_question_compare.py"
+        },
+        {
+          "path": "tools/gam_question_corpora.py"
+        },
+        {
+          "path": "tools/gam_question_runtime.py"
+        },
+        {
+          "path": "web/tests/gam-question.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "gam-question-039fa174c4731d938cba52fa",
+          "judgment": "gam-question-039fa174c4731d938cba52fa-path"
+        },
+        {
+          "case": "gam-question-6019f54f9c8064b8c527357b",
+          "judgment": "gam-question-6019f54f9c8064b8c527357b-path"
+        },
+        {
+          "case": "gam-question-b2b949b14b176c51e4478985",
+          "judgment": "gam-question-b2b949b14b176c51e4478985-path"
+        },
+        {
+          "case": "gam-question-3dc053553263544349ca3b78",
+          "judgment": "gam-question-3dc053553263544349ca3b78-path"
+        },
+        {
+          "case": "gam-question-fdfe980bb3d6484ab9e8b318",
+          "judgment": "gam-question-fdfe980bb3d6484ab9e8b318-path"
+        },
+        {
+          "case": "gam-question-56fea1147b5abc3e304496ee",
+          "judgment": "gam-question-56fea1147b5abc3e304496ee-path"
+        },
+        {
+          "case": "gam-question-01fd117f8fff107471756e7b",
+          "judgment": "gam-question-01fd117f8fff107471756e7b-path"
+        },
+        {
+          "case": "gam-question-8b1172defa6a61125d9aa15c",
+          "judgment": "gam-question-8b1172defa6a61125d9aa15c-path"
+        },
+        {
+          "case": "gam-question-ce20993df10a707ec44d0945",
+          "judgment": "gam-question-ce20993df10a707ec44d0945-path"
+        },
+        {
+          "case": "gam-question-d9a784a7aa497e9afc98734b",
+          "judgment": "gam-question-d9a784a7aa497e9afc98734b-path"
+        },
+        {
+          "case": "gam-question-bc96d961861e783fadec68c1",
+          "judgment": "gam-question-bc96d961861e783fadec68c1-path"
+        },
+        {
+          "case": "gam-question-1e4715eb932b65683d2f1166",
+          "judgment": "gam-question-1e4715eb932b65683d2f1166-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73879",
+      "source_sha256": "6dace7ab102e7c1162529df65c00ab6e2a90a9be6670c41eeb27134ccefb4bea",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bv"
+      ],
+      "scope": "-는감 retains verb and listed existential attachment, ㄹ deletion, own 시/었/겠 and independent auxiliary ownership. All four complete native entries, all 18 example groups, original corpus observations, candidate/filter/spacing histories, held-out gold rows and packaged API/browser behavior are retained.",
+      "remaining": "Contextual question/sense/register selection, negative and compound existential distributions, unlisted prefinal/outer-particle or omitted-copula extensions, and independent Korean review remain open under the parent inventory. Source examples and spelling matches are not automatically contextual gold.",
+      "evidence": [
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "all_named_paths_unicode_and_cache_budgets_agree"
+        },
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "central_regressions_and_dictionary_owner_classes_agree"
+        },
+        {
+          "path": "tests/fixtures/krdict-gam-question-labels.json"
+        },
+        {
+          "path": "tools/gam_question_compare.py"
+        },
+        {
+          "path": "tools/gam_question_corpora.py"
+        },
+        {
+          "path": "tools/gam_question_runtime.py"
+        },
+        {
+          "path": "web/tests/gam-question.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "gam-question-1fb1c58b7d5abf2716e5354a",
+          "judgment": "gam-question-1fb1c58b7d5abf2716e5354a-path"
+        },
+        {
+          "case": "gam-question-2c267706e3dcc9e8b1a26dde",
+          "judgment": "gam-question-2c267706e3dcc9e8b1a26dde-path"
+        },
+        {
+          "case": "gam-question-2c44dcff5de662fbf78a41dc",
+          "judgment": "gam-question-2c44dcff5de662fbf78a41dc-path"
+        },
+        {
+          "case": "gam-question-f9bd3c490f76eeee864dac3e",
+          "judgment": "gam-question-f9bd3c490f76eeee864dac3e-path"
+        },
+        {
+          "case": "gam-question-5cdc319db59f3ea04d9bfde2",
+          "judgment": "gam-question-5cdc319db59f3ea04d9bfde2-path"
+        },
+        {
+          "case": "gam-question-02d2da7dd1adce12632b5bfa",
+          "judgment": "gam-question-02d2da7dd1adce12632b5bfa-path"
+        },
+        {
+          "case": "gam-question-80287a2794ba69930a949fa5",
+          "judgment": "gam-question-80287a2794ba69930a949fa5-path"
+        },
+        {
+          "case": "gam-question-a55438ff9cc4d9b5c39c9abe",
+          "judgment": "gam-question-a55438ff9cc4d9b5c39c9abe-path"
+        },
+        {
+          "case": "gam-question-6e619d059b92e9ddc63bfb98",
+          "judgment": "gam-question-6e619d059b92e9ddc63bfb98-path"
+        },
+        {
+          "case": "gam-question-96af3f698e88c8131db4ba2b",
+          "judgment": "gam-question-96af3f698e88c8131db4ba2b-path"
+        },
+        {
+          "case": "gam-question-f7b5fd73c1b53b4d553b56ee",
+          "judgment": "gam-question-f7b5fd73c1b53b4d553b56ee-path"
+        },
+        {
+          "case": "gam-question-0e0f38d9704d8907d86b66ac",
+          "judgment": "gam-question-0e0f38d9704d8907d86b66ac-path"
+        },
+        {
+          "case": "gam-question-b2dd18b9e28f123ec1d4f2d2",
+          "judgment": "gam-question-b2dd18b9e28f123ec1d4f2d2-path"
+        },
+        {
+          "case": "gam-question-a3119bc1e52f83da4d6b75f9",
+          "judgment": "gam-question-a3119bc1e52f83da4d6b75f9-path"
+        },
+        {
+          "case": "gam-question-ad0c5524fc9cfde791136af6",
+          "judgment": "gam-question-ad0c5524fc9cfde791136af6-path"
+        },
+        {
+          "case": "gam-question-240dc95812dd4982abe43924",
+          "judgment": "gam-question-240dc95812dd4982abe43924-path"
+        },
+        {
+          "case": "gam-question-83a2528e67876ae112b6962b",
+          "judgment": "gam-question-83a2528e67876ae112b6962b-path"
+        },
+        {
+          "case": "gam-question-4bf9f4c2c874ad9c1f8324b8",
+          "judgment": "gam-question-4bf9f4c2c874ad9c1f8324b8-path"
+        },
+        {
+          "case": "gam-question-ef08a315daf57df3e88a222d",
+          "judgment": "gam-question-ef08a315daf57df3e88a222d-path"
+        },
+        {
+          "case": "gam-question-7e7198ad14fee585a86170e0",
+          "judgment": "gam-question-7e7198ad14fee585a86170e0-path"
+        },
+        {
+          "case": "gam-question-c7d8101fcdb5e423398c122f",
+          "judgment": "gam-question-c7d8101fcdb5e423398c122f-path"
+        },
+        {
+          "case": "gam-question-05855e314169465391d13cf6",
+          "judgment": "gam-question-05855e314169465391d13cf6-path"
+        },
+        {
+          "case": "gam-question-a080fc947299d2fdf9e1c082",
+          "judgment": "gam-question-a080fc947299d2fdf9e1c082-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73880",
+      "source_sha256": "dac23fe4269c0e5f3593eea58a2bebdd3e000d468a8ad486f4014a3c7dececa3",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bv"
+      ],
+      "scope": "-던감 retains retrospective refuting questions after predicates/copulas and listed own 시/었/겠, without inferring a contextual sense. All four complete native entries, all 18 example groups, original corpus observations, candidate/filter/spacing histories, held-out gold rows and packaged API/browser behavior are retained.",
+      "remaining": "Contextual question/sense/register selection, negative and compound existential distributions, unlisted prefinal/outer-particle or omitted-copula extensions, and independent Korean review remain open under the parent inventory. Source examples and spelling matches are not automatically contextual gold.",
+      "evidence": [
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "all_named_paths_unicode_and_cache_budgets_agree"
+        },
+        {
+          "path": "tests/gam_questions.rs",
+          "test": "central_regressions_and_dictionary_owner_classes_agree"
+        },
+        {
+          "path": "tests/fixtures/krdict-gam-question-labels.json"
+        },
+        {
+          "path": "tools/gam_question_compare.py"
+        },
+        {
+          "path": "tools/gam_question_corpora.py"
+        },
+        {
+          "path": "tools/gam_question_runtime.py"
+        },
+        {
+          "path": "web/tests/gam-question.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "gam-question-bad5639a2ccc782be6dee6fd",
+          "judgment": "gam-question-bad5639a2ccc782be6dee6fd-path"
+        },
+        {
+          "case": "gam-question-f9d307a5326e6073bafc233c",
+          "judgment": "gam-question-f9d307a5326e6073bafc233c-path"
+        },
+        {
+          "case": "gam-question-e35998560458f3bcf2f0e7b3",
+          "judgment": "gam-question-e35998560458f3bcf2f0e7b3-path"
+        },
+        {
+          "case": "gam-question-7a19c31ab3eb5a977913d5c6",
+          "judgment": "gam-question-7a19c31ab3eb5a977913d5c6-path"
+        },
+        {
+          "case": "gam-question-7b0132997dd345d1faa7aa00",
+          "judgment": "gam-question-7b0132997dd345d1faa7aa00-path"
+        },
+        {
+          "case": "gam-question-142fdf0ab357e40be7e76d1b",
+          "judgment": "gam-question-142fdf0ab357e40be7e76d1b-path"
+        },
+        {
+          "case": "gam-question-c4aee6eb023f8f47086216d7",
+          "judgment": "gam-question-c4aee6eb023f8f47086216d7-path"
+        },
+        {
+          "case": "gam-question-c220de30485e13ff54f928f0",
+          "judgment": "gam-question-c220de30485e13ff54f928f0-path"
+        },
+        {
+          "case": "gam-question-b8eab7de7b1d0d5e63a953d1",
+          "judgment": "gam-question-b8eab7de7b1d0d5e63a953d1-path"
+        },
+        {
+          "case": "gam-question-3e70d97567f8600317cc2fc9",
+          "judgment": "gam-question-3e70d97567f8600317cc2fc9-path"
+        },
+        {
+          "case": "gam-question-da155d70178c17a4b2d4ead4",
+          "judgment": "gam-question-da155d70178c17a4b2d4ead4-path"
+        },
+        {
+          "case": "gam-question-e98247ef4c7851cfde9d0851",
+          "judgment": "gam-question-e98247ef4c7851cfde9d0851-path"
+        },
+        {
+          "case": "gam-question-e97949d87f48aafff04c03c4",
+          "judgment": "gam-question-e97949d87f48aafff04c03c4-path"
+        },
+        {
+          "case": "gam-question-6bc3790b0dd810822527efb5",
+          "judgment": "gam-question-6bc3790b0dd810822527efb5-path"
+        }
+      ]
     }
   ]
 }

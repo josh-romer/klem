@@ -1881,6 +1881,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "으려나" {
                     p.rules.push("ending.expectation_question".into());
                 }
+                if matches!(ending.form, "은감" | "는감" | "던감") {
+                    p.rules.push("ending.refuting_question".into());
+                }
                 if matches!(ending.form, "으니라" | "느니라") {
                     p.rules.push("ending.literary_assertion".into());
                 }
@@ -2417,6 +2420,19 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                 .get(cursor)
                 .filter(|m| m.kind == MorphemeKind::Ending)
         {
+            // KRDict 73878/73888 list bare adjectives/copulas; 73879 lists
+            // verbs and existential heads. Unknown lexical classes survive.
+            // Negative paradigms need their own evidence, not inherited POS.
+            if bare
+                && !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                && ((m.form == "은감" && matches!(class, Some(PredicateClass::Verb)))
+                    || (m.form == "는감"
+                        && (matches!(class, Some(PredicateClass::Copula))
+                            || (matches!(class, Some(PredicateClass::Adjective))
+                                && !matches!(lemma.text.as_str(), "있다" | "없다" | "계시다")))))
+            {
+                return false;
+            }
             if bare
                 // Negative paradigms are not resolved from inherited POS:
                 // KRDict -으니라 even illustrates 되지는 않으니라.
@@ -2697,7 +2713,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
             || copular_exclamation(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
+            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감")
     }) {
         return false;
     }
@@ -3042,7 +3058,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         literary_na_ending(&m.form)
             || neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
+            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감")
     }) {
         return;
     }

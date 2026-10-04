@@ -26,6 +26,8 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `lexical_role` | Existing broad POS-to-role mapping | 가늘다 as a nominal base before omitted 이다 conflicts with its adjective-only entry. |
 | `present_declarative_verb` | Lexical predicates with the shared canonical present-declarative family, including honorific 시 | 가는다니 → 가늘다 + 는다니 conflicts; 먹는다니 remains. |
 | `bare_adjectival_question` | Bare lexical predicates with 으냐/으냐고/으냐는/으냐며/으냐면서/으냐니/으냔 | 길으냐니 → 긷다 + 으냐니 conflicts; 좋으냐니 remains. |
+| `bare_refuting_adjective` | Bare -ㄴ감/-은감 after a known verbal owner | 먹은감 → 먹다 + 은감 conflicts; 좋은감 remains. Native KRDict 73878/73888. |
+| `bare_refuting_verb` | Bare -는감 after a known adjective or copula, except 있다/없다/계시다 | 좋는감 → 좋다 + 는감 conflicts; 있는감 remains. Native KRDict 73879. |
 | `intention_verb` | Eleven reviewed verbal intention forms, shared with the engine | 좋으려다가 conflicts; 크려는 retains verbal 크다. |
 | `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
 | `continuation_verb` | Six source-scoped connectors before five native continuation auxiliaries | 좋아내다 conflicts; 커내다 retains the verb homonym. |

@@ -232,7 +232,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2099, 1749)
+        (2103, 1751)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

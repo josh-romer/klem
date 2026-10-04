@@ -2123,3 +2123,14 @@ Native dictionary material is attributed to NIKL under CC BY-SA 2.0 KR, as above
 The two `rya-copula-additional` fixtures retain another 18 full native owners
 exposed by the new hypotheses; they add source data without rewriting the
 original 143-entry freeze. Import parity checks both sets independently.
+
+`gam-question-sources.json` and `krdict-gam-question.json` retain the immutable
+COV-017bv preflight: 69 proposed structural paths, six complete corpus searches
+with ten original matching rows, and 242 complete KRDict entries with every
+sense, attachment note, form and example group. Native English translations are
+projected for the importer; the source freeze retains all original translations.
+`krdict-gam-question-labels.json` is the exact four-ending adapter for the viewer's
+combined test dictionary, avoiding duplicate lexical IDs from other fixtures.
+The entries are attributed to the National Institute of Korean Language's Korean
+Basic Dictionary under CC BY-SA 2.0 KR. These structural judgments are authored
+regressions; contextual interpretation and independent Korean review remain pending.

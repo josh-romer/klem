@@ -100,6 +100,7 @@ mod tests {
             &[
                 PathBuf::from("tests/fixtures/krdict-grammar-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-reported-retrospective-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-gam-question-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

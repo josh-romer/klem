@@ -2,6 +2,10 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "gam-question-73878": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73878",
+    "gam-question-73879": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73879",
+    "gam-question-73880": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73880",
+    "gam-question-73888": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73888",
     "adjectival-allomorph-76230": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76230",
     "adjectival-allomorph-76243": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76243",
     "adjectival-allomorph-87442": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87442",
@@ -76038,6 +76042,1947 @@
     {"id": "reported-retrospective-boundary-e363c220e0c35c8b700561c8", "surface": "아프냐던데", "judgments": [{"lemmas": ["아프다"], "lemma_kinds": ["predicate"], "morphemes": ["으냐던데"], "verdict": "forbidden", "id": "reported-retrospective-boundary-e363c220e0c35c8b700561c8-judgment", "source": "reported-retrospective-86361", "reason": "Only a non-ㄹ closed underlying adjective stem takes the canonical 으냐 report. General 냐 remains separate; irregular ㅂ recovery preserves the closed underlying stem."}]},
     {"id": "reported-retrospective-boundary-fe7cd4c5af8f07d26f2a59db", "surface": "기냐던데", "judgments": [{"lemmas": ["길다"], "lemma_kinds": ["predicate"], "morphemes": ["냐던데"], "verdict": "required", "id": "reported-retrospective-boundary-fe7cd4c5af8f07d26f2a59db-judgment", "source": "reported-retrospective-86357", "reason": "Only a non-ㄹ closed underlying adjective stem takes the canonical 으냐 report. General 냐 remains separate; irregular ㅂ recovery preserves the closed underlying stem."}]},
     {"id": "reported-retrospective-boundary-6f383ccbaf7d230fb3c2e750", "surface": "기냐던데", "judgments": [{"lemmas": ["길다"], "lemma_kinds": ["predicate"], "morphemes": ["으냐던데"], "verdict": "forbidden", "id": "reported-retrospective-boundary-6f383ccbaf7d230fb3c2e750-judgment", "source": "reported-retrospective-86361", "reason": "Only a non-ㄹ closed underlying adjective stem takes the canonical 으냐 report. General 냐 remains separate; irregular ㅂ recovery preserves the closed underlying stem."}]},
-    {"id": "reported-retrospective-boundary-72eadfdcac86302d7e93cc10", "surface": "추우냐던데", "judgments": [{"lemmas": ["춥다"], "lemma_kinds": ["predicate"], "morphemes": ["으냐던데"], "verdict": "required", "id": "reported-retrospective-boundary-72eadfdcac86302d7e93cc10-judgment", "source": "reported-retrospective-86361", "reason": "Only a non-ㄹ closed underlying adjective stem takes the canonical 으냐 report. General 냐 remains separate; irregular ㅂ recovery preserves the closed underlying stem."}]}
+    {"id": "reported-retrospective-boundary-72eadfdcac86302d7e93cc10", "surface": "추우냐던데", "judgments": [{"lemmas": ["춥다"], "lemma_kinds": ["predicate"], "morphemes": ["으냐던데"], "verdict": "required", "id": "reported-retrospective-boundary-72eadfdcac86302d7e93cc10-judgment", "source": "reported-retrospective-86361", "reason": "Only a non-ㄹ closed underlying adjective stem takes the canonical 으냐 report. General 냐 remains separate; irregular ㅂ recovery preserves the closed underlying stem."}]},
+    {
+      "id": "gam-question-039fa174c4731d938cba52fa",
+      "surface": "좋은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "id": "gam-question-039fa174c4731d938cba52fa-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-6019f54f9c8064b8c527357b",
+      "surface": "넓은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "넓다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "id": "gam-question-6019f54f9c8064b8c527357b-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-b2b949b14b176c51e4478985",
+      "surface": "많은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "id": "gam-question-b2b949b14b176c51e4478985-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-3dc053553263544349ca3b78",
+      "surface": "적은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "적다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "id": "gam-question-3dc053553263544349ca3b78-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-fdfe980bb3d6484ab9e8b318",
+      "surface": "짧은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "짧다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "id": "gam-question-fdfe980bb3d6484ab9e8b318-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-dbbabe4194f03f2ba2731702",
+      "surface": "예쁜감",
+      "judgments": [
+        {
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-dbbabe4194f03f2ba2731702-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-a15da3ac6d5c0a56a2026804",
+      "surface": "큰감",
+      "judgments": [
+        {
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-a15da3ac6d5c0a56a2026804-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-cd59cc686cb5db828ffa97be",
+      "surface": "긴감",
+      "judgments": [
+        {
+          "lemmas": [
+            "길다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-cd59cc686cb5db828ffa97be-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-bd5174711e7c42875b0ab8c6",
+      "surface": "먼감",
+      "judgments": [
+        {
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-bd5174711e7c42875b0ab8c6-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-3dfc941117da3d5b7cf736a9",
+      "surface": "고운감",
+      "judgments": [
+        {
+          "lemmas": [
+            "곱다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-3dfc941117da3d5b7cf736a9-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-2e2e5dae273774f8134f4a59",
+      "surface": "더운감",
+      "judgments": [
+        {
+          "lemmas": [
+            "덥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-2e2e5dae273774f8134f4a59-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-b674f330bfaecd9275768dde",
+      "surface": "추운감",
+      "judgments": [
+        {
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-b674f330bfaecd9275768dde-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-22d83cb01af23cff965324e9",
+      "surface": "어떤감",
+      "judgments": [
+        {
+          "lemmas": [
+            "어떻다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-22d83cb01af23cff965324e9-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-03064c4d3809eb3c351fa413",
+      "surface": "하얀감",
+      "judgments": [
+        {
+          "lemmas": [
+            "하얗다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-03064c4d3809eb3c351fa413-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-6f9832b59d9744a82f109f44",
+      "surface": "아닌감",
+      "judgments": [
+        {
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-6f9832b59d9744a82f109f44-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-e6683486ef536b3eaf845f4b",
+      "surface": "먹으신감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-e6683486ef536b3eaf845f4b-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-83f5fbb6e0f9bc9c19ebfedc",
+      "surface": "가신감",
+      "judgments": [
+        {
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-83f5fbb6e0f9bc9c19ebfedc-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-3580a2fcef1a63c4bb8a918c",
+      "surface": "좋으신감",
+      "judgments": [
+        {
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-3580a2fcef1a63c4bb8a918c-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-9c30b0e23e45217e902d1d65",
+      "surface": "학생인감",
+      "judgments": [
+        {
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-9c30b0e23e45217e902d1d65-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-5d18ec2c72acdeeb80e8d3ac",
+      "surface": "의사인감",
+      "judgments": [
+        {
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-5d18ec2c72acdeeb80e8d3ac-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-7ca1402609b0eaefbf3a7c5e",
+      "surface": "탓인감",
+      "judgments": [
+        {
+          "lemmas": [
+            "탓",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-7ca1402609b0eaefbf3a7c5e-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-1fb1c58b7d5abf2716e5354a",
+      "surface": "먹는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-1fb1c58b7d5abf2716e5354a-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-2c267706e3dcc9e8b1a26dde",
+      "surface": "가는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-2c267706e3dcc9e8b1a26dde-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-2c44dcff5de662fbf78a41dc",
+      "surface": "사는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-2c44dcff5de662fbf78a41dc-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-f9bd3c490f76eeee864dac3e",
+      "surface": "만드는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "만들다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-f9bd3c490f76eeee864dac3e-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-5cdc319db59f3ea04d9bfde2",
+      "surface": "돕는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "돕다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-5cdc319db59f3ea04d9bfde2-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-02d2da7dd1adce12632b5bfa",
+      "surface": "듣는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "듣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-02d2da7dd1adce12632b5bfa-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-80287a2794ba69930a949fa5",
+      "surface": "있는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-80287a2794ba69930a949fa5-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-a55438ff9cc4d9b5c39c9abe",
+      "surface": "없는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-a55438ff9cc4d9b5c39c9abe-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-6e619d059b92e9ddc63bfb98",
+      "surface": "계시는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-6e619d059b92e9ddc63bfb98-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-96af3f698e88c8131db4ba2b",
+      "surface": "하는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-96af3f698e88c8131db4ba2b-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-f7b5fd73c1b53b4d553b56ee",
+      "surface": "모르는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "모르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-f7b5fd73c1b53b4d553b56ee-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-0e0f38d9704d8907d86b66ac",
+      "surface": "멀었는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-0e0f38d9704d8907d86b66ac-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-b2dd18b9e28f123ec1d4f2d2",
+      "surface": "좋았는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-b2dd18b9e28f123ec1d4f2d2-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-a3119bc1e52f83da4d6b75f9",
+      "surface": "가겠는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-a3119bc1e52f83da4d6b75f9-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-ad0c5524fc9cfde791136af6",
+      "surface": "먹으시는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-ad0c5524fc9cfde791136af6-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-240dc95812dd4982abe43924",
+      "surface": "먹으셨겠는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "었",
+            "겠",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-240dc95812dd4982abe43924-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-83a2528e67876ae112b6962b",
+      "surface": "학생이었는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-83a2528e67876ae112b6962b-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-bad5639a2ccc782be6dee6fd",
+      "surface": "하던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-bad5639a2ccc782be6dee6fd-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-f9d307a5326e6073bafc233c",
+      "surface": "싸던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "싸다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-f9d307a5326e6073bafc233c-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-e35998560458f3bcf2f0e7b3",
+      "surface": "되던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-e35998560458f3bcf2f0e7b3-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-7a19c31ab3eb5a977913d5c6",
+      "surface": "살던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-7a19c31ab3eb5a977913d5c6-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-7b0132997dd345d1faa7aa00",
+      "surface": "좋던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-7b0132997dd345d1faa7aa00-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-142fdf0ab357e40be7e76d1b",
+      "surface": "아니던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-142fdf0ab357e40be7e76d1b-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-c4aee6eb023f8f47086216d7",
+      "surface": "먹었던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-c4aee6eb023f8f47086216d7-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-c220de30485e13ff54f928f0",
+      "surface": "않았던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-c220de30485e13ff54f928f0-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-b8eab7de7b1d0d5e63a953d1",
+      "surface": "먹으셨던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "었",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-b8eab7de7b1d0d5e63a953d1-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-3e70d97567f8600317cc2fc9",
+      "surface": "가겠던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-3e70d97567f8600317cc2fc9-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-da155d70178c17a4b2d4ead4",
+      "surface": "학생이던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-da155d70178c17a4b2d4ead4-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-e98247ef4c7851cfde9d0851",
+      "surface": "학생이었던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-e98247ef4c7851cfde9d0851-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-4bf9f4c2c874ad9c1f8324b8",
+      "surface": "먹고있는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-4bf9f4c2c874ad9c1f8324b8-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-56fea1147b5abc3e304496ee",
+      "surface": "먹고싶은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "id": "gam-question-56fea1147b5abc3e304496ee-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-ef08a315daf57df3e88a222d",
+      "surface": "먹어보는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-ef08a315daf57df3e88a222d-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-e97949d87f48aafff04c03c4",
+      "surface": "먹어보던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-e97949d87f48aafff04c03c4-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-6afbecd9d27b44a8aa2f716a",
+      "surface": "아이다운감",
+      "judgments": [
+        {
+          "lemmas": [
+            "아이"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73878",
+          "id": "gam-question-6afbecd9d27b44a8aa2f716a-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-7e7198ad14fee585a86170e0",
+      "surface": "아이다웠는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "아이"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "었",
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "id": "gam-question-7e7198ad14fee585a86170e0-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-6bc3790b0dd810822527efb5",
+      "surface": "아이다웠던감",
+      "judgments": [
+        {
+          "lemmas": [
+            "아이"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "었",
+            "던감"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73880",
+          "id": "gam-question-6bc3790b0dd810822527efb5-path",
+          "reason": "Source-backed structural candidate; contextual sense and independent review pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-01fd117f8fff107471756e7b",
+      "surface": "좋감",
+      "judgments": [
+        {
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "id": "gam-question-01fd117f8fff107471756e7b-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-8b1172defa6a61125d9aa15c",
+      "surface": "먹감",
+      "judgments": [
+        {
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "id": "gam-question-8b1172defa6a61125d9aa15c-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-ce20993df10a707ec44d0945",
+      "surface": "예쁘은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "id": "gam-question-ce20993df10a707ec44d0945-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-d9a784a7aa497e9afc98734b",
+      "surface": "길은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "길다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "id": "gam-question-d9a784a7aa497e9afc98734b-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-bc96d961861e783fadec68c1",
+      "surface": "멀은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "id": "gam-question-bc96d961861e783fadec68c1-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-1e4715eb932b65683d2f1166",
+      "surface": "크은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "id": "gam-question-1e4715eb932b65683d2f1166-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-c7d8101fcdb5e423398c122f",
+      "surface": "살는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73879",
+          "id": "gam-question-c7d8101fcdb5e423398c122f-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-05855e314169465391d13cf6",
+      "surface": "만들는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "만들다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73879",
+          "id": "gam-question-05855e314169465391d13cf6-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-a080fc947299d2fdf9e1c082",
+      "surface": "갈는감",
+      "judgments": [
+        {
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73879",
+          "id": "gam-question-a080fc947299d2fdf9e1c082-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-c2640e4f2ae2f9bdd7d8f415",
+      "surface": "학생감",
+      "judgments": [
+        {
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73878",
+          "id": "gam-question-c2640e4f2ae2f9bdd7d8f415-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-f323bcde90afecf73757adb6",
+      "surface": "학생은감",
+      "judgments": [
+        {
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73878",
+          "id": "gam-question-f323bcde90afecf73757adb6-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-946d7a52099bc7d1fb2a77a7",
+      "surface": "의사감",
+      "judgments": [
+        {
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73878",
+          "id": "gam-question-946d7a52099bc7d1fb2a77a7-path",
+          "reason": "Exact written-boundary exclusion; other lemma and morpheme paths remain unjudged."
+        }
+      ]
+    }
   ]
 }

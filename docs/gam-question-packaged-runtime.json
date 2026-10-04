@@ -1,0 +1,975 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bv",
+  "source_sha256": "9ddd8e41a4be258535714b4fdfb36d5a3595bffe245ddafb679a81da81fb07cf",
+  "fixture_sha256": "2cd8ab46f043f4bc6c2c95872864c505e81f7c026702899d42327c7ea74b5394",
+  "observations_sha256": "0f264d7feef4e476bdb0c10b9cebfe6b3f79a97016b306c1738a80ce8a735d9b",
+  "engine_sha256": "70513ccdec89d1d4a2a307f0587a517591d50afe25fe22f912c6aa6d49605f1e",
+  "grammar_sha256": "41550e5df217bfc7f0fbcfd0954df63dac376bf3d6359f4c3b07d699eb04a9a1",
+  "catalog_sha256": "c2a1f2e98dae546dbe72879da2a468b9c07ba1d8b3c18bb6ebca35eeeca7e2f7",
+  "runtime_tool_sha256": "45f01a55ea5562cebd2ebb75789af64021cbdefea286baf8879112b4ebf1625c",
+  "cli_sha256": "69d8e29d68b94e1832ce6e0e24d173feec05e4675af39b132b70e948cca5a1ef",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "native_entries": 300,
+  "words": 89,
+  "checks": [
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 0,
+      "records": 181,
+      "sha256": "b8ba47cefb78d44be2c699a55174a3d66c25d661926c24c32562f40c42be5130"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 0,
+      "records": 181,
+      "sha256": "4f09b4efc55e0270e213df0b1ecfb50eb4e48e01970cceabc447103cd4e4bd8b"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 0,
+      "records": 181,
+      "sha256": "5fee7c1e13f5964a010b1ebff3a5ec3b1449e9e948dfce66f9b9b2b909ff71da"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 1,
+      "records": 181,
+      "sha256": "b8ba47cefb78d44be2c699a55174a3d66c25d661926c24c32562f40c42be5130"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 1,
+      "records": 181,
+      "sha256": "4f09b4efc55e0270e213df0b1ecfb50eb4e48e01970cceabc447103cd4e4bd8b"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 1,
+      "records": 181,
+      "sha256": "5fee7c1e13f5964a010b1ebff3a5ec3b1449e9e948dfce66f9b9b2b909ff71da"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 4096,
+      "records": 181,
+      "sha256": "b8ba47cefb78d44be2c699a55174a3d66c25d661926c24c32562f40c42be5130"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 4096,
+      "records": 181,
+      "sha256": "4f09b4efc55e0270e213df0b1ecfb50eb4e48e01970cceabc447103cd4e4bd8b"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 4096,
+      "records": 181,
+      "sha256": "5fee7c1e13f5964a010b1ebff3a5ec3b1449e9e948dfce66f9b9b2b909ff71da"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 0,
+      "records": 181,
+      "sha256": "2cdd7aa20380fcafb2b4e8551b942125064d72e536420bb6602736089fd5f068"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 0,
+      "records": 181,
+      "sha256": "64d82c11beaa3cc60cd51d56212759e12a7f597b60d68066aab54ea845c87590"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 0,
+      "records": 181,
+      "sha256": "d9f12e6bc56226eed3bea2b0d9d9150e314067c3aecaa675cde48b302bf4866e"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 1,
+      "records": 181,
+      "sha256": "2cdd7aa20380fcafb2b4e8551b942125064d72e536420bb6602736089fd5f068"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 1,
+      "records": 181,
+      "sha256": "64d82c11beaa3cc60cd51d56212759e12a7f597b60d68066aab54ea845c87590"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 1,
+      "records": 181,
+      "sha256": "d9f12e6bc56226eed3bea2b0d9d9150e314067c3aecaa675cde48b302bf4866e"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 4096,
+      "records": 181,
+      "sha256": "2cdd7aa20380fcafb2b4e8551b942125064d72e536420bb6602736089fd5f068"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 4096,
+      "records": 181,
+      "sha256": "64d82c11beaa3cc60cd51d56212759e12a7f597b60d68066aab54ea845c87590"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 4096,
+      "records": 181,
+      "sha256": "d9f12e6bc56226eed3bea2b0d9d9150e314067c3aecaa675cde48b302bf4866e"
+    }
+  ],
+  "cases": [
+    {
+      "id": "gam-question-039fa174c4731d938cba52fa",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6019f54f9c8064b8c527357b",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b2b949b14b176c51e4478985",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3dc053553263544349ca3b78",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-fdfe980bb3d6484ab9e8b318",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-dbbabe4194f03f2ba2731702",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a15da3ac6d5c0a56a2026804",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-cd59cc686cb5db828ffa97be",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-bd5174711e7c42875b0ab8c6",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3dfc941117da3d5b7cf736a9",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-2e2e5dae273774f8134f4a59",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b674f330bfaecd9275768dde",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-22d83cb01af23cff965324e9",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-03064c4d3809eb3c351fa413",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6f9832b59d9744a82f109f44",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e6683486ef536b3eaf845f4b",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-83f5fbb6e0f9bc9c19ebfedc",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3580a2fcef1a63c4bb8a918c",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-9c30b0e23e45217e902d1d65",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-5d18ec2c72acdeeb80e8d3ac",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7ca1402609b0eaefbf3a7c5e",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-1fb1c58b7d5abf2716e5354a",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-2c267706e3dcc9e8b1a26dde",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-2c44dcff5de662fbf78a41dc",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f9bd3c490f76eeee864dac3e",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-5cdc319db59f3ea04d9bfde2",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-02d2da7dd1adce12632b5bfa",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-80287a2794ba69930a949fa5",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a55438ff9cc4d9b5c39c9abe",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6e619d059b92e9ddc63bfb98",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-96af3f698e88c8131db4ba2b",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f7b5fd73c1b53b4d553b56ee",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-0e0f38d9704d8907d86b66ac",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b2dd18b9e28f123ec1d4f2d2",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a3119bc1e52f83da4d6b75f9",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-ad0c5524fc9cfde791136af6",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-240dc95812dd4982abe43924",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-83a2528e67876ae112b6962b",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-bad5639a2ccc782be6dee6fd",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f9d307a5326e6073bafc233c",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e35998560458f3bcf2f0e7b3",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7a19c31ab3eb5a977913d5c6",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7b0132997dd345d1faa7aa00",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-142fdf0ab357e40be7e76d1b",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c4aee6eb023f8f47086216d7",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c220de30485e13ff54f928f0",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b8eab7de7b1d0d5e63a953d1",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3e70d97567f8600317cc2fc9",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-da155d70178c17a4b2d4ead4",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e98247ef4c7851cfde9d0851",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-4bf9f4c2c874ad9c1f8324b8",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-56fea1147b5abc3e304496ee",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-ef08a315daf57df3e88a222d",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e97949d87f48aafff04c03c4",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6afbecd9d27b44a8aa2f716a",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7e7198ad14fee585a86170e0",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6bc3790b0dd810822527efb5",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-01fd117f8fff107471756e7b",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-8b1172defa6a61125d9aa15c",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-ce20993df10a707ec44d0945",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-d9a784a7aa497e9afc98734b",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-bc96d961861e783fadec68c1",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-1e4715eb932b65683d2f1166",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c7d8101fcdb5e423398c122f",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-05855e314169465391d13cf6",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a080fc947299d2fdf9e1c082",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c2640e4f2ae2f9bdd7d8f415",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f323bcde90afecf73757adb6",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-946d7a52099bc7d1fb2a77a7",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-039fa174c4731d938cba52fa",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6019f54f9c8064b8c527357b",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b2b949b14b176c51e4478985",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3dc053553263544349ca3b78",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-fdfe980bb3d6484ab9e8b318",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-dbbabe4194f03f2ba2731702",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a15da3ac6d5c0a56a2026804",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-cd59cc686cb5db828ffa97be",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-bd5174711e7c42875b0ab8c6",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3dfc941117da3d5b7cf736a9",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-2e2e5dae273774f8134f4a59",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b674f330bfaecd9275768dde",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-22d83cb01af23cff965324e9",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-03064c4d3809eb3c351fa413",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6f9832b59d9744a82f109f44",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e6683486ef536b3eaf845f4b",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-83f5fbb6e0f9bc9c19ebfedc",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3580a2fcef1a63c4bb8a918c",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-9c30b0e23e45217e902d1d65",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-5d18ec2c72acdeeb80e8d3ac",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7ca1402609b0eaefbf3a7c5e",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-1fb1c58b7d5abf2716e5354a",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-2c267706e3dcc9e8b1a26dde",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-2c44dcff5de662fbf78a41dc",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f9bd3c490f76eeee864dac3e",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-5cdc319db59f3ea04d9bfde2",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-02d2da7dd1adce12632b5bfa",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-80287a2794ba69930a949fa5",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a55438ff9cc4d9b5c39c9abe",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6e619d059b92e9ddc63bfb98",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-96af3f698e88c8131db4ba2b",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f7b5fd73c1b53b4d553b56ee",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-0e0f38d9704d8907d86b66ac",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b2dd18b9e28f123ec1d4f2d2",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a3119bc1e52f83da4d6b75f9",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-ad0c5524fc9cfde791136af6",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-240dc95812dd4982abe43924",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-83a2528e67876ae112b6962b",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-bad5639a2ccc782be6dee6fd",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f9d307a5326e6073bafc233c",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e35998560458f3bcf2f0e7b3",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7a19c31ab3eb5a977913d5c6",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7b0132997dd345d1faa7aa00",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-142fdf0ab357e40be7e76d1b",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c4aee6eb023f8f47086216d7",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c220de30485e13ff54f928f0",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-b8eab7de7b1d0d5e63a953d1",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-3e70d97567f8600317cc2fc9",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-da155d70178c17a4b2d4ead4",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e98247ef4c7851cfde9d0851",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-4bf9f4c2c874ad9c1f8324b8",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-56fea1147b5abc3e304496ee",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-ef08a315daf57df3e88a222d",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-e97949d87f48aafff04c03c4",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6afbecd9d27b44a8aa2f716a",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-7e7198ad14fee585a86170e0",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-6bc3790b0dd810822527efb5",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "gam-question-01fd117f8fff107471756e7b",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-8b1172defa6a61125d9aa15c",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-ce20993df10a707ec44d0945",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-d9a784a7aa497e9afc98734b",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-bc96d961861e783fadec68c1",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-1e4715eb932b65683d2f1166",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c7d8101fcdb5e423398c122f",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-05855e314169465391d13cf6",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-a080fc947299d2fdf9e1c082",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-c2640e4f2ae2f9bdd7d8f415",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-f323bcde90afecf73757adb6",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "gam-question-946d7a52099bc7d1fb2a77a7",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    }
+  ],
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

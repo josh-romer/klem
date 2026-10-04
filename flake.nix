@@ -185,6 +185,14 @@
                 ./tools/adjectival_allomorph_compare.py
                 ./tools/adjectival_allomorph_runtime.py
                 ./tools/adjectival_allomorph_browser.py
+                ./tools/gam_question_audit.py
+                ./tools/gam_question_regressions.py
+                ./tools/gam_question_compare.py
+                ./tools/gam_question_corpora.py
+                ./tools/gam_question_runtime.py
+                ./tools/gam_question_queue.py
+                ./src/engine.rs ./src/grammar.rs
+                ./web/tests/gam-question.mjs
                 ./examples/audit_adjectival_allomorph.rs
                 ./web/tests/adjectival-allomorph.mjs
                 ./tools/adjectival_allomorph.rs
@@ -254,6 +262,11 @@
             python tools/adjectival_allomorph_compare.py --verify
             python tools/adjectival_allomorph_runtime.py --verify
             python tools/adjectival_allomorph_browser.py --verify
+            python tools/gam_question_audit.py --verify
+            python tools/gam_question_regressions.py --verify
+            python tools/gam_question_compare.py --verify
+            python tools/gam_question_corpora.py --verify
+            python tools/gam_question_queue.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

@@ -2,6 +2,10 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "gam-question-73878": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73878",
+    "gam-question-73879": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73879",
+    "gam-question-73880": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73880",
+    "gam-question-73888": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73888",
     "independent-pos-600930": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
     "qfollow-source-82280": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82280",
     "qfollow-source-82841": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82841",
@@ -22397,6 +22401,168 @@
           "verdict": "forbidden",
           "source": "continuation-left-60625",
           "reason": "Scoped compatible-filter class judgment, not contextual grammaticality: this source requires a verbal immediate owner. Preserve verb homonyms and represented verbal later owners; explicit copulas/adjectival derivations and adjective entries conflict. Negatives inherit lexical classes. Missing classes and other restrictions remain independently unjudged."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-policy-먹은감",
+      "surface": "먹은감",
+      "judgments": [
+        {
+          "id": "gam-question-policy-먹은감-path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73888",
+          "reason": "Native bare-owner attachment class; contextual interpretation remains pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-policy-좋는감",
+      "surface": "좋는감",
+      "judgments": [
+        {
+          "id": "gam-question-policy-좋는감-path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "forbidden",
+          "source": "gam-question-73879",
+          "reason": "Native bare-owner attachment class; contextual interpretation remains pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-policy-좋은감",
+      "surface": "좋은감",
+      "judgments": [
+        {
+          "id": "gam-question-policy-좋은감-path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73888",
+          "reason": "Native bare-owner attachment class; contextual interpretation remains pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-policy-가는감",
+      "surface": "가는감",
+      "judgments": [
+        {
+          "id": "gam-question-policy-가는감-path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "reason": "Native bare-owner attachment class; contextual interpretation remains pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-policy-있는감",
+      "surface": "있는감",
+      "judgments": [
+        {
+          "id": "gam-question-policy-있는감-path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "reason": "Native bare-owner attachment class; contextual interpretation remains pending."
+        }
+      ]
+    },
+    {
+      "id": "gam-question-policy-없는감",
+      "surface": "없는감",
+      "judgments": [
+        {
+          "id": "gam-question-policy-없는감-path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는감"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.refuting_question"
+          ],
+          "verdict": "required",
+          "source": "gam-question-73879",
+          "reason": "Native bare-owner attachment class; contextual interpretation remains pending."
         }
       ]
     }

@@ -853,6 +853,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "군요",
             "는가",
             "는가요",
+            "는감",
             "는데도",
             "는데다가",
             "느냐",
@@ -905,6 +906,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "던데",
             "던데요",
             "던가",
+            "던감",
             "던지",
             "던들",
             "나",
@@ -1227,6 +1229,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("은걸", "걸", "은걸", 4),
             ("은지", "지", "은지", 4),
             ("은가", "가", "은가", 4),
+            // KRDict 73878/73888: refuting questions, preserving ㄴ/은 spelling.
+            ("은감", "감", "은감", 4),
             ("은가요", "가요", "은가요", 4),
             ("은데도", "데도", "은데도", 4),
             ("은데다가", "데다가", "은데다가", 4),
@@ -2055,6 +2059,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.expectation_question" => {
             "Recover -(으)려나 as a question or shortened intention expression, preserving dictionary homonyms without inserting implicit 하다 or choosing a contextual sense."
+        }
+        "ending.refuting_question" => {
+            "Recover -(으)ㄴ감, -는감 or -던감 as a refuting question ending; retain its stem boundary and native dictionary identity without choosing a contextual interpretation."
         }
         "ending.reporting_ni" => {
             "Recognize a surprise, reported statement, command, proposal or question in a -니 family; preserve homonyms without inserting an implicit reporting verb or selecting a contextual sense."

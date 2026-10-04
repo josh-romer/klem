@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-019af",
+    "COV-020q"
+  ],
+  "reviewed": "2026-10-03",
+  "outcome": "Six original residuals have source-scoped individual dispositions. No production morphology/filter/spacing rule, dictionary entry, corpus gold or input has changed.",
+  "counts": {
+    "original_raw_misses": 6,
+    "whole_head_representation_differences": 2,
+    "possible_spelling_annotation_differences": 2,
+    "missing_bare_noun_spaces": 2,
+    "complete_native_entries": 28,
+    "diagnostic_surfaces": 17,
+    "raw_judgments": 13,
+    "required": 11,
+    "forbidden": 2,
+    "individual_contexts_judged": 0
+  },
+  "source_review": "docs/continuation-gold-residual-source-review.json",
+  "original_gold": "The original six rows, full sentence blocks, XPOS and before/after dictionary words are compared against the unchanged 98-row corpus audit and full pinned original ConLL sources. No corrected gold is added.",
+  "regressions": {
+    "path": "tests/continuation_residuals.rs",
+    "tests": 4,
+    "scope": [
+      "All 28 complete English entry imports equal translation-only projections of the complete native objects. Main-verb/auxiliary homonyms remain distinct.",
+      "Thirteen source-scoped written boundary judgments and ordered retention of original paths across 17 surfaces; NFC/NFD parity and complete component breakdowns.",
+      "Named compatible dictionary entries for whole lexical verbs, lexical/auxiliary 내다, copulas and separately entered diagnostic companions.",
+      "Twelve CLI stream submissions: all/headword/compatible × cache budgets 0/4096 × NFC/NFD. Every word candidate/dictionary assessment equals the library, and original UTF-8 offsets/input are preserved."
+    ]
+  },
+  "verification": [
+    {
+      "command": "cargo test --locked --offline --all-targets --features web",
+      "status": "passed",
+      "tests": 811,
+      "log": "/tmp/klem-continuation-residual-cargo.log",
+      "qualification": "After this full run, the new raw-retention test was adjusted to permit future source-backed additions rather than requiring historical failures. All four final focused tests and all 812 final Nix release tests pass."
+    },
+    {
+      "command": "cargo test --locked --offline --test continuation_residuals --features web",
+      "status": "passed",
+      "tests": 4,
+      "log": "/tmp/klem-continuation-residual-focused-final.log"
+    },
+    {
+      "command": "cargo test --locked --offline --doc --features web",
+      "status": "passed",
+      "tests": 1,
+      "log": "/tmp/klem-continuation-residual-doc.log"
+    },
+    {
+      "command": "cargo clippy --locked --offline --all-targets --features web -- -D warnings",
+      "status": "passed",
+      "log": "/tmp/klem-continuation-residual-clippy.log"
+    },
+    {
+      "command": "cargo fmt --all -- --check",
+      "status": "passed"
+    },
+    {
+      "command": "python3 -m unittest discover -s tools -p 'test_review_inventory.py'",
+      "status": "passed",
+      "tests": 9
+    },
+    {
+      "command": "python3 tools/review_inventory.py --verify",
+      "status": "passed",
+      "counts": {
+        "entries": 715,
+        "scoped": 427,
+        "unreviewed": 288,
+        "catalog_links": 433,
+        "judgment_citations": 458
+      }
+    },
+    {
+      "command": "python3 tools/continuation_residual_audit.py --verify --local-sources",
+      "status": "passed",
+      "scope": "Full pinned source hashes and exact sentence blocks, immutable original gold, complete source projections and independently counted dispositions."
+    },
+    {
+      "command": "TMPDIR=/tmp/klem-nix-build-1000 nix flake check -L",
+      "status": "passed",
+      "system": "x86_64-linux",
+      "checks": [
+        "klem",
+        "web-assets",
+        "inventory-review"
+      ],
+      "release_tests": 812,
+      "log": "/tmp/klem-continuation-residual-nix.log",
+      "qualification": "Other declared architectures not evaluated."
+    },
+    {
+      "command": "Packaged CLI versus frozen 17-surface observations",
+      "status": "passed",
+      "responses": 51,
+      "scope": "Every complete all/headword/compatible JSON response, including dictionary and optional spacing sidecars, is equal."
+    }
+  ],
+  "package": {
+    "path": "/nix/store/ia5y96m9y9bsps9zhkkscl31v6s3s93x-klem-0.1.0",
+    "executables_identical_to_preview_package": true,
+    "preview_package": "/nix/store/4vqi9q25qnadr6zlzyq6syzxlla5a4nx-klem-0.1.0",
+    "klem_sha256": "d0128f027ed84335232c7e263e120c93a8ac026cd1a6359e2c5d3142c4ffec70",
+    "web_sha256": "5d5adf4354507468f4940ac21a7171aab61ab1a788c63cb69c5e2466c52f568a"
+  },
+  "invariants": {
+    "unchanged_files_sha256": {
+      "docs/continuation-gold-residual-preflight.json": "7900602b4f5a23f8dbc5495141b39694ee2cf9ed19742d0465ab57f4d2c9b71a",
+      "tests/fixtures/validity.json": "8f43f8a8f1d25fc27cd2063968d1ce4fec6e2a9f6047147fb0a84e2414ef9863",
+      "tests/fixtures/dictionary-attachments.json": "c18be5b090e2d10e6121bc57ceb41d4ef79870a7720da2e96c221c1a9c7b3a7c",
+      "docs/continuation-left-dictionary-corpora.json.gz": "b4ca8a02c72951de746338a1b63add5a47ec78fb5c3ad23c9508c286c4ac7908"
+    },
+    "raw_gold": {
+      "cases": 12709,
+      "required": 9311,
+      "forbidden": 3412
+    },
+    "dictionary_policy_gold": {
+      "cases": 3848,
+      "required": 2107,
+      "forbidden": 1741
+    }
+  },
+  "evidence_sha256": {
+    "docs/continuation-gold-residual-preflight.json": "7900602b4f5a23f8dbc5495141b39694ee2cf9ed19742d0465ab57f4d2c9b71a",
+    "docs/continuation-gold-residual-source-review.json": "2c406924f827d1faac6143c4bd5ef20f8d43be75d870278269d8406d95e70b1b",
+    "tests/fixtures/continuation-residual-sources.json": "9d9cacfed389930269ba825819cca3370532b3368534bebe304b26be34f153cb",
+    "tests/fixtures/continuation-residual-validity.json": "fa305cffe75ebbbf26880b3ae549de98c223aedf0ec0b6712f6323c6457ebe28",
+    "tests/fixtures/krdict-continuation-residual.json": "d16eaa15a9a5a606c87a6b2ca72268df97a239debe66d5b81bb0dbb00d61630a",
+    "tests/fixtures/validity.json": "8f43f8a8f1d25fc27cd2063968d1ce4fec6e2a9f6047147fb0a84e2414ef9863",
+    "tests/fixtures/dictionary-attachments.json": "c18be5b090e2d10e6121bc57ceb41d4ef79870a7720da2e96c221c1a9c7b3a7c",
+    "docs/continuation-left-dictionary-corpora.json.gz": "b4ca8a02c72951de746338a1b63add5a47ec78fb5c3ad23c9508c286c4ac7908"
+  },
+  "correction_history": [
+    "Initial Rust test compilation used Entry fields rather than Entry.summary and assumed an All filter variant; corrected test API usage.",
+    "Initial residual classification used a 드러나 prefix, which did not match 드러난다. Exact original surfaces now classify both lexicalized rows; the previous and corrected authored review are retained in the source review.",
+    "Absent dictionary heads are compared as a set, since the generator emits Unicode-sorted names. Frozen dictionary/CLI observations were not changed."
+  ],
+  "next_implementation": "COV-020q: source-audited optional bare-noun/main-verb spacing. The lexical 내다 sense lists 16 noun combinations; five also have whole-verb dictionary heads. Audit those distinctions before extending the template.",
+  "limitations": [
+    "Independent Korean-language and original-author-intent review is pending for all six contexts.",
+    "A possible spelling interpretation is not an adjudicated corpus correction; diagnostic companions never replace original input.",
+    "The dictionary source lists 드러나다 as a whole verb. Any alternative finite lexicalized decomposition needs its own explicit source/role/representation audit.",
+    "Both original bare-noun missing-space inputs remain unsupported by the current case-marked spacing template. COV-020q remains open.",
+    "No new full corpus output run or browser suite was necessary for this source/test-only batch; both executable bytes and frontend sources are unchanged. Offline source checks do not certify contextual POS/sense accuracy."
+  ]
+}

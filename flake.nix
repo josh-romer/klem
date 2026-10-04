@@ -33,6 +33,7 @@
                 ./docs/question-case-source-preflight.json
                 ./docs/question-clause-additive-preflight.json
                 ./docs/continuation-left-source-preflight.json
+                ./docs/continuation-gold-residual-preflight.json
                 ./examples
                 ./tools/corpus.rs
                 ./tools/validity.rs
@@ -124,6 +125,7 @@
                 ./tools/continuation_left_queue.py
                 ./tools/continuation_left_broad_queue.py
                 ./tools/continuation_left_corpus_audit.py
+                ./tools/continuation_residual_audit.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
                 ./web/tests/question-topic.mjs
@@ -145,6 +147,7 @@
             python tools/continuation_left_queue.py --verify
             python tools/continuation_left_broad_queue.py --verify
             python tools/continuation_left_corpus_audit.py --verify
+            python tools/continuation_residual_audit.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent source-scoped judgments; independent Korean review pending.",
+  "sources": {
+    "lexicalized-spelling": "https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B8%80%EB%A7%9E%EC%B6%A4%EB%B2%95+%ED%91%9C%EC%A4%80%EC%96%B4%EA%B7%9C%EC%A0%95+%ED%95%B4%EC%84%A4.pdf",
+    "ending-85934": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85934",
+    "connector-86094": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86094",
+    "verb-89906": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89906"
+  },
+  "cases": [
+    {
+      "id": "continuation-residual-1",
+      "surface": "드러난다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "드러나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "lexicalized-spelling",
+          "reason": "Native 15034 is the whole modern head; Article 15 supplement 1 specifically preserves 드러나다 spelling. This is not a judgment that the corpus decomposition is impossible in another representation."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-2",
+      "surface": "드러나며",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "드러나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으며"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "lexicalized-spelling",
+          "reason": "Native 15034 is the whole modern head; Article 15 supplement 1 specifically preserves 드러나다 spelling. This is not a judgment that the corpus decomposition is impossible in another representation."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-3",
+      "surface": "잘하시네요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "네요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "ending-85934",
+          "reason": "Explicitly entered diagnostic companion, not a correction of the original corpus input. Native -네요 and -네 retain distinct ending representations; context and author intent remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-4",
+      "surface": "잘하시네요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "네",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "ending-85934",
+          "reason": "Explicitly entered diagnostic companion, not a correction of the original corpus input. Native -네요 and -네 retain distinct ending representations; context and author intent remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-5",
+      "surface": "편이네요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "편",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "네요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "ending-85934",
+          "reason": "Explicitly entered diagnostic companion, not a correction of the original corpus input. Native -네요 and -네 retain distinct ending representations; context and author intent remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-6",
+      "surface": "편이네요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "편",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "네",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "ending-85934",
+          "reason": "Explicitly entered diagnostic companion, not a correction of the original corpus input. Native -네요 and -네 retain distinct ending representations; context and author intent remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-7",
+      "surface": "잘하시내요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "시",
+            "어",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "connector-86094",
+          "reason": "Scoped standard written boundary: the annotated connector cannot vanish from these exact lemma/morpheme owners. No global 내요 ban or judgment of author intent follows."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-8",
+      "surface": "편이내요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "편",
+            "이다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "connector-86094",
+          "reason": "Scoped standard written boundary: the annotated connector cannot vanish from these exact lemma/morpheme owners. No global 내요 ban or judgment of author intent follows."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-9",
+      "surface": "잘하셔내요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "시",
+            "어",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "connector-86094",
+          "reason": "Represented 시 + 어 connector, contracted or full, licenses the separate auxiliary candidate. Lexical sense/register is not judged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-10",
+      "surface": "잘하시어내요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "시",
+            "어",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "connector-86094",
+          "reason": "Represented 시 + 어 connector, contracted or full, licenses the separate auxiliary candidate. Lexical sense/register is not judged."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-11",
+      "surface": "낼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "verb-89906",
+          "reason": "Native lexical 내다 89906 remains a main-verb candidate. Shared headword with auxiliary 60625 does not change the lemma role."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-12",
+      "surface": "내시네",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "네"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "verb-89906",
+          "reason": "Native lexical 내다 89906 remains a main-verb candidate. Shared headword with auxiliary 60625 does not change the lemma role."
+        }
+      ]
+    },
+    {
+      "id": "continuation-residual-13",
+      "surface": "내요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "verb-89906",
+          "reason": "Native lexical 내다 89906 remains a main-verb candidate. Shared headword with auxiliary 60625 does not change the lemma role."
+        }
+      ]
+    }
+  ]
+}

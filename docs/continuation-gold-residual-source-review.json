@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019af",
+  "reviewed": "2026-10-03",
+  "original_preflight_sha256": "7900602b4f5a23f8dbc5495141b39694ee2cf9ed19742d0465ab57f4d2c9b71a",
+  "source_fixture_sha256": "9d9cacfed389930269ba825819cca3370532b3368534bebe304b26be34f153cb",
+  "reviews": [
+    {
+      "id": "id:MH2_0010-s209/10",
+      "corpus": "kaist",
+      "partition": "test",
+      "original_gold_row": {
+        "id": "id:MH2_0010-s209/10",
+        "surface": "드러난다",
+        "expected": [
+          "들다",
+          "나다"
+        ],
+        "matched": false,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            1
+          ]
+        ]
+      },
+      "category": "whole_lexical_head_vs_corpus_decomposition",
+      "source_entry_ids": [
+        "krdict:15034",
+        "krdict:71686",
+        "krdict:62134",
+        "krdict:62210"
+      ],
+      "diagnostic_companion": null,
+      "explanation": "The dictionary head is 드러나다. Article 15 supplement 1 and its explanation explicitly distinguish this spelling from transparent compounds. The corpus uses pvg+ecx+px; modern whole-head recovery is already present.",
+      "next_action": "Preserve the existing whole-head analysis. Any future finite compound decomposition needs an explicit representation/role audit; do not infer 들 + 어 → 드러.",
+      "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "id:MH2_0010-s241/11",
+      "corpus": "kaist",
+      "partition": "test",
+      "original_gold_row": {
+        "id": "id:MH2_0010-s241/11",
+        "surface": "드러나며",
+        "expected": [
+          "들다",
+          "나다"
+        ],
+        "matched": false,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            1
+          ]
+        ]
+      },
+      "category": "whole_lexical_head_vs_corpus_decomposition",
+      "source_entry_ids": [
+        "krdict:15034",
+        "krdict:71686",
+        "krdict:62134",
+        "krdict:62210"
+      ],
+      "diagnostic_companion": null,
+      "explanation": "The dictionary head is 드러나다. Article 15 supplement 1 and its explanation explicitly distinguish this spelling from transparent compounds. The corpus uses pvg+ecx+px; modern whole-head recovery is already present.",
+      "next_action": "Preserve the existing whole-head analysis. Any future finite compound decomposition needs an explicit representation/role audit; do not infer 들 + 어 → 드러.",
+      "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "id:dev-s152/5",
+      "corpus": "gsd",
+      "partition": "dev",
+      "original_gold_row": {
+        "id": "id:dev-s152/5",
+        "surface": "잘하시내요",
+        "expected": [
+          "잘하다",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      },
+      "category": "possible_spelling_and_annotation_difference",
+      "source_entry_ids": [
+        "krdict:85934",
+        "krdict:77333",
+        "krdict:86094",
+        "krdict:80330",
+        "krdict:60625",
+        "krdict:89906",
+        "krdict:70073"
+      ],
+      "diagnostic_companion": "잘하시네요",
+      "explanation": "Original GSD annotation supplies an 아 connective before VX 내다. Native auxiliary 60625 requires an 어 connective; after 시 the written connector is 시어 or contracted 셔. Native -네요 supplies a distinct standard ending reading for the diagnostic companion. The original authors’ intended reading is not established.",
+      "next_action": "Keep input and gold unchanged. The 네요 companion is diagnostic only; source connector evidence does not license silent correction or an unrepresented auxiliary boundary.",
+      "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "id:dev-s191/7",
+      "corpus": "gsd",
+      "partition": "dev",
+      "original_gold_row": {
+        "id": "id:dev-s191/7",
+        "surface": "편이내요",
+        "expected": [
+          "편",
+          "이다",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            1
+          ]
+        ]
+      },
+      "category": "possible_spelling_and_annotation_difference",
+      "source_entry_ids": [
+        "krdict:85934",
+        "krdict:77333",
+        "krdict:86094",
+        "krdict:80330",
+        "krdict:60625",
+        "krdict:89906",
+        "krdict:71321",
+        "krdict:86232"
+      ],
+      "diagnostic_companion": "편이네요",
+      "explanation": "Original GSD annotation supplies an 아 connective before VX 내다. Native auxiliary 60625 requires an 어 connective; after 시 the written connector is 시어 or contracted 셔. Native -네요 supplies a distinct standard ending reading for the diagnostic companion. The original authors’ intended reading is not established.",
+      "next_action": "Keep input and gold unchanged. The 네요 companion is diagnostic only; source connector evidence does not license silent correction or an unrepresented auxiliary boundary.",
+      "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "id:dev-s247/8",
+      "corpus": "gsd",
+      "partition": "dev",
+      "original_gold_row": {
+        "id": "id:dev-s247/8",
+        "surface": "짜증낼",
+        "expected": [
+          "짜증",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      },
+      "category": "missing_space_before_lexical_main_verb",
+      "source_entry_ids": [
+        "krdict:71579",
+        "krdict:89906",
+        "krdict:60625"
+      ],
+      "diagnostic_companion": "짜증 낼",
+      "explanation": "Original XPOS is NNG+VV, not VX. Native 짜증 71579 and lexical 내다 89906 both exemplify the combination with a case particle, while the noun also has an unmarked example before 내지. NIKL 325415 explicitly requires two words. The current spacing template requires a case-marked left segment and misses this pair.",
+      "next_action": "COV-020q: extend optional dictionary-backed spacing for audited bare-noun/main-verb pairs. Keep individual word candidates, roles, offsets, limits and source identities. No arbitrary compound or auxiliary path is justified.",
+      "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "id:dev-s900/5",
+      "corpus": "gsd",
+      "partition": "dev",
+      "original_gold_row": {
+        "id": "id:dev-s900/5",
+        "surface": "짜증내시네",
+        "expected": [
+          "짜증",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      },
+      "category": "missing_space_before_lexical_main_verb",
+      "source_entry_ids": [
+        "krdict:71579",
+        "krdict:89906",
+        "krdict:60625"
+      ],
+      "diagnostic_companion": "짜증 내시네",
+      "explanation": "Original XPOS is NNG+VV, not VX. Native 짜증 71579 and lexical 내다 89906 both exemplify the combination with a case particle, while the noun also has an unmarked example before 내지. NIKL 325415 explicitly requires two words. The current spacing template requires a case-marked left segment and misses this pair.",
+      "next_action": "COV-020q: extend optional dictionary-backed spacing for audited bare-noun/main-verb pairs. Keep individual word candidates, roles, offsets, limits and source identities. No arbitrary compound or auxiliary path is justified.",
+      "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "primary_reviews": [
+    {
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B8%80%EB%A7%9E%EC%B6%A4%EB%B2%95+%ED%91%9C%EC%A4%80%EC%96%B4%EA%B7%9C%EC%A0%95+%ED%95%B4%EC%84%A4.pdf",
+      "title": "한글 맞춤법 표준어 규정 해설",
+      "edition": "2018",
+      "printed_pages": "40–43",
+      "physical_pages": "42–45",
+      "sha256": "dcca9b73804a46c08ecbe19af2c151adcd1bde143e13198548bb693575df0243",
+      "bytes": 1778182,
+      "scope": "Article 15 and supplement 1: written stem boundaries and the explicitly listed lexicalized 드러나다.",
+      "access": "Complete named text read. Web screenshots failed; local rendering inspected separately."
+    },
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=325415",
+      "answered": "2025-12-22",
+      "scope": "Complete question and answer read; the answer rejects the premise that 짜증내다/짜증나다 are single standard dictionary words and requires spaces."
+    }
+  ],
+  "counts": {
+    "original_misses": 6,
+    "lexicalized_representation": 2,
+    "possible_spelling_or_annotation": 2,
+    "missing_bare_noun_space": 2,
+    "complete_native_entries": 28,
+    "diagnostic_surfaces": 17,
+    "raw_judgments": 13,
+    "required": 11,
+    "forbidden": 2,
+    "contextual_readings_judged": 0
+  },
+  "remaining": [
+    "Independent Korean-language review of original sentences and intended readings.",
+    "COV-020q: optional bare-noun + lexical-main-verb spacing, including these two unchanged corpus inputs.",
+    "Any finite lexicalized decomposition needs a source/role/representation design before generation."
+  ],
+  "limitations": "Agent source audit, not corrected corpus gold or contextual disambiguation. No production morphology/filter changes. Original six grouped misses remain six.",
+  "correction_history": [
+    {
+      "reason": "Initial surface-prefix classification did not account for final ㄴ in 드러난다. Exact original surface identities now select both lexicalized rows; category counts are verified independently. No gold, input or runtime evidence changed.",
+      "previous_review": {
+        "id": "id:MH2_0010-s209/10",
+        "corpus": "kaist",
+        "partition": "test",
+        "original_gold_row": {
+          "id": "id:MH2_0010-s209/10",
+          "surface": "드러난다",
+          "expected": [
+            "들다",
+            "나다"
+          ],
+          "matched": false,
+          "recovered": 1,
+          "recovered_sets": [
+            [
+              1
+            ]
+          ]
+        },
+        "category": "missing_space_before_lexical_main_verb",
+        "source_entry_ids": [
+          "krdict:71579",
+          "krdict:89906",
+          "krdict:60625"
+        ],
+        "diagnostic_companion": "짜증 드러난다",
+        "explanation": "Original XPOS is NNG+VV, not VX. Native 짜증 71579 and lexical 내다 89906 both exemplify the combination with a case particle, while the noun also has an unmarked example before 내지. NIKL 325415 explicitly requires two words. The current spacing template requires a case-marked left segment and misses this pair.",
+        "next_action": "COV-020q: extend optional dictionary-backed spacing for audited bare-noun/main-verb pairs. Keep individual word candidates, roles, offsets, limits and source identities. No arbitrary compound or auxiliary path is justified.",
+        "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      },
+      "corrected_review": {
+        "id": "id:MH2_0010-s209/10",
+        "corpus": "kaist",
+        "partition": "test",
+        "original_gold_row": {
+          "id": "id:MH2_0010-s209/10",
+          "surface": "드러난다",
+          "expected": [
+            "들다",
+            "나다"
+          ],
+          "matched": false,
+          "recovered": 1,
+          "recovered_sets": [
+            [
+              1
+            ]
+          ]
+        },
+        "category": "whole_lexical_head_vs_corpus_decomposition",
+        "source_entry_ids": [
+          "krdict:15034",
+          "krdict:71686",
+          "krdict:62134",
+          "krdict:62210"
+        ],
+        "diagnostic_companion": null,
+        "explanation": "The dictionary head is 드러나다. Article 15 supplement 1 and its explanation explicitly distinguish this spelling from transparent compounds. The corpus uses pvg+ecx+px; modern whole-head recovery is already present.",
+        "next_action": "Preserve the existing whole-head analysis. Any future finite compound decomposition needs an explicit representation/role audit; do not infer 들 + 어 → 드러.",
+        "evidence_kind": "Agent application of named primary sources; not an adjudicated corpus correction.",
+        "contextual_verdict": "unjudged",
+        "independent_review": "pending"
+      }
+    }
+  ]
+}

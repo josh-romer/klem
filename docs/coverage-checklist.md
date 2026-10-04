@@ -2857,6 +2857,28 @@ review remains open under the completion review below.
   adding source-backed regressions. Keep original gold and input spelling.
   No silent typo correction, generic spelling rule or arbitrary compound
   segmentation follows from these observations; contextual judgments remain open.
+  **Partial source audit completed:** the
+  [individual review](continuation-gold-residual-source-review.json) distinguishes
+  two whole-lexical-head/corpus-decomposition differences, two possible spelling
+  or annotation differences and two missing spaces before lexical main verbs.
+  NIKL's Article 15 supplement 1 explicitly lists 드러나다; the full native
+  entry 15034 already survives both dictionary filters for both original words.
+  잘하시네요/편이네요 are separately entered diagnostic companions, never repairs
+  of 잘하시내요/편이내요. The original 아 + VX annotation does not establish a
+  valid omitted connector. NIKL 325415 requires 짜증 내다 as separate words;
+  original NNG + VV tags do not license an auxiliary path. The current optional
+  spacing template misses these two bare-noun inputs, tracked in COV-020q.
+  [Four source/boundary/role/CLI tests](../tests/continuation_residuals.rs) retain
+  all six gold misses and add 13 independent raw judgments (11 required,
+  two forbidden), 28 complete native entries and 17 diagnostic surfaces.
+  Independent Korean-language review, author intent and any finite lexicalized
+  decomposition representation remain open. The original gold, native sources
+  and production rules are unchanged.
+  [Verification evidence](continuation-gold-residual-evaluation.json) records
+  812 local/Nix tests, Clippy/fmt, the full pinned original sentence checks,
+  the offline inventory audit and all 51 packaged dictionary/spacing responses.
+  Both packaged executable bytes equal the existing preview package; frontend
+  sources are unchanged. This audit does not certify the remaining representations.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
@@ -3108,6 +3130,21 @@ review remains open under the completion review below.
   Nix and refreshed packaged-preview checks pass. General
   word-spacing correction, missing dictionary vocabulary and contextual sentence
   interpretation are outside this rule template; no broader segmentation is certified.
+
+- [ ] **COV-020q — Audited bare nouns before lexical main verbs.**
+  COV-019af preserves the original 짜증낼/짜증내시네 inputs and their NNG + VV
+  annotations. NIKL 325415 requires separate words, and full native 짜증 71579
+  and lexical 내다 89906 attest their combination. Optional spacing currently
+  requires a case-marked left segment: 짜증을낼 has a hypothesis but these two
+  bare-noun inputs do not. Extend separate dictionary-backed spacing hypotheses
+  for reviewed bare-noun/main-verb combinations, preserving original candidates,
+  complete native evidence, lexical/auxiliary homonyms, per-word readings, original
+  NFC/NFD byte offsets and explicit work/output limits. Do not infer arbitrary
+  compound decomposition or rewrite raw gold. Audit whole-head alternatives and
+  additional source-listed pairs; verify absent/incompatible dictionary entries,
+  ambiguous boundaries, CLI/API/export/browser parity, full candidate/novel
+  sidecars, stress behavior and Nix builds. Contextual senses and corpus recovery
+  across proposed separate words must be tracked distinctly from raw lemma groups.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
@@ -4191,6 +4228,7 @@ browser checks require Chromium. See [evaluation](evaluation.md) and
 ```sh
 python3 -m unittest discover -s tools -p 'test_review_inventory.py'
 python3 tools/review_inventory.py --verify
+python3 tools/continuation_residual_audit.py --verify
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

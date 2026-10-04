@@ -1390,6 +1390,20 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "으랴"
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠")))
+                    {
+                        // The four native -랴/-으랴 entries cover rhetorical,
+                        // offer and enumerative senses collectively. Their
+                        // notes name honorific/past/modal prefinals; other
+                        // immediate-owner extensions remain hypotheses without
+                        // certifying an unreviewed sense or register. A prior
+                        // auxiliary owner's markers do not supply this test.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
                         && crate::engine::quoted_ra_exclamation(&analysis.morphemes[i].form)
                     {
                         let form = analysis.morphemes[i].form.as_str();

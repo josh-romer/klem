@@ -3685,8 +3685,21 @@ The native 연기 나랴 example additionally requires -랴/-으랴, normalized 
 offer senses; 80308/80306 preserve enumerative senses. Vowel/ㄹ stems use 랴,
 other closed stems use 으랴, and existing irregular/prefinal/copula hypotheses
 remain separate. Source-specific sense/register constraints and broader
-ending/particle combinations remain under COV-017br. Full corpus observations,
-browser/API and packaged runtime verification are still pending for this change.
+ending/particle combinations remain under COV-017br. The original 35-pair batch
+has complete corpus/novel, browser/API and packaged runtime evidence in
+`docs/lexical-nada-observations.json.gz` and the associated runtime artifacts.
+
+Canonical 으랴 now permits the source-listed concessive particle 마는 and its
+short 만 form: 있으랴마는 → 있다 + 으랴 + 마는 and 알랴만 → 알다 + 으랴 + 만.
+The ending and particle retain separate components and source labels; arbitrary
+nominal 마는 and unlicensed immediate 요 are not generated for the tested
+owners. The new `rya-boundary-*` fixtures preserve all four ending sources, both
+native expression entries, particles, 69 complete source occurrences and 88
+original diagnostic words. Other immediate-owner prefinals beyond reviewed
+시/었/겠 remain available with Unknown dictionary attachment. A marker on the
+earlier auxiliary owner does not uncertify a later bare -랴 owner. This does not
+select rhetorical/offer/enumerative senses or settle other registers, particles,
+or the vowel-final omitted-copula reading observed in 지위랴.
 
 ## Realization, retrospective and guess -걸 endings (COV-017bf)
 

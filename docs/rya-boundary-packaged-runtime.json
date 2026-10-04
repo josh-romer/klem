@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017br",
+  "source_sha256": "3611812f1210a15270ef35df4b5459b5eb21e4da03bc180f3be0a66b2542efb1",
+  "cli_sha256": "20016dbcdb3eb835196422be3fa5fc8877e584c5d4cc2619a9fe81cbbaa1455f",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "native_entries": 110,
+  "words": 88,
+  "checks": [
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 0,
+      "records": 179,
+      "sha256": "10f3736e1f3b108951740cd2d83a0550e182b56b7346b14eff42b94111b9ee1c"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 0,
+      "records": 179,
+      "sha256": "f85e76520abf61d494a4a5fb21438fe7137a5eb75f1904e3098417438eb11112"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 0,
+      "records": 179,
+      "sha256": "9f15230000c8dc9aae33f00ec21ed10f926b2b8c49870582c545c635ecc6fca4"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 1,
+      "records": 179,
+      "sha256": "10f3736e1f3b108951740cd2d83a0550e182b56b7346b14eff42b94111b9ee1c"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 1,
+      "records": 179,
+      "sha256": "f85e76520abf61d494a4a5fb21438fe7137a5eb75f1904e3098417438eb11112"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 1,
+      "records": 179,
+      "sha256": "9f15230000c8dc9aae33f00ec21ed10f926b2b8c49870582c545c635ecc6fca4"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 4096,
+      "records": 179,
+      "sha256": "10f3736e1f3b108951740cd2d83a0550e182b56b7346b14eff42b94111b9ee1c"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 4096,
+      "records": 179,
+      "sha256": "f85e76520abf61d494a4a5fb21438fe7137a5eb75f1904e3098417438eb11112"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 4096,
+      "records": 179,
+      "sha256": "9f15230000c8dc9aae33f00ec21ed10f926b2b8c49870582c545c635ecc6fca4"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 0,
+      "records": 179,
+      "sha256": "e5df1f8f4f8c7ee536804ce9650c19104dc2e616b408a29fd7f0aa298ddc835d"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 0,
+      "records": 179,
+      "sha256": "89662bce224916b8db724e167a77019c3fbe6c4fd442c082d7beac8b0566841f"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 0,
+      "records": 179,
+      "sha256": "4701433f5bbe6e0891937478b4b5d605aff2c56f40f26e5ba63fa7900f1bbccd"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 1,
+      "records": 179,
+      "sha256": "e5df1f8f4f8c7ee536804ce9650c19104dc2e616b408a29fd7f0aa298ddc835d"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 1,
+      "records": 179,
+      "sha256": "89662bce224916b8db724e167a77019c3fbe6c4fd442c082d7beac8b0566841f"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 1,
+      "records": 179,
+      "sha256": "4701433f5bbe6e0891937478b4b5d605aff2c56f40f26e5ba63fa7900f1bbccd"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 4096,
+      "records": 179,
+      "sha256": "e5df1f8f4f8c7ee536804ce9650c19104dc2e616b408a29fd7f0aa298ddc835d"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 4096,
+      "records": 179,
+      "sha256": "89662bce224916b8db724e167a77019c3fbe6c4fd442c082d7beac8b0566841f"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 4096,
+      "records": 179,
+      "sha256": "4701433f5bbe6e0891937478b4b5d605aff2c56f40f26e5ba63fa7900f1bbccd"
+    }
+  ],
+  "cases": [
+    {
+      "id": "rya-native-배부르랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-아니랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-지키랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-지랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-나랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-하랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-주랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-챙기랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-잊으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-막으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-갚으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-잘했으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-숨었으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-놓으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-찾으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-먹으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-잡으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-받으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-노래하랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-마시랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-들으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-적으랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-돌보랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-시중들랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-일하랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-공부하랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-다니랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-살림하랴",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-있으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-좋으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-않으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-알랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-몫이랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-비기랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-되랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-움직이랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-알랴만",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-있으랴만",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-학생이랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-의사이랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-들으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-도우랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-지으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-살랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-나셨으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-나겠으랴만",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-먹어보랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-먹고싶으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-먹지않으랴마는",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-먹랴마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-나으랴마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-살으랴마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-좋랴마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-학생랴마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-먹으랴요",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-학생마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-먹음마는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹더랴",
+      "encoding": "NFC",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹사오랴",
+      "encoding": "NFC",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹으오랴",
+      "encoding": "NFC",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹고있더랴",
+      "encoding": "NFC",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹지않더랴",
+      "encoding": "NFC",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-학생이더랴",
+      "encoding": "NFC",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-native-배부르랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-아니랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-지키랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-지랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-나랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-하랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-주랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-챙기랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-잊으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-막으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-갚으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-잘했으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-숨었으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-놓으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-찾으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-먹으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-잡으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-받으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-노래하랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-마시랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-들으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-적으랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-돌보랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-시중들랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-일하랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-공부하랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-다니랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-살림하랴",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-있으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-좋으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-않으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-알랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-몫이랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-비기랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-되랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-native-움직이랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-알랴만",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-있으랴만",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-학생이랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-의사이랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-들으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-도우랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-지으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-살랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-나셨으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-나겠으랴만",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-먹어보랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-먹고싶으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-composition-먹지않으랴마는",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-먹랴마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-나으랴마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-살으랴마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-좋랴마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-학생랴마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-먹으랴요",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-학생마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-boundary-먹음마는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹더랴",
+      "encoding": "NFD",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹사오랴",
+      "encoding": "NFD",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹으오랴",
+      "encoding": "NFD",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹고있더랴",
+      "encoding": "NFD",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-먹지않더랴",
+      "encoding": "NFD",
+      "verdict": "unknown_entry",
+      "passed": true
+    },
+    {
+      "id": "rya-unreviewed-학생이더랴",
+      "encoding": "NFD",
+      "verdict": "unknown_entry",
+      "passed": true
+    }
+  ],
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

@@ -145,6 +145,11 @@
                 ./tools/lexical_nada_compare.py
                 ./tools/lexical_nada_runtime.py
                 ./tools/lexical_nada_queue.py
+                ./tools/rya_boundary_audit.py
+                ./tools/rya_boundary_regressions.py
+                ./tools/rya_boundary_compare.py
+                ./tools/rya_boundary_runtime.py
+                ./tools/rya_boundary_queue.py
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -154,6 +159,7 @@
                 ./web/tests/continuation-inflection.mjs
                 ./web/tests/bare-noun-spacing.mjs
                 ./web/tests/lexical-nada.mjs
+                ./web/tests/rya-boundary.mjs
               ];
             };
           } ''
@@ -185,6 +191,9 @@
             python tools/lexical_nada_dependencies.py --verify
             python tools/lexical_nada_priority.py --verify
             python tools/lexical_nada_queue.py --verify
+            python tools/rya_boundary_audit.py --verify
+            python tools/rya_boundary_regressions.py --verify
+            python tools/rya_boundary_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

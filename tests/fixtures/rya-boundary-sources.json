@@ -1,0 +1,934 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017br",
+  "source_sha256": "3611812f1210a15270ef35df4b5459b5eb21e4da03bc180f3be0a66b2542efb1",
+  "lmf_sha256": "885f4e74109ec6e0553e0cfd7e71a063660ee10bca4b80b8608564e1f50bd153",
+  "raw_source_sha256": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "native_entry_ids": [
+    "krdict:14626",
+    "krdict:15728",
+    "krdict:15983",
+    "krdict:17186",
+    "krdict:17203",
+    "krdict:20256",
+    "krdict:23394",
+    "krdict:24079",
+    "krdict:25663",
+    "krdict:26847",
+    "krdict:26878",
+    "krdict:27951",
+    "krdict:29702",
+    "krdict:29754",
+    "krdict:29764",
+    "krdict:29778",
+    "krdict:31670",
+    "krdict:38524",
+    "krdict:40101",
+    "krdict:48214",
+    "krdict:50189",
+    "krdict:50193",
+    "krdict:50557",
+    "krdict:51701",
+    "krdict:56004",
+    "krdict:57309",
+    "krdict:57320",
+    "krdict:58166",
+    "krdict:58272",
+    "krdict:58913",
+    "krdict:600512",
+    "krdict:60911",
+    "krdict:60931",
+    "krdict:61190",
+    "krdict:61310",
+    "krdict:61478",
+    "krdict:61530",
+    "krdict:61672",
+    "krdict:62051",
+    "krdict:62134",
+    "krdict:62171",
+    "krdict:62210",
+    "krdict:62249",
+    "krdict:62316",
+    "krdict:62354",
+    "krdict:62496",
+    "krdict:62595",
+    "krdict:62657",
+    "krdict:62888",
+    "krdict:62899",
+    "krdict:63498",
+    "krdict:63606",
+    "krdict:64391",
+    "krdict:64513",
+    "krdict:64682",
+    "krdict:66074",
+    "krdict:66585",
+    "krdict:66636",
+    "krdict:68796",
+    "krdict:68797",
+    "krdict:69296",
+    "krdict:69511",
+    "krdict:69514",
+    "krdict:69517",
+    "krdict:69579",
+    "krdict:70060",
+    "krdict:70067",
+    "krdict:70073",
+    "krdict:70331",
+    "krdict:70378",
+    "krdict:71234",
+    "krdict:71581",
+    "krdict:71583",
+    "krdict:71875",
+    "krdict:72578",
+    "krdict:72580",
+    "krdict:73277",
+    "krdict:74104",
+    "krdict:77243",
+    "krdict:77245",
+    "krdict:77247",
+    "krdict:79033",
+    "krdict:79260",
+    "krdict:79261",
+    "krdict:80306",
+    "krdict:80308",
+    "krdict:82136",
+    "krdict:85785",
+    "krdict:86116",
+    "krdict:86118",
+    "krdict:86232",
+    "krdict:86543",
+    "krdict:86552",
+    "krdict:86555",
+    "krdict:89218",
+    "krdict:89445",
+    "krdict:89534",
+    "krdict:89858",
+    "krdict:92457"
+  ],
+  "cases": [
+    {
+      "id": "rya-native-배부르랴",
+      "surface": "배부르랴",
+      "verdict": "required",
+      "lemmas": [
+        "배부르다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-아니랴",
+      "surface": "아니랴",
+      "verdict": "required",
+      "lemmas": [
+        "아니다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-지키랴",
+      "surface": "지키랴",
+      "verdict": "required",
+      "lemmas": [
+        "지키다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-지랴",
+      "surface": "지랴",
+      "verdict": "required",
+      "lemmas": [
+        "지다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-나랴",
+      "surface": "나랴",
+      "verdict": "required",
+      "lemmas": [
+        "나다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-하랴",
+      "surface": "하랴",
+      "verdict": "required",
+      "lemmas": [
+        "하다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-주랴",
+      "surface": "주랴",
+      "verdict": "required",
+      "lemmas": [
+        "주다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-챙기랴",
+      "surface": "챙기랴",
+      "verdict": "required",
+      "lemmas": [
+        "챙기다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-잊으랴",
+      "surface": "잊으랴",
+      "verdict": "required",
+      "lemmas": [
+        "잊다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-막으랴",
+      "surface": "막으랴",
+      "verdict": "required",
+      "lemmas": [
+        "막다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-갚으랴",
+      "surface": "갚으랴",
+      "verdict": "required",
+      "lemmas": [
+        "갚다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-잘했으랴",
+      "surface": "잘했으랴",
+      "verdict": "required",
+      "lemmas": [
+        "잘하다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "었",
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-숨었으랴",
+      "surface": "숨었으랴",
+      "verdict": "required",
+      "lemmas": [
+        "숨다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "었",
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-놓으랴",
+      "surface": "놓으랴",
+      "verdict": "required",
+      "lemmas": [
+        "놓다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-찾으랴",
+      "surface": "찾으랴",
+      "verdict": "required",
+      "lemmas": [
+        "찾다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-먹으랴",
+      "surface": "먹으랴",
+      "verdict": "required",
+      "lemmas": [
+        "먹다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-잡으랴",
+      "surface": "잡으랴",
+      "verdict": "required",
+      "lemmas": [
+        "잡다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-받으랴",
+      "surface": "받으랴",
+      "verdict": "required",
+      "lemmas": [
+        "받다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-노래하랴",
+      "surface": "노래하랴",
+      "verdict": "required",
+      "lemmas": [
+        "노래하다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-마시랴",
+      "surface": "마시랴",
+      "verdict": "required",
+      "lemmas": [
+        "마시다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-들으랴",
+      "surface": "들으랴",
+      "verdict": "required",
+      "lemmas": [
+        "듣다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-적으랴",
+      "surface": "적으랴",
+      "verdict": "required",
+      "lemmas": [
+        "적다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-돌보랴",
+      "surface": "돌보랴",
+      "verdict": "required",
+      "lemmas": [
+        "돌보다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-시중들랴",
+      "surface": "시중들랴",
+      "verdict": "required",
+      "lemmas": [
+        "시중들다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-일하랴",
+      "surface": "일하랴",
+      "verdict": "required",
+      "lemmas": [
+        "일하다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-공부하랴",
+      "surface": "공부하랴",
+      "verdict": "required",
+      "lemmas": [
+        "공부하다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-다니랴",
+      "surface": "다니랴",
+      "verdict": "required",
+      "lemmas": [
+        "다니다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-살림하랴",
+      "surface": "살림하랴",
+      "verdict": "required",
+      "lemmas": [
+        "살림하다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴"
+      ]
+    },
+    {
+      "id": "rya-native-있으랴마는",
+      "surface": "있으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "있다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-좋으랴마는",
+      "surface": "좋으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "좋다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-않으랴마는",
+      "surface": "않으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "않다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-알랴마는",
+      "surface": "알랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "알다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-몫이랴마는",
+      "surface": "몫이랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "몫",
+        "이다"
+      ],
+      "lemma_kinds": [
+        "nominal",
+        "copula"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-비기랴마는",
+      "surface": "비기랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "비기다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-되랴마는",
+      "surface": "되랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "되다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-native-움직이랴마는",
+      "surface": "움직이랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "움직이다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-알랴만",
+      "surface": "알랴만",
+      "verdict": "required",
+      "lemmas": [
+        "알다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "만"
+      ]
+    },
+    {
+      "id": "rya-composition-있으랴만",
+      "surface": "있으랴만",
+      "verdict": "required",
+      "lemmas": [
+        "있다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "만"
+      ]
+    },
+    {
+      "id": "rya-composition-학생이랴마는",
+      "surface": "학생이랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "학생",
+        "이다"
+      ],
+      "lemma_kinds": [
+        "nominal",
+        "copula"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-의사이랴마는",
+      "surface": "의사이랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "의사",
+        "이다"
+      ],
+      "lemma_kinds": [
+        "nominal",
+        "copula"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-들으랴마는",
+      "surface": "들으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "듣다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-도우랴마는",
+      "surface": "도우랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "돕다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-지으랴마는",
+      "surface": "지으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "짓다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-살랴마는",
+      "surface": "살랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "살다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-나셨으랴마는",
+      "surface": "나셨으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "나다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "시",
+        "었",
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-나겠으랴만",
+      "surface": "나겠으랴만",
+      "verdict": "required",
+      "lemmas": [
+        "나다"
+      ],
+      "lemma_kinds": [
+        "predicate"
+      ],
+      "morphemes": [
+        "겠",
+        "으랴",
+        "만"
+      ]
+    },
+    {
+      "id": "rya-composition-먹어보랴마는",
+      "surface": "먹어보랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "먹다",
+        "보다"
+      ],
+      "lemma_kinds": [
+        "predicate",
+        "auxiliary"
+      ],
+      "morphemes": [
+        "어",
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-먹고싶으랴마는",
+      "surface": "먹고싶으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "먹다",
+        "싶다"
+      ],
+      "lemma_kinds": [
+        "predicate",
+        "auxiliary"
+      ],
+      "morphemes": [
+        "고",
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-composition-먹지않으랴마는",
+      "surface": "먹지않으랴마는",
+      "verdict": "required",
+      "lemmas": [
+        "먹다",
+        "않다"
+      ],
+      "lemma_kinds": [
+        "predicate",
+        "auxiliary"
+      ],
+      "morphemes": [
+        "지",
+        "으랴",
+        "마는"
+      ]
+    },
+    {
+      "id": "rya-boundary-먹랴마는",
+      "surface": "먹랴마는",
+      "verdict": "forbidden",
+      "lemma": "먹다"
+    },
+    {
+      "id": "rya-boundary-나으랴마는",
+      "surface": "나으랴마는",
+      "verdict": "forbidden",
+      "lemma": "나다"
+    },
+    {
+      "id": "rya-boundary-살으랴마는",
+      "surface": "살으랴마는",
+      "verdict": "forbidden",
+      "lemma": "살다"
+    },
+    {
+      "id": "rya-boundary-좋랴마는",
+      "surface": "좋랴마는",
+      "verdict": "forbidden",
+      "lemma": "좋다"
+    },
+    {
+      "id": "rya-boundary-학생랴마는",
+      "surface": "학생랴마는",
+      "verdict": "forbidden",
+      "lemma": "이다"
+    },
+    {
+      "id": "rya-boundary-먹으랴요",
+      "surface": "먹으랴요",
+      "verdict": "forbidden",
+      "lemma": "먹다"
+    },
+    {
+      "id": "rya-boundary-학생마는",
+      "surface": "학생마는",
+      "verdict": "forbidden",
+      "lemma": "학생"
+    },
+    {
+      "id": "rya-boundary-먹음마는",
+      "surface": "먹음마는",
+      "verdict": "forbidden",
+      "lemma": "먹다"
+    },
+    {
+      "id": "rya-unreviewed-먹더랴",
+      "surface": "먹더랴",
+      "verdict": "unknown_entry",
+      "lemma": "먹다"
+    },
+    {
+      "id": "rya-unreviewed-먹사오랴",
+      "surface": "먹사오랴",
+      "verdict": "unknown_entry",
+      "lemma": "먹다"
+    },
+    {
+      "id": "rya-unreviewed-먹으오랴",
+      "surface": "먹으오랴",
+      "verdict": "unknown_entry",
+      "lemma": "먹다"
+    },
+    {
+      "id": "rya-unreviewed-먹고있더랴",
+      "surface": "먹고있더랴",
+      "verdict": "unknown_entry",
+      "lemma": "있다"
+    },
+    {
+      "id": "rya-unreviewed-먹지않더랴",
+      "surface": "먹지않더랴",
+      "verdict": "unknown_entry",
+      "lemma": "않다"
+    },
+    {
+      "id": "rya-unreviewed-학생이더랴",
+      "surface": "학생이더랴",
+      "verdict": "unknown_entry",
+      "lemma": "이다"
+    }
+  ],
+  "scope": "Exact native rhetorical/offer/enumerative targets; source-listed concessive 마는 and short 만, scoped composition and exclusions. Other prefinals remain hypotheses with unreviewed attachment, never globally banned. All contextual meanings and independent review remain pending."
+}

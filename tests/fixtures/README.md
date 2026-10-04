@@ -2089,6 +2089,18 @@ an original fixture or adjudicates a sentence context. Dictionary attribution:
 National Institute of Korean Language, Korean Basic Dictionary,
 CC BY-SA 2.0 KR. Independent Korean review remains pending.
 
+`rya-boundary-sources.json` and `krdict-rya-boundary.json` preserve 63 finite
+native/composition/exclusion/unknown-entry cases and 99 full English LMF owners.
+The full multilingual sources, 69 individually identified native occurrences
+and the original 88-word streams remain in
+`docs/rya-boundary-source-preflight.json.gz`. The append-only
+`rya-boundary-regressions.json` projects those original paths and native entries
+for Rust checks without replacing the source freeze. The only LMF adapter
+omissions are RelatedForm and non-English equivalents; senses, native IDs,
+complete example groups, annotations, patterns and word forms remain intact.
+Native attribution: NIKL, Korean Basic Dictionary, CC BY-SA 2.0 KR. Structural
+judgments do not adjudicate source sentence meanings or independent review.
+
 `kaist-potential-aux.conllu` and `gsd-potential-aux.conllu` retain 14 exact
 source-aligned training targets and full unchanged blocks. Selection was frozen
 before production edits: first two aligned target heads per POS/following-tag

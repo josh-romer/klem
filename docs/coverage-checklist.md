@@ -1611,6 +1611,45 @@ review remains open under the completion review below.
   pending; this engineering evidence does not settle sense-specific attachment
   or register restrictions. Original before data remains immutable.
 
+  **Concessive follower and own-owner boundary verification complete:** the native
+  -랴마는/-으랴마는 entries and independent
+  [NIKL guidance](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=296131)
+  license -랴 followed by 마는, with the separate short concessive 만 retained.
+  The [new source freeze](rya-boundary-source-preflight.json.gz) keeps all 69
+  native spelling occurrences, full groups/byte spans/native owners, the prior
+  88-word streams in every filter and the complete four ending/two expression
+  entries. [63 finite cases](../tests/fixtures/rya-boundary-sources.json) cover
+  native rhetorical/offer/enumerative targets, concessive composition,
+  allomorph/nominal/polite exclusions and unreviewed prefinal hypotheses.
+  The canonical 으랴 boundary now licenses separate 마는/만 particles; the
+  browser keeps their source-specific concessive label. A known lexical POS no
+  longer certifies other immediate-owner prefinals beyond source-reviewed
+  시/었/겠: those candidates remain Unknown, with all previous conflicts intact.
+  The earlier auxiliary owner's markers cannot change the right owner's status.
+  [Four targeted tests](../tests/rya_boundary.rs) pass, including all 99 full
+  English native LMF projections, original raw paths/order and 18 CLI/library
+  cache/filter/encoding streams. The full 835-test Rust suite, Clippy, formatting,
+  pinned full-corpus regression and current-system Nix Rust/assets/web checks
+  pass. The [follow-up observation ledger](rya-boundary-observations.json.gz)
+  retains 92 individual changes/167 occurrences: 76 new concessive candidate
+  paths and 16 Compatible-to-Unknown entry assessments, with all 43 full native
+  owners and original paths/order/conflicts preserved. The three 88-word
+  diagnostic streams record both before/after hashes and change 29/28/28 word
+  records respectively; all eight candidate/novel streams (1,128,312 records)
+  remain byte-identical to the previous package. All four
+  [held-out corpus reports](rya-boundary-corpora.json) also retain every row and
+  summary hash. [Packaged API/CLI checks](rya-boundary-packaged-runtime.json)
+  verify all 110 complete native source entries, all 63 cases in NFC/NFD and 18
+  cache/filter streams, including original-word and Unicode-offset parity.
+  [Six browser exports](rya-boundary-packaged-browser.json) match the packaged
+  CLI; copula/auxiliary breakdowns, concessive labels, exact 마는 86552 / 만
+  86555 dictionary clicks and mobile layout pass without errors. The shared
+  label source filter now preserves 마는's own citation instead of selecting
+  only the short 만 homonym's ID. [The offline checker](../tools/rya_boundary_queue.py)
+  verifies every observation ID, source owner, occurrence and runtime artifact
+  in Nix. Sense/register judgments and the separately observed vowel-final
+  지위랴 copula reading remain unjudged rather than inferred from these checks.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

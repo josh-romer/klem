@@ -4101,7 +4101,16 @@ fn question_clause_particle_boundary(ending: &str, particle: &str) -> bool {
 fn concessive_ending(ending: &str) -> bool {
     matches!(
         ending,
-        "다" | "는다" | "습니다" | "냐" | "느냐" | "으냐" | "으리까" | "자" | "지" | "더니"
+        "다" | "는다"
+            | "습니다"
+            | "냐"
+            | "느냐"
+            | "으냐"
+            | "으리까"
+            | "으랴"
+            | "자"
+            | "지"
+            | "더니"
     )
 }
 

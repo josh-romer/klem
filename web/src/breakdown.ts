@@ -105,7 +105,7 @@ export function parts(
       m.kind === "particle" && m.form === "만" &&
       a.rules.includes("particle.concessive") && previous &&
       "morpheme" in previous && a.morphemes[previous.morpheme].kind === "ending" &&
-      ["다", "는다", "습니다", "냐", "느냐", "으냐", "자", "지", "더니"].includes(a.morphemes[previous.morpheme].form);
+      ["다", "는다", "습니다", "냐", "느냐", "으냐", "으랴", "자", "지", "더니"].includes(a.morphemes[previous.morpheme].form);
     const previousMorpheme = previous && "morpheme" in previous
       ? a.morphemes[previous.morpheme] : undefined;
     const previousLemma = previous && "lemma" in previous
@@ -141,7 +141,7 @@ export function parts(
             (enumerativeDa && s.id === 85738) || (emphaticDa && s.id === 41693)) }
       : concessiveMan
       ? { ...grammarLabels[key], label: "But / although",
-          sources: grammarLabels[key].sources.filter((s) => s.id === 86555) }
+          sources: grammarLabels[key].sources.filter((s) => s.id === (m.form === "마는" ? 86552 : 86555)) }
       : grammarLabels[key]?.kind === m.kind ? grammarLabels[key] : undefined;
     const entries = result.grammar[key] ?? [];
     const entry =

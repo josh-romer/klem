@@ -1866,6 +1866,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.adjectival.dap" => {
             "Separate adjective-forming -답다 from a nominal base, with ㅂ-irregular vowel attachment."
         }
+        "suffix.verb.doeda" => {
+            "A source-listed passive verb formed from a nominal base and -되다; prefinals and endings belong to the suffix, while the whole lexical head remains a separate candidate."
+        }
+        "suffix.adjective.doeda" => {
+            "A source-listed adjective formed from a noun, adverb or bound root and -되다; the suffix owns its own inflections and its adjective class is independent of base homonyms."
+        }
         "boundary.regular" => "Remove an ending with no stem spelling change.",
         "boundary.consonant" => "Consonant-final stem selects the consonant allomorph.",
         "boundary.open" => "Vowel-final stem selects the open-stem allomorph.",
@@ -2176,7 +2182,9 @@ mod label_tests {
         ] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
-        for form in ["님", "들", "적", "답다", "이", "히", "쯤", "박이", "둥이"] {
+        for form in [
+            "님", "들", "적", "답다", "되다", "이", "히", "쯤", "박이", "둥이",
+        ] {
             forms.insert(format!("-{form}"), Suffix);
         }
         forms.insert("왕-".to_owned(), Prefix);

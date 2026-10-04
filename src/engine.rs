@@ -2221,6 +2221,70 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
     out
 }
 
+// Preserve every whole-word parent and expand independent suffix owners
+// iteratively. Processing owners from right to left keeps original morpheme
+// insertion indices valid and avoids a recursion or bit-width cutoff.
+fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
+    let original = out.len();
+    for i in 0..original {
+        if !out[i].lemmas.iter().any(|l| {
+            l.kind == LemmaKind::Predicate && crate::doeda_suffix::formation(&l.text).is_some()
+        }) {
+            continue;
+        }
+        let parent = out[i].clone();
+        let Some(order) = parent.breakdown() else {
+            continue;
+        };
+        let mut owners = vec![];
+        for (position, component) in order.iter().enumerate() {
+            let crate::breakdown::Component::Lemma(index) = *component else {
+                continue;
+            };
+            let l = &parent.lemmas[index];
+            if l.kind != LemmaKind::Predicate {
+                continue;
+            }
+            let Some((base, kind, class)) = crate::doeda_suffix::formation(&l.text) else {
+                continue;
+            };
+            let rest = &order[position + 1..];
+            let end = rest
+                .iter()
+                .position(|c| matches!(c, crate::breakdown::Component::Lemma(_)))
+                .unwrap_or(rest.len());
+            let Some(crate::breakdown::Component::Morpheme(at)) = rest.first() else {
+                continue;
+            };
+            if !matches!(parent.morphemes[*at].kind, MorphemeKind::Prefinal | MorphemeKind::Ending)
+                || !rest[..end].iter().any(|c| matches!(c, crate::breakdown::Component::Morpheme(j) if parent.morphemes[*j].kind == MorphemeKind::Ending))
+            { continue; }
+            owners.push((index, *at, base, kind, class));
+        }
+        let mut branches = vec![parent];
+        for (index, at, base, kind, class) in owners.into_iter().rev() {
+            let count = branches.len();
+            for j in 0..count {
+                let mut a = branches[j].clone();
+                a.lemmas[index] = lemma(base, kind);
+                a.morphemes.insert(at, morph("되다", MorphemeKind::Suffix));
+                for path in &mut a.spelling_paths {
+                    for recovery in path {
+                        if recovery.morpheme_index >= at {
+                            recovery.morpheme_index += 1;
+                        }
+                    }
+                }
+                a.rules.push(crate::doeda_suffix::rule(class).into());
+                branches.push(a);
+            }
+        }
+        out.extend(branches.into_iter().skip(1).filter_map(|mut a| {
+            (a.breakdown().is_some() && auxiliary_inflections_allowed(&mut a)).then_some(a)
+        }));
+    }
+}
+
 #[derive(Clone, Copy)]
 pub(crate) enum PredicateClass {
     Verb,
@@ -2324,7 +2388,10 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
         && !a.rules.iter().any(|r| {
             matches!(
                 r.as_str(),
-                "lexical.doeda.complement" | "lexical.doeda.extended"
+                "lexical.doeda.complement"
+                    | "lexical.doeda.extended"
+                    | "suffix.verb.doeda"
+                    | "suffix.adjective.doeda"
             )
         })
     {
@@ -2427,7 +2494,10 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             lemma.kind,
             LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
         );
-        let mut class = if lemma.kind == LemmaKind::Auxiliary {
+        let doeda_class = crate::doeda_suffix::owner_class(lemma, &a.rules, &a.morphemes[cursor..]);
+        let mut class = if doeda_class.is_some() {
+            doeda_class
+        } else if lemma.kind == LemmaKind::Auxiliary {
             auxiliary_class(
                 lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
                 connector,
@@ -2461,6 +2531,9 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                 class = Some(PredicateClass::Adjective);
                 inflected = true;
             }
+            if m.form == "되다" && doeda_class.is_some() {
+                inflected = true;
+            }
             cursor += 1;
         }
         let bare = inflected
@@ -2490,6 +2563,9 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                 .get(cursor)
                 .filter(|m| m.kind == MorphemeKind::Ending)
         {
+            if bare && m.form == "는" && matches!(doeda_class, Some(PredicateClass::Adjective)) {
+                return false;
+            }
             // KRDict 73878/73888 list bare adjectives/copulas; 73879 lists
             // verbs and existential heads. Unknown lexical classes survive.
             // Negative paradigms need their own evidence, not inherited POS.
@@ -5040,6 +5116,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
             || auxiliary_inflections_allowed(a)
     });
     add_lexical_doeda_roles(&mut out);
+    add_doeda_suffixes(&mut out);
     // Noun/adverb -이 homonyms retain distinct functions despite identical
     // lemma/morpheme fields. Other semantic duplicates share rule names, but spelling paths remain
     // alternatives. A derivation with no spelling obligation subsumes others.

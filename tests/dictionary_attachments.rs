@@ -60,6 +60,7 @@ impl Fixture {
             "krdict-continuation-left.json",
             "krdict-emphatic-ending.json",
             "krdict-doeda-complement.json",
+            "krdict-doeda-suffix.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -243,6 +244,31 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     );
     assert_eq!(complement_boundaries.len(), 11);
     structural_ids.extend(complement_boundaries.iter().map(String::as_str));
+    let suffix: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/doeda-suffix-sources.json")).unwrap();
+    let suffix_corrections: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/doeda-suffix-corrections.json")).unwrap();
+    let mut suffix_boundaries: Vec<_> = suffix["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["verdict"] == "forbidden")
+        .map(|c| format!("{}-policy", c["id"].as_str().unwrap()))
+        .collect();
+    suffix_boundaries.extend(
+        suffix_corrections["corrections"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|c| {
+                format!(
+                    "{}-policy",
+                    c["replacement_control"]["id"].as_str().unwrap()
+                )
+            }),
+    );
+    assert_eq!(suffix_boundaries.len(), 20);
+    structural_ids.extend(suffix_boundaries.iter().map(String::as_str));
     let mut structural = self::suite();
     structural
         .cases
@@ -251,7 +277,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(boundaries.passed(), "{:?}", boundaries.violations);
     assert_eq!(
         (boundaries.required_total, boundaries.forbidden_total),
-        (0, 46)
+        (0, 66)
     );
     assert_eq!(
         raw.forbidden_present,
@@ -294,7 +320,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2518, 1964)
+        (4028, 1994)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

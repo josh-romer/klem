@@ -1,5 +1,42 @@
 # Performance
 
+## Source-listed -되다 suffixes (COV-022m)
+
+Measured 2026-10-04 on an AMD Ryzen AI MAX+ 395, Linux x86-64, using the
+verified Nix release packages immediately before and after the 158 finite
+suffix formations. Input is the complete pinned MuJeong novel (786,078 UTF-8
+bytes). Five fresh processes per version/workload were interleaved, reversing
+version order on alternate rounds. Filesystem data was warm; each CLI cache
+started empty. Timing includes startup, optional dictionary/spacing processing,
+JSONL serialization and output to `/dev/null`. GNU Time reports process peak
+RSS; wall time uses a high-resolution monotonic clock.
+
+| Workload | Cache budget | Before median | After median | Before peak RSS | After peak RSS |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Unannotated JSONL | 0 | 1.319 s | 1.320 s | 4.37 MiB | 4.23 MiB |
+| Unannotated JSONL | 8 MiB | 0.820 s | 0.817 s | 15.36 MiB | 15.53 MiB |
+| Raw candidates with dictionary annotations | 0 | 2.131 s | 2.128 s | 15.49 MiB | 15.71 MiB |
+| Raw candidates with dictionary annotations | 8 MiB | 1.729 s | 1.732 s | 26.86 MiB | 26.90 MiB |
+| Headword-only | 8 MiB | 1.773 s | 1.787 s | 26.95 MiB | 26.90 MiB |
+| Compatible | 8 MiB | 1.772 s | 1.787 s | 26.89 MiB | 26.84 MiB |
+| Headword-only with spacing | 8 MiB | 2.371 s | 2.383 s | 37.98 MiB | 38.13 MiB |
+| Compatible with spacing | 8 MiB | 2.352 s | 2.338 s | 38.02 MiB | 38.18 MiB |
+
+All eighty samples, exact commands/binary/source hashes and the actual producer
+are retained in [the timing archive](doeda-suffix-performance.json). The
+[offline gate](../tools/doeda_suffix_performance.py) recomputes medians,
+throughput and largest peaks. Six additional untimed uncached dictionary streams
+match the independent cached [broad comparison](doeda-suffix-observations.json.gz)
+hashes exactly, with 179,112 records each. Raw dictionary annotations and
+unannotated JSONL are separate workloads. Spacing uses the documented default
+search/cache bounds.
+
+The median changes range from -0.57% to +0.87% in these local samples. They
+establish neither statistical equivalence nor a portable latency bound. This
+historical novel does not establish modern-fiction performance or candidate
+precision; its source-listed additions are tracked independently of original
+gold annotations. Earlier measurements below retain their original engine scope.
+
 ## Written ㅂ compatibility and finite 오 forms (COV-021f)
 
 On 2026-09-27, three interleaved release CLI runs of the same MuJeong input
@@ -53,7 +90,7 @@ compatible-filter candidates across 151 word types. These measurements do not
 establish statistical equivalence or predict other hardware/books. Earlier
 measurements below retain their original implementation scope.
 
-## Full novel, current engine
+## Full novel, 2026-09-26 engine
 
 Measured 2026-09-26 on an AMD Ryzen AI MAX+ 395, Linux x86-64, Rust 1.98.1,
 release thin LTO. Input: all seven pinned Wikisource sections of 이광수's

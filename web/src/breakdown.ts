@@ -77,8 +77,11 @@ export function parts(
         entries.find((e) => token.dictionary?.readings?.[candidate]?.lemmas
           .find((l) => l.lemma_index === component.lemma)?.entries
           .some((a) => a.id === e.id && a.status === "unknown"));
-      if (fanRoot && entry && assessment?.entries.some(
-        (a) => a.id === entry?.id && a.status === "incompatible",
+      if (entry && assessment?.entries.some(
+        (a) => a.id === entry?.id && a.status === "incompatible" &&
+          (fanRoot || (lemma.kind === "root" && a.conflicts.some(
+            (c) => c.rule === "derivational_root",
+          ))),
       )) entry = undefined;
       const stem = ["predicate", "auxiliary", "copula"].includes(lemma.kind);
       const next = order[position + 1];
@@ -154,8 +157,8 @@ export function parts(
       a.lemmas[previous.lemma].text.endsWith("하다");
     const form = afterHa
       ? m.form.replace(/^어/, "여").replace(/^었/, "였")
-      : m.kind === "suffix" && m.form === "답다"
-        ? "답"
+      : m.kind === "suffix" && ["답다", "되다"].includes(m.form)
+        ? m.form.replace(/다$/, "")
         : m.form;
     return {
       form,

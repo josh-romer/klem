@@ -1,0 +1,1760 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-022m",
+  "measured_at": "2026-10-04T22:53:47.574131+00:00",
+  "comparison_sha256": "f82f9a38dd12ed1d58c86019c847be1cbfd2d565d32c965effcccd0ee7c94b12",
+  "package_sha256": "677e23594e426f910939ea20585031ad4bccda40cfc72c5ca5dabf4938bdde6a",
+  "before_cli": "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+  "cli": "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+  "before_cli_sha256": "9f6cd0ae4687910c10d3ff532a3bbb631294eca1061f2ddd3a07de68f80cbc8e",
+  "cli_sha256": "ef24a65d13f5359694c5f1d9ebba9bc7b3da2cd48bcff7a78d9158044c15cab6",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "input_source": "data/books/mujeong.txt",
+  "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+  "input_bytes": 786078,
+  "system": "Linux-7.2.8-x86_64-with-glibc2.42",
+  "machine": "x86_64",
+  "cpu_model": "AMD RYZEN AI MAX+ 395 w/ Radeon 8060S",
+  "time_executable": "/nix/store/6vrl8gs1971k9p913mq5y041mpscvbss-time-1.10/bin/time",
+  "cache_parity": [
+    {
+      "mode": "novel-raw",
+      "version": "before",
+      "cache_bytes": 0,
+      "jsonl_sha256": "9b0675705080470024e17b16a2ee7b26829e731f1f2a1d337f02993f3323bb4f",
+      "records": 179112,
+      "output_bytes": 255321676
+    },
+    {
+      "mode": "novel-raw",
+      "version": "after",
+      "cache_bytes": 0,
+      "jsonl_sha256": "a525c276c5dbbfb9eac7d9ef1662659a0268611c0549740eb2d6c576d09f2917",
+      "records": 179112,
+      "output_bytes": 255340717
+    },
+    {
+      "mode": "novel-headword",
+      "version": "before",
+      "cache_bytes": 0,
+      "jsonl_sha256": "153990413e3378ec2634b1583e23a91d3c99217f44fb5d81ec31208de54033fe",
+      "records": 179112,
+      "output_bytes": 127362406
+    },
+    {
+      "mode": "novel-headword",
+      "version": "after",
+      "cache_bytes": 0,
+      "jsonl_sha256": "d3226633aeeb5e2a526db940d4a1f20f2a7e85df54cd214dd9ea209648b2c3ab",
+      "records": 179112,
+      "output_bytes": 127380093
+    },
+    {
+      "mode": "novel-compatible",
+      "version": "before",
+      "cache_bytes": 0,
+      "jsonl_sha256": "264390c721a9de2a8ce2d3d836e7fac93d19849453c2fac53929c7fb496c58d0",
+      "records": 179112,
+      "output_bytes": 115380296
+    },
+    {
+      "mode": "novel-compatible",
+      "version": "after",
+      "cache_bytes": 0,
+      "jsonl_sha256": "a97d3edad93e710d0c4f0445fd71c7d390b34d5a22a22c936857ad65ae840334",
+      "records": 179112,
+      "output_bytes": 115397983
+    }
+  ],
+  "workloads": [
+    {
+      "mode": "novel-unannotated",
+      "cache_bytes": 0,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3217709900054615,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.3,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 3912,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.305142151977634,
+          "gnu_elapsed_seconds": 1.3,
+          "user_seconds": 1.29,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4172,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.318748568999581,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.3,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4064,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3160480910155457,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.3,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 3908,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3151607280015014,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.3,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4104,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3409188449732028,
+          "gnu_elapsed_seconds": 1.33,
+          "user_seconds": 1.33,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4084,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.320412886008853,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.31,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4332,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3205057939921971,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.31,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4472,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3186435080133379,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.3,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4344,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0"
+          ],
+          "seconds": 1.3201576999854296,
+          "gnu_elapsed_seconds": 1.31,
+          "user_seconds": 1.31,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 4080,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 1.3186435080133379,
+          "mib_per_second": 0.5685102870763229,
+          "max_peak_rss_kib": 4472
+        },
+        "after": {
+          "median_seconds": 1.3201576999854296,
+          "mib_per_second": 0.5678582182267059,
+          "max_peak_rss_kib": 4332
+        }
+      }
+    },
+    {
+      "mode": "novel-unannotated",
+      "cache_bytes": 8388608,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.8211743099964224,
+          "gnu_elapsed_seconds": 0.81,
+          "user_seconds": 0.81,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15080,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.812214078992838,
+          "gnu_elapsed_seconds": 0.81,
+          "user_seconds": 0.8,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15304,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.8124854159832466,
+          "gnu_elapsed_seconds": 0.81,
+          "user_seconds": 0.8,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15768,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.8065445009851828,
+          "gnu_elapsed_seconds": 0.8,
+          "user_seconds": 0.79,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15364,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.8223828680056613,
+          "gnu_elapsed_seconds": 0.82,
+          "user_seconds": 0.81,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15724,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.8235647350084037,
+          "gnu_elapsed_seconds": 0.82,
+          "user_seconds": 0.81,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15900,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.816981707001105,
+          "gnu_elapsed_seconds": 0.81,
+          "user_seconds": 0.8,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15508,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.819832977023907,
+          "gnu_elapsed_seconds": 0.81,
+          "user_seconds": 0.8,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15532,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.815400002989918,
+          "gnu_elapsed_seconds": 0.81,
+          "user_seconds": 0.8,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15596,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "seconds": 0.8249015650071669,
+          "gnu_elapsed_seconds": 0.82,
+          "user_seconds": 0.81,
+          "system_seconds": 0.0,
+          "peak_rss_kib": 15596,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 0.819832977023907,
+          "mib_per_second": 0.9144086909181885,
+          "max_peak_rss_kib": 15724
+        },
+        "after": {
+          "median_seconds": 0.816981707001105,
+          "mib_per_second": 0.9175999815758155,
+          "max_peak_rss_kib": 15900
+        }
+      }
+    },
+    {
+      "mode": "novel-raw",
+      "cache_bytes": 0,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.124327169993194,
+          "gnu_elapsed_seconds": 2.12,
+          "user_seconds": 1.93,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 15860,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.13217750901822,
+          "gnu_elapsed_seconds": 2.13,
+          "user_seconds": 1.93,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 15292,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.1210688579885755,
+          "gnu_elapsed_seconds": 2.11,
+          "user_seconds": 1.92,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 16068,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.1189904289785773,
+          "gnu_elapsed_seconds": 2.11,
+          "user_seconds": 1.91,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 15808,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.131131440983154,
+          "gnu_elapsed_seconds": 2.12,
+          "user_seconds": 1.93,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 15476,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.127720699994825,
+          "gnu_elapsed_seconds": 2.12,
+          "user_seconds": 1.93,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 15680,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.1224324149952736,
+          "gnu_elapsed_seconds": 2.12,
+          "user_seconds": 1.93,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 15940,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.149520979000954,
+          "gnu_elapsed_seconds": 2.14,
+          "user_seconds": 1.95,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 15848,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.143579497002065,
+          "gnu_elapsed_seconds": 2.14,
+          "user_seconds": 1.97,
+          "system_seconds": 0.16,
+          "peak_rss_kib": 15396,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "0",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 2.1520143039815594,
+          "gnu_elapsed_seconds": 2.15,
+          "user_seconds": 1.93,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 16088,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 2.131131440983154,
+          "mib_per_second": 0.351767321750061,
+          "max_peak_rss_kib": 15860
+        },
+        "after": {
+          "median_seconds": 2.127720699994825,
+          "mib_per_second": 0.3523312055448892,
+          "max_peak_rss_kib": 16088
+        }
+      }
+    },
+    {
+      "mode": "novel-raw",
+      "cache_bytes": 8388608,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7350777089886833,
+          "gnu_elapsed_seconds": 1.73,
+          "user_seconds": 1.54,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27500,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7254939299891703,
+          "gnu_elapsed_seconds": 1.72,
+          "user_seconds": 1.52,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27536,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7324083959974814,
+          "gnu_elapsed_seconds": 1.73,
+          "user_seconds": 1.52,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27220,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7051782160124276,
+          "gnu_elapsed_seconds": 1.7,
+          "user_seconds": 1.49,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27500,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7316086780047044,
+          "gnu_elapsed_seconds": 1.73,
+          "user_seconds": 1.55,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 27492,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.756811798986746,
+          "gnu_elapsed_seconds": 1.75,
+          "user_seconds": 1.55,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27496,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7290469059953466,
+          "gnu_elapsed_seconds": 1.72,
+          "user_seconds": 1.54,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 27548,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.7287864899844863,
+          "gnu_elapsed_seconds": 1.72,
+          "user_seconds": 1.53,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27016,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.720775469992077,
+          "gnu_elapsed_seconds": 1.71,
+          "user_seconds": 1.53,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27404,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+          ],
+          "seconds": 1.745972092001466,
+          "gnu_elapsed_seconds": 1.74,
+          "user_seconds": 1.53,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27408,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 1.7287864899844863,
+          "mib_per_second": 0.43363504032167643,
+          "max_peak_rss_kib": 27500
+        },
+        "after": {
+          "median_seconds": 1.7324083959974814,
+          "mib_per_second": 0.43272844961037815,
+          "max_peak_rss_kib": 27548
+        }
+      }
+    },
+    {
+      "mode": "novel-headword",
+      "cache_bytes": 8388608,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7732686449890025,
+          "gnu_elapsed_seconds": 1.77,
+          "user_seconds": 1.58,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27536,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7872927300049923,
+          "gnu_elapsed_seconds": 1.78,
+          "user_seconds": 1.56,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 26956,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7451293079939205,
+          "gnu_elapsed_seconds": 1.74,
+          "user_seconds": 1.55,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27508,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7589707400184125,
+          "gnu_elapsed_seconds": 1.75,
+          "user_seconds": 1.55,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27492,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7992386920086574,
+          "gnu_elapsed_seconds": 1.79,
+          "user_seconds": 1.59,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 27072,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.8015374609967694,
+          "gnu_elapsed_seconds": 1.8,
+          "user_seconds": 1.6,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27548,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7859855050046463,
+          "gnu_elapsed_seconds": 1.78,
+          "user_seconds": 1.55,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 27384,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7634282220096793,
+          "gnu_elapsed_seconds": 1.76,
+          "user_seconds": 1.56,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27592,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7818352099857293,
+          "gnu_elapsed_seconds": 1.78,
+          "user_seconds": 1.56,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 27440,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only"
+          ],
+          "seconds": 1.7996220010099933,
+          "gnu_elapsed_seconds": 1.79,
+          "user_seconds": 1.6,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27332,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 1.7732686449890025,
+          "mib_per_second": 0.42275737599625884,
+          "max_peak_rss_kib": 27592
+        },
+        "after": {
+          "median_seconds": 1.7872927300049923,
+          "mib_per_second": 0.41944018833999186,
+          "max_peak_rss_kib": 27548
+        }
+      }
+    },
+    {
+      "mode": "novel-compatible",
+      "cache_bytes": 8388608,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.775605757982703,
+          "gnu_elapsed_seconds": 1.77,
+          "user_seconds": 1.59,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 26928,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7989553049847018,
+          "gnu_elapsed_seconds": 1.79,
+          "user_seconds": 1.64,
+          "system_seconds": 0.14,
+          "peak_rss_kib": 26928,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7920159180066548,
+          "gnu_elapsed_seconds": 1.79,
+          "user_seconds": 1.6,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 27156,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7696080660098232,
+          "gnu_elapsed_seconds": 1.76,
+          "user_seconds": 1.57,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27328,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7776251919858623,
+          "gnu_elapsed_seconds": 1.77,
+          "user_seconds": 1.59,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 27224,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7825823029852472,
+          "gnu_elapsed_seconds": 1.78,
+          "user_seconds": 1.58,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27480,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7874595040048007,
+          "gnu_elapsed_seconds": 1.78,
+          "user_seconds": 1.58,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 27056,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7720805479912087,
+          "gnu_elapsed_seconds": 1.77,
+          "user_seconds": 1.58,
+          "system_seconds": 0.17,
+          "peak_rss_kib": 26596,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7528485149960034,
+          "gnu_elapsed_seconds": 1.75,
+          "user_seconds": 1.55,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 27536,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible"
+          ],
+          "seconds": 1.7357950410223566,
+          "gnu_elapsed_seconds": 1.73,
+          "user_seconds": 1.51,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 26912,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 1.7720805479912087,
+          "mib_per_second": 0.423040815013625,
+          "max_peak_rss_kib": 27536
+        },
+        "after": {
+          "median_seconds": 1.7874595040048007,
+          "mib_per_second": 0.41940105362520075,
+          "max_peak_rss_kib": 27480
+        }
+      }
+    },
+    {
+      "mode": "novel-headword-spacing",
+      "cache_bytes": 8388608,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3640958040195983,
+          "gnu_elapsed_seconds": 2.36,
+          "user_seconds": 2.13,
+          "system_seconds": 0.22,
+          "peak_rss_kib": 38712,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3827413560065906,
+          "gnu_elapsed_seconds": 2.38,
+          "user_seconds": 2.14,
+          "system_seconds": 0.22,
+          "peak_rss_kib": 38480,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3724530830222648,
+          "gnu_elapsed_seconds": 2.37,
+          "user_seconds": 2.14,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 38744,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3801867720030714,
+          "gnu_elapsed_seconds": 2.37,
+          "user_seconds": 2.15,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 38896,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.371343961014645,
+          "gnu_elapsed_seconds": 2.36,
+          "user_seconds": 2.15,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 38788,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.425085716007743,
+          "gnu_elapsed_seconds": 2.42,
+          "user_seconds": 2.2,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 38780,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3688782720128074,
+          "gnu_elapsed_seconds": 2.36,
+          "user_seconds": 2.13,
+          "system_seconds": 0.22,
+          "peak_rss_kib": 39048,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.373505499010207,
+          "gnu_elapsed_seconds": 2.37,
+          "user_seconds": 2.14,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 38460,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.370522040000651,
+          "gnu_elapsed_seconds": 2.36,
+          "user_seconds": 2.15,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 38820,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3902969540213235,
+          "gnu_elapsed_seconds": 2.38,
+          "user_seconds": 2.14,
+          "system_seconds": 0.23,
+          "peak_rss_kib": 38568,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 2.371343961014645,
+          "mib_per_second": 0.316133977869338,
+          "max_peak_rss_kib": 38896
+        },
+        "after": {
+          "median_seconds": 2.3827413560065906,
+          "mib_per_second": 0.31462181046305665,
+          "max_peak_rss_kib": 39048
+        }
+      }
+    },
+    {
+      "mode": "novel-compatible-spacing",
+      "cache_bytes": 8388608,
+      "samples": [
+        {
+          "run": 1,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3614143739978317,
+          "gnu_elapsed_seconds": 2.36,
+          "user_seconds": 2.13,
+          "system_seconds": 0.22,
+          "peak_rss_kib": 38320,
+          "exit_code": 0
+        },
+        {
+          "run": 1,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3380351570085622,
+          "gnu_elapsed_seconds": 2.33,
+          "user_seconds": 2.12,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 39096,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3179530009801965,
+          "gnu_elapsed_seconds": 2.31,
+          "user_seconds": 2.12,
+          "system_seconds": 0.18,
+          "peak_rss_kib": 38900,
+          "exit_code": 0
+        },
+        {
+          "run": 2,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3361681739916094,
+          "gnu_elapsed_seconds": 2.33,
+          "user_seconds": 2.13,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 38272,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3514655570033938,
+          "gnu_elapsed_seconds": 2.34,
+          "user_seconds": 2.12,
+          "system_seconds": 0.21,
+          "peak_rss_kib": 38728,
+          "exit_code": 0
+        },
+        {
+          "run": 3,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.360487636993639,
+          "gnu_elapsed_seconds": 2.35,
+          "user_seconds": 2.15,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 38880,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3452924379962496,
+          "gnu_elapsed_seconds": 2.34,
+          "user_seconds": 2.12,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 38616,
+          "exit_code": 0
+        },
+        {
+          "run": 4,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.315407555026468,
+          "gnu_elapsed_seconds": 2.31,
+          "user_seconds": 2.1,
+          "system_seconds": 0.2,
+          "peak_rss_kib": 38752,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "before",
+          "command": [
+            "/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.36230342098861,
+          "gnu_elapsed_seconds": 2.36,
+          "user_seconds": 2.1,
+          "system_seconds": 0.24,
+          "peak_rss_kib": 38936,
+          "exit_code": 0
+        },
+        {
+          "run": 5,
+          "version": "after",
+          "command": [
+            "/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--cache-bytes",
+            "8388608",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--suggest-spacing"
+          ],
+          "seconds": 2.3375286269874778,
+          "gnu_elapsed_seconds": 2.33,
+          "user_seconds": 2.13,
+          "system_seconds": 0.19,
+          "peak_rss_kib": 38900,
+          "exit_code": 0
+        }
+      ],
+      "summary": {
+        "before": {
+          "median_seconds": 2.3514655570033938,
+          "mib_per_second": 0.31880645542915353,
+          "max_peak_rss_kib": 38936
+        },
+        "after": {
+          "median_seconds": 2.3380351570085622,
+          "mib_per_second": 0.3206377787112321,
+          "max_peak_rss_kib": 39096
+        }
+      }
+    }
+  ],
+  "producer": {
+    "text": "\"\"\"Interleaved fresh-process MuJeong timing; original correctness streams are pinned.\"\"\"\nimport datetime\nimport hashlib\nimport json\nimport os\nimport platform\nimport statistics\nimport subprocess\nimport sys\nimport tempfile\nimport time\nfrom pathlib import Path\nsys.path.insert(0, '/home/josh/projects/klem/tools')\nfrom lexical_nada_audit import read, sha\nfrom doeda_suffix_compare import REPORT\nfrom doeda_suffix_package import REPORT as PACKAGE\nROOT = Path('/home/josh/projects/klem')\nBEFORE = Path('/nix/store/dnh7k69zasnd5ixvlc64swlas66h32ib-klem-0.1.0/bin/klem')\nAFTER = Path('/nix/store/swmbsn0czdib9jvb2wmk2yrdangh9m5r-klem-0.1.0/bin/klem')\nDICT = ROOT / 'data/dictionaries/krdict/krdict.db'\nBOOK = ROOT / 'data/books/mujeong.txt'\nTIME = Path('/run/current-system/sw/bin/time')\nOUTPUT = Path('/tmp/klem-doeda-suffix-novel-timing.json')\nassert not OUTPUT.exists()\ncomparison = read(REPORT)\nassert sha(BEFORE) == comparison['before_cli_sha256']\nassert sha(AFTER) == comparison['cli_sha256'] == read(PACKAGE)['cli_sha256']\nassert sha(DICT) == comparison['dictionary_sha256']\nnovel = {c['mode']: c for c in comparison['comparisons'] if c['source'].endswith('mujeong.txt')}\nassert all(c['source_sha256'] == sha(BOOK) for c in novel.values())\ndef command(cli, mode, cache):\n    cmd = [str(cli), 'text', str(BOOK), '--cache-bytes', str(cache)]\n    if mode != 'novel-unannotated':\n        cmd += ['--dictionary', str(DICT)]\n        if mode != 'novel-raw':\n            cmd += ['--dict-compatible' if 'compatible' in mode else '--dict-only']\n    if 'spacing' in mode:\n        cmd += ['--suggest-spacing']\n    return cmd\nmodes = [('novel-unannotated', 0), ('novel-unannotated', 8388608), ('novel-raw', 0), ('novel-raw', 8388608), ('novel-headword', 8388608), ('novel-compatible', 8388608), ('novel-headword-spacing', 8388608), ('novel-compatible-spacing', 8388608)]\nparity, workloads = [], []\nwith tempfile.TemporaryDirectory(prefix='klem-doeda-suffix-timing-') as directory:\n    tmp = Path(directory)\n    for mode in ('novel-raw', 'novel-headword', 'novel-compatible'):\n        for label, cli in (('before', BEFORE), ('after', AFTER)):\n            output = tmp / 'uncached.jsonl'\n            with output.open('wb') as out:\n                subprocess.run(command(cli, mode, 0), stdout=out, check=True)\n            h, lines, size = hashlib.sha256(), 0, 0\n            with output.open('rb') as out:\n                for chunk in iter(lambda: out.read(1024*1024), b''):\n                    h.update(chunk); lines += chunk.count(b'\\n'); size += len(chunk)\n            assert h.hexdigest() == novel[mode][label + '_jsonl_sha256'], (mode, label, h.hexdigest(), novel[mode][label + '_jsonl_sha256'])\n            assert lines == novel[mode]['records']\n            parity.append(dict(mode=mode, version=label, cache_bytes=0, jsonl_sha256=h.hexdigest(), records=lines, output_bytes=size))\n            output.unlink()\n            print('cache parity:', mode, label, lines, flush=True)\n    for mode, cache in modes:\n        samples = []\n        for run in range(5):\n            order = [('before', BEFORE), ('after', AFTER)]\n            if run % 2:\n                order.reverse()\n            for label, cli in order:\n                stats = tmp / 'time.txt'\n                cmd = command(cli, mode, cache)\n                started = time.perf_counter()\n                with open(os.devnull, 'wb') as sink:\n                    subprocess.run([str(TIME), '-f', '%U %S %e %M', '-o', str(stats), *cmd], stdout=sink, check=True)\n                elapsed = time.perf_counter() - started\n                user, system, rounded, rss = stats.read_text().split()\n                samples.append(dict(run=run + 1, version=label, command=cmd, seconds=elapsed, gnu_elapsed_seconds=float(rounded), user_seconds=float(user), system_seconds=float(system), peak_rss_kib=int(rss), exit_code=0))\n                print(mode, cache, run + 1, label, round(elapsed, 4), 'seconds', rss, 'KiB', flush=True)\n        summary = {}\n        for label in ('before', 'after'):\n            rows = [s for s in samples if s['version'] == label]\n            median = statistics.median(s['seconds'] for s in rows)\n            summary[label] = dict(median_seconds=median, mib_per_second=BOOK.stat().st_size / 1048576 / median, max_peak_rss_kib=max(s['peak_rss_kib'] for s in rows))\n        workloads.append(dict(mode=mode, cache_bytes=cache, samples=samples, summary=summary))\nscript = Path(__file__).read_text()\nreport = dict(schema_version=1, checklist='COV-022m', measured_at=datetime.datetime.now(datetime.timezone.utc).isoformat(), comparison_sha256=sha(REPORT), package_sha256=sha(PACKAGE), before_cli=str(BEFORE), cli=str(AFTER), before_cli_sha256=sha(BEFORE), cli_sha256=sha(AFTER), dictionary_sha256=sha(DICT), input_source='data/books/mujeong.txt', input_sha256=sha(BOOK), input_bytes=BOOK.stat().st_size, system=platform.platform(), machine=platform.machine(), cpu_model=next((line.split(':',1)[1].strip() for line in Path('/proc/cpuinfo').read_text().splitlines() if line.startswith('model name')), 'unknown'), time_executable=str(TIME.resolve()), cache_parity=parity, workloads=workloads, producer=dict(text=script, sha256=hashlib.sha256(script.encode()).hexdigest()), scope='Five interleaved fresh processes per version/workload; filesystem warm and CLI session caches empty. Includes startup, dictionary access, candidate expansion, JSONL serialization and writes to /dev/null. GNU Time process peak RSS plus high-resolution wall timing. No portable bound or statistical equivalence claim. Source/binary/complete stream hashes anchored to independent broad comparisons; uncached outputs match cached hashes in all three base filters. Timing runs occur after the coverage Nix job terminates.')\nOUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\\n')\nprint('Archived', OUTPUT, flush=True)\n",
+    "sha256": "b11eed3305409116cf11bc6e21291907d98bed797e8b5fc0edae28bf1f0e5180"
+  },
+  "scope": "Five interleaved fresh processes per version/workload; filesystem warm and CLI session caches empty. Includes startup, dictionary access, candidate expansion, JSONL serialization and writes to /dev/null. GNU Time process peak RSS plus high-resolution wall timing. No portable bound or statistical equivalence claim. Source/binary/complete stream hashes anchored to independent broad comparisons; uncached outputs match cached hashes in all three base filters. Timing runs occur after the coverage Nix job terminates."
+}

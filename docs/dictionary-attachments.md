@@ -36,6 +36,24 @@ that role under `--dict-compatible`. The lexical reading remains available.
 component order, original candidates and independent dictionary homonyms.
 Contextual senses and register are not selected by this policy.
 
+Source-listed `-되다` formations also offer explicit noun, adverb or bound-root
+lookup components with a suffix that owns its verb/adjective inflection. The
+base retains its native POS and role assessment; an inflected derived adjective
+does not turn its base entry into an adjective. The finite source set contains
+157 examples from suffix 74902 plus corpus-backed 타도되다. Whole-head readings
+remain available. Sixty tested paths have no native base head and therefore
+fail both dictionary filters even though the raw derivational path exists.
+
+For 속되다, native adjective 64223 records `俗되다`. The engine represents bound
+root 속, while noun 71278's eight interior/content/mind senses are an individually
+reviewed lexical-identity conflict for this exact suffix owner. Headword filtering
+retains the spelling match; compatibility filtering reports `derivational_root`
+and excludes that path. Ordinary nominal 속 uses stay compatible. The
+[correction archive](../tests/fixtures/doeda-suffix-corrections.json) preserves
+the original proposals and full native evidence. It does not settle historical
+root analysis, infer conflicts from missing origins, or adjudicate other
+homonyms' contextual senses. Broader formation review remains COV-022m.
+
 ## Evidence and decisions
 
 The [source review](dictionary-attachment-evaluation.json) retains the pinned

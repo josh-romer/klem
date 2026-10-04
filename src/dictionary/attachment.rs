@@ -647,7 +647,15 @@ impl Annotation {
                 connector.map(|i| analysis.morphemes[i].form.as_str()),
                 &analysis.rules,
             );
-            let class = match lemma.kind {
+            let suffix_class = morphs.first().and_then(|c| match c {
+                Component::Morpheme(i) => crate::doeda_suffix::owner_class(
+                    lemma,
+                    &analysis.rules,
+                    &analysis.morphemes[*i..],
+                ),
+                _ => None,
+            });
+            let class = suffix_class.or(match lemma.kind {
                 LemmaKind::Auxiliary => auxiliary_class(
                     lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
                     connector.map(|i| analysis.morphemes[i].form.as_str()),
@@ -656,7 +664,7 @@ impl Annotation {
                 LemmaKind::Copula => Some(PredicateClass::Copula),
                 LemmaKind::Predicate if lexical_doeda => Some(PredicateClass::Verb),
                 _ => None,
-            };
+            });
             let negative_lexical = if class.is_none()
                 && lemma.kind == LemmaKind::Auxiliary
                 && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
@@ -676,8 +684,15 @@ impl Annotation {
                 }
                 _ => None,
             });
-            let bare = morphs
-                .first()
+            // The suffix is a represented inflection owner. Its presence is
+            // not an intervening prefinal: 되다 + ending remains bare, while
+            // 되다 + 었/시 + ending does not.
+            let inflection = if suffix_class.is_some() {
+                morphs.get(1)
+            } else {
+                morphs.first()
+            };
+            let bare = inflection
                 .is_some_and(|c| matches!(c, Component::Morpheme(i) if Some(*i) == ending));
             // NIKL consultation 8390 recognizes 없다-influenced 없지 않느냐.
             // Keep that immediate owner, including an internal particle, apart
@@ -722,12 +737,14 @@ impl Annotation {
                 .then(|| habitual_condition_ending(analysis, rest))
                 .flatten();
             let intention_connector = intention_auxiliary_connector(analysis, rest);
-            let derived_adjective = morphs.iter().any(|c| {
-                matches!(c, Component::Morpheme(i)
+            let derived_adjective = matches!(suffix_class, Some(PredicateClass::Adjective))
+                || morphs.iter().any(|c| {
+                    matches!(c, Component::Morpheme(i)
                     if analysis.morphemes[*i].kind == MorphemeKind::Suffix
                     && analysis.morphemes[*i].form == "답다")
-            });
+                });
             let unclassified_derivation = !derived_adjective
+                && suffix_class.is_none()
                 && morphs.iter().any(|c| {
                     matches!(c, Component::Morpheme(i)
                     if analysis.morphemes[*i].kind == MorphemeKind::Suffix)
@@ -750,7 +767,13 @@ impl Annotation {
                 .flat_map(|m| &m.entries)
                 .map(|matched| {
                     let mut status = matched.pos_compatibility;
-                    let pos = matched.effective_pos();
+                    // The base keeps its own lexical-role compatibility. Its
+                    // noun/adverb POS cannot own the suffix's inflections.
+                    let pos = match suffix_class {
+                        Some(PredicateClass::Verb) => "동사",
+                        Some(PredicateClass::Adjective) => "형용사",
+                        _ => matched.effective_pos(),
+                    };
                     // The lexical construction follows the verb senses in
                     // KRDict 89858. Preserve the adjective homonym in lookup
                     // results, with its own known role conflict. Historical
@@ -787,6 +810,28 @@ impl Annotation {
                         conflicts.push(AttachmentConflict {
                             rule: AttachmentRule::LexicalRole,
                             morpheme_index: None,
+                        });
+                    }
+                    // KRDict 64223 records 俗되다. Entry 71278 is the
+                    // unrelated noun 속 (interior/content/mind), reviewed in
+                    // full in doeda-suffix-corrections.json. Bound root lookup
+                    // must not turn that spelling match into lexical evidence.
+                    // This excludes only the reviewed entry and owned suffix;
+                    // an absent origin alone is never a conflict.
+                    if lemma.kind == LemmaKind::Root
+                        && lemma.text == "속"
+                        && matches!(suffix_class, Some(PredicateClass::Adjective))
+                        && matched.entry.id == "krdict:71278"
+                        && matched.entry.headword == "속"
+                        && matched.effective_pos() == "명사"
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::DerivationalRoot,
+                            morpheme_index: morphs.first().and_then(|c| match c {
+                                Component::Morpheme(i) => Some(*i),
+                                _ => None,
+                            }),
                         });
                     }
                     if status == Compatibility::Compatible
@@ -1016,7 +1061,7 @@ impl Annotation {
                             morpheme_index: Some(i),
                         });
                     }
-                    if lemma.kind == LemmaKind::Predicate
+                    if (lemma.kind == LemmaKind::Predicate || suffix_class.is_some())
                         && status == Compatibility::Compatible
                         && let Some(i) = ending
                     {

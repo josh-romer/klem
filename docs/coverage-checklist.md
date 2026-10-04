@@ -4943,7 +4943,8 @@ review remains open under the completion review below.
   derivations remain open beyond these thirty forms.
 
 - [ ] **COV-022m — Noun/root/adverb formation with -되다.**
-  **Discovered; source/representation audit and implementation pending.**
+  **Partial: source-listed formations implemented and checked against broad
+  streams/corpora; native formation review pending.**
   COV-019ah's held-out token `MH2_0069-s169/7` 타도되었다 has original gold
   타도 + 되 + 었 + 다 and an already recovered whole 타도되다 analysis. The pinned
   dictionary lacks that whole head but retains noun 타도 (79461) and 타도하다
@@ -4995,8 +4996,77 @@ review remains open under the completion review below.
   [offline verifier](../tools/doeda_suffix_audit.py) checks every source example,
   native identity, importer projection, case ID and original before filter;
   original corpus extraction is also repeated when the files are present.
-  Candidate generation/ownership, dictionary policy, full native-lead review
-  and all broader corpus/context/register/independent checks remain open.
+  **Implementation checkpoint:** the engine expands these 158 finite source
+  heads into nominal, adverbial or bound-root bases with explicit `되다` suffixes,
+  preserving whole-head candidates and inflection ownership. Adjective-forming
+  suffixes retain their class through negation and exclude reviewed verbal
+  continuations. [Source tests](../tests/doeda_suffix_sources.rs) verify all
+  effective cases, original candidate/native order, spelling-index shifts,
+  Unicode/cache behavior and CLI/library filters. The
+  [explicit correction](../tests/fixtures/doeda-suffix-corrections.json) retains
+  all ten original nominal 속 proposals: native 속되다 records `俗되다`, whereas
+  noun 71278 describes interiors/contents/mind. Corrected bound-root paths remain
+  raw/headword candidates but identify that individually reviewed native entry's
+  `derivational_root` conflict; ordinary nominal 속 remains compatible.
+  The original source checkpoint and corpus gold are unchanged. The
+  [ledger verifier](../tools/doeda_suffix_regressions.py) checks 1,580 required
+  raw paths and twenty scoped controls, plus 1,510 required dictionary-policy
+  paths and thirty controls/conflicts. Sixty positive paths lack native base
+  heads; their filter exclusion is tested separately rather than counted as a
+  compatibility fix. Other homonym meanings and formal/historical base roles
+  remain agent proposals requiring review. The
+  [full source diagnostics](doeda-suffix-diagnostics.json.gz) retain all 41,238
+  source records across three filters and 2,953 stable individual changes.
+  Every addition reconstructs from original whole-predicate owners, including
+  parents removed by dictionary filters; every prior candidate/native assessment
+  and relative order survives. Spacing segments are independently replayed with
+  the exact old CLI, and all referenced native entries are retained. The
+  [comparator](../tools/doeda_suffix_diagnostics.py) has mutation guards for
+  lost candidates/assessments, borrowed roots, invented rules/recoveries and wrong
+  component indices. [Packaged checks](doeda-suffix-packaged-checks.json.gz)
+  preserve the successful Nix build (887 passing Rust tests), all 3,200 encoded
+  API judgments, 434 complete native entry endpoints, 36 browser exports and
+  six inspected desktop/mobile diagrams with suffix source clicks. The entire
+  source cohort also has exact debug/release parity; source/ownership indices
+  and all three filters agree across CLI/API/browser output. Historical
+  implementation text and the actual checking harness are retained, with
+  [offline verification](../tools/doeda_suffix_package.py) and mutation guards
+  against lost cases/candidates, rewritten native entries, wrong diagram order
+  and changed source anchors. Source-specific root/homonym hints, including
+  고's spelling-matching adnominal/noun entries and 막/참/호 homonyms, still need
+  lexical-identity review; a displayed dictionary hint is not proof of a root's
+  meaning. The [broad comparison](doeda-suffix-observations.json.gz) covers all
+  eight candidate/novel streams (1,128,312 records), preserving original
+  candidates, native readings/slot order and spacing alternatives. It retains
+  520 changed records, 195 individually attributed changes and 132 complete
+  native owners. The [held-out corpus comparison](doeda-suffix-corpora.json.gz)
+  checks all 66,570 original gold rows and all 32,096 distinct convertible
+  surfaces. All original expected lemmas, matches and recovered groups survive;
+  222 additions across 197 words retain 283 original token occurrences, complete
+  sentences and ten-column annotations. Every new path reconstructs from its
+  original whole-predicate owner. Recall and p95/max ambiguity remain unchanged;
+  mean candidates increase from 6.171647 to 6.176508 / 5.986525 to 5.991711 for
+  KAIST dev/test, and 5.659225 to 5.663730 / 5.747138 to 5.749975 for GSD dev/test.
+  The [broad](../tools/doeda_suffix_compare.py) and
+  [corpus](../tools/doeda_suffix_corpora.py) offline gates have mutation guards
+  for source/stream drift, original candidate/spacing loss, wrong derivational
+  roles, rewritten gold/context and punctuation-bearing original token boundaries.
+  These structural additions remain contextual proposals, not a measured
+  precision improvement. [Full-novel timing](doeda-suffix-performance.json)
+  retains eighty interleaved fresh-process samples across eight workloads,
+  including uncached/cached raw output, native annotations, both dictionary
+  filters and optional spacing. All six uncached dictionary streams match the
+  independently captured cached hashes (179,112 records each). Current medians
+  are 0.817 seconds for cached unannotated JSONL, 1.787 seconds for either
+  dictionary filter and 2.338–2.383 seconds with spacing; peak process RSS is
+  at most 38.18 MiB across these samples. Timing changes versus the exact prior
+  package are within 1% on this local input; this establishes no portable bound
+  or statistical equivalence. The [performance gate](../tools/doeda_suffix_performance.py)
+  recomputes medians/peaks and rejects lost workloads, misleading summaries and
+  cache-hash drift. [Measurement scope](performance.md) and full commands are
+  retained. Broader performance/modern-text sampling,
+  all 1,850 native-lead reviews and context/register/independent checks remain
+  open; this checkpoint does not close COV-022m.
 
 ### P3: dictionary and representation boundaries
 
@@ -5021,7 +5091,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 473 currently emitted canonical grammar forms.** The initial catalog
+  for all 474 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

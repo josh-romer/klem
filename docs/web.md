@@ -359,3 +359,12 @@ Root/related-predicate noun readings display the same root form before -이 whil
 The viewer orders 왕눈이 as either 왕눈 + 이 or 왕 + 눈 + 이, with the first 왕 carrying kind `prefix` and linking to 왕-. 점박이 offers 점 + 박 + 이 and 점 + 박이 with independent noun/suffix sources. Prefix and suffix homonyms remain dictionary alternatives; canonical analyses and ordered exports preserve component identities.
 
 The in-progress COV-022l noun formations preserve the different serialized suffix and bound-noun analyses of 못난이, even when they render identical text. 흰둥이 can display 희 + ㄴ + 둥이 with the complete suffix source. Raw option identities and exports retain the distinct analyses and dictionary role assessments.
+
+COV-022m adds selectable source-listed noun/adverb/root + -되다 readings.
+Canonical exports keep Suffix 되다, while the sentence diagram displays its stem
+되 before its own prefinals/ending (타도 되 었 다). The suffix's grammar source
+opens KRDict 74902 and preserves both original senses. Whole lexical choices
+remain available. Root 속's reviewed interior-noun conflict suppresses that
+entry's short English hint; it displays Root while all native lookup entries
+remain inspectable. Dictionary and compatibility toggles use the same separate
+headword-presence and per-entry conflict policies as the CLI.

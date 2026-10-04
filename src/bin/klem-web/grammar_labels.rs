@@ -102,6 +102,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-reported-retrospective-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-gam-question-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-emphatic-ending-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-doeda-suffix-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

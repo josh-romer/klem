@@ -2176,3 +2176,31 @@ conflicts. Native source POS, senses, forms and all example groups remain
 unchanged. Attribution: National Institute of Korean Language, Korean Basic
 Dictionary, CC BY-SA 2.0 KR. Authored construction tests are not contextual gold
 or an independent Korean-language review.
+
+COV-022m's `doeda-suffix-sources.json` preserves both complete KRDict -되다
+senses, all 157 examples, the corpus-backed 타도 observation, and 1,590 original
+agent proposals/controls. `krdict-doeda-suffix.json` is the explicitly documented
+English translation projection for finite importer tests; the source fixture
+and compressed preflight retain complete native multilingual entries. All
+original corpus annotations remain unchanged.
+
+`doeda-suffix-corrections.json` anchors the original fixture hash and preserves
+all ten original nominal 속 proposals beside replacement controls and bound-root
+positives. Full adjective 64223 (俗되다) and noun 71278 entries are included for
+the individually scoped lexical-identity review. Effective coverage consists
+of 1,580 required paths and twenty structural controls. The raw ledger retains
+missing-head paths; the compatibility ledger isolates known entry conflicts
+from absent headwords. Other homonyms, formal root history and contextual senses
+remain unjudged. `krdict-doeda-suffix-labels.json` retains complete suffix 74902
+for validating the new browser label's native source identity.
+
+`docs/doeda-suffix-corpora.json.gz` additionally retains the four complete,
+unchanged r2.15 KAIST/GSD development/test files, anchored to the original source
+hashes, so offline checks can verify every changed context independently of the
+restricted derivational-tag subset. Full source text, sentence blocks and
+ten-column annotations are unmodified; evaluation results and candidate proposals
+are separate fields. Attribution: UD Korean KAIST/GSD contributors and source
+corpora, [KAIST r2.15](https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15)
+and [GSD r2.15](https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15).
+Their CC BY-SA 4.0 annotation license and the underlying text rights described
+in the upstream READMEs apply separately from the code and dictionary licenses.

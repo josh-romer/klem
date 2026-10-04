@@ -16,7 +16,9 @@ impl Analysis {
     /// The engine emits one ending per predicate (including each auxiliary and
     /// copula), with its prefinals before it and nominalization particles after
     /// it. Nominals consume licensed suffixes, then particles. A final 답다
-    /// suffix consumes its own prefinals and ending. This also handles nominalizations
+    /// suffix consumes its own prefinals and ending. Source-listed -되다 also
+    /// consumes its own inflections after its noun/adverb/root lookup base.
+    /// This also handles nominalizations
     /// nested inside copulas. Reviewed noun/adverb bases before suffix 이/히
     /// have no inflectional ending. `derivation.nominal.compound` marks the first
     /// two lemmas as one noun-forming base; the suffix follows both components.
@@ -199,6 +201,9 @@ impl Analysis {
                 )
                 && self.rules.iter().any(|r| r == "suffix.nominal.i");
             let noun_suffix = noun_i || ((bagi || dungi) && index == 0);
+            let doeda_suffix =
+                crate::doeda_suffix::owner_class(lemma, &self.rules, &self.morphemes[cursor..])
+                    .is_some();
             let mut derived_predicate = false;
             if lemma.kind == LemmaKind::Nominal && !noun_suffix {
                 let start = cursor;
@@ -215,6 +220,13 @@ impl Analysis {
                     .map(|m| m.form.as_str())
                     .collect::<Vec<_>>();
                 if suffixes.last() == Some(&"답다") {
+                    derived_predicate = true;
+                    suffixes.pop();
+                }
+                if suffixes.last() == Some(&"되다") {
+                    if !doeda_suffix || suffixes.len() != 1 {
+                        return None;
+                    }
                     derived_predicate = true;
                     suffixes.pop();
                 }
@@ -235,6 +247,11 @@ impl Analysis {
                 {
                     return None;
                 }
+            }
+            if doeda_suffix && lemma.kind != LemmaKind::Nominal {
+                parts.push(Component::Morpheme(cursor));
+                cursor += 1;
+                derived_predicate = true;
             }
             if predicate {
                 lemma
@@ -281,7 +298,7 @@ impl Analysis {
                 && self.morphemes.get(cursor).is_some_and(|m| {
                     m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
                 });
-            if lemma.kind == LemmaKind::Root && !adverbial && !noun_i {
+            if lemma.kind == LemmaKind::Root && !adverbial && !noun_i && !derived_predicate {
                 return None;
             }
             if adverbial {

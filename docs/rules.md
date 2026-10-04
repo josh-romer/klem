@@ -4362,3 +4362,36 @@ The native 사고 날라 occurrence now supports 사고 + 날라 through the exi
 finite noun/main-나다 spacing template. Auxiliary 나다 and registered whole
 verbs retain their independent dictionary roles. Spacing limits and priority
 remain shared with the earlier templates, and original input spans are kept.
+
+### Source-listed noun/root/adverb formations with -되다 (COV-022m)
+
+Suffix KRDict 74902 explicitly lists 133 passive verb formations and 24 adjective
+formations. The engine supports those finite heads plus corpus-backed 타도되다.
+It expands existing whole-predicate candidates into a base lemma and canonical
+Suffix 되다, followed by that suffix's own prefinals and ending. For example,
+타도되었다 offers 타도 Nominal + 되다 Suffix + 었 Prefinal + 다 Ending;
+고돼요 offers 고 Root + 되다 Suffix + 어요 Ending. Whole-head readings remain.
+Nominalization can carry a particle or separate copula, and a later auxiliary
+retains its independent inflection owner. Multiple eligible owners expand
+iteratively; spelling recovery indices shift with every inserted suffix.
+
+`suffix.verb.doeda` and `suffix.adjective.doeda` identify the source class.
+Adjective formation cannot borrow verbal bare 는다/는 or reviewed verbal
+continuation licenses. Base roles are finite, attributed lookup proposals, not
+a general rule stripping 되다 from arbitrary dictionary heads. Root represents
+bound lookup material and does not assert a standalone dictionary word.
+
+The frozen source proposal for 속되다 originally borrowed nominal 속 by spelling.
+An explicit correction preserves that proposal as a scoped control and offers
+Root 속 for the recorded 俗 material. The unrelated interior noun remains in
+lookup results with a per-entry derivational conflict for this suffix path.
+Original source fixtures, whole-head corpus gold and other candidate judgments
+are unchanged. Source cases, raw/native ledgers and mutation guards distinguish
+required structural paths from unjudged homonym senses and contextual meanings.
+
+Evidence: [complete source checkpoint](doeda-suffix-source-preflight.json.gz),
+[corrections](../tests/fixtures/doeda-suffix-corrections.json),
+[source/ownership tests](../tests/doeda_suffix_sources.rs), and
+[ledger verifier](../tools/doeda_suffix_regressions.py). COV-022m remains open for
+other native heads, finer source conflicts, corpus/runtime/performance checks,
+formal/historical base analysis and independent contextual/register review.

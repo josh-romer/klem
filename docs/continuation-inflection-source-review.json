@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ae",
+  "status": "partial_finite_policy_with_preserved_source_tensions",
+  "source_sha256": "cb682b1bee17458d9ca6438ce490c07588265058b79c09009457ee5bad4b2740",
+  "additional_sha256": "aa50e0ce8c8d75a80ecc74ecccbf97750984320e3793b42a65e654c909b89f1b",
+  "queue_sha256": "8035a6154a8bbaee446dabc6045ecc3dddcb4543bee5ebc8351bf368ec09a9c3",
+  "judgments_sha256": "2f8ec6c9a1af42a1cca09f53e604b36fba9aaf4478f1c0ddca01420479e1ed73",
+  "guide": {
+    "url": "https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf",
+    "sha256": "f6558a802b61115ead3ed20af9ecd7cf7b56f94e4c5a3342bf67f40bf0811268",
+    "printed_pages": [
+      372,
+      373,
+      527,
+      544
+    ]
+  },
+  "primary_online_entries": [
+    "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62134",
+    "https://krdict.korean.go.kr/jpn/dicSearch/SearchView?ParaWordNo=80110"
+  ],
+  "rules": [
+    {
+      "rule": "continuation_left_tense",
+      "native_entries": [
+        "krdict:62601",
+        "krdict:62134"
+      ],
+      "connectors": [
+        "어 버리다",
+        "고 나다"
+      ],
+      "printed_pages": [
+        373,
+        527
+      ],
+      "ownership": "Only immediate connector-owner canonical prefinals 었/겠; earlier owners and right-side 어 버리다 tense remain independent."
+    },
+    {
+      "rule": "go_nada_honorific",
+      "native_entries": [
+        "krdict:62134"
+      ],
+      "connectors": [
+        "고"
+      ],
+      "printed_pages": [
+        372,
+        373
+      ],
+      "ownership": "Right-owner canonical 시; left 시 allowed. Other humble honorific forms remain unreviewed."
+    },
+    {
+      "rule": "go_nada_future",
+      "native_entries": [
+        "krdict:62134"
+      ],
+      "connectors": [
+        "고"
+      ],
+      "printed_pages": [
+        373
+      ],
+      "ownership": "Right-owner canonical 겠; 어 나다 and unrelated lexical verbs remain independent."
+    },
+    {
+      "rule": "go_nada_final_ending",
+      "native_entries": [
+        "krdict:62134"
+      ],
+      "connectors": [
+        "고"
+      ],
+      "printed_pages": [
+        372
+      ],
+      "ownership": "Canonical finite 는다/어요/으세요 and the alternate 어 + polite 요 path. Bare citation 다, plain connective 어 and other final forms are not newly adjudicated."
+    }
+  ],
+  "source_tensions": [
+    {
+      "id": "continuation-inflection-right-past-tension",
+      "guide_printed_page": 373,
+      "native_examples": 17,
+      "policy": "Unknown for right-owner 었 on native 고 나다; a separately known honorific/future/final-ending conflict still takes precedence.",
+      "counterexample_disposition": "native_retrospective_go_nada_counterevidence"
+    },
+    {
+      "id": "continuation-inflection-apheuda-class-tension",
+      "guide_printed_page": 373,
+      "native_parent_entries": [
+        "krdict:91874",
+        "krdict:601155"
+      ],
+      "lexical_entry": "krdict:62239",
+      "auxiliary_entry": "krdict:62134",
+      "policy": "Unknown for this native adjective directly before native 고 나다. Preserve adjective POS, all original translations, existing conflicts and separate homonyms. No inheritance across a negative, suffix or other auxiliary."
+    },
+    {
+      "id": "continuation-inflection-oda-time-and-class-tension",
+      "guide_printed_page": 544,
+      "native_auxiliary": "krdict:69517",
+      "policy": "No blanket adjective or future ban. Complete examples distinguish adjective changes, verbal growth 커 온, false 오-word spelling hits, possible separate main-verb clauses and future 밝아 올/닥쳐올. Sense and time reference need context."
+    }
+  ],
+  "discoveries": {
+    "total": 2122,
+    "per_disposition": {
+      "other_na_word_or_pronoun_not_established_as_auxiliary": 8,
+      "native_retrospective_go_nada_counterevidence": 17,
+      "bare_noun_plus_main_nada_alternative": 8,
+      "registered_lexical_tagonada_alternative": 18,
+      "registered_lexical_deulgonada_alternative": 1,
+      "broad_na_spelling_discovery_requires_individual_lexical_review": 2010,
+      "other_o_word_not_established_as_auxiliary": 5,
+      "native_adjective_change_oda_evidence": 49,
+      "lexical_growth_verb_kkeuda_alternative": 1,
+      "separate_clause_main_oda_alternative_requires_context": 1,
+      "native_future_balka_oda_counterevidence": 4
+    },
+    "spelling_hits_are_not_gold": true
+  },
+  "authored_policy_cases": 34,
+  "contextual_judgments": 0,
+  "original_evidence": "Original four preflight outputs, raw validity, corpus annotations and COV-019ad policy judgments are retained byte for byte. New finite policy cases are separate.",
+  "remaining": [
+    "Other final endings, humble prefinals, noncanonical contractions and register need individual source review.",
+    "All 2,010 broad spaced 고 나… discoveries remain individually queued; no automatic auxiliary interpretation.",
+    "아프다/right-past guide versus dictionary tension requires independent Korean-language review; Unknown is not a grammatical license.",
+    "오다 lexical combinations and temporal/guess/directional senses require context and individual entries.",
+    "Eight accident-noun/main-나다 alternatives expose the separately tracked COV-020r spacing gap.",
+    "Full streams, corpus evaluation and packaged CLI/API/browser checks must verify this policy before release."
+  ],
+  "independent_review": "pending"
+}

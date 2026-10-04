@@ -33,6 +33,7 @@
                 ./docs/question-case-source-preflight.json
                 ./docs/question-clause-additive-preflight.json
                 ./docs/continuation-left-source-preflight.json
+                ./docs/continuation-inflection-source-preflight.json
                 ./docs/continuation-gold-residual-preflight.json
                 ./examples
                 ./tools/corpus.rs
@@ -126,6 +127,11 @@
                 ./tools/continuation_left_broad_queue.py
                 ./tools/continuation_left_corpus_audit.py
                 ./tools/continuation_residual_audit.py
+                ./tools/continuation_inflection_audit.py
+                ./tools/continuation_inflection_additional.py
+                ./tools/continuation_inflection_review.py
+                ./tools/continuation_inflection_compare.py
+                ./tools/continuation_inflection_queue.py
                 ./tools/bare_noun_spacing_audit.py
                 ./tools/bare_noun_spacing_additional.py
                 ./tools/bare_noun_spacing_compare.py
@@ -136,6 +142,7 @@
                 ./web/tests/question-topic.mjs
                 ./web/tests/question-additive.mjs
                 ./web/tests/continuation-left.mjs
+                ./web/tests/continuation-inflection.mjs
                 ./web/tests/bare-noun-spacing.mjs
               ];
             };
@@ -154,6 +161,10 @@
             python tools/continuation_left_broad_queue.py --verify
             python tools/continuation_left_corpus_audit.py --verify
             python tools/continuation_residual_audit.py --verify
+            python tools/continuation_inflection_audit.py --verify
+            python tools/continuation_inflection_additional.py --verify
+            python tools/continuation_inflection_review.py --verify
+            python tools/continuation_inflection_queue.py --verify
             python tools/bare_noun_spacing_audit.py --verify
             python tools/bare_noun_spacing_additional.py --verify
             python tools/bare_noun_spacing_queue.py --verify

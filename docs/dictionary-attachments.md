@@ -29,6 +29,10 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `intention_verb` | Eleven reviewed verbal intention forms, shared with the engine | 좋으려다가 conflicts; 크려는 retains verbal 크다. |
 | `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
 | `continuation_verb` | Six source-scoped connectors before five native continuation auxiliaries | 좋아내다 conflicts; 커내다 retains the verb homonym. |
+| `continuation_left_tense` | Native 어 버리다 / 고 나다, immediate-left 었/겠 | 먹었어버리다 conflicts; 먹었지않아버리다 keeps the distinct tense owner. |
+| `go_nada_honorific` | Native 고 나다, right 시 | 먹고나셔서 conflicts; 먹으시고나서 remains. |
+| `go_nada_future` | Native 고 나다, right 겠 | 먹고나겠어서 conflicts; 어 나다 remains independent. |
+| `go_nada_final_ending` | Native 고 나다, finite 는다/어요/으세요, including 어 + 요 | 먹고난다 conflicts; 먹고난 and dictionary citation 먹고나다 remain separate. |
 | `habitual_condition_verb` | Canonical 을라치면, directly or through 지-negatives | Known adjective entries conflict; attested 있다 and verbal 늦다 remain. Different auxiliaries reset the dependency. |
 | `bare_copular_ending` | Seventeen exact factual 라-family endings at a bare lexical predicate boundary | 누이다 + 라고 conflicts; 누이다 + 으라고 and 누이 + 이다 + 라고 remain. |
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
@@ -1025,5 +1029,29 @@ intervening negative. Missing classes and other providers remain unknown.
 Existing conflicts take precedence, and raw candidates/native fields are intact.
 The 56 filter judgments and 276 individual entry judgments are independently
 tracked; they do not certify contextual meaning or register. 가다 and 오다
-have adjective evidence and are outside this restriction. The guide's further
-inflection and lexical restrictions remain open under COV-019ae.
+have adjective evidence and are outside this restriction.
+
+COV-019ae's [source review](continuation-inflection-source-review.json) adds
+four finite inflection checks tied to actual native entry IDs, headwords,
+homonym numbers and POS. The right auxiliary entry records the conflict and
+the exact immediate owner's morpheme index; another provider or a standalone
+auxiliary does not inherit the restriction. Earlier tense through a negative
+or another auxiliary remains independent. Right past/future on 어 버리다
+and the distinct 어 나다 construction remain independent too.
+
+The NIKL guide's broad right-past restriction on 고 나다 conflicts with
+17 complete native 고 났더니 examples. Those right-past assessments become
+Unknown. Native 중요성/최저치 examples also use adjective 아프다 directly
+before 고 나다; only that exact native left entry becomes Unknown in this
+immediate construction. Its original adjective POS stays intact, and its
+negatives, derivations and other continuation auxiliaries retain independent
+checks. Known conflicts still take precedence. These exceptions preserve
+source uncertainty rather than certify contextual grammaticality.
+
+Finite 는다/어요/으세요 checks include the alternate 어 + polite 요 path.
+Other final forms, plain connective 어 and citation 다 are not newly judged.
+오다's adjective and future examples require lexical and temporal context;
+no blanket exclusion follows from a spelling hit. Thirty-four authored policy
+cases remain separate from all original preflight, raw, corpus and policy gold.
+The [2,122 individually tracked discoveries](continuation-inflection-source-queue.json.gz)
+and independent Korean-language reviews remain open under COV-019ae.

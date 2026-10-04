@@ -2845,6 +2845,31 @@ review remains open under the completion review below.
   guide restrictions. Audit complete examples, exact owners, contractions,
   prefinals, endings, context/register and lexical alternatives before adding
   finite per-entry policy judgments. No blanket family or adjective ban follows.
+  **Partial finite policy implemented:** the
+  [source review](continuation-inflection-source-review.json) and
+  [individual discovery queue](continuation-inflection-source-queue.json.gz)
+  preserve 2,122 spelling hits, including 17 native 고 났더니 examples and
+  two adjective 아프다 + 고 나다 examples. These conflicting right-past and
+  immediate native adjective paths remain Unknown. Native 어 버리다 and 고 나다
+  check only immediate-left 었/겠; 고 나다 additionally checks right 시/겠
+  and reviewed finite 는다/어요/으세요, including the separate 어 + 요 path.
+  Earlier tense, left honorifics, 어 나다, citation 다 and lexical whole verbs
+  remain independent. No future/adjective 오다 ban is inferred from spelling.
+  [Thirty-four authored policy cases](../tests/fixtures/continuation-inflection-judgments.json)
+  remain separate from original gold. The original preflight and all native
+  translations are preserved; 328 complete native entries cover the frozen
+  word cohorts. Focused source/import/raw/NFC/NFD/cache/owner/filter/CLI
+  regressions pass. The [individual candidate review](continuation-inflection-candidate-review.json.gz)
+  verifies 619 entry changes and 113 filter changes across the frozen cohort
+  and full streams. All 1,128,312 packaged records and 66,570 original corpus
+  rows are verified; only historical 구겨졌고나 changes in the novel, whose
+  [complete original paragraph](continuation-inflection-novel-views.json)
+  remains unjudged. The [verification evidence](continuation-inflection-evaluation.json)
+  records 823 local tests, the full-corpus regression, 824 Nix tests, three flake
+  checks, 367-word/328-entry packaged API parity and Unicode/cache/browser/export
+  checks. Other final endings, humble prefinals,
+  lexical/temporal senses, register and independent source-tension judgments
+  remain open; the finite policy does not complete this item.
 
 - [ ] **COV-019af — Continuation-headed gold residuals.**
   The [unchanged gold preflight](continuation-gold-residual-preflight.json)
@@ -3171,6 +3196,18 @@ review remains open under the completion review below.
   Context/register, intended spacing, independent Korean review and broader
   bare-pair inventory remain open in COV-013/020; separate-word recovery does
   not change raw corpus recall or silently complete the larger families.
+
+- [ ] **COV-020r — Bare nouns before lexical 나다.**
+  The COV-019ae [source discovery queue](continuation-inflection-source-queue.json.gz)
+  identifies eight accident-noun/main-나다 alternatives, distinct from auxiliary
+  고 나다 and registered whole verbs such as 타고나다/들고나다. Preserve all
+  complete source groups and original raw paths. Audit native main 나다 62210's
+  senses and noun inventory, including 사고/교통사고, against whole lexical
+  headwords and independent spacing guidance. Add only licensed finite pairs
+  with exact noun/main-verb entry evidence, UTF-8/NFC/NFD spans, legacy-priority
+  budgets, filters and individual alternative tracking. Other omitted-space
+  noun/main-verb combinations remain open under COV-020; COV-020q's four-pair
+  completion does not establish them.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

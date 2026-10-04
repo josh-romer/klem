@@ -1,0 +1,4220 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ae",
+  "observations_sha256": "6a7f1ef822f3afa6239cad4518f22d1289faa4a3d1e85c4286a5195341f26b2d",
+  "source": "data/books/mujeong.txt",
+  "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+  "before_cli_sha256": "3d92b980a5b31bc0f9b4dfcb3c4bdce29ab9fc40386e7cd16288174fce8f0ae8",
+  "cli_sha256": "b23146c3c4b9f1cba6427b9b338f36fe87aa9c4106c32d4988f2c4cbe41f00a0",
+  "cases": [
+    {
+      "surface": "구겨졌고나",
+      "span": {
+        "start": 396092,
+        "end": 396107
+      },
+      "record": 89973,
+      "paragraph_span": {
+        "start": 394998,
+        "end": 396937
+      },
+      "complete_original_paragraph": "“또 날이 더운데” 하며 형식은 계향을 뒤세우고 종로를 향하여 나온다. 길가 초가 지붕에서는 가만가만히 김이 오른다. 벌써 사람들은 부채로 볕을 가리우고 다닌다. 손님도 없는 빙수 가게에 아롱아롱한 주렴이 무거운 듯이 가만히 있다. 바람이 불면 살랑살랑 소리가 나려니 하고 형식은 쓸데없는 생각을 한다. 계향은 길가 가게를 갸웃갸웃 엿보면서 한 손으로 치맛자락을 걷어들고 형식의 뒤로 따라온다. 형식의 누렇게 된 맥고자를 보고 저 사람은 무엇을 하는 사람인가, 어떠한 사람인가 생각한다. 그러고 자기가 날마다 만나는 여러 사람들을 생각하고 그 사람들과 형식과를 속으로 비교하여 본다. 그러나 계향은 아직도 자기가 만나는 사람이 어떠한 사람인 줄을 알 줄을 모른다. 다만 이 사람은 옷을 잘 못 입은 것을 보니 가난한 사람인가 보다 한다. 그러고 형식의 구겨진 두루마기를 본다. 계향은 ‘어젯밤 차에서 구겨졌고나. 왜 벗어서 걸지를 아니하였던고’ 한다. 그러고 형식의 발을 본다. ‘새 구두로구나’ 한다. 아까 담뱃불 붙여 주던 생각을 하고 그 데인 손가락을 보면서 ‘아직도 아픈 듯하다’ 한다. 그러고 형식이가 불붙은 성냥을 보고 ‘이리 주시오’ 하던 것을 생각하고 자기더러 ‘하시오’ 하는 사람은 처음 본다 한다. 소가 끄는 구루마를 피하여 섰다가 얼른 형식의 뒤를 따라가서 형식의 손을 잡는다. 형식은 잠깐 고개를 돌려 계향을 보고 웃으면서 계향의 잡은 손은 활개를 아니 친다. 두 사람은 팔각 국숫집 모퉁이를 돌아 비스듬한 고개로 올라간다. 계향의 이마에는 땀방울이 솟는다. 형식은 그것을 보고 잠깐 걸음을 그치며,",
+      "words": {
+        "before": {
+          "all": {
+            "normalized": "구겨졌고나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨져다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨져다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고나",
+                    "kind": "unclassified"
+                  }
+                ],
+                "morphemes": [],
+                "rules": [
+                  "identity"
+                ],
+                "unchanged": true
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고나다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "contraction.identical",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고느다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.eu",
+                  "ending"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "written_vowel_a"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌골다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.rieul",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌골다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.rieul",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌곻다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "ending",
+                  "irregular.hieut"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "hieut_irregular"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending",
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              }
+            ],
+            "dictionary": {
+              "source": "krdict",
+              "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+              "lemmas": [
+                {
+                  "lemma": {
+                    "text": "구겨다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨져다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고",
+                    "kind": "nominal"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고",
+                    "kind": "adverbial"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고나",
+                    "kind": "unclassified"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고나다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고느다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌골다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌곻다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:43493",
+                      "headword": "구겨지다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:36953",
+                      "headword": "구기다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:62134",
+                      "headword": "나다",
+                      "homonym": "2",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    },
+                    {
+                      "id": "krdict:62210",
+                      "headword": "나다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:27951",
+                      "headword": "지다",
+                      "homonym": "3",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62316",
+                      "headword": "지다",
+                      "homonym": "4",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62496",
+                      "headword": "지다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:63606",
+                      "headword": "지다",
+                      "homonym": "2",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:77247",
+                      "headword": "지다",
+                      "homonym": "5",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                }
+              ],
+              "readings": [
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "headword": {
+            "normalized": "구겨졌고나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              }
+            ],
+            "dictionary": {
+              "source": "krdict",
+              "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+              "lemmas": [
+                {
+                  "lemma": {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:43493",
+                      "headword": "구겨지다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:36953",
+                      "headword": "구기다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:62134",
+                      "headword": "나다",
+                      "homonym": "2",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    },
+                    {
+                      "id": "krdict:62210",
+                      "headword": "나다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:27951",
+                      "headword": "지다",
+                      "homonym": "3",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62316",
+                      "headword": "지다",
+                      "homonym": "4",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62496",
+                      "headword": "지다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:63606",
+                      "headword": "지다",
+                      "homonym": "2",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:77247",
+                      "headword": "지다",
+                      "homonym": "5",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                }
+              ],
+              "readings": [
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "compatible": {
+            "normalized": "구겨졌고나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              }
+            ],
+            "dictionary": {
+              "source": "krdict",
+              "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+              "lemmas": [
+                {
+                  "lemma": {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:43493",
+                      "headword": "구겨지다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:36953",
+                      "headword": "구기다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:62134",
+                      "headword": "나다",
+                      "homonym": "2",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    },
+                    {
+                      "id": "krdict:62210",
+                      "headword": "나다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:27951",
+                      "headword": "지다",
+                      "homonym": "3",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62316",
+                      "headword": "지다",
+                      "homonym": "4",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62496",
+                      "headword": "지다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:63606",
+                      "headword": "지다",
+                      "homonym": "2",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:77247",
+                      "headword": "지다",
+                      "homonym": "5",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                }
+              ],
+              "readings": [
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "after": {
+          "all": {
+            "normalized": "구겨졌고나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨져다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨져다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.yeo_absorption",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고나",
+                    "kind": "unclassified"
+                  }
+                ],
+                "morphemes": [],
+                "rules": [
+                  "identity"
+                ],
+                "unchanged": true
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고나다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "contraction.identical",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고느다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.eu",
+                  "ending"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "written_vowel_a"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌고다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌골다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.rieul",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌골다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.rieul",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌곻다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "ending",
+                  "irregular.hieut"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "hieut_irregular"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending",
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨졌다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              }
+            ],
+            "dictionary": {
+              "source": "krdict",
+              "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+              "lemmas": [
+                {
+                  "lemma": {
+                    "text": "구겨다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨져다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고",
+                    "kind": "nominal"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고",
+                    "kind": "adverbial"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고나",
+                    "kind": "unclassified"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고나다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고느다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌고다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌골다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌곻다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨졌다",
+                    "kind": "predicate"
+                  },
+                  "entries": []
+                },
+                {
+                  "lemma": {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:43493",
+                      "headword": "구겨지다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:36953",
+                      "headword": "구기다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:62134",
+                      "headword": "나다",
+                      "homonym": "2",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    },
+                    {
+                      "id": "krdict:62210",
+                      "headword": "나다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:27951",
+                      "headword": "지다",
+                      "homonym": "3",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62316",
+                      "headword": "지다",
+                      "homonym": "4",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62496",
+                      "headword": "지다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:63606",
+                      "headword": "지다",
+                      "homonym": "2",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:77247",
+                      "headword": "지다",
+                      "homonym": "5",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                }
+              ],
+              "readings": [
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "incompatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "incompatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "continuation_left_tense",
+                              "morpheme_index": 1
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "incompatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "incompatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "continuation_left_tense",
+                              "morpheme_index": 0
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    }
+                  ]
+                },
+                {
+                  "status": "unknown",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "unknown",
+                      "entries": []
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "compatible",
+                          "conflicts": []
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "incompatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "incompatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "continuation_left_tense",
+                              "morpheme_index": 0
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "incompatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "incompatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "continuation_left_tense",
+                              "morpheme_index": 1
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "headword": {
+            "normalized": "구겨졌고나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.identical",
+                  "contraction.vowel",
+                  "ending",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              }
+            ],
+            "dictionary": {
+              "source": "krdict",
+              "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+              "lemmas": [
+                {
+                  "lemma": {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:43493",
+                      "headword": "구겨지다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:36953",
+                      "headword": "구기다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:62134",
+                      "headword": "나다",
+                      "homonym": "2",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    },
+                    {
+                      "id": "krdict:62210",
+                      "headword": "나다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:27951",
+                      "headword": "지다",
+                      "homonym": "3",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62316",
+                      "headword": "지다",
+                      "homonym": "4",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62496",
+                      "headword": "지다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:63606",
+                      "headword": "지다",
+                      "homonym": "2",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:77247",
+                      "headword": "지다",
+                      "homonym": "5",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                }
+              ],
+              "readings": [
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "incompatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "incompatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "continuation_left_tense",
+                              "morpheme_index": 0
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "incompatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 2,
+                      "status": "incompatible",
+                      "entries": [
+                        {
+                          "id": "krdict:62134",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "continuation_left_tense",
+                              "morpheme_index": 1
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62210",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "compatible": {
+            "normalized": "구겨졌고나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "고",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "ending",
+                  "particle",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              }
+            ],
+            "dictionary": {
+              "source": "krdict",
+              "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+              "lemmas": [
+                {
+                  "lemma": {
+                    "text": "구겨지다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:43493",
+                      "headword": "구겨지다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "구기다",
+                    "kind": "predicate"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:36953",
+                      "headword": "구기다",
+                      "homonym": "0",
+                      "pos": "동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                },
+                {
+                  "lemma": {
+                    "text": "지다",
+                    "kind": "auxiliary"
+                  },
+                  "entries": [
+                    {
+                      "id": "krdict:27951",
+                      "headword": "지다",
+                      "homonym": "3",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62316",
+                      "headword": "지다",
+                      "homonym": "4",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:62496",
+                      "headword": "지다",
+                      "homonym": "1",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:63606",
+                      "headword": "지다",
+                      "homonym": "2",
+                      "pos": "동사",
+                      "pos_compatibility": "incompatible"
+                    },
+                    {
+                      "id": "krdict:77247",
+                      "headword": "지다",
+                      "homonym": "5",
+                      "pos": "보조 동사",
+                      "pos_compatibility": "compatible"
+                    }
+                  ]
+                }
+              ],
+              "readings": [
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:43493",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "status": "compatible",
+                  "lemmas": [
+                    {
+                      "lemma_index": 0,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:36953",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    },
+                    {
+                      "lemma_index": 1,
+                      "status": "compatible",
+                      "entries": [
+                        {
+                          "id": "krdict:27951",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62316",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:62496",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:63606",
+                          "status": "incompatible",
+                          "conflicts": [
+                            {
+                              "rule": "lexical_role",
+                              "morpheme_index": null
+                            }
+                          ]
+                        },
+                        {
+                          "id": "krdict:77247",
+                          "status": "compatible",
+                          "conflicts": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Historical spelling is preserved. This is a finite attachment assessment, not a correction to 구겨졌구나 or a contextual grammar verdict."
+    }
+  ]
+}

@@ -1,0 +1,1480 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ae",
+  "scope": "Authored finite per-entry policy judgments; source/raw/historical gold are independent and immutable. No contextual verdict.",
+  "cases": [
+    {
+      "id": "continuation-inflection-beorida-left-past",
+      "surface": "먹었어버리다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 0
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-left-future",
+      "surface": "먹겠어버리다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "겠",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 0
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-immediate-negative-past",
+      "surface": "먹지않았어버리다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 2,
+          "entry_id": "krdict:62601",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-left-past",
+      "surface": "먹었고나서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 0
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-left-future",
+      "surface": "먹겠고나서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "겠",
+          "kind": "prefinal"
+        },
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 0
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-immediate-negative-past",
+      "surface": "먹지않았고나서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 2,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-right-past",
+      "surface": "먹어버렸다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-right-future",
+      "surface": "먹어버리겠어요",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "겠",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-left-honorific",
+      "surface": "먹으셔버리다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "시",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-earlier-negative-past",
+      "surface": "먹었지않아버렸다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 2,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-beorida-other-owner",
+      "surface": "먹었어보아버리다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 2,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-left-honorific",
+      "surface": "먹으시고나서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "시",
+          "kind": "prefinal"
+        },
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-earlier-negative-past",
+      "surface": "먹었지않고나서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 2,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-adjective-change-owner",
+      "surface": "좋아지고나서",
+      "lemmas": [
+        {
+          "text": "좋다",
+          "kind": "predicate"
+        },
+        {
+          "text": "지다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 2,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-citation",
+      "surface": "먹고나다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-eo-nada-right-past",
+      "surface": "넘쳐났다",
+      "lemmas": [
+        {
+          "text": "넘치다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-eo-nada-right-honorific",
+      "surface": "넘쳐나시다",
+      "lemmas": [
+        {
+          "text": "넘치다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "시",
+          "kind": "prefinal"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-right-honorific",
+      "surface": "먹고나셔서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "시",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_honorific",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-right-honorific-past",
+      "surface": "먹고나셨다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "시",
+          "kind": "prefinal"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_honorific",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-right-future",
+      "surface": "먹고나겠어서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "겠",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_future",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-finite-present",
+      "surface": "먹고난다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "는다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_final_ending",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-retrospective",
+      "surface": "먹고났더니",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "더니",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "unknown",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-past-connector-tension",
+      "surface": "먹고났어서",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "unknown",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-native-adjective-nonpast",
+      "surface": "아프고난",
+      "lemmas": [
+        {
+          "text": "아프다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "은",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 0,
+          "entry_id": "krdict:62239",
+          "status": "unknown",
+          "conflicts": []
+        },
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-native-adjective-retrospective",
+      "surface": "아프고났더니",
+      "lemmas": [
+        {
+          "text": "아프다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "더니",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 0,
+          "entry_id": "krdict:62239",
+          "status": "unknown",
+          "conflicts": []
+        },
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "unknown",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-other-adjective",
+      "surface": "좋고나서",
+      "lemmas": [
+        {
+          "text": "좋다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 0,
+          "entry_id": "krdict:79033",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_verb",
+              "morpheme_index": 0
+            }
+          ]
+        },
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-growth-homonyms",
+      "surface": "크고나서",
+      "lemmas": [
+        {
+          "text": "크다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "어서",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 0,
+          "entry_id": "krdict:66584",
+          "status": "compatible",
+          "conflicts": []
+        },
+        {
+          "lemma_index": 0,
+          "entry_id": "krdict:66586",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_verb",
+              "morpheme_index": 0
+            }
+          ]
+        },
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-final-past",
+      "surface": "먹고났어요",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_final_ending",
+              "morpheme_index": 2
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-final-past-particle",
+      "surface": "먹고났어요",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "요",
+          "kind": "particle"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_final_ending",
+              "morpheme_index": 2
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-nada-final-request",
+      "surface": "먹고나세요",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "나다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "으세요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62134",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "go_nada_final_ending",
+              "morpheme_index": 1
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-original-read-left-past",
+      "surface": "읽었어버려요",
+      "lemmas": [
+        {
+          "text": "읽다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 0
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-original-read-left-future",
+      "surface": "읽겠어버려요",
+      "lemmas": [
+        {
+          "text": "읽다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "겠",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "continuation_left_tense",
+              "morpheme_index": 0
+            }
+          ]
+        }
+      ],
+      "filter_retained": false,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-original-read-right-past",
+      "surface": "읽어버렸어요",
+      "lemmas": [
+        {
+          "text": "읽다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "continuation-inflection-original-read-right-future",
+      "surface": "읽어버리겠어요",
+      "lemmas": [
+        {
+          "text": "읽다",
+          "kind": "predicate"
+        },
+        {
+          "text": "버리다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "겠",
+          "kind": "prefinal"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "lemma_index": 1,
+          "entry_id": "krdict:62601",
+          "status": "compatible",
+          "conflicts": []
+        }
+      ],
+      "filter_retained": true,
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ]
+}

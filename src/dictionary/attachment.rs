@@ -33,6 +33,14 @@ pub enum AttachmentRule {
     RepetitiveVerb,
     /// Five reviewed continuation auxiliaries require a verbal left owner.
     ContinuationVerb,
+    /// Native 어 버리다 / 고 나다 exclude tense on the immediate connector owner.
+    ContinuationLeftTense,
+    /// Native 고 나다 places 시 on the preceding owner.
+    GoNadaHonorific,
+    /// Native 고 나다 excludes right-owner 겠.
+    GoNadaFuture,
+    /// Individually reviewed finite endings of native 고 나다.
+    GoNadaFinalEnding,
     NeuraVerb,
     AuxiliaryClass,
     NegativeLexicalClass,
@@ -333,6 +341,44 @@ fn continuation_verb_connector(
     }
 }
 
+// Provider names or reused IDs alone cannot establish these native restrictions.
+fn native_auxiliary(matched: &super::EntryMatch, head: &str, id: &str) -> bool {
+    matched.entry.id == id
+        && matched.entry.headword == head
+        && matched.entry.homonym == "2"
+        && matched.entry.pos == "보조 동사"
+        && matched.effective_pos() == "보조 동사"
+}
+
+fn owner_prefinal(analysis: &Analysis, morphs: &[Component], forms: &[&str]) -> Option<usize> {
+    morphs.iter().find_map(|c| match c {
+        Component::Morpheme(i)
+            if analysis.morphemes[*i].kind == MorphemeKind::Prefinal
+                && forms.contains(&analysis.morphemes[*i].form.as_str()) =>
+        {
+            Some(*i)
+        }
+        _ => None,
+    })
+}
+
+fn go_nada_final_ending(analysis: &Analysis, morphs: &[Component], ending: usize) -> bool {
+    match analysis.morphemes[ending].form.as_str() {
+        "는다" | "어요" | "으세요" => true,
+        // The same polite final spelling also has an 어 + 요 path. Plain
+        // connective 어 and particles on 어서 remain independent.
+        "어" => morphs
+            .iter()
+            .position(|c| *c == Component::Morpheme(ending))
+            .is_some_and(|i| {
+                matches!(&morphs[i + 1..], [Component::Morpheme(j)]
+                if analysis.morphemes[*j].kind == MorphemeKind::Particle
+                && analysis.morphemes[*j].form == "요")
+            }),
+        _ => false,
+    }
+}
+
 // Both expressive 하다 and repetitive 대다 depend on the lexical head
 // through 지-negatives only. Other auxiliaries and derivations start their
 // own class boundary; source restrictions must not leak across that owner.
@@ -581,6 +627,7 @@ impl Annotation {
         }
         let mut previous_class = None;
         let mut connector: Option<usize> = None;
+        let mut previous_morphs: &[Component] = &[];
         while let Some((Component::Lemma(index), rest)) = components.split_first() {
             let end = rest
                 .iter()
@@ -1520,7 +1567,29 @@ impl Annotation {
                         let nonverbal = !unclassified_derivation
                             && (derived_adjective || lemma.kind == LemmaKind::Copula
                                 || matches!(pos, "형용사" | "보조 형용사"));
-                        if nonverbal {
+                        // Native 중요성/최저치 examples use adjective 아프다
+                        // directly before 고 나다. Preserve that source tension;
+                        // do not invent a verb class or propagate it through 지.
+                        let source_tension = matched.entry.id == "krdict:62239"
+                            && matched.entry.headword == "아프다"
+                            && matched.entry.homonym == "0"
+                            && matched.entry.pos == "형용사"
+                            && pos == "형용사"
+                            && !derived_adjective
+                            && !unclassified_derivation
+                            && Some(i) == ending
+                            && analysis.morphemes[i].form == "고"
+                            && components.first().is_some_and(|c| {
+                                matches!(c, Component::Lemma(n)
+                                    if analysis.lemmas[*n].kind == LemmaKind::Auxiliary
+                                    && analysis.lemmas[*n].text == "나다"
+                                    && self.lemmas.iter().find(|m| m.lemma == analysis.lemmas[*n])
+                                        .is_some_and(|m| m.entries.iter().any(|e|
+                                            native_auxiliary(e, "나다", "krdict:62134"))))
+                            });
+                        if source_tension {
+                            status = Compatibility::Unknown;
+                        } else if nonverbal {
                             status = Compatibility::Incompatible;
                             conflicts.push(AttachmentConflict {
                                 rule: AttachmentRule::ContinuationVerb,
@@ -1531,6 +1600,40 @@ impl Annotation {
                             && status == Compatibility::Compatible
                         {
                             status = Compatibility::Unknown;
+                        }
+                    }
+                    if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        && lemma.kind == LemmaKind::Auxiliary
+                    {
+                        let go_nada = connector.is_some_and(|i| analysis.morphemes[i].form == "고")
+                            && native_auxiliary(matched, "나다", "krdict:62134");
+                        let eo_beorida = connector.is_some_and(|i| analysis.morphemes[i].form == "어")
+                            && native_auxiliary(matched, "버리다", "krdict:62601");
+                        let left_tense = (go_nada || eo_beorida)
+                            .then(|| owner_prefinal(analysis, previous_morphs, &["었", "겠"]))
+                            .flatten();
+                        let honorific = go_nada.then(|| owner_prefinal(analysis, morphs, &["시"])).flatten();
+                        let future = go_nada.then(|| owner_prefinal(analysis, morphs, &["겠"])).flatten();
+                        let final_ending = ending.filter(|i|
+                            go_nada && go_nada_final_ending(analysis, morphs, *i));
+                        if go_nada {
+                            // Seventeen complete native 고 났더니 examples
+                            // conflict with the guide's broad right-past ban.
+                            if owner_prefinal(analysis, morphs, &["었"]).is_some() {
+                                status = Compatibility::Unknown;
+                            }
+                        }
+                        for (rule, i) in [
+                            left_tense.map(|i| (AttachmentRule::ContinuationLeftTense, i)),
+                            honorific.map(|i| (AttachmentRule::GoNadaHonorific, i)),
+                            future.map(|i| (AttachmentRule::GoNadaFuture, i)),
+                            final_ending.map(|i| (AttachmentRule::GoNadaFinalEnding, i)),
+                        ].into_iter().flatten() {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict {
+                                rule,
+                                morpheme_index: Some(i),
+                            });
                         }
                     }
                     EntryAssessment {
@@ -1559,6 +1662,7 @@ impl Annotation {
                 class
             };
             connector = ending;
+            previous_morphs = morphs;
         }
         let status = if lemmas
             .iter()

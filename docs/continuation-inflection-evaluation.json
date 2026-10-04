@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019ae",
+  "status": "verified_finite_policy_with_open_source_tensions",
+  "scope": "Four native attachment rules and two source-tension preservation cases; original candidates, gold and source fields remain unchanged.",
+  "counts": {
+    "authored_policy_cases": 34,
+    "source_discoveries": 2122,
+    "complete_native_entries": 328,
+    "frozen_surfaces": 367,
+    "individual_entry_changes": 619,
+    "filter_changes": 113,
+    "full_stream_records": 1128312,
+    "converted_gold_rows": 66570,
+    "packaged_cohort_streams": 18,
+    "contextual_judgments": 0
+  },
+  "artifacts": [
+    {
+      "path": "docs/continuation-inflection-source-review.json",
+      "sha256": "7b3e58667101e63d643c76dca6000a8e7d8d168c1bbbfbf1757091c99d837284"
+    },
+    {
+      "path": "docs/continuation-inflection-native-discovery.json.gz",
+      "sha256": "8c939fff9ad997334d4b0b55a7fa2db690d84e10fec58671eafb255c2bef0364"
+    },
+    {
+      "path": "docs/continuation-inflection-source-queue.json.gz",
+      "sha256": "8035a6154a8bbaee446dabc6045ecc3dddcb4543bee5ebc8351bf368ec09a9c3"
+    },
+    {
+      "path": "docs/continuation-inflection-candidate-review.json.gz",
+      "sha256": "f86ae7ffa88d66c4349fbfce0b1d14f06c78715c094178788b32275a692931a4"
+    },
+    {
+      "path": "docs/continuation-inflection-observations.json",
+      "sha256": "6a7f1ef822f3afa6239cad4518f22d1289faa4a3d1e85c4286a5195341f26b2d"
+    },
+    {
+      "path": "docs/continuation-inflection-novel-views.json",
+      "sha256": "e4c78042b5448323c7ba57209b91ae25c48adf292dcb95bc9fc89f04f2b7b30e"
+    },
+    {
+      "path": "docs/continuation-inflection-corpora.json",
+      "sha256": "bee6c5e3c4424395b53e9842fd2c60a6a239fdecc2ecdac96ab125051f414417"
+    },
+    {
+      "path": "docs/continuation-inflection-runtime.json.gz",
+      "sha256": "247d8a8ee6670eca92aa76232a3f1c5992c0241c04faae3fc147f6c7d48607cd"
+    },
+    {
+      "path": "docs/continuation-inflection-packaged-runtime.json.gz",
+      "sha256": "9ccf84e518a5a0d5d71a04246f7c02eadae048cfc6222568b8965772dbcfb80c"
+    },
+    {
+      "path": "docs/continuation-inflection-packaged-streams.json",
+      "sha256": "65a081abeff5b2a1e80dd04963b05f9f10da78a27c3cd0361c0b37a9b4dabcac"
+    },
+    {
+      "path": "tests/fixtures/continuation-inflection-sources.json",
+      "sha256": "cb682b1bee17458d9ca6438ce490c07588265058b79c09009457ee5bad4b2740"
+    },
+    {
+      "path": "tests/fixtures/continuation-inflection-additional.json",
+      "sha256": "aa50e0ce8c8d75a80ecc74ecccbf97750984320e3793b42a65e654c909b89f1b"
+    },
+    {
+      "path": "tests/fixtures/continuation-inflection-judgments.json",
+      "sha256": "2f8ec6c9a1af42a1cca09f53e604b36fba9aaf4478f1c0ddca01420479e1ed73"
+    }
+  ],
+  "verification": [
+    {
+      "command": "cargo test --locked --offline --all-targets --features web",
+      "status": "passed",
+      "tests": 823,
+      "log": "/tmp/klem-continuation-inflection-cargo.log"
+    },
+    {
+      "command": "cargo clippy --locked --offline --all-targets --features web -- -D warnings",
+      "status": "passed",
+      "tests": null,
+      "log": "/tmp/klem-continuation-inflection-clippy.log"
+    },
+    {
+      "command": "cargo test --locked --offline --test corpus -- --ignored",
+      "status": "passed",
+      "tests": 1,
+      "log": "/tmp/klem-continuation-inflection-full-corpus.log"
+    },
+    {
+      "command": "nix flake check --no-update-lock-file",
+      "status": "passed",
+      "tests": 824,
+      "log": "/tmp/klem-continuation-inflection-flake-recheck.log"
+    },
+    {
+      "command": "packaged runtime: all source words, Unicode/cache streams and native API entries",
+      "status": "passed",
+      "tests": null,
+      "log": "/tmp/klem-continuation-inflection-packaged-runtime.log"
+    },
+    {
+      "command": "packaged browser: native card, Unicode/filter selections, exports and mobile",
+      "status": "passed",
+      "tests": null,
+      "log": "/tmp/klem-continuation-inflection-packaged-browser.log"
+    },
+    {
+      "command": "nix flake check --no-update-lock-file (final source and candidate-review gates)",
+      "status": "passed",
+      "log": "/tmp/klem-continuation-inflection-flake-final.log"
+    },
+    {
+      "command": "nix run .# -- word 먹고난다 --dictionary data/dictionaries/krdict/krdict.db --dict-compatible",
+      "status": "passed",
+      "log": "/tmp/klem-continuation-inflection-nix-run.log"
+    }
+  ],
+  "nix": {
+    "system": "x86_64-linux",
+    "checks": [
+      "klem",
+      "web-assets",
+      "inventory-review"
+    ],
+    "package": "/nix/store/p4hajrh2s602q327rd2ipp4c366xbn5n-klem-0.1.0",
+    "cli_sha256": "181d674993487dbaf8726d65163e6a78aa49e2a74a5a4ae40455cd96688b822c",
+    "server_sha256": "233527223f06101b742868bc69c9305c5a3433821c648549e7257a19040da218",
+    "other_architectures": "not run"
+  },
+  "browser": {
+    "submissions": 6,
+    "words": 33,
+    "policyCases": 34,
+    "selections": 172,
+    "rawIndicesAndExportsMatchCli": true,
+    "nativeConflictEntryVisible": true,
+    "mobileFits": true,
+    "errors": [],
+    "desktop": "/tmp/klem-continuation-inflection-browser-cs6AYk/desktop.png",
+    "mobile": "/tmp/klem-continuation-inflection-browser-cs6AYk/mobile.png"
+  },
+  "source_review_verification_requirement_resolved": true,
+  "remaining": [
+    "Other final endings and humble/noncanonical prefinals.",
+    "Oda lexical and temporal senses, contractions and register.",
+    "Independent review of all source tensions and contextual interpretations.",
+    "Full broad auxiliary inventory and the separately tracked COV-020r bare-noun/main-nada spacing inventory."
+  ],
+  "verified_on": "2026-10-04",
+  "preview": {
+    "url": "http://127.0.0.1:8081",
+    "pid": 1704618,
+    "server_sha256": "233527223f06101b742868bc69c9305c5a3433821c648549e7257a19040da218",
+    "packaged_records_verified": true
+  }
+}

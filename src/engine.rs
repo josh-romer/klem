@@ -1382,10 +1382,11 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "느냐고" && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
-                // KRDict 86361: this canonical adjective report takes a
-                // non-ㄹ closed underlying stem. EuZero remains useful for
-                // irregular 추우냐 -> 춥다, but not 아프냐/기냐 aliases.
-                if ending.form == "으냐던데"
+                // COV-017bu: each canonical 으냐-family entry takes a
+                // non-ㄹ closed underlying stem (e.g. KRDict 76235, 79258,
+                // 87444, 80180, 86361). Check the recovered stem: EuZero
+                // still licenses 추우냐 -> 춥다 and 어떠냐 -> 어떻다.
+                if adjectival_question(ending.form)
                     && crate::hangul::coda(&p.stem).is_some_and(|t| matches!(t, 0 | 8))
                 {
                     continue;

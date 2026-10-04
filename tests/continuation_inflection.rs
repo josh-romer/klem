@@ -1,4 +1,6 @@
 //! COV-019ae: native source tensions and immediate inflection owners.
+#[path = "../tools/adjectival_allomorph.rs"]
+mod allomorph;
 use klem::dictionary::{
     AttachmentRule, Compatibility, Dictionary, DictionaryFilter, DictionarySession,
     SqliteDictionary, import_krdict,
@@ -131,7 +133,9 @@ fn original_raw_paths_and_four_historical_tensions_remain_unchanged() {
     {
         let mut frozen = modes["all"].clone();
         frozen.as_object_mut().unwrap().remove("dictionary");
-        let frozen: WordAnalysis = serde_json::from_value(frozen).unwrap();
+        let mut frozen: WordAnalysis = serde_json::from_value(frozen).unwrap();
+        // COV-017bu: preserve the snapshot and apply only the sourced owner correction.
+        frozen.analyses.retain(|a| !allomorph::reviewed_removal(a));
         let actual = engine.analyze_word(surface).unwrap();
         assert_eq!(actual, frozen, "{surface}");
         assert_eq!(

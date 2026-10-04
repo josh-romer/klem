@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 427 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 288 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 430 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/017bu/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 285 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1779,15 +1779,14 @@ review remains open under the completion review below.
   COV-017bu separately tracks the older adjectival-question allomorph audit.
   The [evidence gate](../tools/reported_retrospective_queue.py) runs in the flake; no implicit reporting 하다 is inserted.
 
-- [ ] **COV-017bu — Adjectival-question canonical allomorph audit.**
-  The retrospective family now rejects open and ㄹ stems for its distinct
-  canonical 으냐 component. Older families still need the same source audit:
-  아프냐고 / 기냐고 currently also emit 아프다 / 길다 + 으냐고 as Compatible,
-  despite native [79258](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79258)
-  restricting this adjectival component to non-ㄹ closed stems. Freeze every
-  affected older family and native homonym before correcting its boundaries;
-  preserve general 냐, irregular closed-stem recovery and prior analyses that
-  meet their own source notes. **Preflight frozen and verified:**
+- [x] **COV-017bu — Adjectival-question canonical allomorph audit.**
+  **Implemented and verified for all 18 reviewed canonical boundaries.**
+  아프냐고 / 기냐고 retain 아프다 / 길다 + 냐고 while rejecting the unsupported
+  으냐고 aliases. The recovered stem must have a non-ㄹ coda, as described in
+  native [79258](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79258)
+  and the other audited entries. General 냐, irregular closed-stem recovery,
+  closed auxiliaries and adjective-forming 답다 remain available.
+  **Preflight frozen and verified:**
   [source audit](adjectival-allomorph-audit.md),
   [immutable snapshot](adjectival-allomorph-source-preflight.json.gz),
   [matrix and original judgments](../tests/fixtures/adjectival-allomorph-preflight.json),
@@ -1798,14 +1797,48 @@ review remains open under the completion review below.
   homonyms, 1,703 native spelling observations, 1,399 prior words in three CLI
   filters, 289 original corpus tokens from all six local KAIST/GSD splits and
   1,700 complete native entries. The supplemented 396-case structural matrix
-  retains all 216 required proposals before editing the parser and exposes
-  53 forbidden canonical aliases. All 26 old required selectors are archived
+  retains all 216 required paths and now rejects all 180 forbidden paths; the
+  original baseline exposed 53 canonical aliases. All 26 old required selectors are archived
   verbatim, including the wrong 85921 citation on 기냔다. The original draft's
   18 regular-ㅂ derived proposals are explicitly corrected to forbidden and
   supplemented with required 아이다우냐-family recoveries; the original freeze
-  is unchanged. The flake runs the evidence verifier. **Remaining:** ordered-
-  owner correction, explicit ledger/test overlays, implementation, individual
-  loss tracking, complete stream/corpus comparisons and packaged validation.
+  is unchanged. [Explicit central corrections](../tests/fixtures/adjectival-allomorph-corrections.json)
+  preserve the 26 originals, ordered owners and corrected citations. An additional
+  [policy preflight](adjectival-allomorph-policy-preflight.json.gz) and
+  [eight policy corrections](../tests/fixtures/adjectival-allomorph-policy-corrections.json)
+  preserve the original dictionary judgments and pinned CLI records.
+  The [314-word checkpoint](adjectival-allomorph-checkpoint.json.gz) tracks 703 raw,
+  93 headword-filtered and 69 compatible-filtered removals individually, preserving
+  5,138 other candidate occurrences and their order/native assessments.
+  [Unicode/cache/filter/owner tests](../tests/adjectival_allomorphs.rs) and explicit
+  historical-fixture overlays retain the general and closed-stem readings.
+  Dictionary checks for caller-constructed invalid analyses remain exercised.
+  [Full stream comparisons](adjectival-allomorph-observations.json.gz) cover all
+  1,128,312 records in eight candidate/novel modes and all three frozen
+  1,399-word source streams. The combined report tracks 3,806 distinct removals,
+  29,691 retained candidate occurrences within changed records, and 282 complete
+  native owners, including [five additional sources](../tests/fixtures/adjectival-allomorph-additional-native.json).
+  All remaining paths, native assessments and spacing option order are preserved;
+  33 diagnostic spacing records lose only reviewed aliases within their segments.
+  [Every tracked path](../tests/adjectival_allomorph_streams.rs) is also replayed
+  as an individual parser regression across 1,642 distinct words.
+  [Four complete held-out reports](adjectival-allomorph-corpora.json.gz) retain
+  all 66,570 original ordered gold rows and component sets; only mean candidate
+  counts decrease. The full before/after JSONL is archived for offline verification.
+  The x86_64-linux flake passes all 861 tests with zero failures and one
+  downloaded-corpus test ignored; the four full held-out reports run separately.
+  [Packaged HTTP checks](adjectival-allomorph-packaged-runtime.json) preserve
+  CLI parity and ordered components for 2,050 words in NFC/NFD, all 860 encoded
+  candidate judgments, and all 1,706 complete native endpoints.
+  [Sixty browser exports](adjectival-allomorph-packaged-browser.json) match all
+  three CLI filters in both encodings. Nine selected diagrams retain the correct
+  open/ㄹ, closed irregular, derived, copula and auxiliary components and source
+  links; the inspected mobile layout has no horizontal overflow.
+  The local preview runs the tested Nix package. The flake verifies the source,
+  corrections, checkpoint, streams, corpus and packaged evidence reports.
+  The final fixture build's CLI/web executables are byte-identical to the tested
+  runtime package. The final-ending source 79258 has an explicit scoped inventory
+  disposition, retaining its distinct homonym and contextual limits.
   Broader spelling and attachment review stays open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

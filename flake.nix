@@ -38,6 +38,7 @@
                 ./examples
                 ./tools/corpus.rs
                 ./tools/validity.rs
+                ./tools/adjectival_allomorph.rs
                 ./README.md
                 ./LICENSE-MIT
                 ./LICENSE-APACHE
@@ -177,6 +178,16 @@
                 ./tools/reported_retrospective_queue.py
                 ./tools/reported_retrospective_runtime.py
                 ./tools/adjectival_allomorph_audit.py
+                ./tools/adjectival_allomorph_corrections.py
+                ./tools/adjectival_allomorph_policy.py
+                ./tools/adjectival_allomorph_checkpoint.py
+                ./tools/adjectival_allomorph_corpora.py
+                ./tools/adjectival_allomorph_compare.py
+                ./tools/adjectival_allomorph_runtime.py
+                ./tools/adjectival_allomorph_browser.py
+                ./examples/audit_adjectival_allomorph.rs
+                ./web/tests/adjectival-allomorph.mjs
+                ./tools/adjectival_allomorph.rs
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -236,6 +247,13 @@
             python tools/future_question_audit.py --verify
             python tools/reported_retrospective_queue.py --verify
             python tools/adjectival_allomorph_audit.py --verify
+            python tools/adjectival_allomorph_corrections.py --verify
+            python tools/adjectival_allomorph_policy.py --verify
+            python tools/adjectival_allomorph_checkpoint.py --verify
+            python tools/adjectival_allomorph_corpora.py --verify
+            python tools/adjectival_allomorph_compare.py --verify
+            python tools/adjectival_allomorph_runtime.py --verify
+            python tools/adjectival_allomorph_browser.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

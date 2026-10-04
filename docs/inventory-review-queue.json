@@ -9,6 +9,7 @@
   },
   "evidence_sha256": {
     "docs/additive-particle-evaluation.json": "eac963f858e7a1f1984ac5b33ae67bbd4b21c3c6f1ab5e0afab7eeb096fea6c8",
+    "docs/adjectival-allomorph-audit.md": "49eba2574968df163e2afe0d243ed0c8257e5d9df94861f103f67cb0e4082f9d",
     "docs/adjectival-question-evaluation.json": "4445015d072de05933a5e94a469fa0a6e7dd80465e43d8053b1600451a876b42",
     "docs/adverb-copula-evaluation.json": "ee996be5cd3d8ae7d9e8468f57fe70ef1dfc32b7af89f6dd229d772225aeacab",
     "docs/adverb-focus-evaluation.json": "29a9df5e7ecbe61fc86baaaff1a0c0772497f7cf0d596af033a98b23d5171a03",
@@ -32,7 +33,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "94485f3d3d50967f43d5df37729aa6055994b1fb8e035c6166df3c3f144e787c",
+    "docs/coverage-checklist.md": "4168db4366bd0d8bc903dddd6bd67283d95586407d970b3bff3eaba58787f16e",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -70,8 +71,8 @@
     "docs/intensive-aux-evaluation.json": "2bc5b02f0bb9752e785687c24564aacca3321223029cd2ed100386e403f2b234",
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "bc8b54d338a0dbdd5f65d348eb0888208402a378b61c90e98587a329fb88ab46",
-    "docs/inventory-reviews.json": "27206bae13371ce3ddc7f67025c6b3e09ae1dcf80c1debc94acd93de7829b9d5",
+    "docs/inventory-audit.md": "a819d72ed8c55b3641e738d62c910ae8684c8cb1665233f8a04f07ff1d93d279",
+    "docs/inventory-reviews.json": "218e52c1ef7a11b2cb24368c6ab5ccd79987295198875f0efc7499986066d2e8",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -150,6 +151,8 @@
     "docs/uncertainty-evaluation.json": "902cb50f1ffca1bbcec76821cf8530b2c624ffee2203df4828a3d0d11754ab17",
     "docs/vocative-evaluation.json": "d21badd5f8bca6e27a72946744619b55ae8e3329c6e3e8d21e3a33ead5525b46",
     "tests/additive_particles.rs": "fa85e73922b937bf32d46715ad16c2b52a356dd7e92e130c9c9a0ce8befb1959",
+    "tests/adjectival_allomorph_streams.rs": "db40791172031fc08d09cf796431ef3156edb24d54099c875c453ede950f7d51",
+    "tests/adjectival_allomorphs.rs": "a38da569733f9d21202dec7b79615d45c417c4f7631f521d9d7458dd296e5dfc",
     "tests/adjectival_question.rs": "143f121cd9a17c1aa7c603840a19cac415777dada7926c419d139baf8d134fd3",
     "tests/adverb_copulas.rs": "f17c288a41b8248d9a90f485c1545994427c14811e6ad1b08da596f232c2cf21",
     "tests/adverb_focus.rs": "e751644d2f97a5e9c0eec3791ebeee7f5aed4be3c646065de954eeb99284a0d9",
@@ -167,7 +170,7 @@
     "tests/concessive_endings.rs": "1dfde65ac303643dfe2bc0009924dcfd64ef214a6c9e1d3089179edff79e8551",
     "tests/conjectural_aux.rs": "7254550a14ac73387bdc64757413d09ac2051f56cc5da044a12a96a72f29d056",
     "tests/continuation_aux.rs": "42cfb0c08c87397255092d7aa4032d46407397ab7ba95381f480eb8df5ddd92a",
-    "tests/continuation_left.rs": "95a3088a68d5fc1dcddeed39362d4a47d25e61205ae55f04fbc0b3147688950f",
+    "tests/continuation_left.rs": "c0d34c4f1dec2e07b042ee8034710fb67e714dc7f4895f6a5960eabff3a0d544",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
@@ -176,13 +179,13 @@
     "tests/daga.rs": "7251d8b98515301f36bb97c3f16e35b2344a823e9efdb6eecf5570e21dc8840b",
     "tests/daga_source.rs": "674fc3820034625550fd6f887fe72af9ac977fe66906c505e1e31a6abaf95691",
     "tests/daji.rs": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
-    "tests/danda.rs": "7ac20e77584b520909734f32132a24af40c5cd626db0ad0f73f866149f31943a",
-    "tests/danikka.rs": "83c656930be046c9933bf273098c3155a4b333338376e7d75c8cc1ec20e7043b",
+    "tests/danda.rs": "c7676344ee45e26a302ccc148073210d46af0cc315d8f9994e284707106594ab",
+    "tests/danikka.rs": "a2e0907e285e0df46a889fa4589be49347e1092a9947a3adb09eceebeb5d8ef8",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
     "tests/deul_aux.rs": "e20650954008274fa5ea71fe86879a8e28e2e4eef3c8d69c60777db7fbc79a82",
-    "tests/dictionary.rs": "c604d5ae616f24d50dc5d3c8829103e41e57da810b34b19aa7265c67c2ea6f50",
-    "tests/dictionary_attachments.rs": "2fcfe6d477b4ab2068495309185e00ac7885104fab73edc0d32d4c62f9c3c7fc",
+    "tests/dictionary.rs": "ae344d96b39fe878a361780599c0cdfe4e52a335df72c5d20c62b8b62dacc7ef",
+    "tests/dictionary_attachments.rs": "d98ce7f949d2f7d81a18c169d19f1e6f5fa0b43a641fc6998b9ad2b6eea354d3",
     "tests/direct_command_review.rs": "5db54efda2ca9dd11da2b1c462c42fe0ef95675e80e87a981051e82cacf308c7",
     "tests/doe_endings.rs": "f9da534bcfbbf4ad3c543afa015f541ad4ebebeacf1fb206046e40c68741132f",
     "tests/emphatic_particles.rs": "508385f7bf89f5824262697e6a7cadcb4e4bcfbd7c2f41d12d564775fd9551de",
@@ -203,7 +206,7 @@
     "tests/fixtures/continuation-left-entry-judgments.json": "e6f54f547dbb566d817c0252e5c2653d6cce13cd12872402053ed35bbceb36b7",
     "tests/fixtures/deul-aux-entry-judgments.json": "9d8fe36bbbc3ca559530597b93a5ea94b68d1ca73a33d3bfb50c6c75bd921cff",
     "tests/fixtures/deul-aux-sources.json": "9b3506faf4f085ea2e0c10b158128e12bdaf11627c0fdee942f7e232160a4e5f",
-    "tests/fixtures/dictionary-attachments.json": "c18be5b090e2d10e6121bc57ceb41d4ef79870a7720da2e96c221c1a9c7b3a7c",
+    "tests/fixtures/dictionary-attachments.json": "8d967fb59f54e33c64c3944740c13606a5c47302f0ab4f1d0e62cacc534c0334",
     "tests/fixtures/direct-command-review-sources.json": "70e14f788e8b3f366c8722d3a1e77ffe48bbed204dd7f0268f489435c1ac0422",
     "tests/fixtures/eumse-sources.json": "052eb9d9b5e984214a4797954cfd835eaf2028a7505f46a989b5cbfa356ddf31",
     "tests/fixtures/exclamation-sources.json": "7b8fb47dbbfde9a20923ba2a9f9e0654a734e15ce744c0e74822cb46ffd6ff1f",
@@ -219,6 +222,7 @@
     "tests/fixtures/kaist-additive-particles.conllu": "2de09cb69d1ee5f7a9f62447dcb993632556677cb7a9bc7a0471ac42064115fc",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
     "tests/fixtures/krdict-additive-particles.json": "b125fe0c49e06bd0ed333cccbc3fcbd67330ae6a01d8a2ab2a04d42bd888584a",
+    "tests/fixtures/krdict-adjectival-allomorph.json": "71f9e8c86ca7ec8c1288a0a45374e13a94ac909edd77b66c4b6bb222c9ca10ba",
     "tests/fixtures/krdict-comparison-case.json": "c02f2fdd45911e9feb0d8eefe6bffa99da84d9b6d184c8bf0c636b816ec9e424",
     "tests/fixtures/krdict-comparison-particles.json": "7d855feab4200f6c6752599b977255bba5e3ff5a95f4b214cb9c2c4147a7a3a6",
     "tests/fixtures/krdict-copular-class.json": "463dee29d7405060e0d1909048488ed0334d43ac31f672a0aaaac13041ff2950",
@@ -250,7 +254,7 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "ed5ce174f41b4b5131dc92edc8f3c8191ac16171020a5c763469542dac9c1048",
+    "tests/fixtures/validity.json": "4f6a2a04574f19982c20695164d168b712bdffe05b0192f5ae221d8d82e0e016",
     "tests/geol.rs": "4615b2b5bbce7a8d749964b17b307eab383a1ae5e9c6d65f6c4be2ceacfd9cc7",
     "tests/geon_contrast.rs": "4190afb4c3360e075d40d39a9931081968250ad23293df29c256558208e581fc",
     "tests/gera_nera.rs": "aa2b63f8a07d7d66d2d5eef4a73ee1dd5c9d4c99d943676107f7cb5af26d200e",
@@ -284,15 +288,15 @@
     "tests/present_licenses.rs": "eaff7b990aa9fab07bb1978c5dbc99709cf9955e722dcd875a69d5b3981302d9",
     "tests/pretence_aux.rs": "a0c33ae0309a71fc05438cab81abcc4c06c25b30337024323413441fdec9f875",
     "tests/proposal_review.rs": "29ecc5fcaf45c3cf2f2464163cc3be9bb56d2843737d55177c0c7f72ec1bf1e0",
-    "tests/question_additive.rs": "0a0f4a18058e934b1f7b07e10654ba534a0db760c82fe8ec4934c2b47f1c8b6c",
+    "tests/question_additive.rs": "d9dc4a42699b63205e48d89cd94d855fb0d8bdd2fbf413dbf20bdf12b252a124",
     "tests/question_copulas.rs": "ab4d8122ea796f7605e30d52d975f68e300f347364fce3f9b8fe1aba89c254cd",
-    "tests/question_topic.rs": "c83020373073eb652e62ae1b2b67712451999f6d093246652fa968a28076087e",
-    "tests/quoted_bakke.rs": "2a0e7a98b20093538ecfc3f1b073f5ae1e079e851a9ba1e4b1946836ef16f57f",
-    "tests/quoted_neuni.rs": "261d2257f6ec2918bf7a6a69f4b848783ab88ef399a0028ff27eb7b8d7e7ae5f",
+    "tests/question_topic.rs": "63b19b32a1285f7310e6b52511c9296b74791c2dd2f58681f07f4c73d54e0467",
+    "tests/quoted_bakke.rs": "9c5f0cca917cd0ca1093262f634a5acca878b91adbdd19aa0a57ae5a1aa89e42",
+    "tests/quoted_neuni.rs": "abaf50ed3bb07b9d07cf0de699329ba629a48241c428fd42f611720998fa35dc",
     "tests/ra_conditions.rs": "11fb4970c75f5f22851dc4f927e9c64058d7211483a086740f9cbf67f4da4c8b",
     "tests/range_case_particles.rs": "25e9b75fe1d217b3847ff347443a41b85d55b17243725a56d5f0ca9f5ab3b6fd",
     "tests/repetitive_aux.rs": "de62a192d5cd30763cd91aa8893a21c61d9cc7dc4e52b34440737a1431550c70",
-    "tests/report_myeo_endings.rs": "d9c20311e05d5011de617aa18bac49a9756cc47f0864ddfcde79816849009671",
+    "tests/report_myeo_endings.rs": "a177b31312b04b97fa70289b5a432cbb928a7bc289c8545481fbeeb7da3f8be8",
     "tests/report_ne_endings.rs": "ed7d5584554f87a82dccc13ff0814729bb1db99318e622642b089ba127c5500d",
     "tests/report_ni_endings.rs": "ac64ae7829a4cf0c816599b8fa81685b75888c71f630bbcf35099767bde66c8d",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
@@ -314,10 +318,13 @@
     "tests/soseo.rs": "26ed056b762ff2c61ac2465ede22622157aff283f5478bab968336c32c7c2625",
     "tests/source_particles.rs": "5e1b760c098ccf89c8c0f4bc82bb819ad78f7a927968c2d52c6da0765261db9a",
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
-    "tests/transition_aux.rs": "edec173117d0a1d748f0012913ff7d5ce58080b7987819cc22fcb172bd8c6b5d",
+    "tests/transition_aux.rs": "ff9107b2542d6fb10ed2070c5f13a8761fcd6d6ff0d4e66bc5925484d6e704a3",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
+    "tools/adjectival_allomorph_compare.py": "1793d7193cea57e8a82db9af4881a75c73673b0aea4a70ba81e7d8433b9b6e9f",
+    "tools/adjectival_allomorph_runtime.py": "bd48472d74ad22d713a935242b79924008e59b1185badccdc2bccbbfe6cbe2bd",
     "web/src/grammar-labels.json": "70e60293e29dd963d047a146aeaf0ddbbbfd1460275d764248c97f29a511bb44",
+    "web/tests/adjectival-allomorph.mjs": "953c6080b3d52c25248b86e2efbe9d20d3a25fb8386b4d91028fd06cd6a065f7",
     "web/tests/browser.mjs": "74b4d87386348a0cedda170356868d57a8b3d1bd89b859d4e7516dd6066fdb2e",
     "web/tests/caution-ending.mjs": "40f695825c5bceec04ed1b4eac0db1900390c80dc976ad86788aa624205a6607"
   },
@@ -330,11 +337,11 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 429,
-      "unreviewed": 286
+      "scoped": 430,
+      "unreviewed": 285
     },
     "with_catalog_links": 439,
-    "with_judgment_citations": 460
+    "with_judgment_citations": 461
   },
   "entries": [
     {
@@ -30160,6 +30167,31 @@
       ],
       "cited_judgments": [
         {
+          "case": "adjectival-allomorph-1436429d4d33f893b697d793",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-33abec6e1d8c9b4809ad18bc",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-b9835992ba7e9c6644036681",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-dd6b33891ec72bc210fd92d2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-e0066c6d397354ee2dae2186",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "adjectival-question-0-existential-general",
           "judgment": "path",
           "verdict": "required"
@@ -30459,6 +30491,31 @@
       ],
       "cited_judgments": [
         {
+          "case": "adjectival-allomorph-4f47d5e6ca9bd4d17d96aade",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-af2aad7c2f7cdca5e98623c1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-b3d9add309c1a4aa7f548573",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-c4c79fdf99c368e29647ff40",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-ca241cf48abe0a18010c315c",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "adverb-copula-boundary-학생냐고",
           "judgment": "path",
           "verdict": "forbidden"
@@ -30560,6 +30617,31 @@
         }
       ],
       "cited_judgments": [
+        {
+          "case": "adjectival-allomorph-27fb786e59a7994e9654ee83",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-31a127ea45586fa217a677f7",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-5a4888a2ef6c0d3aaa6eec0b",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-75777241f9913c806dc2dca4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-9468b7bcbf5accb65726f2cc",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "quoted-neuni-particle-168",
           "judgment": "path",
@@ -65666,6 +65748,91 @@
       ],
       "cited_judgments": [
         {
+          "case": "adjectival-allomorph-191369933f28c03218058c92",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-26d7234ce1730a9cc1b2276f",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-2796e544c44944208f7f9443",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-280e677fa2ac826f8949d3c5",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-358565acde9e4e94eed9853b",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-3e88b39ae2fda120532a23d7",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-4779876a298ffa72af8df9f4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-49960ce9b5f2183311f4fb81",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-4be744826772be048357ffb0",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-5b5f544d6fa7c9403d576d90",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-6eca3e445abef1523c476e57",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-848849386b4ae76af71140ce",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-a9c66d8ed2d0cdb10e33157e",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-aab105aeec020c8ec11333ba",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-b1d0caa4a811f4239a21251f",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-c101a54fbd5f7d1d16557101",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-e05ecb0c74100fc8618457f9",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
           "case": "adjectival-question-0-desire",
           "judgment": "path",
           "verdict": "required"
@@ -65733,12 +65900,12 @@
         {
           "case": "question-case-control-copula-eunya-bare",
           "judgment": "path",
-          "verdict": "required"
+          "verdict": "forbidden"
         },
         {
           "case": "question-case-control-copula-eunya-case",
           "judgment": "path",
-          "verdict": "required"
+          "verdict": "forbidden"
         },
         {
           "case": "question-case-control-negative-adjectival-alternative",
@@ -65969,10 +66136,203 @@
       },
       "source_sha256": "fdf68e291c2f518e94ff98233c7856dab31aca038041f45960513a37d690e171",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "adjectival-allomorph-1c05008f7cc817be1917b915",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-3f2c1da012d8d2e0ec75cd64",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-43de0e39a3a79b9814877d4e",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-5583852f92760bd6b5afae64",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-56329079db0ee7fddb14cbae",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-57e2ea3ab50941e1c16cfaa9",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-5a85e88ba00f7dc022251dad",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-6d5fb74dfb20591a6004d219",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-7309df8c7b67774563a38080",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-732dfbe73e3fe61a9db49893",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-8d436c2835f1c42ca79cb0e9",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-9a36bfb4296082969ad88623",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-9d0851dc9aa0a3844b3266ff",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-aeb37cc9a129b05f9cee0c15",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-bbd17714c80fc28498bf15b0",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-ce236668ae69c238d89fcbcd",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-d88642605ceb1a327c2b39a7",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "quoted-bakke-composition-예쁘냐고밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79258",
+        "source_sha256": "fdf68e291c2f518e94ff98233c7856dab31aca038041f45960513a37d690e171",
+        "status": "scoped",
+        "checklist": [
+          "COV-017bu"
+        ],
+        "scope": "Canonical -으냐고 takes a non-ㄹ closed underlying owner; open/ㄹ stems retain distinct general 냐고 paths. This final-ending source is preserved independently from the homonymous grammar expression 87444, with both senses and all eight native example groups. Ordered-owner, closed irregular, suffix 답다, auxiliary/copula and filtered dictionary behavior are replayed in the source matrix and full streams. This disposition covers the source-scoped coda boundary rather than contextual or POS certainty.",
+        "remaining": "Broader sense/register interpretation, unreviewed prefinal and outer-particle combinations, historical spelling and independent Korean review remain open. Full native example observations are not automatically contextual gold.",
+        "evidence": [
+          {
+            "path": "tests/adjectival_allomorphs.rs",
+            "test": "matrix_preserves_irregular_general_auxiliary_and_derived_paths"
+          },
+          {
+            "path": "tests/adjectival_allomorph_streams.rs",
+            "test": "every_tracked_full_stream_removal_is_rejected_for_its_actual_owner"
+          },
+          {
+            "path": "tests/fixtures/krdict-adjectival-allomorph.json"
+          },
+          {
+            "path": "docs/adjectival-allomorph-audit.md"
+          },
+          {
+            "path": "tools/adjectival_allomorph_compare.py"
+          },
+          {
+            "path": "tools/adjectival_allomorph_runtime.py"
+          },
+          {
+            "path": "web/tests/adjectival-allomorph.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "adjectival-allomorph-9a36bfb4296082969ad88623",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-732dfbe73e3fe61a9db49893",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-6d5fb74dfb20591a6004d219",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-7309df8c7b67774563a38080",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-5a85e88ba00f7dc022251dad",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-1c05008f7cc817be1917b915",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-d88642605ceb1a327c2b39a7",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-bbd17714c80fc28498bf15b0",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-8d436c2835f1c42ca79cb0e9",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-57e2ea3ab50941e1c16cfaa9",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-3f2c1da012d8d2e0ec75cd64",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-56329079db0ee7fddb14cbae",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-ce236668ae69c238d89fcbcd",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-43de0e39a3a79b9814877d4e",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-aeb37cc9a129b05f9cee0c15",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-9d0851dc9aa0a3844b3266ff",
+            "judgment": "path"
+          },
+          {
+            "case": "adjectival-allomorph-5583852f92760bd6b5afae64",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -66014,6 +66374,91 @@
       ],
       "cited_judgments": [
         {
+          "case": "adjectival-allomorph-03685156d826c4a3c25b05c9",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-0c91bfd13726481c62a9df35",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-182d461b5237e71a33a1635f",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-1eab9e3667835bcaea8a90b6",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-48bd9f33555057ee637c07ac",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-50e67e5c0e5e86a8cc622140",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-56dfbf090b15c62ce305e394",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-596a2adc378843bcf5dc4c38",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-6216527768a2fc631485e933",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-639206aea0426e2f19d7b4eb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-6712499edbfcc1ed50ef1105",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-8feb40ca334553c9d8a88d69",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-b75b12f07a917f940533f5d3",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-bc786cc93e47170038b2218d",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-e8ed94af57993ead8b9bc359",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adjectival-allomorph-f02698fbcf89f70b6b57a669",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adjectival-allomorph-f52cbbdd9aceeaf255141e1e",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
           "case": "quoted-neuni-negative-152",
           "judgment": "path",
           "verdict": "forbidden"
@@ -66051,7 +66496,7 @@
         {
           "case": "quoted-neuni-positive-121",
           "judgment": "path",
-          "verdict": "required"
+          "verdict": "forbidden"
         },
         {
           "case": "quoted-neuni-positive-123",

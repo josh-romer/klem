@@ -172,7 +172,7 @@ fn transition_raw_paths_keep_unicode_components_and_original_word_hypotheses() {
     let suite = suite();
     let report = validity::evaluate(&suite).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (133, 11));
+    assert_eq!((report.required_total, report.forbidden_total), (131, 13));
     let engine = Lemmatizer::new();
     for c in cases()["cases"].as_array().unwrap() {
         let surface = c["surface"].as_str().unwrap();
@@ -184,7 +184,17 @@ fn transition_raw_paths_keep_unicode_components_and_original_word_hypotheses() {
                 .unwrap()
         );
         assert!(word.analyses.iter().any(|a| a.unchanged));
-        assert!(word.analyses.iter().any(|a| path(a, c)), "{}", c["id"]);
+        let corrected = matches!(
+            c["id"].as_str().unwrap(),
+            "question-case-control-copula-eunya-bare-entries"
+                | "question-case-control-copula-eunya-case-entries"
+        );
+        assert_eq!(
+            word.analyses.iter().any(|a| path(a, c)),
+            !corrected,
+            "{}",
+            c["id"]
+        );
         for a in &word.analyses {
             let order = a.breakdown().unwrap();
             assert_eq!(order.len(), a.lemmas.len() + a.morphemes.len());
@@ -210,7 +220,20 @@ fn transition_entry_policy_checks_standalone_classes_exceptions_and_exact_owners
     );
     for c in all {
         let word = engine.analyze_word(c["surface"].as_str().unwrap()).unwrap();
-        let a = word.analyses.iter().find(|a| path(a, c)).unwrap();
+        let corrected = matches!(
+            c["id"].as_str().unwrap(),
+            "question-case-control-copula-eunya-bare-entries"
+                | "question-case-control-copula-eunya-case-entries"
+        );
+        let external: Analysis = serde_json::from_value(serde_json::json!({"lemmas": c["lemmas"], "morphemes": c["morphemes"], "rules": ["copula", "ending"], "unchanged": false})).unwrap();
+        let a = if corrected {
+            // Preserve the archived entry-assessment checks for callers that
+            // construct analyses directly, while asserting parser rejection.
+            assert!(!word.analyses.iter().any(|a| path(a, c)));
+            &external
+        } else {
+            word.analyses.iter().find(|a| path(a, c)).unwrap()
+        };
         let annotation = dictionary.annotate(&word).unwrap();
         let assessment = annotation.assess(a);
         for j in c["judgments"].as_array().unwrap() {
@@ -248,7 +271,7 @@ fn transition_entry_policy_checks_standalone_classes_exceptions_and_exact_owners
             let mut filtered = word.clone();
             let mut annotated = dictionary.annotate(&filtered).unwrap();
             annotated.filter(&mut filtered, filter);
-            let expected = if c["missing_owner_entries"] == true {
+            let expected = if corrected || c["missing_owner_entries"] == true {
                 false
             } else if filter == DictionaryFilter::Compatible {
                 c["filter_retained"].as_bool().unwrap_or(true)

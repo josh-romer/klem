@@ -35284,6 +35284,111 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:79258",
+      "source_sha256": "fdf68e291c2f518e94ff98233c7856dab31aca038041f45960513a37d690e171",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bu"
+      ],
+      "scope": "Canonical -으냐고 takes a non-ㄹ closed underlying owner; open/ㄹ stems retain distinct general 냐고 paths. This final-ending source is preserved independently from the homonymous grammar expression 87444, with both senses and all eight native example groups. Ordered-owner, closed irregular, suffix 답다, auxiliary/copula and filtered dictionary behavior are replayed in the source matrix and full streams. This disposition covers the source-scoped coda boundary rather than contextual or POS certainty.",
+      "remaining": "Broader sense/register interpretation, unreviewed prefinal and outer-particle combinations, historical spelling and independent Korean review remain open. Full native example observations are not automatically contextual gold.",
+      "evidence": [
+        {
+          "path": "tests/adjectival_allomorphs.rs",
+          "test": "matrix_preserves_irregular_general_auxiliary_and_derived_paths"
+        },
+        {
+          "path": "tests/adjectival_allomorph_streams.rs",
+          "test": "every_tracked_full_stream_removal_is_rejected_for_its_actual_owner"
+        },
+        {
+          "path": "tests/fixtures/krdict-adjectival-allomorph.json"
+        },
+        {
+          "path": "docs/adjectival-allomorph-audit.md"
+        },
+        {
+          "path": "tools/adjectival_allomorph_compare.py"
+        },
+        {
+          "path": "tools/adjectival_allomorph_runtime.py"
+        },
+        {
+          "path": "web/tests/adjectival-allomorph.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adjectival-allomorph-9a36bfb4296082969ad88623",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-732dfbe73e3fe61a9db49893",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-6d5fb74dfb20591a6004d219",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-7309df8c7b67774563a38080",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-5a85e88ba00f7dc022251dad",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-1c05008f7cc817be1917b915",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-d88642605ceb1a327c2b39a7",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-bbd17714c80fc28498bf15b0",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-8d436c2835f1c42ca79cb0e9",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-57e2ea3ab50941e1c16cfaa9",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-3f2c1da012d8d2e0ec75cd64",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-56329079db0ee7fddb14cbae",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-ce236668ae69c238d89fcbcd",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-43de0e39a3a79b9814877d4e",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-aeb37cc9a129b05f9cee0c15",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-9d0851dc9aa0a3844b3266ff",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-allomorph-5583852f92760bd6b5afae64",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

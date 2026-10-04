@@ -1,4 +1,6 @@
 //! COV-019ad: source-scoped immediate-left classes, independent of raw generation.
+#[path = "../tools/adjectival_allomorph.rs"]
+mod allomorph;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{
@@ -97,7 +99,9 @@ fn complete_sources_and_prechange_raw_paths_are_preserved() {
     for (surface, modes) in source["before_words"].as_object().unwrap() {
         let mut frozen = modes["all"].clone();
         frozen.as_object_mut().unwrap().remove("dictionary");
-        let frozen: WordAnalysis = serde_json::from_value(frozen).unwrap();
+        let mut frozen: WordAnalysis = serde_json::from_value(frozen).unwrap();
+        // COV-017bu: preserve the snapshot and apply only the sourced owner correction.
+        frozen.analyses.retain(|a| !allomorph::reviewed_removal(a));
         let actual = engine.analyze_word(surface).unwrap();
         assert_eq!(actual, frozen, "{surface}");
         assert_eq!(

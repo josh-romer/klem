@@ -56,7 +56,7 @@ fn qqex_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives() {
     let s = raw();
     let r = validity::evaluate(&s).unwrap();
     assert!(r.passed(), "{:?}", r.violations);
-    assert_eq!((r.required_total, r.forbidden_total), (192, 59));
+    assert_eq!((r.required_total, r.forbidden_total), (184, 67));
     let engine = Lemmatizer::new();
     for c in s.cases {
         let a = engine.analyze_word(&c.surface).unwrap();
@@ -207,7 +207,7 @@ fn qqex_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() {
     })
     .unwrap();
     assert!(r.passed(), "{:?}", r.violations);
-    assert_eq!((r.required_total, r.forbidden_total), (46, 9));
+    assert_eq!((r.required_total, r.forbidden_total), (41, 14));
     let r = validity::evaluate_with(&s, |w| {
         let mut a = engine.analyze_word(w).unwrap();
         let mut an = d.annotate(&a).unwrap();
@@ -215,7 +215,7 @@ fn qqex_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() {
         Ok(a)
     })
     .unwrap();
-    assert_eq!((r.required_present, r.forbidden_present), (46, 9));
+    assert_eq!((r.required_present, r.forbidden_present), (41, 9));
     for c in raw().cases {
         let mut a = engine.analyze_word(&c.surface).unwrap();
         let mut an = d.annotate(&a).unwrap();
@@ -349,6 +349,19 @@ fn qqex_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() {
         ),
     ] {
         let a = engine.analyze_word(word).unwrap();
+        if matches!(word, "고르냐더군" | "보냐더군") && forms == ["으냐더군"] {
+            // COV-017bu explicitly archives this unsupported open-owner alias.
+            // Dictionary POS evidence cannot override its canonical coda boundary.
+            assert!(!a.analyses.iter().any(|p| {
+                p.lemmas.len() == 1
+                    && p.lemmas[0].text == head
+                    && p.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())
+            }));
+            continue;
+        }
         let path = a
             .analyses
             .iter()

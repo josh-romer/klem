@@ -18,7 +18,7 @@ fn quoted_bakke_preserves_class_boundaries_and_ordered_components() {
     let suite = suite();
     let report = validity::evaluate(&suite).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (48, 8));
+    assert_eq!((report.required_total, report.forbidden_total), (47, 9));
     let engine = Lemmatizer::new();
     for case in suite.cases {
         let result = engine.analyze_word(&case.surface).unwrap();

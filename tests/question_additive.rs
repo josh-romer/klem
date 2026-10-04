@@ -287,8 +287,17 @@ fn additive_keeps_question_owner_pos_copula_and_exact_negative_exception() {
         ("냐", Compatibility::Compatible),
         ("으냐", Compatibility::Incompatible),
     ] {
-        let a = named(&word, &["학생", "이다"], &[ending, "도"]);
-        let assessment = session.annotate(&word).unwrap().assess(a);
+        // The sourced parser boundary rejects 으냐 here, while caller-supplied
+        // analyses retain the dictionary API's finite copula compatibility check.
+        let mut a = named(&word, &["학생", "이다"], &["냐", "도"]).clone();
+        a.morphemes[0].form = ending.to_owned();
+        assert_eq!(
+            word.analyses
+                .iter()
+                .any(|p| p.lemmas == a.lemmas && p.morphemes == a.morphemes),
+            ending == "냐"
+        );
+        let assessment = session.annotate(&word).unwrap().assess(&a);
         assert_eq!(assessment.lemmas[0].status, Compatibility::Compatible);
         assert_eq!(assessment.lemmas[1].status, status);
         if status == Compatibility::Incompatible {

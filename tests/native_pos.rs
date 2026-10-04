@@ -1,5 +1,7 @@
 //! Independently sourced class evidence must belong to the reviewed entry and
 //! component. Native fields, raw hypotheses and unknown boundaries survive.
+#[path = "../tools/adjectival_allomorph.rs"]
+mod allomorph;
 use klem::dictionary::{
     Annotation, AttachmentRule, Compatibility, Dictionary, DictionaryFilter, DictionaryMetadata,
     DictionarySession, Entry, EntrySummary, SqliteDictionary, import_krdict,
@@ -182,7 +184,7 @@ fn full_native_import_and_independent_evidence_keep_their_own_identities() {
 fn sparse_updated_or_mismatched_profiles_and_homonyms_do_not_borrow_evidence() {
     let fixture = Fixture::new("guards");
     let dictionary = fixture.open();
-    let word = Lemmatizer::new().analyze_word("발그스레하냐").unwrap();
+    let word = Lemmatizer::new().analyze_word("발그스레하느냐").unwrap();
     let original = native();
     let mut mutations = Vec::new();
     macro_rules! mutate {
@@ -245,16 +247,17 @@ fn sparse_updated_or_mismatched_profiles_and_homonyms_do_not_borrow_evidence() {
     let annotated = DictionarySession::new(&provider, 0)
         .annotate(&word)
         .unwrap();
-    let a = path(&word, &["발그스레하다"], &["으냐"]);
+    let a = path(&word, &["발그스레하다"], &["느냐"]);
     let assessed = annotated.assess(a);
     let entries = &assessed.lemmas[0].entries;
-    assert_eq!(entries[0].status, Compatibility::Compatible);
-    assert_eq!(entries[1].status, Compatibility::Incompatible);
+    assert_eq!(entries[0].status, Compatibility::Incompatible);
+    assert_eq!(entries[1].status, Compatibility::Compatible);
+    assert!(entries[1].conflicts.is_empty());
     assert_eq!(
-        entries[1].conflicts[0].rule,
-        AttachmentRule::BareAdjectivalQuestion
+        entries[0].conflicts[0].rule,
+        AttachmentRule::BareVerbalQuestion
     );
-    assert_eq!(entries[1].conflicts[0].morpheme_index, Some(0));
+    assert_eq!(entries[0].conflicts[0].morpheme_index, Some(0));
 }
 
 #[test]
@@ -262,7 +265,7 @@ fn legacy_serialization_cache_and_coarse_roles_preserve_their_original_scope() {
     let fixture = Fixture::new("legacy");
     let dictionary = fixture.open();
     let provider = Provider::new(&dictionary, vec![native()]);
-    let word = Lemmatizer::new().analyze_word("발그스레하냐").unwrap();
+    let word = Lemmatizer::new().analyze_word("발그스레하느냐").unwrap();
     let mut cached = DictionarySession::new(&provider, 8192);
     let annotated = cached.annotate(&word).unwrap();
     let detail_calls = provider.details.get();
@@ -291,7 +294,13 @@ fn legacy_serialization_cache_and_coarse_roles_preserve_their_original_scope() {
     assert_eq!(only_head(&legacy).effective_pos(), "동사");
     assert_eq!(
         legacy
-            .assess(path(&word, &["발그스레하다"], &["으냐"]))
+            .assess(path(&word, &["발그스레하다"], &["느냐"]))
+            .status,
+        Compatibility::Compatible
+    );
+    assert_eq!(
+        annotated
+            .assess(path(&word, &["발그스레하다"], &["느냐"]))
             .status,
         Compatibility::Incompatible
     );
@@ -337,7 +346,22 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
         policy["native_profile_sha256"],
         source["native_profile_sha256"]
     );
+    let corrections: Value = serde_json::from_str(include_str!(
+        "fixtures/adjectival-allomorph-policy-corrections.json"
+    ))
+    .unwrap();
     for case in policy["cases"].as_array().unwrap() {
+        let corrected = corrections["superseded"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|r| r["original"]["id"] == case["id"]);
+        let expected = if let Some(change) = corrected {
+            assert_eq!(change["original"], *case);
+            &change["replacement"]
+        } else {
+            case
+        };
         assert_eq!(
             ledger["cases"]
                 .as_array()
@@ -345,12 +369,16 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
                 .iter()
                 .find(|c| c["id"] == case["id"])
                 .unwrap(),
-            case
+            expected
         );
     }
     for (surface, frozen) in source["before_words"].as_object().unwrap() {
         let word = engine.analyze_word(surface).unwrap();
-        assert_eq!(serde_json::to_value(&word).unwrap(), *frozen, "{surface}");
+        let mut expected: WordAnalysis = serde_json::from_value(frozen.clone()).unwrap();
+        expected
+            .analyses
+            .retain(|a| !allomorph::reviewed_removal(a));
+        assert_eq!(word, expected, "{surface}");
         assert_eq!(
             word,
             engine
@@ -370,8 +398,12 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
             }
             annotation.filter(&mut filtered, DictionaryFilter::Compatible);
             assert_eq!(
-                serde_json::to_value(filtered.analyses).unwrap(),
-                *expected,
+                filtered.analyses,
+                serde_json::from_value::<Vec<Analysis>>(expected.clone())
+                    .unwrap()
+                    .into_iter()
+                    .filter(|a| !allomorph::reviewed_removal(a))
+                    .collect::<Vec<_>>(),
                 "{surface}"
             );
         }
@@ -436,12 +468,7 @@ fn reviewed_class_checks_every_boundary_and_negative_owner_without_crossing_late
     // Here their class premise comes from the reviewed adjective, not the
     // contradictory native label. No new register/grammar restriction.
     for (surface, forms, status, rule) in [
-        (
-            "발그스레하냐",
-            vec!["으냐"],
-            Compatibility::Compatible,
-            None,
-        ),
+        ("발그스레하냐", vec!["냐"], Compatibility::Compatible, None),
         (
             "발그스레하구나",
             vec!["구나"],

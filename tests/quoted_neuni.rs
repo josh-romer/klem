@@ -60,7 +60,7 @@ fn path<'a>(word: &'a WordAnalysis, heads: &[&str], forms: &[&str]) -> &'a klem:
 fn quoted_neuni_bundles_preserve_spelling_and_immediate_owners() {
     let report = validity::evaluate(&raw_suite()).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (133, 43));
+    assert_eq!((report.required_total, report.forbidden_total), (132, 44));
     let engine = Lemmatizer::new();
     for c in raw_suite().cases {
         let word = engine.analyze_word(&c.surface).unwrap();
@@ -280,7 +280,7 @@ fn quoted_neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity(
             if filter == DictionaryFilter::Headword
                 && suite.cases[0].id.starts_with("quoted-neuni-policy-")
             {
-                assert_eq!((report.required_present, report.forbidden_present), (9, 7));
+                assert_eq!((report.required_present, report.forbidden_present), (9, 6));
             } else {
                 assert!(report.passed(), "{:?}", report.violations);
             }

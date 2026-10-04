@@ -129,7 +129,7 @@ fn quoted_questions_reject_unlicensed_recoveries_and_preserve_other_readings() {
 fn adjective_question_allomorphs_and_retrospective_questions() {
     for (word, lemmas, forms, recovery) in [
         ("좋으냐는", vec!["좋다"], vec!["으냐는"], "boundary.eu"),
-        ("기냐는", vec!["길다"], vec!["으냐는"], "deletion.rieul"),
+        ("기냐는", vec!["길다"], vec!["냐는"], "deletion.rieul"),
         ("추우냐는", vec!["춥다"], vec!["으냐는"], "irregular.bieup"),
         (
             "파라냐는",

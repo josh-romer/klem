@@ -1,4 +1,6 @@
 //! COV-018ab: question clauses have a separate topic-particle interpretation.
+#[path = "../tools/adjectival_allomorph.rs"]
+mod allomorph;
 #[path = "../tools/validity.rs"]
 mod validity;
 
@@ -127,7 +129,9 @@ fn topic_paths_keep_every_prior_bundle_unicode_and_component_ownership() {
     for (surface, modes) in source["before_words"].as_object().unwrap() {
         let mut frozen = modes["all"].clone();
         frozen.as_object_mut().unwrap().remove("dictionary");
-        let frozen: WordAnalysis = serde_json::from_value(frozen).unwrap();
+        let mut frozen: WordAnalysis = serde_json::from_value(frozen).unwrap();
+        // COV-017bu: preserve the snapshot and apply only the sourced owner correction.
+        frozen.analyses.retain(|a| !allomorph::reviewed_removal(a));
         let actual = engine.analyze_word(surface).unwrap();
         let retained: Vec<_> = actual
             .analyses
@@ -275,13 +279,14 @@ fn topic_attachment_keeps_question_owner_pos_and_unknown_alternatives() {
         }
     }
     // The following topic particle cannot borrow the nominal's class for the
-    // copula's question ending. Keep the incompatible raw alternative visible.
+    // copula's question ending. The parser rejects the canonical alias; the
+    // annotation API still checks a caller-constructed incompatible alternative.
     let word = engine.analyze_word("학생이냐는").unwrap();
     for (ending, status) in [
         ("냐", Compatibility::Compatible),
         ("으냐", Compatibility::Incompatible),
     ] {
-        let a = word
+        let mut a = word
             .analyses
             .iter()
             .find(|a| {
@@ -289,13 +294,18 @@ fn topic_attachment_keeps_question_owner_pos_and_unknown_alternatives() {
                     .iter()
                     .map(|l| l.text.as_str())
                     .eq(["학생", "이다"])
-                    && a.morphemes
-                        .iter()
-                        .map(|m| m.form.as_str())
-                        .eq([ending, "는"])
+                    && a.morphemes.iter().map(|m| m.form.as_str()).eq(["냐", "는"])
             })
-            .unwrap();
-        let assessment = session.annotate(&word).unwrap().assess(a);
+            .unwrap()
+            .clone();
+        a.morphemes[0].form = ending.to_owned();
+        assert_eq!(
+            word.analyses
+                .iter()
+                .any(|p| p.lemmas == a.lemmas && p.morphemes == a.morphemes),
+            ending == "냐"
+        );
+        let assessment = session.annotate(&word).unwrap().assess(&a);
         assert_eq!(assessment.lemmas[0].status, Compatibility::Compatible);
         assert_eq!(assessment.lemmas[1].status, status);
         if status == Compatibility::Incompatible {

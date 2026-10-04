@@ -55,7 +55,7 @@ fn cqcond_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives()
     let s = raw();
     let r = validity::evaluate(&s).unwrap();
     assert!(r.passed(), "{:?}", r.violations);
-    assert_eq!((r.required_total, r.forbidden_total), (107, 19));
+    assert_eq!((r.required_total, r.forbidden_total), (103, 23));
     let engine = Lemmatizer::new();
     for c in s.cases {
         let a = engine.analyze_word(&c.surface).unwrap();
@@ -222,7 +222,7 @@ fn cqcond_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() 
     })
     .unwrap();
     assert!(r.passed(), "{:?}", r.violations);
-    assert_eq!((r.required_total, r.forbidden_total), (40, 6));
+    assert_eq!((r.required_total, r.forbidden_total), (38, 8));
     let r = validity::evaluate_with(&s, |w| {
         let mut a = engine.analyze_word(w).unwrap();
         let mut an = d.annotate(&a).unwrap();
@@ -230,7 +230,7 @@ fn cqcond_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() 
         Ok(a)
     })
     .unwrap();
-    assert_eq!((r.required_present, r.forbidden_present), (40, 6));
+    assert_eq!((r.required_present, r.forbidden_present), (38, 6));
     for c in raw().cases {
         let mut a = engine.analyze_word(&c.surface).unwrap();
         let mut an = d.annotate(&a).unwrap();
@@ -310,6 +310,19 @@ fn cqcond_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() 
         ),
     ] {
         let a = engine.analyze_word(word).unwrap();
+        if word == "고르냐면" && forms == ["으냐면"] {
+            // COV-017bu explicitly archives this unsupported open-owner alias.
+            // Dictionary POS evidence cannot override its canonical coda boundary.
+            assert!(!a.analyses.iter().any(|p| {
+                p.lemmas.len() == 1
+                    && p.lemmas[0].text == head
+                    && p.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())
+            }));
+            continue;
+        }
         let path = a
             .analyses
             .iter()
@@ -416,6 +429,21 @@ fn cqcond_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals() 
         ),
     ] {
         let a = engine.analyze_word(word).unwrap();
+        if word == "먹고계시냐면" && forms == ["고", "으냐면"] {
+            // COV-017bu explicitly archives this unsupported open-owner alias.
+            // Dictionary POS evidence cannot override its canonical coda boundary.
+            assert!(!a.analyses.iter().any(|p| {
+                p.lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(heads.iter().copied())
+                    && p.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())
+            }));
+            continue;
+        }
         let path = a
             .analyses
             .iter()

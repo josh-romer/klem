@@ -166,8 +166,35 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     let engine = Lemmatizer::new();
     let suite = suite();
     let raw = validity::evaluate(&suite).unwrap();
-    // Every forbidden dictionary reading really is generated before filtering.
-    assert_eq!(raw.forbidden_present, raw.forbidden_total);
+    // COV-017bu explicitly corrects eight previously required aliases. The
+    // already-forbidden 기다리냐느니 alias has the same sourced boundary.
+    // These nine paths now fail generation; every other dictionary conflict
+    // must still exist before the optional lexical filter is applied.
+    let changes: serde_json::Value = serde_json::from_str(include_str!(
+        "fixtures/adjectival-allomorph-policy-corrections.json"
+    ))
+    .unwrap();
+    let mut structural_ids: Vec<_> = changes["superseded"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .map(|r| r["replacement"]["id"].as_str().unwrap())
+        .collect();
+    structural_ids.push("quoted-neuni-policy-8");
+    let mut structural = self::suite();
+    structural
+        .cases
+        .retain(|c| structural_ids.contains(&c.id.as_str()));
+    let boundaries = validity::evaluate(&structural).unwrap();
+    assert!(boundaries.passed(), "{:?}", boundaries.violations);
+    assert_eq!(
+        (boundaries.required_total, boundaries.forbidden_total),
+        (0, 9)
+    );
+    assert_eq!(
+        raw.forbidden_present,
+        raw.forbidden_total - boundaries.forbidden_total
+    );
     assert_eq!(raw.required_present, raw.required_total);
     let headwords = validity::evaluate_with(&suite, |word| {
         let mut analysis = engine.analyze_word(word).unwrap();
@@ -177,7 +204,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     // A missing fixture headword must not masquerade as an attachment fix.
-    assert_eq!(headwords.forbidden_present, raw.forbidden_total);
+    assert_eq!(headwords.forbidden_present, raw.forbidden_present);
     assert_eq!(headwords.required_present, raw.required_total);
     let report = validity::evaluate_with(&suite, |word| {
         let mut analysis = engine.analyze_word(word).unwrap();
@@ -205,7 +232,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2107, 1741)
+        (2099, 1749)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

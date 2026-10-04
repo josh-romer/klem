@@ -7888,7 +7888,7 @@ fn report_myeo_endings_preserve_dictionary_and_cli_parity() {
             vec!["으냐며"],
             MorphemeKind::Ending,
         ),
-        ("기냐며", vec!["길다"], vec!["으냐며"], MorphemeKind::Ending),
+        ("기냐며", vec!["길다"], vec!["냐며"], MorphemeKind::Ending),
         (
             "추우냐며",
             vec!["춥다"],
@@ -8306,7 +8306,7 @@ fn report_myeo_endings_preserve_dictionary_and_cli_parity() {
         (
             "기냐면서",
             vec!["길다"],
-            vec!["으냐면서"],
+            vec!["냐면서"],
             MorphemeKind::Ending,
         ),
         (

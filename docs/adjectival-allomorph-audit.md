@@ -6,9 +6,11 @@ The second path is unsupported by the attachment note for the distinct
 `-으냐고` entry. `기냐고` has the same problem with underlying `길다`.
 The sentence and its general `-냐고` reading must survive the correction.
 
-This is a source preflight. The parser and existing judgments have not yet been
-changed. The checklist item remains open; these authored proposals are not an
-independently reviewed Korean precision benchmark.
+The parser now applies this boundary across all 18 families. The original source
+preflight remains immutable, while explicit overlays correct the central and
+dictionary-policy judgments. The checklist item remains open for broader stream,
+corpus and packaged validation; these authored judgments are not an independently
+reviewed Korean precision benchmark.
 
 ## Sources and boundaries
 
@@ -92,29 +94,83 @@ The original source freeze and original matrix have not been rewritten.
 
 The [frozen evaluation](adjectival-allomorph-preflight-evaluation.json) contains
 396 effective structural proposals: all 216 required paths already exist,
-while 53 of 180 forbidden paths are currently emitted. It tracks the precise
+while the original parser emitted 53 of 180 forbidden paths. It tracks the precise
 analysis and dictionary reading for every matching path in each filter.
 These are candidate-boundary judgments; native observations and contextual
 choices remain unjudged. The full source freeze contains 1,703 native
 occurrences, 1,399 words, 289 annotated tokens and 1,700 complete native owners.
 
+## Implemented correction
+
+The [central corrections](../tests/fixtures/adjectival-allomorph-corrections.json)
+retain all 26 original cases and publish explicit replacements with their ordered
+owner, coda and canonical source. The `기냔다` citation is explicitly changed
+from 85921 to 85925. All 396 supplemented matrix cases are in the central ledger.
+
+The [policy preflight](adjectival-allomorph-policy-preflight.json.gz) also archives
+the entire original dictionary-attachment ledger and all three pinned pre-change
+CLI views of eight additional incorrect required policy paths. Its
+[policy corrections](../tests/fixtures/adjectival-allomorph-policy-corrections.json)
+reject those aliases explicitly. A ninth, already-forbidden `기다리냐느니` policy
+path is now rejected during generation. Every other dictionary conflict must
+still be generated before the optional filter is applied.
+
+The [314-word checkpoint](adjectival-allomorph-checkpoint.json.gz) tracks 703
+individual raw removals, 93 in the headword-filtered view and 69 in the compatible
+view. Its 5,138 retained candidate occurrences keep their original order,
+dictionary readings and referenced native lemma fields. Each removal has a
+stable ID, original candidate and reading, canonical sources and original spans.
+The checkpoint binds the exact
+[ordered-owner verifier](../tools/adjectival_allomorph.rs) and
+[regression tests](../tests/adjectival_allomorphs.rs) by hash. This is the selected
+matrix/old-ledger/derived cohort; broader streams and spacing are outside its scope.
+
+The tests cover NFC/NFD, caches 0/1/4096, three CLI filters, all 216 required and
+180 forbidden matrix paths, and every prior cohort path and assessment. Older
+fixture files remain unchanged. Their replay tests apply explicit owner or case
+overlays. Caller-constructed invalid copula analyses still exercise the existing
+dictionary API's class checks, alongside assertions that the parser rejects them.
+Independent POS-profile and homonym tests now use the valid verbal `느냐`
+boundary to prove the reviewed adjective/native verb distinction; they no longer
+depend on an invalid open-stem `으냐` alias.
+
+The [complete stream comparison](adjectival-allomorph-observations.json.gz)
+replays all 1,128,312 records in eight candidate/novel modes and all three frozen
+1,399-word diagnostic streams against the pinned pre-change CLI. It tracks 3,806
+distinct removals and 29,691 retained candidate occurrences in changed records.
+Each removal keeps its original reading, context, stable ID, source entries and
+Rust-derived ordered owner. All other candidate, assessment and native fields
+are preserved. Spacing option identities and order remain unchanged; 33
+diagnostic spacing records lose only unsupported aliases within their segments.
+The report retains 282 complete native entries, including five
+[additional sources](../tests/fixtures/adjectival-allomorph-additional-native.json).
+[Full-stream regressions](../tests/adjectival_allomorph_streams.rs) replay every
+tracked removal across 1,642 distinct words.
+
+The [four complete held-out reports](adjectival-allomorph-corpora.json.gz) retain
+all 66,570 original ordered gold rows, including misses, and all recovered
+component sets. Only mean candidate counts decrease. The complete original and
+replacement JSONL is archived, rather than preserving summary totals alone.
+The [offline verifier](../tools/adjectival_allomorph_corpora.py) checks every row
+and binds each original report to the previous corpus audit.
+
+The [packaged HTTP checks](adjectival-allomorph-packaged-runtime.json) compare
+all 2,050 cohort words with the CLI in NFC/NFD, check all 860 encoded candidate
+judgments, verify every API component order against Rust, and reproduce all
+1,706 complete native entry responses. The
+[browser run](adjectival-allomorph-packaged-browser.json) checks 60 exports in
+both encodings and all three filters, plus nine selected diagrams and their
+dictionary source links. Mobile layout was inspected without horizontal overflow.
+The local preview runs the tested package. The full x86_64-linux Nix check
+passes 861 Rust tests with zero failures and one downloaded-corpus test ignored.
+The final fixture build's CLI/web binaries are byte-identical to the runtime
+package. COV-017bu's bounded canonical-allomorph audit is complete; native final
+ending 79258 has its own scoped disposition in the inventory ledger.
+
 ## Work remaining
 
-- Check each flagged path's ordered owner and publish explicit original-to-
-  replacement judgments, including the erroneous citation.
-- Apply the canonical boundary to the audited families while preserving the
-  general `냐` analyses and irregular closed-stem recovery. Keep source-specific
-  lexical/POS exceptions separate from the coda boundary.
-- Exercise the matrix with NFC/NFD, cache settings, all three CLI filters and
-  the native dictionary adapter. Track each intentional path removal; preserve
-  every unrelated prior path and assessment.
-- Replay the eight candidate/novel streams and four held-out corpus evaluations.
-  Any loss must have an individual source-backed explanation; do not update a
-  baseline merely to make a check pass.
-- Update frozen-fixture replay tests through explicit correction overlays,
-  then validate the packaged CLI, browser and Nix checks before closing this
-  bounded item. Broader spelling, contextual selection and independent review
-  remain separate open checklist work.
+- Broader spelling, contextual selection, prefinal/outer-attachment combinations
+  and independent review remain separate open checklist work.
 
 ## Reproduction
 
@@ -130,6 +186,10 @@ The committed preflight is verifiable without the downloaded export:
 
 ```sh
 python3 tools/adjectival_allomorph_audit.py --verify
+python3 tools/adjectival_allomorph_corpora.py --verify
+python3 tools/adjectival_allomorph_compare.py --verify
+python3 tools/adjectival_allomorph_runtime.py --verify
+python3 tools/adjectival_allomorph_browser.py --verify
 ```
 
 Add `--dictionary` to reproduce the full native/corpus scan and raw-export hashes.

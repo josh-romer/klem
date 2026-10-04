@@ -433,6 +433,9 @@ def freeze_derived(cli, dictionary):
     )
     adapter = {"LexicalResource": {"Lexicon": {"LexicalEntry": [raw]}}}
     verify_native_lmf(adapter, {entry["id"]: entry})
+    adapter_output = ROOT / "tests/fixtures/krdict-adjectival-allomorph-derived.json"
+    assert not adapter_output.exists()
+    adapter_output.write_text(json.dumps(adapter, ensure_ascii=False, indent=2) + "\n")
     DERIVED.write_text(
         json.dumps(
             {
@@ -563,6 +566,10 @@ def verify_derived(source, dictionary=None, cli=None):
     assert supplement["primary_guidance"] == DERIVED_GUIDANCE
     assert supplement["adapter_sha256"] == sha(ROOT / supplement["adapter_origin"])
     verify_native_lmf(supplement["native_lmf"], supplement["complete_native_entries"])
+    assert (
+        read(ROOT / "tests/fixtures/krdict-adjectival-allomorph-derived.json")
+        == supplement["native_lmf"]
+    )
     assert (
         len(supplement["superseded"]) == len(supplement["additional_proposals"]) == 18
     )
@@ -734,7 +741,7 @@ def verify(dictionary=None, cli=None):
                     for s in c["sentences"]
                 ),
                 "full_native_entries": len(source["complete_native_entries"]),
-                "status": "verified preflight; parser implementation and independent review remain",
+                "status": "verified immutable preflight; implementation is checked separately; independent review pending",
             },
             ensure_ascii=False,
         )

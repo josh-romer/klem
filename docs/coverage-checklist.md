@@ -4970,6 +4970,33 @@ review remains open under the completion review below.
   [discovery verifier](../tools/doeda_noun_suffix_discovery.py) confirms the
   frozen gap and independently derives the native filters; it certifies no new
   grammatical path or contextual judgment.
+  **Pre-implementation source checkpoint added:** the
+  [full preflight](doeda-suffix-source-preflight.json.gz) preserves both complete
+  suffix senses and all 157 explicit examples, all 1,850 literal native verb/
+  adjective heads ending in 되다, their complete owners and every base homonym.
+  Literal matches remain unreviewed rather than being treated as automatic
+  derivational licenses. All six corpus files retain 6,447 original derivational
+  rows and complete sentences; uppercase GSD and lowercase KAIST tags are both
+  observed without changing any ten-column annotation. All 6,873 unique cohort
+  words have complete before streams in each filter (13,746 records per mode),
+  including spacing hypotheses. The 4,319 complete native entries close every
+  referenced lookup; the finite importer includes every before-case native entry.
+  [158 formation proposals](../tests/fixtures/doeda-suffix-sources.json) cover
+  the 157 suffix examples plus the independently annotated 타도 discovery.
+  They produce 1,580 proposed positive paths and ten scoped adjective controls,
+  with stable IDs and complete original raw/native word snapshots. Proposed
+  base roles are attributed agent judgments; bound lookup material does not
+  establish a standalone word or settle every formal/historical root analysis.
+  NIKL's [2025-06-18 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=316511)
+  explicitly identifies 고 as a root in 고되다 and leaves its etymology unknown;
+  its [2025-09-30 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=321537)
+  distinguishes 못되다's adjective-forming suffix from passive verb formation.
+  These answers do not certify every other opaque base. The
+  [offline verifier](../tools/doeda_suffix_audit.py) checks every source example,
+  native identity, importer projection, case ID and original before filter;
+  original corpus extraction is also repeated when the files are present.
+  Candidate generation/ownership, dictionary policy, full native-lead review
+  and all broader corpus/context/register/independent checks remain open.
 
 ### P3: dictionary and representation boundaries
 

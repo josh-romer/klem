@@ -57,8 +57,11 @@ def native_owners(changes, dictionary):
 
 
 class Audit:
-    def __init__(self, cli, db, pairs):
+    def __init__(
+        self, cli, db, pairs, dependency_rule="ending.rya", dependency_form="으랴"
+    ):
         self.cli, self.db, self.pairs = cli, db, pairs
+        self.dependency_rule, self.dependency_form = dependency_rule, dependency_form
         self.words, self.changes = {}, {}
 
     def remember(self, category, surface, before, after, location):
@@ -104,8 +107,8 @@ class Audit:
         )
         added = [a for a in new if a not in old]
         for a in added:
-            assert "ending.rya" in a["rules"] and any(
-                m["form"] == "으랴" for m in a["morphemes"]
+            assert self.dependency_rule in a["rules"] and any(
+                m["form"] == self.dependency_form for m in a["morphemes"]
             ), a
         for key in before.keys() - {"analyses", "dictionary", "breakdowns"}:
             assert before[key] == after[key], key
@@ -251,7 +254,7 @@ class Audit:
             if k not in oldkeys:
                 if h.get("rule") != RULE:
                     assert any(
-                        "ending.rya" in a["rules"]
+                        self.dependency_rule in a["rules"]
                         for r in h["records"]
                         for a in r["analysis"]["analyses"]
                     ), (surface, "unexplained old-family addition")

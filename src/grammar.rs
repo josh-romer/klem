@@ -1230,6 +1230,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을래요", "래요", "을래요", 8),
             ("을지", "지", "을지", 8),
             ("을는지", "는지", "을는지", 8),
+            // KRDict 77345/77346: a caution final. Attached ㄹ preserves
+            // lexical ㄹ (들라) and vowel/irregular recovery (들을라).
+            ("을라", "라", "을라", 8),
             ("을라고", "라고", "을라고", 8),
             ("을라고요", "라고요", "을라고요", 8),
             ("을지라도", "지라도", "을지라도", 8),
@@ -1726,6 +1729,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.rya" => {
             "Recover source-listed -랴/-으랴 rhetorical questions, offers and enumerative endings as the 으랴 allomorph family. Preserve lexical ㄹ, irregular spelling, adjective/copula and prefinal alternatives without selecting a contextual sense or register."
+        }
+        "ending.caution" => {
+            "Recover the source-listed caution final -ㄹ라/-을라 as 을라, preserving lexical ㄹ, irregular stems, explicit copulas and prefinal ownership. Contextual meaning and unlisted attachment extensions remain unreviewed."
         }
         "ending.background_ba" => {
             "Recover literary background connectives -ㄴ바/-은바, -는바 and -던바. Preserve the ending bundle separately from adnominal plus bound noun 바; contextual background and sense are not inferred."

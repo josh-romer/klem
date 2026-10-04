@@ -4342,3 +4342,23 @@ particle followers require separate review; dictionary headword matching
 does not select a contextual meaning. See the
 [source preflight](written-vowel-source-preflight.json) and
 [individual evaluation](written-vowel-evaluation.json).
+
+## Caution finals (COV-017bs)
+
+KRDict 77345/77346 license -ㄹ라/-을라 for concern about a possible event.
+The canonical component is 을라 with `ending.caution`: 날라 → 나다 + 을라,
+들을라 → 듣다 + 을라, 들라 → 들다 + 을라 and 가짜일라 → 가짜 + 이다 + 을라.
+The attached ㄹ boundary preserves a lexical ㄹ and existing irregular recovery;
+this does not turn the spelling of 몰라/올라 or a command into contextual gold.
+Original raw candidates and their relative order remain.
+
+Listed 시 and 었 compose independently. Unlisted immediate-owner prefinals
+remain raw hypotheses with unknown dictionary attachment. Earlier lexical or
+auxiliary prefinals cannot supply this later owner's uncertainty. Derived 답다
+keeps the library's nominal-plus-suffix representation. No new omitted-copula
+rule or polite/outer-particle follower is licensed by this source review.
+
+The native 사고 날라 occurrence now supports 사고 + 날라 through the existing
+finite noun/main-나다 spacing template. Auxiliary 나다 and registered whole
+verbs retain their independent dictionary roles. Spacing limits and priority
+remain shared with the earlier templates, and original input spans are kept.

@@ -1702,6 +1702,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                         p.rules.push("copula.omitted_rya".into());
                     }
                 }
+                if ending.form == "을라" {
+                    p.rules.push("ending.caution".into());
+                }
                 if ending.form == "으되" {
                     p.rules.push("ending.contrast_doe".into());
                 }
@@ -2737,6 +2740,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을까요"
                 | "을지"
                 | "을는지"
+                | "을라"
                 | "을라고"
                 | "을라고요"
                 | "을지라도"

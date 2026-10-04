@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bs",
+  "source_sha256": "0b12ab96f5da957944bd48960add1147614765c5e62cf882ac3c71c28d978a34",
+  "cli_sha256": "08c636df318a4b76e3d79f08c42c0a0934f697312f4a9f58f83cbb9bf8109fe7",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "native_entries": 1399,
+  "words": 119,
+  "checks": [
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 0,
+      "records": 241,
+      "sha256": "7c7199e277be7957f83b82e31861794c22fd268474e69b6d26b17203cd9aadc1"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 0,
+      "records": 241,
+      "sha256": "a0e2b54de8a5d3d6709c7168dd19da1c1b14d5137d01883dc7fa07a03fba67f4"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 0,
+      "records": 241,
+      "sha256": "aa8e760705ba1a559ebbf16cd17aba8aaba71989af139897caffef9424d80f1b"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 1,
+      "records": 241,
+      "sha256": "7c7199e277be7957f83b82e31861794c22fd268474e69b6d26b17203cd9aadc1"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 1,
+      "records": 241,
+      "sha256": "a0e2b54de8a5d3d6709c7168dd19da1c1b14d5137d01883dc7fa07a03fba67f4"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 1,
+      "records": 241,
+      "sha256": "aa8e760705ba1a559ebbf16cd17aba8aaba71989af139897caffef9424d80f1b"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "all",
+      "cache_bytes": 4096,
+      "records": 241,
+      "sha256": "7c7199e277be7957f83b82e31861794c22fd268474e69b6d26b17203cd9aadc1"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "cache_bytes": 4096,
+      "records": 241,
+      "sha256": "a0e2b54de8a5d3d6709c7168dd19da1c1b14d5137d01883dc7fa07a03fba67f4"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "cache_bytes": 4096,
+      "records": 241,
+      "sha256": "aa8e760705ba1a559ebbf16cd17aba8aaba71989af139897caffef9424d80f1b"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 0,
+      "records": 241,
+      "sha256": "71ffaf63f1e7d3fd10fcf88b5f2d9050bf400823d0069865f440e9a446252988"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 0,
+      "records": 241,
+      "sha256": "9db9e9d6d91feab517319b46fc0d5378d5955af7fc753fde36ab09cf6f9f7a69"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 0,
+      "records": 241,
+      "sha256": "cf949dbce689d3bafce76471c259b3bb868749565f377328c2a9ac24ff9e8ea9"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 1,
+      "records": 241,
+      "sha256": "71ffaf63f1e7d3fd10fcf88b5f2d9050bf400823d0069865f440e9a446252988"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 1,
+      "records": 241,
+      "sha256": "9db9e9d6d91feab517319b46fc0d5378d5955af7fc753fde36ab09cf6f9f7a69"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 1,
+      "records": 241,
+      "sha256": "cf949dbce689d3bafce76471c259b3bb868749565f377328c2a9ac24ff9e8ea9"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "all",
+      "cache_bytes": 4096,
+      "records": 241,
+      "sha256": "71ffaf63f1e7d3fd10fcf88b5f2d9050bf400823d0069865f440e9a446252988"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "cache_bytes": 4096,
+      "records": 241,
+      "sha256": "9db9e9d6d91feab517319b46fc0d5378d5955af7fc753fde36ab09cf6f9f7a69"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "cache_bytes": 4096,
+      "records": 241,
+      "sha256": "cf949dbce689d3bafce76471c259b3bb868749565f377328c2a9ac24ff9e8ea9"
+    }
+  ],
+  "cases": [
+    {
+      "id": "caution-ending-가짜일라-가짜-이다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-깨실라-깨다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-놓칠라-놓치다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-넘어질라-넘어지다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-찢어질라-찢어지다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-들라-들다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-병날라-병나다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-체할라-체하다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-들을라-듣다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-넘을라-넘다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-야단맞을라-야단맞다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹을라-먹다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-적을라-적다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-찾을라-찾다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-늦을라-늦다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-날라-나다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-갈라-가다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-살라-살다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-만들라-만들다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-물라-물다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-도울라-돕다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-부을라-붓다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-지을라-짓다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-파랄라-파랗다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-좋을라-좋다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-있을라-있다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-없을라-없다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-나을라-낫다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-알라-알다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생일라-학생-이다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학교일라-학교-이다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹었을라-먹다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹으실라-먹다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹으셨을라-먹다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학교였을라-학교-이다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹어볼라-먹다-보다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹어봤을라-먹다-보다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹었어볼라-먹다-보다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹지않을라-먹다-않다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹지않았을라-먹다-않다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-찢어질라-찢다-지다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생다울라-학생",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹기일라-먹다-이다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹겠을라-먹다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹어보겠을라-먹다-보다",
+      "encoding": "NFC",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹더을라-먹다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹라-먹다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-가을라-가다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-살을라-살다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-듣라-듣다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-돕라-돕다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-붓라-붓다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-짓라-짓다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-좋라-좋다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-가라-가다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-낫라-낫다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-알을라-알다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학교라-학교-이다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생라-학생-이다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생을라-학생-이다",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-follower-먹을라요",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-follower-날라도",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-follower-날라는",
+      "encoding": "NFC",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-가짜일라-가짜-이다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-깨실라-깨다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-놓칠라-놓치다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-넘어질라-넘어지다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-찢어질라-찢어지다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-들라-들다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-병날라-병나다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-체할라-체하다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-들을라-듣다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-넘을라-넘다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-야단맞을라-야단맞다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹을라-먹다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-적을라-적다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-찾을라-찾다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-늦을라-늦다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-날라-나다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-갈라-가다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-살라-살다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-만들라-만들다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-물라-물다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-도울라-돕다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-부을라-붓다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-지을라-짓다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-파랄라-파랗다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-좋을라-좋다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-있을라-있다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-없을라-없다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-나을라-낫다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-알라-알다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생일라-학생-이다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학교일라-학교-이다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹었을라-먹다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹으실라-먹다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹으셨을라-먹다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학교였을라-학교-이다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹어볼라-먹다-보다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹어봤을라-먹다-보다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹었어볼라-먹다-보다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹지않을라-먹다-않다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹지않았을라-먹다-않다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-찢어질라-찢다-지다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생다울라-학생",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹기일라-먹다-이다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹겠을라-먹다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹어보겠을라-먹다-보다",
+      "encoding": "NFD",
+      "verdict": "required",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹더을라-먹다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-먹라-먹다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-가을라-가다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-살을라-살다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-듣라-듣다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-돕라-돕다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-붓라-붓다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-짓라-짓다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-좋라-좋다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-가라-가다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-낫라-낫다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-알을라-알다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학교라-학교-이다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생라-학생-이다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-학생을라-학생-이다",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-follower-먹을라요",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-follower-날라도",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    },
+    {
+      "id": "caution-ending-follower-날라는",
+      "encoding": "NFD",
+      "verdict": "forbidden",
+      "passed": true
+    }
+  ],
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

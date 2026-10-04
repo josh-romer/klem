@@ -9,8 +9,8 @@ fn fixture() -> validity::Suite {
 fn source_backed_judgments_pass_and_unreviewed_outputs_stay_visible() {
     let report = validity::evaluate(&fixture()).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!(report.required_total, 9311);
-    assert_eq!(report.forbidden_total, 3412);
+    assert_eq!(report.required_total, 9356);
+    assert_eq!(report.forbidden_total, 3430);
     assert!(!report.review_queue.is_empty());
     assert_eq!(
         report.emitted_nonidentity,

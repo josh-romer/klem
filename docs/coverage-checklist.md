@@ -1694,6 +1694,45 @@ review remains open under the completion review below.
   judgments and independent review remain pending; Unknown hypotheses are
   retained by filters that exclude known conflicts, without certifying them.
 
+- [ ] **COV-017bs — Caution finals -ㄹ라/-을라.** **Partial:**
+  The COV-020r native 사고 날라 occurrence exposes the missing caution final.
+  [The immutable source freeze](caution-ending-source-preflight.json.gz)
+  retains both complete KRDict entries 77345/77346, every native example group,
+  original candidate/filter/spacing observations and broad spelling discoveries.
+  These discoveries include 르 contractions, commands and loanwords; spelling
+  does not supply a sentence interpretation. The pinned annotated corpora are
+  searched separately, with complete matching sentences preserved unchanged.
+  Both allomorphs now normalize to 을라 with `ending.caution`, preserving
+  lexical ㄹ, regular/irregular stems, explicit copulas, auxiliaries, derived
+  답다 and listed 시/었. Other immediate-owner prefinals remain Unknown without
+  changing earlier owners or known conflicts; no new omitted-copula or outer
+  particle license is inferred. [63 stable cases](../tests/fixtures/caution-ending-sources.json)
+  (45 required / 18 forbidden named paths) and [four integration tests](../tests/caution_endings.rs)
+  verify all 15 native groups, 155 original plus 110 additional complete native
+  importer records, NFC/NFD, cache budgets, filters, CLI parity and exact spacing
+  spans. 사고날라 now includes 사고 + 날라 through the existing finite pair
+  rule. Only 날라/사고날라 gain this dependency in the original 389-word fixture;
+  all prior raw paths remain in order. The source freeze separately keeps 1,361
+  native spelling observations, 40 novel occurrences and 115 complete matching
+  corpus sentences (116 tokens); the noisy GSD 짤라 → 짜 + ㄹ라 annotation is
+  preserved, not silently corrected or treated as contextual caution gold.
+  [Eight full-stream comparisons](caution-ending-observations.json.gz) verify
+  1,128,312 records and preserve every prior path, assessment and spacing order.
+  599 candidate additions, five new spacing options and five spacing updates
+  retain individual IDs and 1,463 occurrences. Unknown polite-marker spacing
+  hypotheses remain separately visible; they are not sentence judgments.
+  All 66,570 [held-out gold rows](caution-ending-corpora.json) are identical;
+  only candidate means increase. [Packaged API checks](caution-ending-packaged-runtime.json)
+  verify 1,399 full native endpoints, 126 NFC/NFD case checks and 18 cache/filter
+  streams. [Six browser exports](caution-ending-packaged-browser.json) match the
+  CLI; eight selected diagrams, both ending-source links and inspected mobile
+  layout pass without errors. Nix CLI/web builds pass 844 release tests
+  (one downloaded-corpus test ignored; the four corpus reports are run separately),
+  along with Clippy, formatting and frontend build checks.
+  [The offline evidence verifier](../tools/caution_ending_queue.py) is included
+  in Nix. Wider prefinal/follower and omission licenses, contextual sense/register
+  selection and independent Korean review remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -3342,8 +3381,9 @@ review remains open under the completion review below.
   exact identities/classes, NFC/NFD byte spans, independent raw paths, cache
   budgets, prior spacing priority, ambiguous-prefix stress and all three CLI
   filter modes. A separately preserved -랴/-으랴 dependency (COV-017br) adds
-  tagged ending paths to the original 나랴 and 연기나랴 observations; all 389
-  original raw candidates survive and the other 387 raw words are identical.
+  tagged ending paths to the original 나랴 and 연기나랴 observations; in that
+  initial batch all 389 original raw candidates survive and the other 387 raw
+  words are identical.
   The append-only [priority supplement](../tests/fixtures/lexical-nada-priority-supplement.json)
   restores a genuine native 으 noun owner omitted from the first fixture,
   retaining every old spacing hypothesis. These finite tests do not certify every
@@ -3378,6 +3418,20 @@ review remains open under the completion review below.
   these finite tests. The source-review
   artifact's original implementation-pending status remains an immutable
   pre-change record; this progress entry records the later implementation.
+  The separate COV-017bs caution-ending dependency now supplies the native
+  사고 날라 case without changing the 35-pair inventory. The original 389-word
+  test explicitly preserves all paths and allows this additional ending only
+  for 날라/사고날라; the remaining 385 non-dependency words stay byte-identical.
+  [A follow-up context ledger](lexical-nada-country-tree-review.json) individually
+  reviews all 203 captured 이 나라/이 나무 discoveries: the right words refer
+  to country/tree/wood, and supply no tooth-noun/main-나다 pair license. This
+  changes no candidate policy and asserts no blanket exclusion of 이 + 나다.
+  [Its offline verifier](../tools/lexical_nada_country_tree_review.py) checks
+  every original ID and complete group in Nix. Together with the original 36
+  reviewed discoveries, 239 of the 631 listed-cohort occurrences have an authored
+  source-context disposition; 392 still need that review. Contextual gold and
+  independent review remain pending. Supported new 집/사람/돈/literal 피 pairs,
+  registered-whole spelling tensions and the broader source cohort remain open.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

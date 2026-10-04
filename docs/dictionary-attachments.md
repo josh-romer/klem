@@ -1055,3 +1055,10 @@ no blanket exclusion follows from a spelling hit. Thirty-four authored policy
 cases remain separate from all original preflight, raw, corpus and policy gold.
 The [2,122 individually tracked discoveries](continuation-inflection-source-queue.json.gz)
 and independent Korean-language reviews remain open under COV-019ae.
+
+COV-017bs retains the native caution-final allomorphs -ㄹ라/-을라 (77345/77346).
+The immediate ending owner's prefinals are checked independently: 시/었 have
+source notes, while other represented prefinals become Unknown only when that
+owner would otherwise be Compatible. Earlier owners and known conflicts retain
+their assessments. This does not certify a contextual caution sense, spoken
+register, or any unreviewed prefinal/follower combination.

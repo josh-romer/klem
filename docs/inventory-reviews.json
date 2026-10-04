@@ -34978,6 +34978,312 @@
           ]
         }
       ]
+    },
+    {
+      "id": "krdict:77345",
+      "source_sha256": "41f004be884b4372b8f7feda2bf4bb259da7f2057a8c7f42574250395a59433f",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bs",
+        "COV-020r"
+      ],
+      "scope": "Source-listed caution-final allomorphs, lexical ㄹ, regular/irregular boundaries, explicit copulas, listed 시/었 and immediate-owner uncertainty for unlisted prefinal hypotheses. All fifteen native ending-example groups and complete entries preserved; authored boundary judgments remain separate from sentence interpretation.",
+      "remaining": "Further prefinal and follower licensing, omitted copulas, semantic/register judgments and independent Korean review remain open. Broad spelling discoveries include commands, 르 contractions and loanwords; no automatic contextual gold is inferred.",
+      "evidence": [
+        {
+          "path": "tests/caution_endings.rs"
+        },
+        {
+          "path": "tests/fixtures/caution-ending-sources.json"
+        },
+        {
+          "path": "tests/fixtures/caution-ending-additional-native.json"
+        },
+        {
+          "path": "web/tests/caution-ending.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "caution-ending-가짜일라-가짜-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-깨실라-깨다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-놓칠라-놓치다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-넘어질라-넘어지다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-찢어질라-찢어지다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-들라-들다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-병날라-병나다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-체할라-체하다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-날라-나다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-갈라-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-살라-살다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-만들라-만들다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-물라-물다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-도울라-돕다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-파랄라-파랗다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-알라-알다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학생일라-학생-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학교일라-학교-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹으실라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹어볼라-먹다-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹었어볼라-먹다-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-찢어질라-찢다-지다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학생다울라-학생",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹기일라-먹다-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-듣라-듣다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-돕라-돕다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-붓라-붓다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-짓라-짓다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-좋라-좋다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-가라-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-낫라-낫다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학교라-학교-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학생라-학생-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-follower-먹을라요",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-follower-날라도",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-follower-날라는",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:77346",
+      "source_sha256": "b0890290cdd1030369a878f1bfb6bae6d9b63a89b544b56deafabeea7f99d7a6",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bs",
+        "COV-020r"
+      ],
+      "scope": "Source-listed caution-final allomorphs, lexical ㄹ, regular/irregular boundaries, explicit copulas, listed 시/었 and immediate-owner uncertainty for unlisted prefinal hypotheses. All fifteen native ending-example groups and complete entries preserved; authored boundary judgments remain separate from sentence interpretation.",
+      "remaining": "Further prefinal and follower licensing, omitted copulas, semantic/register judgments and independent Korean review remain open. Broad spelling discoveries include commands, 르 contractions and loanwords; no automatic contextual gold is inferred.",
+      "evidence": [
+        {
+          "path": "tests/caution_endings.rs"
+        },
+        {
+          "path": "tests/fixtures/caution-ending-sources.json"
+        },
+        {
+          "path": "tests/fixtures/caution-ending-additional-native.json"
+        },
+        {
+          "path": "web/tests/caution-ending.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "caution-ending-들을라-듣다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-넘을라-넘다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-야단맞을라-야단맞다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹을라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-적을라-적다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-찾을라-찾다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-늦을라-늦다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-부을라-붓다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-지을라-짓다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-좋을라-좋다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-있을라-있다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-없을라-없다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-나을라-낫다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹었을라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹으셨을라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학교였을라-학교-이다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹어봤을라-먹다-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹지않을라-먹다-않다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹지않았을라-먹다-않다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹겠을라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹어보겠을라-먹다-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-먹더을라-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-가을라-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-살을라-살다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-알을라-알다",
+          "judgment": "path"
+        },
+        {
+          "case": "caution-ending-학생을라-학생-이다",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

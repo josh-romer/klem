@@ -112,21 +112,44 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
         let before: WordAnalysis = serde_json::from_value(before.clone()).unwrap();
         for text in [surface.clone(), surface.nfd().collect::<String>()] {
             let actual = engine.analyze_word(&text).unwrap();
-            if matches!(surface.as_str(), "나랴" | "연기나랴") {
+            let dependency = match surface.as_str() {
+                "나랴" | "연기나랴" => Some(("ending.rya", "으랴")),
+                "날라" | "사고날라" => Some(("ending.caution", "을라")),
+                _ => None,
+            };
+            if let Some((rule, form)) = dependency {
+                if rule == "ending.caution" {
+                    // The separate source freeze retains the same original
+                    // raw word. License only these two declared dependencies;
+                    // the other 385 originals retain their previous checks.
+                    let source: Value =
+                        serde_json::from_str(include_str!("fixtures/caution-ending-sources.json"))
+                            .unwrap();
+                    assert_eq!(
+                        serde_json::from_value::<WordAnalysis>(
+                            source["before_words"][surface]["analysis"].clone()
+                        )
+                        .unwrap(),
+                        before
+                    );
+                }
                 assert_eq!(actual.normalized, before.normalized);
-                assert!(before.analyses.iter().all(|a| actual.analyses.contains(a)));
+                assert_eq!(
+                    actual
+                        .analyses
+                        .iter()
+                        .filter(|a| before.analyses.contains(a))
+                        .collect::<Vec<_>>(),
+                    before.analyses.iter().collect::<Vec<_>>()
+                );
                 let added: Vec<_> = actual
                     .analyses
                     .iter()
                     .filter(|a| !before.analyses.contains(a))
                     .collect();
                 assert!(!added.is_empty());
-                assert!(
-                    added
-                        .iter()
-                        .all(|a| a.rules.iter().any(|r| r == "ending.rya")
-                            && a.morphemes.iter().any(|m| m.form == "으랴"))
-                );
+                assert!(added.iter().all(|a| a.rules.iter().any(|r| r == rule)
+                    && a.morphemes.iter().any(|m| m.form == form)));
                 changed.insert(surface.clone());
             } else {
                 assert_eq!(actual, before, "{surface}");
@@ -135,7 +158,12 @@ fn native_entries_and_all_389_original_raw_word_paths_are_preserved() {
     }
     assert_eq!(
         changed,
-        BTreeSet::from(["나랴".to_owned(), "연기나랴".to_owned()])
+        BTreeSet::from([
+            "나랴".to_owned(),
+            "연기나랴".to_owned(),
+            "날라".to_owned(),
+            "사고날라".to_owned()
+        ])
     );
 }
 

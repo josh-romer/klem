@@ -1408,6 +1408,18 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "을라"
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었")))
+                    {
+                        // Native 77345/77346 name honorific 시 and past 었.
+                        // Other immediate-owner markers remain hypotheses;
+                        // markers owned by earlier lexical/auxiliary heads
+                        // cannot change this owner's assessment.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
                         && crate::engine::quoted_ra_exclamation(&analysis.morphemes[i].form)
                     {
                         let form = analysis.morphemes[i].form.as_str();

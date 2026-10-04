@@ -3423,8 +3423,8 @@ review remains open under the completion review below.
 
 - [ ] **COV-019ah — Further lexical 되다 complement constructions.**
   **Partial: source-listed connectors, negative bridge and attributed role
-  alternatives implemented and packaged checks passed; broad corpus/context
-  review pending.**
+  alternatives implemented; packaged checks and complete broad/held-out
+  comparisons passed; contextual review pending.**
   The complete KRDict 89858 senses retained by COV-019ag also list -도록/-기로
   (sense 17), -어야 (18), -면 (19), and -어도/-어서는 안 (21). These are separate
   dependencies beyond the implemented -게/-게끔 roles. Joined 행복해야된다,
@@ -3509,9 +3509,30 @@ review remains open under the completion review below.
   historical implementation and original proposals/corrections. Complete debug
   and Nix source-diagnostic streams, native entries and change records match
   exactly; the committed checkpoint uses the release CLI's hash.
-  Full broad streams, fresh held-out corpus comparisons and contextual/sense/
-  register and independent Korean review remain pending; frozen source contexts
-  are not promoted to judged gold.
+  [The broad comparison](doeda-complement-observations.json.gz) compares all eight
+  pinned candidate/novel streams, including both spacing filters: all 1,128,312
+  records remain byte-identical to the prior package. This cohort contains no
+  changed result and does not establish contextual precision.
+  [Four fresh held-out comparisons](doeda-complement-corpora.json.gz) preserve
+  all 66,570 original KAIST/GSD gold outcomes and recovered groups exactly.
+  Every one of the 32,096 distinct convertible surfaces is also analyzed with
+  both release CLIs; per-row candidate counts independently reproduce each
+  report's mean, percentile and maximum. One original KAIST development token,
+  `MH2_0069-s169/7` 타도되었다, grows from eight to twelve raw analyses. The four
+  separately named 타다 + 되다 alternatives retain their full before/after word
+  records and complete original sentence/ten-column row. Its annotation remains
+  타도 + 되 + 었 + 다 in a sentence about overthrowing feudal ownership; the
+  alternatives are not new recovered gold or judged contextual readings. Mean
+  development ambiguity changes from 6.171467146714671 to 6.171647164716472;
+  all other held-out summary fields remain exact. The [broad gate](../tools/doeda_complement_compare.py)
+  and [corpus gate](../tools/doeda_complement_corpora.py) verify these frozen
+  comparisons offline, anchor changed sentences to the pre-implementation source
+  archive, and compare them to original corpus files when present. Six
+  [audit regression tests](../tools/test_doeda_complement_corpora.py) reject
+  rewritten gold, lost recovered groups and candidate replacements/reordering;
+  newly recovered supersets may replace dominated groups. Full original reports
+  and stream hashes remain archived;
+  contextual/sense/register and independent Korean review remain pending.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

@@ -212,6 +212,9 @@
                 ./tools/doeda_complement_regressions.py
                 ./tools/doeda_complement_diagnostics.py
                 ./tools/doeda_complement_package.py
+                ./tools/doeda_complement_compare.py
+                ./tools/doeda_complement_corpora.py
+                ./tools/test_doeda_complement_corpora.py
                 ./web/tests/doeda-complement.mjs
                 ./src/engine.rs ./src/grammar.rs
                 ./web/tests/gam-question.mjs
@@ -312,6 +315,9 @@
             python tools/doeda_complement_regressions.py --verify
             python tools/doeda_complement_diagnostics.py --verify
             python tools/doeda_complement_package.py --verify
+            python tools/doeda_complement_compare.py --verify
+            python tools/doeda_complement_corpora.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_complement_corpora.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

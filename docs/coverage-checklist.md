@@ -1877,6 +1877,29 @@ review remains open under the completion review below.
   [packaged evidence gate](../tools/gam_question_queue.py) run in Nix.
   Contextual sense/register selection and independent Korean review remain open.
 
+- [ ] **COV-017bw — Emphatic purpose -게끔 and affirmative -고말고/-다마다.**
+  **Source audit frozen; implementation pending.** The
+  [immutable preflight](emphatic-ending-source-preflight.json.gz) scans all 56,555
+  native entries and preserves 36 spelling observations, 162 complete native
+  owners, 155 prior words in three dictionary filters, 14 original annotated
+  corpus rows and three complete novel paragraphs. The
+  [132-case matrix](../tests/fixtures/emphatic-ending-sources.json) proposes
+  109 structural paths and 23 exact boundary exclusions; these authored tests
+  are separate from contextual gold. KRDict endings 88382, 66991 and 75968 retain
+  all senses, notes, patterns and 15 complete example groups. NIKL's 2014
+  grammar-expression report, printed pages 364–365 and 369–370, independently
+  supports verbal and adjectival -게끔 하다; annotated corpus compositions
+  separately support -게끔 되다. Review the immediate-owner past restriction
+  in causative joins without pruning earlier/right-owner past or extrapolating
+  to standalone endings. Implement consonant boundaries, honorifics, auxiliary
+  chains, explicit affirmative copulas and the novel's 그렇고말고요 path;
+  preserve each prior candidate, native assessment and spacing order. Track
+  changes individually, run complete held-out/broad comparisons and verify
+  packaged CLI/API/browser behavior. Unlisted prefinals, additional connectors,
+  copula omission, contextual sense/register and independent review remain open.
+  The [offline verifier](../tools/emphatic_ending_audit.py) runs in Nix; its
+  optional --dictionary/--cli checks replay the original full snapshot and CLI.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

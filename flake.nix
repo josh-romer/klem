@@ -165,6 +165,11 @@
                 ./tools/caution_ending_compare.py
                 ./tools/caution_ending_runtime.py
                 ./tools/caution_ending_queue.py
+                ./tools/future_question_audit.py
+                ./tools/future_question_compare.py
+                ./tools/future_question_additional.py
+                ./tools/future_question_runtime.py
+                ./tools/future_question_queue.py
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -178,6 +183,7 @@
                 ./web/tests/rya-boundary.mjs
                 ./web/tests/rya-copula.mjs
                 ./web/tests/caution-ending.mjs
+                ./web/tests/future-question.mjs
               ];
             };
           } ''
@@ -219,6 +225,9 @@
             python tools/rya_copula_audit.py --verify
             python tools/rya_copula_queue.py --verify
             python tools/caution_ending_audit.py --verify
+            python tools/future_question_audit.py --verify
+            python tools/future_question_additional.py --verify
+            python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"

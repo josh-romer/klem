@@ -1,0 +1,1206 @@
+{
+  "schema_version": 1,
+  "source_sha256": "b5acc18823249234bcc54392e0d1c9b9ff9df496bae649f8f9cdcf25e1aad78d",
+  "cli_before_sha256": "04fbecfefa8c9e7f45f3e7e155c809ba81cfbc3a91770c0f9d34cfe99d127557",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "scope": "Append-only original OrigLemma discoveries missed by the initial lemma-column scan; the initial source freeze and 42-token selection remain immutable.",
+  "corpora": [
+    {
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "tokens": []
+    },
+    {
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "tokens": []
+    },
+    {
+      "source": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+      "source_sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+      "tokens": []
+    },
+    {
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "tokens": [
+        {
+          "source_row": [
+            "10",
+            "있을지도",
+            "있",
+            "AUX",
+            "px+ecs+jxc",
+            "_",
+            "9",
+            "aux",
+            "_",
+            "OrigLemma=있+ㄹ지+도|Translit=.iss.eul.ji.do|LTranslit=.iss"
+          ],
+          "complete_sentence": "# sent_id = MH2_0159-s200\n# text = 심지어는 반민중적 엘리트주의니 시대착오적 신제국주의 사고라는 정도로 선입견을 갖고 있을지도 모르겠습니다.\n# translit = .sim.ji.eo.neun .ban.min.jung.jeog .el.ri.teu.ju.yi.ni .si.dae.chag.o.jeog .sin.je.gug.ju.yi .sa.go.ra.neun .jeong.do.ro .seon.ib.gyeon.eul .gaj.go .iss.eul.ji.do .mo.reu.gess.seub.ni.da.\n1\t심지어는\t심지어+는\tNOUN\tncn+jxt\t_\t9\tdislocated\t_\tTranslit=.sim.ji.eo.neun|LTranslit=.sim.ji.eo+.neun\n2\t반민중적\t반민중+적\tNOUN\tncn+xsn\t_\t3\tamod\t_\tTranslit=.ban.min.jung.jeog|LTranslit=.ban.min.jung+.jeog\n3\t엘리트주의니\t엘리트주의+이+니\tCCONJ\tncn+jp+ecc\t_\t7\tacl\t_\tTranslit=.el.ri.teu.ju.yi.ni|LTranslit=.el.ri.teu.ju.yi+.i+.ni\n4\t시대착오적\t시대착오+적\tNOUN\tncn+xsn\t_\t6\tamod\t_\tTranslit=.si.dae.chag.o.jeog|LTranslit=.si.dae.chag.o+.jeog\n5\t신제국주의\t신제국주+의\tNOUN\tncn+jcm\t_\t6\tnmod\t_\tTranslit=.sin.je.gug.ju.yi|LTranslit=.sin.je.gug.ju+.yi\n6\t사고라는\t사고+이+라는\tVERB\tncpa+jp+etm\t_\t3\tconj\t_\tTranslit=.sa.go.ra.neun|LTranslit=.sa.go+.i+.ra.neun\n7\t정도로\t정도+로\tADV\tncn+jca\t_\t9\tadvcl\t_\tTranslit=.jeong.do.ro|LTranslit=.jeong.do+.ro\n8\t선입견을\t선입견+을\tNOUN\tncn+jco\t_\t9\tobj\t_\tTranslit=.seon.ib.gyeon.eul|LTranslit=.seon.ib.gyeon+.eul\n9\t갖고\t갖+고\tVERB\tpvg+ecx\t_\t11\tccomp\t_\tTranslit=.gaj.go|LTranslit=.gaj+.go\n10\t있을지도\t있\tAUX\tpx+ecs+jxc\t_\t9\taux\t_\tOrigLemma=있+ㄹ지+도|Translit=.iss.eul.ji.do|LTranslit=.iss\n11\t모르겠습니다\t모르+겠+습니다\tVERB\tpvg+ep+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reu.gess.seub.ni.da|LTranslit=.mo.reu+.gess+.seub.ni.da\n12\t.\t.\tPUNCT\tsf\t_\t11\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-7925765fa455a6bcace1b0c2"
+        }
+      ]
+    },
+    {
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "tokens": []
+    },
+    {
+      "source": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "tokens": [
+        {
+          "source_row": [
+            "3",
+            "할지를",
+            "하",
+            "AUX",
+            "px+ecs+jco",
+            "_",
+            "2",
+            "aux",
+            "_",
+            "OrigLemma=하+ㄹ지+를|Translit=.hal.ji.reul|LTranslit=.ha"
+          ],
+          "complete_sentence": "# sent_id = M2TA_086-s21\n# text = 어떻게 대해야 할지를 몰랐던 것이다.\n# translit = .eo.ddeoh.ge .dae.hae.ya .hal.ji.reul .mol.rass.deon .geos.i.da.\n1\t어떻게\t어떻+게\tSCONJ\tpad+ecs\t_\t2\txcomp\t_\tTranslit=.eo.ddeoh.ge|LTranslit=.eo.ddeoh+.ge\n2\t대해야\t대하+어야\tVERB\tpvg+ecx\t_\t4\tobj\t_\tTranslit=.dae.hae.ya|LTranslit=.dae.ha+.eo.ya\n3\t할지를\t하\tAUX\tpx+ecs+jco\t_\t2\taux\t_\tOrigLemma=하+ㄹ지+를|Translit=.hal.ji.reul|LTranslit=.ha\n4\t몰랐던\t모르+았더+ㄴ\tVERB\tpvg+ep+etm\t_\t0\troot\t_\tTranslit=.mol.rass.deon|LTranslit=.mo.reu+.ass.deo+ㄴ\n5\t것이다\t것+이+다\tVERB\tnbn+jp+ef\t_\t4\tadvcl\t_\tSpaceAfter=No|Translit=.geos.i.da|LTranslit=.geos+.i+.da\n6\t.\t.\tPUNCT\tsf\t_\t5\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-8a12b8ae8a3694eee73548dc"
+        },
+        {
+          "source_row": [
+            "6",
+            "있을지도",
+            "있",
+            "AUX",
+            "px+ecs",
+            "_",
+            "5",
+            "aux",
+            "_",
+            "OrigLemma=있+을지도|Translit=.iss.eul.ji.do|LTranslit=.iss"
+          ],
+          "complete_sentence": "# sent_id = MH2_0034-s107\n# text = 오늘날은 옛날보다 물질적으로 풍요를 누리고 있을지도 몰라도 실제 생활에서 행복을 누리며 사는 사람은 별로 많지 않다.\n# translit = .o.neul.nal.eun .yes.nal.bo.da .mul.jil.jeog.eu.ro .pung.yo.reul .nu.ri.go .iss.eul.ji.do .mol.ra.do .sil.je .saeng.hwal.e.seo .haeng.bog.eul .nu.ri.myeo .sa.neun .sa.ram.eun .byeol.ro .manh.ji .anh.da.\n1\t오늘날은\t오늘날+은\tNOUN\tncn+jxt\t_\t5\tdislocated\t_\tTranslit=.o.neul.nal.eun|LTranslit=.o.neul.nal+.eun\n2\t옛날보다\t옛날+보다\tADV\tncn+jca\t_\t5\tadvcl\t_\tTranslit=.yes.nal.bo.da|LTranslit=.yes.nal+.bo.da\n3\t물질적으로\t물질+적+으로\tADV\tncn+xsn+jca\t_\t5\tadvcl\t_\tTranslit=.mul.jil.jeog.eu.ro|LTranslit=.mul.jil+.jeog+.eu.ro\n4\t풍요를\t풍요+를\tNOUN\tncps+jco\t_\t5\tobj\t_\tTranslit=.pung.yo.reul|LTranslit=.pung.yo+.reul\n5\t누리고\t누리+고\tVERB\tpvg+ecx\t_\t7\tccomp\t_\tTranslit=.nu.ri.go|LTranslit=.nu.ri+.go\n6\t있을지도\t있\tAUX\tpx+ecs\t_\t5\taux\t_\tOrigLemma=있+을지도|Translit=.iss.eul.ji.do|LTranslit=.iss\n7\t몰라도\t모르+아+도\tADV\tpvg+ecs+jxc\t_\t15\tdep\t_\tTranslit=.mol.ra.do|LTranslit=.mo.reu+.a+.do\n8\t실제\t실제\tNOUN\tncn\t_\t9\tcompound\t_\tTranslit=.sil.je|LTranslit=.sil.je\n9\t생활에서\t생활+에서\tADV\tncpa+jca\t_\t12\tadvcl\t_\tTranslit=.saeng.hwal.e.seo|LTranslit=.saeng.hwal+.e.seo\n10\t행복을\t행복+을\tNOUN\tncpa+jco\t_\t11\tobj\t_\tTranslit=.haeng.bog.eul|LTranslit=.haeng.bog+.eul\n11\t누리며\t누리+며\tCCONJ\tpvg+ecc\t_\t13\tacl\t_\tTranslit=.nu.ri.myeo|LTranslit=.nu.ri+.myeo\n12\t사는\t살+는\tVERB\tpvg+etm\t_\t11\tconj\t_\tTranslit=.sa.neun|LTranslit=.sal+.neun\n13\t사람은\t사람+은\tNOUN\tncn+jxt\t_\t15\tdislocated\t_\tTranslit=.sa.ram.eun|LTranslit=.sa.ram+.eun\n14\t별로\t별로\tADV\tmag\t_\t15\tadvmod\t_\tTranslit=.byeol.ro|LTranslit=.byeol.ro\n15\t많지\t많+지\tADJ\tpaa+ecx\t_\t0\troot\t_\tTranslit=.manh.ji|LTranslit=.manh+.ji\n16\t않다\t않\tAUX\tpx+ef\t_\t15\taux\t_\tOrigLemma=않+다|SpaceAfter=No|Translit=.anh.da|LTranslit=.anh\n17\t.\t.\tPUNCT\tsf\t_\t16\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-a80b3f4723823551b003f7be"
+        },
+        {
+          "source_row": [
+            "16",
+            "할지의",
+            "하",
+            "AUX",
+            "px+ecs+jcm",
+            "_",
+            "15",
+            "aux",
+            "_",
+            "OrigLemma=하+ㄹ지+의|Translit=.hal.ji.yi|LTranslit=.ha"
+          ],
+          "complete_sentence": "# sent_id = MH2_0062-s116\n# text = 스포츠 협회, 행사기관, 참가하는 선수, 스포츠 저널리스트 또는 스포츠미디어에서 의제의 시발점을 찾아야 할지의 여부는 중요한 연구과제가 되고 있다.\n# translit = .seu.po.cheu .hyeob.hoe, .haeng.sa.gi.gwan, .cham.ga.ha.neun .seon.su, .seu.po.cheu .jeo.neol.ri.seu.teu .ddo.neun .seu.po.cheu.mi.di.eo.e.seo .yi.je.yi .si.bal.jeom.eul .chaj.a.ya .hal.ji.yi .yeo.bu.neun .jung.yo.han .yeon.gu.gwa.je.ga .doe.go .iss.da.\n1\t스포츠\t스포츠\tNOUN\tncn\t_\t2\tcompound\t_\tTranslit=.seu.po.cheu|LTranslit=.seu.po.cheu\n2\t협회\t협회\tNOUN\tncn\t_\t4\tcompound\t_\tSpaceAfter=No|Translit=.hyeob.hoe|LTranslit=.hyeob.hoe\n3\t,\t,\tPUNCT\tsp\t_\t2\tpunct\t_\tTranslit=,|LTranslit=,\n4\t행사기관\t행사+기관\tNOUN\tncpa+ncn\t_\t10\tcompound\t_\tSpaceAfter=No|Translit=.haeng.sa.gi.gwan|LTranslit=.haeng.sa+.gi.gwan\n5\t,\t,\tPUNCT\tsp\t_\t7\tpunct\t_\tTranslit=,|LTranslit=,\n6\t참가하는\t참가+하+는\tVERB\tncpa+xsv+etm\t_\t7\tacl\t_\tTranslit=.cham.ga.ha.neun|LTranslit=.cham.ga+.ha+.neun\n7\t선수\t선수\tNOUN\tncn\t_\t4\tconj\t_\tSpaceAfter=No|Translit=.seon.su|LTranslit=.seon.su\n8\t,\t,\tPUNCT\tsp\t_\t7\tpunct\t_\tTranslit=,|LTranslit=,\n9\t스포츠\t스포츠\tNOUN\tncn\t_\t10\tcompound\t_\tTranslit=.seu.po.cheu|LTranslit=.seu.po.cheu\n10\t저널리스트\t저널리스트\tNOUN\tncn\t_\t15\tadvcl\t_\tTranslit=.jeo.neol.ri.seu.teu|LTranslit=.jeo.neol.ri.seu.teu\n11\t또는\t또는\tCCONJ\tmaj\t_\t12\tcc\t_\tTranslit=.ddo.neun|LTranslit=.ddo.neun\n12\t스포츠미디어에서\t스포츠+미디어+에서\tADV\tncn+ncn+jca\t_\t10\tconj\t_\tTranslit=.seu.po.cheu.mi.di.eo.e.seo|LTranslit=.seu.po.cheu+.mi.di.eo+.e.seo\n13\t의제의\t의제+의\tNOUN\tncn+jcm\t_\t14\tnmod\t_\tTranslit=.yi.je.yi|LTranslit=.yi.je+.yi\n14\t시발점을\t시발점+을\tNOUN\tncn+jco\t_\t15\tobj\t_\tTranslit=.si.bal.jeom.eul|LTranslit=.si.bal.jeom+.eul\n15\t찾아야\t찾+아야\tVERB\tpvg+ecx\t_\t17\tnmod\t_\tTranslit=.chaj.a.ya|LTranslit=.chaj+.a.ya\n16\t할지의\t하\tAUX\tpx+ecs+jcm\t_\t15\taux\t_\tOrigLemma=하+ㄹ지+의|Translit=.hal.ji.yi|LTranslit=.ha\n17\t여부는\t여부+는\tNOUN\tncn+jxt\t_\t20\tdislocated\t_\tTranslit=.yeo.bu.neun|LTranslit=.yeo.bu+.neun\n18\t중요한\t중요+하+ㄴ\tVERB\tncps+xsm+etm\t_\t19\tamod\t_\tTranslit=.jung.yo.han|LTranslit=.jung.yo+.ha+ㄴ\n19\t연구과제가\t연구+과제+가\tNOUN\tncpa+ncn+jcs\t_\t20\tnsubj\t_\tTranslit=.yeon.gu.gwa.je.ga|LTranslit=.yeon.gu+.gwa.je+.ga\n20\t되고\t되+고\tVERB\tpvg+ecx\t_\t0\troot\t_\tTranslit=.doe.go|LTranslit=.doe+.go\n21\t있다\t있\tAUX\tpx+ef\t_\t20\taux\t_\tOrigLemma=있+다|SpaceAfter=No|Translit=.iss.da|LTranslit=.iss\n22\t.\t.\tPUNCT\tsf\t_\t21\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-abe1c6c6006d2bc33942d2d7"
+        },
+        {
+          "source_row": [
+            "7",
+            "할지도",
+            "하",
+            "AUX",
+            "px+ecs",
+            "_",
+            "6",
+            "aux",
+            "_",
+            "OrigLemma=하+ㄹ지도|Translit=.hal.ji.do|LTranslit=.ha"
+          ],
+          "complete_sentence": "# sent_id = MH2_0072-s99\n# text = 판단이 잘못되면 나중에 죽음의 공포에 시달려야 할지도 모른다.\n# translit = .pan.dan.i .jal.mos.doe.myeon .na.jung.e .jug.eum.yi .gong.po.e .si.dal.ryeo.ya .hal.ji.do .mo.reun.da.\n1\t판단이\t판단+이\tNOUN\tncpa+jcs\t_\t2\tnsubj\t_\tTranslit=.pan.dan.i|LTranslit=.pan.dan+.i\n2\t잘못되면\t잘못+되+면\tSCONJ\tncpa+xsv+ecs\t_\t8\tccomp\t_\tTranslit=.jal.mos.doe.myeon|LTranslit=.jal.mos+.doe+.myeon\n3\t나중에\t나중+에\tADV\tncn+jca\t_\t6\tobl\t_\tTranslit=.na.jung.e|LTranslit=.na.jung+.e\n4\t죽음의\t죽음+의\tNOUN\tncn+jcm\t_\t5\tnmod\t_\tTranslit=.jug.eum.yi|LTranslit=.jug.eum+.yi\n5\t공포에\t공포+에\tADV\tncn+jca\t_\t6\tobl\t_\tTranslit=.gong.po.e|LTranslit=.gong.po+.e\n6\t시달려야\t시달리+어야\tVERB\tpvg+ecx\t_\t8\tccomp\t_\tTranslit=.si.dal.ryeo.ya|LTranslit=.si.dal.ri+.eo.ya\n7\t할지도\t하\tAUX\tpx+ecs\t_\t6\taux\t_\tOrigLemma=하+ㄹ지도|Translit=.hal.ji.do|LTranslit=.ha\n8\t모른다\t모르+ㄴ다\tVERB\tpvg+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reun.da|LTranslit=.mo.reu+ㄴ.da\n9\t.\t.\tPUNCT\tsf\t_\t8\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-d7ada1b7f8ad080771041df3"
+        },
+        {
+          "source_row": [
+            "17",
+            "않을지도",
+            "않",
+            "AUX",
+            "px+ecs",
+            "_",
+            "16",
+            "aux",
+            "_",
+            "OrigLemma=않+ㄹ지도|Translit=.anh.eul.ji.do|LTranslit=.anh"
+          ],
+          "complete_sentence": "# sent_id = MH2_0081-s114\n# text = 초기의 도교사상을 기록한 문헌에 도와 덕을 강조하는 발언이 그다지 눈에 띄지 않는다는 사실은 언뜻 납득이 되지 않을지도 모른다.\n# translit = .cho.gi.yi .do.gyo.sa.sang.eul .gi.rog.han .mun.heon.e .do.wa .deog.eul .gang.jo.ha.neun .bal.eon.i .geu.da.ji .nun.e .ddyi.ji .anh.neun.da.neun .sa.sil.eun .eon.ddeus .nab.deug.i .doe.ji .anh.eul.ji.do .mo.reun.da.\n1\t초기의\t초기+의\tNOUN\tncn+jcm\t_\t2\tnmod\t_\tTranslit=.cho.gi.yi|LTranslit=.cho.gi+.yi\n2\t도교사상을\t도교+사상+을\tNOUN\tncn+ncn+jco\t_\t3\tobj\t_\tTranslit=.do.gyo.sa.sang.eul|LTranslit=.do.gyo+.sa.sang+.eul\n3\t기록한\t기록+하+ㄴ\tVERB\tncpa+xsv+etm\t_\t4\tacl\t_\tTranslit=.gi.rog.han|LTranslit=.gi.rog+.ha+ㄴ\n4\t문헌에\t문헌+에\tADV\tncn+jca\t_\t11\tobl\t_\tTranslit=.mun.heon.e|LTranslit=.mun.heon+.e\n5\t도와\t도+와\tCCONJ\tncn+jcj\t_\t7\tobj\t_\tTranslit=.do.wa|LTranslit=.do+.wa\n6\t덕을\t덕+을\tNOUN\tncn+jco\t_\t5\tconj\t_\tTranslit=.deog.eul|LTranslit=.deog+.eul\n7\t강조하는\t강조+하+는\tVERB\tncpa+xsv+etm\t_\t8\tacl\t_\tTranslit=.gang.jo.ha.neun|LTranslit=.gang.jo+.ha+.neun\n8\t발언이\t발언+이\tNOUN\tncpa+jcs\t_\t11\tnsubj\t_\tTranslit=.bal.eon.i|LTranslit=.bal.eon+.i\n9\t그다지\t그다지\tADV\tmag\t_\t11\tadvmod\t_\tTranslit=.geu.da.ji|LTranslit=.geu.da.ji\n10\t눈에\t눈+에\tADV\tncn+jca\t_\t11\tobl\t_\tTranslit=.nun.e|LTranslit=.nun+.e\n11\t띄지\t띄+지\tVERB\tpvg+ecx\t_\t13\tacl\t_\tTranslit=.ddyi.ji|LTranslit=.ddyi+.ji\n12\t않는다는\t않\tAUX\tpx+etm\t_\t11\taux\t_\tOrigLemma=않+는다는|Translit=.anh.neun.da.neun|LTranslit=.anh\n13\t사실은\t사실+은\tNOUN\tncn+jxt\t_\t16\tdislocated\t_\tTranslit=.sa.sil.eun|LTranslit=.sa.sil+.eun\n14\t언뜻\t언뜻\tADV\tmag\t_\t16\tadvmod\t_\tTranslit=.eon.ddeus|LTranslit=.eon.ddeus\n15\t납득이\t납득+이\tNOUN\tncpa+jcc\t_\t16\tcsubj\t_\tTranslit=.nab.deug.i|LTranslit=.nab.deug+.i\n16\t되지\t되+지\tVERB\tpvg+ecx\t_\t18\tccomp\t_\tTranslit=.doe.ji|LTranslit=.doe+.ji\n17\t않을지도\t않\tAUX\tpx+ecs\t_\t16\taux\t_\tOrigLemma=않+ㄹ지도|Translit=.anh.eul.ji.do|LTranslit=.anh\n18\t모른다\t모르+ㄴ다\tVERB\tpvg+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reun.da|LTranslit=.mo.reu+ㄴ.da\n19\t.\t.\tPUNCT\tsf\t_\t18\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-2fa42737bd46d23d151c652e"
+        },
+        {
+          "source_row": [
+            "8",
+            "할지도",
+            "하",
+            "AUX",
+            "px+ef+jxc",
+            "_",
+            "7",
+            "aux",
+            "_",
+            "OrigLemma=하+ㄹ지+도|Translit=.hal.ji.do|LTranslit=.ha"
+          ],
+          "complete_sentence": "# sent_id = MH2_0195-s209\n# text = 혹자는 이런 사실을 일본에게도 같은 경우로 적용시키고자 할지도 모를 일이다.\n# translit = .hog.ja.neun .i.reon .sa.sil.eul .il.bon.e.ge.do .gat.eun .gyeong.u.ro .jeog.yong.si.ki.go.ja .hal.ji.do .mo.reul .il.i.da.\n1\t혹자는\t혹자+는\tNOUN\tncn+jxt\t_\t7\tdislocated\t_\tTranslit=.hog.ja.neun|LTranslit=.hog.ja+.neun\n2\t이런\t이렇+ㄴ\tVERB\tpad+etm\t_\t3\tamod\t_\tTranslit=.i.reon|LTranslit=.i.reoh+ㄴ\n3\t사실을\t사실+을\tNOUN\tncn+jco\t_\t7\tobj\t_\tTranslit=.sa.sil.eul|LTranslit=.sa.sil+.eul\n4\t일본에게도\t일본+에게+도\tADV\tnq+jca+jxc\t_\t7\tadvcl\t_\tTranslit=.il.bon.e.ge.do|LTranslit=.il.bon+.e.ge+.do\n5\t같은\t같+ㄴ\tADJ\tpaa+etm\t_\t6\tamod\t_\tTranslit=.gat.eun|LTranslit=.gat+ㄴ\n6\t경우로\t경우+로\tADV\tncn+jca\t_\t7\tadvcl\t_\tTranslit=.gyeong.u.ro|LTranslit=.gyeong.u+.ro\n7\t적용시키고자\t적용+시키+고자\tVERB\tncpa+xsv+ecx\t_\t9\tadvcl\t_\tTranslit=.jeog.yong.si.ki.go.ja|LTranslit=.jeog.yong+.si.ki+.go.ja\n8\t할지도\t하\tAUX\tpx+ef+jxc\t_\t7\taux\t_\tOrigLemma=하+ㄹ지+도|Translit=.hal.ji.do|LTranslit=.ha\n9\t모를\t모르+ㄹ\tVERB\tpvg+etm\t_\t10\tccomp\t_\tTranslit=.mo.reul|LTranslit=.mo.reu+ㄹ\n10\t일이다\t일+이+다\tVERB\tncn+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.il.i.da|LTranslit=.il+.i+.da\n11\t.\t.\tPUNCT\tsf\t_\t10\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-399e8927a7b51c123f76a0d5"
+        },
+        {
+          "source_row": [
+            "11",
+            "있었을지도",
+            "있",
+            "AUX",
+            "px+ep+ecs",
+            "_",
+            "10",
+            "aux",
+            "_",
+            "OrigLemma=있+었+ㄹ지도|Translit=.iss.eoss.eul.ji.do|LTranslit=.iss"
+          ],
+          "complete_sentence": "# sent_id = MH2_0286-s304\n# text = 내가 나오지 않을 것이라는 것을 그 여자는 마음 속으로 셈하고 있었을지도 모른다.\n# translit = .nae.ga .na.o.ji .anh.eul .geos.i.ra.neun .geos.eul .geu .yeo.ja.neun .ma.eum .sog.eu.ro .sem.ha.go .iss.eoss.eul.ji.do .mo.reun.da.\n1\t내가\t내+가\tPRON\tnpp+jcs\t_\t2\tnsubj\t_\tTranslit=.nae.ga|LTranslit=.nae+.ga\n2\t나오지\t나오+지\tVERB\tpvg+ecx\t_\t5\tacl\t_\tTranslit=.na.o.ji|LTranslit=.na.o+.ji\n3\t않을\t않\tAUX\tpx+etm\t_\t2\taux\t_\tOrigLemma=않+ㄹ|Translit=.anh.eul|LTranslit=.anh\n4\t것이라는\t것+이+라는\tVERB\tnbn+jp+etm\t_\t2\tadvcl\t_\tTranslit=.geos.i.ra.neun|LTranslit=.geos+.i+.ra.neun\n5\t것을\t것+을\tNOUN\tnbn+jco\t_\t10\tobj\t_\tTranslit=.geos.eul|LTranslit=.geos+.eul\n6\t그\t그\tDET\tmmd\t_\t7\tdet\t_\tTranslit=.geu|LTranslit=.geu\n7\t여자는\t여자+는\tNOUN\tncn+jxt\t_\t10\tdislocated\t_\tTranslit=.yeo.ja.neun|LTranslit=.yeo.ja+.neun\n8\t마음\t마음\tNOUN\tncn\t_\t9\tcompound\t_\tTranslit=.ma.eum|LTranslit=.ma.eum\n9\t속으로\t속+으로\tADV\tncn+jca\t_\t10\tadvcl\t_\tTranslit=.sog.eu.ro|LTranslit=.sog+.eu.ro\n10\t셈하고\t셈하+고\tVERB\tpvg+ecx\t_\t12\tccomp\t_\tTranslit=.sem.ha.go|LTranslit=.sem.ha+.go\n11\t있었을지도\t있\tAUX\tpx+ep+ecs\t_\t10\taux\t_\tOrigLemma=있+었+ㄹ지도|Translit=.iss.eoss.eul.ji.do|LTranslit=.iss\n12\t모른다\t모르+ㄴ다\tVERB\tpvg+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reun.da|LTranslit=.mo.reu+ㄴ.da\n13\t.\t.\tPUNCT\tsf\t_\t12\tpunct\t_\tTranslit=.|LTranslit=.",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "id": "future-question-origlemma-6b379891438826fb1240b07f"
+        }
+      ]
+    }
+  ],
+  "before_words": {
+    "않을지도": {
+      "analysis": {
+        "normalized": "않을지도",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "않을다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "않을지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "않을지",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "않을지도",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "않을다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "않을지",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "않을지",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "않을지도",
+              "kind": "unclassified"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "있었을지도": {
+      "analysis": {
+        "normalized": "있었을지도",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "있었을다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "있었을지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "있었을지",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "있었을지도",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "있었을다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "있었을지",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "있었을지",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "있었을지도",
+              "kind": "unclassified"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "있을지도": {
+      "analysis": {
+        "normalized": "있을지도",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "있을다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "있을지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "있을지",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "있을지도",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "있을다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "있을지",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "있을지",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "있을지도",
+              "kind": "unclassified"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "할지도": {
+      "analysis": {
+        "normalized": "할지도",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "할다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지도",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "할다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지도",
+              "kind": "unclassified"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "할지를": {
+      "analysis": {
+        "normalized": "할지를",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "할다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "를",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지르",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "를",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.l"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지르",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "를",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.l"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지르다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "을",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지를",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지를다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "을",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지릏다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "을",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "할다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지르",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지르",
+              "kind": "adverbial"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지르다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지를",
+              "kind": "unclassified"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지를다",
+              "kind": "predicate"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지릏다",
+              "kind": "predicate"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "할지의": {
+      "analysis": {
+        "normalized": "할지의",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "할지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "의",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "할지의",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      },
+      "dictionary": {
+        "source": "krdict",
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "lemmas": [
+          {
+            "lemma": {
+              "text": "할지",
+              "kind": "nominal"
+            },
+            "entries": []
+          },
+          {
+            "lemma": {
+              "text": "할지의",
+              "kind": "unclassified"
+            },
+            "entries": []
+          }
+        ],
+        "readings": [
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          },
+          {
+            "status": "unknown",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "unknown",
+                "entries": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

@@ -3597,6 +3597,7 @@ fn nominals(
         if !emphatic_adverbial {
             with_auxiliaries(base, ending, |p| {
                 let nominalized = PredicateEnd::Nominalized.accepts(&p);
+                let future_question = p.morphs.last().is_some_and(|m| m.form == "을지");
                 let quoted_question = p
                     .morphs
                     .last()
@@ -3611,6 +3612,9 @@ fn nominals(
                     }
                     if nominalized {
                         a.rules.push("nominalization".into());
+                    }
+                    if future_question {
+                        a.rules.push("particle.future_question".into());
                     }
                     if concessive {
                         a.rules.push("particle.concessive".into());
@@ -4076,6 +4080,7 @@ impl PredicateEnd {
                         | "은지"
                         | "던가"
                         | "던지"
+                        | "을지"
                         | "을는지"
                         | "으려는가"
                         | "으려는지"

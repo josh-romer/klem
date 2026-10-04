@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-018ae / COV-020r",
+  "corpora": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "converted_rows": 22220,
+      "report_lines": 22221,
+      "before_report_sha256": "083c815cb02c53b3a5f1cca9a31a547169fe9c5e79d46c1d4b0c3de744597083",
+      "after_report_sha256": "663bbfb2a21bcf9560833620c6e88e1669a981259da91bf5333a444c552e86d0",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "grouped_matches": {
+          "before": 22140,
+          "after": 22142
+        },
+        "recovered_gold_lemmas": {
+          "before": 23614,
+          "after": 23616
+        },
+        "transformed_matches": {
+          "before": 17089,
+          "after": 17091
+        },
+        "grouped_lemma_recall": {
+          "before": 0.9963996399639964,
+          "after": 0.9964896489648964
+        },
+        "lemma_recall": {
+          "before": 0.9971707275875175,
+          "after": 0.9972551834804273
+        },
+        "transformed_grouped_recall": {
+          "before": 0.9953404391636088,
+          "after": 0.9954569281845186
+        },
+        "mean_candidates": {
+          "before": 6.171242124212421,
+          "after": 6.172727272727273
+        }
+      },
+      "changes": [
+        {
+          "id": "future-question-corpus-a054fc3e83c3f05ea8631f9f",
+          "before": {
+            "id": "id:MH2_0159-s200/10",
+            "surface": "있을지도",
+            "expected": [
+              "있다"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:MH2_0159-s200/10",
+            "surface": "있을지도",
+            "expected": [
+              "있다"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "source_row": [
+            "10",
+            "있을지도",
+            "있",
+            "AUX",
+            "px+ecs+jxc",
+            "_",
+            "9",
+            "aux",
+            "_",
+            "OrigLemma=있+ㄹ지+도|Translit=.iss.eul.ji.do|LTranslit=.iss"
+          ],
+          "complete_sentence": "# sent_id = MH2_0159-s200\n# text = 심지어는 반민중적 엘리트주의니 시대착오적 신제국주의 사고라는 정도로 선입견을 갖고 있을지도 모르겠습니다.\n# translit = .sim.ji.eo.neun .ban.min.jung.jeog .el.ri.teu.ju.yi.ni .si.dae.chag.o.jeog .sin.je.gug.ju.yi .sa.go.ra.neun .jeong.do.ro .seon.ib.gyeon.eul .gaj.go .iss.eul.ji.do .mo.reu.gess.seub.ni.da.\n1\t심지어는\t심지어+는\tNOUN\tncn+jxt\t_\t9\tdislocated\t_\tTranslit=.sim.ji.eo.neun|LTranslit=.sim.ji.eo+.neun\n2\t반민중적\t반민중+적\tNOUN\tncn+xsn\t_\t3\tamod\t_\tTranslit=.ban.min.jung.jeog|LTranslit=.ban.min.jung+.jeog\n3\t엘리트주의니\t엘리트주의+이+니\tCCONJ\tncn+jp+ecc\t_\t7\tacl\t_\tTranslit=.el.ri.teu.ju.yi.ni|LTranslit=.el.ri.teu.ju.yi+.i+.ni\n4\t시대착오적\t시대착오+적\tNOUN\tncn+xsn\t_\t6\tamod\t_\tTranslit=.si.dae.chag.o.jeog|LTranslit=.si.dae.chag.o+.jeog\n5\t신제국주의\t신제국주+의\tNOUN\tncn+jcm\t_\t6\tnmod\t_\tTranslit=.sin.je.gug.ju.yi|LTranslit=.sin.je.gug.ju+.yi\n6\t사고라는\t사고+이+라는\tVERB\tncpa+jp+etm\t_\t3\tconj\t_\tTranslit=.sa.go.ra.neun|LTranslit=.sa.go+.i+.ra.neun\n7\t정도로\t정도+로\tADV\tncn+jca\t_\t9\tadvcl\t_\tTranslit=.jeong.do.ro|LTranslit=.jeong.do+.ro\n8\t선입견을\t선입견+을\tNOUN\tncn+jco\t_\t9\tobj\t_\tTranslit=.seon.ib.gyeon.eul|LTranslit=.seon.ib.gyeon+.eul\n9\t갖고\t갖+고\tVERB\tpvg+ecx\t_\t11\tccomp\t_\tTranslit=.gaj.go|LTranslit=.gaj+.go\n10\t있을지도\t있\tAUX\tpx+ecs+jxc\t_\t9\taux\t_\tOrigLemma=있+ㄹ지+도|Translit=.iss.eul.ji.do|LTranslit=.iss\n11\t모르겠습니다\t모르+겠+습니다\tVERB\tpvg+ep+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reu.gess.seub.ni.da|LTranslit=.mo.reu+.gess+.seub.ni.da\n12\t.\t.\tPUNCT\tsf\t_\t11\tpunct\t_\tTranslit=.|LTranslit=."
+        },
+        {
+          "id": "future-question-corpus-a57ff9a80321726b0ba3ff70",
+          "before": {
+            "id": "id:MH2_0169-s647/6",
+            "surface": "착수할지도",
+            "expected": [
+              "착수하다"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:MH2_0169-s647/6",
+            "surface": "착수할지도",
+            "expected": [
+              "착수하다"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "source_row": [
+            "6",
+            "착수할지도",
+            "착수+하+ㄹ지도",
+            "SCONJ",
+            "ncpa+xsv+ecs",
+            "_",
+            "7",
+            "ccomp",
+            "_",
+            "Translit=.chag.su.hal.ji.do|LTranslit=.chag.su+.ha+ㄹ.ji.do"
+          ],
+          "complete_sentence": "# sent_id = MH2_0169-s647\n# text = 물론 김영삼 정부가 이 작업에 착수할지도 모른다.\n# translit = .mul.ron .gim.yeong.sam .jeong.bu.ga .i .jag.eob.e .chag.su.hal.ji.do .mo.reun.da.\n1\t물론\t물론\tADV\tmag\t_\t6\tadvmod\t_\tTranslit=.mul.ron|LTranslit=.mul.ron\n2\t김영삼\t김영삼\tPROPN\tnq\t_\t3\tcompound\t_\tTranslit=.gim.yeong.sam|LTranslit=.gim.yeong.sam\n3\t정부가\t정부+가\tNOUN\tncn+jcs\t_\t6\tnsubj\t_\tTranslit=.jeong.bu.ga|LTranslit=.jeong.bu+.ga\n4\t이\t이\tDET\tmmd\t_\t5\tdet\t_\tTranslit=.i|LTranslit=.i\n5\t작업에\t작업+에\tADV\tncpa+jca\t_\t6\tobl\t_\tTranslit=.jag.eob.e|LTranslit=.jag.eob+.e\n6\t착수할지도\t착수+하+ㄹ지도\tSCONJ\tncpa+xsv+ecs\t_\t7\tccomp\t_\tTranslit=.chag.su.hal.ji.do|LTranslit=.chag.su+.ha+ㄹ.ji.do\n7\t모른다\t모르+ㄴ다\tVERB\tpvg+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reun.da|LTranslit=.mo.reu+ㄴ.da\n8\t.\t.\tPUNCT\tsf\t_\t7\tpunct\t_\tTranslit=.|LTranslit=."
+        }
+      ]
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "converted_rows": 24490,
+      "report_lines": 24491,
+      "before_report_sha256": "8bb630b11258dfbf013b95fe4134d5a8237f2da1b22b4a03e13dfc56e9bc13a7",
+      "after_report_sha256": "355d3b693eea3827eae02585f60cd8d42e0994134a2157d32434a7bf601d8534",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "grouped_matches": {
+          "before": 24398,
+          "after": 24400
+        },
+        "recovered_gold_lemmas": {
+          "before": 25937,
+          "after": 25939
+        },
+        "transformed_matches": {
+          "before": 18123,
+          "after": 18125
+        },
+        "grouped_lemma_recall": {
+          "before": 0.9962433646386281,
+          "after": 0.9963250306247448
+        },
+        "lemma_recall": {
+          "before": 0.9966952311416823,
+          "after": 0.9967720862314107
+        },
+        "transformed_grouped_recall": {
+          "before": 0.9949492176777381,
+          "after": 0.9950590172934395
+        },
+        "mean_candidates": {
+          "before": 5.984238464679461,
+          "after": 5.985994283380972
+        }
+      },
+      "changes": [
+        {
+          "id": "future-question-corpus-dede1a43c0dbbbda8714caba",
+          "before": {
+            "id": "id:MH2_0190-s163/12",
+            "surface": "있을지도",
+            "expected": [
+              "있다"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:MH2_0190-s163/12",
+            "surface": "있을지도",
+            "expected": [
+              "있다"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "source_row": [
+            "12",
+            "있을지도",
+            "있+ㄹ지도",
+            "SCONJ",
+            "paa+ecs",
+            "_",
+            "11",
+            "fixed",
+            "_",
+            "Translit=.iss.eul.ji.do|LTranslit=.iss+ㄹ.ji.do"
+          ],
+          "complete_sentence": "# sent_id = MH2_0190-s163\n# text = 또한 시장경제 경험이 전혀 없는 러시아에서 과연 체제전환이 순조롭게 이루어질 수 있을지도 의문이다.\n# translit = .ddo.han .si.jang.gyeong.je .gyeong.heom.i .jeon.hyeo .eobs.neun .reo.si.a.e.seo .gwa.yeon .che.je.jeon.hwan.i .sun.jo.rob.ge .i.ru.eo.jil .su .iss.eul.ji.do .yi.mun.i.da.\n1\t또한\t또한\tCCONJ\tmaj\t_\t13\tcc\t_\tTranslit=.ddo.han|LTranslit=.ddo.han\n2\t시장경제\t시장+경제\tNOUN\tncn+ncn\t_\t3\tcompound\t_\tTranslit=.si.jang.gyeong.je|LTranslit=.si.jang+.gyeong.je\n3\t경험이\t경험+이\tNOUN\tncpa+jcs\t_\t5\tnsubj\t_\tTranslit=.gyeong.heom.i|LTranslit=.gyeong.heom+.i\n4\t전혀\t전혀\tADV\tmag\t_\t5\tadvmod\t_\tTranslit=.jeon.hyeo|LTranslit=.jeon.hyeo\n5\t없는\t없+는\tADJ\tpaa+etm\t_\t6\tamod\t_\tTranslit=.eobs.neun|LTranslit=.eobs+.neun\n6\t러시아에서\t러시아+에서\tADV\tnq+jca\t_\t10\tadvcl\t_\tTranslit=.reo.si.a.e.seo|LTranslit=.reo.si.a+.e.seo\n7\t과연\t과연\tADV\tmag\t_\t10\tadvmod\t_\tTranslit=.gwa.yeon|LTranslit=.gwa.yeon\n8\t체제전환이\t체제+전환+이\tNOUN\tncn+ncpa+jcs\t_\t10\tnsubj\t_\tTranslit=.che.je.jeon.hwan.i|LTranslit=.che.je+.jeon.hwan+.i\n9\t순조롭게\t순조롭+게\tSCONJ\tpaa+ecs\t_\t10\txcomp\t_\tTranslit=.sun.jo.rob.ge|LTranslit=.sun.jo.rob+.ge\n10\t이루어질\t이루+어+지+ㄹ\tVERB\tpvg+ecx+px+etm\t_\t13\tccomp\t_\tTranslit=.i.ru.eo.jil|LTranslit=.i.ru+.eo+.ji+ㄹ\n11\t수\t수\tNOUN\tnbn\t_\t10\tobl\t_\tOrigDeprel=aux|Translit=.su|LTranslit=.su\n12\t있을지도\t있+ㄹ지도\tSCONJ\tpaa+ecs\t_\t11\tfixed\t_\tTranslit=.iss.eul.ji.do|LTranslit=.iss+ㄹ.ji.do\n13\t의문이다\t의문+이+다\tVERB\tncpa+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.yi.mun.i.da|LTranslit=.yi.mun+.i+.da\n14\t.\t.\tPUNCT\tsf\t_\t13\tpunct\t_\tTranslit=.|LTranslit=."
+        },
+        {
+          "id": "future-question-corpus-eebbfd2be3a2700f9905324b",
+          "before": {
+            "id": "id:MH2_0190-s321/11",
+            "surface": "버릴지도",
+            "expected": [
+              "버리다"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:MH2_0190-s321/11",
+            "surface": "버릴지도",
+            "expected": [
+              "버리다"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "source_row": [
+            "11",
+            "버릴지도",
+            "버리+ㄹ지도",
+            "SCONJ",
+            "px+ecs",
+            "_",
+            "10",
+            "mark",
+            "_",
+            "Translit=.beo.ril.ji.do|LTranslit=.beo.ri+ㄹ.ji.do"
+          ],
+          "complete_sentence": "# sent_id = MH2_0190-s321\n# text = 온 국민이 긴장하지 않는다면 거대한 변화의 물결이 우리를 송두리째 삼켜 버릴지도 모른다.\n# translit = .on .gug.min.i .gin.jang.ha.ji .anh.neun.da.myeon .geo.dae.han .byeon.hwa.yi .mul.gyeol.i .u.ri.reul .song.du.ri.jjae .sam.kyeo .beo.ril.ji.do .mo.reun.da.\n1\t온\t온\tADJ\tmma\t_\t2\tamod\t_\tTranslit=.on|LTranslit=.on\n2\t국민이\t국민+이\tNOUN\tncn+jcs\t_\t3\tnsubj\t_\tTranslit=.gug.min.i|LTranslit=.gug.min+.i\n3\t긴장하지\t긴장+하+지\tVERB\tncpa+xsv+ecx\t_\t12\tccomp\t_\tTranslit=.gin.jang.ha.ji|LTranslit=.gin.jang+.ha+.ji\n4\t않는다면\t않\tAUX\tpx+ecs\t_\t3\taux\t_\tOrigLemma=않+는다면|Translit=.anh.neun.da.myeon|LTranslit=.anh\n5\t거대한\t거대+하+ㄴ\tVERB\tncps+xsm+etm\t_\t6\tamod\t_\tTranslit=.geo.dae.han|LTranslit=.geo.dae+.ha+ㄴ\n6\t변화의\t변화+의\tNOUN\tncpa+jcm\t_\t7\tnmod\t_\tTranslit=.byeon.hwa.yi|LTranslit=.byeon.hwa+.yi\n7\t물결이\t물결+이\tNOUN\tncn+jcs\t_\t10\tnsubj\t_\tTranslit=.mul.gyeol.i|LTranslit=.mul.gyeol+.i\n8\t우리를\t우리+를\tPRON\tnpp+jco\t_\t10\tobj\t_\tTranslit=.u.ri.reul|LTranslit=.u.ri+.reul\n9\t송두리째\t송두리째\tADV\tmag\t_\t10\tadvmod\t_\tTranslit=.song.du.ri.jjae|LTranslit=.song.du.ri.jjae\n10\t삼켜\t삼키+어\tVERB\tpvg+ecx\t_\t12\tccomp\t_\tTranslit=.sam.kyeo|LTranslit=.sam.ki+.eo\n11\t버릴지도\t버리+ㄹ지도\tSCONJ\tpx+ecs\t_\t10\tmark\t_\tTranslit=.beo.ril.ji.do|LTranslit=.beo.ri+ㄹ.ji.do\n12\t모른다\t모르+ㄴ다\tVERB\tpvg+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mo.reun.da|LTranslit=.mo.reu+ㄴ.da\n13\t.\t.\tPUNCT\tsf\t_\t12\tpunct\t_\tTranslit=.|LTranslit=."
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "converted_rows": 9989,
+      "report_lines": 9990,
+      "before_report_sha256": "4b495ec83dbe7e8c67155e2c6a606747bb506c547891688df3a76c51e3076815",
+      "after_report_sha256": "95a5040041459f006847ddbf4c8a3a5446886fde95fdb14ef4e8211229f1a9c3",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "mean_candidates": {
+          "before": 5.659925918510361,
+          "after": 5.660326358994895
+        }
+      },
+      "changes": []
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "converted_rows": 9871,
+      "report_lines": 9872,
+      "before_report_sha256": "ff33e00a386d99c065c4ee07d793b1e2eff3872f494eecb40c0421e4cc0f7fb8",
+      "after_report_sha256": "517604c411cf9f6b99bcfaa4777df21c6e6364c401f807253155df50ed9eeac8",
+      "original_ids_surfaces_gold_preserved": true,
+      "prior_component_sets_preserved": true,
+      "changed_summary_fields": {
+        "grouped_matches": {
+          "before": 9739,
+          "after": 9740
+        },
+        "recovered_gold_lemmas": {
+          "before": 10176,
+          "after": 10177
+        },
+        "transformed_matches": {
+          "before": 6280,
+          "after": 6281
+        },
+        "grouped_lemma_recall": {
+          "before": 0.9866274946813899,
+          "after": 0.9867288015398642
+        },
+        "lemma_recall": {
+          "before": 0.9815761551075528,
+          "after": 0.9816726150284557
+        },
+        "transformed_grouped_recall": {
+          "before": 0.9794135995009358,
+          "after": 0.9795695570804741
+        },
+        "mean_candidates": {
+          "before": 5.746732853814203,
+          "after": 5.747948536115895
+        }
+      },
+      "changes": [
+        {
+          "id": "future-question-corpus-243e7d35b20e48edf476e785",
+          "before": {
+            "id": "id:test-s473/15",
+            "surface": "바뀔지는",
+            "expected": [
+              "바뀌다"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:test-s473/15",
+            "surface": "바뀔지는",
+            "expected": [
+              "바뀌다"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          },
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "source_row": [
+            "15",
+            "바뀔지는",
+            "바뀌+ㄹ지+는",
+            "NOUN",
+            "VV+EC+JX",
+            "_",
+            "16",
+            "obj",
+            "_",
+            "Translit=.ba.ggwil.ji.neun|LTranslit=.ba.ggwi+ㄹ.ji+.neun"
+          ],
+          "complete_sentence": "# sent_id = test-s473\n# text = 지금 세계 게임시장의 주도권을 비디오게임이 쥐고 있지만 향후 3년 이후만 해도 게임산업의 지형이 어떻게 바뀔지는 상상하기 힘든데요.\n# translit = .ji.geum .se.gye .ge.im.si.jang.yi .ju.do.gweon.eul .bi.di.o.ge.im.i .jwi.go .iss.ji.man .hyang.hu 3.nyeon .i.hu.man .hae.do .ge.im.san.eob.yi .ji.hyeong.i .eo.ddeoh.ge .ba.ggwil.ji.neun .sang.sang.ha.gi .him.deun.de.yo.\n1\t지금\t지금\tADV\tMAG\t_\t6\tadvmod\t_\tTranslit=.ji.geum|LTranslit=.ji.geum\n2\t세계\t세계\tNOUN\tNNG\t_\t4\tnmod:poss\t_\tTranslit=.se.gye|LTranslit=.se.gye\n3\t게임시장의\t게임+시장+의\tNOUN\tNNG+NNG+JKG\t_\t2\tflat\t_\tTranslit=.ge.im.si.jang.yi|LTranslit=.ge.im+.si.jang+.yi\n4\t주도권을\t주도+권+을\tNOUN\tNNG+XSN+JKO\t_\t6\tobj\t_\tTranslit=.ju.do.gweon.eul|LTranslit=.ju.do+.gweon+.eul\n5\t비디오게임이\t비디오+게임+이\tNOUN\tNNG+NNG+JKS\t_\t6\tnsubj\t_\tTranslit=.bi.di.o.ge.im.i|LTranslit=.bi.di.o+.ge.im+.i\n6\t쥐고\t쥐+고\tVERB\tVV+EC\t_\t17\tadvcl\t_\tTranslit=.jwi.go|LTranslit=.jwi+.go\n7\t있지만\t있+지만\tVERB\tVX+EC\t_\t6\tflat\t_\tTranslit=.iss.ji.man|LTranslit=.iss+.ji.man\n8\t향후\t향후\tNOUN\tNNG\t_\t11\tobl\t_\tTranslit=.hyang.hu|LTranslit=.hyang.hu\n9\t3년\t3+년\tNOUN\tSN+NNB\t_\t8\tflat\t_\tTranslit=3.nyeon|LTranslit=3+.nyeon\n10\t이후만\t이후+만\tADV\tNNG+JX\t_\t8\tflat\t_\tTranslit=.i.hu.man|LTranslit=.i.hu+.man\n11\t해도\t하+아도\tVERB\tVV+EC\t_\t15\tadvcl\t_\tTranslit=.hae.do|LTranslit=.ha+.a.do\n12\t게임산업의\t게임+산업+의\tNOUN\tNNG+NNG+JKG\t_\t13\tnmod:poss\t_\tTranslit=.ge.im.san.eob.yi|LTranslit=.ge.im+.san.eob+.yi\n13\t지형이\t지형+이\tNOUN\tNNG+JKS\t_\t15\tnsubj\t_\tTranslit=.ji.hyeong.i|LTranslit=.ji.hyeong+.i\n14\t어떻게\t어떻+게\tADV\tVA+EC\t_\t15\tadvmod\t_\tTranslit=.eo.ddeoh.ge|LTranslit=.eo.ddeoh+.ge\n15\t바뀔지는\t바뀌+ㄹ지+는\tNOUN\tVV+EC+JX\t_\t16\tobj\t_\tTranslit=.ba.ggwil.ji.neun|LTranslit=.ba.ggwi+ㄹ.ji+.neun\n16\t상상하기\t상상+하+기\tNOUN\tNNG+XSV+ETN\t_\t17\tnsubj\t_\tTranslit=.sang.sang.ha.gi|LTranslit=.sang.sang+.ha+.gi\n17\t힘든데요\t힘들+ㄴ데요\tVERB\tVA+EF\t_\t0\troot\t_\tSpaceAfter=No|Translit=.him.deun.de.yo|LTranslit=.him.deul+ㄴ.de.yo\n18\t.\t.\tPUNCT\tSF\t_\t17\tpunct\t_\tTranslit=.|LTranslit=."
+        }
+      ]
+    }
+  ],
+  "previous_report_sha256": "6ee44cbaa8364550f51c7d1db64de3207fe217a992214b42f93c0fa2359f083f",
+  "evaluator_sha256": "130231b7e776a7fcb20ab8c7281502841209d1c9e8b8abf820b50c89d866558d",
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

@@ -2271,6 +2271,51 @@ review remains open under the completion review below.
   under the open COV-018ab parent. The continuation auxiliary's left-class audit
   remains COV-019ad; diagnostic 좋아내느냐도 is not a new required judgment.
 
+- [x] **COV-018ae — Future-question noun clauses before particles.**
+  Canonical `을지` now enters the existing noun-clause
+  particle path with explicit `particle.future_question` provenance. NIKL
+  [noun-clause guidance](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=315739)
+  permits particles after the question ending, and its
+  [것일지도 analysis](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=318654)
+  retains overt 이 + 을지 + 도. No unwritten 기 or 모르다 is restored.
+  The [immutable preflight](future-question-source-preflight.json.gz) preserves
+  589 spelling observations and complete native groups, all 42 selected original
+  annotated tokens and 380 prior word results. Spelling discoveries include
+  lexical nouns and plain 지 readings; they are not contextual gold.
+  [70 individual cases](../tests/fixtures/future-question-sources.json) distinguish
+  58 required structural paths and 12 named forbidden paths. Existing allomorph,
+  prefinal, immediate auxiliary owner, copula and particle-chain checks are inherited.
+  [Five integration tests](../tests/future_questions.rs) verify exact full-native
+  import, prior path order and assessments, NFC/NFD/cache/CLI parity and
+  사고 / 날지도 spacing with UTF-8 spans. An
+  [append-only corpus supplement](../tests/fixtures/future-question-corpus-supplement.json)
+  preserves eight further tokens whose morphology appears only in OrigLemma,
+  with six original word results. All 50 selected original lemma groups recover
+  (one before), and all 382 distinct prior words retain their paths and assessments.
+  Four historical Hada cohort misses now recover; all 288 original rows and the
+  seventeen historical miss reports remain frozen, with eleven current misses.
+  [Full-stream observations](future-question-observations.json.gz) compare all
+  1,128,312 pinned records and retain 1,880 individual additions/updates:
+  1,861 candidate paths, 16 spacing options and three updates to existing options.
+  All prior paths, native assessments and spacing order survive.
+  [Additional complete native owners](../tests/fixtures/future-question-additional-native.json)
+  retain the 291 dictionary entries exposed by these changes, separately from
+  the original freeze. Contextual and independent judgments remain pending.
+  [Four held-out reports](future-question-corpora.json) compare all 66,570 original
+  rows: five lemma groups newly recover, with no prior group/component loss.
+  Each changed row retains its stable identity, original fields and complete
+  sentence. [Packaged HTTP checks](future-question-packaged-runtime.json) verify
+  all 1,011 full native endpoints, 140 encoded case checks and 27 cache/filter
+  streams. [Nine browser exports](future-question-packaged-browser.json) match
+  the CLI across all 382 words; seven selected diagrams, both ending links and
+  inspected mobile layout pass. The host Nix release suite passes 850 tests
+  (zero failures, one downloaded-corpus test ignored); the four complete corpus
+  reports run separately. The [offline evidence gate](../tools/future_question_queue.py)
+  runs in the flake and keeps every contextual/independent judgment pending.
+  COV-018ab remains open for other question endings, attachment/register and
+  contextual/independent review; the lexical 나다 reported-retrospective
+  dependency also remains open.
+
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -3469,9 +3514,11 @@ review remains open under the completion review below.
   and inspected mobile layout pass. Nix runs 845 release tests with zero failures
   (one downloaded-corpus test ignored; the four corpus reports run separately).
   [The offline evidence gate](../tools/lexical_nada_listed_queue.py) is included
-  in the flake. Remaining named dependencies are
+  in the flake. COV-018ae now resolves
   `lexical-nada-discovery-ef9a33c60226f6c9ba4fe452` (사고 날지도, 을지 + 도)
-  and `lexical-nada-discovery-7b1f871bde65cd5d1aeba52a` (발표 났다던데,
+  through an explicit source-backed test overlay; the historical pending fixture
+  remains unchanged. The remaining named right-morphology dependency is
+  `lexical-nada-discovery-7b1f871bde65cd5d1aeba52a` (발표 났다던데,
   reported retrospective expression). The 57 construction boundaries, 4,587
   discoveries outside this cohort and all contextual/independent review remain open.
 

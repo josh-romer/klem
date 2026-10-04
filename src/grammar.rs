@@ -1901,6 +1901,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "particle.quoted_question" => {
             "Retain a -냐/-느냐/-으냐 question clause before reviewed 에/의/와/가/를/보다 case particles, topic 는 or additive 도; preserve the question owner's inflection, existing particle chains and separate quoted-ending alternatives."
         }
+        "particle.future_question" => {
+            "Separate a particle following the question noun clause -(으)ㄹ지, retaining its ending and inherited allomorph and immediate-owner checks. No unwritten nominalizer or following verb is restored; context and register remain unselected."
+        }
         "particle.comparison_case" => {
             "Recover reviewed 에/에서/서 before comparison particle 처럼; keep case order and distinguish separately spaced adverb 같이."
         }

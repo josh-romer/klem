@@ -3212,7 +3212,7 @@ fn deul_targets_preserve_25_original_rows_and_the_remaining_source_spelling_miss
 }
 
 #[test]
-fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
+fn hada_targets_preserve_288_original_rows_and_track_all_17_historical_misses() {
     let source: serde_json::Value =
         serde_json::from_str(include_str!("fixtures/hada-aux-sources.json")).unwrap();
     let mut total = 0;
@@ -3249,9 +3249,25 @@ fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
             let mut expected = target["case_report"].clone();
             if matches!(
                 case.id.as_str(),
-                "id:M2TA_087-s125/16" | "id:MH2_0147-s15/5"
+                "id:M2TA_087-s125/16"
+                    | "id:MH2_0147-s15/5"
+                    | "id:M2TA_086-s21/3"
+                    | "id:MH2_0062-s116/16"
+                    | "id:MH2_0072-s99/7"
+                    | "id:MH2_0195-s209/8"
             ) {
                 assert_eq!(target["case_report"]["matched"], false);
+                if case.id == "id:M2TA_086-s21/3" {
+                    // -(으)ㄹ지 now retains its question ending before 를.
+                    // The original source row and historical miss stay frozen.
+                    assert_eq!(case.surface, "할지를");
+                    assert!(
+                        target["source_row"][9]
+                            .as_str()
+                            .unwrap()
+                            .contains("OrigLemma=하+ㄹ지+를")
+                    );
+                }
                 expected["matched"] = serde_json::json!(true);
                 expected["recovered"] = serde_json::json!(1);
                 expected["recovered_sets"] = serde_json::json!([[0]]);
@@ -3264,7 +3280,7 @@ fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
             }
         }
     }
-    assert_eq!((total, matched, misses.len()), (288, 273, 15));
+    assert_eq!((total, matched, misses.len()), (288, 277, 11));
     assert!(misses.iter().any(|id| id == "id:train-s252/8"));
     assert!(misses.iter().any(|id| id == "id:MH2_0164-s29/6"));
 }

@@ -4,10 +4,15 @@ import argparse
 import itertools
 
 from gam_question_audit import FIXTURE, ROOT, SOURCE
+from gam_question_implementation import verify as verify_implementation
 from lexical_nada_audit import read, sha
 
 
 def verify():
+    # Reports remain tied to the exact historical code that produced them.
+    # Current-code compatibility is guarded by the implemented cohort in Rust
+    # and the optional full CLI replay, rather than rewriting old reports.
+    verify_implementation()
     source = read(SOURCE)
     fixture = read(FIXTURE)
     observations = read(ROOT / "docs/gam-question-observations.json.gz")
@@ -17,8 +22,6 @@ def verify():
         assert report["schema_version"] == 1 and report["checklist"] == "COV-017bv"
         assert report["contextual_verdict"] == "unjudged"
         assert report["independent_review"] == "pending"
-        assert report["engine_sha256"] == sha(ROOT / "src/engine.rs")
-        assert report["catalog_sha256"] == sha(ROOT / "web/src/grammar-labels.json")
         assert report["words"] == len(fixture["before_words"]) == 89
     assert runtime["cli_sha256"] == browser["cli_sha256"]
     assert runtime["source_sha256"] == sha(SOURCE)
@@ -26,7 +29,6 @@ def verify():
     assert runtime["observations_sha256"] == sha(
         ROOT / "docs/gam-question-observations.json.gz"
     )
-    assert runtime["grammar_sha256"] == sha(ROOT / "src/grammar.rs")
     assert runtime["runtime_tool_sha256"] == sha(ROOT / "tools/gam_question_runtime.py")
     assert browser["browser_tool_sha256"] == sha(ROOT / "web/tests/gam-question.mjs")
     native = source["complete_native_entries"] | observations["complete_native_entries"]

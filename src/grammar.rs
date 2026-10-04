@@ -464,6 +464,7 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "고",
     "지",
     "게",
+    "게끔",
     "어야",
     "은",
     "는",
@@ -871,6 +872,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느라고",
             "느라",
             "고",
+            "고말고",
             "고서",
             "고요",
             "지만",
@@ -882,6 +884,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "지요",
             "죠",
             "게",
+            "게끔",
             "게요",
             "도록",
             "듯",
@@ -936,6 +939,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "자거나",
             "자면",
             "자마자",
+            "다마다",
             "거든",
             "거든요",
             "건",
@@ -949,7 +953,7 @@ pub(crate) fn endings() -> &'static [Ending] {
                 suffix,
                 form: suffix,
                 boundary: Literal,
-                connector: matches!(suffix, "고" | "지" | "게"),
+                connector: matches!(suffix, "고" | "지" | "게" | "게끔"),
             });
         }
         // Native arrow entries redirect these input spellings to 구먼.
@@ -2062,6 +2066,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.refuting_question" => {
             "Recover -(으)ㄴ감, -는감 or -던감 as a refuting question ending; retain its stem boundary and native dictionary identity without choosing a contextual interpretation."
+        }
+        "ending.emphatic_purpose" => {
+            "Recover -게끔 as an emphatic purpose, result, manner or degree ending, preserving source-backed 하다/되다 auxiliary joins and each owner's inflections."
+        }
+        "ending.emphatic_affirmation" => {
+            "Recover -고말고 or -다마다 as an emphatic affirmation ending without choosing a contextual sense; preserve explicit copulas and source-attested polite particles."
         }
         "ending.reporting_ni" => {
             "Recognize a surprise, reported statement, command, proposal or question in a -니 family; preserve homonyms without inserting an implicit reporting verb or selecting a contextual sense."

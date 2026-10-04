@@ -58,6 +58,7 @@ impl Fixture {
             "krdict-source-head.json",
             "krdict-auxiliary-inventory.json",
             "krdict-continuation-left.json",
+            "krdict-emphatic-ending.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -181,6 +182,16 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
         .map(|r| r["replacement"]["id"].as_str().unwrap())
         .collect();
     structural_ids.push("quoted-neuni-policy-8");
+    let emphatic: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/emphatic-ending-sources.json")).unwrap();
+    let emphatic_boundaries: Vec<_> = emphatic["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["verdict"] == "forbidden")
+        .map(|c| format!("{}-policy", c["id"].as_str().unwrap()))
+        .collect();
+    structural_ids.extend(emphatic_boundaries.iter().map(String::as_str));
     let mut structural = self::suite();
     structural
         .cases
@@ -189,7 +200,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(boundaries.passed(), "{:?}", boundaries.violations);
     assert_eq!(
         (boundaries.required_total, boundaries.forbidden_total),
-        (0, 9)
+        (0, 32)
     );
     assert_eq!(
         raw.forbidden_present,
@@ -232,7 +243,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2103, 1751)
+        (2210, 1776)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

@@ -1760,6 +1760,24 @@ impl Annotation {
                                 else { !matches!(*p, "시" | "었" | "겠") })
                         { status = Compatibility::Unknown; }
                     }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "게끔" | "고말고" | "다마다")
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let unlisted_prefinal = morphs.iter().any(|c| matches!(c,
+                            Component::Morpheme(j)
+                                if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && if form == "게끔" { analysis.morphemes[*j].form != "시" }
+                                       else { !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었") }));
+                        // 주로 동사 does not exclude adjectives: NIKL also
+                        // attests adjectival -게끔 하다. Keep unlisted own
+                        // prefinals and 게끔 copulas Unknown without lending
+                        // an earlier owner's tense or dictionary homonym.
+                        if unlisted_prefinal || (form == "게끔" && lemma.kind == LemmaKind::Copula) {
+                            status = Compatibility::Unknown;
+                        }
+                    }
                     EntryAssessment {
                         id: matched.entry.id.clone(),
                         status,

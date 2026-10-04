@@ -35813,6 +35813,657 @@
           "judgment": "gam-question-6bc3790b0dd810822527efb5-path"
         }
       ]
+    },
+    {
+      "id": "krdict:88382",
+      "source_sha256": "89eec176573a8317f5e3c7874880f518d02cd80d07a88198bb9f60ddec47e2f7",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bw"
+      ],
+      "scope": "-게끔 retains verb/adjective stems, honorifics, derived 답다 and source-backed 하다/되다 joins. The causative past guard uses only the immediate owner; standalone unlisted prefinals remain raw with Unknown native assessments. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity.",
+      "remaining": "Complete broad stream comparisons and packaged runtime/browser verification remain pending; the four held-out reports preserve all original gold and recover five 게끔 misses. Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict.",
+      "evidence": [
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "all_named_paths_unicode_cache_and_ordered_components_agree"
+        },
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "central_paths_survive_dictionary_filters"
+        },
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "every_frozen_candidate_retains_its_native_reading_and_cli_filters_agree"
+        },
+        {
+          "path": "tests/fixtures/emphatic-ending-sources.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-emphatic-ending-labels.json"
+        },
+        {
+          "path": "tools/emphatic_ending_regressions.py"
+        },
+        {
+          "path": "tools/emphatic_ending_corpora.py"
+        },
+        {
+          "path": "tools/emphatic_ending_diagnostics.py"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "emphatic-ending-8e8e2c27ddfbb1fded0f05f5",
+          "judgment": "emphatic-ending-8e8e2c27ddfbb1fded0f05f5-path"
+        },
+        {
+          "case": "emphatic-ending-3483ffd2bdbe6769f9227ad6",
+          "judgment": "emphatic-ending-3483ffd2bdbe6769f9227ad6-path"
+        },
+        {
+          "case": "emphatic-ending-69ba49e5d8a6fbefa0a89df1",
+          "judgment": "emphatic-ending-69ba49e5d8a6fbefa0a89df1-path"
+        },
+        {
+          "case": "emphatic-ending-6327e0e40ee7107ce39293d1",
+          "judgment": "emphatic-ending-6327e0e40ee7107ce39293d1-path"
+        },
+        {
+          "case": "emphatic-ending-1958f0149a8aee6181debe4c",
+          "judgment": "emphatic-ending-1958f0149a8aee6181debe4c-path"
+        },
+        {
+          "case": "emphatic-ending-6402dba94bbafa9b1268ccfa",
+          "judgment": "emphatic-ending-6402dba94bbafa9b1268ccfa-path"
+        },
+        {
+          "case": "emphatic-ending-048c017b50c7bcae4c4f3ea7",
+          "judgment": "emphatic-ending-048c017b50c7bcae4c4f3ea7-path"
+        },
+        {
+          "case": "emphatic-ending-c2ca12b38167a2657f25af84",
+          "judgment": "emphatic-ending-c2ca12b38167a2657f25af84-path"
+        },
+        {
+          "case": "emphatic-ending-689781af7cabce4746fe6231",
+          "judgment": "emphatic-ending-689781af7cabce4746fe6231-path"
+        },
+        {
+          "case": "emphatic-ending-bfd063f90de2a45b19190e7f",
+          "judgment": "emphatic-ending-bfd063f90de2a45b19190e7f-path"
+        },
+        {
+          "case": "emphatic-ending-2aafb19cda13b5981f893c90",
+          "judgment": "emphatic-ending-2aafb19cda13b5981f893c90-path"
+        },
+        {
+          "case": "emphatic-ending-afd06169e38c2917a4b57ad4",
+          "judgment": "emphatic-ending-afd06169e38c2917a4b57ad4-path"
+        },
+        {
+          "case": "emphatic-ending-c49c42c31e9dfe6a7d244311",
+          "judgment": "emphatic-ending-c49c42c31e9dfe6a7d244311-path"
+        },
+        {
+          "case": "emphatic-ending-5cc9d2f17590993867a7b844",
+          "judgment": "emphatic-ending-5cc9d2f17590993867a7b844-path"
+        },
+        {
+          "case": "emphatic-ending-f709b8505658395593ddc9f7",
+          "judgment": "emphatic-ending-f709b8505658395593ddc9f7-path"
+        },
+        {
+          "case": "emphatic-ending-0f35871cc86372c4cf52a93d",
+          "judgment": "emphatic-ending-0f35871cc86372c4cf52a93d-path"
+        },
+        {
+          "case": "emphatic-ending-b0b270cb6b814b3958012108",
+          "judgment": "emphatic-ending-b0b270cb6b814b3958012108-path"
+        },
+        {
+          "case": "emphatic-ending-63f9eca3baddb9b23349c5ec",
+          "judgment": "emphatic-ending-63f9eca3baddb9b23349c5ec-path"
+        },
+        {
+          "case": "emphatic-ending-4c61d18ecc0107572c98901b",
+          "judgment": "emphatic-ending-4c61d18ecc0107572c98901b-path"
+        },
+        {
+          "case": "emphatic-ending-f9511e511ae3698f2782f1af",
+          "judgment": "emphatic-ending-f9511e511ae3698f2782f1af-path"
+        },
+        {
+          "case": "emphatic-ending-b22a65b187294ba7d9415a5b",
+          "judgment": "emphatic-ending-b22a65b187294ba7d9415a5b-path"
+        },
+        {
+          "case": "emphatic-ending-21b92cb85ba20bda5930567f",
+          "judgment": "emphatic-ending-21b92cb85ba20bda5930567f-path"
+        },
+        {
+          "case": "emphatic-ending-60f6a091c5bbc049dbf643bf",
+          "judgment": "emphatic-ending-60f6a091c5bbc049dbf643bf-path"
+        },
+        {
+          "case": "emphatic-ending-936e3cb4a867f45a76d53cc0",
+          "judgment": "emphatic-ending-936e3cb4a867f45a76d53cc0-path"
+        },
+        {
+          "case": "emphatic-ending-140e05cd57dbe6c30c557422",
+          "judgment": "emphatic-ending-140e05cd57dbe6c30c557422-path"
+        },
+        {
+          "case": "emphatic-ending-1b29d8140ce0a2b57cd6e141",
+          "judgment": "emphatic-ending-1b29d8140ce0a2b57cd6e141-path"
+        },
+        {
+          "case": "emphatic-ending-57e52326e0432cd8240fd873",
+          "judgment": "emphatic-ending-57e52326e0432cd8240fd873-path"
+        },
+        {
+          "case": "emphatic-ending-316d3cc70779bbdaaa90fe93",
+          "judgment": "emphatic-ending-316d3cc70779bbdaaa90fe93-path"
+        },
+        {
+          "case": "emphatic-ending-f637f635c3d505f6170b6809",
+          "judgment": "emphatic-ending-f637f635c3d505f6170b6809-path"
+        },
+        {
+          "case": "emphatic-ending-7ac65c3dc0dd956a1f3e8dbc",
+          "judgment": "emphatic-ending-7ac65c3dc0dd956a1f3e8dbc-path"
+        },
+        {
+          "case": "emphatic-ending-a5e8f226c01954e2c59ec269",
+          "judgment": "emphatic-ending-a5e8f226c01954e2c59ec269-path"
+        },
+        {
+          "case": "emphatic-ending-16d202db648c2d9a020b49e4",
+          "judgment": "emphatic-ending-16d202db648c2d9a020b49e4-path"
+        },
+        {
+          "case": "emphatic-ending-f3df80e88b8ba2cb2d8140a7",
+          "judgment": "emphatic-ending-f3df80e88b8ba2cb2d8140a7-path"
+        },
+        {
+          "case": "emphatic-ending-72ad691ee6e1cff1d4734ac5",
+          "judgment": "emphatic-ending-72ad691ee6e1cff1d4734ac5-path"
+        },
+        {
+          "case": "emphatic-ending-6bdaaa8bef9da168e881abf6",
+          "judgment": "emphatic-ending-6bdaaa8bef9da168e881abf6-path"
+        },
+        {
+          "case": "emphatic-ending-b31bfc7b3b1b804d9bf50786",
+          "judgment": "emphatic-ending-b31bfc7b3b1b804d9bf50786-path"
+        },
+        {
+          "case": "emphatic-ending-442f56acc4df7589ea5fe730",
+          "judgment": "emphatic-ending-442f56acc4df7589ea5fe730-path"
+        },
+        {
+          "case": "emphatic-ending-85b452cf7fa0e2da64882308",
+          "judgment": "emphatic-ending-85b452cf7fa0e2da64882308-path"
+        },
+        {
+          "case": "emphatic-ending-d8a107390d256520c6d98d2c",
+          "judgment": "emphatic-ending-d8a107390d256520c6d98d2c-path"
+        },
+        {
+          "case": "emphatic-ending-27aed85a621a807baf73c57f",
+          "judgment": "emphatic-ending-27aed85a621a807baf73c57f-path"
+        },
+        {
+          "case": "emphatic-ending-0f3a63773272e6d32260304b",
+          "judgment": "emphatic-ending-0f3a63773272e6d32260304b-path"
+        },
+        {
+          "case": "emphatic-ending-dec6d2fb88eec28eb91e774b",
+          "judgment": "emphatic-ending-dec6d2fb88eec28eb91e774b-path"
+        },
+        {
+          "case": "emphatic-ending-473623a1a25966b65c33e68e",
+          "judgment": "emphatic-ending-473623a1a25966b65c33e68e-path"
+        },
+        {
+          "case": "emphatic-ending-f95b9f5357f5bc53d9112f72",
+          "judgment": "emphatic-ending-f95b9f5357f5bc53d9112f72-path"
+        },
+        {
+          "case": "emphatic-ending-62aab443a7b2a1997ad09b07",
+          "judgment": "emphatic-ending-62aab443a7b2a1997ad09b07-path"
+        },
+        {
+          "case": "emphatic-ending-4561ab5386497038ae63885e",
+          "judgment": "emphatic-ending-4561ab5386497038ae63885e-path"
+        },
+        {
+          "case": "emphatic-ending-fd924837a0b63b17184c6b25",
+          "judgment": "emphatic-ending-fd924837a0b63b17184c6b25-path"
+        },
+        {
+          "case": "emphatic-ending-cd2e93a42ced7de7b6f5682b",
+          "judgment": "emphatic-ending-cd2e93a42ced7de7b6f5682b-path"
+        },
+        {
+          "case": "emphatic-ending-922238becdb953b59fa889ff",
+          "judgment": "emphatic-ending-922238becdb953b59fa889ff-path"
+        },
+        {
+          "case": "emphatic-ending-bbb1db01581d46d53b142fd0",
+          "judgment": "emphatic-ending-bbb1db01581d46d53b142fd0-path"
+        },
+        {
+          "case": "emphatic-ending-3f493b23af87c3d385611b9a",
+          "judgment": "emphatic-ending-3f493b23af87c3d385611b9a-path"
+        },
+        {
+          "case": "emphatic-ending-22b8470d18e85a28ceba5d28",
+          "judgment": "emphatic-ending-22b8470d18e85a28ceba5d28-path"
+        },
+        {
+          "case": "emphatic-ending-4245328f75fa89851835cf3f",
+          "judgment": "emphatic-ending-4245328f75fa89851835cf3f-path"
+        },
+        {
+          "case": "emphatic-ending-2d980a20e0a40b799aba5444",
+          "judgment": "emphatic-ending-2d980a20e0a40b799aba5444-path"
+        },
+        {
+          "case": "emphatic-ending-3eadaf7d51cc6e6df37ce1bb",
+          "judgment": "emphatic-ending-3eadaf7d51cc6e6df37ce1bb-path"
+        },
+        {
+          "case": "emphatic-ending-02d022399878918d485433e1",
+          "judgment": "emphatic-ending-02d022399878918d485433e1-path"
+        },
+        {
+          "case": "emphatic-ending-8d0fd37f19e6bc9818fef96e",
+          "judgment": "emphatic-ending-8d0fd37f19e6bc9818fef96e-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66991",
+      "source_sha256": "95fa9ed456d4857d4197c384eada26b61e2d064967afcc5a37a9dd7ed8307551",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bw"
+      ],
+      "scope": "-고말고 retains verb/adjective stems, honorific/past boundaries, derived 답다 and explicit copulas without choosing a contextual sense. The original novel supports an outer 요 path. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity.",
+      "remaining": "Complete broad stream comparisons and packaged runtime/browser verification remain pending; the four held-out reports preserve all original gold and recover five 게끔 misses. Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict.",
+      "evidence": [
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "all_named_paths_unicode_cache_and_ordered_components_agree"
+        },
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "central_paths_survive_dictionary_filters"
+        },
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "every_frozen_candidate_retains_its_native_reading_and_cli_filters_agree"
+        },
+        {
+          "path": "tests/fixtures/emphatic-ending-sources.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-emphatic-ending-labels.json"
+        },
+        {
+          "path": "tools/emphatic_ending_regressions.py"
+        },
+        {
+          "path": "tools/emphatic_ending_corpora.py"
+        },
+        {
+          "path": "tools/emphatic_ending_diagnostics.py"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "emphatic-ending-f016335e5f5a8b4a389fbf79",
+          "judgment": "emphatic-ending-f016335e5f5a8b4a389fbf79-path"
+        },
+        {
+          "case": "emphatic-ending-bf28ffbddbcfc08478bce47d",
+          "judgment": "emphatic-ending-bf28ffbddbcfc08478bce47d-path"
+        },
+        {
+          "case": "emphatic-ending-dc2e1359097003bbcce62de2",
+          "judgment": "emphatic-ending-dc2e1359097003bbcce62de2-path"
+        },
+        {
+          "case": "emphatic-ending-15f99f71acde6491a2899c1e",
+          "judgment": "emphatic-ending-15f99f71acde6491a2899c1e-path"
+        },
+        {
+          "case": "emphatic-ending-35db254425546aed31dcafdf",
+          "judgment": "emphatic-ending-35db254425546aed31dcafdf-path"
+        },
+        {
+          "case": "emphatic-ending-f5223516691900befc7a3045",
+          "judgment": "emphatic-ending-f5223516691900befc7a3045-path"
+        },
+        {
+          "case": "emphatic-ending-c9d27a97c4fcb1756d4cd67c",
+          "judgment": "emphatic-ending-c9d27a97c4fcb1756d4cd67c-path"
+        },
+        {
+          "case": "emphatic-ending-de3ea6570b32766d49c64806",
+          "judgment": "emphatic-ending-de3ea6570b32766d49c64806-path"
+        },
+        {
+          "case": "emphatic-ending-35b73f82f684a25e7df4a981",
+          "judgment": "emphatic-ending-35b73f82f684a25e7df4a981-path"
+        },
+        {
+          "case": "emphatic-ending-a0636e164b89e2682abdf408",
+          "judgment": "emphatic-ending-a0636e164b89e2682abdf408-path"
+        },
+        {
+          "case": "emphatic-ending-3543abf3acb40f98cf9f7942",
+          "judgment": "emphatic-ending-3543abf3acb40f98cf9f7942-path"
+        },
+        {
+          "case": "emphatic-ending-929c76bfd84eca63faa45b05",
+          "judgment": "emphatic-ending-929c76bfd84eca63faa45b05-path"
+        },
+        {
+          "case": "emphatic-ending-c4bbfe0430b00ea4bae55d76",
+          "judgment": "emphatic-ending-c4bbfe0430b00ea4bae55d76-path"
+        },
+        {
+          "case": "emphatic-ending-229227b5a9ef2fd4f486d24e",
+          "judgment": "emphatic-ending-229227b5a9ef2fd4f486d24e-path"
+        },
+        {
+          "case": "emphatic-ending-8ff9dea62c8f892288feaba6",
+          "judgment": "emphatic-ending-8ff9dea62c8f892288feaba6-path"
+        },
+        {
+          "case": "emphatic-ending-0bd96fcaf18f8cbb39bf0479",
+          "judgment": "emphatic-ending-0bd96fcaf18f8cbb39bf0479-path"
+        },
+        {
+          "case": "emphatic-ending-040e8852b0672967a9e2ac93",
+          "judgment": "emphatic-ending-040e8852b0672967a9e2ac93-path"
+        },
+        {
+          "case": "emphatic-ending-f436c0eda16320969846e79f",
+          "judgment": "emphatic-ending-f436c0eda16320969846e79f-path"
+        },
+        {
+          "case": "emphatic-ending-a6ecd5ca69d3356cc5caa0c1",
+          "judgment": "emphatic-ending-a6ecd5ca69d3356cc5caa0c1-path"
+        },
+        {
+          "case": "emphatic-ending-e6f09f7306dd742c204bbcf6",
+          "judgment": "emphatic-ending-e6f09f7306dd742c204bbcf6-path"
+        },
+        {
+          "case": "emphatic-ending-f2bdd223b1f47604d589d5a2",
+          "judgment": "emphatic-ending-f2bdd223b1f47604d589d5a2-path"
+        },
+        {
+          "case": "emphatic-ending-0f2d987118fbbfa6a65f278d",
+          "judgment": "emphatic-ending-0f2d987118fbbfa6a65f278d-path"
+        },
+        {
+          "case": "emphatic-ending-750f194d774de0814847ad6a",
+          "judgment": "emphatic-ending-750f194d774de0814847ad6a-path"
+        },
+        {
+          "case": "emphatic-ending-f090d882bbec22f093b3b129",
+          "judgment": "emphatic-ending-f090d882bbec22f093b3b129-path"
+        },
+        {
+          "case": "emphatic-ending-e279a5a20b19a85ef9d97458",
+          "judgment": "emphatic-ending-e279a5a20b19a85ef9d97458-path"
+        },
+        {
+          "case": "emphatic-ending-8fe1a8fe8e055574f7dd560c",
+          "judgment": "emphatic-ending-8fe1a8fe8e055574f7dd560c-path"
+        },
+        {
+          "case": "emphatic-ending-c58bbb908aaf515a5b68b772",
+          "judgment": "emphatic-ending-c58bbb908aaf515a5b68b772-path"
+        },
+        {
+          "case": "emphatic-ending-94fa4c348be4d694fdc2a302",
+          "judgment": "emphatic-ending-94fa4c348be4d694fdc2a302-path"
+        },
+        {
+          "case": "emphatic-ending-6a843ee235e38a2a1816a708",
+          "judgment": "emphatic-ending-6a843ee235e38a2a1816a708-path"
+        },
+        {
+          "case": "emphatic-ending-cf7f534e6ecca306786a986f",
+          "judgment": "emphatic-ending-cf7f534e6ecca306786a986f-path"
+        },
+        {
+          "case": "emphatic-ending-215497abda6bb1f8f4fe4b65",
+          "judgment": "emphatic-ending-215497abda6bb1f8f4fe4b65-path"
+        },
+        {
+          "case": "emphatic-ending-9e1a584e4ca4fa44d857421b",
+          "judgment": "emphatic-ending-9e1a584e4ca4fa44d857421b-path"
+        },
+        {
+          "case": "emphatic-ending-e4879303991b530fd0b12324",
+          "judgment": "emphatic-ending-e4879303991b530fd0b12324-path"
+        },
+        {
+          "case": "emphatic-ending-e7dd5c598fff14f12bbddef1",
+          "judgment": "emphatic-ending-e7dd5c598fff14f12bbddef1-path"
+        },
+        {
+          "case": "emphatic-ending-2e34e5bd8374973f6a2ca093",
+          "judgment": "emphatic-ending-2e34e5bd8374973f6a2ca093-path"
+        },
+        {
+          "case": "emphatic-ending-be2143b170a83145daa9391c",
+          "judgment": "emphatic-ending-be2143b170a83145daa9391c-path"
+        },
+        {
+          "case": "emphatic-ending-0b227cbfdf388c923fd41f22",
+          "judgment": "emphatic-ending-0b227cbfdf388c923fd41f22-path"
+        },
+        {
+          "case": "emphatic-ending-cb3ac8d7435436e5827ceca0",
+          "judgment": "emphatic-ending-cb3ac8d7435436e5827ceca0-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75968",
+      "source_sha256": "5d6c8a4bbcdd4171b5ec056c3881e4ab39db60118c7aa87f41b5ba5bda7234ed",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bw"
+      ],
+      "scope": "-다마다 retains verb/adjective stems, honorific/past boundaries, derived 답다 and explicit copulas without choosing a contextual sense. Four integration tests cover the 132-case matrix, native imports, NFC/NFD, cache limits, prior candidates/native readings and CLI/filter parity.",
+      "remaining": "Complete broad stream comparisons and packaged runtime/browser verification remain pending; the four held-out reports preserve all original gold and recover five 게끔 misses. Additional connectors, unlisted prefinal/outer-particle or omitted-copula extensions, contextual sense/register and independent Korean review remain open. COV-019ag tracks the legacy auxiliary 되다 versus native verb-role conflict.",
+      "evidence": [
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "all_named_paths_unicode_cache_and_ordered_components_agree"
+        },
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "central_paths_survive_dictionary_filters"
+        },
+        {
+          "path": "tests/emphatic_endings.rs",
+          "test": "every_frozen_candidate_retains_its_native_reading_and_cli_filters_agree"
+        },
+        {
+          "path": "tests/fixtures/emphatic-ending-sources.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-emphatic-ending-labels.json"
+        },
+        {
+          "path": "tools/emphatic_ending_regressions.py"
+        },
+        {
+          "path": "tools/emphatic_ending_corpora.py"
+        },
+        {
+          "path": "tools/emphatic_ending_diagnostics.py"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "emphatic-ending-224bc35510ab2e9421ec3330",
+          "judgment": "emphatic-ending-224bc35510ab2e9421ec3330-path"
+        },
+        {
+          "case": "emphatic-ending-79b1dee2c2a8dae5d5cd76f3",
+          "judgment": "emphatic-ending-79b1dee2c2a8dae5d5cd76f3-path"
+        },
+        {
+          "case": "emphatic-ending-5eb45ef86ff05d1e30cb19f1",
+          "judgment": "emphatic-ending-5eb45ef86ff05d1e30cb19f1-path"
+        },
+        {
+          "case": "emphatic-ending-4f3534b51f25de466b688471",
+          "judgment": "emphatic-ending-4f3534b51f25de466b688471-path"
+        },
+        {
+          "case": "emphatic-ending-7831dd47965c7af204995816",
+          "judgment": "emphatic-ending-7831dd47965c7af204995816-path"
+        },
+        {
+          "case": "emphatic-ending-6714a91ea1d682333c785bad",
+          "judgment": "emphatic-ending-6714a91ea1d682333c785bad-path"
+        },
+        {
+          "case": "emphatic-ending-1c41d55ef41492e0aff395c9",
+          "judgment": "emphatic-ending-1c41d55ef41492e0aff395c9-path"
+        },
+        {
+          "case": "emphatic-ending-a4ef9835c5314a2593dc96bf",
+          "judgment": "emphatic-ending-a4ef9835c5314a2593dc96bf-path"
+        },
+        {
+          "case": "emphatic-ending-cd6031980eb043f9a41c651a",
+          "judgment": "emphatic-ending-cd6031980eb043f9a41c651a-path"
+        },
+        {
+          "case": "emphatic-ending-951c4c0aef17904706152805",
+          "judgment": "emphatic-ending-951c4c0aef17904706152805-path"
+        },
+        {
+          "case": "emphatic-ending-df0f4d62680f5400f8c570ac",
+          "judgment": "emphatic-ending-df0f4d62680f5400f8c570ac-path"
+        },
+        {
+          "case": "emphatic-ending-d7ca8fb0ba3bb33e91d5c70b",
+          "judgment": "emphatic-ending-d7ca8fb0ba3bb33e91d5c70b-path"
+        },
+        {
+          "case": "emphatic-ending-056ca265f41c96fad6a843ed",
+          "judgment": "emphatic-ending-056ca265f41c96fad6a843ed-path"
+        },
+        {
+          "case": "emphatic-ending-646d555a01ffab653ae2ebd7",
+          "judgment": "emphatic-ending-646d555a01ffab653ae2ebd7-path"
+        },
+        {
+          "case": "emphatic-ending-d37921426e18e09dc3415903",
+          "judgment": "emphatic-ending-d37921426e18e09dc3415903-path"
+        },
+        {
+          "case": "emphatic-ending-afc8bbbcf23a4a35409d82be",
+          "judgment": "emphatic-ending-afc8bbbcf23a4a35409d82be-path"
+        },
+        {
+          "case": "emphatic-ending-47d0e2083e160c2b20a5e43c",
+          "judgment": "emphatic-ending-47d0e2083e160c2b20a5e43c-path"
+        },
+        {
+          "case": "emphatic-ending-a786483c8f3b2fb21684ad2b",
+          "judgment": "emphatic-ending-a786483c8f3b2fb21684ad2b-path"
+        },
+        {
+          "case": "emphatic-ending-1f27c1e4432fbbe8ff4d22af",
+          "judgment": "emphatic-ending-1f27c1e4432fbbe8ff4d22af-path"
+        },
+        {
+          "case": "emphatic-ending-2fc80934eec1f4dc50ae1e83",
+          "judgment": "emphatic-ending-2fc80934eec1f4dc50ae1e83-path"
+        },
+        {
+          "case": "emphatic-ending-e4503eaa33979466240efa67",
+          "judgment": "emphatic-ending-e4503eaa33979466240efa67-path"
+        },
+        {
+          "case": "emphatic-ending-4bebd077980348330502b4b4",
+          "judgment": "emphatic-ending-4bebd077980348330502b4b4-path"
+        },
+        {
+          "case": "emphatic-ending-5b1f49c76bcf3caa58322039",
+          "judgment": "emphatic-ending-5b1f49c76bcf3caa58322039-path"
+        },
+        {
+          "case": "emphatic-ending-ab8fc7f7d7188da86f7466a8",
+          "judgment": "emphatic-ending-ab8fc7f7d7188da86f7466a8-path"
+        },
+        {
+          "case": "emphatic-ending-b0232fba1bc1bd60b9d574a5",
+          "judgment": "emphatic-ending-b0232fba1bc1bd60b9d574a5-path"
+        },
+        {
+          "case": "emphatic-ending-0ec321b6caf918acabb5f43b",
+          "judgment": "emphatic-ending-0ec321b6caf918acabb5f43b-path"
+        },
+        {
+          "case": "emphatic-ending-b6e5edec244fe1b9f7252574",
+          "judgment": "emphatic-ending-b6e5edec244fe1b9f7252574-path"
+        },
+        {
+          "case": "emphatic-ending-4eb7dfdbcfa0c6cbeb30b461",
+          "judgment": "emphatic-ending-4eb7dfdbcfa0c6cbeb30b461-path"
+        },
+        {
+          "case": "emphatic-ending-9bb2dca6b6b3f78d0f4be93e",
+          "judgment": "emphatic-ending-9bb2dca6b6b3f78d0f4be93e-path"
+        },
+        {
+          "case": "emphatic-ending-6c803adccec604e479fef5a4",
+          "judgment": "emphatic-ending-6c803adccec604e479fef5a4-path"
+        },
+        {
+          "case": "emphatic-ending-f0e5547faab7c62a7e6008ad",
+          "judgment": "emphatic-ending-f0e5547faab7c62a7e6008ad-path"
+        },
+        {
+          "case": "emphatic-ending-984c38b17e4c05cb7af008aa",
+          "judgment": "emphatic-ending-984c38b17e4c05cb7af008aa-path"
+        },
+        {
+          "case": "emphatic-ending-eebb0cedaa7c72edd26e0f69",
+          "judgment": "emphatic-ending-eebb0cedaa7c72edd26e0f69-path"
+        },
+        {
+          "case": "emphatic-ending-f8876790e65bf9f083b256d1",
+          "judgment": "emphatic-ending-f8876790e65bf9f083b256d1-path"
+        },
+        {
+          "case": "emphatic-ending-7e3b745ecde76aa26878ec45",
+          "judgment": "emphatic-ending-7e3b745ecde76aa26878ec45-path"
+        },
+        {
+          "case": "emphatic-ending-b80669fd4b133fc616de1c50",
+          "judgment": "emphatic-ending-b80669fd4b133fc616de1c50-path"
+        },
+        {
+          "case": "emphatic-ending-b1f8870ba578339c4db5b105",
+          "judgment": "emphatic-ending-b1f8870ba578339c4db5b105-path"
+        }
+      ]
     }
   ]
 }

@@ -2134,3 +2134,29 @@ combined test dictionary, avoiding duplicate lexical IDs from other fixtures.
 The entries are attributed to the National Institute of Korean Language's Korean
 Basic Dictionary under CC BY-SA 2.0 KR. These structural judgments are authored
 regressions; contextual interpretation and independent Korean review remain pending.
+
+`gam-question-implemented.json` separately freezes all 89 words after the
+verified -감 implementation, including its new candidate assessments.
+`krdict-gam-question-implemented-additional.json` supplies the 58 disjoint full
+native entries exposed by that implementation. The original preflight, stream
+reports and packaged evidence are unchanged. The historical code is preserved
+in `docs/gam-question-implementation-snapshot.json.gz`; current Rust regressions
+and optional full CLI/spacing replay check compatibility with those results.
+The same NIKL attribution, English translation projection and CC BY-SA 2.0 KR
+license apply to the additional native data.
+
+`emphatic-ending-sources.json` and `krdict-emphatic-ending.json` preserve the
+immutable COV-017bw preflight for -게끔/-고말고/-다마다: 132 authored structural
+cases, 162 full native entries, 14 original corpus rows, three complete novel
+paragraphs and the NIKL report's page-specific guidance. All senses, forms,
+notes, patterns and example groups are retained; importer translations are
+projected to English, while the source freeze keeps all translations.
+`krdict-emphatic-ending-labels.json` selects exactly the three ending entries
+for the combined viewer dictionary. Native material is attributed to NIKL's
+Korean Basic Dictionary under CC BY-SA 2.0 KR. Original corpus rows and spelling
+observations are not repaired or promoted to contextual gold. The raw ledger
+has 109 required and 23 forbidden paths; compatibility policy separately has
+107 required and 25 forbidden paths, including two existing lexical-role
+conflicts for auxiliary 되다 versus KRDict's verb entry 89858. These conflicts
+are representation limits, not judgments that the original constructions are
+ungrammatical; broader role review remains COV-019ag work.

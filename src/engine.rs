@@ -1884,6 +1884,12 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if matches!(ending.form, "은감" | "는감" | "던감") {
                     p.rules.push("ending.refuting_question".into());
                 }
+                if ending.form == "게끔" {
+                    p.rules.push("ending.emphatic_purpose".into());
+                }
+                if matches!(ending.form, "고말고" | "다마다") {
+                    p.rules.push("ending.emphatic_affirmation".into());
+                }
                 if matches!(ending.form, "으니라" | "느니라") {
                     p.rules.push("ending.literary_assertion".into());
                 }
@@ -2241,7 +2247,7 @@ pub(crate) fn auxiliary_class(
             _ => None,
         },
         "하" => match connector {
-            Some("어" | "게" | "어야" | "으려" | "으려고" | "고자" | "으면") => {
+            Some("어" | "게" | "게끔" | "어야" | "으려" | "으려고" | "고자" | "으면") => {
                 Some(Verb)
             }
             _ => None,
@@ -2286,7 +2292,19 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     let mut previous_relational_nominal = false;
     let mut previous_relational_copula = false;
     let mut previous_non_honorific_prefinal = false;
+    let mut previous_past_prefinal = false;
     for lemma in &a.lemmas {
+        // NIKL's verbal/adjectival -게 하다 constructions also permit
+        // emphatic -게끔 하다: past belongs to right-hand 하다. Scope this
+        // new join's control to the immediately preceding represented owner;
+        // earlier past and right-hand inflections remain independent.
+        if lemma.kind == LemmaKind::Auxiliary
+            && lemma.text == "하다"
+            && connector == Some("게끔")
+            && previous_past_prefinal
+        {
+            return false;
+        }
         if lemma.kind == LemmaKind::Auxiliary
             && connector == Some("으려고")
             && previous_non_honorific_prefinal
@@ -2405,12 +2423,14 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
         // or apply it to honorific 계시다, which also permits 계신다.
         let bare_stative_iss = bare && lemma.kind == LemmaKind::Auxiliary && lemma.text == "있다";
         let mut non_honorific_prefinal = false;
+        let mut past_prefinal = false;
         while inflected
             && a.morphemes
                 .get(cursor)
                 .is_some_and(|m| m.kind == MorphemeKind::Prefinal)
         {
             non_honorific_prefinal |= !honorific_prefinal(&a.morphemes[cursor].form);
+            past_prefinal |= a.morphemes[cursor].form == "었";
             cursor += 1;
         }
         connector = None;
@@ -2696,6 +2716,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
         previous_relational_nominal = relational_nominal;
         previous_relational_copula = relational_copula;
         previous_non_honorific_prefinal = non_honorific_prefinal;
+        previous_past_prefinal = past_prefinal;
     }
     true
 }
@@ -2910,12 +2931,15 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "다거나"
                 | "다든가"
                 | "고"
+                | "고말고"
+                | "다마다"
                 | "고요"
                 | "지"
                 | "지요"
                 | "죠"
                 | "게"
                 | "게요"
+                | "게끔"
                 | "지만"
                 | "지마는"
                 | "지만요"
@@ -3888,6 +3912,10 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         ),
         "지" => matches!(stem, "않" | "못하" | "말" | "아니하"),
         "게" => matches!(stem, "되" | "하" | "생기"),
+        // NIKL explicitly licenses emphatic causative 하다; the original
+        // KAIST rows independently attest 되다. Other 게 auxiliaries require
+        // their own connector evidence rather than automatic extrapolation.
+        "게끔" => matches!(stem, "되" | "하"),
         "어야" => stem == "하",
         "은" | "는" => matches!(stem, "듯하" | "듯싶" | "양하" | "척하" | "체하"),
         "을" => matches!(stem, "듯하" | "듯싶" | "만하" | "법하" | "뻔하" | "성싶"),
@@ -4397,6 +4425,8 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "던걸"
                         | "을걸"
                         | "으려나"
+                        // The original novel explicitly has 그렇고말고요.
+                        | "고말고"
                         | "네"
                         | "나"
                         | "니"

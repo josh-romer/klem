@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 434 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/017bu–bv/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 281 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 437 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/017bu–bw/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 278 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1875,10 +1875,17 @@ review remains open under the completion review below.
   All four ending entries now have scoped manual dispositions. The
   [offline source verifier](../tools/gam_question_audit.py) and
   [packaged evidence gate](../tools/gam_question_queue.py) run in Nix.
+  [The immutable implementation snapshot](gam-question-implementation-snapshot.json.gz)
+  binds these historical package reports to the exact original engine, grammar
+  and catalog. An additional current Rust test checks all 89 implemented words
+  and their native assessments using 58 separately retained native owners;
+  optional [full CLI replay](../tools/gam_question_implementation.py) also checks
+  every filter and spacing record. Shared code can advance without overwriting
+  the historical package evidence.
   Contextual sense/register selection and independent Korean review remain open.
 
 - [ ] **COV-017bw — Emphatic purpose -게끔 and affirmative -고말고/-다마다.**
-  **Source audit frozen; implementation pending.** The
+  **Partial: parser rules and individual regressions implemented.** The
   [immutable preflight](emphatic-ending-source-preflight.json.gz) scans all 56,555
   native entries and preserves 36 spelling observations, 162 complete native
   owners, 155 prior words in three dictionary filters, 14 original annotated
@@ -1889,13 +1896,37 @@ review remains open under the completion review below.
   all senses, notes, patterns and 15 complete example groups. NIKL's 2014
   grammar-expression report, printed pages 364–365 and 369–370, independently
   supports verbal and adjectival -게끔 하다; annotated corpus compositions
-  separately support -게끔 되다. Review the immediate-owner past restriction
-  in causative joins without pruning earlier/right-owner past or extrapolating
-  to standalone endings. Implement consonant boundaries, honorifics, auxiliary
-  chains, explicit affirmative copulas and the novel's 그렇고말고요 path;
-  preserve each prior candidate, native assessment and spacing order. Track
-  changes individually, run complete held-out/broad comparisons and verify
-  packaged CLI/API/browser behavior. Unlisted prefinals, additional connectors,
+  separately support -게끔 되다. Implemented consonant boundaries, honorifics,
+  auxiliary chains, explicit affirmative copulas, derived 답다 and the novel's
+  그렇고말고요 path retain separate components. The causative join checks only
+  its immediate left owner's past; earlier/right-owner past remains available.
+  Standalone unlisted prefinals stay raw hypotheses with Unknown dictionary
+  assessments. [Four integration tests](../tests/emphatic_endings.rs) verify all
+  132 paths in NFC/NFD and three cache budgets, complete native imports, every
+  prior candidate/reading/order and CLI/filter parity. The central raw ledger
+  records 109 required / 23 forbidden paths; compatibility policy separately
+  records 107 required / 25 forbidden paths, including two existing lexical-role
+  conflicts for legacy auxiliary 되다 versus KRDict's verb entry 89858. These
+  are representation conflicts, not grammatical exclusions; COV-019ag tracks
+  their resolution. The host and Nix suites each pass 870 tests, zero failures
+  and one ignored downloaded-corpus test; the x86_64 Linux flake check passes.
+  [Four complete held-out reports](emphatic-ending-corpora.json.gz) preserve all
+  66,570 original ordered gold identities/annotations and prior recovered
+  component sets. Five previously missed tokens recover: 살게끔, 타당하게끔,
+  생각하게끔, 자각하게끔 and 없게끔. Each improvement retains its original
+  ten-column corpus row and exact before/after result; this is grouped lemma
+  recall evidence, not a contextual precision estimate or dictionary-filter
+  certificate. [The offline verifier](../tools/emphatic_ending_corpora.py) replays
+  the full archived reports. Three ending entries have scoped inventory
+  dispositions. [The full source diagnostic checkpoint](emphatic-ending-diagnostics.json.gz)
+  records 335 distinct changes across all 155 words and three filters, retaining
+  every prior candidate, native reading, native field and spacing order. Each
+  change has a stable ID and its original source/case occurrences; contextual
+  and independent judgments remain pending. [Its verifier](../tools/emphatic_ending_diagnostics.py)
+  replays every changed record offline, including independently analyzed spacing
+  segments and their full native owners. Complete broad stream comparisons and
+  packaged CLI/API/browser checks remain pending.
+  Unlisted prefinals, additional connectors,
   copula omission, contextual sense/register and independent review remain open.
   The [offline verifier](../tools/emphatic_ending_audit.py) runs in Nix; its
   optional --dictionary/--cli checks replay the original full snapshot and CLI.
@@ -3266,6 +3297,20 @@ review remains open under the completion review below.
   the offline inventory audit and all 51 packaged dictionary/spacing responses.
   Both packaged executable bytes equal the existing preview package; frontend
   sources are unchanged. This audit does not certify the remaining representations.
+
+- [ ] **COV-019ag — Lexical 되다 in represented auxiliary constructions.**
+  **Newly tracked representation gap:** joined 살게끔되어있다 and
+  타당하게끔되었다 have source-backed raw paths, but the parser's legacy
+  auxiliary role for 되다 conflicts with KRDict verb entry 89858. Headword
+  filtering retains them; compatibility filtering rejects that role. Review
+  the complete native senses and original corpus contexts to determine which
+  lexical or functional role alternatives should be represented. Cover both
+  existing -게 되다 and new -게끔 되다 without lending the adjective homonym's
+  class to a verb use, overriding unrelated known role conflicts or silently
+  changing historical paths. Add source-scoped alternatives/corrections and
+  independent before/after CLI, corpus and reader-visible evidence. The two
+  exact current policy conflicts are retained in
+  [dictionary-attachments.json](../tests/fixtures/dictionary-attachments.json).
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

@@ -215,6 +215,7 @@
                 ./tools/doeda_complement_compare.py
                 ./tools/doeda_complement_corpora.py
                 ./tools/test_doeda_complement_corpora.py
+                ./tools/doeda_noun_suffix_discovery.py
                 ./web/tests/doeda-complement.mjs
                 ./src/engine.rs ./src/grammar.rs
                 ./web/tests/gam-question.mjs
@@ -318,6 +319,7 @@
             python tools/doeda_complement_compare.py --verify
             python tools/doeda_complement_corpora.py --verify
             python -m unittest discover -s tools -p 'test_doeda_complement_corpora.py'
+            python tools/doeda_noun_suffix_discovery.py --verify
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

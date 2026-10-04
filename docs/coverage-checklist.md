@@ -3533,6 +3533,8 @@ review remains open under the completion review below.
   newly recovered supersets may replace dominated groups. Full original reports
   and stream hashes remain archived;
   contextual/sense/register and independent Korean review remain pending.
+  This token also exposes the separately tracked derived-head dictionary gap in
+  COV-022m; lexical presence/POS compatibility do not select its contextual sense.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
@@ -4939,6 +4941,35 @@ review remains open under the completion review below.
   All existing corpus annotations and
   frozen baselines remain unchanged; other compound leads and wider COV-022
   derivations remain open beyond these thirty forms.
+
+- [ ] **COV-022m — Noun/root/adverb formation with -되다.**
+  **Discovered; source/representation audit and implementation pending.**
+  COV-019ah's held-out token `MH2_0069-s169/7` 타도되었다 has original gold
+  타도 + 되 + 었 + 다 and an already recovered whole 타도되다 analysis. The pinned
+  dictionary lacks that whole head but retains noun 타도 (79461) and 타도하다
+  (79462). Headword filtering now keeps four 타다 + 되다 alternatives and
+  compatibility filtering keeps two; both previously returned zero. These
+  grammatically possible homographic paths must remain available without being
+  presented as the sentence's gold interpretation.
+  [The discovery archive](doeda-noun-suffix-discovery.json.gz) preserves all six
+  complete before/after annotated word/filter records, every referenced native
+  entry, all three component sources and the unchanged original sentence/row.
+  KRDict's complete suffix -되다 (74902) distinguishes verb-forming passive
+  derivation after some predicative nouns from adjective formation after some
+  nouns, roots and adverbs. This is a suffix source, distinct from main-verb
+  되다 89858; neither sense licenses arbitrary nominal stems.
+  Audit both suffix senses and their full examples across the native dictionary,
+  identify supported base classes and source conflicts, and implement suffix-owned
+  inflections alongside whole lexical heads. Preserve the original whole-head
+  corpus annotation; split lookup components do not rewrite evaluation gold.
+  Cover ambiguous bases, verb/adjective classes, prior candidate/native order,
+  further suffixes, particles, later auxiliaries, Unicode/cache/filter parity and
+  CLI/API/browser ownership. Add individual required/control cases only after
+  source review; broader streams, corpus outcomes, dictionary coverage and
+  contextual/register/independent review remain required. The
+  [discovery verifier](../tools/doeda_noun_suffix_discovery.py) confirms the
+  frozen gap and independently derives the native filters; it certifies no new
+  grammatical path or contextual judgment.
 
 ### P3: dictionary and representation boundaries
 

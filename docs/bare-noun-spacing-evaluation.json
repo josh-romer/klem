@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020q",
+  "reviewed": "2026-10-03",
+  "status": "verified_finite_scope",
+  "scope": "Four exact independently attested noun/main-verb spacing pairs; original input, word analyses and legacy hypotheses are preserved.",
+  "counts": {
+    "pairs": 4,
+    "original_source_listed_nouns": 16,
+    "registered_whole_verbs": 5,
+    "complete_native_entries": 34,
+    "spacing_cases": 67,
+    "required": 44,
+    "forbidden": 23,
+    "explicit_representation_corrections": 3,
+    "source_surfaces": 95,
+    "full_stream_records": 1128312,
+    "converted_gold_rows": 66570,
+    "original_raw_residuals": 6,
+    "separate_word_residual_groups_recovered": 2,
+    "contextual_judgments": 0
+  },
+  "artifacts": [
+    {
+      "path": "docs/bare-noun-spacing-source-review.json",
+      "sha256": "fea167e2e7dc8b95ff876d8c02c675e013efd625f33a84fcb24a46fff77a5cd4"
+    },
+    {
+      "path": "tests/fixtures/bare-noun-spacing-sources.json",
+      "sha256": "a9fa1a11f626a23c044d5d73f67bc50f20616e135d21cbbfefb358176906accb"
+    },
+    {
+      "path": "tests/fixtures/bare-noun-spacing-additional-pairs.json",
+      "sha256": "5fd69f4e20a56715b873eca87b3f33162a612d710df99ac0645b0de70af93b01"
+    },
+    {
+      "path": "tests/fixtures/bare-noun-spacing-validity.json",
+      "sha256": "2f1d9f788df5e4e714a0a04b731d66c7c8dafc42cabcf13ed04eed92c14e830a"
+    },
+    {
+      "path": "tests/fixtures/bare-noun-spacing-judgment-updates.json",
+      "sha256": "f111db7d9fc0bc59f7ce4fa0e5e03dd0c289e6e56239930c9381bd9ccede0b7d"
+    },
+    {
+      "path": "docs/bare-noun-spacing-listed-pairs.json",
+      "sha256": "b4fc1c42041f1e2709138f61d33b4702e092f1025f17e4f28e4650da3817b5ed"
+    },
+    {
+      "path": "docs/bare-noun-spacing-observations.json",
+      "sha256": "e5a632292b548061b9198a1db38ba1842040c75142a9695e8126a87573a2c208"
+    },
+    {
+      "path": "docs/bare-noun-spacing-corpora.json",
+      "sha256": "2d238f12e54fe98afc56cf3fde4278b08a9f9def030f2e3339046a28e359672b"
+    },
+    {
+      "path": "docs/bare-noun-spacing-runtime.json",
+      "sha256": "8d2ed628e47ed80b1872f419da562e2df3ce3c34a6316816232bf34095acefcd"
+    },
+    {
+      "path": "docs/bare-noun-spacing-packaged-runtime.json",
+      "sha256": "3cc262f5c901e1e6de3d33e4d885b104a940996099a76cdc9f4e28a664a89ffd"
+    },
+    {
+      "path": "docs/bare-noun-spacing-packaged-streams.json",
+      "sha256": "d3e82e96a65790dbbc25bec66e161663d3dc655bffd949aaab9edf4bd360e6c4"
+    }
+  ],
+  "verification": [
+    {
+      "command": "cargo test --locked --offline --all-targets --features web",
+      "status": "passed",
+      "tests": 817,
+      "log": "/tmp/klem-bare-noun-spacing-cargo.log"
+    },
+    {
+      "command": "cargo test --locked --offline --test bare_noun_spacing --features web",
+      "status": "passed",
+      "tests": 7,
+      "log": "/tmp/klem-bare-noun-spacing-prefix-focused.log"
+    },
+    {
+      "command": "cargo test --locked --offline --doc --features web",
+      "status": "passed",
+      "tests": 1,
+      "log": "/tmp/klem-bare-noun-spacing-doc.log"
+    },
+    {
+      "command": "cargo clippy --locked --offline --all-targets --features web -- -D warnings",
+      "status": "passed",
+      "tests": null,
+      "log": "/tmp/klem-bare-noun-spacing-prefix-clippy.log"
+    },
+    {
+      "command": "cargo fmt --all --check",
+      "status": "passed",
+      "tests": null,
+      "log": null
+    },
+    {
+      "command": "npm run build --prefix web",
+      "status": "passed",
+      "tests": null,
+      "log": "/tmp/klem-bare-noun-spacing-frontend.log"
+    },
+    {
+      "command": "node web/tests/browser.mjs",
+      "status": "passed",
+      "tests": null,
+      "log": "/tmp/klem-bare-noun-spacing-browser.log"
+    },
+    {
+      "command": "python3 tools/bare_noun_spacing_queue.py --verify",
+      "status": "passed",
+      "tests": null,
+      "log": null
+    },
+    {
+      "command": "python3 tools/continuation_residual_audit.py --verify --local-sources",
+      "status": "passed",
+      "tests": null,
+      "log": null
+    },
+    {
+      "command": "python3 -m unittest discover -s tools -p 'test_review_inventory.py'",
+      "status": "passed",
+      "tests": 9,
+      "log": null
+    },
+    {
+      "command": "nix build .#klem .#web-assets --no-link --print-out-paths",
+      "status": "passed",
+      "tests": 818,
+      "log": "/tmp/klem-bare-noun-spacing-nix-packages.log"
+    },
+    {
+      "command": "nix flake check --no-update-lock-file",
+      "status": "passed",
+      "system": "x86_64-linux",
+      "tests": 819,
+      "ignored": 1,
+      "checks": [
+        "klem",
+        "web-assets",
+        "inventory-review"
+      ],
+      "log": "/tmp/klem-bare-noun-spacing-flake-final.log"
+    },
+    {
+      "command": "python3 tools/bare_noun_spacing_runtime.py --cli FINAL_NIX_CLI --url http://127.0.0.1:8081 --output REPORT",
+      "status": "passed",
+      "log": "/tmp/klem-bare-noun-spacing-final-packaged-runtime.log"
+    },
+    {
+      "command": "node web/tests/bare-noun-spacing.mjs",
+      "status": "passed",
+      "log": "/tmp/klem-bare-noun-spacing-final-packaged-browser.log"
+    },
+    {
+      "command": "Reproduce all eight full stream hashes with final Nix CLI",
+      "status": "passed",
+      "records": 1128312,
+      "log": "/tmp/klem-bare-noun-spacing-final-packaged-streams.log"
+    }
+  ],
+  "qualification": "The initial full Rust run predates the additional four-pair case-prefix test. Seven final focused tests, Clippy and all 819 final Nix release tests cover the final source. The rebuilt backend bytes equal the preview backend; the changed final CLI binary was verified against all eight full streams, all 18 native cohort streams and all six native browser/export submissions.",
+  "packaged": {
+    "package": "/nix/store/5n6wil0w6j5z4wxyinwz2m7ppj8y0z0x-klem-0.1.0",
+    "cli_sha256": "3d92b980a5b31bc0f9b4dfcb3c4bdce29ab9fc40386e7cd16288174fce8f0ae8",
+    "backend_sha256": "33b83c8cbd3deebfa51ed3baed7ef9866cf109150a75178f5348ce99b6031b30",
+    "assets": "/nix/store/yn406898lvl74l0d7y4kagh9j06s511q-klem-web-assets-0.1.0",
+    "assets_byte_identical_to_previous_preview": true,
+    "all_1128312_stream_records_match_local_release": true,
+    "all_18_cohort_stream_hashes_match_local_release": true,
+    "browser_submissions": 6,
+    "browser_words": 95,
+    "browser_errors": [],
+    "native_entry_clicks": [
+      "krdict:89906",
+      "krdict:41145"
+    ],
+    "browser_log": "/tmp/klem-bare-noun-spacing-final-packaged-browser.log",
+    "initial_package": "/nix/store/s6vi84scki48962aqvzyl771y5k5rmr9-klem-0.1.0",
+    "backend_byte_identical_to_live_preview": true
+  },
+  "preview": {
+    "pid": 1411866,
+    "uid": 1000,
+    "start_ticks": 16543490,
+    "exe": "/nix/store/s6vi84scki48962aqvzyl771y5k5rmr9-klem-0.1.0/bin/klem-web",
+    "args": [
+      "/nix/store/s6vi84scki48962aqvzyl771y5k5rmr9-klem-0.1.0/bin/klem-web",
+      "--assets",
+      "/nix/store/yn406898lvl74l0d7y4kagh9j06s511q-klem-web-assets-0.1.0/share/klem-web",
+      "--port",
+      "8081",
+      "--dictionary",
+      "data/dictionaries/krdict/krdict.db"
+    ],
+    "cwd": "/home/josh/projects/klem",
+    "api_status": {
+      "dictionary": {
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "metadata": {
+          "attribution": "National Institute of Korean Language (국립국어원), Korean Basic Dictionary (한국어기초사전). Extracted text fields and NFC lookup keys; multimedia omitted.",
+          "entries": 56555,
+          "files": [
+            {
+              "entries": 5185,
+              "name": "10_5000_20260919.json",
+              "sha256": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c"
+            },
+            {
+              "entries": 3815,
+              "name": "11_3671_20260919.json",
+              "sha256": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84"
+            },
+            {
+              "entries": 5288,
+              "name": "1_5000_20260919.json",
+              "sha256": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c"
+            },
+            {
+              "entries": 5308,
+              "name": "2_5000_20260919.json",
+              "sha256": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0"
+            },
+            {
+              "entries": 5388,
+              "name": "3_5000_20260919.json",
+              "sha256": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644"
+            },
+            {
+              "entries": 5480,
+              "name": "4_5000_20260919.json",
+              "sha256": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61"
+            },
+            {
+              "entries": 5229,
+              "name": "5_5000_20260919.json",
+              "sha256": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0"
+            },
+            {
+              "entries": 5262,
+              "name": "6_5000_20260919.json",
+              "sha256": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18"
+            },
+            {
+              "entries": 5247,
+              "name": "7_5000_20260919.json",
+              "sha256": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3"
+            },
+            {
+              "entries": 5192,
+              "name": "8_5000_20260919.json",
+              "sha256": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e"
+            },
+            {
+              "entries": 5161,
+              "name": "9_5000_20260919.json",
+              "sha256": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+            }
+          ],
+          "license": "CC-BY-SA-2.0-KR",
+          "license_url": "https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo",
+          "schema": 1,
+          "snapshot": "2026-09",
+          "source": "krdict",
+          "source_url": "https://krdict.korean.go.kr/download/downloadPopup"
+        }
+      },
+      "limits": {
+        "text_bytes": 8000,
+        "word_chars": 64
+      },
+      "version": "0.1.0"
+    },
+    "url": "http://127.0.0.1:8081",
+    "isolated_packaged_response_equal_except_elapsed_ms": true
+  },
+  "corrections": [
+    "Export metadata reused an ID; require actual headword/POS when selecting a lexical record.",
+    "Explicit overlays preserve three authored 내세요 cases while selecting the existing canonical 으세요 ending bundle.",
+    "The native-entry API wrapper and leading CJK offset token were handled correctly in the audit harness.",
+    "The test helper uses std::slice::from_ref after a Clippy warning.",
+    "Preview response comparison excludes only nondeterministic elapsed_ms."
+  ],
+  "limitations": [
+    "The novel contains no new qualifying pair; four distinct surfaces gain only search-work counters.",
+    "Original raw gold, spelling, native dictionary fields, core morphology and global dictionary policy are unchanged.",
+    "Whole verbs and further unestablished pairs are separately tracked; finite exclusions do not establish impossibility.",
+    "Context, register, intended spacing and independent Korean review remain unjudged.",
+    "The broader checklist remains active. Other configured architectures were not executed."
+  ],
+  "screenshots": [
+    {
+      "path": "/tmp/klem-bare-noun-native-desktop.png",
+      "sha256": "94634d7d6ceec2e10cde919ae9c7277cb4fb6417ffff910c0c83de116101a81c"
+    },
+    {
+      "path": "/tmp/klem-bare-noun-native-mobile.png",
+      "sha256": "5c599c1034955c081d04d3d69464c19898c885e3c130fd73124c0e156080b0a8"
+    }
+  ]
+}

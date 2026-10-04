@@ -129,6 +129,14 @@ The library exposes `spacing::suggest` with reusable `Session`/`DictionarySessio
 caches and `SpacingLimits`. This optional search has its own word cache budget.
 The browser offers the same behavior through **Suggest missing spaces**.
 
+Source-attested bare pairs also produce separate hypotheses: **짜증낼 → 짜증
+낼**, **용기내서 → 용기 내서**, **신경질내며 → 신경질 내며**, and
+**기분내키는 → 기분 내키는**. Each word keeps its independent analyses;
+the exact noun/main-verb pair requires known dictionary classes. These alternatives
+carry `rule: "spacing.bare_noun_lexical_verb"`. Existing case-phrase alternatives
+use the shared search budget first. Whole-word candidates remain available, and
+dictionary membership does not determine the intended spacing or meaning.
+
 ## Browser app
 
 Paste a Korean sentence, select a word, and explore its grouped analyses and

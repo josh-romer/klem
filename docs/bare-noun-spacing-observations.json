@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020q",
+  "before_revision": "bc0a08a525dd700951cd1c48e6fa647d6f492eb1",
+  "before_cli": "/nix/store/ia5y96m9y9bsps9zhkkscl31v6s3s93x-klem-0.1.0/bin/klem",
+  "before_cli_sha256": "d0128f027ed84335232c7e263e120c93a8ac026cd1a6359e2c5d3142c4ffec70",
+  "cli": "/tmp/klem-cargo-target-1000/release/klem",
+  "cli_sha256": "20c657d5c949d236d5ccb917287e2b96dbb0caed01f304a43151ef7dd673ae20",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "comparisons": [
+    {
+      "mode": "candidate-raw",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "records": 77584,
+      "before_jsonl_sha256": "b2fd1618c3317e747aedc3e7ab6437385e82d0c922901e4196a022b9b5bfa18f",
+      "after_jsonl_sha256": "b2fd1618c3317e747aedc3e7ab6437385e82d0c922901e4196a022b9b5bfa18f",
+      "changed_records": 0
+    },
+    {
+      "mode": "candidate-headword",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "records": 77584,
+      "before_jsonl_sha256": "4de9c1841de2a68053613aeff57b5a026989acaa0b19582962cf8c25b720f6ef",
+      "after_jsonl_sha256": "4de9c1841de2a68053613aeff57b5a026989acaa0b19582962cf8c25b720f6ef",
+      "changed_records": 0
+    },
+    {
+      "mode": "candidate-compatible",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "records": 77584,
+      "before_jsonl_sha256": "828399a4381cae4bb07d662bb36f77294467f1895aa3799edf3a11941c5d0a6a",
+      "after_jsonl_sha256": "828399a4381cae4bb07d662bb36f77294467f1895aa3799edf3a11941c5d0a6a",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-raw",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "e3f464df1a1096ced547e8aa17e07ef9f079fe4560673f2bfe455131e08e8c48",
+      "after_jsonl_sha256": "e3f464df1a1096ced547e8aa17e07ef9f079fe4560673f2bfe455131e08e8c48",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-headword",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "2014adfcba7b338729f3f4e8c408eb54e520a38f89aaaaf9ca43e4c3d8891bdd",
+      "after_jsonl_sha256": "2014adfcba7b338729f3f4e8c408eb54e520a38f89aaaaf9ca43e4c3d8891bdd",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-compatible",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "8bc66732136b6d40052ca09fa72d7bc2f0358e983d3e24cca4fe9e02d4f93c92",
+      "after_jsonl_sha256": "8bc66732136b6d40052ca09fa72d7bc2f0358e983d3e24cca4fe9e02d4f93c92",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-headword-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "daed97da41bb9b28177c9ff01f6a4f8928a48ad6104954dbb26f807a717f4183",
+      "after_jsonl_sha256": "9ea74898b93231a26aff509893201c8c461c0cf4984d8bf9fd5e6fb331f59729",
+      "changed_records": 9
+    },
+    {
+      "mode": "novel-compatible-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "6a1a2480c72b5b15b5cece42e572653c757f8c1037dc126e394c0e38d4bb2cdb",
+      "after_jsonl_sha256": "f426072ae1e618571b708ab59c7a3807641bb1448c2a90550df8c823c8e05e54",
+      "changed_records": 9
+    }
+  ],
+  "added_hypotheses": [],
+  "work_metadata_changes": [
+    {
+      "id": "bare-noun-spacing-work-98f6cfd732bed8511515dbd6",
+      "surface": "용기가",
+      "before": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 0,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "after": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 2,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "occurrences": [
+        {
+          "mode": "novel-headword-spacing",
+          "record": 17192,
+          "span": {
+            "start": 76013,
+            "end": 76022
+          }
+        },
+        {
+          "mode": "novel-headword-spacing",
+          "record": 25439,
+          "span": {
+            "start": 112010,
+            "end": 112019
+          }
+        },
+        {
+          "mode": "novel-headword-spacing",
+          "record": 152073,
+          "span": {
+            "start": 667765,
+            "end": 667774
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 17192,
+          "span": {
+            "start": 76013,
+            "end": 76022
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 25439,
+          "span": {
+            "start": 112010,
+            "end": 112019
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 152073,
+          "span": {
+            "start": 667765,
+            "end": 667774
+          }
+        }
+      ]
+    },
+    {
+      "id": "bare-noun-spacing-work-233b39fec4ad4199b298a45a",
+      "surface": "용기는",
+      "before": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 0,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "after": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 2,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "occurrences": [
+        {
+          "mode": "novel-headword-spacing",
+          "record": 28338,
+          "span": {
+            "start": 125741,
+            "end": 125750
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 28338,
+          "span": {
+            "start": 125741,
+            "end": 125750
+          }
+        }
+      ]
+    },
+    {
+      "id": "bare-noun-spacing-work-7f2431eaa5b2b459c035b2cd",
+      "surface": "용기를",
+      "before": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 0,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "after": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 2,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "occurrences": [
+        {
+          "mode": "novel-headword-spacing",
+          "record": 47188,
+          "span": {
+            "start": 208311,
+            "end": 208320
+          }
+        },
+        {
+          "mode": "novel-headword-spacing",
+          "record": 52207,
+          "span": {
+            "start": 230536,
+            "end": 230545
+          }
+        },
+        {
+          "mode": "novel-headword-spacing",
+          "record": 90874,
+          "span": {
+            "start": 400012,
+            "end": 400021
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 47188,
+          "span": {
+            "start": 208311,
+            "end": 208320
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 52207,
+          "span": {
+            "start": 230536,
+            "end": 230545
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 90874,
+          "span": {
+            "start": 400012,
+            "end": 400021
+          }
+        }
+      ]
+    },
+    {
+      "id": "bare-noun-spacing-work-0f8d641d82002af5b1ac5d5a",
+      "surface": "용기도",
+      "before": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 0,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "after": {
+        "rule": "spacing.nominal_case_predicate",
+        "complete": true,
+        "limited_by": [],
+        "segment_probes": 2,
+        "limits": {
+          "token_chars": 64,
+          "segment_probes": 256,
+          "alternatives": 16
+        }
+      },
+      "occurrences": [
+        {
+          "mode": "novel-headword-spacing",
+          "record": 52452,
+          "span": {
+            "start": 231612,
+            "end": 231621
+          }
+        },
+        {
+          "mode": "novel-headword-spacing",
+          "record": 104660,
+          "span": {
+            "start": 460988,
+            "end": 460997
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 52452,
+          "span": {
+            "start": 231612,
+            "end": 231621
+          }
+        },
+        {
+          "mode": "novel-compatible-spacing",
+          "record": 104660,
+          "span": {
+            "start": 460988,
+            "end": 460997
+          }
+        }
+      ]
+    }
+  ],
+  "default_records_byte_identical": true,
+  "legacy_spacing_hypotheses_and_order_preserved": true,
+  "all_baseline_stream_hashes_verified": true,
+  "contextual_verdict": "unjudged"
+}

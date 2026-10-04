@@ -179,6 +179,12 @@ fn analyze_with_spacing(
                 klem::rule_explanation(spacing.rule).expect("spacing explanation"),
             );
             for alternative in &spacing.alternatives {
+                if let Some(rule) = alternative.rule {
+                    metadata.rules.insert(
+                        rule.into(),
+                        klem::rule_explanation(rule).expect("spacing alternative explanation"),
+                    );
+                }
                 for segment in &alternative.records {
                     metadata.add(
                         segment

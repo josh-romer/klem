@@ -1,7 +1,9 @@
 //! Explicit, dictionary-backed missing-space hypotheses. Word candidates are immutable.
-//! This searches nominal case phrases followed by a lexical predicate, including
-//! multiple nominal phrases. It does not validate sentence grammar or rank senses.
-use crate::dictionary::{Annotation, Dictionary, DictionaryFilter, DictionarySession, Result};
+//! This searches nominal case phrases followed by a lexical predicate and
+//! independently attested bare-noun pairs. It does not validate sentence grammar.
+use crate::dictionary::{
+    Annotation, Compatibility, Dictionary, DictionaryFilter, DictionarySession, Result,
+};
 use crate::{Analysis, LemmaKind, MorphemeKind, Session, TokenAnalysis, TokenKind, WordAnalysis};
 use serde::{Deserialize, Serialize};
 use std::{
@@ -42,6 +44,9 @@ pub struct SpacingSegment {
 }
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct SpacingHypothesis {
+    /// Additional finite template; absent for the original case-phrase template.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub rule: Option<&'static str>,
     /// Original substrings joined with proposed spaces; never an input rewrite.
     pub spaced: String,
     /// Absolute UTF-8 positions in the original input, at which spaces are proposed.
@@ -63,6 +68,43 @@ pub struct SpacingSuggestions {
 enum Role {
     Case,
     Predicate,
+    BareNoun,
+    ListedVerb(&'static str),
+}
+
+// Full native examples independently attest these bare objects before lexical
+// 내다: 66599/1/8, 31325/1/8, 41886/2/5, 67521/1/8, 71927/1/10.
+// 20192/1/8 additionally attests 기분 + 내키다. The exact right lexical head
+// matters: its spelling is not evidence for a 기분 + 내다 pair.
+// Other nouns in 내다 sense 13 and registered whole verbs are separately tracked.
+const BARE_PAIRS: &[(&str, &str)] = &[
+    ("신경질", "내다"),
+    ("용기", "내다"),
+    ("짜증", "내다"),
+    ("기분", "내키다"),
+];
+const BARE_RULE: &str = "spacing.bare_noun_lexical_verb";
+
+fn bare_noun(a: &Analysis) -> bool {
+    a.unchanged
+        && a.lemmas.len() == 1
+        && a.lemmas[0].kind == LemmaKind::Unclassified
+        && BARE_PAIRS.iter().any(|(head, _)| *head == a.lemmas[0].text)
+        && a.morphemes.is_empty()
+}
+
+fn predicate(a: &Analysis) -> bool {
+    // Predicate lookup roots before reviewed noun-forming morphology are
+    // nominal words rather than the endpoint of this spacing template.
+    !a.rules.iter().any(|r| {
+        matches!(
+            r.as_str(),
+            "suffix.nominal.i" | "derivation.nominal.adnominal" | "derivation.nominal.bound_i"
+        )
+    }) && a
+        .lemmas
+        .first()
+        .is_some_and(|l| l.kind == LemmaKind::Predicate)
 }
 fn case_form(form: &str) -> bool {
     crate::grammar::particles()
@@ -157,6 +199,12 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         if role == Role::Case && !maybe_case(surface) {
             return Ok(None);
         }
+        if role == Role::BareNoun {
+            let normalized: String = surface.nfc().collect();
+            if !BARE_PAIRS.iter().any(|(head, _)| *head == normalized) {
+                return Ok(None);
+            }
+        }
         if self.result.segment_probes >= self.result.limits.segment_probes {
             self.limit(SpacingLimit::SegmentProbes);
             return Ok(None);
@@ -170,27 +218,53 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 .iter()
                 .filter(|a| match role {
                     Role::Case => nominal_case(a),
-                    // A predicate lookup lemma before a noun suffix is a
-                    // nominal word, not a sentence predicate for this template.
-                    Role::Predicate => {
-                        !a.rules.iter().any(|r| {
-                            matches!(
-                                r.as_str(),
-                                "suffix.nominal.i"
-                                    | "derivation.nominal.adnominal"
-                                    | "derivation.nominal.bound_i"
-                            )
-                        }) && a
-                            .lemmas
-                            .first()
-                            .is_some_and(|l| l.kind == LemmaKind::Predicate)
-                    }
+                    Role::Predicate => predicate(a),
+                    Role::BareNoun => bare_noun(a),
+                    Role::ListedVerb(head) => predicate(a) && a.lemmas[0].text == head,
                 })
                 .cloned()
                 .collect(),
         };
         let mut dictionary = self.dictionary.annotate(&analysis)?;
         dictionary.filter(&mut analysis, DictionaryFilter::Compatible);
+        if matches!(role, Role::BareNoun | Role::ListedVerb(_)) {
+            // A standalone auxiliary can have unknown attachment status, so
+            // compatible filtering alone cannot establish a main-verb pair.
+            // Retain only readings with an actual known noun/main-verb entry
+            // for their own first slot; every other homonym remains inspectable.
+            let required_pos = if role == Role::BareNoun {
+                "명사"
+            } else {
+                "동사"
+            };
+            let supported: Vec<_> = analysis
+                .analyses
+                .iter()
+                .filter(|a| {
+                    let lemma = &a.lemmas[0];
+                    let assessed = dictionary.assess(a);
+                    dictionary
+                        .lemmas
+                        .iter()
+                        .find(|m| m.lemma == *lemma)
+                        .is_some_and(|m| {
+                            m.entries.iter().any(|e| {
+                                e.entry.headword == lemma.text
+                                    && e.entry.pos == required_pos
+                                    && assessed.lemmas[0].entries.iter().any(|r| {
+                                        r.id == e.entry.id
+                                            && r.status != Compatibility::Incompatible
+                                    })
+                            })
+                        })
+                })
+                .cloned()
+                .collect();
+            analysis.analyses = supported;
+            // Re-annotate the retained independent paths; do not relabel a raw
+            // identity as nominal or borrow an auxiliary's dictionary entry.
+            dictionary = self.dictionary.annotate(&analysis)?;
+        }
         let value = (!analysis.analyses.is_empty()).then(|| SpacingSegment {
             breakdowns: analysis.analyses.iter().map(|a| a.breakdown()).collect(),
             record: TokenAnalysis {
@@ -204,6 +278,59 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         self.cache.insert(key, value.clone());
         Ok(value)
     }
+
+    fn emit(&mut self, records: Vec<SpacingSegment>, rule: Option<&'static str>) {
+        if self.result.alternatives.len() >= self.result.limits.alternatives {
+            self.limit(SpacingLimit::Alternatives);
+            return;
+        }
+        self.result.alternatives.push(SpacingHypothesis {
+            rule,
+            spaced: records
+                .iter()
+                .map(|s| s.record.surface.as_str())
+                .collect::<Vec<_>>()
+                .join(" "),
+            inserted_at: records
+                .iter()
+                .skip(1)
+                .map(|s| s.record.span.start)
+                .collect(),
+            records,
+        });
+    }
+
+    fn bare_pair(&mut self, start: usize, path: &[SpacingSegment]) -> Result<()> {
+        // Find only complete named noun prefixes; do not analyze arbitrary
+        // substrings or split every dictionary noun before every predicate.
+        let max_prefix_chars = BARE_PAIRS
+            .iter()
+            .map(|(head, _)| head.nfd().count())
+            .max()
+            .unwrap();
+        for (relative, _) in self.source[start..]
+            .char_indices()
+            .skip(1)
+            .take(max_prefix_chars)
+        {
+            let end = start + relative;
+            let normalized: String = self.source[start..end].nfc().collect();
+            let Some((_, verb)) = BARE_PAIRS.iter().find(|(head, _)| *head == normalized) else {
+                continue;
+            };
+            if let Some(left) = self.segment(start, end, Role::BareNoun)?
+                && let Some(right) = self.segment(end, self.source.len(), Role::ListedVerb(verb))?
+            {
+                let mut records = path.to_vec();
+                records.extend([left, right]);
+                self.emit(records, Some(BARE_RULE));
+            }
+            if !self.result.complete {
+                break;
+            }
+        }
+        Ok(())
+    }
     fn walk(&mut self, start: usize, path: &mut Vec<SpacingSegment>) -> Result<()> {
         if self.dead_starts.contains(&start) {
             return Ok(());
@@ -212,25 +339,9 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         if !path.is_empty()
             && let Some(last) = self.segment(start, self.source.len(), Role::Predicate)?
         {
-            if self.result.alternatives.len() >= self.result.limits.alternatives {
-                self.limit(SpacingLimit::Alternatives);
-                return Ok(());
-            }
             let mut records = path.clone();
             records.push(last);
-            self.result.alternatives.push(SpacingHypothesis {
-                spaced: records
-                    .iter()
-                    .map(|s| s.record.surface.as_str())
-                    .collect::<Vec<_>>()
-                    .join(" "),
-                inserted_at: records
-                    .iter()
-                    .skip(1)
-                    .map(|s| s.record.span.start)
-                    .collect(),
-                records,
-            });
+            self.emit(records, None);
         }
         if self.result.limited_by.contains(&SpacingLimit::Alternatives) {
             return Ok(());
@@ -251,6 +362,38 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
             }
         }
         if self.result.complete && self.result.alternatives.len() == previous_alternatives {
+            self.dead_starts.insert(start);
+        }
+        Ok(())
+    }
+
+    fn walk_bare(&mut self, start: usize, path: &mut Vec<SpacingSegment>) -> Result<()> {
+        if self.dead_starts.contains(&start) {
+            return Ok(());
+        }
+        let before = self.result.alternatives.len();
+        self.bare_pair(start, path)?;
+        if !self.result.complete {
+            return Ok(());
+        }
+        let cuts = self.source[start..]
+            .char_indices()
+            .skip(1)
+            .map(|(i, _)| start + i)
+            .collect::<Vec<_>>();
+        for end in cuts.into_iter().rev() {
+            // The completed original search has already cached these case
+            // edges. Successful prefixes still enumerate their own readings.
+            if let Some(left) = self.segment(start, end, Role::Case)? {
+                path.push(left);
+                self.walk_bare(end, path)?;
+                path.pop();
+            }
+            if !self.result.complete {
+                break;
+            }
+        }
+        if self.result.complete && self.result.alternatives.len() == before {
             self.dead_starts.insert(start);
         }
         Ok(())
@@ -298,6 +441,18 @@ pub fn suggest<D: Dictionary + ?Sized>(
         result,
     };
     search.walk(0, &mut Vec::new())?;
+    let has_bare_pair = search.result.complete && {
+        let normalized: String = word.nfc().collect();
+        BARE_PAIRS.iter().any(|(head, _)| normalized.contains(head))
+    };
+    if has_bare_pair {
+        // Enumerate the original template first. New pairs use only remaining
+        // work/output capacity, so they cannot displace a prior hypothesis.
+        // A legacy dead suffix can contain a new pair, so reset that memo while
+        // preserving all independently analyzed/cached segment results.
+        search.dead_starts.clear();
+        search.walk_bare(0, &mut Vec::new())?;
+    }
     search.result.alternatives.sort_by(|a, b| {
         a.inserted_at
             .len()

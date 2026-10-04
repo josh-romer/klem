@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020q",
+  "cli": "/home/josh/projects/klem/target/release/klem",
+  "url": "http://127.0.0.1:41465",
+  "complete_native_entries": 34,
+  "surfaces": 95,
+  "judgment_observations": 134,
+  "streams": [
+    {
+      "encoding": "NFC",
+      "cache_bytes": 0,
+      "mode": "all",
+      "records": 193,
+      "sha256": "54940c44a91b804bd878a621157b34cbe11b4f59b355d08dbaf9c0dbe62a43f1"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 0,
+      "mode": "headword",
+      "records": 193,
+      "sha256": "725778a73c042cdf19f448bcb31c8f21904ec276d128e31331f29689843747ae"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 0,
+      "mode": "compatible",
+      "records": 193,
+      "sha256": "f58cba65740c07ee4caa42960798c2a546fcd680ba3f1bed6a08070e3a22ef03"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 1,
+      "mode": "all",
+      "records": 193,
+      "sha256": "54940c44a91b804bd878a621157b34cbe11b4f59b355d08dbaf9c0dbe62a43f1"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 1,
+      "mode": "headword",
+      "records": 193,
+      "sha256": "725778a73c042cdf19f448bcb31c8f21904ec276d128e31331f29689843747ae"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 1,
+      "mode": "compatible",
+      "records": 193,
+      "sha256": "f58cba65740c07ee4caa42960798c2a546fcd680ba3f1bed6a08070e3a22ef03"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 4096,
+      "mode": "all",
+      "records": 193,
+      "sha256": "54940c44a91b804bd878a621157b34cbe11b4f59b355d08dbaf9c0dbe62a43f1"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 4096,
+      "mode": "headword",
+      "records": 193,
+      "sha256": "725778a73c042cdf19f448bcb31c8f21904ec276d128e31331f29689843747ae"
+    },
+    {
+      "encoding": "NFC",
+      "cache_bytes": 4096,
+      "mode": "compatible",
+      "records": 193,
+      "sha256": "f58cba65740c07ee4caa42960798c2a546fcd680ba3f1bed6a08070e3a22ef03"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 0,
+      "mode": "all",
+      "records": 193,
+      "sha256": "9e24d7318b5dceb58728a091d6068747e954911928ac336c06f55cc2285ace69"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 0,
+      "mode": "headword",
+      "records": 193,
+      "sha256": "fbcdbe733298dbc70d694e9f67d3d5e3240f08866409ca3a4a61874bfee8ed93"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 0,
+      "mode": "compatible",
+      "records": 193,
+      "sha256": "56d5429db2cff762d80c101db3ec09a8a270e7d8613bfd838e414c35e792aaf5"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 1,
+      "mode": "all",
+      "records": 193,
+      "sha256": "9e24d7318b5dceb58728a091d6068747e954911928ac336c06f55cc2285ace69"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 1,
+      "mode": "headword",
+      "records": 193,
+      "sha256": "fbcdbe733298dbc70d694e9f67d3d5e3240f08866409ca3a4a61874bfee8ed93"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 1,
+      "mode": "compatible",
+      "records": 193,
+      "sha256": "56d5429db2cff762d80c101db3ec09a8a270e7d8613bfd838e414c35e792aaf5"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 4096,
+      "mode": "all",
+      "records": 193,
+      "sha256": "9e24d7318b5dceb58728a091d6068747e954911928ac336c06f55cc2285ace69"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 4096,
+      "mode": "headword",
+      "records": 193,
+      "sha256": "fbcdbe733298dbc70d694e9f67d3d5e3240f08866409ca3a4a61874bfee8ed93"
+    },
+    {
+      "encoding": "NFD",
+      "cache_bytes": 4096,
+      "mode": "compatible",
+      "records": 193,
+      "sha256": "56d5429db2cff762d80c101db3ec09a8a270e7d8613bfd838e414c35e792aaf5"
+    }
+  ],
+  "corpus_representation_observations": [
+    {
+      "encoding": "NFC",
+      "raw_gold_groups_still_missing": 2,
+      "across_separate_words_groups_recovered": 2,
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "encoding": "NFD",
+      "raw_gold_groups_still_missing": 2,
+      "across_separate_words_groups_recovered": 2,
+      "contextual_verdict": "unjudged"
+    }
+  ],
+  "original_corpus_residuals": [
+    {
+      "original_gold_row": {
+        "id": "id:MH2_0010-s209/10",
+        "surface": "드러난다",
+        "expected": [
+          "들다",
+          "나다"
+        ],
+        "matched": false,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            1
+          ]
+        ]
+      },
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_sentence_block": "# sent_id = MH2_0010-s209\n# text = 2 월에는 눈이 많이 녹아 지면의 검은 땅이 많이 드러난다.\n# translit = 2 .weol.e.neun .nun.i .manh.i .nog.a .ji.myeon.yi .geom.eun .ddang.i .manh.i .deu.reo.nan.da.\n1\t2\t2\tNUM\tnno\t_\t2\tnummod\t_\tTranslit=2|LTranslit=2\n2\t월에는\t월+에+는\tNOUN\tnbu+jca+jxt\t_\t10\tdislocated\t_\tTranslit=.weol.e.neun|LTranslit=.weol+.e+.neun\n3\t눈이\t눈+이\tNOUN\tncn+jcs\t_\t5\tnsubj\t_\tTranslit=.nun.i|LTranslit=.nun+.i\n4\t많이\t많이\tADV\tmag\t_\t5\tadvmod\t_\tTranslit=.manh.i|LTranslit=.manh.i\n5\t녹아\t녹+아\tSCONJ\tpvg+ecs\t_\t10\tccomp\t_\tTranslit=.nog.a|LTranslit=.nog+.a\n6\t지면의\t지면+의\tNOUN\tncn+jcm\t_\t8\tnmod\t_\tTranslit=.ji.myeon.yi|LTranslit=.ji.myeon+.yi\n7\t검은\t검+ㄴ\tADJ\tpaa+etm\t_\t8\tamod\t_\tTranslit=.geom.eun|LTranslit=.geom+ㄴ\n8\t땅이\t땅+이\tNOUN\tncn+jcs\t_\t10\tnsubj\t_\tTranslit=.ddang.i|LTranslit=.ddang+.i\n9\t많이\t많이\tADV\tmag\t_\t10\tadvmod\t_\tTranslit=.manh.i|LTranslit=.manh.i\n10\t드러난다\t들+어+나+ㄴ다\tVERB\tpvg+ecx+px+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.deu.reo.nan.da|LTranslit=.deul+.eo+.na+ㄴ.da\n11\t.\t.\tPUNCT\tsf\t_\t10\tpunct\t_\tTranslit=.|LTranslit=.\n",
+      "observations": {
+        "all": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "headword": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "compatible": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "original_gold_row": {
+        "id": "id:MH2_0010-s241/11",
+        "surface": "드러나며",
+        "expected": [
+          "들다",
+          "나다"
+        ],
+        "matched": false,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            1
+          ]
+        ]
+      },
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_sentence_block": "# sent_id = MH2_0010-s241\n# text = 2월은 남극의 한여름에 해당되어 눈도 많이 녹아 지면이 가장 넓게 드러나며 식물도 왕성히 자란다.\n# translit = 2.weol.eun .nam.geug.yi .han.yeo.reum.e .hae.dang.doe.eo .nun.do .manh.i .nog.a .ji.myeon.i .ga.jang .neorb.ge .deu.reo.na.myeo .sig.mul.do .wang.seong.hi .ja.ran.da.\n1\t2월은\t2+월+은\tNUM\tnno+nbu+jxt\t_\t4\tdislocated\t_\tTranslit=2.weol.eun|LTranslit=2+.weol+.eun\n2\t남극의\t남극+의\tPROPN\tnq+jcm\t_\t3\tnmod\t_\tTranslit=.nam.geug.yi|LTranslit=.nam.geug+.yi\n3\t한여름에\t한여름+에\tADV\tncn+jca\t_\t4\tobl\t_\tTranslit=.han.yeo.reum.e|LTranslit=.han.yeo.reum+.e\n4\t해당되어\t해당+되+어\tSCONJ\tncpa+xsv+ecs\t_\t7\tccomp\t_\tTranslit=.hae.dang.doe.eo|LTranslit=.hae.dang+.doe+.eo\n5\t눈도\t눈+도\tADV\tncn+jxc\t_\t7\tadvcl\t_\tTranslit=.nun.do|LTranslit=.nun+.do\n6\t많이\t많이\tADV\tmag\t_\t7\tadvmod\t_\tTranslit=.manh.i|LTranslit=.manh.i\n7\t녹아\t녹+아\tSCONJ\tpvg+ecs\t_\t11\tccomp\t_\tTranslit=.nog.a|LTranslit=.nog+.a\n8\t지면이\t지면+이\tNOUN\tncn+jcs\t_\t11\tnsubj\t_\tTranslit=.ji.myeon.i|LTranslit=.ji.myeon+.i\n9\t가장\t가장\tADV\tmag\t_\t10\tadvmod\t_\tTranslit=.ga.jang|LTranslit=.ga.jang\n10\t넓게\t넓+게\tSCONJ\tpaa+ecs\t_\t11\txcomp\t_\tTranslit=.neorb.ge|LTranslit=.neorb+.ge\n11\t드러나며\t들+어+나+며\tCCONJ\tpvg+ecx+px+ecc\t_\t0\troot\t_\tTranslit=.deu.reo.na.myeo|LTranslit=.deul+.eo+.na+.myeo\n12\t식물도\t식물+도\tADV\tncn+jxc\t_\t14\tadvcl\t_\tTranslit=.sig.mul.do|LTranslit=.sig.mul+.do\n13\t왕성히\t왕성+히\tADV\tncps+xsa\t_\t14\tadvmod\t_\tTranslit=.wang.seong.hi|LTranslit=.wang.seong+.hi\n14\t자란다\t자라+ㄴ다\tVERB\tpvg+ef\t_\t11\tconj\t_\tSpaceAfter=No|Translit=.ja.ran.da|LTranslit=.ja.ra+ㄴ.da\n15\t.\t.\tPUNCT\tsf\t_\t14\tpunct\t_\tTranslit=.|LTranslit=.\n",
+      "observations": {
+        "all": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "headword": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "compatible": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "original_gold_row": {
+        "id": "id:dev-s152/5",
+        "surface": "잘하시내요",
+        "expected": [
+          "잘하다",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      },
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "original_sentence_block": "# sent_id = dev-s152\n# text = 정비기술이 사상구 일대에서 제일 잘하시내요\n# translit = .jeong.bi.gi.sul.i .sa.sang.gu .il.dae.e.seo .je.il .jal.ha.si.nae.yo\n1\t정비기술이\t정비+기술+이\tNOUN\tNNG+NNG+JKS\t_\t5\tnsubj\t_\tTranslit=.jeong.bi.gi.sul.i|LTranslit=.jeong.bi+.gi.sul+.i\n2\t사상구\t사상+이+구\tNOUN\tNNG+VCP+EC\t_\t5\tobl\t_\tTranslit=.sa.sang.gu|LTranslit=.sa.sang+.i+.gu\n3\t일대에서\t일대+에서\tADV\tNNG+JKB\t_\t2\tflat\t_\tTranslit=.il.dae.e.seo|LTranslit=.il.dae+.e.seo\n4\t제일\t제일\tADV\tNNG\t_\t5\tadvmod\t_\tTranslit=.je.il|LTranslit=.je.il\n5\t잘하시내요\t잘+하+시+아+내+어요\tVERB\tMAG+XSV+EP+EC+VX+EC\t_\t0\troot\t_\tTranslit=.jal.ha.si.nae.yo|LTranslit=.jal+.ha+.si+.a+.nae+.eo.yo\n",
+      "observations": {
+        "all": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "headword": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "compatible": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "original_gold_row": {
+        "id": "id:dev-s191/7",
+        "surface": "편이내요",
+        "expected": [
+          "편",
+          "이다",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            1
+          ]
+        ]
+      },
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "original_sentence_block": "# sent_id = dev-s191\n# text = 동네에서 편하게 먹으면서 고기 질도 괜찮은 편이내요\n# translit = .dong.ne.e.seo .pyeon.ha.ge .meog.eu.myeon.seo .go.gi .jil.do .gwaen.chanh.eun .pyeon.i.nae.yo\n1\t동네에서\t동네+에서\tADV\tNNG+JKB\t_\t3\tadvmod\t_\tTranslit=.dong.ne.e.seo|LTranslit=.dong.ne+.e.seo\n2\t편하게\t편하+게\tADV\tVA+EC\t_\t3\tadvmod\t_\tTranslit=.pyeon.ha.ge|LTranslit=.pyeon.ha+.ge\n3\t먹으면서\t먹+으면서\tVERB\tVV+EC\t_\t6\tadvcl\t_\tTranslit=.meog.eu.myeon.seo|LTranslit=.meog+.eu.myeon.seo\n4\t고기\t고기\tNOUN\tNNG\t_\t6\tnsubj\t_\tTranslit=.go.gi|LTranslit=.go.gi\n5\t질도\t질+도\tNOUN\tNNG+JX\t_\t4\tflat\t_\tTranslit=.jil.do|LTranslit=.jil+.do\n6\t괜찮은\t괜찮+은\tVERB\tVA+ETM\t_\t7\tdep\t_\tTranslit=.gwaen.chanh.eun|LTranslit=.gwaen.chanh+.eun\n7\t편이내요\t편+이+아+내+어요\tVERB\tNNB+VCP+EC+VX+EC\t_\t0\troot\t_\tTranslit=.pyeon.i.nae.yo|LTranslit=.pyeon+.i+.a+.nae+.eo.yo\n",
+      "observations": {
+        "all": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "headword": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        },
+        "compatible": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": []
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "original_gold_row": {
+        "id": "id:dev-s247/8",
+        "surface": "짜증낼",
+        "expected": [
+          "짜증",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      },
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "original_sentence_block": "# sent_id = dev-s247\n# text = 검사 전 특이 사항 물어본 게 상당히 짜증낼 정도의 질문인가요?\n# translit = .geom.sa .jeon .teug.i .sa.hang .mul.eo.bon .ge .sang.dang.hi .jja.jeung.nael .jeong.do.yi .jil.mun.in.ga.yo?\n1\t검사\t검사\tNOUN\tNNG\t_\t5\tnmod\t_\tTranslit=.geom.sa|LTranslit=.geom.sa\n2\t전\t전\tADP\tNNG\t_\t1\tcase\t_\tTranslit=.jeon|LTranslit=.jeon\n3\t특이\t특이\tNOUN\tXR\t_\t5\tobj\t_\tTranslit=.teug.i|LTranslit=.teug.i\n4\t사항\t사항\tNOUN\tNNG\t_\t3\tflat\t_\tTranslit=.sa.hang|LTranslit=.sa.hang\n5\t물어본\t물어보+ㄴ\tVERB\tVV+ETM\t_\t6\tdep\t_\tTranslit=.mul.eo.bon|LTranslit=.mul.eo.bo+ㄴ\n6\t게\t것+이\tNOUN\tNNB+JKS\t_\t10\tnsubj\t_\tTranslit=.ge|LTranslit=.geos+.i\n7\t상당히\t상당히\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.sang.dang.hi|LTranslit=.sang.dang.hi\n8\t짜증낼\t짜증+내+ㄹ\tVERB\tNNG+VV+ETM\t_\t9\tdep\t_\tTranslit=.jja.jeung.nael|LTranslit=.jja.jeung+.nae+ㄹ\n9\t정도의\t정도+의\tNOUN\tNNG+JKG\t_\t10\tnmod:poss\t_\tTranslit=.jeong.do.yi|LTranslit=.jeong.do+.yi\n10\t질문인가요\t질문+이+ㄴ가요\tVERB\tNNG+VCP+EF\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jil.mun.in.ga.yo|LTranslit=.jil.mun+.i+ㄴ.ga.yo\n11\t?\t?\tPUNCT\tSF\t_\t10\tpunct\t_\tTranslit=?|LTranslit=?\n",
+      "observations": {
+        "all": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": [
+            0
+          ]
+        },
+        "headword": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": [
+            0
+          ]
+        },
+        "compatible": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": [
+            0
+          ]
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "original_gold_row": {
+        "id": "id:dev-s900/5",
+        "surface": "짜증내시네",
+        "expected": [
+          "짜증",
+          "내다"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      },
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "original_sentence_block": "# sent_id = dev-s900\n# text = 저녁 7시 장사 끝났다고 짜증내시네.\n# translit = .jeo.nyeog 7.si .jang.sa .ggeut.nass.da.go .jja.jeung.nae.si.ne.\n1\t저녁\t저녁\tNOUN\tNNG\t_\t4\tnmod\t_\tTranslit=.jeo.nyeog|LTranslit=.jeo.nyeog\n2\t7시\t7+시\tNOUN\tSN+NNB\t_\t1\tflat\t_\tTranslit=7.si|LTranslit=7+.si\n3\t장사\t장사\tNOUN\tNNG\t_\t4\tnsubj\t_\tTranslit=.jang.sa|LTranslit=.jang.sa\n4\t끝났다고\t끝나+았+다고\tVERB\tVV+EP+EC\t_\t5\tccomp\t_\tTranslit=.ggeut.nass.da.go|LTranslit=.ggeut.na+.ass+.da.go\n5\t짜증내시네\t짜증+내+시+네\tVERB\tNNG+VV+EP+EF\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jja.jeung.nae.si.ne|LTranslit=.jja.jeung+.nae+.si+.ne\n6\t.\t.\tPUNCT\tSF\t_\t5\tpunct\t_\tTranslit=.|LTranslit=.\n",
+      "observations": {
+        "all": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": [
+            0
+          ]
+        },
+        "headword": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": [
+            0
+          ]
+        },
+        "compatible": {
+          "raw_gold_indices": [],
+          "separate_word_group_indices": [
+            0
+          ]
+        }
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "default_records_and_native_fields_preserved": true,
+  "api_spacing_and_cli_equal": true,
+  "contextual_verdict": "unjudged"
+}

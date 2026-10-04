@@ -3630,6 +3630,38 @@ The default bounds (64 NFC characters, 256 probes, 16 alternatives) report
 truncation. `complete` is scoped to this template/dictionary. General corrections,
 dictionary-unknown words and contextual sentence grammar are outside this template.
 
+## Attested bare nouns before main verbs (COV-020q)
+
+The optional spacing graph also accepts four exact source-backed pairs:
+신경질/용기/짜증 + lexical 내다 and 기분 + 내키다. Complete native examples
+are preserved in the [original source freeze](../tests/fixtures/bare-noun-spacing-sources.json)
+and [additional pair ledger](../tests/fixtures/bare-noun-spacing-additional-pairs.json).
+The [기분 entry](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=20192)
+explicitly lists 기분 내키는 대로. Its right head is 내키다, so the example
+does not license 기분 + 내다. NIKL's
+[짜증 consultation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=325415)
+requires separate words; joined inputs remain unchanged while proposed boundaries
+appear in a sidecar with `spacing.bare_noun_lexical_verb`.
+
+Each left identity retains its original unclassified raw role and must have an
+actual noun entry. Each independently analyzed right reading must begin with its
+named main verb and have an actual main-verb entry without a known conflict.
+Auxiliary 내다 60625 cannot supply that main-verb proof for lexical 내다 89906.
+Inflected and independently licensed auxiliary continuations reuse word analysis;
+no arbitrary noun/predicate splitting or new raw compound rule is introduced.
+Existing case phrases may precede a pair. The original case graph runs first,
+and additional pairs consume the remaining explicit work/output budget.
+
+The original sixteen nouns from lexical 내다 sense 13 remain individually tracked.
+Five have registered whole verbs; their raw alternatives survive. Eight further
+bare pairs remain unestablished by this source scan, and 기분's distinct 내키다
+pair is recorded separately. Zero discovery hits do not establish impossibility.
+The [67-case ledger](../tests/bare_noun_spacing.rs) checks finite positive and
+negative templates, missing/unknown/incompatible classes, Unicode spans, bounds,
+legacy ordering and CLI parity. Context, register, sense and independent Korean
+review remain unjudged. Recovery of 짜증 + 내다 across proposed separate words
+is distinct from matching the original corpus's raw lemma group.
+
 ## Realization, retrospective and guess -걸 endings (COV-017bf)
 
 Four separate terminal bundles normalize -은걸/-ㄴ걸 to 은걸, -는걸 to

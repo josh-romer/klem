@@ -49,6 +49,7 @@ export interface SpacingSegment extends Token {
   breakdowns: (Component[] | null)[];
 }
 export interface SpacingHypothesis {
+  rule?: string;
   spaced: string;
   inserted_at: number[];
   records: SpacingSegment[];

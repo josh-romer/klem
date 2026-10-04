@@ -126,11 +126,17 @@
                 ./tools/continuation_left_broad_queue.py
                 ./tools/continuation_left_corpus_audit.py
                 ./tools/continuation_residual_audit.py
+                ./tools/bare_noun_spacing_audit.py
+                ./tools/bare_noun_spacing_additional.py
+                ./tools/bare_noun_spacing_compare.py
+                ./tools/bare_noun_spacing_runtime.py
+                ./tools/bare_noun_spacing_queue.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
                 ./web/tests/question-topic.mjs
                 ./web/tests/question-additive.mjs
                 ./web/tests/continuation-left.mjs
+                ./web/tests/bare-noun-spacing.mjs
               ];
             };
           } ''
@@ -148,6 +154,9 @@
             python tools/continuation_left_broad_queue.py --verify
             python tools/continuation_left_corpus_audit.py --verify
             python tools/continuation_residual_audit.py --verify
+            python tools/bare_noun_spacing_audit.py --verify
+            python tools/bare_noun_spacing_additional.py --verify
+            python tools/bare_noun_spacing_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

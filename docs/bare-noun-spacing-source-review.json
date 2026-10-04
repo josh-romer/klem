@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020q",
+  "reviewed": "2026-10-03",
+  "original_evidence": "tests/fixtures/bare-noun-spacing-sources.json",
+  "additional_evidence": "tests/fixtures/bare-noun-spacing-additional-pairs.json",
+  "original_judgments": "tests/fixtures/bare-noun-spacing-validity.json",
+  "explicit_representation_corrections": "tests/fixtures/bare-noun-spacing-judgment-updates.json",
+  "pairs": [
+    {"noun": "신경질", "verb": "내다", "sources": [{"entry": "krdict:66599", "sense": "1", "group": 8}]},
+    {"noun": "용기", "verb": "내다", "sources": [{"entry": "krdict:31325", "sense": "1", "group": 8}, {"entry": "krdict:41886", "sense": "2", "group": 5}, {"entry": "krdict:67521", "sense": "1", "group": 8}]},
+    {"noun": "짜증", "verb": "내다", "sources": [{"entry": "krdict:71927", "sense": "1", "group": 10}]},
+    {"noun": "기분", "verb": "내키다", "sources": [{"entry": "krdict:20192", "sense": "1", "group": 8}]}
+  ],
+  "discovery": "Every Korean example group in all 56,555 imported entries was scanned for the sixteen nouns listed in lexical 내다 sense 13. Five bare examples license three exact 내다 pairs. The sixth spelling hit is the independently attested 기분 + 내키다 pair, preserved in a separate ledger. A prefix beginning with 내 never establishes a lexical head.",
+  "source_preservation": "Complete original native objects, full groups/dialogues, source export hashes and English-only projections remain immutable. No dictionary field, original case ledger, input or corpus gold is edited.",
+  "whole_heads": "겁내다, 샘내다, 욕심내다, 탐내다 and 화내다 have native whole-verb entries. Their original raw candidates and spacing responses are verified across all three filters, without arbitrary bare-pair additions.",
+  "remaining_pairs": "The sixteen original pairs are individually reviewed in the original evidence. All sixteen case-marked native examples retain existing spacing hypotheses. Eight further bare 내다 pairs are not established by this scan; 기분 + 내다 is likewise not licensed by its 내키다 example. Zero hits and finite-template exclusions are not linguistic impossibility judgments.",
+  "class_proof": "An unchanged unclassified noun identity remains a raw identity. The new hypothesis requires a known 명사 entry for that slot and a known 동사 entry for the exact right head, each without a known conflict. Unknown/missing POS, absent entries, adjectives or auxiliary-only homonyms cannot establish this new pair. Main 내다 89906 and auxiliary 내다 60625 remain separately inspectable.",
+  "representation_corrections": "Three original 내세요 judgments incorrectly expected separate 시 + 어요. Explicit correction records retain those original authored cases and adopt the engine's existing canonical 으세요 bundle. This is a judgment representation correction, not a grammar/source/raw-output correction.",
+  "corpus": "The original six continuation-headed raw misses remain unchanged. 짜증낼 and 짜증내시네 recover 짜증 + 내다 only across proposed separate words. Original NNG + VV tags do not become auxiliary tags, and separate-word recovery is distinct from raw-token recall.",
+  "web_retrieval": {"기분": {"url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=20192", "status": "complete_page_read", "supports": "기분 내키는 대로."}, "내키다": {"url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=41145", "status": "web_tool_internal_error", "fallback": "Complete pinned native export and full dictionary endpoint; no claim of live-page retrieval."}},
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

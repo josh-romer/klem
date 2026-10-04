@@ -296,6 +296,8 @@ try {
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
   const spacingNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-spacing.json"),"utf8"));
+  const bareNounNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-bare-noun-spacing.json"),"utf8"));
+  const bareNounAdditionalNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-bare-noun-spacing-additional.json"),"utf8"));
   const neuniComparison = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni-comparison.json"),"utf8"));
   const quotedNeuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-quoted-neuni.json"),"utf8"));
   const neuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni.json"),"utf8"));
@@ -360,6 +362,8 @@ try {
       ...quotedNeuni.LexicalResource.Lexicon.LexicalEntry,
       ...neuniComparison.LexicalResource.Lexicon.LexicalEntry,
       ...spacingNative.LexicalResource.Lexicon.LexicalEntry,
+      ...bareNounNative.LexicalResource.Lexicon.LexicalEntry,
+      ...bareNounAdditionalNative.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -2092,6 +2096,57 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-spacing-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Suggest missing spaces").uncheck();await waitHeading(page,"결혼을하라느니");assert.equal(await page.getByRole("region",{name:"Missing-space suggestions",exact:true}).count(),0);
   await page.getByLabel("Dictionary matches only").uncheck();
+
+  const bareLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/bare-noun-spacing-validity.json"),"utf8"));
+  const bareUpdates = JSON.parse(await readFile(resolve(root,"tests/fixtures/bare-noun-spacing-judgment-updates.json"),"utf8"));
+  for (const update of bareUpdates.corrections) {
+    const index=bareLedger.cases.findIndex(c=>c.id===update.id);
+    assert.deepEqual(bareLedger.cases[index],update.original_case);
+    bareLedger.cases[index]=update.updated_case;
+  }
+  const bareAdditional = JSON.parse(await readFile(resolve(root,"tests/fixtures/bare-noun-spacing-additional-pairs.json"),"utf8"));
+  bareLedger.cases.push(...bareAdditional.cases);
+  assert.equal(bareLedger.cases.length,67);
+  const bareMatch=(a,j)=>a.rule==="spacing.bare_noun_lexical_verb" && a.records.length===j.segments.length && a.records.every((r,i)=>r.surface===j.segments[i].surface && r.analysis.analyses.some(p=>isDeepStrictEqual(p.lemmas.map(l=>l.text),j.segments[i].lemmas) && isDeepStrictEqual(p.lemmas.map(l=>l.kind),j.segments[i].lemma_kinds) && (j.verdict==="forbidden" || isDeepStrictEqual(p.morphemes.map(m=>m.form),j.segments[i].morphemes))));
+  for(const originalCase of bareLedger.cases) for(const nfd of [false,true]) {
+    const c=structuredClone(originalCase);
+    if(nfd){c.surface=c.surface.normalize("NFD");for(const j of c.judgments)for(const s of j.segments)s.surface=s.surface.normalize("NFD");}
+    const api=await(await post("analyze",{text:c.surface,suggest_spacing:true})).json();
+    const token=api.records[0];
+    const cli=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database,"--suggest-spacing"],{encoding:"utf8"}));
+    const {dictionary,spacing,...analysis}=cli;
+    assert.deepEqual(token.analysis,analysis);assert.deepEqual(token.dictionary,dictionary);assert.deepEqual(token.spacing,spacing);
+    for(const j of c.judgments)assert.equal(spacing.alternatives.some(a=>bareMatch(a,j)),j.verdict==="required",c.id);
+    if(spacing.alternatives.some(a=>a.rule==="spacing.bare_noun_lexical_verb"))assert.ok(api.rules["spacing.bare_noun_lexical_verb"]);
+    const ordinary=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    assert.equal(ordinary.spacing,undefined);assert.deepEqual(ordinary.analysis,token.analysis);assert.deepEqual(ordinary.dictionary,token.dictionary);
+  }
+  const bareText="짜증낼 짜증내시네 용기내서 신경질내며 학교에서짜증낼 기분내키는";
+  await submit(page,bareText);await waitHeading(page,"짜증낼");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  await page.getByLabel("Suggest missing spaces").check();
+  const bareSection=page.getByRole("region",{name:"Missing-space suggestions",exact:true});
+  await bareSection.getByRole("heading",{name:"짜증 낼",exact:true}).waitFor();
+  const bareCard=bareSection.locator(".spacing-hypothesis").filter({has:page.getByRole("heading",{name:"짜증 낼",exact:true})});
+  assert.deepEqual(await bareCard.locator(".part-form").allTextContents(),["짜증","내","을"]);
+  await bareCard.locator(".breakdown-part.lexical").nth(1).click();
+  await page.waitForFunction(()=>document.querySelector(".entry-heading h2")?.textContent?.replace(/[0-9]/g,"").trim()==="내다");
+  assert.ok((await page.locator(".entry-heading").textContent()).includes("동사"));
+  assert.ok(!(await page.locator(".entry-heading").textContent()).includes("보조 동사"));
+  const moodCard=bareSection.locator(".spacing-hypothesis").filter({has:page.getByRole("heading",{name:"기분 내키는",exact:true})});
+  await moodCard.waitFor();
+  assert.deepEqual(await moodCard.locator(".part-form").allTextContents(),["기분","내키","는"]);
+  await moodCard.locator(".breakdown-part.lexical").nth(1).click();
+  await page.waitForFunction(()=>document.querySelector(".entry-heading h2")?.textContent?.replace(/[0-9]/g,"").trim()==="내키다");
+  assert.ok((await page.locator(".entry-heading").textContent()).includes("동사"));
+  const bareDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const bareExport=JSON.parse(await readFile(await(await bareDownload).path(),"utf8"));
+  const bareExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible","--suggest-spacing"],{input:bareText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(bareExport.records,bareExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-bare-noun-spacing-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-bare-noun-spacing-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Suggest missing spaces").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   const eumseCases = recipientLedger.cases.filter(c => c.id.startsWith("eumse-"));
   const eumsePolicies = connectiveLedger.cases.filter(c => c.id.startsWith("eumse-"));

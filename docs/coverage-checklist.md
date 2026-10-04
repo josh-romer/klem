@@ -2866,8 +2866,10 @@ review remains open under the completion review below.
   잘하시네요/편이네요 are separately entered diagnostic companions, never repairs
   of 잘하시내요/편이내요. The original 아 + VX annotation does not establish a
   valid omitted connector. NIKL 325415 requires 짜증 내다 as separate words;
-  original NNG + VV tags do not license an auxiliary path. The current optional
-  spacing template misses these two bare-noun inputs, tracked in COV-020q.
+  original NNG + VV tags do not license an auxiliary path. COV-020q now supplies
+  separate spacing hypotheses for these two original bare-noun inputs. Their
+  raw lemma groups remain misses; recovery across proposed words is recorded
+  separately in the [new runtime audit](bare-noun-spacing-runtime.json).
   [Four source/boundary/role/CLI tests](../tests/continuation_residuals.rs) retain
   all six gold misses and add 13 independent raw judgments (11 required,
   two forbidden), 28 complete native entries and 17 diagnostic surfaces.
@@ -3131,20 +3133,44 @@ review remains open under the completion review below.
   word-spacing correction, missing dictionary vocabulary and contextual sentence
   interpretation are outside this rule template; no broader segmentation is certified.
 
-- [ ] **COV-020q — Audited bare nouns before lexical main verbs.**
-  COV-019af preserves the original 짜증낼/짜증내시네 inputs and their NNG + VV
-  annotations. NIKL 325415 requires separate words, and full native 짜증 71579
-  and lexical 내다 89906 attest their combination. Optional spacing currently
-  requires a case-marked left segment: 짜증을낼 has a hypothesis but these two
-  bare-noun inputs do not. Extend separate dictionary-backed spacing hypotheses
-  for reviewed bare-noun/main-verb combinations, preserving original candidates,
-  complete native evidence, lexical/auxiliary homonyms, per-word readings, original
-  NFC/NFD byte offsets and explicit work/output limits. Do not infer arbitrary
-  compound decomposition or rewrite raw gold. Audit whole-head alternatives and
-  additional source-listed pairs; verify absent/incompatible dictionary entries,
-  ambiguous boundaries, CLI/API/export/browser parity, full candidate/novel
-  sidecars, stress behavior and Nix builds. Contextual senses and corpus recovery
-  across proposed separate words must be tracked distinctly from raw lemma groups.
+- [x] **COV-020q — Audited bare nouns before lexical main verbs.** **Implemented
+  for four independently attested exact pairs:** 신경질/용기/짜증 + lexical
+  내다 and 기분 + 내키다, including separately analyzed right inflections and
+  existing case phrases before each pair. NIKL 325415 requires separate words
+  for 짜증 내다; COV-019af's original inputs, sentences, NNG + VV tags and six
+  raw misses stay unchanged. Two groups now recover only across proposed words.
+  The [source review](bare-noun-spacing-source-review.json), immutable original
+  [full native freeze](../tests/fixtures/bare-noun-spacing-sources.json) and
+  [additional pair ledger](../tests/fixtures/bare-noun-spacing-additional-pairs.json)
+  preserve complete fields, groups, dialogues, before outputs and source hashes.
+  All 56,555 imported entries were scanned for the sixteen source-listed nouns;
+  [all sixteen case examples and five registered whole verbs](bare-noun-spacing-listed-pairs.json)
+  retain original analyses and legacy hypotheses. Eight further bare 내다 pairs
+  remain unestablished by this scan; 기분's 내키다 example licenses its exact
+  verb only. Zero hits and finite-template exclusions do not establish impossibility.
+  Raw identity roles, main/auxiliary homonyms, per-word candidates, native fields
+  and UTF-8 offsets survive. Actual known noun/main-verb entries are required for
+  the new pair; missing, unknown, incompatible or auxiliary-only evidence does not
+  establish it. The original case graph consumes shared work/output limits first,
+  so new hypotheses cannot displace legacy alternatives. General compound
+  decomposition and contextual senses are not inferred.
+  [Seven regression tests](../tests/bare_noun_spacing.rs) cover 67 individual cases
+  (44 required, 23 forbidden), explicit corrections of three authored ending
+  representations, all four pairs after case phrases, absent/incompatible classes, ambiguous boundaries, NFC/NFD,
+  independent component paths, stress bounds, CLI and default-output preservation.
+  [Full stream comparisons](bare-noun-spacing-observations.json) verify 1,128,312
+  records; default records and legacy hypotheses are unchanged. The novel has
+  no new qualifying pair; four distinct surfaces gain only work counters.
+  [All four held-out corpus reports](bare-noun-spacing-corpora.json) are byte
+  identical across 66,570 converted gold rows. [Native runtime evidence](bare-noun-spacing-runtime.json),
+  the full browser suite and [native browser cohort](../web/tests/bare-noun-spacing.mjs)
+  cover 95 surfaces, 34 complete entries, three cache budgets/filters, exports,
+  dictionary clicks and desktop/mobile behavior. [Verification](bare-noun-spacing-evaluation.json)
+  records Rust/Clippy/fmt, 819 Nix release tests, packaged stream/API/browser
+  parity, all three x86_64 flake checks and the refreshed packaged preview.
+  Context/register, intended spacing, independent Korean review and broader
+  bare-pair inventory remain open in COV-013/020; separate-word recovery does
+  not change raw corpus recall or silently complete the larger families.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

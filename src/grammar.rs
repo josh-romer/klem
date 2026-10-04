@@ -1706,7 +1706,10 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover source-reviewed listings of quoted statements, questions, commands, proposals and retrospective reports as distinct bundles. Preserve copular/command homonyms and immediate owners; contextual interpretation and unreviewed polite prefinals are not inferred."
         }
         "spacing.nominal_case_predicate" => {
-            "Offer explicit missing-space hypotheses between dictionary-backed nominal case phrases and a separately analyzed predicate. Preserve original byte spans and every word's independent readings; sentence grammar and intended spacing are not validated."
+            "Offer explicit missing-space hypotheses between dictionary-backed nominal case phrases and a separately analyzed predicate. Additional source-attested bare-noun/main-verb hypotheses identify their own rule. Preserve original byte spans and every word's independent readings; sentence grammar and intended spacing are not validated."
+        }
+        "spacing.bare_noun_lexical_verb" => {
+            "Offer a separate spacing hypothesis for source-attested 신경질/용기/짜증 before lexical 내다 and 기분 before 내키다, including independently analyzed inflections of each exact verb. Require actual noun and main-verb dictionary entries; preserve raw identity roles, auxiliary homonyms, whole-word alternatives and original byte spans. Other noun/verb pairs and contextual meaning are not inferred."
         }
         "ending.neuni" => {
             "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만/느니보다/느니보다는 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."

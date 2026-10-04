@@ -3208,6 +3208,27 @@ review remains open under the completion review below.
   budgets, filters and individual alternative tracking. Other omitted-space
   noun/main-verb combinations remain open under COV-020; COV-020q's four-pair
   completion does not establish them.
+  **First source preparation pass complete; implementation remains pending.** The
+  [immutable source preflight](lexical-nada-source-preflight.json.gz) preserves
+  all 32 main-entry senses in native order, 185 case-marked noun heads, 5,218
+  individually identified spelling discoveries across 775 noun heads, and
+  5,253 complete native entries with every translation language. All 631
+  discoveries in the listed-noun/교통사고 cohort retain their original groups;
+  the original eight accident cases retain their original IDs and contexts.
+  Three pre-change CLI streams preserve raw candidates, dictionary filters and
+  existing spacing for 389 diagnostic words. The
+  [source review](lexical-nada-source-review.json) proposes 35 finite pairs with
+  exact noun/main-entry identities and reviewed native groups. Independent
+  NIKL guidance records the distinct 생각나다/생각 + 나다 and 냄새나다/냄새 + 나다
+  constructions, the separated 실감 phrase, and the registered whole 들통나다
+  boundary. These proposals do not change production rules or certify every
+  ending, homonym, source sentence or other noun. All discoveries retain
+  unjudged contextual verdicts and pending independent review; unreviewed
+  examples remain individually tracked. Reproduce the pinned export scan and
+  all original outputs with [the audit tool](../tools/lexical_nada_audit.py)
+  using `--verify --dictionary PATH --cli BEFORE_CLI`; the offline Nix review
+  gate also verifies source groups, stable IDs, UTF-8 spans, filters, original
+  cases and [the review table](../tools/lexical_nada_review.py).
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
@@ -4292,6 +4313,8 @@ browser checks require Chromium. See [evaluation](evaluation.md) and
 python3 -m unittest discover -s tools -p 'test_review_inventory.py'
 python3 tools/review_inventory.py --verify
 python3 tools/continuation_residual_audit.py --verify
+python3 tools/lexical_nada_audit.py --verify
+python3 tools/lexical_nada_review.py --verify
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

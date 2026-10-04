@@ -137,6 +137,8 @@
                 ./tools/bare_noun_spacing_compare.py
                 ./tools/bare_noun_spacing_runtime.py
                 ./tools/bare_noun_spacing_queue.py
+                ./tools/lexical_nada_audit.py
+                ./tools/lexical_nada_review.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
                 ./web/tests/question-topic.mjs
@@ -168,6 +170,8 @@
             python tools/bare_noun_spacing_audit.py --verify
             python tools/bare_noun_spacing_additional.py --verify
             python tools/bare_noun_spacing_queue.py --verify
+            python tools/lexical_nada_audit.py --verify
+            python tools/lexical_nada_review.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

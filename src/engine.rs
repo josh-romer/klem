@@ -1696,6 +1696,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "으리까" {
                     p.rules.push("ending.literary_question_ri".into());
                 }
+                if ending.form == "으랴" {
+                    p.rules.push("ending.rya".into());
+                }
                 if ending.form == "으되" {
                     p.rules.push("ending.contrast_doe".into());
                 }

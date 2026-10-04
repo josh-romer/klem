@@ -70,6 +70,8 @@ enum Role {
     Predicate,
     BareNoun,
     ListedVerb(&'static str),
+    NadaNoun(&'static str, &'static str),
+    MainNada,
 }
 
 // Full native examples independently attest these bare objects before lexical
@@ -85,12 +87,93 @@ const BARE_PAIRS: &[(&str, &str)] = &[
 ];
 const BARE_RULE: &str = "spacing.bare_noun_lexical_verb";
 
-fn bare_noun(a: &Analysis) -> bool {
+// COV-020r: exact native noun identities, supported by the complete groups in
+// docs/lexical-nada-source-review.json. Main 나다 is 62210/homonym 1; auxiliary
+// 62134/homonym 2 cannot supply this proof. Homonyms remain visible separately.
+const NADA_PAIRS: &[(&str, &str, &str)] = &[
+    ("경사", "krdict:30554", "2"),
+    ("구멍", "krdict:34923", "0"),
+    ("구역질", "krdict:35687", "0"),
+    ("몸살", "krdict:54741", "0"),
+    ("물난리", "krdict:56191", "0"),
+    ("발표", "krdict:62470", "0"),
+    ("배탈", "krdict:58720", "0"),
+    ("산사태", "krdict:61775", "0"),
+    ("상처", "krdict:62979", "2"),
+    ("소리", "krdict:62379", "0"),
+    ("수염", "krdict:64609", "0"),
+    ("시간", "krdict:62841", "1"),
+    ("식은땀", "krdict:90744", "0"),
+    ("신경질", "krdict:66150", "0"),
+    ("신명", "krdict:65770", "0"),
+    ("실감", "krdict:14080", "0"),
+    ("싸움", "krdict:24286", "0"),
+    ("여드름", "krdict:67696", "0"),
+    ("연기", "krdict:67478", "2"),
+    ("윤기", "krdict:71077", "0"),
+    ("전쟁", "krdict:29551", "0"),
+    ("짜증", "krdict:71579", "0"),
+    ("큰일", "krdict:72174", "1"),
+    ("탄로", "krdict:80290", "0"),
+    ("탈", "krdict:81494", "2"),
+    ("털", "krdict:71477", "0"),
+    ("토막", "krdict:80558", "0"),
+    ("폼", "krdict:83727", "0"),
+    ("감칠맛", "krdict:22602", "0"),
+    ("코피", "krdict:72169", "0"),
+    ("멀미", "krdict:54969", "0"),
+    ("사고", "krdict:66370", "1"),
+    ("교통사고", "krdict:35968", "0"),
+    ("생각", "krdict:58162", "0"),
+    ("냄새", "krdict:58180", "0"),
+];
+const NADA_RULE: &str = "spacing.bare_noun_main_nada";
+
+#[derive(Clone, Copy)]
+enum BareFamily {
+    Listed,
+    MainNada,
+}
+impl BareFamily {
+    fn max_prefix_chars(self) -> usize {
+        match self {
+            Self::Listed => BARE_PAIRS.iter().map(|(head, _)| head.nfd().count()).max(),
+            Self::MainNada => NADA_PAIRS
+                .iter()
+                .map(|(head, _, _)| head.nfd().count())
+                .max(),
+        }
+        .unwrap()
+    }
+    fn roles(self, normalized: &str) -> Option<(Role, Role)> {
+        match self {
+            Self::Listed => BARE_PAIRS
+                .iter()
+                .find(|(head, _)| *head == normalized)
+                .map(|(_, verb)| (Role::BareNoun, Role::ListedVerb(verb))),
+            Self::MainNada => NADA_PAIRS
+                .iter()
+                .find(|(head, _, _)| *head == normalized)
+                .map(|(_, id, homonym)| (Role::NadaNoun(id, homonym), Role::MainNada)),
+        }
+    }
+    fn rule(self) -> &'static str {
+        match self {
+            Self::Listed => BARE_RULE,
+            Self::MainNada => NADA_RULE,
+        }
+    }
+}
+
+fn unchanged_noun(a: &Analysis) -> bool {
     a.unchanged
         && a.lemmas.len() == 1
         && a.lemmas[0].kind == LemmaKind::Unclassified
-        && BARE_PAIRS.iter().any(|(head, _)| *head == a.lemmas[0].text)
         && a.morphemes.is_empty()
+}
+
+fn bare_noun(a: &Analysis) -> bool {
+    unchanged_noun(a) && BARE_PAIRS.iter().any(|(head, _)| *head == a.lemmas[0].text)
 }
 
 fn predicate(a: &Analysis) -> bool {
@@ -205,6 +288,15 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 return Ok(None);
             }
         }
+        if let Role::NadaNoun(id, homonym) = role {
+            let normalized: String = surface.nfc().collect();
+            if !NADA_PAIRS
+                .iter()
+                .any(|(head, entry, hom)| *head == normalized && *entry == id && *hom == homonym)
+            {
+                return Ok(None);
+            }
+        }
         if self.result.segment_probes >= self.result.limits.segment_probes {
             self.limit(SpacingLimit::SegmentProbes);
             return Ok(None);
@@ -221,18 +313,23 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                     Role::Predicate => predicate(a),
                     Role::BareNoun => bare_noun(a),
                     Role::ListedVerb(head) => predicate(a) && a.lemmas[0].text == head,
+                    Role::NadaNoun(_, _) => unchanged_noun(a),
+                    Role::MainNada => predicate(a) && a.lemmas[0].text == "나다",
                 })
                 .cloned()
                 .collect(),
         };
         let mut dictionary = self.dictionary.annotate(&analysis)?;
         dictionary.filter(&mut analysis, DictionaryFilter::Compatible);
-        if matches!(role, Role::BareNoun | Role::ListedVerb(_)) {
+        if matches!(
+            role,
+            Role::BareNoun | Role::ListedVerb(_) | Role::NadaNoun(_, _) | Role::MainNada
+        ) {
             // A standalone auxiliary can have unknown attachment status, so
             // compatible filtering alone cannot establish a main-verb pair.
             // Retain only readings with an actual known noun/main-verb entry
             // for their own first slot; every other homonym remains inspectable.
-            let required_pos = if role == Role::BareNoun {
+            let required_pos = if matches!(role, Role::BareNoun | Role::NadaNoun(_, _)) {
                 "명사"
             } else {
                 "동사"
@@ -251,6 +348,15 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                             m.entries.iter().any(|e| {
                                 e.entry.headword == lemma.text
                                     && e.entry.pos == required_pos
+                                    && match role {
+                                        Role::NadaNoun(id, homonym) => {
+                                            e.entry.id == id && e.entry.homonym == homonym
+                                        }
+                                        Role::MainNada => {
+                                            e.entry.id == "krdict:62210" && e.entry.homonym == "1"
+                                        }
+                                        _ => true,
+                                    }
                                     && assessed.lemmas[0].entries.iter().any(|r| {
                                         r.id == e.entry.id
                                             && r.status != Compatibility::Incompatible
@@ -300,14 +406,15 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         });
     }
 
-    fn bare_pair(&mut self, start: usize, path: &[SpacingSegment]) -> Result<()> {
+    fn bare_pair(
+        &mut self,
+        start: usize,
+        path: &[SpacingSegment],
+        family: BareFamily,
+        max_prefix_chars: usize,
+    ) -> Result<()> {
         // Find only complete named noun prefixes; do not analyze arbitrary
         // substrings or split every dictionary noun before every predicate.
-        let max_prefix_chars = BARE_PAIRS
-            .iter()
-            .map(|(head, _)| head.nfd().count())
-            .max()
-            .unwrap();
         for (relative, _) in self.source[start..]
             .char_indices()
             .skip(1)
@@ -315,15 +422,15 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         {
             let end = start + relative;
             let normalized: String = self.source[start..end].nfc().collect();
-            let Some((_, verb)) = BARE_PAIRS.iter().find(|(head, _)| *head == normalized) else {
+            let Some((noun_role, verb_role)) = family.roles(&normalized) else {
                 continue;
             };
-            if let Some(left) = self.segment(start, end, Role::BareNoun)?
-                && let Some(right) = self.segment(end, self.source.len(), Role::ListedVerb(verb))?
+            if let Some(left) = self.segment(start, end, noun_role)?
+                && let Some(right) = self.segment(end, self.source.len(), verb_role)?
             {
                 let mut records = path.to_vec();
                 records.extend([left, right]);
-                self.emit(records, Some(BARE_RULE));
+                self.emit(records, Some(family.rule()));
             }
             if !self.result.complete {
                 break;
@@ -367,12 +474,18 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         Ok(())
     }
 
-    fn walk_bare(&mut self, start: usize, path: &mut Vec<SpacingSegment>) -> Result<()> {
+    fn walk_bare(
+        &mut self,
+        start: usize,
+        path: &mut Vec<SpacingSegment>,
+        family: BareFamily,
+        max_prefix_chars: usize,
+    ) -> Result<()> {
         if self.dead_starts.contains(&start) {
             return Ok(());
         }
         let before = self.result.alternatives.len();
-        self.bare_pair(start, path)?;
+        self.bare_pair(start, path, family, max_prefix_chars)?;
         if !self.result.complete {
             return Ok(());
         }
@@ -386,7 +499,7 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
             // edges. Successful prefixes still enumerate their own readings.
             if let Some(left) = self.segment(start, end, Role::Case)? {
                 path.push(left);
-                self.walk_bare(end, path)?;
+                self.walk_bare(end, path, family, max_prefix_chars)?;
                 path.pop();
             }
             if !self.result.complete {
@@ -451,7 +564,30 @@ pub fn suggest<D: Dictionary + ?Sized>(
         // A legacy dead suffix can contain a new pair, so reset that memo while
         // preserving all independently analyzed/cached segment results.
         search.dead_starts.clear();
-        search.walk_bare(0, &mut Vec::new())?;
+        search.walk_bare(
+            0,
+            &mut Vec::new(),
+            BareFamily::Listed,
+            BareFamily::Listed.max_prefix_chars(),
+        )?;
+    }
+    let has_nada_pair = search.result.complete && {
+        let normalized: String = word.nfc().collect();
+        NADA_PAIRS
+            .iter()
+            .any(|(head, _, _)| normalized.contains(head))
+    };
+    if has_nada_pair {
+        // This third pass shares the remaining budget and independent segment
+        // cache. It cannot displace either original case hypotheses or the four
+        // already supported bare pairs, including nouns shared by both lists.
+        search.dead_starts.clear();
+        search.walk_bare(
+            0,
+            &mut Vec::new(),
+            BareFamily::MainNada,
+            BareFamily::MainNada.max_prefix_chars(),
+        )?;
     }
     search.result.alternatives.sort_by(|a, b| {
         a.inserted_at

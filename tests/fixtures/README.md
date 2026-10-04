@@ -2070,6 +2070,25 @@ verbal present-ending conflict now replaces that compatibility expectation;
 no original source, raw path or verbal homonym is altered. Attribution: National
 Institute of Korean Language, Korean Basic Dictionary, CC BY-SA 2.0 KR.
 
+`lexical-nada-spacing.json` preserves 389 original raw words, seven complete
+legacy spacing baselines and 109 structural cases (91 required / 18 excluded
+finite templates) for COV-020r. `krdict-lexical-nada-spacing.json` preserves
+200 full native entries behind the reviewed pairs and baseline candidates.
+The full multilingual source and 5,218 individually identified discoveries
+remain in `docs/lexical-nada-source-preflight.json.gz`; the English LMF adapter
+only omits other-language equivalents and RelatedForm fields not represented
+by the importer. Original spellings, groups, notes and native IDs are preserved.
+
+`lexical-nada-dependencies.json` and its LMF adapter append all four native
+-랴/-으랴 entries, four genuine stress-prefix entries and 15 original before
+words. The required 연기 나랴 case exposed the existing ending gap; new ending
+paths are tracked separately from the unchanged original raw observations.
+`lexical-nada-priority-supplement.json` and its adapter append native 으 68795,
+an omitted owner behind the old spacing baselines. Neither supplement replaces
+an original fixture or adjudicates a sentence context. Dictionary attribution:
+National Institute of Korean Language, Korean Basic Dictionary,
+CC BY-SA 2.0 KR. Independent Korean review remains pending.
+
 `kaist-potential-aux.conllu` and `gsd-potential-aux.conllu` retain 14 exact
 source-aligned training targets and full unchanged blocks. Selection was frozen
 before production edits: first two aligned target heads per POS/following-tag

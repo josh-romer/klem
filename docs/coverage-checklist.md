@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-03.
+Last reviewed: 2026-10-04.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -1584,6 +1584,32 @@ review remains open under the completion review below.
   exact source-class API paths and 9,347 changed-entry occurrences. Raw paths/order
   and all four original held-out corpus reports are unchanged. Full Rust/browser,
   packaged runtime, release/debug and current-system Nix checks pass.
+
+- [ ] **COV-017br — Rhetorical, offer and enumerative -랴/-으랴.** **Partial:**
+  The required COV-020r native example 연기 나랴 exposed a missing right-word
+  ending. [Four full native ending entries](../tests/fixtures/lexical-nada-dependencies.json)
+  retain all senses, notes, groups and translations, with 15 original before
+  words preserved. The two written allomorphs now normalize to 으랴 through the
+  existing vowel boundary, retaining lexical ㄹ and ㄷ/ㅂ/ㅅ recoveries.
+  Predicate, adjective, copula, honorific, past and modal hypotheses are checked
+  in NFC/NFD by [the dependency regression](../tests/lexical_nada_spacing.rs),
+  with four wrong-allomorph exclusions and full importer parity for all sources.
+  The browser grammar label identifies all four native sources and preserves the
+  rhetorical/offer/enumerative ambiguity. Context, register, sense-specific
+  prefinal restrictions and further particle combinations remain unjudged.
+  The full pinned corpus non-regression check passes; the four held-out full
+  reports, including candidate rows and summaries, retain their original hashes.
+  [Eight full-stream comparisons](lexical-nada-observations.json.gz) preserve
+  1,128,312 records and every old candidate, assessment and spacing-option order.
+  The 72 distinct added ending paths retain stable IDs, exact entry assessments,
+  complete contexts and all 43 native owners involved in this batch's changes.
+  Raw/headword/compatible candidate-input streams are byte-identical; the novel
+  changes 33 raw and 30 records under either dictionary filter. Every added path
+  is tagged `ending.rya`; no previous raw path is replaced. Nine packaged browser
+  exports, native source tooltips/entry clicks and mobile layout pass, alongside
+  API/CLI NFC/NFD/cache parity. All contextual and independent judgments remain
+  pending; this engineering evidence does not settle sense-specific attachment
+  or register restrictions. Original before data remains immutable.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -3208,7 +3234,8 @@ review remains open under the completion review below.
   budgets, filters and individual alternative tracking. Other omitted-space
   noun/main-verb combinations remain open under COV-020; COV-020q's four-pair
   completion does not establish them.
-  **First source preparation pass complete; implementation remains pending.** The
+  **The initial 35-pair implementation and engineering verification are complete;
+  review of the remaining native source cohort remains open.** The
   [immutable source preflight](lexical-nada-source-preflight.json.gz) preserves
   all 32 main-entry senses in native order, 185 case-marked noun heads, 5,218
   individually identified spelling discoveries across 775 noun heads, and
@@ -3221,7 +3248,22 @@ review remains open under the completion review below.
   exact noun/main-entry identities and reviewed native groups. Independent
   NIKL guidance records the distinct 생각나다/생각 + 나다 and 냄새나다/냄새 + 나다
   constructions, the separated 실감 phrase, and the registered whole 들통나다
-  boundary. These proposals do not change production rules or certify every
+  boundary. The separate `spacing.bare_noun_main_nada` pass now checks those
+  35 exact noun identities and lexical 나다 62210/homonym 1 after the original
+  case graph and four-pair pass, sharing their remaining work/output budget.
+  Auxiliary 나다 cannot provide main-verb evidence. The
+  [109-case fixture](../tests/fixtures/lexical-nada-spacing.json) retains
+  91 required and 18 excluded finite templates, including all original eight
+  accident cases, every reviewed pair, native inflections and every pair after
+  학교에서. [Seven regression tests](../tests/lexical_nada_spacing.rs) check
+  exact identities/classes, NFC/NFD byte spans, independent raw paths, cache
+  budgets, prior spacing priority, ambiguous-prefix stress and all three CLI
+  filter modes. A separately preserved -랴/-으랴 dependency (COV-017br) adds
+  tagged ending paths to the original 나랴 and 연기나랴 observations; all 389
+  original raw candidates survive and the other 387 raw words are identical.
+  The append-only [priority supplement](../tests/fixtures/lexical-nada-priority-supplement.json)
+  restores a genuine native 으 noun owner omitted from the first fixture,
+  retaining every old spacing hypothesis. These finite tests do not certify every
   ending, homonym, source sentence or other noun. All discoveries retain
   unjudged contextual verdicts and pending independent review; unreviewed
   examples remain individually tracked. Reproduce the pinned export scan and
@@ -3229,6 +3271,30 @@ review remains open under the completion review below.
   using `--verify --dictionary PATH --cli BEFORE_CLI`; the offline Nix review
   gate also verifies source groups, stable IDs, UTF-8 spans, filters, original
   cases and [the review table](../tools/lexical_nada_review.py).
+  The full 831-test Rust run, lint/format, pinned full-corpus non-regression and
+  current-system Nix package/assets/web checks pass. Offline native LMF checks
+  require only committed fixtures; mutation checks reject dropped fields,
+  duplicate entries and non-English adapter translations. The
+  [full-stream observation ledger](lexical-nada-observations.json.gz) retains
+  258 distinct changes and 2,583 occurrences: 72 ending candidates, six spacing
+  options (four noun/main-나다, two existing case-graph options enabled by -랴),
+  and 180 work-metadata changes. All eight baseline hashes are reproduced;
+  old candidates, their assessments, and old spacing order survive. Novel
+  spacing streams change 1,196 records under either filter. The
+  [packaged API/CLI evidence](lexical-nada-packaged-runtime.json) checks 208 full
+  native entries, all 109 finite cases in NFC/NFD, 465 diagnostic surfaces and
+  36 cache/filter streams, with exact original-word and byte-offset parity.
+  [Nine browser exports](lexical-nada-packaged-browser.json) match the packaged
+  CLI; native main-나다 and ending clicks, all four ending source IDs, spacing
+  cards and mobile layout pass without browser errors. All four
+  [held-out corpus reports](lexical-nada-corpora.json), including gold rows and
+  summaries, are byte-identical. Reproduce and verify these individual records
+  with [the observation checker](../tools/lexical_nada_queue.py); it is part of
+  the offline Nix review gate. Remaining unreviewed source discoveries and
+  contextual/independent judgments remain open, rather than being certified by
+  these finite tests. The source-review
+  artifact's original implementation-pending status remains an immutable
+  pre-change record; this progress entry records the later implementation.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

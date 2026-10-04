@@ -1185,6 +1185,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             // NIKL 리까/으리까 are final questions; polite 오/사오
             // remain separate prefinals rather than part of this ending.
             ("으리까", "리까", "으리까"),
+            // Native 79260/79261 (rhetorical question / offer) and
+            // 80308/80306 (enumeration). Keep the lexical ㄹ boundary.
+            ("으랴", "랴", "으랴"),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -1711,8 +1714,14 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "spacing.bare_noun_lexical_verb" => {
             "Offer a separate spacing hypothesis for source-attested 신경질/용기/짜증 before lexical 내다 and 기분 before 내키다, including independently analyzed inflections of each exact verb. Require actual noun and main-verb dictionary entries; preserve raw identity roles, auxiliary homonyms, whole-word alternatives and original byte spans. Other noun/verb pairs and contextual meaning are not inferred."
         }
+        "spacing.bare_noun_main_nada" => {
+            "Offer separate spacing hypotheses for 35 source-reviewed bare nouns before lexical 나다, including 사고/교통사고, 실감 and 신명. Require the exact native noun identity and main 나다 62210/homonym 1 with known noun/verb POS and no known conflict; auxiliary 나다 cannot supply that proof. Preserve raw roles, whole-word readings, original UTF-8 spans and prior spacing search priority. Context, sense and intended spacing are not inferred."
+        }
         "ending.neuni" => {
             "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만/느니보다/느니보다는 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."
+        }
+        "ending.rya" => {
+            "Recover source-listed -랴/-으랴 rhetorical questions, offers and enumerative endings as the 으랴 allomorph family. Preserve lexical ㄹ, irregular spelling, adjective/copula and prefinal alternatives without selecting a contextual sense or register."
         }
         "ending.background_ba" => {
             "Recover literary background connectives -ㄴ바/-은바, -는바 and -던바. Preserve the ending bundle separately from adnominal plus bound noun 바; contextual background and sense are not inferred."

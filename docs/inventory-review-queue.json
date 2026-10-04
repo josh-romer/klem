@@ -32,7 +32,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "d06c92db0991961bb6fa308a684caba5cc70c11288ab6d4bf9eebd9f83393f94",
+    "docs/coverage-checklist.md": "8ce533dfcd5239cab19a6898a0326ddb786107e1e425c3ead07b0776026151a7",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -131,7 +131,7 @@
     "docs/retrospective-license-evaluation.json": "f1e83ed48f3f50a70f8ebe65ae8781144b85ca2eb2b5a30a0aa3764139ca4e21",
     "docs/rikka-evaluation.json": "32d37a0ba4eed40c07d02953c7c0932aae2271a75660ebb493938c0b2d45b899",
     "docs/rikka-source-audit.json": "ae6b75801e237b544eb2107a1123b0448c8f28fbb531e77f421746b0e2b51f46",
-    "docs/rules.md": "9028ae76ef31673c1d838fa2df80a43ed8f78d3f3f9ea708f70ed1b8db2bfb6e",
+    "docs/rules.md": "6fcf8ad708b087fc3dfb7c621f51a53d252799925d040a0fb3ada83606b061ea",
     "docs/ryeo-expressions-evaluation.json": "785e83c119cd09e1600ee7eddaf2dce04c2c751f77c4849095bd7d6a0d9bd943",
     "docs/ryeogo-expansion-source-audit.json": "af2acb5eaf14584b8e28c6b8cb40447c283b0f7d8fed1cc4615b4984081e6255",
     "docs/ryeogo-expansions-evaluation.json": "28fb1c205a57d76191e6f02e8734e505cdb2b87e1a0bf39d7c29c523b7f59851",
@@ -314,7 +314,7 @@
     "tests/transition_aux.rs": "edec173117d0a1d748f0012913ff7d5ce58080b7987819cc22fcb172bd8c6b5d",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "5c2a33a5b84eff5a167dd1a23f379eda591bf147d2a27feaa039c78477debca9",
+    "web/src/grammar-labels.json": "2d4000a4216c0e4c10a07a91152d9c0ca8ff1f5c66f9c6bd18449988fa8b1c00",
     "web/tests/browser.mjs": "74b4d87386348a0cedda170356868d57a8b3d1bd89b859d4e7516dd6066fdb2e"
   },
   "counts": {
@@ -329,7 +329,7 @@
       "scoped": 427,
       "unreviewed": 288
     },
-    "with_catalog_links": 433,
+    "with_catalog_links": 437,
     "with_judgment_citations": 458
   },
   "entries": [
@@ -55822,7 +55822,12 @@
         ]
       },
       "source_sha256": "51930184e85e983d2ea0ff9ceaf8817866e722313e0ae0c81ca86a87a64f87e2",
-      "catalog": [],
+      "catalog": [
+        {
+          "form": "-으랴",
+          "kind": "ending"
+        }
+      ],
       "cited_judgments": [],
       "inventory_evidence": [],
       "review": {
@@ -55862,7 +55867,12 @@
         ]
       },
       "source_sha256": "468ae302bb07a0b1e3c8b84c3a8198fa4bad1d21699f0a2e6a7cace27a1dd960",
-      "catalog": [],
+      "catalog": [
+        {
+          "form": "-으랴",
+          "kind": "ending"
+        }
+      ],
       "cited_judgments": [],
       "inventory_evidence": [],
       "review": {
@@ -67891,7 +67901,12 @@
         ]
       },
       "source_sha256": "73be86d860fc47125760d82cb9911ca66918ab2a88e0cb80035c5495597d48f2",
-      "catalog": [],
+      "catalog": [
+        {
+          "form": "-으랴",
+          "kind": "ending"
+        }
+      ],
       "cited_judgments": [],
       "inventory_evidence": [],
       "review": {
@@ -67931,7 +67946,12 @@
         ]
       },
       "source_sha256": "413ab2fc7f6b4918cc63310473be5b4a512119a65977c0f1bda4928658e467d2",
-      "catalog": [],
+      "catalog": [
+        {
+          "form": "-으랴",
+          "kind": "ending"
+        }
+      ],
       "cited_judgments": [],
       "inventory_evidence": [],
       "review": {

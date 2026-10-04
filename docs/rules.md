@@ -3662,6 +3662,32 @@ legacy ordering and CLI parity. Context, register, sense and independent Korean
 review remain unjudged. Recovery of 짜증 + 내다 across proposed separate words
 is distinct from matching the original corpus's raw lemma group.
 
+## Bare nouns before lexical 나다 (COV-020r)
+
+The [native source review](lexical-nada-source-review.json) supports 35 finite
+noun + main-나다 pairs, including 사고/교통사고, 실감, 신명 and 짜증.
+With `--suggest-spacing`, joined 사고났다 can offer 사고 + 났다 as a
+separate `spacing.bare_noun_main_nada` hypothesis. The original word candidates
+remain inspectable under each dictionary filter. 생각나다 and 냄새나다 also
+retain their registered whole-word readings; the optional boundary does not
+select an omitted subject, noun modifier or intended sense.
+
+Every left identity must match its reviewed native noun ID, headword, homonym
+and noun POS. Each right path must independently begin with lexical 나다 and
+have native 62210/homonym 1/동사 evidence without a known conflict. Auxiliary
+62134 cannot supply this proof. Existing inflections and auxiliary paths reuse
+word analysis. The search runs after the original case graph and earlier four
+bare pairs, with the same cache, UTF-8 spans, work/output limits and explicit
+truncation. Earlier case phrases may precede each pair.
+
+The native 연기 나랴 example additionally requires -랴/-으랴, normalized to
+으랴 with `ending.rya`. Native 79260/79261 preserve rhetorical-question and
+offer senses; 80308/80306 preserve enumerative senses. Vowel/ㄹ stems use 랴,
+other closed stems use 으랴, and existing irregular/prefinal/copula hypotheses
+remain separate. Source-specific sense/register constraints and broader
+ending/particle combinations remain under COV-017br. Full corpus observations,
+browser/API and packaged runtime verification are still pending for this change.
+
 ## Realization, retrospective and guess -걸 endings (COV-017bf)
 
 Four separate terminal bundles normalize -은걸/-ㄴ걸 to 은걸, -는걸 to

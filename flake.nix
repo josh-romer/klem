@@ -139,6 +139,13 @@
                 ./tools/bare_noun_spacing_queue.py
                 ./tools/lexical_nada_audit.py
                 ./tools/lexical_nada_review.py
+                ./tools/lexical_nada_fixtures.py
+                ./tools/lexical_nada_dependencies.py
+                ./tools/lexical_nada_priority.py
+                ./tools/lexical_nada_compare.py
+                ./tools/lexical_nada_runtime.py
+                ./tools/lexical_nada_queue.py
+                ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
                 ./web/tests/question-topic.mjs
@@ -146,12 +153,14 @@
                 ./web/tests/continuation-left.mjs
                 ./web/tests/continuation-inflection.mjs
                 ./web/tests/bare-noun-spacing.mjs
+                ./web/tests/lexical-nada.mjs
               ];
             };
           } ''
             cd "$src"
             export PYTHONDONTWRITEBYTECODE=1
             python -m unittest discover -s tools -p 'test_review_inventory.py'
+            python -m unittest discover -s tools -p 'test_native_lmf.py'
             python tools/excluded_paradigm_audit.py --verify
             python tools/excluded_paradigm_queue.py --verify
             python tools/question_topic_audit.py --verify
@@ -172,6 +181,10 @@
             python tools/bare_noun_spacing_queue.py --verify
             python tools/lexical_nada_audit.py --verify
             python tools/lexical_nada_review.py --verify
+            python tools/lexical_nada_fixtures.py --verify
+            python tools/lexical_nada_dependencies.py --verify
+            python tools/lexical_nada_priority.py --verify
+            python tools/lexical_nada_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

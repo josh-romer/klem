@@ -14,6 +14,7 @@ mod doeda_suffix;
 mod engine;
 mod grammar;
 mod hangul;
+mod predicate_compound;
 mod pronunciation;
 pub mod spacing;
 mod text;
@@ -36,7 +37,8 @@ pub enum LemmaKind {
     Predicate,
     Copula,
     Auxiliary,
-    /// A lexical adverb before an attachable particle; not a nominal hypothesis.
+    /// A lexical adverb before a particle or in a source-reviewed compound;
+    /// not a nominal hypothesis.
     Adverbial,
     /// A reviewed derivational root before a suffix. This does not assert a
     /// standalone noun, adverb or predicate, or the existence of a dictionary entry.

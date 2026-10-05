@@ -268,6 +268,15 @@
                 ./tools/doeda_originless_performance.py
                 ./tools/test_doeda_originless_release.py
                 ./tools/doeda_partial_origins.py
+                ./tools/well_doeda_audit.py
+                ./tools/test_well_doeda_audit.py
+                ./tools/well_doeda_broad.py
+                ./tools/well_doeda_corpora.py
+                ./tools/well_doeda_runtime.py
+                ./tools/well_doeda_release.py
+                ./tools/well_doeda_performance.py
+                ./tools/test_well_doeda_release.py
+                ./web/tests/well-doeda.mjs
                 ./tools/doeda_partial_origin_diagnostics.py
                 ./tools/test_doeda_partial_origins.py
                 ./tools/test_doeda_partial_origin_diagnostics.py
@@ -431,6 +440,17 @@
             python tools/doeda_partial_origin_corpora.py --verify
             python tools/doeda_partial_origin_performance.py --verify
             python -m unittest discover -s tools -p 'test_doeda_partial_origin_release.py'
+            python tools/well_doeda_audit.py --verify
+            python tools/well_doeda_audit.py --verify --comparison docs/well-doeda-diagnostics.json.gz
+            python tools/well_doeda_broad.py --verify
+            python tools/well_doeda_corpora.py --verify
+            python tools/well_doeda_runtime.py --verify
+            python -m unittest discover -s tools -p 'test_well_doeda_audit.py'
+            python tools/well_doeda_release.py --verify
+            python tools/well_doeda_broad.py --verify --report docs/well-doeda-packaged-observations.json.gz
+            python tools/well_doeda_corpora.py --verify --report docs/well-doeda-packaged-corpora.json.gz
+            python tools/well_doeda_performance.py --verify
+            python -m unittest discover -s tools -p 'test_well_doeda_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

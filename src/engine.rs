@@ -2285,6 +2285,37 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
     }
 }
 
+fn add_predicate_compounds(out: &mut Vec<Analysis>) {
+    let original = out.len();
+    for i in 0..original {
+        let owners: Vec<_> = out[i]
+            .lemmas
+            .iter()
+            .enumerate()
+            .filter(|(_, l)| l.kind == LemmaKind::Predicate && l.text == "잘되다")
+            .map(|(index, _)| index)
+            .collect();
+        if owners.is_empty() || out[i].breakdown().is_none() {
+            continue;
+        }
+        let mut branches = vec![out[i].clone()];
+        // Inserting lookup lemmas changes no morpheme or spelling-recovery index.
+        // Right-to-left expansion also preserves later auxiliary ownership.
+        for index in owners.into_iter().rev() {
+            for j in 0..branches.len() {
+                let mut a = branches[j].clone();
+                a.lemmas[index] = lemma("되다", LemmaKind::Predicate);
+                a.lemmas.insert(index, lemma("잘", LemmaKind::Adverbial));
+                a.rules.push(crate::predicate_compound::RULE.into());
+                branches.push(a);
+            }
+        }
+        out.extend(branches.into_iter().skip(1).filter_map(|mut a| {
+            (a.breakdown().is_some() && auxiliary_inflections_allowed(&mut a)).then_some(a)
+        }));
+    }
+}
+
 #[derive(Clone, Copy)]
 pub(crate) enum PredicateClass {
     Verb,
@@ -2392,6 +2423,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                     | "lexical.doeda.extended"
                     | "suffix.verb.doeda"
                     | "suffix.adjective.doeda"
+                    | "compound.predicate.well_doeda"
             )
         })
     {
@@ -2406,6 +2438,9 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     let mut previous_non_honorific_prefinal = false;
     let mut previous_past_prefinal = false;
     for (lemma_index, lemma) in a.lemmas.iter().enumerate() {
+        if crate::predicate_compound::is_left(a, lemma_index) {
+            continue;
+        }
         if doeda_negative_bridge(a, lemma_index) {
             continue;
         }
@@ -2505,7 +2540,9 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             )
         } else if lemma.kind == LemmaKind::Copula {
             Some(PredicateClass::Copula)
-        } else if lexical_doeda_role(lemma, connector, &a.rules) {
+        } else if lexical_doeda_role(lemma, connector, &a.rules)
+            || crate::predicate_compound::is_owner(a, lemma_index)
+        {
             Some(PredicateClass::Verb)
         } else {
             None
@@ -5117,6 +5154,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
     });
     add_lexical_doeda_roles(&mut out);
     add_doeda_suffixes(&mut out);
+    add_predicate_compounds(&mut out);
     // Noun/adverb -이 homonyms retain distinct functions despite identical
     // lemma/morpheme fields. Other semantic duplicates share rule names, but spelling paths remain
     // alternatives. A derivation with no spelling obligation subsumes others.

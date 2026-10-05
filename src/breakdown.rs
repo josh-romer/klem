@@ -28,6 +28,14 @@ impl Analysis {
         if self.lemmas.is_empty() {
             return None;
         }
+        if self
+            .rules
+            .iter()
+            .any(|r| r == crate::predicate_compound::RULE)
+            && !(0..self.lemmas.len()).any(|i| crate::predicate_compound::is_left(self, i))
+        {
+            return None;
+        }
         let verbal_compound = self
             .rules
             .iter()
@@ -170,6 +178,9 @@ impl Analysis {
         }
         for (index, lemma) in self.lemmas.iter().enumerate() {
             parts.push(Component::Lemma(index));
+            if crate::predicate_compound::is_left(self, index) {
+                continue;
+            }
             let predicate = matches!(
                 lemma.kind,
                 LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula

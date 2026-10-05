@@ -5306,6 +5306,59 @@ review remains open under the completion review below.
   The 80 unresolved leads, opaque/formal base history, homonym identity,
   context/register and independent review remain open; COV-022m is not closed.
 
+- [ ] **COV-022n — Source-reviewed 잘되다 compound.** **Partial: finite
+  implementation and debug/release/Nix validation passed; independent review pending.** NIKL's
+  [한국어 교육 어휘 내용 개발(4단계), printed p. 54](https://www.korean.go.kr/common/download.do?c_file_name=5e2f0471-a53f-46f0-a0ab-dde253ac0241_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B5%AD%EC%96%B4+%EA%B5%90%EC%9C%A1+%EC%96%B4%ED%9C%98+%EB%82%B4%EC%9A%A9+%EA%B0%9C%EB%B0%9C(4%EB%8B%A8%EA%B3%84)_%EB%B3%B8%EC%B1%85.pdf)
+  explicitly lists 잘-잘되다 among adverb-plus-predicate compounds. Add
+  `잘` (adverb) + `되다` (lexical verb) alongside each supported original
+  whole 잘되다 predicate path. The verb retains its original inflection,
+  nominalization, copula and later auxiliary ownership; spelling-recovery
+  indices remain unchanged. This does not license passive suffix -되다 after
+  arbitrary adverbs. Dictionary lookup retains both 되다 homonyms and records
+  the adjective's known role conflict only on the compound's verb owner.
+  [Preserved source and before evidence](well-doeda-preflight.json.gz) and
+  [the fixture](../tests/fixtures/well-doeda-sources.json) retain 46 original
+  words in all three dictionary modes, 39 complete native owners and eight
+  original corpus rows. One GSD dev row annotates 잘 + 되; seven KAIST rows
+  annotate whole 잘되. Neither annotation is rewritten to match the other.
+  Thirty required judgments and fourteen controls have stable `well-doeda-`
+  IDs in the candidate ledger, attributed to the agent. The
+  [source gate](../tools/well_doeda_audit.py) and
+  [Rust tests](../tests/well_doeda.rs) cover original candidates/order,
+  inflection ownership, later-owner isolation, Unicode, cache budgets and
+  dictionary filters. All 909 Rust tests passed (one ignored), along with
+  formatting and Clippy. The [debug comparison](well-doeda-diagnostics.json.gz)
+  tracks 39 distinct additions over 31 words, with all three dictionary modes
+  and NFC/NFD cached/uncached parity. The [broad comparison](well-doeda-observations.json.gz)
+  checks all 1,128,312 records: eighteen changed frames contain five distinct
+  additions on four surfaces; all original candidates, assessments and spacing
+  frames retain their order. The [corpus comparison](well-doeda-corpora.json.gz)
+  verifies every one of 66,570 original gold rows and 32,096 raw word calls.
+  Only 잘되고 and 잘된다고 gain a candidate. Gold outcomes and p95/max ambiguity
+  remain unchanged; mean candidate counts increase only in KAIST test and GSD
+  dev. The existing GSD adapter combines the original 잘 + 되 annotation into
+  expected whole 잘되다; no separate compound gold is invented.
+  [API/browser evidence](well-doeda-runtime-checks.json.gz) covers 92 NFC/NFD
+  API words, 78 new owned orders, 39 complete native endpoints, six browser
+  diagrams and six matching filter exports. Source clicks and desktop/mobile
+  layout were inspected. The [Nix release receipt](well-doeda-packaged-checks.json.gz)
+  records the same 909 passing tests, 92 API words, 39 native endpoints, six
+  diagrams and six exports. The independently captured
+  [release broad streams](well-doeda-packaged-observations.json.gz) and
+  [release corpus results](well-doeda-packaged-corpora.json.gz) match the debug
+  captures; the [release gate](../tools/well_doeda_release.py) binds them to
+  the tested executable. [Full-novel cache parity](well-doeda-cache-parity.json)
+  preserves all 179,112 records in each of the three dictionary modes at zero
+  and eight MiB cache budgets. [Eighty paired timings](well-doeda-performance.json)
+  compare five alternating fresh-process pairs for each of eight workloads on
+  the same CPU, including startup and serialization. Median elapsed changes
+  range from −0.08% to +1.15%; this run does not establish a general speedup or
+  performance guarantee. The [performance gate](../tools/well_doeda_performance.py)
+  verifies all samples, workload commands, source hashes and cache parity.
+  The [final Nix check log](well-doeda-final-nix.log.gz) records successful
+  package, web-assets and inventory checks, including all new evidence gates.
+  Contextual sense choice and independent Korean-language review remain open.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**

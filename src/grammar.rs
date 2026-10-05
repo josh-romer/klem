@@ -1817,6 +1817,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "derivation.nominal.compound" => {
             "The first two lookup lemmas form one reviewed compound base before noun-forming 이. Neither component has an inflectional ending; following particles and copulas belong to the derived noun."
         }
+        "compound.predicate.well_doeda" => {
+            "Retain NIKL's finite 잘되다 compound as adverb 잘 plus lexical verb 되다. 되다 owns the original prefinals and ending; whole 잘되다 readings remain. This is not the suffix -되다, a license for arbitrary adverbs, or a contextual sense selection. Source: 한국어 교육 어휘 내용 개발(4단계), printed p. 54 (2015)."
+        }
         "derivation.nominal.compound_l_loss" => {
             "Retain the source-listed 미닫이 compound as 밀다 + 닫다 + noun-forming 이, restoring ㄹ to the first lookup stem under Article 28. This is not productive inflectional ㄹ deletion."
         }

@@ -668,7 +668,7 @@ impl Annotation {
                 lemma,
                 connector.map(|i| analysis.morphemes[i].form.as_str()),
                 &analysis.rules,
-            );
+            ) || crate::predicate_compound::is_owner(analysis, *index);
             let suffix_class = morphs.first().and_then(|c| match c {
                 Component::Morpheme(i) => crate::doeda_suffix::owner_class(
                     lemma,

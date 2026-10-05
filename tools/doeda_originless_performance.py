@@ -15,14 +15,15 @@ REPORT = ROOT / "docs/doeda-originless-performance.json"
 
 
 def inspect(
-    report, *, comparison_path=COMPARISON, package_path=PACKAGE, previous_path=PREVIOUS
+    report, *, comparison_path=COMPARISON, package_path=PACKAGE, previous_path=PREVIOUS,
+    checklist="COV-022m",
 ):
     comparison, package, previous = (
         read(comparison_path),
         read(package_path),
         read(previous_path),
     )
-    assert report["schema_version"] == 1 and report["checklist"] == "COV-022m"
+    assert report["schema_version"] == 1 and report["checklist"] == checklist
     assert report["comparison_sha256"] == sha(comparison_path)
     assert report["package_sha256"] == sha(package_path)
     assert report["previous_package_sha256"] == sha(previous_path)

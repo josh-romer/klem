@@ -6,6 +6,22 @@ use std::{collections::HashMap, sync::OnceLock};
 // Source-listed adverb roots, not a general 이/히 spelling heuristic. The
 // related 하다 lemma is a lookup normalization; the suffix attaches to the root.
 // KRDict 88504 and NIKL's 1999 spelling discussion; see docs/adverb-inventory.json.
+// COV-022v: all nine quantity/degree/repetition adverb-base leads in the
+// pinned native example inventory. Same-spelled counting units 통/정/단 and
+// lexical 씩씩 do not license their adverb homonyms. Contextual POS and a
+// suffix-driven change of word class remain unjudged.
+pub(crate) const SSIK_ADVERB_BASES: &[&str] = &[
+    "가끔",
+    "살짝",
+    "이따금",
+    "이만큼",
+    "잠깐",
+    "조금",
+    "하나하나",
+    "한바탕",
+    "한발",
+];
+
 pub(crate) const ADVERB_HADA_ROOTS: &[(&str, &str)] = &[
     ("익숙", "히"),
     ("특별", "히"),
@@ -1865,6 +1881,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "suffix.approximation" => {
             "Separate approximate amount/degree suffix -쯤 after a nominal base; preserve whole-word alternatives and existing nominal suffixes."
+        }
+        "suffix.distributive.ssik.adverbial_base" => {
+            "A source-listed quantity, degree or repetition adverb is an alternative base before -씩; contextual POS and a suffix-driven word-class change are not inferred."
         }
         "suffix.distributive.ssik" => {
             "Separate -씩 for quantity distribution or unexpected amount/degree after a nominal hypothesis. Quantity context, the source's some-noun restriction and speaker expectation are not inferred; whole-word and standalone 씩 adverb readings remain."

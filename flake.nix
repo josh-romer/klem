@@ -30,6 +30,7 @@
                 ./src
                 ./tests
                 ./docs/adverb-root-inventory.json
+                ./docs/ssik-morphology-projection.json
                 ./docs/question-case-source-preflight.json
                 ./docs/question-clause-additive-preflight.json
                 ./docs/continuation-left-source-preflight.json
@@ -337,6 +338,17 @@
                 ./tools/hada_remaining_performance.py
                 ./tools/test_hada_remaining_release.py
                 ./tools/ssik_audit.py
+                ./tools/ssik_adverb_audit.py
+                ./tools/ssik_adverb_comparison.py
+                ./tools/ssik_adverb_morphology.py
+                ./tools/ssik_adverb_runtime.py
+                ./tools/ssik_adverb_outer_tails.py
+                ./tools/friendly_command_preparation.py
+                ./tools/ssik_adverb_corpora.py
+                ./tools/ssik_adverb_broad.py
+                ./tools/ssik_adverb_release.py
+                ./tools/ssik_adverb_performance.py
+                ./web/tests/ssik-adverb.mjs
                 ./tools/ssik_comparison.py
                 ./tools/ssik_runtime.py
                 ./tools/ssik_corpora.py
@@ -624,6 +636,18 @@
             python tools/ssik_release.py --verify
             python tools/ssik_performance.py --verify
             python tools/fresh_passage_audit.py
+            python tools/ssik_adverb_audit.py
+            python tools/ssik_adverb_comparison.py
+            python tools/ssik_adverb_morphology.py
+            python tools/ssik_adverb_runtime.py
+            python tools/ssik_adverb_outer_tails.py
+            python tools/friendly_command_preparation.py
+            python tools/ssik_adverb_corpora.py --verify
+            python tools/ssik_adverb_broad.py --verify
+            python tools/ssik_adverb_broad.py --verify --report docs/ssik-adverb-packaged-observations.json.gz
+            python tools/ssik_adverb_corpora.py --verify --report docs/ssik-adverb-packaged-corpora.json.gz
+            python tools/ssik_adverb_release.py --verify
+            python tools/ssik_adverb_performance.py --verify
             touch "$out"
           '';
         });

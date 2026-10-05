@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-022v",
+  "recorded_at": "2026-10-05T22:36:34.110507+00:00",
+  "exit_code": 0,
+  "validated_snapshot": {
+    "head": "063983bb0755f8cae17d5142dc6bb5e1840844fa",
+    "staged_diff_sha256": "b495455535605e30ba5f7173dc53ca308f8d4e13183f358d7fac4d79a5b0c1b3",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "c1e181b024a915de619d43d36a3455b381f55e8ddb637e70c00ff7298d04a9ca",
+        "bytes": 462968
+      },
+      "docs/friendly-command-source-preparation.json.gz": {
+        "sha256": "8ff719b5979cfad386b945c78b668a37b8ad21b149c8833f4819ff2698dde206",
+        "bytes": 354513
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "194433fe2d83352680e6db43e9e00830c8a0889c3332eef6ecfe916a1f2329a2",
+        "bytes": 3342623
+      },
+      "docs/rules.md": {
+        "sha256": "f84ee12bced7a37f65c78d4dd3b2c08e9e88c30f2b914cd63b8c4e555f5a82fb",
+        "bytes": 314731
+      },
+      "docs/ssik-adverb-api-capture-failure.json.gz": {
+        "sha256": "585a5d2d620f10972aad6b53adb234ca92a9423f3661e7fcec9d6c23618b28b3",
+        "bytes": 2696
+      },
+      "docs/ssik-adverb-browser.json.gz": {
+        "sha256": "363eaaaa7edcb40d05a19eb396fed0dfb9678e24c83cb46c24446b4be31f5175",
+        "bytes": 765946
+      },
+      "docs/ssik-adverb-cache-parity.json": {
+        "sha256": "c2214075f87a15294af4909e3f6992a6fc10585f8752f2588ae790e53e95fcc0",
+        "bytes": 5539
+      },
+      "docs/ssik-adverb-clippy.log.gz": {
+        "sha256": "5747433290305ca6ae2cf826f857315d9b0cf6d59f3742e5e1e93bd1a89c8e01",
+        "bytes": 131
+      },
+      "docs/ssik-adverb-corpora.json.gz": {
+        "sha256": "f37e8d6fa219d1fcae0154a118d3ca753e6275972377b178d02a3b9d950e8e76",
+        "bytes": 3045219
+      },
+      "docs/ssik-adverb-diagnostics.json.gz": {
+        "sha256": "e6d444eaed4ffe7bea30a99d7e2e59c6597ea3d022e43eff42bf10f6c517ceb4",
+        "bytes": 5571151
+      },
+      "docs/ssik-adverb-dispositions.json.gz": {
+        "sha256": "09c2bcc673c5cdf0289f218fc698ee8b6057d56201e8a2e5b97523384d51fdac",
+        "bytes": 731369
+      },
+      "docs/ssik-adverb-full-rust.log.gz": {
+        "sha256": "b32a173ed741559ffe8f0af927b74dcbaa03cd5c76a308402bd40a0ca03abfed",
+        "bytes": 22251
+      },
+      "docs/ssik-adverb-inventory.json.gz": {
+        "sha256": "e82c9492d0c34b7b980a2aad9f91119b87f5aca14d68f92ef916d671bedc490d",
+        "bytes": 734322
+      },
+      "docs/ssik-adverb-lmf-source.json.gz": {
+        "sha256": "fb1a6a6254d05d2f9629718facbc0f8cdb8807adedcf967c11a692c784592aa1",
+        "bytes": 729159
+      },
+      "docs/ssik-adverb-morphology-outcomes.json": {
+        "sha256": "29eceed95818eb42627e1ff2d06d5e552c4029e94a00676347bd50e3e4c22cf1",
+        "bytes": 33753
+      },
+      "docs/ssik-adverb-observations.json.gz": {
+        "sha256": "a3d1dac33af1c8a708a7e2a92c5a9cef3e7253293b9b2c1ccb0b154cb8e11a0f",
+        "bytes": 7019
+      },
+      "docs/ssik-adverb-outer-tail-review.json.gz": {
+        "sha256": "2ebd477d0dc7633294b74510f8b1fa293d17261a5568016d3c19dc82cc1d0b82",
+        "bytes": 450208
+      },
+      "docs/ssik-adverb-outer-tail.json": {
+        "sha256": "f9e520df9a256b26fb066363de1d6e35cae615aa9b3074ee5cdbece94dc75b60",
+        "bytes": 138320
+      },
+      "docs/ssik-adverb-packaged-checks.json.gz": {
+        "sha256": "d6d56c48e3324501ebd28ef37c43642e758df4717f5acb31ac8759d7e0da2b86",
+        "bytes": 13341077
+      },
+      "docs/ssik-adverb-packaged-corpora.json.gz": {
+        "sha256": "779528baca6cc07c5400f8f01cbc919f270a624d8811ac5d647df01022da5da8",
+        "bytes": 3045209
+      },
+      "docs/ssik-adverb-packaged-observations.json.gz": {
+        "sha256": "ea3f903ca5ecc2fe240faccb34c59fbc0c8bb078d1b5b8704df70abcbaf464e2",
+        "bytes": 7049
+      },
+      "docs/ssik-adverb-parent-checks.json.gz": {
+        "sha256": "7c88c0cdad9398b919e06a1adf90969fc2b1ef4e9e538a2ed453f36e1ac5e511",
+        "bytes": 25066
+      },
+      "docs/ssik-adverb-performance.json": {
+        "sha256": "78ee6c1d0666978c703220eeb683d62964c45f6fa4b388c6a67eb15f7bc65e45",
+        "bytes": 83613
+      },
+      "docs/ssik-adverb-pinned-corpus.log.gz": {
+        "sha256": "2bfb7d750abd11da1503c2237d33fcc95a53b4d7feec52f698ac224593df5e43",
+        "bytes": 225
+      },
+      "docs/ssik-adverb-preflight.json.gz": {
+        "sha256": "b6a13e7c2ec567d85aa6a7e9b60061b92c7047e912c0c29fdf3029792b63ef6a",
+        "bytes": 5440142
+      },
+      "flake.nix": {
+        "sha256": "924ef0963d27c74f920602712faa1666834e5b1c6c277a6de9eefee46fc2893f",
+        "bytes": 35691
+      },
+      "src/breakdown.rs": {
+        "sha256": "5327207b6d543d3745e7dac62ebce253a157cba587088ce728664ea180959569",
+        "bytes": 21418
+      },
+      "src/engine.rs": {
+        "sha256": "12882a890e09d1713d58f3c04c32d4002ae14432d03d6ec1811ea8074a02186f",
+        "bytes": 216876
+      },
+      "src/grammar.rs": {
+        "sha256": "ace4b65f4fa61e1d68ab23bd9b1dfa03799133e1062d444c574b14c132814bfa",
+        "bytes": 102984
+      },
+      "src/lib.rs": {
+        "sha256": "9ad53859e9ca7fb4b9ad96f26f7ea48a3fd403cf20ef42e606f088f0a421239f",
+        "bytes": 8226
+      },
+      "tests/fixtures/krdict-ssik-adverb-english.json": {
+        "sha256": "1599e086c1fc16453ff3fd1ebb9e010dfe8133ab838ce05d7149c3e87a6df401",
+        "bytes": 4580163
+      },
+      "tests/fixtures/krdict-ssik-adverb-original.json": {
+        "sha256": "9ba066187bc464934995319aa4322caf7f097e647c531446ff1552635689ab7c",
+        "bytes": 9433673
+      },
+      "tests/fixtures/ssik-adverb-sources.json": {
+        "sha256": "7ec19c5fd0293168f25aa8210b0565da698a907ce184a7e607f15c65d588252f",
+        "bytes": 11220346
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "c2eb403b02f86bb4ff6ec20a56c2f25501d9dd294a9ec493d65c3a2f5dc99aff",
+        "bytes": 28472786
+      },
+      "tests/ssik_adverb.rs": {
+        "sha256": "309bcbf739d623aec5d9b17faa41b7555f400ab2ca3fd408cc44c22cf350f8d0",
+        "bytes": 8750
+      },
+      "tests/validity.rs": {
+        "sha256": "e0fb5476115632e4bc78e98c1ed6a969eb7325cd448376269896446e9834244f",
+        "bytes": 4004
+      },
+      "tools/friendly_command_preparation.py": {
+        "sha256": "acc8c212d7bfcdcd111a1dd91c9e74efe4f0254ce9d56801ca3e98bea121cbf4",
+        "bytes": 2677
+      },
+      "tools/ssik_adverb_audit.py": {
+        "sha256": "08d9d3133cdc94c76ceb1f0a12cd2059a01afdecc2891050686a534f13d89288",
+        "bytes": 7648
+      },
+      "tools/ssik_adverb_broad.py": {
+        "sha256": "f570c72399ea93fc094651aa2f3cff6f38bf4d7bddc508712d5f6e97fe7eb16c",
+        "bytes": 9057
+      },
+      "tools/ssik_adverb_comparison.py": {
+        "sha256": "2cc403997678b114840aa26118578bb1b00be105979ac78484388c863a28aa22",
+        "bytes": 5848
+      },
+      "tools/ssik_adverb_corpora.py": {
+        "sha256": "c0e2f3ec905c8610c575767eeee57ed98d372b15e4d5e86e84069effde9ee144",
+        "bytes": 8022
+      },
+      "tools/ssik_adverb_morphology.py": {
+        "sha256": "dd4c98e80a18af70fe162452a30f76974e9f5492ad770a5214828c692cb17bb5",
+        "bytes": 2032
+      },
+      "tools/ssik_adverb_outer_tails.py": {
+        "sha256": "b011eef6781ac19f9fba0a598c6b5c3892db5baf344fc6c15247860a9c78e6db",
+        "bytes": 6033
+      },
+      "tools/ssik_adverb_performance.py": {
+        "sha256": "1d37dfcec715bd59c30f3ff53300167470a1408353e47aea673967bc5661896e",
+        "bytes": 2352
+      },
+      "tools/ssik_adverb_release.py": {
+        "sha256": "79a12ffedf5e61b4ad5cefc0332a89fd5fb1266c3bb114d9be6f5219ddf4564d",
+        "bytes": 8312
+      },
+      "tools/ssik_adverb_runtime.py": {
+        "sha256": "6e91020740baae3264c1f824a05357c60f5d2626eb634dcc957a0e6372be6c68",
+        "bytes": 6934
+      },
+      "tools/ssik_audit.py": {
+        "sha256": "ab06ca66c55768e177c944fbc2fea1cfbd6a87f198c3856ba5ded13028621944",
+        "bytes": 3941
+      },
+      "web/src/SentenceBreakdown.tsx": {
+        "sha256": "22271f582fb93a9938220ed8b2d341a6cdb84759c20315d9fd10962e7b170ce3",
+        "bytes": 9590
+      },
+      "web/tests/ssik-adverb.mjs": {
+        "sha256": "2f27e98d295e3e3e2fe1f38bce1273e176e7307e6b82a287f281f3b624c1e388",
+        "bytes": 7003
+      }
+    }
+  },
+  "nix_outputs": {
+    "klem": "/nix/store/7ig841qik7gz7xyjxqg5hiab11qxqnyc-klem-0.1.0",
+    "web-assets": "/nix/store/kqx4fsjnlxfcykpfmw345y6yzab549f9-klem-web-assets-0.1.0",
+    "inventory-review": "/nix/store/14zr887843hqlxic5a0pabkk49ydcsps-klem-inventory-review"
+  },
+  "log_sha256": "aa8f99e3383f274f5d9fe0ce8d1fa77317a71ddfa534fef6c3b91b9fd55ac0c6",
+  "archived_log_sha256": "72290dcd45c07f9fd832de1b481a46a35ac7e727561751e5f07d0afa8c54106b",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/tmp/klem-nix-build-1000",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "scope": "Actual terminal-zero Nix validation of the recorded 49-file byte snapshot. Package/assets match the independently captured release evidence. Historical and new source, native, corpus, broad-stream, API, browser, cache and performance gates passed. Subsequent checklist and evidence-hash closure does not alter the validated implementation or evidence."
+}

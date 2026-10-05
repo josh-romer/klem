@@ -4518,3 +4518,36 @@ The [original source and baseline](ssik-preflight.json.gz),
 and [actual source-specific browser checks](ssik-browser.json.gz) retain the
 evidence. Original native LMF is preserved separately from its English adapter.
 Wider corpus, package and performance checks are tracked in the coverage checklist.
+
+## Adverb bases before -씩 (COV-022v)
+
+[NIKL's answer on 조금씩](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=332429)
+allows a noun or adverb base and does not identify -씩 as an adverb-forming
+suffix. The [pinned source inventory](ssik-adverb-inventory.json.gz) preserves
+362 occurrences with thirteen same-spelled base leads. The conditional branch
+admits 가끔, 살짝, 이따금, 이만큼, 잠깐, 조금, 하나하나, 한바탕 and 한발;
+통/정/단 unit uses and opaque 씩씩 do not license their adverb homonyms here.
+
+For 가끔씩, the tool offers an adverbial 가끔 lemma and one suffix 씩 alongside
+existing noun-base and whole-word alternatives. Provenance includes
+`suffix.distributive.ssik` and `suffix.distributive.ssik.adverbial_base`.
+This branch follows the quantity source's first sense; the noun restriction
+in its unexpected-degree second sense is not extended to adverbs. It preserves
+existing bounded adverb-compatible particle chains, including 조금씩이라도
+as 조금 + 씩 + 이라도. It does not infer contextual POS, the intended sense,
+a word-class change, or a new copula/답다 attachment license.
+
+The browser distinguishes noun and adverb base choices. Ordered breakdowns
+require the admitted adverb lemma, the branch's own provenance and exactly one
+quantity suffix. [Source fixtures](../tests/fixtures/ssik-adverb-sources.json),
+[tests](../tests/ssik_adverb.rs), [parent audits](ssik-adverb-parent-checks.json.gz)
+and [browser captures](ssik-adverb-browser.json.gz) preserve original alternatives
+and exact source identities. Wider base classes and contextual linguistic review
+remain open in COV-022v.
+
+The [separate outer-tail scan](ssik-adverb-outer-tail-review.json.gz) includes
+잠깐씩밖에. Its existing nominal 잠깐 + 씩 + 밖에 path is retained.
+KRDict 70070 restricts 밖에 to nouns or -기 nominalizations; the example does
+not by itself establish an adverb-base attachment class. That alternative
+remains unjudged without adding an adverb rule or declaring it linguistically
+forbidden. The additional scan does not rewrite the original 362 occurrences.

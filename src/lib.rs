@@ -41,7 +41,7 @@ pub enum LemmaKind {
     Predicate,
     Copula,
     Auxiliary,
-    /// A lexical adverb before a particle or in a source-reviewed compound;
+    /// A lexical adverb before a particle, suffix or in a source-reviewed compound;
     /// not a nominal hypothesis.
     Adverbial,
     /// A reviewed derivational root before a suffix. This does not assert a

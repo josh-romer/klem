@@ -336,6 +336,21 @@ fn nominal_bases(word: &str) -> Vec<Analysis> {
 // general 르 rule from the historical 달리/빨리 forms.
 fn adverb_derivations(word: &str) -> Vec<Analysis> {
     let mut out: Vec<_> = adverb_derivation(word).into_iter().collect();
+    if let Some(base) = word.strip_suffix('씩')
+        && grammar::SSIK_ADVERB_BASES.contains(&base)
+    {
+        out.push(Analysis {
+            lemmas: vec![lemma(base, LemmaKind::Adverbial)],
+            morphemes: vec![morph("씩", MorphemeKind::Suffix)],
+            rules: vec![
+                "suffix.distributive.ssik".into(),
+                "suffix.distributive.ssik.adverbial_base".into(),
+            ],
+            unchanged: false,
+            spelling_paths: Vec::new(),
+        });
+    }
+
     for &(root, suffix, related) in grammar::OPAQUE_ADVERB_ROOTS {
         if word.strip_suffix(suffix) != Some(root) {
             continue;

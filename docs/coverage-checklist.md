@@ -1946,6 +1946,27 @@ review remains open under the completion review below.
   The [offline verifier](../tools/emphatic_ending_audit.py) runs in Nix; its
   optional --dictionary/--cli checks replay the original full snapshot and CLI.
 
+
+- [ ] **COV-017bx — Friendly command final -ㄴ on 오다 compounds.**
+  **Missing as a distinct ending analysis; the lexical lemmas are already
+  recovered through the adnominal ending.** [KRDict 73877](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73877)
+  describes a friendly colloquial command used by adults addressing children
+  or small animals, restricted to 오다 or verbs formed with 오다. The
+  independently [audited](../tools/friendly_command_preparation.py)
+  [source preparation](friendly-command-source-preparation.json.gz) preserves
+  both -ㄴ ending homonyms, all five original command example groups and
+  57 dictionary 오다-final verb entries for lexical-class review.
+  Actual discovery captures for 온, 날아온, 내려온 and 돌아온 recover the
+  lexical predicate with 은 but lack a distinct friendly-command provenance.
+  Add the source-specific final-ending path, preserve existing adnominal and
+  contracted-particle readings, and verify canonical components, attachment
+  ownership, native dictionary/source labels and CLI/browser parity.
+  오다-final spelling alone does not settle a lexical or auxiliary command
+  license; review that inventory before declaring broader compound coverage.
+  Other prefinals, following particles and contextual addressee/register remain
+  unjudged. This preparation is not an implementation baseline or a completed
+  regression gate.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -5909,23 +5930,96 @@ review remains open under the completion review below.
   and contextual ranking remain under the release boundaries.
 
 - [ ] **COV-022v — Adverb-base alternatives and source tensions before -씩.**
+  **Implemented for nine conditional source-listed bases; wider validation and
+  independent linguistic review remain open.**
   [NIKL's 2026-06-17 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=332429)
   leaves 조금 in 조금씩 open to noun or adverb analysis and avoids claiming
-  that -씩 changes it into an adverb. COV-022u currently recovers the nominal
-  base; the adverb-base alternative requires its own lexical class, suffix
-  ownership, dictionary and ordered-breakdown tests. Preserve both KRDict
-  조금 homonyms (61176 noun, 61177 adverb), the whole 조금씩 entry and all
-  original nominal paths. Review quantity-base classes and source-specific
-  particle/copula conditions without treating speaker expectation or a
-  contextual POS choice as known. Wider adverb bases and register remain open;
-  dialectal spelling and arbitrary quantity/compound segmentation stay deferred.
-  The [supplementary morphology projection](ssik-morphology-projection.json)
-  retains all twelve original -씩 annotation rows. Nine carry an explicit base
-  and suffix: the nominal batch covers eight, while GSD dev `dev-s394/1`
-  (`가끔+씩`, `MAG+XSN`) remains missing its typed adverb base. Three rows lack
-  an explicit base and remain unprojected. The independent audit preserves
-  these identities and the original corpus gold; this is a separate regression
-  view, not a replacement adapter or corpus recall claim.
+  that -씩 changes it into an adverb. A scan of all 2,749 pinned dictionary
+  adverb heads finds [362 original occurrences](ssik-adverb-inventory.json.gz)
+  in 359 complete example groups, with thirteen same-spelled base leads.
+  [Dispositions](ssik-adverb-dispositions.json.gz) admit 가끔, 살짝, 이따금,
+  이만큼, 잠깐, 조금, 하나하나, 한바탕 and 한발 as conditional adverb bases;
+  통/정/단 remain noun-unit homonyms and opaque 씩씩 remains a whole adverb.
+  Source occurrence alone does not determine contextual POS or suffix sense.
+
+  The branch retains one 씩 suffix with
+  `suffix.distributive.ssik.adverbial_base` provenance and composes existing
+  bounded adverb-compatible particles. It preserves nominal and whole-word
+  alternatives, including both 조금 homonyms (61176 noun, 61177 adverb).
+  No adverb-base copula or -답다 expansion is inferred. Repeated suffixes,
+  unsupported bases and forged ordered-breakdown ownership are guarded.
+  [Exact original LMF](../tests/fixtures/krdict-ssik-adverb-original.json)
+  retains all 349 complete native entries separately from the English adapter.
+  [Frozen source and before outputs](ssik-adverb-preflight.json.gz),
+  [tests](../tests/ssik_adverb.rs) and 130 stable judgments (45 required /
+  85 forbidden) preserve all 2,509 original unique-word candidate orders.
+  [Actual twelve-stream diagnostics](ssik-adverb-diagnostics.json.gz) and
+  [exact parent checks](ssik-adverb-parent-checks.json.gz) attribute all 1,215
+  new paths to a frozen nominal quantity parent without changing old paths,
+  reading annotations or flat dictionary entries. Contextual verdicts remain
+  unjudged; compatibility is not a linguistic correctness claim.
+
+  [Actual browser evidence](ssik-adverb-browser.json.gz) covers twenty NFC/NFD
+  diagrams, distinct noun/adverb base labels, selectable old alternatives,
+  six CLI/export comparisons, source clicks and all 349 native endpoints.
+  The [full Rust suite](ssik-adverb-full-rust.log.gz) passes 957 tests with one
+  ignored downloaded-corpus test; that [pinned full-corpus regression](ssik-adverb-pinned-corpus.log.gz)
+  also passes when run separately. [Clippy](ssik-adverb-clippy.log.gz) and the
+  source/runtime audits pass. The independently audited [held-out comparison](ssik-adverb-corpora.json.gz)
+  preserves all 66,570 original gold outcomes and 32,096 word outputs, with
+  two additional typed paths (가끔씩 and 조금씩) and no coarse recall change.
+  [The full broad-stream audit](ssik-adverb-observations.json.gz) preserves
+  1,128,312 original records, individually attributing ten additions across
+  five novel modes to two 조금씩 occurrences; candidate-list streams are
+  unchanged and no spacing alternative is added. [Actual Nix package evidence](ssik-adverb-packaged-checks.json.gz)
+  passes 957 release-profile tests and the SolidJS asset build, then verifies
+  all twelve source CLI streams, twenty browser diagrams, six exports and
+  all 349 native endpoints. Bounded API requests cover all 15,962 original
+  NFC/NFD source records with exact retained orders and 810 added orders;
+  the initial oversized cohort request was rejected by the existing body
+  limit, preserved in [capture failure evidence](ssik-adverb-api-capture-failure.json.gz),
+  and corrected by batching at whole-token boundaries. Application limits
+  are unchanged. Independently captured [release novel/candidate streams](ssik-adverb-packaged-observations.json.gz)
+  and [release corpus outputs](ssik-adverb-packaged-corpora.json.gz) match
+  the development evidence. [Full-novel cache parity](ssik-adverb-cache-parity.json)
+  passes all three dictionary modes. [Eighty full-novel timing samples](ssik-adverb-performance.json)
+  comprise forty interleaved before/after pairs across eight workloads on one
+  allowed CPU, after all own build/audit jobs finished. Median changes range
+  from -0.8% to +1.2%; compatible filtering takes about 1.83 seconds and spacing
+  suggestions about 2.44 seconds for the 786,078-byte novel on this host.
+  These measurements do not prove statistical equivalence or other-host timing.
+  The [final combined Nix check](ssik-adverb-final-nix.json) passes the Rust
+  package, SolidJS assets and complete inventory-review gates against the
+  recorded 49-file snapshot; its [log](ssik-adverb-final-nix.log.gz) preserves
+  the actual terminal-zero result. Independent linguistic review remains open.
+  A separate [source-owned outer-tail observation](ssik-adverb-outer-tail.json)
+  preserves the full native owner for 조금씩이라도; the new path has 이라도
+  as a particle, without inferring an additional copula license.
+
+  A [supplementary outer-tail review](ssik-adverb-outer-tail-review.json.gz)
+  scans all pinned examples separately from the frozen exact-boundary inventory.
+  It preserves 107 occurrences, 27 captured surfaces and 87 complete original
+  native/LMF owners. Ninety-nine occurrences have the opaque 씩씩 prefix and
+  establish no quantity-suffix license. The remaining eight occurrences have
+  six surfaces: five retain conditional adverb-base particle paths;
+  잠깐씩밖에 already retains 잠깐 + 씩 + 밖에 with a noun base. Its adverb-base
+  attachment remains unjudged because KRDict 70070 restricts 밖에 to noun or
+  nominalized bases. The example alone does not resolve that source tension;
+  no required/forbidden adverb judgment is inferred. The independent
+  [audit](../tools/ssik_adverb_outer_tails.py) replays the full discovery when
+  the pinned dictionary is available and verifies every frozen source owner,
+  span, stable observation ID, candidate order and retained dictionary reading.
+
+  The original [supplementary morphology projection](ssik-morphology-projection.json)
+  retains all twelve original -씩 annotation rows unchanged. Nine carry an
+  explicit base and suffix: the new [typed outcomes](ssik-adverb-morphology-outcomes.json)
+  recover GSD dev `dev-s394/1` (`가끔+씩`, `MAG+XSN`) alongside all eight
+  nominal cases. Three rows lack an explicit base and remain unprojected.
+  This separate typed regression view does not replace the original adapter
+  or claim improved coarse corpus recall. Remaining quantity-base classes,
+  source-specific particle/copula conditions, contextual senses, register and
+  independent review stay open; dialectal spelling and arbitrary compound
+  segmentation remain deferred.
 
 ### P3: dictionary and representation boundaries
 

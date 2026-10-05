@@ -72,6 +72,10 @@ export default function SentenceBreakdown(props: {
         props.result.records[index].analysis!.analyses.some((other) => other.rules.includes("suffix.nominal.i"))) {
       return `${text} · adverb-forming`;
     }
+    if (a.rules.includes("suffix.distributive.ssik")) {
+      if (a.lemmas[0].kind === "adverbial") return `${text} · adverb base`;
+      if (a.lemmas[0].kind === "nominal") return `${text} · noun base`;
+    }
     return text;
   };
   function component(part: Part, index: number) {

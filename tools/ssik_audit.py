@@ -56,7 +56,7 @@ def inspect():
     assert sum(c['judgments'][0]['verdict'] == 'required' for c in cases) == 148
     assert sum(c['judgments'][0]['verdict'] == 'forbidden' for c in cases) == 11
     ledger = read('tests/fixtures/validity.json')
-    assert [c for c in ledger['cases'] if c['id'].startswith('ssik-')] == cases
+    assert [c for c in ledger['cases'] if c['id'].startswith(('ssik-required-', 'ssik-forbidden-'))] == cases
     assert ledger['sources']['ssik-krdict'] == suffix['url']
     label = read('web/src/grammar-labels.json')['-씩']
     assert label['kind'] == 'suffix'

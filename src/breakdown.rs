@@ -36,6 +36,21 @@ impl Analysis {
         {
             return None;
         }
+        let quantity_adverb = self
+            .rules
+            .iter()
+            .any(|r| r == "suffix.distributive.ssik.adverbial_base");
+        if quantity_adverb
+            && (self.lemmas[0].kind != LemmaKind::Adverbial
+                || !crate::grammar::SSIK_ADVERB_BASES.contains(&self.lemmas[0].text.as_str())
+                || !self
+                    .morphemes
+                    .first()
+                    .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "씩")
+                || self.lemmas.len() != 1)
+        {
+            return None;
+        }
         if self
             .rules
             .iter()
@@ -375,6 +390,12 @@ impl Analysis {
                     parts.push(Component::Morpheme(cursor));
                     cursor += 1;
                 }
+            }
+            // The reviewed quantity suffix belongs to its adverb base, not
+            // an adverb-forming 이/히 suffix or an implicit nominalization.
+            if quantity_adverb && index == 0 {
+                parts.push(Component::Morpheme(cursor));
+                cursor += 1;
             }
             let adverbial = !noun_suffix
                 && matches!(

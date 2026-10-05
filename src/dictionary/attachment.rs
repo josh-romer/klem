@@ -669,19 +669,26 @@ impl Annotation {
                 connector.map(|i| analysis.morphemes[i].form.as_str()),
                 &analysis.rules,
             ) || crate::predicate_compound::is_owner(analysis, *index);
-            let suffix_class = morphs.first().and_then(|c| match c {
-                Component::Morpheme(i) => crate::doeda_suffix::owner_class(
-                    lemma,
-                    &analysis.rules,
-                    &analysis.morphemes[*i..],
-                ),
-                _ => None,
-            });
-            let identity_source = (lemma.kind == LemmaKind::Nominal)
-                .then(|| {
-                    suffix_class.and_then(|class| crate::doeda_identity::source(&lemma.text, class))
+            let owner_morphemes = morphs
+                .first()
+                .and_then(|c| match c {
+                    Component::Morpheme(i) => Some(&analysis.morphemes[*i..]),
+                    _ => None,
                 })
-                .flatten();
+                .unwrap_or(&[]);
+            let suffix_class =
+                crate::doeda_suffix::owner_class(lemma, &analysis.rules, owner_morphemes);
+            let identity_source =
+                crate::doeda_identity::owned_source(lemma, &analysis.rules, owner_morphemes);
+            let suffix_len = if suffix_class.is_some() {
+                if owner_morphemes.first().is_some_and(|m| m.form == "시") {
+                    2
+                } else {
+                    1
+                }
+            } else {
+                0
+            };
             let class = suffix_class.or(match lemma.kind {
                 LemmaKind::Auxiliary => auxiliary_class(
                     lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
@@ -714,11 +721,7 @@ impl Annotation {
             // The suffix is a represented inflection owner. Its presence is
             // not an intervening prefinal: 되다 + ending remains bare, while
             // 되다 + 었/시 + ending does not.
-            let inflection = if suffix_class.is_some() {
-                morphs.get(1)
-            } else {
-                morphs.first()
-            };
+            let inflection = morphs.get(suffix_len);
             let bare = inflection
                 .is_some_and(|c| matches!(c, Component::Morpheme(i) if Some(*i) == ending));
             // NIKL consultation 8390 recognizes 없다-influenced 없지 않느냐.
@@ -1878,7 +1881,7 @@ impl Annotation {
                             };
                             DerivationalIdentity {
                                 relation,
-                                morpheme_index: match morphs[0] { Component::Morpheme(i) => i, _ => unreachable!() },
+                                morpheme_index: match morphs[suffix_len - 1] { Component::Morpheme(i) => i, _ => unreachable!() },
                                 expected_origins: source.expected_origins.iter().map(|s| (*s).to_owned()).collect(),
                                 whole_entries: source.whole_entries.iter().map(|s| (*s).to_owned()).collect(),
                                 whole_origins_complete: source.whole_origins_complete,

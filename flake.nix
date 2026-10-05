@@ -276,6 +276,17 @@
                 ./tools/well_doeda_release.py
                 ./tools/well_doeda_performance.py
                 ./tools/test_well_doeda_release.py
+                ./tools/nominal_si_audit.py
+                ./tools/nominal_si_broad.py
+                ./tools/nominal_si_corpora.py
+                ./tools/nominal_si_runtime.py
+                ./tools/test_nominal_si_audit.py
+                ./tools/test_nominal_si_runtime.py
+                ./tools/nominal_si_release.py
+                ./tools/nominal_si_performance.py
+                ./tools/test_nominal_si_release.py
+                ./src/nominal_si.rs
+                ./web/tests/nominal-si.mjs
                 ./web/tests/well-doeda.mjs
                 ./tools/doeda_partial_origin_diagnostics.py
                 ./tools/test_doeda_partial_origins.py
@@ -451,6 +462,17 @@
             python tools/well_doeda_corpora.py --verify --report docs/well-doeda-packaged-corpora.json.gz
             python tools/well_doeda_performance.py --verify
             python -m unittest discover -s tools -p 'test_well_doeda_release.py'
+            python tools/nominal_si_audit.py --verify --comparison docs/nominal-si-diagnostics.json.gz
+            python tools/nominal_si_broad.py --verify
+            python tools/nominal_si_corpora.py --verify
+            python tools/nominal_si_runtime.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_si_audit.py'
+            python -m unittest discover -s tools -p 'test_nominal_si_runtime.py'
+            python tools/nominal_si_release.py --verify
+            python tools/nominal_si_broad.py --verify --report docs/nominal-si-packaged-observations.json.gz
+            python tools/nominal_si_corpora.py --verify --report docs/nominal-si-packaged-corpora.json.gz
+            python tools/nominal_si_performance.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_si_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

@@ -1,11 +1,30 @@
 //! Recorded whole-head origins for separately reported dictionary identity evidence.
 use crate::engine::PredicateClass;
+use crate::{Lemma, LemmaKind, Morpheme};
 
 pub(crate) struct OriginSource {
     pub base: &'static str,
     pub expected_origins: &'static [&'static str],
     pub whole_entries: &'static [&'static str],
     pub whole_origins_complete: bool,
+}
+
+/// Resolve evidence from this owner's represented suffix chain, including
+/// the intervening -시. Ordinary nouns and unrelated owners cannot borrow it.
+pub(crate) fn owned_source(
+    lemma: &Lemma,
+    rules: &[String],
+    morphs: &[Morpheme],
+) -> Option<&'static OriginSource> {
+    if lemma.kind != LemmaKind::Nominal {
+        return None;
+    }
+    let class = crate::doeda_suffix::owner_class(lemma, rules, morphs)?;
+    if crate::nominal_si::passive_owner(lemma, rules, morphs) {
+        crate::nominal_si::identity(&lemma.text)
+    } else {
+        source(&lemma.text, class)
+    }
 }
 
 pub(crate) fn source(base: &str, class: PredicateClass) -> Option<&'static OriginSource> {

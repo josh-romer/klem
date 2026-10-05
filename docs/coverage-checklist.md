@@ -5359,6 +5359,74 @@ review remains open under the completion review below.
   package, web-assets and inventory checks, including all new evidence gates.
   Contextual sense choice and independent Korean-language review remain open.
 
+- [ ] **COV-022o — Noun-forming -시 and nested passives.** **Partial: seven
+  source-listed nominal formations and five native passive heads implemented;
+  debug, packaged release and final Nix checks passed.** KRDict
+  [-시 71567](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71567)
+  records 視, attachment after some nouns, and ten complete example groups.
+  The [immutable preflight](nominal-si-preflight.json.gz) preserves all ten
+  families, 44 complete native entries, 252 original word results in three
+  dictionary modes, and 34 original token rows with full sentences across six
+  corpus files. Seven examples have recorded noun bases: 동일, 문제, 야만,
+  의문, 적대, 죄악 and 중요. Five additionally have native passive whole heads:
+  동일시되다, 문제시되다, 의문시되다, 죄악시되다 and 중요시되다. The engine adds
+  noun + 시 and, for those separately sourced passive heads, noun + 시 + 되다
+  alongside all existing whole-word alternatives. Plural, particles and
+  copulas retain their order; -되다 owns the original passive inflection,
+  nominalization and later auxiliary connections. Recovery indices shift by
+  the inserted suffix count. Origin lookup and identity evidence use the
+  immediate represented suffix chain, preventing an ordinary noun or another
+  predicate owner from borrowing the passive whole-head identity. The new
+  browser label distinguishes suffix -시 from honorific prefinal -시-.
+  [The fixture](../tests/fixtures/nominal-si-sources.json) and
+  [source gate](../tools/nominal_si_audit.py) retain 200 required and ten
+  forbidden judgments with stable `nominal-si-` IDs. All five
+  [focused Rust tests](../tests/nominal_si.rs) passed, covering complete native
+  importer projection, Unicode/cache parity, dictionary filters, original
+  candidate order, ownership and malformed external chains. The full Rust
+  all-targets suite passed: 913 tests, one ignored, across 203 test batches. The
+  [CLI comparison](nominal-si-diagnostics.json.gz) preserves twelve complete
+  NFC/NFD cached/uncached streams. Each dictionary mode gains 141 distinct
+  candidates over 124 surfaces, with original candidates, assessments and
+  relative order preserved. Every addition traces to an original raw owner or
+  an explicitly sourced bare noun; filtered-out parents are not mistaken for
+  absent grammatical paths. The [broad receipt](nominal-si-observations.json.gz)
+  compares all eight previous streams: all 1,128,312 records are byte-identical.
+  The [held-out corpus receipt](nominal-si-corpora.json.gz) retains all 66,570
+  original gold rows and 32,096 exact raw word calls, with no changes to
+  outcomes, candidates or ambiguity summaries. These held-out streams do not
+  exercise the newly added paths; the source cohort and preserved training
+  contexts remain separate evidence. [API/browser checks](nominal-si-runtime-checks.json.gz)
+  verify 504 encoded word calls, 282 new ordered decompositions, 44 complete
+  native endpoints, eight diagrams and six matching exports. 중요시되시다
+  displays suffix -시 and honorific -시- with separate sources and functions.
+  Desktop and mobile screenshots were inspected. Clippy, formatting, the
+  frontend build, one documentation test, eleven evidence mutation guards and
+  nine runtime/stream guards passed. The Nix package and assets built successfully:
+  914 release Rust tests passed, one ignored, across 198 batches. The
+  [packaged receipt](nominal-si-packaged-checks.json.gz) records actual CLI,
+  API, native-entry and browser parity; packaged desktop and mobile screenshots
+  were inspected. Separate [release broad streams](nominal-si-packaged-observations.json.gz)
+  and [release corpus results](nominal-si-packaged-corpora.json.gz) match the debug
+  evidence completely. [Cache parity](nominal-si-cache-parity.json) covers all
+  179,112 novel records in each of three dictionary modes with zero and 8 MiB
+  caches. [Eighty paired timings](nominal-si-performance.json) use five alternating
+  old/new pairs for eight novel workloads, pinned to the same allowed CPU in
+  fresh processes. Median elapsed-time changes in this run range from +0.02%
+  to +1.42%; startup and serialization are included, with load/frequency context
+  retained. These measurements do not certify statistical equivalence or
+  constant clock speed. Twelve release/cache/timing mutation guards passed.
+  The [final Nix log](nominal-si-final-nix.log.gz) records successful package,
+  frontend-assets and inventory checks, including all historical gates and the
+  new source, runtime, release, cache and timing guards.
+  The original
+  문제시 + 하 + 지 + 도 corpus row remains a distinct 하다 context; no passive
+  gold is substituted for it. 도외, 등한 and 확실 lack recorded noun bases in
+  this snapshot and require further base-class evidence. Unlisted passive
+  heads and arbitrary bases gain no license from the suffix's general note.
+  Decomposing the separately recorded -시하다 heads, contextual judgments and
+  independent Korean-language review remain open.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**
@@ -5382,7 +5450,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 474 currently emitted canonical grammar forms.** The initial catalog
+  for all 475 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

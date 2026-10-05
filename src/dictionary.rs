@@ -674,10 +674,8 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                     continue;
                 };
                 let lemma = &path.lemmas[*i];
-                if lemma.kind == LemmaKind::Nominal
-                    && let Some(class) =
-                        crate::doeda_suffix::owner_class(lemma, &path.rules, &path.morphemes[*j..])
-                    && crate::doeda_identity::source(&lemma.text, class).is_some()
+                if crate::doeda_identity::owned_source(lemma, &path.rules, &path.morphemes[*j..])
+                    .is_some()
                 {
                     identity_origins.insert(lemma.clone());
                 }

@@ -303,6 +303,9 @@ pub(crate) fn owner_class(
     rules: &[String],
     morphs: &[Morpheme],
 ) -> Option<PredicateClass> {
+    if crate::nominal_si::passive_owner(lemma, rules, morphs) {
+        return Some(PredicateClass::Verb);
+    }
     if !morphs
         .first()
         .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "되다")

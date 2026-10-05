@@ -5151,6 +5151,63 @@ review remains open under the completion review below.
   Peak measured process RSS in the original eight-workload run is 38.23 MiB. No contextual sense or linguistic rejection follows
   from origin differences alone. The native-expansion evidence below is the
   historical checkpoint preceding these identity fields.
+  **Missing-origin semantic formations:** seventeen additional finite noun/verb
+  pairs now decompose, including 되풀이되다, 마무리되다, 뒷받침되다 and 풀이되다.
+  The [new source checkpoint](doeda-originless-source-preflight.json.gz) keeps
+  all eighty original unresolved reviews, 165 complete native owners, explicit
+  noun/whole definition links, sixteen paired 하다 heads and the absence of
+  뒤범벅하다. These are attributed agent judgments under suffix 74902 sense 1;
+  missing origins remain `unknown` and do not become recorded identity matches.
+  Five nominal-role controls retain 그릇되다, 안되다, 혼자되다, 이리되다 and
+  저리되다 for separate role review; the existing 안 adjective/adverb formation
+  is preserved. Fifty-two original corpus tokens and complete sentences include
+  39 tokens for the supported formations and 13 control tokens, including
+  conflicting native noun/adverb tags. Extraction uses `OrigLemma` when present;
+  the original whole-head evaluation gold is unchanged. The
+  [170 structural case IDs](../tests/fixtures/doeda-originless-formations.json)
+  and [six Rust tests](../tests/doeda_originless_sources.rs) cover source import,
+  prior candidate order, owned suffix components, NFC/NFD, four cache budgets,
+  both dictionary filters, unknown identity, plain-noun metadata after cache
+  warming, later auxiliary component ownership and all original tagged tokens.
+  The [CLI diagnostic archive](doeda-originless-diagnostics.json.gz) compares
+  254 words in three filters: 1,524 complete records, 198 changed word records
+  per mode and 289 individual candidate changes. Every addition reconstructs
+  from an original whole-head owner; existing readings/native slots keep their
+  order. All three modes agree with uncached and NFD captures; each has 289
+  explicitly unknown origin assessments. [Mutation guards](../tools/test_doeda_originless.py)
+  reject missing original contexts/owners, borrowed nouns, inferred origins,
+  lost candidates, missing or promoted identity, incomplete Unicode/cache
+  cohorts and omitted individual changes. Source/import/diagnostic checks are
+  included in the offline Nix inventory gate. The
+  [packaged checkpoint](doeda-originless-packaged-checks.json.gz) records 899
+  passing Rust tests, one ignored test, 508 NFC/NFD API word checks, 34 plain-noun
+  controls and 165 complete native entry endpoints. Six browser diagrams retain
+  the original whole-head alternatives and unknown identity labels; six filter
+  exports match the packaged CLI. Desktop and 390-pixel mobile layouts were
+  inspected. [Broad comparisons](doeda-originless-observations.json.gz) retain
+  all 1,128,312 records, with eighteen changed records and eight individually
+  attributed additions; all five novel streams are unchanged. The
+  [complete held-out corpus checkpoint](doeda-originless-corpora.json.gz) keeps
+  66,570 original gold rows and both complete maps of 32,096 word surfaces.
+  Six surfaces gain eight candidates, with no candidate losses or gold outcome
+  changes. Only KAIST mean candidate counts change: dev 6.188838883888389 to
+  6.1889288928892885 and test 6.002694977541854 to 6.003062474479379.
+  [Release mutation guards](../tools/test_doeda_originless_release.py) reject
+  lost source/Unicode coverage, altered native fields or candidate order,
+  plain-noun identity leaks, missing whole-head alternatives, rewritten gold
+  or word maps, and incomplete or altered timing samples. Portable producers
+  are [the API runner](../tools/doeda_originless_runtime.py) and
+  [the browser runner](../web/tests/doeda-originless.mjs).
+  [Eighty same-CPU timing samples](doeda-originless-performance.json) cover five
+  interleaved fresh-process pairs for each of eight full-novel workloads.
+  Median changes range from -0.74% to +0.48%; cached unannotated processing is
+  0.830 seconds and compatible filtering with spacing is 2.324 seconds. These
+  local measurements include startup and serialization; they establish neither
+  statistical equivalence nor a portable performance guarantee. Source-linked
+  [timing verification](../tools/doeda_originless_performance.py) recomputes
+  every summary and checks workload flags, pair order and captured context.
+  Sixty-three original native leads still need other base,
+  nested-suffix or lexical-construction review; this does not close COV-022m.
   The [native packaged checks](doeda-native-packaged-checks.json.gz) retain the
   successful Nix build (890 Rust tests passed, zero failed, one ignored), full
   release/debug parity across all 94,200 records, 31,400 NFC/NFD API case checks,

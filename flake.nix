@@ -256,6 +256,18 @@
                 ./tools/test_doeda_identity_release.py
                 ./tools/test_doeda_identity.py
                 ./src/doeda_identity.rs
+                ./src/doeda_originless_forms.rs
+                ./tools/doeda_originless_audit.py
+                ./tools/doeda_originless_implementation.py
+                ./tools/doeda_originless_diagnostics.py
+                ./tools/test_doeda_originless.py
+                ./tools/doeda_originless_runtime.py
+                ./tools/doeda_originless_package.py
+                ./tools/doeda_originless_observations.py
+                ./tools/doeda_originless_corpora.py
+                ./tools/doeda_originless_performance.py
+                ./tools/test_doeda_originless_release.py
+                ./web/tests/doeda-originless.mjs
                 ./web/tests/doeda-identity.mjs
                 ./src/doeda_native_forms.rs
                 ./web/tests/doeda-native.mjs
@@ -391,6 +403,15 @@
             python tools/doeda_identity_corpora.py --verify
             python tools/doeda_identity_performance.py --verify
             python -m unittest discover -s tools -p 'test_doeda_identity_release.py'
+            python tools/doeda_originless_audit.py --verify
+            python tools/doeda_originless_implementation.py --verify
+            python tools/doeda_originless_diagnostics.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_originless.py'
+            python tools/doeda_originless_package.py --verify
+            python tools/doeda_originless_observations.py --verify
+            python tools/doeda_originless_corpora.py --verify
+            python tools/doeda_originless_performance.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_originless_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

@@ -90,7 +90,16 @@ def gold_changes(before, after, context):
     return changes
 
 
-def candidate_changes(surface, before, after, occurrences, components, formations):
+def candidate_changes(
+    surface,
+    before,
+    after,
+    occurrences,
+    components,
+    formations,
+    *,
+    change_namespace="doeda-native-corpus-",
+):
     assert before.keys() == after.keys()
     assert {k: v for k, v in before.items() if k != "analyses"} == {
         k: v for k, v in after.items() if k != "analyses"
@@ -105,7 +114,7 @@ def candidate_changes(surface, before, after, occurrences, components, formation
         key = json.dumps([surface, a], ensure_ascii=False, sort_keys=True)
         changes.append(
             {
-                "id": "doeda-native-corpus-" + digest(key)[:24],
+                "id": change_namespace + digest(key)[:24],
                 "surface": surface,
                 "before": None,
                 "after": a,
@@ -117,11 +126,18 @@ def candidate_changes(surface, before, after, occurrences, components, formation
     return changes
 
 
-def inspect(previous, report):
+def inspect(
+    previous, report, *, formations=None, change_namespace="doeda-native-corpus-"
+):
     components = report["original_parent_components"]
-    formations = {
-        p["head"]: p for p in [*effective_formations(), *read(FIXTURE)["formations"]]
-    }
+    formations = (
+        formations
+        if formations is not None
+        else {
+            p["head"]: p
+            for p in [*effective_formations(), *read(FIXTURE)["formations"]]
+        }
+    )
     assert len(previous["corpora"]) == len(report["corpora"]) == 4
     # The source preflight predates implementation and independently anchors
     # each changed sentence even inside Nix, where downloaded corpora are absent.
@@ -258,6 +274,7 @@ def inspect(previous, report):
                 pair["occurrences"],
                 components,
                 formations,
+                change_namespace=change_namespace,
             )
         )
     assert seen == occurrences

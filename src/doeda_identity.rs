@@ -16,6 +16,7 @@ pub(crate) fn source(base: &str, class: PredicateClass) -> Option<&'static Origi
         .binary_search_by_key(&base, |s| s.base)
         .ok()
         .map(|i| &SOURCES[i])
+        .or_else(|| crate::doeda_originless_forms::source(base))
 }
 
 const SOURCES: &[OriginSource] = &[

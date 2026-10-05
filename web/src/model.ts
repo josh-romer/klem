@@ -37,6 +37,11 @@ export interface ReadingAssessment {
   status: "compatible" | "incompatible" | "unknown";
   lemmas: { lemma_index: number; status: string; entries: {
     id: string; status: string; conflicts: { rule: string; morpheme_index: number | null }[];
+    derivational_identity?: {
+      relation: "recorded_match" | "recorded_difference" | "unknown";
+      morpheme_index: number; expected_origins: string[]; whole_entries: string[];
+      whole_origins_complete: boolean;
+    };
   }[] }[];
 }
 export interface Annotation {

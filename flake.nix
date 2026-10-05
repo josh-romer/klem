@@ -245,6 +245,18 @@
                 ./tools/test_doeda_native_compare.py
                 ./tools/test_doeda_native_corpora.py
                 ./tools/test_doeda_native_performance.py
+                ./tools/doeda_identity_audit.py
+                ./tools/doeda_identity_implementation.py
+                ./tools/doeda_identity_diagnostics.py
+                ./tools/doeda_identity_runtime.py
+                ./tools/doeda_identity_package.py
+                ./tools/doeda_identity_observations.py
+                ./tools/doeda_identity_corpora.py
+                ./tools/doeda_identity_performance.py
+                ./tools/test_doeda_identity_release.py
+                ./tools/test_doeda_identity.py
+                ./src/doeda_identity.rs
+                ./web/tests/doeda-identity.mjs
                 ./src/doeda_native_forms.rs
                 ./web/tests/doeda-native.mjs
                 ./web/tests/doeda-complement.mjs
@@ -370,6 +382,15 @@
             python tools/doeda_native_corpora.py --verify
             python tools/doeda_native_performance.py --verify
             python -m unittest discover -s tools -p 'test_doeda_native_*.py'
+            python tools/doeda_identity_audit.py --verify
+            python tools/doeda_identity_implementation.py --verify
+            python tools/doeda_identity_diagnostics.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_identity.py'
+            python tools/doeda_identity_package.py --verify
+            python tools/doeda_identity_observations.py --verify
+            python tools/doeda_identity_corpora.py --verify
+            python tools/doeda_identity_performance.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_identity_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

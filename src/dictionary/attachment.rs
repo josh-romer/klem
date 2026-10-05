@@ -85,6 +85,28 @@ pub struct EntryAssessment {
     pub id: String,
     pub status: Compatibility,
     pub conflicts: Vec<AttachmentConflict>,
+    /// Recorded relationship to the whole head that licensed this finite split.
+    /// Separate from grammar compatibility: another productive derivation or
+    /// contextual interpretation can remain possible with different origins.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub derivational_identity: Option<DerivationalIdentity>,
+}
+
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
+#[serde(rename_all = "snake_case")]
+pub enum OriginRelation {
+    RecordedMatch,
+    RecordedDifference,
+    Unknown,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct DerivationalIdentity {
+    pub relation: OriginRelation,
+    pub morpheme_index: usize,
+    pub expected_origins: Vec<String>,
+    pub whole_entries: Vec<String>,
+    pub whole_origins_complete: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -655,6 +677,11 @@ impl Annotation {
                 ),
                 _ => None,
             });
+            let identity_source = (lemma.kind == LemmaKind::Nominal)
+                .then(|| {
+                    suffix_class.and_then(|class| crate::doeda_identity::source(&lemma.text, class))
+                })
+                .flatten();
             let class = suffix_class.or(match lemma.kind {
                 LemmaKind::Auxiliary => auxiliary_class(
                     lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
@@ -1840,6 +1867,23 @@ impl Annotation {
                         id: matched.entry.id.clone(),
                         status,
                         conflicts,
+                        derivational_identity: identity_source.filter(|_| matched.entry.pos == "명사").map(|source| {
+                            let origins = matched.origins.as_deref().unwrap_or_default();
+                            let relation = if origins.iter().any(|o| source.expected_origins.contains(&o.as_str())) {
+                                OriginRelation::RecordedMatch
+                            } else if source.whole_origins_complete && !origins.is_empty() {
+                                OriginRelation::RecordedDifference
+                            } else {
+                                OriginRelation::Unknown
+                            };
+                            DerivationalIdentity {
+                                relation,
+                                morpheme_index: match morphs[0] { Component::Morpheme(i) => i, _ => unreachable!() },
+                                expected_origins: source.expected_origins.iter().map(|s| (*s).to_owned()).collect(),
+                                whole_entries: source.whole_entries.iter().map(|s| (*s).to_owned()).collect(),
+                                whole_origins_complete: source.whole_origins_complete,
+                            }
+                        }),
                     }
                 })
                 .collect();

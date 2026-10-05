@@ -60,7 +60,13 @@ export function parts(
       const lemma = a.lemmas[component.lemma];
       const fanRoot = component.lemma === 1 && lemma.kind === "root" &&
         lemma.text === "선" && a.rules.includes("derivation.nominal.root_compound");
-      const entries = readingMatches(token, candidate, component.lemma);
+      const allEntries = readingMatches(token, candidate, component.lemma);
+      const sourceAssessment = token.dictionary?.readings?.[candidate]?.lemmas
+        .find((l) => l.lemma_index === component.lemma);
+      const differentOrigin = (id: string) => sourceAssessment?.entries.some(
+        (e) => e.id === id && e.derivational_identity?.relation === "recorded_difference",
+      );
+      const entries = allEntries.filter((e) => !differentOrigin(e.id));
       // KRDict tags both enumerative 이다 and the copula as 조사. This path
       // already represents a copula, so prefer its explicit source homonym.
       const copulaEntry = lemma.kind === "copula" && lemma.text === "이다"
@@ -69,6 +75,10 @@ export function parts(
         .find((l) => l.lemma_index === component.lemma);
       let entry =
         copulaEntry ??
+        entries.find((e) => sourceAssessment?.entries.some(
+          (a) => a.id === e.id && a.status !== "incompatible" &&
+            a.derivational_identity?.relation === "recorded_match",
+        )) ??
         entries.find((e) => assessment?.entries.some(
           (a) => a.id === e.id && a.status === "compatible",
         )) ??
@@ -94,11 +104,11 @@ export function parts(
         form: derivedRoot ? lemma.text.replace(/(?:하다|거리다)$/, "") : stem ? lemma.text.replace(/다$/, "") : lemma.text,
         label:
           (entry && result.glosses[entry.id]) ||
-          (entry ? "No English gloss" : fanRoot ? "Fan (bound root)" : lemma.kind === "root" ? "Root" : "No dictionary gloss"),
+          (entry ? "No English gloss" : allEntries.some((e) => differentOrigin(e.id)) ? "No matching source gloss" : fanRoot ? "Fan (bound root)" : lemma.kind === "root" ? "Root" : "No dictionary gloss"),
         grammar: false,
         entry: entry?.id,
         references: fanRoot ? [{ title: "KBS: 허풍선이 formation", url: "https://world.kbs.co.kr/service/contents_view.htm?board_seq=229261&id=&lang=k&menu_cate=learnkorean" }] : undefined,
-        hint: fanRoot ? "선 (扇) · Source-listed bound root meaning fan. Recorded origins of other 선 homonyms do not supply this root; all entries remain available for inspection." : `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.`,
+        hint: !entry && allEntries.some((e) => differentOrigin(e.id)) ? `${lemma.text} · Dictionary entries for this spelling have a different recorded origin from the whole word. Other derivations and senses remain possible; inspect the dictionary for details.` : fanRoot ? "선 (扇) · Source-listed bound root meaning fan. Recorded origins of other 선 homonyms do not supply this root; all entries remain available for inspection." : `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.`,
       };
     }
     const m = a.morphemes[component.morpheme];

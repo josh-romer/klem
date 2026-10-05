@@ -7,8 +7,8 @@ pub use import::import_krdict;
 mod attachment;
 mod pos;
 pub use attachment::{
-    AttachmentConflict, AttachmentRule, DictionaryFilter, EntryAssessment, LemmaAssessment,
-    ReadingAssessment,
+    AttachmentConflict, AttachmentRule, DerivationalIdentity, DictionaryFilter, EntryAssessment,
+    LemmaAssessment, OriginRelation, ReadingAssessment,
 };
 pub use pos::IndependentPosEvidence;
 
@@ -435,7 +435,7 @@ pub struct EntryMatch {
     /// Independently reviewed class evidence, bound to this native entry.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub independent_pos: Option<IndependentPosEvidence>,
-    /// Native origins for individually reviewed compound roots. Omitted when
+    /// Native origins for scoped compound-root and derivational identity evidence. Omitted when
     /// not consulted or absent in older annotations; empty is inconclusive.
     /// This is per-entry evidence, not a contextually selected sense.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -523,18 +523,28 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         self.bytes
     }
     pub fn lookup(&mut self, word: &str) -> Result<Arc<Vec<EntrySummary>>> {
-        Ok(Arc::clone(&self.lookup_record(word)?.entries))
+        Ok(Arc::clone(&self.lookup_record(word, false)?.entries))
     }
-    fn lookup_record(&mut self, word: &str) -> Result<Arc<CachedLookup>> {
+    fn lookup_record(&mut self, word: &str, with_origins: bool) -> Result<Arc<CachedLookup>> {
         let key: String = word.nfc().collect();
-        if let Some((entries, _)) = self.cache.get(&key) {
+        if let Some((entries, _)) = self.cache.get(&key)
+            && (!with_origins || entries.origins.len() == entries.entries.len())
+        {
             return Ok(Arc::clone(entries));
+        }
+        // A prior summary-only lookup may need one upgrade for a represented
+        // derivation. Replace its FIFO record and account for the added payload;
+        // ordinary noun lookups do not load full entries for this feature.
+        if let Some((_, bytes)) = self.cache.remove(&key) {
+            self.bytes -= bytes;
+            self.order.retain(|old| old != &key);
         }
         let entries = Arc::new(self.dictionary.lookup(&key)?);
         let mut spelling = Vec::with_capacity(entries.len());
-        let consult_origin = crate::grammar::NOUN_I_ROOT_COMPOUNDS
-            .iter()
-            .any(|&(_, _, root, _)| root == key);
+        let consult_origin = with_origins
+            || crate::grammar::NOUN_I_ROOT_COMPOUNDS
+                .iter()
+                .any(|&(_, _, root, _)| root == key);
         let mut origins = if consult_origin {
             Vec::with_capacity(entries.len())
         } else {
@@ -647,6 +657,32 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         Ok(entries)
     }
     pub fn annotate(&mut self, analysis: &WordAnalysis) -> Result<Annotation> {
+        let mut identity_origins = BTreeSet::new();
+        for path in &analysis.analyses {
+            if !path.rules.iter().any(|r| r == "suffix.verb.doeda") {
+                continue;
+            }
+            let Some(order) = path.breakdown() else {
+                continue;
+            };
+            for pair in order.windows(2) {
+                let [
+                    crate::breakdown::Component::Lemma(i),
+                    crate::breakdown::Component::Morpheme(j),
+                ] = pair
+                else {
+                    continue;
+                };
+                let lemma = &path.lemmas[*i];
+                if lemma.kind == LemmaKind::Nominal
+                    && let Some(class) =
+                        crate::doeda_suffix::owner_class(lemma, &path.rules, &path.morphemes[*j..])
+                    && crate::doeda_identity::source(&lemma.text, class).is_some()
+                {
+                    identity_origins.insert(lemma.clone());
+                }
+            }
+        }
         let keys: BTreeSet<_> = analysis
             .analyses
             .iter()
@@ -654,7 +690,8 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             .collect();
         let mut lemmas = Vec::with_capacity(keys.len());
         for lemma in keys {
-            let matched = self.lookup_record(&lemma.text)?;
+            let with_identity = identity_origins.contains(lemma);
+            let matched = self.lookup_record(&lemma.text, with_identity)?;
             let entries = matched
                 .entries
                 .iter()
@@ -667,7 +704,9 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                     origins: matched
                         .origins
                         .get(index)
-                        .filter(|_| lemma.kind == LemmaKind::Root)
+                        .filter(|_| {
+                            lemma.kind == LemmaKind::Root || (with_identity && entry.pos == "명사")
+                        })
                         .cloned()
                         .flatten(),
                     reu: evidence.as_ref().and_then(CachedSpelling::reu).cloned(),

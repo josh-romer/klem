@@ -54,6 +54,23 @@ the original proposals and full native evidence. It does not settle historical
 root analysis, infer conflicts from missing origins, or adjudicate other
 homonyms' contextual senses. Broader formation review remains COV-022m.
 
+Recorded origin relationships for 192 nominal `-되다` heads are also reported
+as per-entry `derivational_identity` evidence, independently of grammar status.
+`recorded_match` means the base entry shares an origin with the recorded whole
+head. `recorded_difference` means both sides have complete, nonempty recorded
+origins with no overlap. Missing origins remain `unknown`. The evidence cites
+whole entry IDs and the owned suffix index; it cannot transfer to a later
+copula or auxiliary. Both dictionary filters preserve these candidates.
+
+The browser prefers a recorded match for the base gloss. For `결정돼요` it
+selects “decision”; for `반감됐다`, the available antipathy noun has a different
+recorded origin from the halving verb, so the diagram says “No matching source
+gloss”. All entries remain inspectable. Different origins alone do not establish
+a grammar conflict: related meanings and productive derivations need separate
+review. Ordinary nouns do not gain this suffix evidence. The
+[source fixture](../tests/fixtures/doeda-identity-sources.json) preserves all
+232 difference pairs and every competing noun entry at these bases.
+
 ## Evidence and decisions
 
 The [source review](dictionary-attachment-evaluation.json) retains the pinned

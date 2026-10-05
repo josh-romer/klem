@@ -5095,7 +5095,55 @@ review remains open under the completion review below.
   candidates/assessments. This structural coverage selects no contextual sense:
   explicit origin differences remain lexical-identity leads, including 半減 in
   반감되다 versus the available 反感 noun and competing 결정/구조/조정 entries.
-  Current headword/POS policy and displayed hints do not settle those identities.
+  Recorded identity evidence now distinguishes 232 origin-difference pairs across
+  192 implemented nominal/verb heads, plus their matching and unknown noun
+  alternatives. The [immutable identity preflight](doeda-identity-source-preflight.json.gz)
+  retains all 13,824 original records and complete whole/noun entries; the
+  [identity fixture](../tests/fixtures/doeda-identity-sources.json) has stable head
+  and per-entry IDs, origins and whole-source hashes. The
+  [new diagnostic checkpoint](doeda-identity-diagnostics.json.gz) preserves every
+  original candidate, grammar status, conflict, slot, order and filter decision:
+  only finite origin payloads and separately typed `derivational_identity`
+  fields are added. [Rust regressions](../tests/doeda_identity.rs) check all ten
+  variants in NFC/NFD, 4,640 individual difference observations, cache budgets,
+  ordinary noun controls, unknown origins and legacy JSON. The
+  [offline guards](../tools/test_doeda_identity.py) reject evidence omitted from
+  a single reading, borrowed origins/whole entries, wrong suffix indices,
+  candidate or grammar drift and an unsorted binary-search table. Browser hints
+  prefer recorded matches (decision for 결정돼요) and show “No matching source
+  gloss” for 반감됐다 rather than borrow the antipathy gloss. The
+  [browser runner](../web/tests/doeda-identity.mjs) checks three diagrams in both
+  Unicode forms, all six filter exports, entry clicks and mobile layout.
+  [Fresh packaged evidence](doeda-identity-packaged-checks.json.gz) now retains
+  a successful Nix run (893 Rust tests passed, zero failed, one ignored), exact
+  release/debug parity across all 13,824 diagnostic records, all 4,608 NFC/NFD
+  API word checks and 634 complete native entry endpoints. Both source-derived
+  words and ordinary noun controls are included. Six actual browser exports
+  match the release CLI; source clicks and desktop/mobile screenshots were
+  checked. The [portable API runner](../tools/doeda_identity_runtime.py) retains
+  exact CLI JSONL bytes alongside the actual API records, so differing JSON key
+  order cannot invalidate or weaken byte-hash checks. The
+  [identity broad comparison](doeda-identity-observations.json.gz) preserves all
+  1,128,312 original records across eight streams; 355 records gain only sourced
+  identity/origin fields. Current-library component ordering independently
+  verifies all 138 observed owners. The
+  [identity corpus comparison](doeda-identity-corpora.json.gz) retains exact
+  complete reports for all 66,570 original gold rows and the unchanged raw
+  analysis digest for all 32,096 distinct surfaces, including 73 exact
+  punctuation-bearing word calls. Recall, ambiguity and recovered groups do
+  not change. [Release mutation guards](../tools/test_doeda_identity_release.py)
+  reject missing Unicode cohorts/endpoints, changed CLI bytes, borrowed browser
+  glosses, lost candidates/assessments/records, incorrect owned order and gold
+  or word-digest rewrites. The
+  [identity timing archive](doeda-identity-performance.json) retains eighty
+  interleaved fresh-process samples across eight full-novel workloads plus six
+  exact cache-parity streams. This session has substantial timing variance:
+  median changes range from -6.80% to +20.20%, including +13.23% for cached raw
+  annotations. These samples do not establish performance equivalence or the
+  cause of the slower medians; focused investigation remains open. Peak measured
+  process RSS is 38.23 MiB. No contextual sense or linguistic rejection follows
+  from origin differences alone. The native-expansion evidence below is the
+  historical checkpoint preceding these identity fields.
   The [native packaged checks](doeda-native-packaged-checks.json.gz) retain the
   successful Nix build (890 Rust tests passed, zero failed, one ignored), full
   release/debug parity across all 94,200 records, 31,400 NFC/NFD API case checks,

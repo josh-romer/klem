@@ -1869,6 +1869,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.adjectival.dap" => {
             "Separate adjective-forming -답다 from a nominal base, with ㅂ-irregular vowel attachment."
         }
+        "suffix.verb.hada" => {
+            "Separate -하다 from a source-listed -화하다 verb; its independently recorded nominal base keeps -화 distinct, while the suffix owns prefinals, endings and verbal attachment class. Whole lexical readings remain."
+        }
         "suffix.verb.doeda" => {
             "A source-listed passive verb formed from a nominal base and -되다; prefinals and endings belong to the suffix, while the whole lexical head remains a separate candidate."
         }
@@ -2192,7 +2195,7 @@ mod label_tests {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in [
-            "님", "들", "적", "답다", "되다", "이", "히", "쯤", "박이", "둥이", "시", "화",
+            "님", "들", "적", "답다", "되다", "하다", "이", "히", "쯤", "박이", "둥이", "시", "화",
         ] {
             forms.insert(format!("-{form}"), Suffix);
         }

@@ -213,7 +213,7 @@ impl Analysis {
                 && self.rules.iter().any(|r| r == "suffix.nominal.i");
             let noun_suffix = noun_i || ((bagi || dungi) && index == 0);
             let doeda_suffix =
-                crate::doeda_suffix::owner_class(lemma, &self.rules, &self.morphemes[cursor..])
+                crate::engine::derivational_class(lemma, &self.rules, &self.morphemes[cursor..])
                     .is_some();
             let mut derived_predicate = false;
             if lemma.kind == LemmaKind::Nominal && !noun_suffix {
@@ -231,6 +231,16 @@ impl Analysis {
                     .map(|m| m.form.as_str())
                     .collect::<Vec<_>>();
                 if suffixes.last() == Some(&"답다") {
+                    derived_predicate = true;
+                    suffixes.pop();
+                }
+                if suffixes.last() == Some(&"하다") {
+                    if crate::hada_suffix::owner_class(lemma, &self.rules, &self.morphemes[start..])
+                        .is_none()
+                        || !matches!(suffixes.as_slice(), ["하다"] | ["화", "하다"])
+                    {
+                        return None;
+                    }
                     derived_predicate = true;
                     suffixes.pop();
                 }

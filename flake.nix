@@ -294,6 +294,18 @@
                 ./tools/nominal_hwa_release.py
                 ./tools/nominal_hwa_performance.py
                 ./tools/test_nominal_hwa_release.py
+                ./tools/nominal_hwa_hada_release.py
+                ./tools/nominal_hwa_hada_performance.py
+                ./tools/test_nominal_hwa_hada_release.py
+                ./tools/nominal_hwa_hada_broad.py
+                ./tools/nominal_hwa_hada_corpora.py
+                ./tools/test_nominal_hwa_hada_corpora.py
+                ./tools/nominal_hwa_hada_audit.py
+                ./tools/test_nominal_hwa_hada_audit.py
+                ./tools/nominal_hwa_hada_runtime.py
+                ./tools/test_nominal_hwa_hada_runtime.py
+                ./src/hada_suffix.rs
+                ./web/tests/nominal-hwa-hada.mjs
                 ./web/tests/nominal-hwa.mjs
                 ./src/nominal_hwa.rs
                 ./src/nominal_si.rs
@@ -495,6 +507,18 @@
             python tools/nominal_hwa_corpora.py --verify --report docs/nominal-hwa-packaged-corpora.json.gz
             python tools/nominal_hwa_performance.py --verify
             python -m unittest discover -s tools -p 'test_nominal_hwa_release.py'
+            python tools/nominal_hwa_hada_audit.py --verify --comparison docs/nominal-hwa-hada-diagnostics.json.gz
+            python -m unittest discover -s tools -p 'test_nominal_hwa_hada_audit.py'
+            python tools/nominal_hwa_hada_runtime.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_hwa_hada_runtime.py'
+            python tools/nominal_hwa_hada_broad.py --verify
+            python tools/nominal_hwa_hada_corpora.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_hwa_hada_corpora.py'
+            python tools/nominal_hwa_hada_release.py --verify
+            python tools/nominal_hwa_hada_broad.py --verify --report docs/nominal-hwa-hada-packaged-observations.json.gz
+            python tools/nominal_hwa_hada_corpora.py --verify --report docs/nominal-hwa-hada-packaged-corpora.json.gz
+            python tools/nominal_hwa_hada_performance.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_hwa_hada_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

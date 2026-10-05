@@ -659,11 +659,11 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
     pub fn annotate(&mut self, analysis: &WordAnalysis) -> Result<Annotation> {
         let mut identity_origins = BTreeSet::new();
         for path in &analysis.analyses {
-            if !path
-                .rules
-                .iter()
-                .any(|r| r == "suffix.verb.doeda" || r == crate::nominal_hwa::RULE)
-            {
+            if !path.rules.iter().any(|r| {
+                r == "suffix.verb.doeda"
+                    || r == crate::nominal_hwa::RULE
+                    || r == crate::hada_suffix::RULE
+            }) {
                 continue;
             }
             let Some(order) = path.breakdown() else {

@@ -677,7 +677,7 @@ impl Annotation {
                 })
                 .unwrap_or(&[]);
             let suffix_class =
-                crate::doeda_suffix::owner_class(lemma, &analysis.rules, owner_morphemes);
+                crate::engine::derivational_class(lemma, &analysis.rules, owner_morphemes);
             let identity_source =
                 crate::doeda_identity::owned_source(lemma, &analysis.rules, owner_morphemes);
             let suffix_len = if suffix_class.is_some() {

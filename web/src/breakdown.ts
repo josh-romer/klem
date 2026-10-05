@@ -163,11 +163,14 @@ export function parts(
     // 하 + 어/었 is displayed as 하 + 여/였. Keep canonical lookup/index intact.
     const afterHa =
       previous &&
-      "lemma" in previous &&
-      a.lemmas[previous.lemma].text.endsWith("하다");
+      (("lemma" in previous &&
+        a.lemmas[previous.lemma].text.endsWith("하다")) ||
+        ("morpheme" in previous &&
+          a.morphemes[previous.morpheme].kind === "suffix" &&
+          a.morphemes[previous.morpheme].form === "하다"));
     const form = afterHa
       ? m.form.replace(/^어/, "여").replace(/^었/, "였")
-      : m.kind === "suffix" && ["답다", "되다"].includes(m.form)
+      : m.kind === "suffix" && ["답다", "되다", "하다"].includes(m.form)
         ? m.form.replace(/다$/, "")
         : m.form;
     return {

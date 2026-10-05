@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-04.
+Last reviewed: 2026-10-05.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -5504,7 +5504,77 @@ review remains open under the completion review below.
   의인화 records 擬人化; 정형 records 定形 while 정형화 records 定型化.
   Neither gains a nominal license from matching spelling. Unlisted passive heads,
   arbitrary bases and repeated -화 chains are excluded from this finite addition.
-  Separately sourced -화하다 heads, contextual judgments and independent
+  Separately sourced -화하다 verbal owners are now implemented in COV-022q
+  below. Contextual judgments and independent Korean-language review remain open.
+
+
+- [ ] **COV-022q — Native noun -하다 and nested -화하다 owners.** **Partial:
+  28 direct noun + -하다 owners and 22 independently licensed noun + -화 +
+  -하다 owners implemented; full Rust and packaged runtime checks passed.**
+  The [frozen source](nominal-hwa-hada-preflight.json.gz) retains 562 original
+  word results in three dictionary modes, 165 complete native entries, and
+  30 original annotated 화+하 rows with full sentences. The complete
+  [-하다 88475](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88475)
+  entry retains all six senses; the first sense records verb formation after
+  some nouns. Independent whole-noun and whole-verb origins license all 28
+  direct heads. The preflight's 22 `verbal_supported` flags describe deeper
+  base evidence; direct noun evidence does not resolve deeper base classes.
+  Thus 간소화 + 하다 and 의인화 + 하다 remain possible while 간소 + 화 + 하다
+  and the 義人 base before 擬人化 stay excluded. The generic owner expansion
+  retains whole candidates, ordered suffixes, prefinals, inflection, auxiliaries,
+  nominalization/copulas and shifted spelling-recovery indices.
+  The [source fixture](../tests/fixtures/nominal-hwa-hada-sources.json) and ledger
+  preserve 1,136 required and 18 forbidden judgments with separate `hwa-hada-`
+  IDs, plus every required path's frozen whole-head parent. Five
+  [focused tests](../tests/nominal_hwa_hada.rs) and all eleven prior -화/-시 tests
+  passed. Old ledger IDs, source captures and corpus gold remain unchanged.
+  [Twelve debug streams](nominal-hwa-hada-diagnostics.json.gz) verify 1,136 new
+  paths per dictionary mode over 549 surfaces, preserving original candidates,
+  readings and order. Dictionary identity uses the separately recorded verbal
+  whole heads at suffix index zero for direct splits and one for nested splits;
+  matches, differences and unknown origins remain separate from compatibility.
+  Eleven source/comparison mutation guards passed. The
+  [API/browser receipt](nominal-hwa-hada-runtime-checks.json.gz) verifies 1,124
+  encoded word calls, 2,272 ordered decompositions, 165 complete native endpoints,
+  ten diagrams and six exports. Two [additional browser controls](nominal-hwa-hada-browser-controls.json.gz)
+  preserve their original packaged results separately. The viewer displays 하,
+  and 하 + 였 for contracted 했, while retaining canonical suffix 하다 and
+  prefinal 었 in exports. Both screenshots were inspected; the frontend build
+  and nine runtime mutation guards passed. The full Rust all-targets suite
+  passed: 924 tests, one ignored, across 205 batches. Clippy, formatting and
+  the documentation test passed. The [broad comparison](nominal-hwa-hada-observations.json.gz)
+  preserves all eight streams: 1,128,312 records are byte-identical to the
+  preceding release. The [held-out comparison](nominal-hwa-hada-corpora.json.gz)
+  preserves 66,570 original gold rows and 32,096 raw word calls. Six surfaces
+  gain twelve decompositions, each reconstructed from its original whole-head
+  parent; gold outcomes remain unchanged. These additions and their original
+  contexts retain individual IDs for review. Four corpus evidence mutation
+  guards passed. The initial standalone evaluator
+  failed the CLI candidate-count cross-check; rebuilding it resolved the
+  mismatch, and the failed run remains separately recorded. Actual Nix builds
+  passed for Rust, web assets and inventory checks; the release suite passed
+  925 tests, one ignored, across 200 batches. The
+  [packaged receipt](nominal-hwa-hada-packaged-checks.json.gz) preserves all
+  twelve Unicode/cache/filter streams, 1,124 API word calls, 165 native entries,
+  ten browser diagrams and six exports. Both packaged screenshots were inspected.
+  [Packaged broad](nominal-hwa-hada-packaged-observations.json.gz) and
+  [corpus streams](nominal-hwa-hada-packaged-corpora.json.gz) exactly match the
+  debug comparisons. Eleven release/stream evidence guards passed. The
+  [novel cache receipt](nominal-hwa-hada-cache-parity.json) retains 179,112
+  records in each dictionary mode with cache budgets zero and 8 MiB; all three
+  pairs are byte-identical. [Eighty paired novel measurements](nominal-hwa-hada-performance.json)
+  use five interleaved pairs for each of eight workloads, with both versions
+  pinned to the same CPU after all own build/audit jobs finished. Median elapsed
+  changes range from -0.38% to +1.70%; load and frequency observations remain
+  part of the receipt, with no statistical-equivalence or causal claim. Three
+  timing mutation guards passed, bringing release/stream/timing guards to
+  fourteen. The [final Nix pass](nominal-hwa-hada-final-nix.log.gz) passed all
+  three checks, including the new packaged/performance receipts and guards;
+  the exact terminal log is archived. The primary preview serves the tested
+  package, with packaged assets and 126 fresh Unicode word calls verified.
+  This finite addition does not infer unrestricted -하다 splitting, add root
+  licenses for unresolved -화 bases, or resolve the other -하다 senses.
+  Further -시하다 heads remain COV-022o work. Contextual and independent
   Korean-language review remain open.
 
 ### P3: dictionary and representation boundaries

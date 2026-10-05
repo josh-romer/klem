@@ -13,6 +13,7 @@ mod doeda_originless_forms;
 mod doeda_suffix;
 mod engine;
 mod grammar;
+mod hada_suffix;
 mod hangul;
 mod nominal_hwa;
 mod nominal_si;

@@ -19,6 +19,9 @@ pub(crate) fn owned_source(
     if lemma.kind != LemmaKind::Nominal {
         return None;
     }
+    if let Some(source) = crate::hada_suffix::owned_source(lemma, rules, morphs) {
+        return Some(source);
+    }
     if crate::nominal_hwa::owner(lemma, rules, morphs)
         && !morphs
             .get(1)

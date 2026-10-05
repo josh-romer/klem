@@ -2243,11 +2243,31 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
 // iteratively. Processing owners from right to left keeps original morpheme
 // insertion indices valid and avoids a recursion or bit-width cutoff.
 fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
+    add_predicate_suffixes(
+        out,
+        crate::doeda_suffix::formation,
+        "되다",
+        crate::doeda_suffix::rule,
+    );
+}
+fn add_hada_suffixes(out: &mut Vec<Analysis>) {
+    add_predicate_suffixes(out, crate::hada_suffix::formation, "하다", |_| {
+        crate::hada_suffix::RULE
+    });
+}
+fn add_predicate_suffixes(
+    out: &mut Vec<Analysis>,
+    formation: fn(&str) -> Option<(&'static str, LemmaKind, PredicateClass)>,
+    suffix: &str,
+    rule: fn(PredicateClass) -> &'static str,
+) {
     let original = out.len();
     for i in 0..original {
-        if !out[i].lemmas.iter().any(|l| {
-            l.kind == LemmaKind::Predicate && crate::doeda_suffix::formation(&l.text).is_some()
-        }) {
+        if !out[i]
+            .lemmas
+            .iter()
+            .any(|l| l.kind == LemmaKind::Predicate && formation(&l.text).is_some())
+        {
             continue;
         }
         let parent = out[i].clone();
@@ -2263,7 +2283,7 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
             if l.kind != LemmaKind::Predicate {
                 continue;
             }
-            let Some((base, kind, class)) = crate::doeda_suffix::formation(&l.text) else {
+            let Some((base, kind, class)) = formation(&l.text) else {
                 continue;
             };
             let rest = &order[position + 1..];
@@ -2285,7 +2305,7 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
             for j in 0..count {
                 let mut a = branches[j].clone();
                 a.lemmas[index] = lemma(base, kind);
-                a.morphemes.insert(at, morph("되다", MorphemeKind::Suffix));
+                a.morphemes.insert(at, morph(suffix, MorphemeKind::Suffix));
                 for path in &mut a.spelling_paths {
                     for recovery in path {
                         if recovery.morpheme_index >= at {
@@ -2293,7 +2313,7 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
                         }
                     }
                 }
-                a.rules.push(crate::doeda_suffix::rule(class).into());
+                a.rules.push(rule(class).into());
                 branches.push(a);
             }
         }
@@ -2526,6 +2546,15 @@ fn finite_intention_auxiliary(stem: &str, morphs: &[Morpheme]) -> bool {
             })
 }
 
+pub(crate) fn derivational_class(
+    lemma: &Lemma,
+    rules: &[String],
+    morphs: &[Morpheme],
+) -> Option<PredicateClass> {
+    crate::doeda_suffix::owner_class(lemma, rules, morphs)
+        .or_else(|| crate::hada_suffix::owner_class(lemma, rules, morphs))
+}
+
 fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary)
         && !a.rules.iter().any(|r| {
@@ -2535,6 +2564,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                     | "lexical.doeda.extended"
                     | "suffix.verb.doeda"
                     | "suffix.adjective.doeda"
+                    | "suffix.verb.hada"
                     | "compound.predicate.well_doeda"
             )
         })
@@ -2641,7 +2671,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             lemma.kind,
             LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
         );
-        let doeda_class = crate::doeda_suffix::owner_class(lemma, &a.rules, &a.morphemes[cursor..]);
+        let doeda_class = derivational_class(lemma, &a.rules, &a.morphemes[cursor..]);
         let mut class = if doeda_class.is_some() {
             doeda_class
         } else if lemma.kind == LemmaKind::Auxiliary {
@@ -2680,7 +2710,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                 class = Some(PredicateClass::Adjective);
                 inflected = true;
             }
-            if m.form == "되다" && doeda_class.is_some() {
+            if matches!(m.form.as_str(), "되다" | "하다") && doeda_class.is_some() {
                 inflected = true;
             }
             cursor += 1;
@@ -5266,6 +5296,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
     });
     add_lexical_doeda_roles(&mut out);
     add_doeda_suffixes(&mut out);
+    add_hada_suffixes(&mut out);
     add_listed_nominal_decompositions(&mut out);
     add_predicate_compounds(&mut out);
     // Noun/adverb -이 homonyms retain distinct functions despite identical

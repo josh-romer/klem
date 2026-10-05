@@ -16,9 +16,16 @@ from lexical_nada_audit import ROOT, read, sha, write
 from lexical_nada_compare import canon
 
 
-def capture(args):
+def capture(
+    args,
+    *,
+    preflight=PREFLIGHT,
+    diagnostics=DIAGNOSTICS,
+    fixture_path=FIXTURE,
+    expected_words=254,
+):
     assert not args.output.exists()
-    source, diagnostic, fixture = read(PREFLIGHT), read(DIAGNOSTICS), read(FIXTURE)
+    source, diagnostic, fixture = read(preflight), read(diagnostics), read(fixture_path)
     cli = args.cli.resolve()
     db = ROOT / "data/dictionaries/krdict/krdict.db"
     assert sha(db) == source["dictionary_sha256"]
@@ -60,7 +67,7 @@ def capture(args):
         if r["kind"] == "word"
     }
     words = sorted(expected)
-    assert len(words) == 254
+    assert len(words) == expected_words
     batches = []
     for encoding in ("NFC", "NFD"):
         chunks, chunk = [], []
@@ -179,9 +186,9 @@ def capture(args):
         {
             "schema_version": 1,
             "checklist": "COV-022m",
-            "preflight_sha256": sha(PREFLIGHT),
-            "diagnostics_sha256": sha(DIAGNOSTICS),
-            "fixture_sha256": sha(FIXTURE),
+            "preflight_sha256": sha(preflight),
+            "diagnostics_sha256": sha(diagnostics),
+            "fixture_sha256": sha(fixture_path),
             "cli_sha256": sha(cli),
             "dictionary_sha256": sha(db),
             "release_parity": parity,

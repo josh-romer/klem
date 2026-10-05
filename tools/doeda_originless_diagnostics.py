@@ -20,12 +20,18 @@ REPORT = ROOT / "docs/doeda-originless-diagnostics.json.gz"
 
 
 class OriginlessAudit(SuffixAudit):
-    def __init__(self, source):
+    def __init__(
+        self, source, *, formations=None, change_namespace="doeda-originless-"
+    ):
         super().__init__(
             source["original_parent_components"],
             original_words=words(source["before_streams"]["raw"]),
         )
-        self.formations = {f["head"]: f for f in read(FIXTURE)["formations"]}
+        self.formations = {
+            f["head"]: f
+            for f in (read(FIXTURE)["formations"] if formations is None else formations)
+        }
+        self.change_namespace = change_namespace
         self.upgrades = []
 
     def word(self, before, after):
@@ -66,7 +72,7 @@ class OriginlessAudit(SuffixAudit):
         super().remember(category, surface, before, after, location)
         key = canon([category, surface, before, after])
         self.changes[key]["id"] = (
-            "doeda-originless-"
+            self.change_namespace
             + category
             + "-"
             + hashlib.sha256(key.encode()).hexdigest()[:24]
@@ -108,9 +114,11 @@ def check_identity(stream, components, forms):
                     assert entry["derivational_identity"] == {
                         "relation": "unknown",
                         "morpheme_index": at,
-                        "expected_origins": [],
+                        "expected_origins": f.get("expected_origins", []),
                         "whole_entries": f["whole_entries"],
-                        "whole_origins_complete": False,
+                        "whole_origins_complete": f.get(
+                            "whole_origins_complete", False
+                        ),
                     }
                     total += 1
     return total

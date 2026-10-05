@@ -272,7 +272,8 @@ pub(crate) fn formation(head: &str) -> Option<(&'static str, LemmaKind, Predicat
         return Some((base, kind, class));
     }
     // Missing recorded origins do not exclude a finite formation supported by
-    // separately reviewed native noun/verb definitions and tagged contexts.
+    // separately reviewed native noun/verb definitions. Available tagged
+    // contexts are tracked separately; missing origins stay unknown.
     if let Some(source) = crate::doeda_originless_forms::source(head.strip_suffix("되다")?) {
         return Some((source.base, LemmaKind::Nominal, PredicateClass::Verb));
     }

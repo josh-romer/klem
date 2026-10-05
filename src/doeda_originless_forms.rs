@@ -35,6 +35,12 @@ const SOURCES: &[OriginSource] = &[
         whole_origins_complete: false,
     },
     OriginSource {
+        base: "대칭",
+        expected_origins: &["對稱"],
+        whole_entries: &["krdict:83732"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
         base: "되풀이",
         expected_origins: &[],
         whole_entries: &["krdict:14935"],
@@ -99,6 +105,12 @@ const SOURCES: &[OriginSource] = &[
         expected_origins: &[],
         whole_entries: &["krdict:74011"],
         whole_origins_complete: false,
+    },
+    OriginSource {
+        base: "첨삭",
+        expected_origins: &["添削"],
+        whole_entries: &["krdict:77496"],
+        whole_origins_complete: true,
     },
     OriginSource {
         base: "풀이",

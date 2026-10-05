@@ -5208,6 +5208,60 @@ review remains open under the completion review below.
   every summary and checks workload flags, pair order and captured context.
   Sixty-three original native leads still need other base,
   nested-suffix or lexical-construction review; this does not close COV-022m.
+  **Known whole origins with missing noun origins:** the supplemental
+  [source checkpoint](doeda-partial-origin-preflight.json.gz) links 첨삭 (77493)
+  with 첨삭되다 (77496) and 대칭 (46854) with 대칭되다 (83732) through complete
+  definitions and their paired 하다 entries. Whole heads record 添削/對稱;
+  those origins are not copied into the nouns, whose native origin fields are
+  empty. These are attributed agent judgments under suffix 74902 sense 1,
+  with contextual and independent review pending. Unrelated 개비 (thin stick
+  or counting unit) and 상치 (redirect to lettuce) remain controls against
+  substitution into 改備되다 and 相馳되다. The
+  [supplemental fixture](../tests/fixtures/doeda-partial-origin-sources.json)
+  assigns twenty required and twenty control IDs. Five
+  [Rust tests](../tests/doeda_partial_origins.rs) cover the production importer,
+  original candidate and whole-parent order, owned suffix components, NFC/NFD,
+  four cache budgets, both dictionary filters, unknown identity, plain-noun
+  metadata after cache warming and later auxiliaries. None of these four heads
+  occurs in the six pinned annotated corpus files; no corpus gold is invented.
+  The [CLI checkpoint](doeda-partial-origin-diagnostics.json.gz) keeps all 44
+  original words in three filters: 264 records, twenty changed words and thirty
+  individual additions per mode. Every addition retains its original whole
+  owner, with thirty unknown identity assessments per mode. Cached, uncached
+  and NFD results agree. Source and diagnostic mutation guards are included
+  in the Nix inventory check. The
+  [packaged checkpoint](doeda-partial-origin-packaged-checks.json.gz) records 904
+  passing Rust tests, one ignored test, 88 NFC/NFD API word checks, four ordinary
+  noun checks and fifteen complete native entry endpoints. All 264 source CLI
+  records agree with the diagnostic captures. Six browser diagrams and exports
+  retain both the whole-head alternative and the source-owned split with unknown
+  identity; desktop and 390-pixel mobile layouts were inspected. The shared
+  [API runner](../tools/doeda_partial_origin_runtime.py),
+  [browser runner](../web/tests/doeda-originless.mjs) (`KLEM_BROWSER_SCOPE=partial-origin`),
+  and [packaged verifier](../tools/doeda_partial_origin_package.py) bind evidence
+  to this supplemental fixture. Original checkpoint receipts stay unchanged.
+  [Broad comparisons](doeda-partial-origin-observations.json.gz) keep all eight
+  streams and 1,128,312 records byte-identical. The
+  [held-out corpus checkpoint](doeda-partial-origin-corpora.json.gz) retains fresh
+  evaluator reports for all 66,570 original gold rows and the complete current
+  map of 32,096 surfaces. Every output, candidate count, gold outcome and summary
+  equals the prior checkpoint. Immutable prior maps and complete sentences are
+  referenced by hash rather than copied again. The
+  [same-CPU timing archive](doeda-partial-origin-performance.json) preserves
+  eighty interleaved fresh-process samples across eight full-novel workloads.
+  Median changes range from -1.10% to +0.34%; cached unannotated processing is
+  0.836 seconds, cached raw dictionary output is 1.719 seconds, and compatible
+  filtering with spacing is 2.362 seconds. Peak process RSS is 38.34 MiB.
+  These local samples include startup and serialization and establish neither
+  statistical equivalence nor a portable performance guarantee.
+  [Release mutation guards](../tools/test_doeda_partial_origin_release.py)
+  reject missing API encodings/native endpoints/noun controls, inferred identity
+  matches, lost whole-head alternatives, changed CLI bytes, borrowed source
+  glosses, omitted broad streams, changed gold/word maps and incomplete or
+  altered timing samples. These checks join the source/diagnostic gates in the
+  flake's inventory check; contextual and independent review remain separate.
+  This implements two of the remaining sixty-three source leads; the other
+  sixty-one still need role, nested-suffix or lexical-construction review.
   The [native packaged checks](doeda-native-packaged-checks.json.gz) retain the
   successful Nix build (890 Rust tests passed, zero failed, one ignored), full
   release/debug parity across all 94,200 records, 31,400 NFC/NFD API case checks,

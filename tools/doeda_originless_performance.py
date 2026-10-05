@@ -14,12 +14,18 @@ PREVIOUS = ROOT / "docs/doeda-identity-packaged-checks.json.gz"
 REPORT = ROOT / "docs/doeda-originless-performance.json"
 
 
-def inspect(report):
-    comparison, package, previous = read(COMPARISON), read(PACKAGE), read(PREVIOUS)
+def inspect(
+    report, *, comparison_path=COMPARISON, package_path=PACKAGE, previous_path=PREVIOUS
+):
+    comparison, package, previous = (
+        read(comparison_path),
+        read(package_path),
+        read(previous_path),
+    )
     assert report["schema_version"] == 1 and report["checklist"] == "COV-022m"
-    assert report["comparison_sha256"] == sha(COMPARISON)
-    assert report["package_sha256"] == sha(PACKAGE)
-    assert report["previous_package_sha256"] == sha(PREVIOUS)
+    assert report["comparison_sha256"] == sha(comparison_path)
+    assert report["package_sha256"] == sha(package_path)
+    assert report["previous_package_sha256"] == sha(previous_path)
     assert report["before_cli_sha256"] == previous["cli_sha256"]
     assert report["cli_sha256"] == package["cli_sha256"]
     for key in ("before_cli_sha256", "cli_sha256", "dictionary_sha256"):

@@ -267,6 +267,16 @@
                 ./tools/doeda_originless_corpora.py
                 ./tools/doeda_originless_performance.py
                 ./tools/test_doeda_originless_release.py
+                ./tools/doeda_partial_origins.py
+                ./tools/doeda_partial_origin_diagnostics.py
+                ./tools/test_doeda_partial_origins.py
+                ./tools/test_doeda_partial_origin_diagnostics.py
+                ./tools/doeda_partial_origin_runtime.py
+                ./tools/doeda_partial_origin_package.py
+                ./tools/doeda_partial_origin_observations.py
+                ./tools/doeda_partial_origin_corpora.py
+                ./tools/doeda_partial_origin_performance.py
+                ./tools/test_doeda_partial_origin_release.py
                 ./web/tests/doeda-originless.mjs
                 ./web/tests/doeda-identity.mjs
                 ./src/doeda_native_forms.rs
@@ -412,6 +422,15 @@
             python tools/doeda_originless_corpora.py --verify
             python tools/doeda_originless_performance.py --verify
             python -m unittest discover -s tools -p 'test_doeda_originless_release.py'
+            python tools/doeda_partial_origins.py --verify
+            python tools/doeda_partial_origin_diagnostics.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_partial_origins.py'
+            python -m unittest discover -s tools -p 'test_doeda_partial_origin_diagnostics.py'
+            python tools/doeda_partial_origin_package.py --verify
+            python tools/doeda_partial_origin_observations.py --verify
+            python tools/doeda_partial_origin_corpora.py --verify
+            python tools/doeda_partial_origin_performance.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_partial_origin_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

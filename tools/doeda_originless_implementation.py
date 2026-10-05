@@ -14,11 +14,15 @@ MODULE = ROOT / "src/doeda_originless_forms.rs"
 LMF = ROOT / "tests/fixtures/krdict-doeda-originless.json"
 PROVENANCE = ROOT / "tests/fixtures/doeda-originless-import.json"
 REGRESSIONS = ROOT / "tests/fixtures/doeda-originless-before.json"
+SUPPLEMENT = ROOT / "tests/fixtures/doeda-partial-origin-sources.json"
 
 
 def module_text():
-    forms = sorted(read(FIXTURE)["formations"], key=lambda f: f["base"])
-    assert len(forms) == len({f["base"] for f in forms}) == 17
+    original = read(FIXTURE)["formations"]
+    supplemental = read(SUPPLEMENT)["formations"]
+    assert len(original) == 17 and len(supplemental) == 2
+    forms = sorted(original + supplemental, key=lambda f: f["base"])
+    assert len(forms) == len({f["base"] for f in forms}) == 19
     rows = []
     for f in forms:
         assert f["head"] == f["base"] + "되다"
@@ -28,12 +32,14 @@ def module_text():
             "unknown",
         )
         entries = json.dumps(f["whole_entries"], ensure_ascii=False)
+        origins = json.dumps(f.get("expected_origins", []), ensure_ascii=False)
+        complete = str(f.get("whole_origins_complete", False)).lower()
         rows.append(
             "    OriginSource {\n"
             f'        base: "{f["base"]}",\n'
-            "        expected_origins: &[],\n"
+            f"        expected_origins: &{origins},\n"
             f"        whole_entries: &{entries},\n"
-            "        whole_origins_complete: false,\n"
+            f"        whole_origins_complete: {complete},\n"
             "    },"
         )
     return (
@@ -112,7 +118,7 @@ def verify():
         if (ROOT / path).exists():
             assert sha(ROOT / path) == digest
     print(
-        "Verified 17 semantic formations, unknown origins and",
+        "Verified 17 original and 2 supplemental semantic formations, unknown noun origins and",
         len(native),
         "native importer entries.",
     )

@@ -10,8 +10,10 @@ const url=process.env.KLEM_WEB_URL,cli=process.env.KLEM_BIN;
 const db=process.env.KLEM_DICTIONARY||root+'/data/dictionaries/krdict/krdict.db';
 const prefix=process.env.KLEM_BROWSER_OUTPUT_PREFIX||'/tmp/klem-doeda-originless';
 assert.ok(url&&cli,'Set KLEM_WEB_URL and KLEM_BIN to the running server and matching CLI.');
-const fixture=JSON.parse(await readFile(root+'/tests/fixtures/doeda-originless-formations.json','utf8'));
-const selected=[{word:'되풀이됐어요',base:'되풀이'},{word:'마무리돼요',base:'마무리'},{word:'풀이되는',base:'풀이'}];
+const supplemental=process.env.KLEM_BROWSER_SCOPE==='partial-origin';
+const fixturePath=root+'/tests/fixtures/'+(supplemental?'doeda-partial-origin-sources.json':'doeda-originless-formations.json');
+const fixture=JSON.parse(await readFile(fixturePath,'utf8'));
+const selected=supplemental?[{word:'첨삭됐어요',base:'첨삭'},{word:'대칭돼요',base:'대칭'},{word:'첨삭되는',base:'첨삭'}]:[{word:'되풀이됐어요',base:'되풀이'},{word:'마무리돼요',base:'마무리'},{word:'풀이되는',base:'풀이'}];
 const {chromium}=createRequire(root+'/web/package.json')('playwright');
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox']});
 const checks=[],diagrams=[],responses=[],errors=[];
@@ -44,7 +46,7 @@ try {
    assert.ok(index>=0&&wholeIndex>=0,'Keep the original whole-head alternative');
    const nounId=formation.noun_entries[0];
    const assessed=record.dictionary.readings[index].lemmas[0].entries.find(e=>e.id===nounId);
-   assert.deepEqual(assessed.derivational_identity,{relation:'unknown',morpheme_index:0,expected_origins:[],whole_entries:formation.whole_entries,whole_origins_complete:false});
+   assert.deepEqual(assessed.derivational_identity,{relation:'unknown',morpheme_index:0,expected_origins:formation.expected_origins||[],whole_entries:formation.whole_entries,whole_origins_complete:formation.whole_origins_complete||false});
    const part=sentence.locator('.breakdown-word').filter({has:page.locator('.breakdown-surface > span',{hasText:new RegExp('^'+c.word.normalize(encoding)+'$')})});
    await part.locator('select').selectOption(String(wholeIndex));
    const wholeForm=await part.locator('.breakdown-part').first().locator('.part-form').textContent();
@@ -67,6 +69,6 @@ try {
  }
  assert.deepEqual(errors,[]);
  const hash=async path=>createHash('sha256').update(await readFile(path)).digest('hex');
- await writeFile(prefix+'-browser.json',JSON.stringify({schema_version:1,checklist:'COV-022m',cli_sha256:await hash(cli),dictionary_sha256:await hash(db),fixture_sha256:await hash(root+'/tests/fixtures/doeda-originless-formations.json'),responses,checks,diagrams,browser_errors:errors},null,2)+'\n');
+ await writeFile(prefix+'-browser.json',JSON.stringify({schema_version:1,checklist:'COV-022m',cli_sha256:await hash(cli),dictionary_sha256:await hash(db),fixture_sha256:await hash(fixturePath),responses,checks,diagrams,browser_errors:errors},null,2)+'\n');
  console.log('Verified six source-owned diagrams, unknown identity, whole alternatives, source clicks, exports, Unicode and mobile layout.');
 } finally {await browser.close();}

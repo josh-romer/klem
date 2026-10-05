@@ -21,20 +21,28 @@ def digest(text):
     return hashlib.sha256(text.encode()).hexdigest()
 
 
-def inspect_evidence(report):
-    source, diagnostic, fixture = read(PREFLIGHT), read(DIAGNOSTICS), read(FIXTURE)
+def inspect_evidence(
+    report,
+    *,
+    preflight=PREFLIGHT,
+    diagnostics=DIAGNOSTICS,
+    fixture_path=FIXTURE,
+    expected_words=254,
+    selected=None,
+):
+    source, diagnostic, fixture = read(preflight), read(diagnostics), read(fixture_path)
     assert report["schema_version"] == 1 and report["checklist"] == "COV-022m"
-    assert report["preflight_sha256"] == sha(PREFLIGHT)
-    assert report["diagnostics_sha256"] == sha(DIAGNOSTICS)
-    assert report["fixture_sha256"] == sha(FIXTURE)
+    assert report["preflight_sha256"] == sha(preflight)
+    assert report["diagnostics_sha256"] == sha(diagnostics)
+    assert report["fixture_sha256"] == sha(fixture_path)
     assert report["dictionary_sha256"] == source["dictionary_sha256"]
     runtime, browser = report["runtime"], report["browser"]
     for capture in (runtime, browser):
         assert capture["cli_sha256"] == report["cli_sha256"]
         assert capture["dictionary_sha256"] == report["dictionary_sha256"]
-        assert capture["fixture_sha256"] == sha(FIXTURE)
-    assert runtime["preflight_sha256"] == sha(PREFLIGHT)
-    assert runtime["diagnostics_sha256"] == sha(DIAGNOSTICS)
+        assert capture["fixture_sha256"] == sha(fixture_path)
+    assert runtime["preflight_sha256"] == sha(preflight)
+    assert runtime["diagnostics_sha256"] == sha(diagnostics)
     assert runtime["native_entries"] == source["complete_native_entries"]
     assert set(runtime["release_parity"]) == {"raw", "headword", "compatible"}
     for mode, receipt in runtime["release_parity"].items():
@@ -96,7 +104,11 @@ def inspect_evidence(report):
                             }
         check_identity(api["records"], components, fixture["formations"])
     assert all(words == sorted(expected) for words in coverage.values())
-    assert runtime["words_checked"] == sum(map(len, coverage.values())) == 508
+    assert (
+        runtime["words_checked"]
+        == sum(map(len, coverage.values()))
+        == 2 * expected_words
+    )
     controls = runtime["ordinary_noun_controls"]
     assert [c["encoding"] for c in controls] == ["NFC", "NFD"]
     nouns = [f["base"] for f in fixture["formations"]]
@@ -124,7 +136,7 @@ def inspect_evidence(report):
                 if l["lemma"]["kind"] != "root"
                 for e in l["entries"]
             )
-    selected = [
+    selected = selected or [
         ("되풀이됐어요", "되풀이"),
         ("마무리돼요", "마무리"),
         ("풀이되는", "풀이"),
@@ -183,9 +195,9 @@ def inspect_evidence(report):
         assert d["identity"] == {
             "relation": "unknown",
             "morpheme_index": 0,
-            "expected_origins": [],
+            "expected_origins": f.get("expected_origins", []),
             "whole_entries": f["whole_entries"],
-            "whole_origins_complete": False,
+            "whole_origins_complete": f.get("whole_origins_complete", False),
         }
         assert d["base"] == base and d["entry"] == f["noun_entries"][0]
         assert d["label"] == (api["glosses"][d["entry"]] or "No English gloss")
@@ -203,9 +215,15 @@ def inspect_evidence(report):
     }
 
 
-def inspect(report):
-    result = inspect_evidence(report)
-    diagnostic = read(DIAGNOSTICS)
+def inspect(
+    report,
+    *,
+    rust_expected=(899, 1, 195),
+    nix_checks=("klem", "web-assets", "inventory-review"),
+    **scope,
+):
+    result = inspect_evidence(report, **scope)
+    diagnostic = read(scope.get("diagnostics", DIAGNOSTICS))
     runtime = report["runtime"]
     assert report["implementation_files"] == diagnostic["implementation_files"]
     for snap in [
@@ -220,9 +238,9 @@ def inspect(report):
     counts = re.findall(
         r"klem> test result: ok\. (\d+) passed; 0 failed; (\d+) ignored;", log
     )
-    assert report["rust_passed"] == sum(int(p) for p, _ in counts) == 899
-    assert report["rust_ignored"] == sum(int(i) for _, i in counts) == 1
-    assert report["rust_batches"] == len(counts) == 195
+    assert report["rust_passed"] == sum(int(p) for p, _ in counts) == rust_expected[0]
+    assert report["rust_ignored"] == sum(int(i) for _, i in counts) == rust_expected[1]
+    assert report["rust_batches"] == len(counts) == rust_expected[2]
     assert report["nix_exit_code"] == 0
     assert report["desktop_inspected"] and report["mobile_inspected"]
     assert set(report["screenshots"]) == {"desktop", "mobile"}
@@ -230,13 +248,26 @@ def inspect(report):
     assert all(
         re.fullmatch(r"[a-f0-9]{64}", v) for v in report["asset_files_sha256"].values()
     )
-    for package in ("klem", "web-assets", "inventory-review"):
+    assert set(report["nix_outputs"]) == set(nix_checks)
+    for package in nix_checks:
         assert report["nix_outputs"][package] in log
     return {"rust_passed": report["rust_passed"], **result}
 
 
-def freeze(args):
-    assert not REPORT.exists()
+def freeze(
+    args,
+    *,
+    report_path=REPORT,
+    preflight=PREFLIGHT,
+    diagnostics=DIAGNOSTICS,
+    fixture_path=FIXTURE,
+    rust_expected=(899, 1, 195),
+    expected_words=254,
+    selected=None,
+    nix_checks=("klem", "web-assets", "inventory-review"),
+    screenshot_prefix="/tmp/klem-doeda-originless",
+):
+    assert not report_path.exists()
     runtime, browser = read(args.runtime), read(args.browser)
     log = args.nix_log.read_text()
     counts = re.findall(
@@ -246,9 +277,9 @@ def freeze(args):
     report = {
         "schema_version": 1,
         "checklist": "COV-022m",
-        "preflight_sha256": sha(PREFLIGHT),
-        "diagnostics_sha256": sha(DIAGNOSTICS),
-        "fixture_sha256": sha(FIXTURE),
+        "preflight_sha256": sha(preflight),
+        "diagnostics_sha256": sha(diagnostics),
+        "fixture_sha256": sha(fixture_path),
         "cli_sha256": runtime["cli_sha256"],
         "dictionary_sha256": runtime["dictionary_sha256"],
         "runtime": runtime,
@@ -256,16 +287,24 @@ def freeze(args):
         "nix_log": {"text": log, "sha256": sha(args.nix_log)},
         "nix_exit_code": args.nix_exit_code,
         "nix_outputs": {
-            "klem": str(args.klem),
-            "web-assets": str(args.assets),
-            "inventory-review": str(args.inventory),
+            name: str(
+                getattr(
+                    args,
+                    {
+                        "klem": "klem",
+                        "web-assets": "assets",
+                        "inventory-review": "inventory",
+                    }[name],
+                )
+            )
+            for name in nix_checks
         },
         "rust_passed": sum(int(p) for p, _ in counts),
         "rust_ignored": sum(int(i) for _, i in counts),
         "rust_batches": len(counts),
         "implementation_files": {
             p: {"text": (ROOT / p).read_text(), "sha256": sha(ROOT / p)}
-            for p in read(DIAGNOSTICS)["implementation_files"]
+            for p in read(diagnostics)["implementation_files"]
         },
         "browser_producer": {"text": producer.read_text(), "sha256": sha(producer)},
         "desktop_inspected": args.desktop_inspected,
@@ -281,7 +320,7 @@ def freeze(args):
             if p.is_file()
         },
         "screenshots": {
-            name: {"sha256": sha(Path("/tmp/klem-doeda-originless-" + name + ".png"))}
+            name: {"sha256": sha(Path(screenshot_prefix + "-" + name + ".png"))}
             for name in ("desktop", "mobile")
         },
         "scope": "Complete finite semantic source API cohort in NFC/NFD, ordinary noun controls, release/debug parity, complete native endpoints, actual browser alternatives/source clicks and six exports. Broad/corpus/timing and contextual or independent review remain separate.",
@@ -289,8 +328,19 @@ def freeze(args):
         "independent_review": "pending",
     }
     assert sha(args.klem / "bin/klem") == report["cli_sha256"]
-    print(inspect(report))
-    write(REPORT, report)
+    print(
+        inspect(
+            report,
+            preflight=preflight,
+            diagnostics=diagnostics,
+            fixture_path=fixture_path,
+            rust_expected=rust_expected,
+            expected_words=expected_words,
+            selected=selected,
+            nix_checks=nix_checks,
+        )
+    )
+    write(report_path, report)
 
 
 if __name__ == "__main__":

@@ -26,13 +26,23 @@ def word_records(value):
             yield from word_records(child)
 
 
-def inspect(report):
-    source, previous, fixture = read(PREFLIGHT), read(PREVIOUS), read(FIXTURE)
+def inspect(
+    report,
+    *,
+    preflight=PREFLIGHT,
+    previous_path=PREVIOUS,
+    fixture_path=FIXTURE,
+    package_path=PACKAGE,
+    expected_counts=None,
+    expected_additions=8,
+    change_namespace="doeda-originless-",
+):
+    source, previous, fixture = read(preflight), read(previous_path), read(fixture_path)
     assert report["schema_version"] == 1 and report["checklist"] == "COV-022m"
-    assert report["prior_sha256"] == sha(PREVIOUS)
-    assert report["preflight_sha256"] == sha(PREFLIGHT)
-    assert report["fixture_sha256"] == sha(FIXTURE)
-    assert report["cli_sha256"] == read(PACKAGE)["cli_sha256"]
+    assert report["prior_sha256"] == sha(previous_path)
+    assert report["preflight_sha256"] == sha(preflight)
+    assert report["fixture_sha256"] == sha(fixture_path)
+    assert report["cli_sha256"] == read(package_path)["cli_sha256"]
     assert report["before_cli_sha256"] == previous["cli_sha256"] == source["cli_sha256"]
     assert (
         report["dictionary_sha256"]
@@ -46,7 +56,11 @@ def inspect(report):
     validate_components(report["original_parent_components"], list(words.values()))
     after = [p["after"] for p in report["changed_record_pairs"]]
     validate_components(report["owned_components"], after)
-    audit = OriginlessAudit(source)
+    audit = OriginlessAudit(
+        dict(source, original_parent_components=report["original_parent_components"]),
+        formations=fixture["formations"],
+        change_namespace=change_namespace,
+    )
     audit.components = report["original_parent_components"]
     audit.original_words = words
     audit.words = {
@@ -82,14 +96,18 @@ def inspect(report):
         if not current["changed_records"]:
             assert current["after_jsonl_sha256"] == current["before_jsonl_sha256"]
     assert sum(c["records"] for c in report["comparisons"]) == 1128312
-    assert dict(counts) == {
-        "candidate-raw": 6,
-        "candidate-headword": 6,
-        "candidate-compatible": 6,
-    }
+    assert dict(counts) == (
+        expected_counts
+        if expected_counts is not None
+        else {
+            "candidate-raw": 6,
+            "candidate-headword": 6,
+            "candidate-compatible": 6,
+        }
+    )
     assert (
         report["changes"] == list(audit.changes.values())
-        and len(report["changes"]) == 8
+        and len(report["changes"]) == expected_additions
     )
     assert report["origin_lookup_upgrades"] == audit.upgrades
     identity = sum(

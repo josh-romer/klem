@@ -19,9 +19,18 @@ pub(crate) fn owned_source(
     if lemma.kind != LemmaKind::Nominal {
         return None;
     }
+    if crate::nominal_hwa::owner(lemma, rules, morphs)
+        && !morphs
+            .get(1)
+            .is_some_and(|m| m.kind == crate::MorphemeKind::Suffix && m.form == "되다")
+    {
+        return crate::nominal_hwa::nominal_identity(&lemma.text);
+    }
     let class = crate::doeda_suffix::owner_class(lemma, rules, morphs)?;
     if crate::nominal_si::passive_owner(lemma, rules, morphs) {
         crate::nominal_si::identity(&lemma.text)
+    } else if crate::nominal_hwa::passive_owner(lemma, rules, morphs) {
+        crate::nominal_hwa::identity(&lemma.text)
     } else {
         source(&lemma.text, class)
     }

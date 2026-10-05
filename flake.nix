@@ -285,6 +285,17 @@
                 ./tools/nominal_si_release.py
                 ./tools/nominal_si_performance.py
                 ./tools/test_nominal_si_release.py
+                ./tools/nominal_hwa_audit.py
+                ./tools/test_nominal_hwa_audit.py
+                ./tools/nominal_hwa_broad.py
+                ./tools/nominal_hwa_corpora.py
+                ./tools/nominal_hwa_runtime.py
+                ./tools/test_nominal_hwa_runtime.py
+                ./tools/nominal_hwa_release.py
+                ./tools/nominal_hwa_performance.py
+                ./tools/test_nominal_hwa_release.py
+                ./web/tests/nominal-hwa.mjs
+                ./src/nominal_hwa.rs
                 ./src/nominal_si.rs
                 ./web/tests/nominal-si.mjs
                 ./web/tests/well-doeda.mjs
@@ -473,6 +484,17 @@
             python tools/nominal_si_corpora.py --verify --report docs/nominal-si-packaged-corpora.json.gz
             python tools/nominal_si_performance.py --verify
             python -m unittest discover -s tools -p 'test_nominal_si_release.py'
+            python tools/nominal_hwa_audit.py --verify --comparison docs/nominal-hwa-diagnostics.json.gz
+            python -m unittest discover -s tools -p 'test_nominal_hwa_audit.py'
+            python tools/nominal_hwa_broad.py --verify
+            python tools/nominal_hwa_corpora.py --verify
+            python tools/nominal_hwa_runtime.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_hwa_runtime.py'
+            python tools/nominal_hwa_release.py --verify
+            python tools/nominal_hwa_broad.py --verify --report docs/nominal-hwa-packaged-observations.json.gz
+            python tools/nominal_hwa_corpora.py --verify --report docs/nominal-hwa-packaged-corpora.json.gz
+            python tools/nominal_hwa_performance.py --verify
+            python -m unittest discover -s tools -p 'test_nominal_hwa_release.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

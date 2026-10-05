@@ -237,11 +237,15 @@ impl Analysis {
                 if suffixes.last() == Some(&"되다") {
                     if !doeda_suffix
                         || (suffixes.len() != 1
-                            && !crate::nominal_si::passive_owner(
+                            && !(crate::nominal_si::passive_owner(
                                 lemma,
                                 &self.rules,
                                 &self.morphemes[start..],
-                            ))
+                            ) || crate::nominal_hwa::passive_owner(
+                                lemma,
+                                &self.rules,
+                                &self.morphemes[start..],
+                            )))
                     {
                         return None;
                     }
@@ -260,6 +264,10 @@ impl Analysis {
                         | ["시", "들"]
                         | ["시", "쯤"]
                         | ["시", "들", "쯤"]
+                        | ["화"]
+                        | ["화", "들"]
+                        | ["화", "쯤"]
+                        | ["화", "들", "쯤"]
                         | ["쯤"]
                         | ["님", "쯤"]
                         | ["적", "쯤"]
@@ -271,6 +279,11 @@ impl Analysis {
                 }
                 if suffixes.first() == Some(&"시")
                     && !crate::nominal_si::owner(lemma, &self.rules, &self.morphemes[start..])
+                {
+                    return None;
+                }
+                if suffixes.first() == Some(&"화")
+                    && !crate::nominal_hwa::owner(lemma, &self.rules, &self.morphemes[start..])
                 {
                     return None;
                 }

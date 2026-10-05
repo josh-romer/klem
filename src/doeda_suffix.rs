@@ -303,7 +303,9 @@ pub(crate) fn owner_class(
     rules: &[String],
     morphs: &[Morpheme],
 ) -> Option<PredicateClass> {
-    if crate::nominal_si::passive_owner(lemma, rules, morphs) {
+    if crate::nominal_si::passive_owner(lemma, rules, morphs)
+        || crate::nominal_hwa::passive_owner(lemma, rules, morphs)
+    {
         return Some(PredicateClass::Verb);
     }
     if !morphs

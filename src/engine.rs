@@ -44,6 +44,15 @@ fn listed_noun_prefix(word: &str) -> Option<Analysis> {
 }
 
 fn listed_noun_derivations(word: &str) -> Vec<Analysis> {
+    if let Some(base) = crate::nominal_hwa::nominal(word) {
+        return vec![Analysis {
+            lemmas: vec![lemma(base, LemmaKind::Nominal)],
+            morphemes: vec![morph("화", MorphemeKind::Suffix)],
+            rules: vec![crate::nominal_hwa::RULE.into()],
+            unchanged: false,
+            spelling_paths: Vec::new(),
+        }];
+    }
     if let Some(base) = crate::nominal_si::nominal(word) {
         return vec![Analysis {
             lemmas: vec![lemma(base, LemmaKind::Nominal)],
@@ -2294,12 +2303,34 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
     }
 }
 
-fn add_si_decompositions(out: &mut Vec<Analysis>) {
+fn add_listed_nominal_decompositions(out: &mut Vec<Analysis>) {
+    add_nominal_decompositions(
+        out,
+        crate::nominal_si::nominal,
+        crate::nominal_si::passive,
+        "시",
+        crate::nominal_si::RULE,
+    );
+    add_nominal_decompositions(
+        out,
+        crate::nominal_hwa::nominal,
+        crate::nominal_hwa::passive,
+        "화",
+        crate::nominal_hwa::RULE,
+    );
+}
+fn add_nominal_decompositions(
+    out: &mut Vec<Analysis>,
+    nominal: fn(&str) -> Option<&'static str>,
+    passive_head: fn(&str) -> Option<&'static str>,
+    suffix: &str,
+    rule: &str,
+) {
     let original = out.len();
     for i in 0..original {
         if !out[i].lemmas.iter().any(|l| {
-            (l.kind == LemmaKind::Nominal && crate::nominal_si::nominal(&l.text).is_some())
-                || (l.kind == LemmaKind::Predicate && crate::nominal_si::passive(&l.text).is_some())
+            (l.kind == LemmaKind::Nominal && nominal(&l.text).is_some())
+                || (l.kind == LemmaKind::Predicate && passive_head(&l.text).is_some())
         }) {
             continue;
         }
@@ -2314,8 +2345,8 @@ fn add_si_decompositions(out: &mut Vec<Analysis>) {
             };
             let l = &parent.lemmas[index];
             let (base, passive) = match l.kind {
-                LemmaKind::Nominal => (crate::nominal_si::nominal(&l.text), false),
-                LemmaKind::Predicate => (crate::nominal_si::passive(&l.text), true),
+                LemmaKind::Nominal => (nominal(&l.text), false),
+                LemmaKind::Predicate => (passive_head(&l.text), true),
                 _ => (None, false),
             };
             let Some(base) = base else {
@@ -2349,7 +2380,7 @@ fn add_si_decompositions(out: &mut Vec<Analysis>) {
                     a.morphemes.insert(at, morph("되다", MorphemeKind::Suffix));
                     a.rules.push("suffix.verb.doeda".into());
                 }
-                a.morphemes.insert(at, morph("시", MorphemeKind::Suffix));
+                a.morphemes.insert(at, morph(suffix, MorphemeKind::Suffix));
                 for path in &mut a.spelling_paths {
                     for recovery in path {
                         if recovery.morpheme_index >= at {
@@ -2357,7 +2388,7 @@ fn add_si_decompositions(out: &mut Vec<Analysis>) {
                         }
                     }
                 }
-                a.rules.push(crate::nominal_si::RULE.into());
+                a.rules.push(rule.into());
                 branches.push(a);
             }
         }
@@ -5235,7 +5266,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
     });
     add_lexical_doeda_roles(&mut out);
     add_doeda_suffixes(&mut out);
-    add_si_decompositions(&mut out);
+    add_listed_nominal_decompositions(&mut out);
     add_predicate_compounds(&mut out);
     // Noun/adverb -이 homonyms retain distinct functions despite identical
     // lemma/morpheme fields. Other semantic duplicates share rule names, but spelling paths remain

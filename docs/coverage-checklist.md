@@ -5427,6 +5427,86 @@ review remains open under the completion review below.
   Decomposing the separately recorded -시하다 heads, contextual judgments and
   independent Korean-language review remain open.
 
+- [ ] **COV-022p — Noun-forming -화 and nested passives.** **Partial: 28
+  source-listed nominal formations and 21 separately recorded passive heads
+  implemented; Rust, browser, packaged parity and performance checks passed.** KRDict
+  [-화 88499](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88499)
+  records 化 and attachment after some nouns, with 38 complete example groups.
+  The [frozen baseline](nominal-hwa-preflight.json.gz) preserves all 38 groups,
+  164 complete native entries, 953 original word results in three dictionary
+  modes, and 185 original corpus rows with full sentences across six files.
+  [Six supplemental control words](nominal-hwa-supplemental-preflight.json.gz)
+  retain their original results separately. Recorded noun bases and whole-head
+  origins determine the finite scope; spelling alone does not license a split.
+  The original 溫暖/溫煖 variants under 온난 remain intact; 溫暖化 matches the
+  first recorded variant. Nested passive heads additionally require complete
+  native verb entries. The engine retains whole alternatives, suffix/particle
+  order, passive inflection, nominalization, auxiliaries and recovery indices.
+  Dictionary identity evidence uses the represented owner: 26 nominal whole
+  heads provide evidence at suffix index zero; the 21 passive heads provide
+  separate evidence at 되다 index one. Matches, differences and missing noun
+  origins remain distinct. The two examples without nominal whole-head records
+  gain no borrowed identity, and ordinary nouns remain identity-free. The
+  [initial diagnostics](nominal-hwa-initial-diagnostics.json.gz) are preserved:
+  they exposed a noun-only 가시화 hint selecting the thorn homonym. The corrected
+  owner and lazy-origin lookup select the independently recorded 可視 noun;
+  the explicit 온난 variant is scoped to its nominal source rather than changing
+  origin comparison globally.
+  The [source fixture](../tests/fixtures/nominal-hwa-sources.json) tracks 546
+  required and 37 forbidden judgments with stable `nominal-hwa-` IDs; original
+  ledger cases and corpus gold are unchanged. All six
+  [focused tests](../tests/nominal_hwa.rs) and the five existing -시 tests passed,
+  covering complete native import, Unicode/cache parity, all 959 original word
+  snapshots, dictionary filters, identity origins and malformed external chains.
+  [Twelve diagnostic streams](nominal-hwa-diagnostics.json.gz) verify 602 added
+  decompositions per dictionary mode over 534 surfaces, preserving every original
+  candidate, reading and relative order. Each new path traces to an original raw
+  owner or an explicitly sourced bare noun. The browser catalog includes sourced
+  suffix -화. Fourteen evidence mutation guards passed. The full current
+  all-targets suite passed: 919 tests, one ignored, across 204 batches;
+  the documentation test, Clippy with warnings denied, and formatting passed. The
+  [API/browser receipt](nominal-hwa-runtime-checks.json.gz) verifies 1,918 encoded
+  word calls, 1,204 ordered decompositions, 164 complete native endpoints, ten
+  diagrams and six exports. It includes noun-only 가시화 and source-matched
+  가시, 상품, 이상 and 제도 homonyms. Desktop and mobile screenshots were inspected;
+  the frontend build passed. [Eight broad streams](nominal-hwa-observations.json.gz)
+  preserve all 1,128,312 records byte-for-byte. The
+  [held-out corpus receipt](nominal-hwa-corpora.json.gz) preserves all 66,570
+  original gold rows and 32,096 raw word calls: 17 words gain 18 paths, with all
+  original candidates and gold outcomes unchanged. Individual additions retain
+  their original parent and full sentence context; ambiguity summaries are
+  recomputed from exact candidate counts. Eleven runtime/broad/corpus mutation
+  guards passed. The initial three Nix checks passed; the packaged Rust suite
+  reports 920 passing tests, one ignored, across 199 batches, including the
+  documentation test. The [packaged receipt](nominal-hwa-packaged-checks.json.gz)
+  verifies all twelve debug/release streams, 1,918 API word calls, 164 native
+  endpoints, ten browser diagrams and six exports; both packaged screenshots
+  were inspected. [Packaged broad streams](nominal-hwa-packaged-observations.json.gz)
+  retain all 1,128,312 records, and [packaged corpus results](nominal-hwa-packaged-corpora.json.gz)
+  match every debug word, gold outcome and recorded addition. Full-novel
+  [cache parity](nominal-hwa-cache-parity.json) verifies all 179,112 records in
+  each dictionary mode with caches disabled and at 8 MiB. The
+  [80 paired timings](nominal-hwa-performance.json) cover eight full-novel
+  workloads, using five alternating fresh-process pairs on the same allowed
+  CPU after own heavy jobs finished. Median changes versus the previous
+  -시 package ranged from -0.52% to +0.65%; individual load/frequency samples
+  remain recorded, without claiming statistical equivalence or constant clocks.
+  All fourteen release/cache/timing mutation guards passed, including a false
+  thorn hint and nominal identity incorrectly borrowing the passive index.
+  The [final Nix log](nominal-hwa-final-nix.log.gz) records successful package,
+  web-asset and inventory checks with all new release, broad/corpus, cache,
+  timing and mutation gates included. Product and asset outputs are identical
+  to the tested package. These structural checks do not certify contextual
+  precision or settle the unresolved source cases below.
+  Eight bases need further class evidence: 간소, 간편, 다각, 다극, 다변, 다양,
+  다원 and 획일. Missing noun entries do not establish that they are roots.
+  Two further source conflicts remain explicit: 의인 records 義人 while
+  의인화 records 擬人化; 정형 records 定形 while 정형화 records 定型化.
+  Neither gains a nominal license from matching spelling. Unlisted passive heads,
+  arbitrary bases and repeated -화 chains are excluded from this finite addition.
+  Separately sourced -화하다 heads, contextual judgments and independent
+  Korean-language review remain open.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**
@@ -5450,7 +5530,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 475 currently emitted canonical grammar forms.** The initial catalog
+  for all 476 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

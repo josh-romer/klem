@@ -681,7 +681,10 @@ impl Annotation {
             let identity_source =
                 crate::doeda_identity::owned_source(lemma, &analysis.rules, owner_morphemes);
             let suffix_len = if suffix_class.is_some() {
-                if owner_morphemes.first().is_some_and(|m| m.form == "시") {
+                if owner_morphemes
+                    .first()
+                    .is_some_and(|m| matches!(m.form.as_str(), "시" | "화"))
+                {
                     2
                 } else {
                     1
@@ -1872,7 +1875,7 @@ impl Annotation {
                         conflicts,
                         derivational_identity: identity_source.filter(|_| matched.entry.pos == "명사").map(|source| {
                             let origins = matched.origins.as_deref().unwrap_or_default();
-                            let relation = if origins.iter().any(|o| source.expected_origins.contains(&o.as_str())) {
+                            let relation = if origins.iter().any(|o| source.expected_origins.contains(&o.as_str()) || crate::nominal_hwa::recorded_nominal_variant(source, o)) {
                                 OriginRelation::RecordedMatch
                             } else if source.whole_origins_complete && !origins.is_empty() {
                                 OriginRelation::RecordedDifference
@@ -1881,7 +1884,7 @@ impl Annotation {
                             };
                             DerivationalIdentity {
                                 relation,
-                                morpheme_index: match morphs[suffix_len - 1] { Component::Morpheme(i) => i, _ => unreachable!() },
+                                morpheme_index: match morphs[suffix_len.saturating_sub(1)] { Component::Morpheme(i) => i, _ => unreachable!() },
                                 expected_origins: source.expected_origins.iter().map(|s| (*s).to_owned()).collect(),
                                 whole_entries: source.whole_entries.iter().map(|s| (*s).to_owned()).collect(),
                                 whole_origins_complete: source.whole_origins_complete,

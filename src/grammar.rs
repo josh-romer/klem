@@ -1872,6 +1872,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.verb.doeda" => {
             "A source-listed passive verb formed from a nominal base and -되다; prefinals and endings belong to the suffix, while the whole lexical head remains a separate candidate."
         }
+        "suffix.nominal.hwa" => {
+            "Separate source-listed noun-forming -화 (化); separately recorded nested passive -되다 owns its own inflection."
+        }
         "suffix.nominal.si" => {
             "Separate noun-forming -시 (視), meaning considering/seeing as, in finite KRDict 71567 examples with recorded noun bases; separately sourced passive heads may add -되다. Honorific -시- remains a distinct prefinal."
         }
@@ -2189,7 +2192,7 @@ mod label_tests {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in [
-            "님", "들", "적", "답다", "되다", "이", "히", "쯤", "박이", "둥이", "시",
+            "님", "들", "적", "답다", "되다", "이", "히", "쯤", "박이", "둥이", "시", "화",
         ] {
             forms.insert(format!("-{form}"), Suffix);
         }

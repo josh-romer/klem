@@ -14,6 +14,7 @@ mod doeda_suffix;
 mod engine;
 mod grammar;
 mod hangul;
+mod nominal_hwa;
 mod nominal_si;
 mod predicate_compound;
 mod pronunciation;

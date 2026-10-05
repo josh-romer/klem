@@ -5140,8 +5140,15 @@ review remains open under the completion review below.
   exact cache-parity streams. This session has substantial timing variance:
   median changes range from -6.80% to +20.20%, including +13.23% for cached raw
   annotations. These samples do not establish performance equivalence or the
-  cause of the slower medians; focused investigation remains open. Peak measured
-  process RSS is 38.23 MiB. No contextual sense or linguistic rejection follows
+  cause of the slower medians. A separate
+  [focused comparison](doeda-identity-focused-performance.json) preserves 48
+  fresh-process samples with both versions pinned to one CPU, plus frequency
+  and load context. Cached median changes are +1.12% unannotated (0.834 seconds),
+  +0.49% with raw dictionary annotations (1.731 seconds), and +0.38% with
+  headword filtering/spacing (2.353 seconds). The earlier large slowdown is not
+  reproduced in these local runs; this is neither statistical equivalence nor
+  a portable performance guarantee. The first archive remains unchanged.
+  Peak measured process RSS in the original eight-workload run is 38.23 MiB. No contextual sense or linguistic rejection follows
   from origin differences alone. The native-expansion evidence below is the
   historical checkpoint preceding these identity fields.
   The [native packaged checks](doeda-native-packaged-checks.json.gz) retain the

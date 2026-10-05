@@ -11,6 +11,7 @@ COMPARISON = ROOT / "docs/doeda-identity-observations.json.gz"
 PACKAGE = ROOT / "docs/doeda-identity-packaged-checks.json.gz"
 
 REPORT = ROOT / "docs/doeda-identity-performance.json"
+FOCUSED = ROOT / "docs/doeda-identity-focused-performance.json"
 MODES = [
     ("novel-unannotated", 0),
     ("novel-unannotated", 8388608),
@@ -118,12 +119,79 @@ def verify_data(report):
         assert workload["summary"] == expected_summary
 
 
+def verify_focused_data(focused, report):
+    assert focused["schema_version"] == 1 and focused["checklist"] == "COV-022m"
+    assert focused["first_timing_sha256"] == sha(REPORT)
+    assert focused["package_sha256"] == sha(PACKAGE)
+    for key in ("before_cli_sha256", "cli_sha256", "input_sha256", "dictionary_sha256"):
+        assert focused[key] == report[key]
+    assert len(focused["cpu_affinity"]) == 1
+    assert set(focused["cpu_affinity"]) <= set(focused["allowed_cpus"])
+    assert (
+        hashlib.sha256(focused["producer"]["text"].encode()).hexdigest()
+        == focused["producer"]["sha256"]
+    )
+    assert [w["mode"] for w in focused["workloads"]] == [
+        "novel-unannotated",
+        "novel-raw",
+        "novel-headword-spacing",
+    ]
+    for workload in focused["workloads"]:
+        assert workload["cache_bytes"] == 8388608
+        samples = workload["samples"]
+        assert [(r["run"], r["version"]) for r in samples] == [
+            (run + 1, version)
+            for run in range(8)
+            for version in (
+                ("before", "after") if run % 2 == 0 else ("after", "before")
+            )
+        ]
+        original = next(
+            w
+            for w in report["workloads"]
+            if w["mode"] == workload["mode"] and w["cache_bytes"] == 8388608
+        )
+        for row in samples:
+            assert row["exit_code"] == 0
+            assert row["command"] == next(
+                r["command"]
+                for r in original["samples"]
+                if r["version"] == row["version"]
+            )
+            for key in (
+                "seconds",
+                "user_seconds",
+                "system_seconds",
+                "gnu_elapsed_seconds",
+            ):
+                assert math.isfinite(row[key]) and row[key] >= 0
+            assert row["seconds"] > 0 and row["peak_rss_kib"] > 0
+            for context in (row["start_context"], row["end_context"]):
+                assert isinstance(context["loadavg"], str)
+                assert (
+                    context["cpu_frequency_khz"] is None
+                    or context["cpu_frequency_khz"] > 0
+                )
+        for version in ("before", "after"):
+            rows = [r for r in samples if r["version"] == version]
+            assert workload["summary"][version] == {
+                "median_seconds": statistics.median(r["seconds"] for r in rows),
+                "median_user_seconds": statistics.median(
+                    r["user_seconds"] for r in rows
+                ),
+                "min_seconds": min(r["seconds"] for r in rows),
+                "max_seconds": max(r["seconds"] for r in rows),
+            }
+
+
 def verify():
     report = read(REPORT)
     verify_data(report)
     print(
         "Verified 80 full-novel timing samples, eight workloads and six exact cache-parity streams."
     )
+    verify_focused_data(read(FOCUSED), report)
+    print("Verified 48 focused same-CPU samples; no equivalence or causal claim.")
 
 
 if __name__ == "__main__":

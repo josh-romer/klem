@@ -9,6 +9,8 @@ from doeda_identity_observations import REPORT as BROAD
 from doeda_identity_observations import inspect as inspect_broad
 from doeda_identity_package import REPORT as PACKAGE
 from doeda_identity_package import inspect as inspect_package
+from doeda_identity_performance import FOCUSED, verify_focused_data
+from doeda_identity_performance import REPORT as TIMING
 from lexical_nada_audit import read
 
 
@@ -80,6 +82,22 @@ class IdentityReleaseGuards(unittest.TestCase):
                 report["word_stream_sha256"] = "0" * 64
             with self.subTest(field=field), self.assertRaises(AssertionError):
                 inspect_corpus(report)
+
+    def test_focused_timing_requires_pairs_source_and_actual_summary(self):
+        original, timing = read(FOCUSED), read(TIMING)
+        verify_focused_data(original, timing)
+        for field in ("pair", "source", "summary", "cpu"):
+            report = deepcopy(original)
+            if field == "pair":
+                report["workloads"][0]["samples"].pop()
+            elif field == "source":
+                report["cli_sha256"] = "0" * 64
+            elif field == "summary":
+                report["workloads"][0]["summary"]["after"]["median_seconds"] = 0.1
+            else:
+                report["cpu_affinity"] = [max(report["allowed_cpus"]) + 1]
+            with self.subTest(field=field), self.assertRaises(AssertionError):
+                verify_focused_data(report, timing)
 
 
 if __name__ == "__main__":

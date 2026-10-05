@@ -4451,3 +4451,46 @@ The seventeen remaining examples in the sound/manner, adverb, root and
 bound-noun senses remain explicit follow-up work. Arbitrary noun attachment,
 additional inflected forms, contextual validity and independent Korean-language
 review remain open in the [coverage checklist](coverage-checklist.md).
+
+## Remaining primary -하다 examples (COV-022t)
+
+The seventeen original examples retained from primary KRDict -하다 senses 3–6
+now have separate suffix paths. Sound/manner and other adverb bases remain
+adverbial: 반짝반짝, 소곤소곤, 덜컹덜컹, 달리, 돌연, 빨리 and 잘. Source-listed
+따뜻, 망, 착 and 흥 are roots, without a claim that an independent dictionary
+word exists. Bound-noun 듯, 법, 뻔, 양, 척 and 체 keep the auxiliary classes of
+their independently recorded whole entries, rather than borrowing the lexical
+뻔하다 or 체하다 homonyms. All original whole heads remain separate candidates.
+
+반짝반짝하다 and 양하다 each have both recorded verb and adjective classes.
+Separate rules preserve these alternatives. When an analysis contains both
+licensed classes, inflection checks keep that uncertainty rather than assigning
+one class by elimination. Auxiliary connector notes apply to the immediate
+source owner: 듯 accepts 은/는/을; 법 and 뻔 accept 을; 양, 척 and 체 accept
+은/는. Known preceding copulas are excluded where the native auxiliary entry
+lists only verbs/adjectives. 양하다's adjectival entry explicitly permits the
+copula; its verbal entry does not borrow that license. Unknown lexical classes
+and original unsplit readings retain their earlier uncertainty.
+
+A matching spelling or origin does not make an ordinary noun a bound noun.
+Dictionary annotations preserve those entries and record the known role
+conflict for the new bound-noun suffix path. Missing origins remain unknown.
+The browser reports the source base role and verb/adjective or auxiliary
+formation separately, keeps complete dictionary senses available, and does
+not select the contextual meaning of a pasted sentence.
+Nested formation labels use the following inflection of their own suffix.
+In 먹는양하는양하다, the inner bare -는 excludes an adjective label even
+when the outer suffix contributes an adjective rule. An intervening past
+prefinal preserves both source classes, as in 먹는양했던양하다.
+
+This finite implementation covers all seventeen retained original examples,
+not every possible Korean -하다 formation or inflection. Wider source owners,
+contextual judgments and independent review remain tracked in the coverage
+checklist. The full Rust suite, source and contextual audits, browser/API
+checks, broad record comparisons and held-out corpus audits pass. The latter
+preserves all original annotations and recall scores; 잘해서 gains a separate
+잘 recovery without gaining a grouped gold match. Actual Nix release/debug
+parity and all six novel cache streams also pass. Eighty paired measurements
+show median runtime increases of 1.95–3.32% on the pinned novel, with cached
+dictionary filtering around 1.9 seconds and spacing around 2.5 seconds.
+These measurements cover one novel and machine; wider review remains open.

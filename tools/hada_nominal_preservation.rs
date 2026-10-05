@@ -1,4 +1,4 @@
-//! Prove additive noun-hada paths against unchanged historical whole-head parents.
+//! Prove sourced -하다 paths against unchanged historical whole-head parents.
 use klem::{LemmaKind, MorphemeKind, WordAnalysis, breakdown::Component};
 use serde_json::Value;
 use std::sync::OnceLock;
@@ -8,8 +8,26 @@ fn owners() -> &'static Vec<Value> {
         let fixture: Value =
             serde_json::from_str(include_str!("../tests/fixtures/hada-nominal-sources.json"))
                 .unwrap();
-        fixture["owners"].as_array().unwrap().clone()
+        let remaining: Value = serde_json::from_str(include_str!(
+            "../tests/fixtures/hada-remaining-sources.json"
+        ))
+        .unwrap();
+        fixture["owners"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .chain(remaining["owners"].as_array().unwrap())
+            .cloned()
+            .collect()
     })
+}
+fn kind(owner: &Value) -> LemmaKind {
+    match owner["base_role"].as_str().unwrap() {
+        "nominal" | "bound_noun" => LemmaKind::Nominal,
+        "adverbial" => LemmaKind::Adverbial,
+        "root" => LemmaKind::Root,
+        _ => panic!("unsupported source base role"),
+    }
 }
 /// Recognize a scoped nominal owner independently of the analysis-wide rule flags.
 pub fn is_addition(a: &klem::Analysis) -> bool {
@@ -18,14 +36,36 @@ pub fn is_addition(a: &klem::Analysis) -> bool {
             let [Component::Lemma(l), Component::Morpheme(m)] = pair else {
                 return false;
             };
-            a.lemmas[*l].kind == LemmaKind::Nominal
-                && a.morphemes[*m].kind == MorphemeKind::Suffix
+            a.morphemes[*m].kind == MorphemeKind::Suffix
                 && a.morphemes[*m].form == "하다"
-                && owners()
-                    .iter()
-                    .any(|o| o["base"].as_str() == Some(&a.lemmas[*l].text))
+                && owners().iter().any(|o| {
+                    o["base"].as_str() == Some(&a.lemmas[*l].text) && kind(o) == a.lemmas[*l].kind
+                })
         })
     })
+}
+/// Strip only new senses 3–6 after proving their exact retained whole parents.
+#[allow(dead_code)] // Shared test helper; not every importing target needs projection.
+pub fn project_remaining(actual: &WordAnalysis) -> WordAnalysis {
+    let mut frozen = actual.clone();
+    frozen.analyses.retain(|a| {
+        !a.breakdown().is_some_and(|order| {
+            order.windows(2).any(|pair| {
+                let [Component::Lemma(l), Component::Morpheme(m)] = pair else {
+                    return false;
+                };
+                a.morphemes[*m].kind == MorphemeKind::Suffix
+                    && a.morphemes[*m].form == "하다"
+                    && owners().iter().any(|o| {
+                        !matches!(o["sense_id"].as_str(), Some("1" | "2"))
+                            && o["base"].as_str() == Some(&a.lemmas[*l].text)
+                            && kind(o) == a.lemmas[*l].kind
+                    })
+            })
+        })
+    });
+    assert_preserved(actual, &frozen);
+    frozen
 }
 /// Preserve every prior path in order; each addition must invert exactly to a prior parent.
 pub fn assert_preserved(actual: &WordAnalysis, frozen: &WordAnalysis) {
@@ -57,44 +97,55 @@ pub fn assert_preserved(actual: &WordAnalysis, frozen: &WordAnalysis) {
             let [Component::Lemma(l), Component::Morpheme(m)] = pair else {
                 continue;
             };
-            if addition.lemmas[*l].kind != LemmaKind::Nominal
-                || addition.morphemes[*m].kind != MorphemeKind::Suffix
+            if addition.morphemes[*m].kind != MorphemeKind::Suffix
                 || addition.morphemes[*m].form != "하다"
             {
                 continue;
             }
-            let Some(owner) = owners()
-                .iter()
-                .find(|o| o["base"].as_str() == Some(&addition.lemmas[*l].text))
-            else {
+            let Some(owner) = owners().iter().find(|o| {
+                o["base"].as_str() == Some(&addition.lemmas[*l].text)
+                    && kind(o) == addition.lemmas[*l].kind
+            }) else {
                 continue;
             };
-            let rule = if owner["sense_id"] == "1" {
-                "suffix.verb.hada"
-            } else {
-                "suffix.adjective.hada"
-            };
-            assert!(addition.rules.iter().any(|r| r == rule));
-            insertions.push((*l, *m, owner["whole_head"].as_str().unwrap().to_owned()));
-            added_rules.push(rule);
+            let rules: Vec<_> = owner["supported_predicate_classes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|pos| match pos.as_str().unwrap() {
+                    "동사" => "suffix.verb.hada",
+                    "형용사" => "suffix.adjective.hada",
+                    "보조 동사" => "suffix.auxiliary.verb.hada",
+                    "보조 형용사" => "suffix.auxiliary.adjective.hada",
+                    _ => panic!("unsupported source predicate class"),
+                })
+                .filter(|rule| addition.rules.iter().any(|r| r == rule))
+                .collect();
+            assert!(!rules.is_empty(), "owner cannot borrow an unsourced class");
+            insertions.push((
+                *l,
+                *m,
+                owner["whole_head"].as_str().unwrap().to_owned(),
+                owner["sense_id"] == "6",
+            ));
+            added_rules.extend(rules);
         }
         assert!(
             !insertions.is_empty(),
             "unattributed addition {}: {addition:?}",
             actual.normalized
         );
-        insertions.sort_by_key(|(_, m, _)| *m);
-        for (l, m, head) in insertions.into_iter().rev() {
-            restored.lemmas[l].text = head;
-            restored.lemmas[l].kind = LemmaKind::Predicate;
-            restored.morphemes.remove(m);
+        insertions.sort_by_key(|(_, m, _, _)| *m);
+        for (l, m, head, _) in insertions.iter().rev() {
+            restored.lemmas[*l].text = head.clone();
+            restored.morphemes.remove(*m);
             for path in &mut restored.spelling_paths {
                 for recovery in path {
                     assert_ne!(
-                        recovery.morpheme_index, m,
+                        recovery.morpheme_index, *m,
                         "inserted suffix cannot borrow recovery evidence"
                     );
-                    if recovery.morpheme_index > m {
+                    if recovery.morpheme_index > *m {
                         recovery.morpheme_index -= 1;
                     }
                 }
@@ -102,6 +153,18 @@ pub fn assert_preserved(actual: &WordAnalysis, frozen: &WordAnalysis) {
         }
         let mut found = false;
         for parent in &frozen.analyses {
+            if insertions.iter().any(|(l, _, head, auxiliary)| {
+                parent.lemmas.get(*l).is_none_or(|p| {
+                    p.text != *head
+                        || !(p.kind == LemmaKind::Predicate
+                            || (*auxiliary && p.kind == LemmaKind::Auxiliary))
+                })
+            }) {
+                continue;
+            }
+            for (l, _, _, _) in &insertions {
+                restored.lemmas[*l].kind = parent.lemmas[*l].kind;
+            }
             let mut rules = parent.rules.clone();
             rules.extend(added_rules.iter().map(|r| (*r).to_owned()));
             rules.sort();

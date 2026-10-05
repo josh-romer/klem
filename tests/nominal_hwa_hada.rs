@@ -1,4 +1,6 @@
 //! Direct noun -하다 and independently licensed nested -화 retain whole heads.
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::breakdown::Component;
@@ -138,7 +140,7 @@ fn original_word_order_and_all_thirty_annotated_rows_stay_intact() {
     assert_eq!(words.len(), 562);
     for (surface, before) in words {
         let before: WordAnalysis = serde_json::from_value(before.clone()).unwrap();
-        let after = engine.analyze_word(surface).unwrap();
+        let after = hada_preservation::project_remaining(&engine.analyze_word(surface).unwrap());
         assert_eq!(
             after
                 .analyses

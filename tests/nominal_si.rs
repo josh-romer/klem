@@ -1,4 +1,6 @@
 //! Source-listed noun -시 and nested passive owners retain original alternatives.
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_nominal_preservation;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::breakdown::Component;
@@ -165,7 +167,8 @@ fn old_candidate_order_and_original_annotation_are_preserved() {
     assert_eq!(snapshots.len(), 252);
     for (word, old) in snapshots {
         let old: WordAnalysis = serde_json::from_value(old.clone()).unwrap();
-        let after = engine.analyze_word(word).unwrap();
+        let after =
+            hada_nominal_preservation::project_remaining(&engine.analyze_word(word).unwrap());
         assert_eq!(
             after
                 .analyses

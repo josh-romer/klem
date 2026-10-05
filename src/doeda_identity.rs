@@ -16,6 +16,9 @@ pub(crate) fn owned_source(
     rules: &[String],
     morphs: &[Morpheme],
 ) -> Option<&'static OriginSource> {
+    if let Some(source) = crate::hada_remaining::owned_source(lemma, rules, morphs) {
+        return Some(source);
+    }
     if lemma.kind != LemmaKind::Nominal {
         return None;
     }

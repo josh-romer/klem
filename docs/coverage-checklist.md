@@ -5645,8 +5645,8 @@ review remains open under the completion review below.
   The [frozen baseline](hada-nominal-preflight.json.gz) preserves 649 words
   in three modes from the tested COV-022r package, 138 complete native entries
   and 1,048 original corpus rows across all 28 primary -하다 examples.
-  The seventeen sound/manner, adverb, root and bound-noun examples remain
-  explicit future work; their source data is retained.
+  The seventeen sound/manner, adverb, root and bound-noun examples continue
+  in COV-022t; their complete original source data is retained.
   [Stable cases](../tests/fixtures/hada-nominal-sources.json) append 88 required
   and 26 forbidden judgments with independent `hada-noun-` IDs. Every required
   shape retains its frozen whole-head parent. Seven
@@ -5733,9 +5733,105 @@ review remains open under the completion review below.
   equivalence or causal claim. All sixteen release/stream/timing mutation guards
   passed. The [final Nix pass](hada-nominal-final-nix.log.gz) completed all
   three checks, including these completed receipts and guards; its exact
-  terminal log is archived. Wider noun owners/forms, all seventeen retained examples
-  from the other suffix senses, contextual judgments and independent
-  Korean-language review remain open.
+  terminal log is archived. Wider noun owners/forms, contextual judgments and
+  independent Korean-language review remain open. The seventeen retained
+  examples from other suffix senses continue in COV-022t.
+
+
+- [ ] **COV-022t — Remaining original -하다 sound/manner, adverb, root and bound-noun examples.**
+  **Partial: all seventeen original groups implemented; source, runtime, corpus, package and performance checks pass. Wider source and linguistic review remains open.**
+  Continues the retained COV-022s source leads without replacing any of the
+  28 original primary suffix example groups. The
+  [frozen package baseline](hada-remaining-preflight.json.gz) preserves 649
+  original words in all twelve Unicode/cache/filter streams, 138 complete
+  native entries and 1,048 original corpus rows. The
+  [source closure](hada-remaining-source-closure.json) retains each original
+  attachment note, whole/base entry, excluded lexical homonym and unknown origin.
+  The [implementation](../src/hada_remaining.rs) adds seven adverb bases,
+  four roots and six bound-noun auxiliary bases, preserving both independently
+  recorded classes of 반짝반짝하다 and 양하다 (nineteen classes total).
+  Source roots assert no standalone noun/adverb entry. Auxiliary source notes
+  constrain the new owner's connector and preceding known class; the verbal
+  양하다 reading cannot borrow the adjectival copular license. Same-spelled
+  ordinary nouns remain visible but cannot supply the new bound-noun role.
+  [Stable cases](../tests/fixtures/hada-remaining-sources.json) append 158
+  required and 51 forbidden judgments with separate `hada-remaining-` IDs,
+  including six exact retained contextual auxiliary parents. All earlier ledger
+  cases and source links remain unchanged; the full candidate ledger passes.
+  Seven [focused tests](../tests/hada_remaining.rs) pass across every new class,
+  Unicode, all 649 prior candidate orders, complete native import, recorded and
+  missing origins, forged class flags, scoped connectors and copular boundaries.
+  Nine selected historical targets pass, including stress, continuation,
+  -으랴 and the earlier -화하다/-시하다 scope. Their original fixtures remain
+  unchanged; additional paths must invert to retained whole heads and original
+  spelling indices. The [actual CLI diagnostics](hada-remaining-diagnostics.json.gz)
+  preserve all twelve new streams, 1,084 independently parent-attributed changes
+  (376 raw, 354 headword, 354 compatible) and three source-bound flat origin-field
+  enrichments. Every earlier candidate, complete reading assessment, entry and
+  order remains preserved. The SolidJS build passes with source-specific root,
+  adverb and auxiliary formation hints. The first full Rust run exposed an older
+  emphatic-ending addition-family assumption at 잘했고말고요; strict source-parent
+  projection now passes all four emphatic tests without changing their fixture.
+  The second full Rust run reached the native-POS snapshot and exposed a
+  missing dictionary dependency for present -는 before the new 듯/척/체/양 +
+  하다 representation. The dependency now checks the immediate bound-noun
+  suffix owner; a regression verifies that the independently sourced adjective
+  keeps its original left-entry conflict. All eight native-POS tests and six
+  remaining-hada tests pass together. A repeated 양 + 하다 chain exposed class
+  flags being borrowed across owners: each inserted suffix now validates its
+  own fixed class before rules are combined. The new repeated-owner regression
+  and six selected suffix/native-POS/stress targets pass. Later full runs found
+  older -화 and -시 snapshots excluding only lexical -하다 additions; they now
+  verify every new auxiliary path against its unchanged whole-head parent before
+  comparing the original snapshots. Their fixtures remain unchanged. The
+  [full Rust suite](hada-remaining-full-rust.log.gz) passes all 946 tests, with
+  one ignored, across 203 test batches.
+  The [reusable source audit](../tools/hada_remaining_audit.py) and eleven
+  mutation guards pass. The [context checks](hada-remaining-context-checks.json.gz)
+  independently reconstruct all three frozen filter baselines and attribute
+  78 additions (52 raw, 13 headword, 13 compatible) across twelve streams.
+  [Actual API/browser checks](hada-remaining-runtime-checks.json.gz) verify
+  1,298 Unicode word calls, 752 added ordered breakdowns, all 138 native-entry
+  endpoints, 34 source-specific diagrams, retained whole alternatives, six
+  CLI/export comparisons, source clicks and mobile layout; eight runtime/context
+  mutation guards pass. The [full-stream audit](hada-remaining-observations.json.gz)
+  compares 1,128,312 records and independently attributes 3,793 added readings
+  and 188 native origin-field enrichments across 2,427 changed frames.
+  [Held-out corpora](hada-remaining-corpora.json.gz) preserve all 66,570 original
+  gold rows and 32,096 raw words, with 45 attributed additions across 35 words.
+  One GSD-dev recovery set changes at `id:dev-s393/6` 잘해서: the separate 잘
+  recovery appears alongside the existing 하다 recovery. Its grouped match stays
+  false and maximum recovered lemma count stays one; neither the annotation nor
+  a contextual verdict is rewritten. All recall scores remain unchanged.
+  A separate [nested browser regression](hada-remaining-scoped-runtime.json)
+  verifies six Unicode diagrams and API/CLI parity. At 먹는양하는양하다,
+  the inner bare -는 formation cannot borrow the outer adjective flag; it now
+  shows only the verb label. 먹는양했던양하다 retains both classes after its
+  own past prefinal. Four mutation guards and the rebuilt SolidJS assets pass.
+  [Actual package receipts](hada-remaining-packaged-checks.json.gz) bind the
+  successful Nix Rust run (946 tests, one ignored, 203 batches) and the separately
+  rebuilt frontend with the nested-label fix. Twelve Unicode/cache/filter streams,
+  1,298 API word calls, all 138 native endpoints, 34 source diagrams, six nested
+  diagrams and six exports match the debug evidence. Independently captured
+  [packaged broad streams](hada-remaining-packaged-observations.json.gz) and
+  [packaged corpora](hada-remaining-packaged-corpora.json.gz) preserve all earlier
+  results and every individually attributed change.
+  [Cache parity](hada-remaining-cache-parity.json) proves identical cached and
+  uncached output across six 179,112-record novel streams. The
+  [paired novel timings](hada-remaining-performance.json) retain eighty
+  measurements across eight workloads, five interleaved process pairs with both
+  versions pinned to the same CPU. Median runtime increases range from 1.95%
+  to 3.32% in this measurement; dictionary-filtered cached processing takes
+  1.87–1.89 seconds, spacing takes 2.48–2.49 seconds, and observed peak memory
+  stays below 38.5 MiB. These results cover the pinned novel and machine, not
+  statistical equivalence or arbitrary novel performance.
+  Reusable source, context, runtime, broad, corpus, packaged parity, cache and
+  timing gates are wired into the Nix inventory check. The [final combined
+  snapshot check](hada-remaining-final-nix.json) passes for the Rust package,
+  corrected frontend and all inventory gates; its exact validated input hashes
+  and [terminal log](hada-remaining-final-nix.log.gz) are retained.
+  Wider source owners/forms, contextual
+  judgments and independent Korean-language review remain open.
 
 ### P3: dictionary and representation boundaries
 

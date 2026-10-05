@@ -110,6 +110,9 @@ pub(crate) fn owner_class(
     rules: &[String],
     morphs: &[Morpheme],
 ) -> Option<PredicateClass> {
+    if let Some(class) = crate::hada_remaining::owner_class(lemma, rules, morphs) {
+        return Some(class);
+    }
     owned_source(lemma, rules, morphs).map(|source| {
         if morphs.first().is_some_and(|m| m.form == "하다")
             && PRIMARY_ADJECTIVAL.iter().any(|s| s.base == source.base)

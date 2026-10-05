@@ -1,4 +1,6 @@
 //! COV-017bw: emphatic purpose and affirmation source boundaries.
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{
@@ -207,7 +209,7 @@ fn every_frozen_candidate_retains_its_native_reading_and_cli_filters_agree() {
             );
             cursor = position + 1;
         }
-        for a in &word.analyses {
+        for a in &hada_preservation::project_remaining(&word).analyses {
             if !original.contains(a) {
                 assert!(
                     a.rules.iter().any(|r| matches!(

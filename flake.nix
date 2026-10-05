@@ -319,6 +319,23 @@
                 ./web/tests/hada-nominal.mjs
                 ./tools/hada_nominal_audit.py
                 ./tools/test_hada_nominal_audit.py
+                ./tools/hada_remaining_audit.py
+                ./tools/test_hada_remaining_audit.py
+                ./web/src/hada-sources.json
+                ./tools/hada_remaining_context.py
+                ./tools/hada_remaining_runtime.py
+                ./tools/test_hada_remaining_runtime.py
+                ./web/tests/hada-remaining.mjs
+                ./web/tests/hada-remaining-scoped.mjs
+                ./web/src/breakdown.ts
+                ./tools/hada_remaining_scoped_runtime.py
+                ./tools/test_hada_remaining_scoped_runtime.py
+                ./tools/hada_remaining_broad.py
+                ./tools/hada_remaining_corpora.py
+                ./tools/test_hada_remaining_release_audits.py
+                ./tools/hada_remaining_release.py
+                ./tools/hada_remaining_performance.py
+                ./tools/test_hada_remaining_release.py
                 ./tools/nominal_si_hada_audit.py
                 ./tools/test_nominal_si_hada_audit.py
                 ./tools/nominal_si_hada_runtime.py
@@ -546,6 +563,21 @@
             python tools/nominal_si_hada_audit.py --verify --comparison docs/nominal-si-hada-diagnostics.json.gz
             python tools/hada_nominal_audit.py --verify
             python -m unittest discover -s tools -p 'test_hada_nominal_audit.py'
+            python tools/hada_remaining_audit.py --verify
+            python -m unittest discover -s tools -p 'test_hada_remaining_audit.py'
+            python tools/hada_remaining_context.py --verify
+            python tools/hada_remaining_runtime.py --verify
+            python tools/hada_remaining_scoped_runtime.py --verify
+            python -m unittest discover -s tools -p 'test_hada_remaining_scoped_runtime.py'
+            python -m unittest discover -s tools -p 'test_hada_remaining_runtime.py'
+            python tools/hada_remaining_broad.py --verify
+            python tools/hada_remaining_corpora.py --verify
+            python -m unittest discover -s tools -p 'test_hada_remaining_release_audits.py'
+            python tools/hada_remaining_release.py --verify
+            python tools/hada_remaining_broad.py --verify --report docs/hada-remaining-packaged-observations.json.gz
+            python tools/hada_remaining_corpora.py --verify --report docs/hada-remaining-packaged-corpora.json.gz
+            python tools/hada_remaining_performance.py --verify
+            python -m unittest discover -s tools -p 'test_hada_remaining_release.py'
             python tools/hada_nominal_runtime.py --verify
             python -m unittest discover -s tools -p 'test_hada_nominal_runtime.py'
             python tools/hada_nominal_broad.py --verify

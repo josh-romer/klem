@@ -744,20 +744,31 @@ impl Annotation {
             // KRDict 75275/75276 and 85853 distinguish bare present 는
             // from adjective/copula 은. Evidence belongs to the immediate
             // connector owner; prefinals and auxiliary owners stay separate.
+            let next_hada_base = match components {
+                [Component::Lemma(i), Component::Morpheme(j), ..] => {
+                    crate::hada_remaining::auxiliary_base(
+                        &analysis.lemmas[*i],
+                        &analysis.rules,
+                        &analysis.morphemes[*j..],
+                    )
+                }
+                _ => None,
+            };
             let conjectural_present = bare
                 && ending.is_some_and(|i| analysis.morphemes[i].form == "는")
-                && components.first().is_some_and(|c| {
-                    matches!(c, Component::Lemma(i)
+                && (next_hada_base == Some("듯")
+                    || components.first().is_some_and(|c| {
+                        matches!(c, Component::Lemma(i)
                         if analysis.lemmas[*i].kind == LemmaKind::Auxiliary
                         && matches!(analysis.lemmas[*i].text.as_str(), "듯하다" | "듯싶다"))
-                });
+                    }));
             let pretence_present = bare
                 && ending.is_some_and(|i| analysis.morphemes[i].form == "는")
-                && components.first().is_some_and(|c| {
+                && (matches!(next_hada_base, Some("양" | "척" | "체")) || components.first().is_some_and(|c| {
                     matches!(c, Component::Lemma(i)
                         if analysis.lemmas[*i].kind == LemmaKind::Auxiliary
                         && matches!(analysis.lemmas[*i].text.as_str(), "양하다" | "척하다" | "체하다"))
-                });
+                }));
             let expressive_connector = if lemma.kind == LemmaKind::Predicate {
                 expressive_hada_connector(analysis, rest)
             } else {
@@ -844,6 +855,16 @@ impl Annotation {
                             rule: AttachmentRule::LexicalRole,
                             morpheme_index: None,
                         });
+                    }
+                    // Sense 6 names a bound-noun base. A same-spelled ordinary
+                    // noun cannot supply that role, even when its origin matches.
+                    if status == Compatibility::Compatible
+                        && lemma.kind == LemmaKind::Nominal
+                        && crate::hada_remaining::owned_source(lemma, &analysis.rules, owner_morphemes).is_some()
+                        && matched.effective_pos() != "의존 명사"
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict { rule: AttachmentRule::LexicalRole, morpheme_index: None });
                     }
                     // KRDict 64223 records 俗되다. Entry 71278 is the
                     // unrelated noun 속 (interior/content/mind), reviewed in
@@ -1873,7 +1894,7 @@ impl Annotation {
                         id: matched.entry.id.clone(),
                         status,
                         conflicts,
-                        derivational_identity: identity_source.filter(|_| matched.entry.pos == "명사").map(|source| {
+                        derivational_identity: identity_source.filter(|_| matched.entry.pos == "명사" || (crate::hada_remaining::owned_source(lemma, &analysis.rules, owner_morphemes).is_some() && matches!((lemma.kind, matched.entry.pos.as_str()), (LemmaKind::Nominal, "의존 명사") | (LemmaKind::Adverbial, "부사")))).map(|source| {
                             let origins = matched.origins.as_deref().unwrap_or_default();
                             let relation = if origins.iter().any(|o| source.expected_origins.contains(&o.as_str()) || crate::nominal_hwa::recorded_nominal_variant(source, o)) {
                                 OriginRelation::RecordedMatch

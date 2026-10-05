@@ -293,7 +293,9 @@ pub(crate) fn rule(class: PredicateClass) -> &'static str {
     match class {
         PredicateClass::Verb => "suffix.verb.doeda",
         PredicateClass::Adjective => "suffix.adjective.doeda",
-        PredicateClass::Copula => unreachable!("suffix is never copular"),
+        PredicateClass::Copula | PredicateClass::VerbOrAdjective => {
+            unreachable!("source suffix has one non-copular class")
+        }
     }
 }
 

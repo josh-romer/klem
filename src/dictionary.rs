@@ -664,6 +664,8 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                     || r == crate::nominal_hwa::RULE
                     || r == crate::hada_suffix::RULE
                     || r == crate::hada_suffix::ADJECTIVE_RULE
+                    || r == crate::hada_remaining::AUX_VERB_RULE
+                    || r == crate::hada_remaining::AUX_ADJECTIVE_RULE
             }) {
                 continue;
             }
@@ -708,7 +710,9 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .origins
                         .get(index)
                         .filter(|_| {
-                            lemma.kind == LemmaKind::Root || (with_identity && entry.pos == "명사")
+                            lemma.kind == LemmaKind::Root
+                                || (with_identity
+                                    && matches!(entry.pos.as_str(), "명사" | "의존 명사" | "부사"))
                         })
                         .cloned()
                         .flatten(),

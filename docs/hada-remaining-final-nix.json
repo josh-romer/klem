@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-022t",
+  "nix_exit_code": 0,
+  "before_head": "919a9486fb7a635e1addd935ef201a2c16ffccf4",
+  "validated_staged_diff_sha256": "1bfbf62ecf64bf1f7bf5fc48a936edc1996c1ed773cabbbb642f177377ac7eca",
+  "validated_changed_inputs": [
+    {
+      "path": "docs/coverage-checklist.md",
+      "sha256": "81f2b2bc49f5630cec32c5349fd023f09242f5856efdde1d1f7cfa28c564c244",
+      "bytes": 448552
+    },
+    {
+      "path": "docs/hada-remaining-cache-parity.json",
+      "sha256": "629405e3f31f02bba586b7a64ba99d5151f0bbf5e6691fdfb0ef67aede5a9648",
+      "bytes": 5537
+    },
+    {
+      "path": "docs/hada-remaining-context-checks.json.gz",
+      "sha256": "2ce6a501518d19e98bd9703ac619b6d16fdcaf7774ef112435429538c06ff2eb",
+      "bytes": 40563
+    },
+    {
+      "path": "docs/hada-remaining-corpora.json.gz",
+      "sha256": "ff88fd7dd3a5d7bc8546fce40da2bc53fd19286f329aeac21514f843bf422d03",
+      "bytes": 3098800
+    },
+    {
+      "path": "docs/hada-remaining-diagnostics.json.gz",
+      "sha256": "fcd7f1cf1f3160c6f02c8ae85bcf045d0ec8112281aed07a21e78104d40c5a48",
+      "bytes": 1085861
+    },
+    {
+      "path": "docs/hada-remaining-full-rust.log.gz",
+      "sha256": "a94caaf28960273df343518d150ab9f9cc404c1bc1d437156344b522c7c4aec4",
+      "bytes": 21915
+    },
+    {
+      "path": "docs/hada-remaining-observations.json.gz",
+      "sha256": "38a469ba089723257c45fd2754b3aae61ce80d01a0af0ebed8a669d6e8e9fc80",
+      "bytes": 2115728
+    },
+    {
+      "path": "docs/hada-remaining-packaged-checks.json.gz",
+      "sha256": "abc8960a5a3de15aa79f620b37a9d7b84c21eabcb65e8ee076aaf87666bb63a2",
+      "bytes": 2883705
+    },
+    {
+      "path": "docs/hada-remaining-packaged-corpora.json.gz",
+      "sha256": "afbcb18f8655b4659ae124bee00d091c3e9c0c3d6ebe2253d9ae201ea3d6045b",
+      "bytes": 3099440
+    },
+    {
+      "path": "docs/hada-remaining-packaged-observations.json.gz",
+      "sha256": "a4b80891cb7e9e48199f5fb2399c7661cf470f563a62845263b3d64a33de52ad",
+      "bytes": 2116691
+    },
+    {
+      "path": "docs/hada-remaining-performance.json",
+      "sha256": "7d332d0135e1df704689abdbb405c11f28fc369e3369a42ecd492633f7b61c49",
+      "bytes": 83043
+    },
+    {
+      "path": "docs/hada-remaining-preflight.json.gz",
+      "sha256": "0098c8458af375da86d4764e25da2c8b36be4e606508df122281448865e252bc",
+      "bytes": 1859717
+    },
+    {
+      "path": "docs/hada-remaining-runtime-checks.json.gz",
+      "sha256": "784dfb548977b84bc79ed1e9b2ea55214ac1953e937d2f2c245d5502d25f436e",
+      "bytes": 4447251
+    },
+    {
+      "path": "docs/hada-remaining-scoped-runtime.json",
+      "sha256": "e7673b996fb9a3c167edd84eace95d3f0ffd5a4f156afc487d4bfeea338d4188",
+      "bytes": 2089823
+    },
+    {
+      "path": "docs/hada-remaining-source-closure.json",
+      "sha256": "20fd38612a59891482d3204cd7a6effaee74ea35d4b8434f04c718562282b530",
+      "bytes": 576203
+    },
+    {
+      "path": "docs/inventory-review-queue.json",
+      "sha256": "61fe05f72a2e4e8557be8609a7ade247f31e0bcd9a20c02a08daa0f5b79bc742",
+      "bytes": 3342623
+    },
+    {
+      "path": "docs/rules.md",
+      "sha256": "8ce389d96ba5bd9c729af769252f7425d03b1921a58ceeaade5b6a98c6d849f3",
+      "bytes": 310991
+    },
+    {
+      "path": "flake.nix",
+      "sha256": "c30f0826cf318196eaed5d61704f0d35cc8883b4f028f4a7d235fa41a7d92875",
+      "bytes": 33330
+    },
+    {
+      "path": "src/dictionary.rs",
+      "sha256": "5b6181243407f1270874eea5e10eb02526ea95fbd70494b6cd7395b40250ad06",
+      "bytes": 31392
+    },
+    {
+      "path": "src/dictionary/attachment.rs",
+      "sha256": "005a67022294e500dfc8ec7098205b3644984bb52e9eec2ee4648b1c39b869ba",
+      "bytes": 106061
+    },
+    {
+      "path": "src/doeda_identity.rs",
+      "sha256": "dc8edacdc1818559cba82cd5ca88b76726018f5f4a2513055a2218cfc0e3c3c2",
+      "bytes": 34668
+    },
+    {
+      "path": "src/doeda_suffix.rs",
+      "sha256": "e1eeedd4dc3c5c443081ddabbcf7d6480a646281db9751809fd735738f0baff5",
+      "bytes": 15023
+    },
+    {
+      "path": "src/engine.rs",
+      "sha256": "6096125d0e71098aacdb53aec9fd048eeadd07db0b7883a8745a824b6672bd95",
+      "bytes": 215485
+    },
+    {
+      "path": "src/grammar.rs",
+      "sha256": "09a31f007c375db130fe0957ac2392e6dfc2513cf4489fadc4f39780164f60c0",
+      "bytes": 101936
+    },
+    {
+      "path": "src/hada_remaining.rs",
+      "sha256": "515a4035e985a0899f3e6c4e910ffce75d1d6edd999a2d9bcb7f6ee5acd4a7f4",
+      "bytes": 10244
+    },
+    {
+      "path": "src/hada_suffix.rs",
+      "sha256": "e472bb275e990ef45dfe1dcefff15a85b7f792b35d852748d91a81592db7e4f7",
+      "bytes": 18302
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "7b501707ef2c2236b297cb74581cd9db4f3455970405b5b70c0075295d82f690",
+      "bytes": 8218
+    },
+    {
+      "path": "tests/emphatic_endings.rs",
+      "sha256": "ad6f02b014fb0094a6e6e71e9c2eda4f05d096c3627030ee3601d0562782c4ec",
+      "bytes": 10070
+    },
+    {
+      "path": "tests/fixtures/hada-remaining-sources.json",
+      "sha256": "374565668a66d053cc86d7f1389e84b47e773eafae9a7fb10e382297805fc42d",
+      "bytes": 7590714
+    },
+    {
+      "path": "tests/fixtures/validity.json",
+      "sha256": "7eaa8f4cba78bbf26dffd3c613a21163e743391f0b9dfafd19ee25ddb8198b56",
+      "bytes": 28324081
+    },
+    {
+      "path": "tests/hada_remaining.rs",
+      "sha256": "3e3728cb119d0c9fcbb93c2812f7d72c2629c947f00bbd3a9f5dca7e4560fe1f",
+      "bytes": 12156
+    },
+    {
+      "path": "tests/native_pos.rs",
+      "sha256": "f7f1cd553d3bb75aa828c08221e85edfcd8d8f710c697c6b625d967879db028f",
+      "bytes": 34453
+    },
+    {
+      "path": "tests/nominal_hwa.rs",
+      "sha256": "171ba992942bf03c59b3cd677acbb1d506eec81f20dca5cace6ca6ab0dcbbb3e",
+      "bytes": 15563
+    },
+    {
+      "path": "tests/nominal_hwa_hada.rs",
+      "sha256": "802f996b04e429bef228bee4ef11b606887f175b76188e2bb4a989db32030257",
+      "bytes": 11387
+    },
+    {
+      "path": "tests/nominal_si.rs",
+      "sha256": "1251bdf843774ae829e4e2cb12fb3ad15cd96403a0eaaa294a1930dc8b8e4d40",
+      "bytes": 11459
+    },
+    {
+      "path": "tests/nominal_si_hada.rs",
+      "sha256": "b5bf0752abd6d93cc3333cc9d357c1d9b3a5bdddd21906e773dcb40ba64c032b",
+      "bytes": 15753
+    },
+    {
+      "path": "tests/validity.rs",
+      "sha256": "2dd5d0ee8e72c8a89c8c1a3c02628342a0f95a20d540a4bb4c01d823ddbcac71",
+      "bytes": 4004
+    },
+    {
+      "path": "tools/hada_nominal_preservation.rs",
+      "sha256": "4ab3e887496df240ed204dcc294f45b4e48f0501bf8a4f40fd023037533d6ad1",
+      "bytes": 7205
+    },
+    {
+      "path": "tools/hada_remaining_audit.py",
+      "sha256": "4b3d6cf168cf5d9bba19fd2c403f6aa05088ed5eef6a65023fe31e651f1e51ae",
+      "bytes": 16777
+    },
+    {
+      "path": "tools/hada_remaining_broad.py",
+      "sha256": "5a0a1be00922414398910d99234cd9a33c137e8a0bfe95b56d8ac65c997cf4a6",
+      "bytes": 7452
+    },
+    {
+      "path": "tools/hada_remaining_context.py",
+      "sha256": "680fcb315f0908c2aa487091a477ef2bca66c3c174bd1c9cb05a68668bc4f0a4",
+      "bytes": 3265
+    },
+    {
+      "path": "tools/hada_remaining_corpora.py",
+      "sha256": "0e37aec8fdbfff702fdaaa00099320b1476ba83f6410228e589ac972fb4cdf73",
+      "bytes": 5941
+    },
+    {
+      "path": "tools/hada_remaining_performance.py",
+      "sha256": "b345028e549981a9a85312f39d47cc9f92a743c533aae0f9f717372e307818cd",
+      "bytes": 2385
+    },
+    {
+      "path": "tools/hada_remaining_release.py",
+      "sha256": "0dee6ec56442e025fdec087f7eee0335b7c650ff756ce827a59c19a2fd7aca1c",
+      "bytes": 6544
+    },
+    {
+      "path": "tools/hada_remaining_runtime.py",
+      "sha256": "52d6df9dbf67574396b2062e4c308365f16f609554930ecdc3a2dd59f3e35e23",
+      "bytes": 8174
+    },
+    {
+      "path": "tools/hada_remaining_scoped_runtime.py",
+      "sha256": "c6b27e087c7915982f0bd27558a8b100699c889fd205d3be0aad79fbb325101e",
+      "bytes": 2812
+    },
+    {
+      "path": "tools/test_hada_remaining_audit.py",
+      "sha256": "9df6966eb55c4cafc420c3517e30a983541bebdafbd64a9591efa01a4aae5372",
+      "bytes": 3949
+    },
+    {
+      "path": "tools/test_hada_remaining_release.py",
+      "sha256": "f4c901949475b17ee848660656aa56e96cf00055478f9491ee06b0b6ac7ed4b5",
+      "bytes": 3347
+    },
+    {
+      "path": "tools/test_hada_remaining_release_audits.py",
+      "sha256": "ad49b0eaebd36b7ea2c479d7c470c5ce8c325d3dda2a4cd254da6356af8f5801",
+      "bytes": 2195
+    },
+    {
+      "path": "tools/test_hada_remaining_runtime.py",
+      "sha256": "65ddfa44fb13309843926a8a3b099cef7aa15592489c0076bf85a6d4eace5779",
+      "bytes": 2650
+    },
+    {
+      "path": "tools/test_hada_remaining_scoped_runtime.py",
+      "sha256": "879f6b8d94e1f83cb66b3408ab3b464284db3120711a7c579ee0021d593c92f8",
+      "bytes": 1253
+    },
+    {
+      "path": "web/src/breakdown.ts",
+      "sha256": "d7b8df842564fef042d98c174e7586c2e2ee5ea6afd1629cb4dd17286ad645ea",
+      "bytes": 13299
+    },
+    {
+      "path": "web/src/hada-sources.json",
+      "sha256": "8711dc630206511574421536c64c4bf982775d1d58ee6e757beded5694a57938",
+      "bytes": 2538
+    },
+    {
+      "path": "web/tests/hada-remaining-scoped.mjs",
+      "sha256": "98a59c354b6aaa15fe5066ddbac1a19560f884fe2573dd0a3eb84b8a50977455",
+      "bytes": 3854
+    },
+    {
+      "path": "web/tests/hada-remaining.mjs",
+      "sha256": "b909e218de96efa7c16b0a2b7b4916a162825440402ba4a4aba915371f5eddbd",
+      "bytes": 7355
+    }
+  ],
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/tmp/klem-nix-build-1000",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "nix_outputs": {
+    "klem": "/nix/store/sbkbpzhakddagl5i06r54n0sfkkwd54z-klem-0.1.0",
+    "web-assets": "/nix/store/0jkfd3c0fd67qsi74m75nqfrw0zwxnpq-klem-web-assets-0.1.0",
+    "inventory-review": "/nix/store/4h78i6v33d1gixsxigkfj4ih33rrqzni-klem-inventory-review"
+  },
+  "log": {
+    "path": "docs/hada-remaining-final-nix.log.gz",
+    "uncompressed_sha256": "3dac04675bcd29bb397c9d55280da65fccd3e60249d62381793a05d2d8d1fd2c",
+    "sha256": "ed199088efb5a93615fc72fe198c745ebe7d0f8b98cb683be1e823da86cab2d1"
+  },
+  "scope": "Successful immutable Nix snapshot. Rust/frontend implementation and evidence are unchanged by the following documentation-only closure; coverage status, inventory evidence hashes and this receipt are recorded after validation. This is not a claim that wider linguistic review is complete."
+}

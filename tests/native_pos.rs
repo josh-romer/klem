@@ -2,6 +2,8 @@
 //! component. Native fields, raw hypotheses and unknown boundaries survive.
 #[path = "../tools/adjectival_allomorph.rs"]
 mod allomorph;
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 use klem::dictionary::{
     Annotation, AttachmentRule, Compatibility, Dictionary, DictionaryFilter, DictionaryMetadata,
     DictionarySession, Entry, EntrySummary, SqliteDictionary, import_krdict,
@@ -391,7 +393,10 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
             // the expected output; the old class judgments below stay intact.
             assert_eq!(change["original"], *frozen);
             assert_eq!(serde_json::to_value(&expected).unwrap(), change["before"]);
-            assert_eq!(serde_json::to_value(&word).unwrap(), change["after"]);
+            assert_eq!(
+                serde_json::to_value(hada_preservation::project_remaining(&word)).unwrap(),
+                change["after"]
+            );
             let retained: Vec<_> = word
                 .analyses
                 .iter()
@@ -406,7 +411,11 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
                     .all(|a| a.rules.iter().any(|r| r == "lexical.doeda.complement"))
             );
         } else {
-            assert_eq!(word, expected, "{surface}");
+            assert_eq!(
+                hada_preservation::project_remaining(&word),
+                expected,
+                "{surface}"
+            );
         }
         assert_eq!(
             word,
@@ -893,4 +902,52 @@ fn additional_class_sensitive_boundaries_keep_prefinals_and_later_owners_separat
         Compatibility::Unknown
     );
     assert!(ann.assess(a).lemmas[0].entries[0].conflicts.is_empty());
+}
+
+#[test]
+fn sourced_bound_noun_hada_keeps_the_left_native_present_adnominal_conflict() {
+    let fixture = Fixture::new("hada-bound-owner");
+    let dictionary = fixture.open();
+    let engine = Lemmatizer::new();
+    for (word, base, expected_rule) in [
+        (
+            "발그스레하는듯하다",
+            "듯",
+            AttachmentRule::ConjecturalAdnominalClass,
+        ),
+        (
+            "발그스레하는척하다",
+            "척",
+            AttachmentRule::PretenceAdnominalClass,
+        ),
+    ] {
+        let result = engine.analyze_word(word).unwrap();
+        let annotation = DictionarySession::new(&dictionary, 4096)
+            .annotate(&result)
+            .unwrap();
+        let mut checked = 0;
+        for (a, reading) in result.analyses.iter().zip(&annotation.readings) {
+            if a.lemmas
+                .first()
+                .is_some_and(|l| l.text == "발그스레하다" && l.kind == LemmaKind::Predicate)
+                && a.lemmas
+                    .last()
+                    .is_some_and(|l| l.text == base && l.kind == LemmaKind::Nominal)
+                && a.morphemes.first().is_some_and(|m| m.form == "는")
+                && a.morphemes
+                    .iter()
+                    .any(|m| m.form == "하다" && m.kind == klem::MorphemeKind::Suffix)
+            {
+                let native = reading.lemmas[0]
+                    .entries
+                    .iter()
+                    .find(|e| e.id == "krdict:600930")
+                    .unwrap();
+                assert_eq!(native.status, Compatibility::Incompatible, "{word}");
+                assert!(native.conflicts.iter().any(|c| c.rule == expected_rule));
+                checked += 1;
+            }
+        }
+        assert!(checked > 0, "{word}");
+    }
 }

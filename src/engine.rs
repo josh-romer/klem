@@ -2248,6 +2248,7 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
         crate::doeda_suffix::formation,
         "되다",
         crate::doeda_suffix::rule,
+        false,
     );
 }
 fn add_hada_suffixes(out: &mut Vec<Analysis>) {
@@ -2256,6 +2257,35 @@ fn add_hada_suffixes(out: &mut Vec<Analysis>) {
         crate::hada_suffix::formation,
         "하다",
         crate::hada_suffix::rule,
+        false,
+    );
+    add_predicate_suffixes(
+        out,
+        crate::hada_remaining::verbal,
+        "하다",
+        |_| crate::hada_suffix::RULE,
+        false,
+    );
+    add_predicate_suffixes(
+        out,
+        crate::hada_remaining::adjectival,
+        "하다",
+        |_| crate::hada_suffix::ADJECTIVE_RULE,
+        false,
+    );
+    add_predicate_suffixes(
+        out,
+        crate::hada_remaining::auxiliary_verbal,
+        "하다",
+        |_| crate::hada_remaining::AUX_VERB_RULE,
+        true,
+    );
+    add_predicate_suffixes(
+        out,
+        crate::hada_remaining::auxiliary_adjectival,
+        "하다",
+        |_| crate::hada_remaining::AUX_ADJECTIVE_RULE,
+        true,
     );
 }
 fn add_predicate_suffixes(
@@ -2263,14 +2293,15 @@ fn add_predicate_suffixes(
     formation: fn(&str) -> Option<(&'static str, LemmaKind, PredicateClass)>,
     suffix: &str,
     rule: fn(PredicateClass) -> &'static str,
+    include_auxiliary: bool,
 ) {
     let original = out.len();
     for i in 0..original {
-        if !out[i]
-            .lemmas
-            .iter()
-            .any(|l| l.kind == LemmaKind::Predicate && formation(&l.text).is_some())
-        {
+        if !out[i].lemmas.iter().any(|l| {
+            (l.kind == LemmaKind::Predicate
+                || (include_auxiliary && l.kind == LemmaKind::Auxiliary))
+                && formation(&l.text).is_some()
+        }) {
             continue;
         }
         let parent = out[i].clone();
@@ -2283,7 +2314,9 @@ fn add_predicate_suffixes(
                 continue;
             };
             let l = &parent.lemmas[index];
-            if l.kind != LemmaKind::Predicate {
+            if l.kind != LemmaKind::Predicate
+                && !(include_auxiliary && l.kind == LemmaKind::Auxiliary)
+            {
                 continue;
             }
             let Some((base, kind, class)) = formation(&l.text) else {
@@ -2317,7 +2350,11 @@ fn add_predicate_suffixes(
                     }
                 }
                 a.rules.push(rule(class).into());
-                branches.push(a);
+                // Validate this insertion's class before analysis-wide rule
+                // unions can borrow another owner's alternative class.
+                if auxiliary_inflections_allowed_for(&mut a, Some((index, class))) {
+                    branches.push(a);
+                }
             }
         }
         out.extend(branches.into_iter().skip(1).filter_map(|mut a| {
@@ -2455,6 +2492,8 @@ fn add_predicate_compounds(out: &mut Vec<Analysis>) {
 pub(crate) enum PredicateClass {
     Verb,
     Adjective,
+    /// Both independently recorded classes remain possible for this owner.
+    VerbOrAdjective,
     Copula,
 }
 
@@ -2556,9 +2595,16 @@ pub(crate) fn derivational_class(
 ) -> Option<PredicateClass> {
     crate::doeda_suffix::owner_class(lemma, rules, morphs)
         .or_else(|| crate::hada_suffix::owner_class(lemma, rules, morphs))
+        .or_else(|| crate::hada_remaining::owner_class(lemma, rules, morphs))
 }
 
 fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
+    auxiliary_inflections_allowed_for(a, None)
+}
+fn auxiliary_inflections_allowed_for(
+    a: &mut Analysis,
+    forced_owner: Option<(usize, PredicateClass)>,
+) -> bool {
     if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary)
         && !a.rules.iter().any(|r| {
             matches!(
@@ -2569,6 +2615,8 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                     | "suffix.adjective.doeda"
                     | "suffix.verb.hada"
                     | "suffix.adjective.hada"
+                    | "suffix.auxiliary.verb.hada"
+                    | "suffix.auxiliary.adjective.hada"
                     | "compound.predicate.well_doeda"
             )
         })
@@ -2584,6 +2632,19 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     let mut previous_non_honorific_prefinal = false;
     let mut previous_past_prefinal = false;
     for (lemma_index, lemma) in a.lemmas.iter().enumerate() {
+        let forced_class = forced_owner
+            .filter(|(index, _)| *index == lemma_index)
+            .map(|(_, class)| class);
+        if !crate::hada_remaining::auxiliary_attachment_allowed(
+            lemma,
+            &a.rules,
+            &a.morphemes[cursor..],
+            connector,
+            previous,
+            forced_class,
+        ) {
+            return false;
+        }
         if crate::predicate_compound::is_left(a, lemma_index) {
             continue;
         }
@@ -2675,7 +2736,8 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             lemma.kind,
             LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
         );
-        let doeda_class = derivational_class(lemma, &a.rules, &a.morphemes[cursor..]);
+        let doeda_class =
+            forced_class.or_else(|| derivational_class(lemma, &a.rules, &a.morphemes[cursor..]));
         let mut class = if doeda_class.is_some() {
             doeda_class
         } else if lemma.kind == LemmaKind::Auxiliary {
@@ -2795,7 +2857,11 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                 && quoted_copular_exclamation(&m.form)
                 && matches!(
                     class,
-                    Some(PredicateClass::Verb | PredicateClass::Adjective)
+                    Some(
+                        PredicateClass::Verb
+                            | PredicateClass::Adjective
+                            | PredicateClass::VerbOrAdjective
+                    )
                 )
                 && lemma.text != "아니다"
             {
@@ -3004,7 +3070,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                                         | "대"
                                 ))
                     }
-                    Some(PredicateClass::Copula) | None => false,
+                    Some(PredicateClass::Copula | PredicateClass::VerbOrAdjective) | None => false,
                 }
             {
                 return false;

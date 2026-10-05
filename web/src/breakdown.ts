@@ -8,6 +8,7 @@ import {
 } from "./model";
 
 import labelCatalog from "./grammar-labels.json";
+import hadaSources from "./hada-sources.json";
 
 interface GrammarLabel {
   kind: string;
@@ -147,7 +148,28 @@ export function parts(
     const adjectivalHada = m.kind === "suffix" && m.form === "하다" &&
       a.rules.includes("suffix.adjective.hada") && previousLemma?.kind === "nominal" &&
       ["건강", "순수", "정직", "진실", "행복"].includes(previousLemma.text);
-    const label = adjectivalHada
+    const remainingHada = m.kind === "suffix" && m.form === "하다" && previousLemma
+      ? hadaSources.find((s) => s.base === previousLemma.text && s.kind === previousLemma.kind &&
+          s.rules.some((rule) => a.rules.includes(rule))) : undefined;
+    // Rule flags belong to the whole analysis. A different suffix owner can
+    // contribute an adjective flag while this owner's bare -는 is verbal.
+    const following = order[position + 1];
+    const followingMorpheme = following && "morpheme" in following
+      ? a.morphemes[following.morpheme] : undefined;
+    const barePresent = followingMorpheme?.kind === "ending" && followingMorpheme.form === "는";
+    const remainingClasses = remainingHada?.rules.filter((rule) =>
+      a.rules.includes(rule) && !(barePresent && rule.includes(".adjective."))) ?? [];
+    const remainingAdjective = remainingClasses.some((rule) => rule.includes(".adjective."));
+    const remainingVerb = remainingClasses.some((rule) => rule.includes(".verb."));
+    const remainingLabel = remainingHada?.role === "bound_noun"
+      ? remainingAdjective && remainingVerb ? "Auxiliary verb / adjective formation"
+        : remainingAdjective ? "Auxiliary adjective formation" : "Auxiliary verb formation"
+      : remainingAdjective && remainingVerb ? "Verb / adjective formation"
+        : remainingAdjective ? "State / adjective formation" : "Action / verb formation";
+    const label = remainingHada
+      ? { ...grammarLabels[key], label: remainingLabel,
+          note: `Source-listed ${remainingHada.role.replace("_", " ")} + -하다 formation (sense ${remainingHada.sense}).${remainingHada.role === "root" ? " Root status does not assert a standalone dictionary entry." : ""} Context and other -하다 senses remain open; the whole lexical reading is retained.` }
+      : adjectivalHada
       ? { ...grammarLabels[key], label: "State / adjective formation",
           note: "Source-listed noun + -하다 adjective formation (sense 2). The whole lexical reading and other -하다 senses remain available." }
       : nominalI || adverbI

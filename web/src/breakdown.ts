@@ -108,7 +108,7 @@ export function parts(
         grammar: false,
         entry: entry?.id,
         references: fanRoot ? [{ title: "KBS: 허풍선이 formation", url: "https://world.kbs.co.kr/service/contents_view.htm?board_seq=229261&id=&lang=k&menu_cate=learnkorean" }] : undefined,
-        hint: !entry && allEntries.some((e) => differentOrigin(e.id)) ? `${lemma.text} · Dictionary entries for this spelling have a different recorded origin from the whole word. Other derivations and senses remain possible; inspect the dictionary for details.` : fanRoot ? "선 (扇) · Source-listed bound root meaning fan. Recorded origins of other 선 homonyms do not supply this root; all entries remain available for inspection." : `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.`,
+        hint: !entry && allEntries.some((e) => differentOrigin(e.id)) ? `${lemma.text} · Dictionary entries for this spelling have a different recorded origin from the whole word. Other derivations and senses remain possible; inspect the dictionary for details.` : fanRoot ? "선 (扇) · Source-listed bound root meaning fan. Recorded origins of other 선 homonyms do not supply this root; all entries remain available for inspection." : entry ? `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.` : `${lemma.text} · ${lemma.kind}. ${allEntries.length ? "No dictionary gloss for this reading." : "No dictionary entry for this lemma in the offline snapshot."}`,
       };
     }
     const m = a.morphemes[component.morpheme];

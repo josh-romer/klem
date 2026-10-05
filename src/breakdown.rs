@@ -237,7 +237,10 @@ impl Analysis {
                 if suffixes.last() == Some(&"하다") {
                     if crate::hada_suffix::owner_class(lemma, &self.rules, &self.morphemes[start..])
                         .is_none()
-                        || !matches!(suffixes.as_slice(), ["하다"] | ["화", "하다"])
+                        || !matches!(
+                            suffixes.as_slice(),
+                            ["하다"] | ["화", "하다"] | ["시", "하다"]
+                        )
                     {
                         return None;
                     }

@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "cli_sha256": "b8b7d80c4e1cee8f3e5cbffb8addb91c8b957075299c41a9a87ae1ef6566d168",
+  "book_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "streams": [
+    {
+      "mode": "raw",
+      "checks": [
+        {
+          "command": [
+            "/nix/store/yhwhdnl8911gqk8yykwg5y8c9v8ibrsp-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--cache-bytes",
+            "0"
+          ],
+          "records": 179112,
+          "sha256": "19c9960da10daf5bfd295a4b529b98e8615543627f0bea5c94b38d6048b9895b",
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "/nix/store/yhwhdnl8911gqk8yykwg5y8c9v8ibrsp-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "records": 179112,
+          "sha256": "19c9960da10daf5bfd295a4b529b98e8615543627f0bea5c94b38d6048b9895b",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "mode": "headword",
+      "checks": [
+        {
+          "command": [
+            "/nix/store/yhwhdnl8911gqk8yykwg5y8c9v8ibrsp-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--cache-bytes",
+            "0"
+          ],
+          "records": 179112,
+          "sha256": "8909b162a756ff1b4433f247d56162ed67cc2aab97466d125659739257263318",
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "/nix/store/yhwhdnl8911gqk8yykwg5y8c9v8ibrsp-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-only",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "records": 179112,
+          "sha256": "8909b162a756ff1b4433f247d56162ed67cc2aab97466d125659739257263318",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "mode": "compatible",
+      "checks": [
+        {
+          "command": [
+            "/nix/store/yhwhdnl8911gqk8yykwg5y8c9v8ibrsp-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--cache-bytes",
+            "0"
+          ],
+          "records": 179112,
+          "sha256": "169f293a15ab7ea5aec64b26bb631c0f6c73e2b21bf10dcafc4b4c4c48e95317",
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "/nix/store/yhwhdnl8911gqk8yykwg5y8c9v8ibrsp-klem-0.1.0/bin/klem",
+            "text",
+            "/home/josh/projects/klem/data/books/mujeong.txt",
+            "--dictionary",
+            "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+            "--dict-compatible",
+            "--cache-bytes",
+            "8388608"
+          ],
+          "records": 179112,
+          "sha256": "169f293a15ab7ea5aec64b26bb631c0f6c73e2b21bf10dcafc4b4c4c48e95317",
+          "exit_code": 0
+        }
+      ]
+    }
+  ],
+  "producer": {
+    "text": "\"\"\"Capture every full-novel cache comparison using the verified Nix executable.\"\"\"\nimport argparse\nimport hashlib\nimport json\nimport subprocess\nimport sys\nfrom pathlib import Path\nsys.path.insert(0, '/home/josh/projects/klem/tools')\nfrom nominal_si_hada_audit import ROOT, read, sha\np=argparse.ArgumentParser(description=__doc__)\np.add_argument('--cli',type=Path,required=True)\np.add_argument('--output',type=Path,required=True)\na=p.parse_args(); assert not a.output.exists()\npackage=read(ROOT/'docs/nominal-si-hada-packaged-checks.json.gz')\nassert str(a.cli)==package['nix_outputs']['klem']+'/bin/klem'\nassert sha(a.cli)==package['cli_sha256']\nbook=ROOT/'data/books/mujeong.txt'; db=ROOT/'data/dictionaries/krdict/krdict.db'\nstreams=[]\nfor mode,flags in [('raw',[]),('headword',['--dict-only']),('compatible',['--dict-compatible'])]:\n checks=[]\n for cache in [0,8388608]:\n  command=[str(a.cli),'text',str(book),'--dictionary',str(db),*flags,'--cache-bytes',str(cache)]\n  h=hashlib.sha256();count=0\n  proc=subprocess.Popen(command,stdout=subprocess.PIPE)\n  assert proc.stdout is not None\n  for line in proc.stdout:h.update(line);count+=1\n  code=proc.wait();assert code==0 and count==179112\n  checks.append({'command':command,'records':count,'sha256':h.hexdigest(),'exit_code':code})\n  print(mode,cache,count,h.hexdigest(),flush=True)\n assert checks[0]['sha256']==checks[1]['sha256']\n streams.append({'mode':mode,'checks':checks})\nproducer=Path(__file__)\nreport={'schema_version':1,'cli_sha256':sha(a.cli),'book_sha256':sha(book),'dictionary_sha256':sha(db),'streams':streams,'producer':{'text':producer.read_text(),'sha256':sha(producer)}}\na.output.write_text(json.dumps(report,indent=2)+'\\n')\n",
+    "sha256": "17a7700a594ee411b1bea0a968c8f7938a13e6c240b2ec1acc272ff402f85c49"
+  }
+}

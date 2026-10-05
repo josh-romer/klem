@@ -1,4 +1,4 @@
-//! Source-listed -화하다 verbs: noun + -하다, with independently sourced -화 bases.
+//! Source-listed -화하다/-시하다 verbs, with independently sourced deeper noun bases.
 use crate::{
     Lemma, LemmaKind, Morpheme, MorphemeKind, doeda_identity::OriginSource, engine::PredicateClass,
 };
@@ -33,6 +33,14 @@ pub(crate) fn formation(head: &str) -> Option<(&'static str, LemmaKind, Predicat
         "합리화하다" => "합리화",
         "황폐화하다" => "황폐화",
         "획일화하다" => "획일화",
+        "동일시하다" => "동일시",
+        "등한시하다" => "등한시",
+        "문제시하다" => "문제시",
+        "야만시하다" => "야만시",
+        "의문시하다" => "의문시",
+        "적대시하다" => "적대시",
+        "죄악시하다" => "죄악시",
+        "중요시하다" => "중요시",
         _ => return None,
     };
     Some((base, LemmaKind::Nominal, PredicateClass::Verb))
@@ -50,7 +58,10 @@ pub(crate) fn owned_source(
         return None;
     }
     if first.form == "하다" {
-        DIRECT.iter().find(|s| s.base == lemma.text)
+        DIRECT
+            .iter()
+            .chain(SI_DIRECT)
+            .find(|s| s.base == lemma.text)
     } else if first.form == "화"
         && crate::nominal_hwa::owner(lemma, rules, morphs)
         && morphs
@@ -58,6 +69,13 @@ pub(crate) fn owned_source(
             .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "하다")
     {
         NESTED.iter().find(|s| s.base == lemma.text)
+    } else if first.form == "시"
+        && crate::nominal_si::owner(lemma, rules, morphs)
+        && morphs
+            .get(1)
+            .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "하다")
+    {
+        SI_NESTED.iter().find(|s| s.base == lemma.text)
     } else {
         None
     }
@@ -370,6 +388,102 @@ const NESTED: &[OriginSource] = &[
         base: "황폐",
         expected_origins: &["荒廢"],
         whole_entries: &["krdict:87802"],
+        whole_origins_complete: true,
+    },
+];
+
+const SI_DIRECT: &[OriginSource] = &[
+    OriginSource {
+        base: "동일시",
+        expected_origins: &["同一視"],
+        whole_entries: &["krdict:48643"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "등한시",
+        expected_origins: &["等閑視"],
+        whole_entries: &["krdict:52827"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "문제시",
+        expected_origins: &["問題視"],
+        whole_entries: &["krdict:56920"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "야만시",
+        expected_origins: &["野蠻視"],
+        whole_entries: &["krdict:90042"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "의문시",
+        expected_origins: &["疑問視"],
+        whole_entries: &["krdict:71414"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "적대시",
+        expected_origins: &["敵對視"],
+        whole_entries: &["krdict:74577"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "죄악시",
+        expected_origins: &["罪惡視"],
+        whole_entries: &["krdict:90805"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "중요시",
+        expected_origins: &["重要視"],
+        whole_entries: &["krdict:26158"],
+        whole_origins_complete: true,
+    },
+];
+
+const SI_NESTED: &[OriginSource] = &[
+    OriginSource {
+        base: "동일",
+        expected_origins: &["同一"],
+        whole_entries: &["krdict:48643"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "문제",
+        expected_origins: &["問題"],
+        whole_entries: &["krdict:56920"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "야만",
+        expected_origins: &["野蠻"],
+        whole_entries: &["krdict:90042"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "의문",
+        expected_origins: &["疑問"],
+        whole_entries: &["krdict:71414"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "적대",
+        expected_origins: &["敵對"],
+        whole_entries: &["krdict:74577"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "죄악",
+        expected_origins: &["罪惡"],
+        whole_entries: &["krdict:90805"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "중요",
+        expected_origins: &["重要"],
+        whole_entries: &["krdict:26158"],
         whole_origins_complete: true,
     },
 ];

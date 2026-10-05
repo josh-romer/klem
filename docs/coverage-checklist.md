@@ -5424,8 +5424,9 @@ review remains open under the completion review below.
   gold is substituted for it. 도외, 등한 and 확실 lack recorded noun bases in
   this snapshot and require further base-class evidence. Unlisted passive
   heads and arbitrary bases gain no license from the suffix's general note.
-  Decomposing the separately recorded -시하다 heads, contextual judgments and
-  independent Korean-language review remain open.
+  The separately recorded -시하다 heads now have the finite COV-022r
+  decomposition scope below. Other heads, contextual judgments and independent
+  Korean-language review remain open.
 
 - [ ] **COV-022p — Noun-forming -화 and nested passives.** **Partial: 28
   source-listed nominal formations and 21 separately recorded passive heads
@@ -5574,8 +5575,66 @@ review remains open under the completion review below.
   package, with packaged assets and 126 fresh Unicode word calls verified.
   This finite addition does not infer unrestricted -하다 splitting, add root
   licenses for unresolved -화 bases, or resolve the other -하다 senses.
-  Further -시하다 heads remain COV-022o work. Contextual and independent
-  Korean-language review remain open.
+  The finite -시하다 owners are implemented under COV-022r below. Other
+  heads, contextual and independent Korean-language review remain open.
+
+- [ ] **COV-022r — Noun -하다 after source-listed -시 formations.** **Partial:
+  eight direct noun + -하다 owners and seven nested noun + -시 + -하다 owners
+  implemented; full Rust, packaged runtime, performance and Nix checks
+  passed.** The [frozen preflight](nominal-si-hada-preflight.json.gz) retains all ten original
+  leads, 205 words in three dictionary modes, 49 complete native entries and
+  22 original annotated rows. Five direct heads have recorded standalone noun
+  entries; three more (문제시, 야만시, 의문시) have independently licensed -시
+  formations and recorded whole verbal origins. Their raw paths remain possible
+  despite absent standalone dictionary entries. In particular 문제시하지도 keeps
+  문제시 + 하다 + 지 + 도 and 문제 + 시 + 하다 + 지 + 도, alongside the whole
+  문제시하다 owner. Its original 문제시+하+지+도 / ncpa+xsv+ecx+jxc annotation
+  remains unchanged. Dictionary-only filters remove the unmatched intermediate
+  while retaining the matched deeper base and whole verb. 등한시 supports a
+  direct split through its recorded noun; the unresolved 등한 base gains no
+  deeper license. 도외 and 확실 remain unresolved.
+  [Stable cases](../tests/fixtures/nominal-si-hada-sources.json) add 350 required
+  and seventeen forbidden structures with independent `si-hada-` IDs and frozen
+  whole-head parents. Six [focused tests](../tests/nominal_si_hada.rs) and all
+  sixteen earlier -화/-시/-화하다 tests passed. They check complete LMF data,
+  dictionary filtering, class/origin ownership, malformed external chains,
+  Unicode/cache behavior, ordered components and recovery indices. The
+  [twelve debug streams](nominal-si-hada-diagnostics.json.gz) preserve previous
+  candidate/readings/order and trace 916 additions over 160 surfaces: 350 raw
+  and 283 per filtered mode. All existing ledger entries and source captures
+  remain unchanged. The initial evidence-guard adaptation used three wrong
+  control identities; the failed run is retained. All eleven corrected source
+  and comparison evidence guards passed. The full Rust suite passed 930 tests
+  in 206 batches with one ignored; the documentation test, Clippy and formatting
+  checks passed. [Actual API/browser checks](nominal-si-hada-runtime-checks.json.gz)
+  cover 410 encoded word calls, 700 new orders, all 49 native endpoints, ten
+  selected diagrams and six exports. Eleven runtime guards passed, including
+  missing-entry gloss and tooltip ownership; the initial invalid-hint guard
+  exposed an exception mismatch and its failed run is retained.
+  [Broad comparison](nominal-si-hada-observations.json.gz) retains all 1,128,312
+  records unchanged. [Corpus comparison](nominal-si-hada-corpora.json.gz)
+  preserves 66,570 gold rows and all prior candidates across 32,096 surfaces:
+  문제시하지도, 적대시하지도 and 적대시해 gain six paths with no changed gold
+  outcomes. Four corpus guards passed. Initial Nix package, frontend assets
+  and inventory checks passed; the release suite passed 931 tests, one ignored,
+  across 201 batches. The [packaged receipt](nominal-si-hada-packaged-checks.json.gz)
+  verifies all twelve Unicode/cache/filter streams, 410 API word calls, 49
+  complete native endpoints, ten browser diagrams and six exports. Both
+  packaged screenshots were inspected. [Packaged broad streams](nominal-si-hada-packaged-observations.json.gz)
+  and [packaged corpora](nominal-si-hada-packaged-corpora.json.gz) match the
+  debug results exactly; eleven release/stream mutation guards passed.
+  [Novel cache parity](nominal-si-hada-cache-parity.json) retains all 179,112
+  records in each of three dictionary modes at zero and 8 MiB cache budgets;
+  all three pairs are byte-identical. [Eighty paired novel measurements](nominal-si-hada-performance.json)
+  use five alternating before/after pairs for eight workloads on the same CPU,
+  after all own build/audit jobs ended. Observed median elapsed changes range
+  from -0.58% to +0.53%; startup, serialization, load and frequency context
+  remain recorded, without an equivalence or causal claim. Three timing
+  mutation guards passed, bringing release/stream/timing guards to fourteen.
+  The [final Nix pass](nominal-si-hada-final-nix.log.gz) passed all three
+  checks, including the packaged/performance receipts and mutation guards;
+  its exact terminal log is archived. Wider forms, contextual judgments and
+  independent Korean-language review remain open.
 
 ### P3: dictionary and representation boundaries
 

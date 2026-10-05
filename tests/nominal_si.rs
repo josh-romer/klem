@@ -170,7 +170,7 @@ fn old_candidate_order_and_original_annotation_are_preserved() {
             after
                 .analyses
                 .iter()
-                .filter(|a| !derived(a))
+                .filter(|a| !derived(a) && !a.rules.iter().any(|r| r == "suffix.verb.hada"))
                 .cloned()
                 .collect::<Vec<_>>(),
             old.analyses,

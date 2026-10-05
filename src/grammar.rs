@@ -1866,6 +1866,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.approximation" => {
             "Separate approximate amount/degree suffix -쯤 after a nominal base; preserve whole-word alternatives and existing nominal suffixes."
         }
+        "suffix.distributive.ssik" => {
+            "Separate -씩 for quantity distribution or unexpected amount/degree after a nominal hypothesis. Quantity context, the source's some-noun restriction and speaker expectation are not inferred; whole-word and standalone 씩 adverb readings remain."
+        }
         "suffix.adjectival.dap" => {
             "Separate adjective-forming -답다 from a nominal base, with ㅂ-irregular vowel attachment."
         }
@@ -2204,7 +2207,8 @@ mod label_tests {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in [
-            "님", "들", "적", "답다", "되다", "하다", "이", "히", "쯤", "박이", "둥이", "시", "화",
+            "님", "들", "적", "답다", "되다", "하다", "이", "히", "쯤", "씩", "박이", "둥이", "시",
+            "화",
         ] {
             forms.insert(format!("-{form}"), Suffix);
         }

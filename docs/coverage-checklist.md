@@ -5833,6 +5833,100 @@ review remains open under the completion review below.
   Wider source owners/forms, contextual
   judgments and independent Korean-language review remain open.
 
+- [ ] **COV-022u — Quantity and unexpected-degree suffix -씩.**
+  **Partial: source, runtime, full Rust, Clippy and browser checks pass; corpus/package/performance verification pending.**
+  Fresh literary passage review found that 잔씩 had no 잔 + 씩 path.
+  The [frozen source/baseline](ssik-preflight.json.gz) retains all eleven original
+  example groups from KRDict [72043](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72043),
+  both sense notes, seventeen complete suffix/base/adverb entries, 161 structural
+  input cases, and twelve Unicode/cache/filter streams from the committed
+  COV-022t package. [Exact original LMF](../tests/fixtures/krdict-ssik-original.json)
+  is preserved separately from the [English offline adapter](../tests/fixtures/krdict-ssik-english.json).
+  No spelling, example or original candidate is rewritten.
+  The suffix attaches once to a nominal hypothesis and existing bounded noun
+  formations before outer particles or a copula. It has separate suffix kind and
+  `suffix.distributive.ssik` provenance; whole words and standalone 씩 adverb
+  KRDict 66460 remain visible. Its two meanings share one morphological shape:
+  quantity distribution and unexpected amount/degree (often -씩이나).
+  Quantity may be supplied by a preceding separate numeral. The some-noun
+  restriction, quantity context and speaker expectation remain conditional;
+  dictionary compatibility does not settle these semantic conditions.
+  [Stable structural cases](../tests/fixtures/ssik-sources.json) append 148
+  required and eleven forbidden paths to the candidate ledger, preserving all
+  prior case/source identities. The [focused tests](../tests/ssik.rs) cover
+  both source senses, outer allomorphs, suffix order, complete native import,
+  the adverb homonym, Unicode, all 193 prior unique word outputs and repeated
+  suffix stress. All five focused tests, three neighboring -쯤 tests and four
+  candidate-ledger tests pass. Exact original native projection and the separate
+  English adapter match the frozen preflight. The new browser label cites the suffix
+  source and states the unresolved contextual conditions.
+  [Actual CLI comparisons](ssik-diagnostics.json.gz) preserve every original
+  candidate, ordered reading and dictionary entry across twelve streams.
+  [Independent parent checks](ssik-parent-checks.json.gz) invert all 653 additions
+  (222 raw, 216 headword, 215 compatible) to exact frozen raw whole-word parents;
+  a filtered baseline need not contain that unmatched raw parent.
+  The [full Rust suite](ssik-full-rust.log.gz) passes 951 tests with one ignored
+  across 204 batches; warnings-as-errors Clippy and the SolidJS build pass.
+  [Actual API/browser evidence](ssik-browser.json.gz) verifies 24 exact source
+  diagrams, whole-word alternatives, six CLI/export comparisons, all seventeen
+  full native endpoints, source clicks, the separate 씩 adverb, Unicode and
+  mobile layout. Source -씩이나 diagrams select the complete 이나 particle;
+  alternative particle decompositions remain visible. Reusable source,
+  comparison and runtime audits pass and are wired into Nix.
+  [Held-out corpus comparison](ssik-corpora.json.gz) preserves all 66,570
+  original gold rows and compares all 32,096 unique raw words. Six words gain
+  six paths, independently inverted to their exact frozen whole-word parents;
+  no gold outcomes change. The audit recomputes each row's grouped match and
+  maximal co-recovered sets from actual candidates. The existing adapter folds
+  -씩 into lexical gold, so unchanged recall does not validate the added base
+  decomposition; COV-022v tracks a separate original morphology/POS projection.
+  [Full candidate and novel streams](ssik-observations.json.gz) compare all
+  1,128,312 original records. Existing analyses, their order, readings and
+  dictionary fields are preserved. Optional spacing also gains four displayed
+  hypotheses across the two filter modes; each has an exact original component
+  parent, actual component CLI/API outputs and its own unjudged review ID.
+  These suggestions preserve the original unspaced record and are not spelling
+  corrections or contextually selected readings.
+  [Actual packaged Nix/API/browser checks](ssik-packaged-checks.json.gz) pass
+  all 951 release tests, twelve debug/release streams, all 412 NFC/NFD API word
+  records and 444 newly ordered paths, retaining original orders. All 24 source
+  diagrams, six CLI/export comparisons and seventeen full native endpoints
+  match the debug evidence. Desktop and mobile screenshots were inspected.
+  Independently captured [release novel/candidate streams](ssik-packaged-observations.json.gz)
+  and [release corpus word outputs](ssik-packaged-corpora.json.gz) match the
+  debug streams exactly. The corpus evaluator is the separately hashed debug
+  example executable; the audit recomputes every gold outcome directly from
+  actual packaged CLI candidates. [Full-novel cache checks](ssik-cache-parity.json)
+  preserve identical output with zero and 8 MiB cache in all three modes.
+  [Eighty paired full-novel measurements](ssik-performance.json) cover eight
+  workloads with both executables pinned to one CPU. Observed median changes
+  range from -0.65% to +0.89%, with peak after-process RSS below 38.6 MiB.
+  These include startup and serialization and do not establish statistical
+  equivalence. The independent timing/cache audit passes.
+  [Final combined Nix validation](ssik-final-nix.json) passes the package,
+  assets and complete inventory gates against the recorded 56-file snapshot.
+  Independent Korean-language review remains open. General compound/numeral segmentation
+  and contextual ranking remain under the release boundaries.
+
+- [ ] **COV-022v — Adverb-base alternatives and source tensions before -씩.**
+  [NIKL's 2026-06-17 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=332429)
+  leaves 조금 in 조금씩 open to noun or adverb analysis and avoids claiming
+  that -씩 changes it into an adverb. COV-022u currently recovers the nominal
+  base; the adverb-base alternative requires its own lexical class, suffix
+  ownership, dictionary and ordered-breakdown tests. Preserve both KRDict
+  조금 homonyms (61176 noun, 61177 adverb), the whole 조금씩 entry and all
+  original nominal paths. Review quantity-base classes and source-specific
+  particle/copula conditions without treating speaker expectation or a
+  contextual POS choice as known. Wider adverb bases and register remain open;
+  dialectal spelling and arbitrary quantity/compound segmentation stay deferred.
+  The [supplementary morphology projection](ssik-morphology-projection.json)
+  retains all twelve original -씩 annotation rows. Nine carry an explicit base
+  and suffix: the nominal batch covers eight, while GSD dev `dev-s394/1`
+  (`가끔+씩`, `MAG+XSN`) remains missing its typed adverb base. Three rows lack
+  an explicit base and remain unprojected. The independent audit preserves
+  these identities and the original corpus gold; this is a separate regression
+  view, not a replacement adapter or corpus recall claim.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**
@@ -5856,7 +5950,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 476 currently emitted canonical grammar forms.** The initial catalog
+  for all 477 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,
@@ -5910,6 +6004,12 @@ explicitly and remaining cases get their own IDs.
   linguistic precision estimate.
 - [ ] Check representative passages separately from repeatedly used regression
   corpora, including dictionary misses and reader-visible breakdown quality.
+  **Partial: [fresh literary passage review](fresh-passage-review.md) preserves
+  a separate 82-paragraph work, four uniformly selected original passages,
+  291 individually tracked compatible-filter misses and fourteen display leads.
+  Eight actual Unicode renders and 24 CLI/export comparisons pass; four actual
+  dropdown selections verify the retained 먹다 + 지 + 를 alternatives.
+  Contextual and independent review of the queue remains open.**
 - [ ] Publish the supported scope and unresolved limits, alongside recall,
   candidate ambiguity, dictionary coverage, and performance evidence. Do not
   describe the tool as complete for all Korean.

@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-022u",
+  "recorded_at": "2026-10-05T20:57:59.965991+00:00",
+  "exit_code": 0,
+  "validated_snapshot": {
+    "head": "52bd71e197d6e0cc1ada8d757418ceceb9c8f08c",
+    "staged_diff_sha256": "4977c3f2fbec03d857da6693d5a3127eb382ef5a02cece51ff419b6998a29420",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "5f2d15618fa86de3da479f05f5c905a38c871495cb8d1008919ff55cf8d28285",
+        "bytes": 456254
+      },
+      "docs/fresh-passage-review.md": {
+        "sha256": "0cfa80474a7421f943d4a5bf3a52c540e9c5e9b5994633a4efed2f100fc32271",
+        "bytes": 4099
+      },
+      "docs/fresh-unsu-browser.json.gz": {
+        "sha256": "1cda7fc0f95b52161be2072cd6be66807400c84f229376bbd9ae8b69dd9a21e0",
+        "bytes": 219686
+      },
+      "docs/fresh-unsu-cli.json.gz": {
+        "sha256": "d61a29c475c95538aeb08dc6e3f93f2080df927dbc8e8de396883dd828798278",
+        "bytes": 5282607
+      },
+      "docs/fresh-unsu-evidence.json": {
+        "sha256": "e56aa835343f3377125d4af1ffe44a56c75ce34d4617d7aa97e408a104f789b9",
+        "bytes": 11019
+      },
+      "docs/fresh-unsu-narrative.html.gz": {
+        "sha256": "a6ce2112811859f124fb3dc472720057f110dc89fd079a90587d00a0a41b9973",
+        "bytes": 11141
+      },
+      "docs/fresh-unsu-options.json": {
+        "sha256": "9578bba4cfa35ca96f7a386bf956b6ba54e2ec4b237c53d5274833ace6710179",
+        "bytes": 3531
+      },
+      "docs/fresh-unsu-review.json": {
+        "sha256": "54ea13002e36490af6e18605964734866b0f5308fba3cbd837f03be6eb67da52",
+        "bytes": 337392
+      },
+      "docs/fresh-unsu-screenshots/0-desktop.png": {
+        "sha256": "07a626660a1364b41cf54acf0d0ea70417071e7c8f414e9e327d3ec00e578c91",
+        "bytes": 95086
+      },
+      "docs/fresh-unsu-screenshots/0-mobile.png": {
+        "sha256": "82611c793808e0f76de637ff3f43cb589f0eaf91eb7146bea543a1be8d3d1c1d",
+        "bytes": 37895
+      },
+      "docs/fresh-unsu-screenshots/27-desktop.png": {
+        "sha256": "6bfbb983b274fba0e471fe04f8056bb9850e4fcd3ba5f37536b0d62e9c543147",
+        "bytes": 100336
+      },
+      "docs/fresh-unsu-screenshots/27-mobile.png": {
+        "sha256": "1ab4f05c10d105ca221b9b759b9ea5ef55f68bdae08aaf78618facf53ab19f2e",
+        "bytes": 31240
+      },
+      "docs/fresh-unsu-screenshots/54-desktop.png": {
+        "sha256": "a693cb9bf449ded503d6307a4e96ee6620cc3bbea500850a493ca167dbc9ff56",
+        "bytes": 105889
+      },
+      "docs/fresh-unsu-screenshots/54-mobile.png": {
+        "sha256": "f499bfc22dd9c92ccb16980c8add52a32e21db53cb6c5fa36939c4ad514b9a1b",
+        "bytes": 39891
+      },
+      "docs/fresh-unsu-screenshots/81-desktop.png": {
+        "sha256": "5a9554fdbbb70c43b1da97aa9b57af7e0221477ef9bbe4f12e7f20f54ab04ed5",
+        "bytes": 107092
+      },
+      "docs/fresh-unsu-screenshots/81-mobile.png": {
+        "sha256": "d9ad5887a3aac3844b0cb6d57b9eb2bab82cbc9e5125c99856d55e760e76f93b",
+        "bytes": 41522
+      },
+      "docs/fresh-unsu-source.json": {
+        "sha256": "ca63015b5701265dd92f3dceeaec99252dedb4fec41b23b4c3fd5f6dbfe3ca36",
+        "bytes": 64917
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "b1879e2ea1a8e9071f060e12b1c006bdbfac30f09a54dd91004947b4280f1f74",
+        "bytes": 3342623
+      },
+      "docs/rules.md": {
+        "sha256": "c6acb288ceedc6c4795bec0266d82013928c71368cda3967014e1be35c965b5a",
+        "bytes": 312561
+      },
+      "docs/ssik-adverb-source-lead.json": {
+        "sha256": "f5aede42e111290f814fc2767ea0ccc3f93041b6e1a5d4dabedcd43c854b6d89",
+        "bytes": 29243
+      },
+      "docs/ssik-browser.json.gz": {
+        "sha256": "b14c2f2792fae03dd233ddb0b33e5d1a137c3ca150ded0dcd37414444265e58a",
+        "bytes": 64887
+      },
+      "docs/ssik-cache-parity.json": {
+        "sha256": "1ff3c792ead06a567a565731cf371f1771b38413e90dc4d29779080d3c0e000f",
+        "bytes": 5532
+      },
+      "docs/ssik-clippy.log.gz": {
+        "sha256": "3877e7c5ac60029f6ff5d7aa1866b9fe40c2ff1262d43d6ebfb5179d7d48c65f",
+        "bytes": 160
+      },
+      "docs/ssik-corpora.json.gz": {
+        "sha256": "99dd194c7eed5ec806a52693033dd32e7502dac050859bd77cece4eaad7798e4",
+        "bytes": 3048966
+      },
+      "docs/ssik-diagnostics.json.gz": {
+        "sha256": "baba62c3b8a5905d77f0bc00c8426d196e4e5237700921e61896db686dbf5aed",
+        "bytes": 251175
+      },
+      "docs/ssik-full-rust.log.gz": {
+        "sha256": "4e213e5b5cf0aa0049d34279b00e6b1e1419a28b3d27ad7ea4b6d04939d2174d",
+        "bytes": 22090
+      },
+      "docs/ssik-morphology-projection.json": {
+        "sha256": "e06172db30919449a97191c24b114f12faf20a80f2b160bed18df39fbaab5906",
+        "bytes": 34333
+      },
+      "docs/ssik-observations.json.gz": {
+        "sha256": "90fad3e32ffc52b3120c03558922e0977270ae51bcfc95f5c0f641ece3df333e",
+        "bytes": 114828
+      },
+      "docs/ssik-packaged-checks.json.gz": {
+        "sha256": "492a6f59d49cea2fdcdd13cfefa207225d3610ea7b371d58306c8f10b6f0eff5",
+        "bytes": 740248
+      },
+      "docs/ssik-packaged-corpora.json.gz": {
+        "sha256": "9575b5fd517544ab1104e8d6aca970e1ec3eef333a7bdabf4302de3dd4555a42",
+        "bytes": 3048977
+      },
+      "docs/ssik-packaged-observations.json.gz": {
+        "sha256": "54a2d3af6c341f7e4248aa9f90d3ac9efb58ecf178a5931e5a8e65e63a08a26f",
+        "bytes": 114860
+      },
+      "docs/ssik-parent-checks.json.gz": {
+        "sha256": "4f30a3104e93d2112d152e8f53d5d4367c5b444dd6cd0964117053a9da6bea6f",
+        "bytes": 15433
+      },
+      "docs/ssik-performance.json": {
+        "sha256": "6482ac8470138c1dc301f4a01af4b1719b8a177223114444542b5b277029cbce",
+        "bytes": 83602
+      },
+      "docs/ssik-preflight.json.gz": {
+        "sha256": "db986efd3a4d2e5c784819a9524f6ca02ec38fd3acb8194dd0d34f75b1119beb",
+        "bytes": 216275
+      },
+      "flake.nix": {
+        "sha256": "a922c086ab6a9a218b7facecbedce1e0b24c354710cd62c516b3744b9023f83c",
+        "bytes": 34349
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "25e23a44a8a13bf32e317eb030907736fe4435dddac79fac50fcdd0eb792775b",
+        "bytes": 8031
+      },
+      "src/breakdown.rs": {
+        "sha256": "db0aaeae377fe5a464d48213f272ace466669403c3094239ce89f56b856a1013",
+        "bytes": 20530
+      },
+      "src/engine.rs": {
+        "sha256": "ae6c498c208be549303897ec96a191d026945d60818a5486834d0ba0fa5f7d5d",
+        "bytes": 216367
+      },
+      "src/grammar.rs": {
+        "sha256": "3a1668c9be4d56628aad4e7ecf2c687bfa0897f6bec507223fb97e2ea94b99e3",
+        "bytes": 102264
+      },
+      "tests/fixtures/krdict-ssik-english.json": {
+        "sha256": "6db8fc0b2d0dcc9282207018863da8bd09e99ebef57b5d80062007f9282cc4d1",
+        "bytes": 226594
+      },
+      "tests/fixtures/krdict-ssik-original.json": {
+        "sha256": "11143116d7856bc96235e4a28d13b36a89929375d349f942bbca03775fea30a8",
+        "bytes": 469232
+      },
+      "tests/fixtures/ssik-sources.json": {
+        "sha256": "4c1f72c73f61e1a29e3e670cae48b0fe92480a7e37dc4277ed531b68051c21a6",
+        "bytes": 825478
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "87986b510ecf48326d28aee85eadc48851ae19eae6947924628c82fb48ddc1f8",
+        "bytes": 28401564
+      },
+      "tests/ssik.rs": {
+        "sha256": "824b7c67928c844d8eab142fc37355ccc7509d2ebcbc1f443f21f2c16578c62b",
+        "bytes": 6733
+      },
+      "tests/validity.rs": {
+        "sha256": "f9649133f6ed1c6ede0d895d8b3f3bb2fe0f93544dc07325f203a26a335cabfd",
+        "bytes": 4004
+      },
+      "tools/fresh_passage_audit.py": {
+        "sha256": "118ed4865771f78d4d8824dfa5e7a59b7df9a831bf065f9d050993880ae548a1",
+        "bytes": 10697
+      },
+      "tools/ssik_audit.py": {
+        "sha256": "f28a1e5ed77b5f937dac892d6693b449d54f211c09ac5438219e90b929f2d503",
+        "bytes": 3911
+      },
+      "tools/ssik_broad.py": {
+        "sha256": "9220a06c54dcae183c505670744e96769c66c45fec38efb976791a370b731fcf",
+        "bytes": 9022
+      },
+      "tools/ssik_comparison.py": {
+        "sha256": "f1603ed92aa38350089faf28ce8f014f7af66c57fef543fc6f2d31f47f3d72e7",
+        "bytes": 6350
+      },
+      "tools/ssik_corpora.py": {
+        "sha256": "9b9ef435ae5ac9231983a219005525a68ea923d65f97548d6a2f9396a03a2f57",
+        "bytes": 8002
+      },
+      "tools/ssik_morphology.py": {
+        "sha256": "a38f8c5c7fd2f46538547a89818a90ce49bc17b89832799027d01bbf2550c791",
+        "bytes": 3319
+      },
+      "tools/ssik_performance.py": {
+        "sha256": "8cae942ce2d548a1784b0f39afa02a43cf3b42d969d25dfc4605fd11414b593e",
+        "bytes": 2320
+      },
+      "tools/ssik_release.py": {
+        "sha256": "0ff690ff4e6b4e3600b0e2505e4291dea4649fccaeb6768456c410270389e3ca",
+        "bytes": 6862
+      },
+      "tools/ssik_runtime.py": {
+        "sha256": "afbc7ac467bdfd9130a85069e0f486bd67a4328177f522efa2e886e79e0fda69",
+        "bytes": 3498
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "3905fbac465adc2c07ecdcc073da0e79e01806c275bea705029b5be090150f90",
+        "bytes": 178467
+      },
+      "web/tests/ssik.mjs": {
+        "sha256": "dcbedf034313d539842c9d94a74d1520dd079e37e8b3ee0e121494fb7d86fd89",
+        "bytes": 6317
+      }
+    }
+  },
+  "nix_outputs": {
+    "klem": "/nix/store/ffvkw8frg589ax0zxmg1hi3lcp26z5bj-klem-0.1.0",
+    "web-assets": "/nix/store/qdf5n729b5vwdff95jvyxlsyv4kb0j2f-klem-web-assets-0.1.0",
+    "inventory-review": "/nix/store/272ddxafvgg6j3ab5ac3gwfx8c1kifq3-klem-inventory-review"
+  },
+  "log_sha256": "8079eb18c1f863f1014fcc65698eac82036206fa54b456ec7c73c199d6e1189d",
+  "archived_log_sha256": "b4bd71d5dc20f8cdf72cda50c52f5659efa7062cf0a04caff3193eda719782f3",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/tmp/klem-nix-build-1000",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "scope": "Actual terminal-zero Nix validation of the recorded 56-file byte snapshot. Package/assets match the separately tested release receipts; full historic inventory and new source/corpus/API/browser/performance/fresh-passage gates passed. Subsequent checklist/manifest closure changes do not alter validated implementation or evidence."
+}

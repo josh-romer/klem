@@ -1,0 +1,122 @@
+"""Verify actual Nix receipts, all source API orders and release stream parity."""
+import argparse
+import base64
+import hashlib
+import math
+import re
+from pathlib import Path
+
+from lexical_nada_audit import ROOT, read, sha
+
+REPORT = ROOT / "docs/ssik-packaged-checks.json.gz"
+
+
+def semantic(response):
+    elapsed = response["elapsed_ms"]
+    assert isinstance(elapsed, (int, float)) and math.isfinite(elapsed) and elapsed >= 0
+    return {k: v for k, v in response.items() if k != "elapsed_ms"}
+
+
+def inspect(report):
+    source_path = ROOT / "docs/ssik-preflight.json.gz"
+    diagnostic_path = ROOT / "docs/ssik-diagnostics.json.gz"
+    source, diagnostic = read(source_path), read(diagnostic_path)
+    assert report["schema_version"] == 1 and report["checklist"] == "COV-022u"
+    assert report["source_sha256"] == sha(source_path)
+    assert report["diagnostics_sha256"] == sha(diagnostic_path)
+    assert report["dictionary_sha256"] == diagnostic["dictionary_sha256"]
+    assert report["cli_sha256"] != diagnostic["cli_sha256"]
+    log = report["nix_log"]
+    assert log["exit_code"] == 0 and sha_text(log["text"]) == log["sha256"]
+    assert "FAILED" not in log["text"] and "error:" not in log["text"]
+    counts = re.findall(r"klem> test result: ok\. (\d+) passed; 0 failed; (\d+) ignored;", log["text"])
+    assert (sum(int(p) for p, i in counts), sum(int(i) for p, i in counts), len(counts)) == (951, 1, 204)
+    assert set(report["nix_outputs"]) == {"klem", "web-assets"}
+    for output in report["nix_outputs"].values():
+        assert output.startswith("/nix/store/") and output in log["text"].splitlines()
+    assert report["runs"].keys() == diagnostic["runs"].keys()
+    for mode, runs in report["runs"].items():
+        assert runs.keys() == diagnostic["runs"][mode].keys()
+        for name, capture in runs.items():
+            assert capture["exit_code"] == 0
+            assert capture["jsonl"] == diagnostic["runs"][mode][name]["jsonl"]
+            assert sha_text(capture["jsonl"]) == capture["sha256"]
+            command = capture["command"]
+            assert command[0] == report["nix_outputs"]["klem"] + "/bin/klem"
+            assert command[1:4] == ["text", "-", "--dictionary"]
+            assert command[4].endswith("/data/dictionaries/krdict/krdict.db")
+            flags = [] if mode == "raw" else ["--dict-only"] if mode == "headword" else ["--dict-compatible"]
+            assert command[5:] == flags + ["--cache-bytes", "8388608" if name.endswith("-cached") else "0"]
+    import json
+    import unicodedata
+    added, words = 0, 0
+    assert [b["encoding"] for b in report["api_batches"]] == ["NFC", "NFD"]
+    for batch in report["api_batches"]:
+        encoding = batch["encoding"]
+        assert batch["request"] == {"text": unicodedata.normalize(encoding, source["input"])}
+        before, after = batch["before"], batch["response"]
+        assert semantic(after) == semantic(batch["debug"])
+        assert before["records"] == [json.loads(l) for l in source["runs"]["raw"][encoding + "-cached"]["jsonl"].splitlines()]
+        assert after["records"] == [json.loads(l) for l in report["runs"]["raw"][encoding + "-cached"]["jsonl"].splitlines()]
+        assert len(after["breakdowns"]) == len(after["records"])
+        for ordinal, (old, current) in enumerate(zip(before["records"], after["records"], strict=True)):
+            if current["kind"] != "word":
+                continue
+            words += 1
+            old_paths = old["analysis"]["analyses"]
+            paths, orders = current["analysis"]["analyses"], after["breakdowns"][ordinal]
+            assert len(paths) == len(orders)
+            for path, order in zip(paths, orders, strict=True):
+                if path in old_paths:
+                    assert order == before["breakdowns"][ordinal][old_paths.index(path)]
+                    continue
+                assert "suffix.distributive.ssik" in path["rules"]
+                assert order is not None and order[0] == {"lemma": 0}
+                assert [c["lemma"] for c in order if "lemma" in c] == list(range(len(path["lemmas"])))
+                assert [c["morpheme"] for c in order if "morpheme" in c] == list(range(len(path["morphemes"])))
+                added += 1
+    assert added == report["added_orders"] == 444
+    browser, debug_browser = report["browser"], read(ROOT / "docs/ssik-browser.json.gz")
+    assert browser["cli_sha256"] == report["cli_sha256"]
+    for key in ["schema_version", "checklist", "dictionary_sha256", "fixture_sha256", "producer_sha256", "checks", "diagrams", "native", "browser_errors"]:
+        assert browser[key] == debug_browser[key]
+    assert len(browser["responses"]) == len(debug_browser["responses"]) == 2
+    for actual, debug in zip(browser["responses"], debug_browser["responses"], strict=True):
+        assert actual["encoding"] == debug["encoding"] and actual["request"] == debug["request"]
+        assert semantic(actual["response"]) == semantic(debug["response"])
+    assert set(report["screenshots"]) == {"desktop", "mobile"}
+    for capture in report["screenshots"].values():
+        raw = base64.b64decode(capture["base64"], validate=True)
+        assert raw.startswith(b"\x89PNG\r\n\x1a\n") and hashlib.sha256(raw).hexdigest() == capture["sha256"]
+    assert sha_text(report["producer"]["text"]) == report["producer"]["sha256"]
+    assert sha_text(report["finalizer"]["text"]) == report["finalizer"]["sha256"]
+    return words, added, len(browser["diagrams"])
+
+
+def sha_text(value):
+    return hashlib.sha256(value.encode()).hexdigest()
+
+
+def inspect_streams(package, broad, corpora):
+    for actual, path, fields in [
+        (broad, "docs/ssik-observations.json.gz", ["comparisons", "changed_record_pairs", "candidate_changes", "spacing_changes"]),
+        (corpora, "docs/ssik-corpora.json.gz", ["after_words", "corpora", "changed_words", "candidate_changes", "after_word_stream_sha256"]),
+    ]:
+        debug = read(ROOT / path)
+        assert actual["cli_sha256"] == package["cli_sha256"]
+        assert actual["before_cli_sha256"] == debug["before_cli_sha256"]
+        for field in fields:
+            assert actual[field] == debug[field], field
+    assert broad["dictionary_sha256"] == package["dictionary_sha256"]
+    return 1128312, 66570, 32096
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--verify", action="store_true", required=True)
+    parser.add_argument("--report", type=Path, default=REPORT)
+    args = parser.parse_args()
+    report = read(args.report)
+    print("Verified packaged source API words, added orders and browser diagrams:", inspect(report))
+    print("Verified independent release CLI broad/corpus parity:", inspect_streams(
+        report, read(ROOT / "docs/ssik-packaged-observations.json.gz"), read(ROOT / "docs/ssik-packaged-corpora.json.gz")))

@@ -29,6 +29,14 @@ impl Analysis {
             return None;
         }
         if self
+            .morphemes
+            .iter()
+            .any(|m| m.kind == MorphemeKind::Suffix && m.form == "씩")
+            && !self.rules.iter().any(|r| r == "suffix.distributive.ssik")
+        {
+            return None;
+        }
+        if self
             .rules
             .iter()
             .any(|r| r == crate::predicate_compound::RULE)
@@ -286,7 +294,17 @@ impl Analysis {
                         | ["적", "쯤"]
                         | ["들", "쯤"]
                         | ["님", "들", "쯤"]
-                ) || (derived_predicate && suffixes.iter().any(|s| matches!(*s, "적" | "쯤")))
+                        | ["씩"]
+                        | ["님", "씩"]
+                        | ["적", "씩"]
+                        | ["들", "씩"]
+                        | ["님", "들", "씩"]
+                        | ["시", "씩"]
+                        | ["시", "들", "씩"]
+                        | ["화", "씩"]
+                        | ["화", "들", "씩"]
+                ) || (derived_predicate
+                    && suffixes.iter().any(|s| matches!(*s, "적" | "쯤" | "씩")))
                 {
                     return None;
                 }
@@ -341,6 +359,21 @@ impl Analysis {
                         parts.push(Component::Morpheme(cursor));
                         cursor += 1;
                     }
+                }
+                if self
+                    .morphemes
+                    .get(cursor)
+                    .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "씩")
+                {
+                    if self
+                        .morphemes
+                        .get(cursor.saturating_sub(1))
+                        .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "쯤")
+                    {
+                        return None;
+                    }
+                    parts.push(Component::Morpheme(cursor));
+                    cursor += 1;
                 }
             }
             let adverbial = !noun_suffix

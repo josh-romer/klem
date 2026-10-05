@@ -4494,3 +4494,27 @@ parity and all six novel cache streams also pass. Eighty paired measurements
 show median runtime increases of 1.95–3.32% on the pinned novel, with cached
 dictionary filtering around 1.9 seconds and spacing around 2.5 seconds.
 These measurements cover one novel and machine; wider review remains open.
+## Quantity and unexpected-degree -씩 (COV-022u)
+
+[KRDict 72043](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72043)
+records quantity distribution after quantity expressions and unexpected
+amount/degree after some nouns, often as -씩이나. A quantity expression may
+include a numeral in the preceding word. The rule recovers a single suffix 씩
+from a nominal hypothesis, retaining existing bounded noun formations, outer
+particles and copulas. Whole lexical words and the separate 씩 adverb
+[66460](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66460) remain.
+
+For example, 잔씩 offers 잔 + 씩; 고기씩이나 offers 고기 + 씩 + 이나.
+The structural path carries `suffix.distributive.ssik` provenance. It does not
+choose a contextual sense, infer a preceding quantity, settle the source's
+some-noun restriction, or determine speaker expectation. Dictionary matching
+and compatibility describe the recovered lemma and structural class rather
+than certifying these semantic conditions. Repeated suffix peeling and attaching
+-답다 to the derived quantity path are not licensed in this scope.
+
+The [original source and baseline](ssik-preflight.json.gz),
+[stable cases](../tests/fixtures/ssik-sources.json),
+[tests](../tests/ssik.rs), [CLI comparisons](ssik-diagnostics.json.gz),
+and [actual source-specific browser checks](ssik-browser.json.gz) retain the
+evidence. Original native LMF is preserved separately from its English adapter.
+Wider corpus, package and performance checks are tracked in the coverage checklist.

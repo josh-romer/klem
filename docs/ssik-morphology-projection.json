@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-022v",
+  "preparation_only": true,
+  "original_texts_sha256": "d2c307b2fefeb23d140c36147d68bc60489eb88fd23c5329bab3a902fbc72899",
+  "before_corpora_sha256": "afbcb18f8655b4659ae124bee00d091c3e9c0c3d6ebe2253d9ae201ea3d6045b",
+  "nominal_corpora_sha256": "99dd194c7eed5ec806a52693033dd32e7502dac050859bd77cece4eaad7798e4",
+  "tag_projection": {
+    "nbu": "nominal",
+    "ncn": "nominal",
+    "NNB": "nominal",
+    "MAG": "adverbial"
+  },
+  "scope": "Separate exact two-component base/POS and suffix regression projection from original rows. No original annotations, coarse gold adapter, baseline or recall claims are changed. Rows lacking an explicit base remain unprojected. The adverbial base type does not claim suffix-driven POS change.",
+  "rows": [
+    {
+      "id": "ssik-morphology-e941b2ea86e151b79a62770f",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "original_id": "id:M2TA_079-s11/4",
+      "complete_sentence": "# sent_id = M2TA_079-s11\n# text = 법학도들은 하루에 두세 개씩 법격언을 외우며 공부하면 좋은 것이다.\n# translit = .beob.hag.do.deul.eun .ha.ru.e .du.se .gae.ssig .beob.gyeog.eon.eul .oe.u.myeo .gong.bu.ha.myeon .joh.eun .geos.i.da.\n1\t법학도들은\t법학도+들+은\tNOUN\tncn+xsn+jxt\t_\t8\tdislocated\t_\tTranslit=.beob.hag.do.deul.eun|LTranslit=.beob.hag.do+.deul+.eun\n2\t하루에\t하루+에\tADV\tncn+jca\t_\t6\tobl\t_\tTranslit=.ha.ru.e|LTranslit=.ha.ru+.e\n3\t두세\t두세\tNUM\tnnc\t_\t4\tnummod\t_\tTranslit=.du.se|LTranslit=.du.se\n4\t개씩\t개+씩\tNOUN\tnbu+xsn\t_\t6\tobl\t_\tTranslit=.gae.ssig|LTranslit=.gae+.ssig\n5\t법격언을\t법격언+을\tNOUN\tncn+jco\t_\t6\tobj\t_\tTranslit=.beob.gyeog.eon.eul|LTranslit=.beob.gyeog.eon+.eul\n6\t외우며\t외우+며\tSCONJ\tpvg+ecs\t_\t7\tccomp\t_\tTranslit=.oe.u.myeo|LTranslit=.oe.u+.myeo\n7\t공부하면\t공부+하+면\tSCONJ\tncpa+xsv+ecs\t_\t0\troot\t_\tTranslit=.gong.bu.ha.myeon|LTranslit=.gong.bu+.ha+.myeon\n8\t좋은\t좋+ㄴ\tADJ\tpaa+etm\t_\t7\tconj\t_\tTranslit=.joh.eun|LTranslit=.joh+ㄴ\n9\t것이다\t것+이+다\tVERB\tnbn+jp+ef\t_\t8\tadvcl\t_\tSpaceAfter=No|Translit=.geos.i.da|LTranslit=.geos+.i+.da\n10\t.\t.\tPUNCT\tsf\t_\t9\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "4",
+        "개씩",
+        "개+씩",
+        "NOUN",
+        "nbu+xsn",
+        "_",
+        "6",
+        "obl",
+        "_",
+        "Translit=.gae.ssig|LTranslit=.gae+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "개",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "개",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-fb17186421373094855c0b1a",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "original_id": "id:MH2_0169-s53/9",
+      "complete_sentence": "# sent_id = MH2_0169-s53\n# text = 물론 당시 민중후보로 출마한 개인들은 평균 6.8 % 씩 표를 얻었다.\n# translit = .mul.ron .dang.si .min.jung.hu.bo.ro .chul.ma.han .gae.in.deul.eun .pyeong.gyun 6.8 % .ssig .pyo.reul .eod.eoss.da.\n1\t물론\t물론\tADV\tmag\t_\t11\tadvmod\t_\tTranslit=.mul.ron|LTranslit=.mul.ron\n2\t당시\t당시\tNOUN\tncn\t_\t4\tobl\t_\tTranslit=.dang.si|LTranslit=.dang.si\n3\t민중후보로\t민중+후보+로\tADV\tncn+ncn+jca\t_\t4\tadvcl\t_\tTranslit=.min.jung.hu.bo.ro|LTranslit=.min.jung+.hu.bo+.ro\n4\t출마한\t출마+하+ㄴ\tVERB\tncpa+xsv+etm\t_\t5\tacl\t_\tTranslit=.chul.ma.han|LTranslit=.chul.ma+.ha+ㄴ\n5\t개인들은\t개인+들+은\tNOUN\tncn+xsn+jxt\t_\t11\tdislocated\t_\tTranslit=.gae.in.deul.eun|LTranslit=.gae.in+.deul+.eun\n6\t평균\t평균\tNOUN\tncn\t_\t7\tcompound\t_\tTranslit=.pyeong.gyun|LTranslit=.pyeong.gyun\n7\t6.8\t6.8\tNUM\tnnc\t_\t8\tnummod\t_\tTranslit=6.8|LTranslit=6.8\n8\t%\t%\tSYM\tsu\t_\t11\tnummod\t_\tTranslit=%|LTranslit=%\n9\t씩\t씩\tPART\txsn\t_\t7\tcase\t_\tTranslit=.ssig|LTranslit=.ssig\n10\t표를\t표+를\tNOUN\tncn+jco\t_\t11\tobj\t_\tTranslit=.pyo.reul|LTranslit=.pyo+.reul\n11\t얻었다\t얻+었+다\tVERB\tpvg+ep+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.eod.eoss.da|LTranslit=.eod+.eoss+.da\n12\t.\t.\tPUNCT\tsf\t_\t11\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "9",
+        "씩",
+        "씩",
+        "PART",
+        "xsn",
+        "_",
+        "7",
+        "case",
+        "_",
+        "Translit=.ssig|LTranslit=.ssig"
+      ],
+      "expected": null,
+      "disposition": "no_explicit_base_in_original_row"
+    },
+    {
+      "id": "ssik-morphology-5764ad7c0bc56a6cc1087e7a",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "original_id": "id:MH2_0169-s73/4",
+      "complete_sentence": "# sent_id = MH2_0169-s73\n# text = 선거는 4년에 한 번씩 우리 운동에 내려주는 국민들의 냉정한 평가다.\n# translit = .seon.geo.neun 4.nyeon.e .han .beon.ssig .u.ri .un.dong.e .nae.ryeo.ju.neun .gug.min.deul.yi .naeng.jeong.han .pyeong.ga.da.\n1\t선거는\t선거+는\tNOUN\tncpa+jxt\t_\t10\tdislocated\t_\tTranslit=.seon.geo.neun|LTranslit=.seon.geo+.neun\n2\t4년에\t4+년+에\tADV\tnno+nbu+jca\t_\t4\tobl\t_\tTranslit=4.nyeon.e|LTranslit=4+.nyeon+.e\n3\t한\t한\tNUM\tnnc\t_\t4\tnummod\t_\tTranslit=.han|LTranslit=.han\n4\t번씩\t번+씩\tNOUN\tnbu+xsn\t_\t7\tobl\t_\tTranslit=.beon.ssig|LTranslit=.beon+.ssig\n5\t우리\t우리\tNOUN\tncn\t_\t6\tcompound\t_\tTranslit=.u.ri|LTranslit=.u.ri\n6\t운동에\t운동+에\tADV\tncpa+jca\t_\t7\tobl\t_\tTranslit=.un.dong.e|LTranslit=.un.dong+.e\n7\t내려주는\t내리+어+주+는\tVERB\tpvg+ecx+px+etm\t_\t10\tccomp\t_\tTranslit=.nae.ryeo.ju.neun|LTranslit=.nae.ri+.eo+.ju+.neun\n8\t국민들의\t국민+들+의\tNOUN\tncn+xsn+jcm\t_\t10\tnmod\t_\tTranslit=.gug.min.deul.yi|LTranslit=.gug.min+.deul+.yi\n9\t냉정한\t냉정+하+ㄴ\tVERB\tncps+xsm+etm\t_\t10\tamod\t_\tTranslit=.naeng.jeong.han|LTranslit=.naeng.jeong+.ha+ㄴ\n10\t평가다\t평가+이+다\tVERB\tncpa+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.pyeong.ga.da|LTranslit=.pyeong.ga+.i+.da\n11\t.\t.\tPUNCT\tsf\t_\t10\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "4",
+        "번씩",
+        "번+씩",
+        "NOUN",
+        "nbu+xsn",
+        "_",
+        "7",
+        "obl",
+        "_",
+        "Translit=.beon.ssig|LTranslit=.beon+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "번",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-be7fb1bd1a11d7b004e45289",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "original_id": "id:MH2_0169-s380/3",
+      "complete_sentence": "# sent_id = MH2_0169-s380\n# text = 8항은 지역마다 조금씩 달랐는데 빌린 문짝은 고쳐서 달아줘라는 항목도 있다.\n# translit = 8.hang.eun .ji.yeog.ma.da .jo.geum.ssig .dal.rass.neun.de .bil.rin .mun.jjag.eun .go.chyeo.seo .dal.a.jweo.ra.neun .hang.mog.do .iss.da.\n1\t8항은\t8+항+은\tNUM\tnnc+ncn+jxt\t_\t4\tdislocated\t_\tTranslit=8.hang.eun|LTranslit=8+.hang+.eun\n2\t지역마다\t지역+마다\tADV\tncn+jxc\t_\t4\tadvcl\t_\tTranslit=.ji.yeog.ma.da|LTranslit=.ji.yeog+.ma.da\n3\t조금씩\t조금+씩\tNOUN\tncn+xsn\t_\t4\tobl\t_\tTranslit=.jo.geum.ssig|LTranslit=.jo.geum+.ssig\n4\t달랐는데\t다르+았+는데\tSCONJ\tpaa+ep+ecs\t_\t10\txcomp\t_\tTranslit=.dal.rass.neun.de|LTranslit=.da.reu+.ass+.neun.de\n5\t빌린\t빌리+ㄴ\tVERB\tpvg+etm\t_\t6\tacl\t_\tTranslit=.bil.rin|LTranslit=.bil.ri+ㄴ\n6\t문짝은\t문짝+은\tNOUN\tncn+jxt\t_\t8\tdislocated\t_\tTranslit=.mun.jjag.eun|LTranslit=.mun.jjag+.eun\n7\t고쳐서\t고치+어서\tSCONJ\tpvg+ecs\t_\t8\tccomp\t_\tTranslit=.go.chyeo.seo|LTranslit=.go.chi+.eo.seo\n8\t달아줘라는\t달+아+주+어라는\tVERB\tpvg+ecx+px+etm\t_\t9\tacl\t_\tTranslit=.dal.a.jweo.ra.neun|LTranslit=.dal+.a+.ju+.eo.ra.neun\n9\t항목도\t항목+도\tADV\tncn+jxc\t_\t10\tadvcl\t_\tTranslit=.hang.mog.do|LTranslit=.hang.mog+.do\n10\t있다\t있+다\tADJ\tpaa+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da\n11\t.\t.\tPUNCT\tsf\t_\t10\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "3",
+        "조금씩",
+        "조금+씩",
+        "NOUN",
+        "ncn+xsn",
+        "_",
+        "4",
+        "obl",
+        "_",
+        "Translit=.jo.geum.ssig|LTranslit=.jo.geum+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "조금",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "조금",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-5daeb595fad74ec9bb30ac04",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_id": "id:M2TA_090-s15/8",
+      "complete_sentence": "# sent_id = M2TA_090-s15\n# text = 이 과정을 거친 뒤에 한 주에 한 번씩, 가능하다면 주말에 다음주의 계획표를 작성하라.\n# translit = .i .gwa.jeong.eul .geo.chin .dwi.e .han .ju.e .han .beon.ssig, .ga.neung.ha.da.myeon .ju.mal.e .da.eum.ju.yi .gye.hoeg.pyo.reul .jag.seong.ha.ra.\n1\t이\t이\tDET\tmmd\t_\t2\tdet\t_\tTranslit=.i|LTranslit=.i\n2\t과정을\t과정+을\tNOUN\tncn+jco\t_\t3\tobj\t_\tTranslit=.gwa.jeong.eul|LTranslit=.gwa.jeong+.eul\n3\t거친\t거치+ㄴ\tVERB\tpvg+etm\t_\t4\tacl\t_\tTranslit=.geo.chin|LTranslit=.geo.chi+ㄴ\n4\t뒤에\t뒤+에\tADV\tncn+jca\t_\t6\tobl\t_\tTranslit=.dwi.e|LTranslit=.dwi+.e\n5\t한\t한\tNUM\tnnc\t_\t6\tnummod\t_\tTranslit=.han|LTranslit=.han\n6\t주에\t주+에\tADV\tnbu+jca\t_\t14\tobl\t_\tTranslit=.ju.e|LTranslit=.ju+.e\n7\t한\t한\tNUM\tnnc\t_\t8\tnummod\t_\tTranslit=.han|LTranslit=.han\n8\t번씩\t번+씩\tNOUN\tnbu+xsn\t_\t14\tobl\t_\tSpaceAfter=No|Translit=.beon.ssig|LTranslit=.beon+.ssig\n9\t,\t,\tPUNCT\tsp\t_\t8\tpunct\t_\tTranslit=,|LTranslit=,\n10\t가능하다면\t가능+하+다면\tSCONJ\tncps+xsm+ecs\t_\t14\txcomp\t_\tTranslit=.ga.neung.ha.da.myeon|LTranslit=.ga.neung+.ha+.da.myeon\n11\t주말에\t주말+에\tADV\tncn+jca\t_\t14\tobl\t_\tTranslit=.ju.mal.e|LTranslit=.ju.mal+.e\n12\t다음주의\t다음주+의\tNOUN\tncn+jcm\t_\t13\tnmod\t_\tTranslit=.da.eum.ju.yi|LTranslit=.da.eum.ju+.yi\n13\t계획표를\t계획표+를\tNOUN\tncn+jco\t_\t14\tobj\t_\tTranslit=.gye.hoeg.pyo.reul|LTranslit=.gye.hoeg.pyo+.reul\n14\t작성하라\t작성+하+라\tVERB\tncpa+xsv+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jag.seong.ha.ra|LTranslit=.jag.seong+.ha+.ra\n15\t.\t.\tPUNCT\tsf\t_\t14\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "8",
+        "번씩",
+        "번+씩",
+        "NOUN",
+        "nbu+xsn",
+        "_",
+        "14",
+        "obl",
+        "_",
+        "SpaceAfter=No|Translit=.beon.ssig|LTranslit=.beon+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "번",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-edfde5b2626ae6a8c9927ccb",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_id": "id:MH2_0010-s94/3",
+      "complete_sentence": "# sent_id = MH2_0010-s94\n# text = 겨우 한두 마디씩 알아 듣는 칠레기지의 무전내용도 15일에는 비행기가 없고 16일에 있을 것이라는 말을 하는 것 같았다.\n# translit = .gyeo.u .han.du .ma.di.ssig .al.a .deud.neun .chil.re.gi.ji.yi .mu.jeon.nae.yong.do 15.il.e.neun .bi.haeng.gi.ga .eobs.go 16.il.e .iss.eul .geos.i.ra.neun .mal.eul .ha.neun .geos .gat.ass.da.\n1\t겨우\t겨우\tADV\tmag\t_\t4\tadvmod\t_\tTranslit=.gyeo.u|LTranslit=.gyeo.u\n2\t한두\t한두\tADJ\tmma\t_\t3\tamod\t_\tTranslit=.han.du|LTranslit=.han.du\n3\t마디씩\t마디+씩\tNOUN\tncn+xsn\t_\t4\tobl\t_\tTranslit=.ma.di.ssig|LTranslit=.ma.di+.ssig\n4\t알아\t알+아\tSCONJ\tpvg+ecs\t_\t5\tccomp\t_\tTranslit=.al.a|LTranslit=.al+.a\n5\t듣는\t듣+는\tVERB\tpvg+etm\t_\t7\tacl\t_\tTranslit=.deud.neun|LTranslit=.deud+.neun\n6\t칠레기지의\t칠레+기지+의\tPROPN\tnq+ncn+jcm\t_\t7\tnmod\t_\tTranslit=.chil.re.gi.ji.yi|LTranslit=.chil.re+.gi.ji+.yi\n7\t무전내용도\t무전+내용+도\tADV\tncn+ncn+jxc\t_\t15\tadvcl\t_\tTranslit=.mu.jeon.nae.yong.do|LTranslit=.mu.jeon+.nae.yong+.do\n8\t15일에는\t15+일+에+는\tNUM\tnno+nbu+jca+jxt\t_\t10\tdislocated\t_\tTranslit=15.il.e.neun|LTranslit=15+.il+.e+.neun\n9\t비행기가\t비행기+가\tNOUN\tncn+jcs\t_\t10\tnsubj\t_\tTranslit=.bi.haeng.gi.ga|LTranslit=.bi.haeng.gi+.ga\n10\t없고\t없+고\tCCONJ\tpaa+ecc\t_\t14\tamod\t_\tTranslit=.eobs.go|LTranslit=.eobs+.go\n11\t16일에\t16+일+에\tADV\tnno+nbu+jca\t_\t12\tobl\t_\tTranslit=16.il.e|LTranslit=16+.il+.e\n12\t있을\t있+ㄹ\tADJ\tpaa+etm\t_\t10\tconj\t_\tTranslit=.iss.eul|LTranslit=.iss+ㄹ\n13\t것이라는\t것+이+라는\tVERB\tnbn+jp+etm\t_\t12\tadvcl\t_\tTranslit=.geos.i.ra.neun|LTranslit=.geos+.i+.ra.neun\n14\t말을\t말+을\tNOUN\tncpa+jco\t_\t15\tobj\t_\tTranslit=.mal.eul|LTranslit=.mal+.eul\n15\t하는\t하+는\tVERB\tpvg+etm\t_\t0\troot\t_\tTranslit=.ha.neun|LTranslit=.ha+.neun\n16\t것\t것\tNOUN\tnbn\t_\t15\tobl\t_\tOrigDeprel=aux|Translit=.geos|LTranslit=.geos\n17\t같았다\t같+았+다\tADJ\tpaa+ep+ef\t_\t16\tfixed\t_\tSpaceAfter=No|Translit=.gat.ass.da|LTranslit=.gat+.ass+.da\n18\t.\t.\tPUNCT\tsf\t_\t16\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "3",
+        "마디씩",
+        "마디+씩",
+        "NOUN",
+        "ncn+xsn",
+        "_",
+        "4",
+        "obl",
+        "_",
+        "Translit=.ma.di.ssig|LTranslit=.ma.di+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "마디",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "마디",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-c393bb09f2baa805d37036ca",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_id": "id:MH2_0110-s76/9",
+      "complete_sentence": "# sent_id = MH2_0110-s76\n# text = 전제 정치에 대한 민중들의 불만이 무르익을 때마다 왕권은 조금씩 의회로 넘어가고 이것이 일찍부터 의회 제도가 발달한 계기가 된 것이다.\n# translit = .jeon.je .jeong.chi.e .dae.han .min.jung.deul.yi .bul.man.i .mu.reu.ig.eul .ddae.ma.da .wang.gweon.eun .jo.geum.ssig .yi.hoe.ro .neom.eo.ga.go .i.geos.i .il.jjig.bu.teo .yi.hoe .je.do.ga .bal.dal.han .gye.gi.ga .doen .geos.i.da.\n1\t전제\t전제\tNOUN\tncn\t_\t2\tcompound\t_\tTranslit=.jeon.je|LTranslit=.jeon.je\n2\t정치에\t정치+에\tADV\tncpa+jca\t_\t3\tobl\t_\tTranslit=.jeong.chi.e|LTranslit=.jeong.chi+.e\n3\t대한\t대하+ㄴ\tVERB\tpvg+etm\t_\t5\tacl\t_\tTranslit=.dae.han|LTranslit=.dae.ha+ㄴ\n4\t민중들의\t민중+들+의\tNOUN\tncn+xsn+jcm\t_\t5\tnmod\t_\tTranslit=.min.jung.deul.yi|LTranslit=.min.jung+.deul+.yi\n5\t불만이\t불만+이\tNOUN\tncpa+jcs\t_\t6\tnsubj\t_\tTranslit=.bul.man.i|LTranslit=.bul.man+.i\n6\t무르익을\t무르익+ㄹ\tVERB\tpvg+etm\t_\t7\tacl\t_\tTranslit=.mu.reu.ig.eul|LTranslit=.mu.reu.ig+ㄹ\n7\t때마다\t때+마다\tADV\tnbn+jxc\t_\t11\tadvcl\t_\tTranslit=.ddae.ma.da|LTranslit=.ddae+.ma.da\n8\t왕권은\t왕권+은\tNOUN\tncn+jxt\t_\t11\tdislocated\t_\tTranslit=.wang.gweon.eun|LTranslit=.wang.gweon+.eun\n9\t조금씩\t조금+씩\tNOUN\tncn+xsn\t_\t11\tobl\t_\tTranslit=.jo.geum.ssig|LTranslit=.jo.geum+.ssig\n10\t의회로\t의회+로\tADV\tncn+jca\t_\t11\tadvcl\t_\tTranslit=.yi.hoe.ro|LTranslit=.yi.hoe+.ro\n11\t넘어가고\t넘어가+고\tCCONJ\tpvg+ecc\t_\t0\troot\t_\tTranslit=.neom.eo.ga.go|LTranslit=.neom.eo.ga+.go\n12\t이것이\t이것+이\tPRON\tnpd+jcs\t_\t18\tnsubj\t_\tTranslit=.i.geos.i|LTranslit=.i.geos+.i\n13\t일찍부터\t일찍+부터\tADV\tncn+jxc\t_\t16\tadvcl\t_\tTranslit=.il.jjig.bu.teo|LTranslit=.il.jjig+.bu.teo\n14\t의회\t의회\tNOUN\tncn\t_\t15\tcompound\t_\tTranslit=.yi.hoe|LTranslit=.yi.hoe\n15\t제도가\t제도+가\tNOUN\tncn+jcs\t_\t16\tnsubj\t_\tTranslit=.je.do.ga|LTranslit=.je.do+.ga\n16\t발달한\t발달+하+ㄴ\tVERB\tncpa+xsv+etm\t_\t17\tacl\t_\tTranslit=.bal.dal.han|LTranslit=.bal.dal+.ha+ㄴ\n17\t계기가\t계기+가\tNOUN\tncn+jcs\t_\t18\tnsubj\t_\tTranslit=.gye.gi.ga|LTranslit=.gye.gi+.ga\n18\t된\t되+ㄴ\tVERB\tpvg+etm\t_\t11\tconj\t_\tTranslit=.doen|LTranslit=.doe+ㄴ\n19\t것이다\t것+이+다\tVERB\tnbn+jp+ef\t_\t18\tadvcl\t_\tSpaceAfter=No|Translit=.geos.i.da|LTranslit=.geos+.i+.da\n20\t.\t.\tPUNCT\tsf\t_\t19\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "9",
+        "조금씩",
+        "조금+씩",
+        "NOUN",
+        "ncn+xsn",
+        "_",
+        "11",
+        "obl",
+        "_",
+        "Translit=.jo.geum.ssig|LTranslit=.jo.geum+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "조금",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "조금",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-356c5dd9fab18c44f4cb88fe",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_id": "id:MH2_0190-s186/22",
+      "complete_sentence": "# sent_id = MH2_0190-s186\n# text = 또한 향진기업 (鄕鎭企業) 이라고 하여 농민들이나 근로자들이 공동출자하고 공동경영하는 집체기업을 만들었는데, 지난 10여년 동안 매년 생산량이 30 % 씩이나 급증하였다.\n# translit = .ddo.han .hyang.jin.gi.eob (鄕鎭qǐyè) .i.ra.go .ha.yeo .nong.min.deul.i.na .geun.ro.ja.deul.i .gong.dong.chul.ja.ha.go .gong.dong.gyeong.yeong.ha.neun .jib.che.gi.eob.eul .man.deul.eoss.neun.de, .ji.nan 10.yeo.nyeon .dong.an .mae.nyeon .saeng.san.ryang.i 30 % .ssig.i.na .geub.jeung.ha.yeoss.da.\n1\t또한\t또한\tCCONJ\tmaj\t_\t23\tcc\t_\tTranslit=.ddo.han|LTranslit=.ddo.han\n2\t향진기업\t향진기업\tPROPN\tnq\t_\t13\tccomp\t_\tTranslit=.hyang.jin.gi.eob|LTranslit=.hyang.jin.gi.eob\n3\t(\t(\tPUNCT\tsl\t_\t4\tpunct\t_\tSpaceAfter=No|Translit=(|LTranslit=(\n4\t鄕鎭企業\t鄕鎭企業\tPROPN\tnq\t_\t2\tappos\t_\tSpaceAfter=No|Translit=鄕鎭qǐyè|LTranslit=鄕鎭qǐyè\n5\t)\t)\tPUNCT\tsr\t_\t4\tpunct\t_\tTranslit=)|LTranslit=)\n6\t이라고\t이\tAUX\tjp+ef+jcr\t_\t2\tcop\t_\tOrigLemma=이+라+고|Translit=.i.ra.go|LTranslit=.i\n7\t하여\t하+어\tSCONJ\tpvg+ecs\t_\t2\tconj\t_\tTranslit=.ha.yeo|LTranslit=.ha+.eo\n8\t농민들이나\t농민+들+이나\tCCONJ\tncn+xsn+jcj\t_\t11\tnsubj\t_\tTranslit=.nong.min.deul.i.na|LTranslit=.nong.min+.deul+.i.na\n9\t근로자들이\t근로자+들+이\tNOUN\tncn+xsn+jcs\t_\t8\tconj\t_\tTranslit=.geun.ro.ja.deul.i|LTranslit=.geun.ro.ja+.deul+.i\n10\t공동출자하고\t공동+출자+하+고\tCCONJ\tncn+ncpa+xsv+ecc\t_\t12\tacl\t_\tTranslit=.gong.dong.chul.ja.ha.go|LTranslit=.gong.dong+.chul.ja+.ha+.go\n11\t공동경영하는\t공동+경영+하+는\tVERB\tncn+ncpa+xsv+etm\t_\t10\tconj\t_\tTranslit=.gong.dong.gyeong.yeong.ha.neun|LTranslit=.gong.dong+.gyeong.yeong+.ha+.neun\n12\t집체기업을\t집체기업+을\tNOUN\tncn+jco\t_\t13\tobj\t_\tTranslit=.jib.che.gi.eob.eul|LTranslit=.jib.che.gi.eob+.eul\n13\t만들었는데\t만들+었+는데\tSCONJ\tpvg+ep+ecs\t_\t23\tccomp\t_\tSpaceAfter=No|Translit=.man.deul.eoss.neun.de|LTranslit=.man.deul+.eoss+.neun.de\n14\t,\t,\tPUNCT\tsp\t_\t13\tpunct\t_\tTranslit=,|LTranslit=,\n15\t지난\t지나+ㄴ\tVERB\tpvg+etm\t_\t17\tacl\t_\tTranslit=.ji.nan|LTranslit=.ji.na+ㄴ\n16\t10여년\t10+여+년\tNOUN\tnnc+xsn+nbu\t_\t17\tcompound\t_\tTranslit=10.yeo.nyeon|LTranslit=10+.yeo+.nyeon\n17\t동안\t동안\tNOUN\tncn\t_\t23\tobl\t_\tTranslit=.dong.an|LTranslit=.dong.an\n18\t매년\t매년\tNOUN\tncn\t_\t23\tobl\t_\tTranslit=.mae.nyeon|LTranslit=.mae.nyeon\n19\t생산량이\t생산량+이\tNOUN\tncn+jcs\t_\t23\tnsubj\t_\tTranslit=.saeng.san.ryang.i|LTranslit=.saeng.san.ryang+.i\n20\t30\t30\tNUM\tnnc\t_\t21\tnummod\t_\tTranslit=30|LTranslit=30\n21\t%\t%\tSYM\tsu\t_\t23\tnummod\t_\tTranslit=%|LTranslit=%\n22\t씩이나\t씩+이나\tPART\txsn+jxc\t_\t20\tcase\t_\tTranslit=.ssig.i.na|LTranslit=.ssig+.i.na\n23\t급증하였다\t급증+하+었+다\tVERB\tncpa+xsv+ep+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.geub.jeung.ha.yeoss.da|LTranslit=.geub.jeung+.ha+.eoss+.da\n24\t.\t.\tPUNCT\tsf\t_\t23\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "22",
+        "씩이나",
+        "씩+이나",
+        "PART",
+        "xsn+jxc",
+        "_",
+        "20",
+        "case",
+        "_",
+        "Translit=.ssig.i.na|LTranslit=.ssig+.i.na"
+      ],
+      "expected": null,
+      "disposition": "no_explicit_base_in_original_row"
+    },
+    {
+      "id": "ssik-morphology-121322744092bd5d75aa65b5",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "original_id": "id:MH2_0190-s225/3",
+      "complete_sentence": "# sent_id = MH2_0190-s225\n# text = 일주일에 두 번씩 '골든 브릿지호' 가 다니는데 소요시간은 17시간 정도의 가까운 거리이다.\n# translit = .il.ju.il.e .du .beon.ssig '.gol.deun .beu.ris.ji.ho' .ga .da.ni.neun.de .so.yo.si.gan.eun 17.si.gan .jeong.do.yi .ga.gga.un .geo.ri.i.da.\n1\t일주일에\t일주일+에\tADV\tncn+jca\t_\t3\tobl\t_\tTranslit=.il.ju.il.e|LTranslit=.il.ju.il+.e\n2\t두\t두\tNUM\tnnc\t_\t3\tnummod\t_\tTranslit=.du|LTranslit=.du\n3\t번씩\t번+씩\tNOUN\tnbu+xsn\t_\t9\tobl\t_\tTranslit=.beon.ssig|LTranslit=.beon+.ssig\n4\t'\t'\tPUNCT\tsl\t_\t5\tpunct\t_\tSpaceAfter=No|Translit='|LTranslit='\n5\t골든\t골든\tPROPN\tnq\t_\t9\tnsubj\t_\tTranslit=.gol.deun|LTranslit=.gol.deun\n6\t브릿지호\t브릿지호\tPROPN\tnq\t_\t5\tflat\t_\tSpaceAfter=No|Translit=.beu.ris.ji.ho|LTranslit=.beu.ris.ji.ho\n7\t'\t'\tPUNCT\tsr\t_\t5\tpunct\t_\tTranslit='|LTranslit='\n8\t가\t가\tADP\tjcs\t_\t5\tcase\t_\tTranslit=.ga|LTranslit=.ga\n9\t다니는데\t다니+는데\tSCONJ\tpvg+ecs\t_\t14\tccomp\t_\tTranslit=.da.ni.neun.de|LTranslit=.da.ni+.neun.de\n10\t소요시간은\t소요+시간+은\tNOUN\tncpa+ncn+jxt\t_\t12\tdislocated\t_\tTranslit=.so.yo.si.gan.eun|LTranslit=.so.yo+.si.gan+.eun\n11\t17시간\t17+시간\tNOUN\tnnc+ncn\t_\t12\tcompound\t_\tTranslit=17.si.gan|LTranslit=17+.si.gan\n12\t정도의\t정도+의\tNOUN\tncn+jcm\t_\t14\tnmod\t_\tTranslit=.jeong.do.yi|LTranslit=.jeong.do+.yi\n13\t가까운\t가깝+ㄴ\tADJ\tpaa+etm\t_\t14\tamod\t_\tTranslit=.ga.gga.un|LTranslit=.ga.ggab+ㄴ\n14\t거리이다\t거리+이+다\tVERB\tncn+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.geo.ri.i.da|LTranslit=.geo.ri+.i+.da\n15\t.\t.\tPUNCT\tsf\t_\t14\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "3",
+        "번씩",
+        "번+씩",
+        "NOUN",
+        "nbu+xsn",
+        "_",
+        "9",
+        "obl",
+        "_",
+        "Translit=.beon.ssig|LTranslit=.beon+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "번",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-65a0a1bbf5e3f0c775be6a99",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "original_id": "id:dev-s394/1",
+      "complete_sentence": "# sent_id = dev-s394\n# text = 가끔씩 먹으러 오기 괜찮은 것 같아요\n# translit = .ga.ggeum.ssig .meog.eu.reo .o.gi .gwaen.chanh.eun .geos .gat.a.yo\n1\t가끔씩\t가끔+씩\tADV\tMAG+XSN\t_\t3\tadvmod\t_\tTranslit=.ga.ggeum.ssig|LTranslit=.ga.ggeum+.ssig\n2\t먹으러\t먹+으러\tVERB\tVV+EC\t_\t3\tadvcl\t_\tTranslit=.meog.eu.reo|LTranslit=.meog+.eu.reo\n3\t오기\t오+기\tNOUN\tVV+ETN\t_\t4\tnsubj\t_\tTranslit=.o.gi|LTranslit=.o+.gi\n4\t괜찮은\t괜찮+은\tVERB\tVA+ETM\t_\t5\tdep\t_\tTranslit=.gwaen.chanh.eun|LTranslit=.gwaen.chanh+.eun\n5\t것\t것\tNOUN\tNNB\t_\t6\tnsubj\t_\tTranslit=.geos|LTranslit=.geos\n6\t같아요\t같+아요\tADJ\tVA+EC\t_\t0\troot\t_\tTranslit=.gat.a.yo|LTranslit=.gat+.a.yo",
+      "original_row": [
+        "1",
+        "가끔씩",
+        "가끔+씩",
+        "ADV",
+        "MAG+XSN",
+        "_",
+        "3",
+        "advmod",
+        "_",
+        "Translit=.ga.ggeum.ssig|LTranslit=.ga.ggeum+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "가끔",
+            "kind": "adverbial"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [],
+      "disposition": "missing_typed_base"
+    },
+    {
+      "id": "ssik-morphology-ce4ad1c2611946ac39e244f6",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "original_id": "id:dev-s634/4",
+      "complete_sentence": "# sent_id = dev-s634\n# text = 은행법에는 6개월에 한 번씩 비금융주력자 여부를 심사할 의무가 금융위에 있다.\n# translit = .eun.haeng.beob.e.neun 6.gae.weol.e .han .beon.ssig .bi.geum.yung.ju.ryeog.ja .yeo.bu.reul .sim.sa.hal .yi.mu.ga .geum.yung.wi.e .iss.da.\n1\t은행법에는\t은행법+에+는\tADV\tNNG+JKB+JX\t_\t10\tadvmod\t_\tTranslit=.eun.haeng.beob.e.neun|LTranslit=.eun.haeng.beob+.e+.neun\n2\t6개월에\t6+개월+에\tNOUN\tSN+NNB+JKB\t_\t7\tnmod\t_\tTranslit=6.gae.weol.e|LTranslit=6+.gae.weol+.e\n3\t한\t한\tNUM\tMM\tNumType=Card\t2\tnummod\t_\tTranslit=.han|LTranslit=.han\n4\t번씩\t번+씩\tADP\tNNB+XSN\t_\t2\tcase\t_\tTranslit=.beon.ssig|LTranslit=.beon+.ssig\n5\t비금융주력자\t비+금융+주력+자\tNOUN\tXPN+NNG+NNG+NNB\t_\t7\tobj\t_\tTranslit=.bi.geum.yung.ju.ryeog.ja|LTranslit=.bi+.geum.yung+.ju.ryeog+.ja\n6\t여부를\t여부+를\tNOUN\tNNG+JKO\t_\t5\tflat\t_\tTranslit=.yeo.bu.reul|LTranslit=.yeo.bu+.reul\n7\t심사할\t심사+하+ㄹ\tVERB\tNNG+XSV+ETM\t_\t8\tdep\t_\tTranslit=.sim.sa.hal|LTranslit=.sim.sa+.ha+ㄹ\n8\t의무가\t의무+가\tNOUN\tNNG+JKS\t_\t10\tnsubj\t_\tTranslit=.yi.mu.ga|LTranslit=.yi.mu+.ga\n9\t금융위에\t금융+위+에\tADV\tNNG+NNG+JKB\t_\t10\tobl\t_\tTranslit=.geum.yung.wi.e|LTranslit=.geum.yung+.wi+.e\n10\t있다\t있+다\tADJ\tVV+EF\t_\t0\troot\t_\tSpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da\n11\t.\t.\tPUNCT\tSF\t_\t10\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "4",
+        "번씩",
+        "번+씩",
+        "ADP",
+        "NNB+XSN",
+        "_",
+        "2",
+        "case",
+        "_",
+        "Translit=.beon.ssig|LTranslit=.beon+.ssig"
+      ],
+      "expected": {
+        "lemmas": [
+          {
+            "text": "번",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "씩",
+            "kind": "suffix"
+          }
+        ]
+      },
+      "before_matches": [],
+      "nominal_batch_matches": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "씩",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.distributive.ssik"
+          ],
+          "unchanged": false
+        }
+      ],
+      "disposition": "covered"
+    },
+    {
+      "id": "ssik-morphology-bbec04f63cbc2ac42cb56270",
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "original_id": "id:test-s739/14",
+      "complete_sentence": "# sent_id = test-s739\n# text = 특히 우리나라에서 위암, 폐암, 간암은 줄어드는 반면 대장암은 해마다 6.9%씩 늘어났습니다.\n# translit = .teug.hi .u.ri.na.ra.e.seo .wi.am, .pye.am, .gan.am.eun .jul.eo.deu.neun .ban.myeon .dae.jang.am.eun .hae.ma.da 6.9%.ssig .neul.eo.nass.seub.ni.da.\n1\t특히\t특히\tADV\tMAG\t_\t15\tadvmod\t_\tTranslit=.teug.hi|LTranslit=.teug.hi\n2\t우리나라에서\t우리+나라+에서\tADV\tNP+NNG+JKB\t_\t15\tadvmod\t_\tTranslit=.u.ri.na.ra.e.seo|LTranslit=.u.ri+.na.ra+.e.seo\n3\t위암\t위암\tNOUN\tNNG\t_\t8\tnsubj\t_\tSpaceAfter=No|Translit=.wi.am|LTranslit=.wi.am\n4\t,\t,\tPUNCT\tSP\t_\t5\tpunct\t_\tTranslit=,|LTranslit=,\n5\t폐암\t폐암\tNOUN\tNNG\t_\t3\tconj\t_\tSpaceAfter=No|Translit=.pye.am|LTranslit=.pye.am\n6\t,\t,\tPUNCT\tSP\t_\t5\tpunct\t_\tTranslit=,|LTranslit=,\n7\t간암은\t간암+은\tNOUN\tNNG+JX\t_\t3\tconj\t_\tTranslit=.gan.am.eun|LTranslit=.gan.am+.eun\n8\t줄어드는\t줄어들+는\tVERB\tVV+ETM\t_\t15\tadvcl\t_\tTranslit=.jul.eo.deu.neun|LTranslit=.jul.eo.deul+.neun\n9\t반면\t반면\tNOUN\tNNG\t_\t8\tobl\t_\tOrigDeprel=mark|Translit=.ban.myeon|LTranslit=.ban.myeon\n10\t대장암은\t대장암+은\tNOUN\tNNG+JX\t_\t15\tnsubj\t_\tTranslit=.dae.jang.am.eun|LTranslit=.dae.jang.am+.eun\n11\t해마다\t해+마다\tADV\tNNG+JX\t_\t15\tadvmod\t_\tTranslit=.hae.ma.da|LTranslit=.hae+.ma.da\n12\t6.9\t6.9\tNUM\tSN\t_\t15\tobl\t_\tSpaceAfter=No|Translit=6.9|LTranslit=6.9\n13\t%\t%\tPUNCT\tSW\t_\t14\tpunct\t_\tSpaceAfter=No|Translit=%|LTranslit=%\n14\t씩\t씩\tNOUN\tXSN\t_\t12\tdep\t_\tTranslit=.ssig|LTranslit=.ssig\n15\t늘어났습니다\t늘어나+았+습니다\tVERB\tVV+EP+EF\t_\t0\troot\t_\tSpaceAfter=No|Translit=.neul.eo.nass.seub.ni.da|LTranslit=.neul.eo.na+.ass+.seub.ni.da\n16\t.\t.\tPUNCT\tSF\t_\t15\tpunct\t_\tTranslit=.|LTranslit=.",
+      "original_row": [
+        "14",
+        "씩",
+        "씩",
+        "NOUN",
+        "XSN",
+        "_",
+        "12",
+        "dep",
+        "_",
+        "Translit=.ssig|LTranslit=.ssig"
+      ],
+      "expected": null,
+      "disposition": "no_explicit_base_in_original_row"
+    }
+  ]
+}

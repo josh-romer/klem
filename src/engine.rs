@@ -279,6 +279,25 @@ fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
 
 fn nominal_derivations(word: &str) -> Vec<Analysis> {
     let mut out = simple_nominal_derivations(word);
+    // Quantity distribution and unexpected degree are conditional meanings of
+    // the same -씩 suffix. A nominal hypothesis does not decide whether the
+    // surrounding phrase supplies a quantity or the speaker's expectation.
+    // Strip once; whole bases and the existing finite noun derivations remain.
+    if let Some(base) = word.strip_suffix('씩').filter(|s| !s.is_empty()) {
+        let mut bases = simple_nominal_derivations(base);
+        bases.push(Analysis {
+            lemmas: vec![lemma(base, LemmaKind::Nominal)],
+            morphemes: vec![],
+            rules: vec![],
+            unchanged: false,
+            spelling_paths: Vec::new(),
+        });
+        for mut a in bases {
+            a.morphemes.push(morph("씩", MorphemeKind::Suffix));
+            a.rules.push("suffix.distributive.ssik".into());
+            out.push(a);
+        }
+    }
     // Approximation follows a nominal (including the existing bounded suffix
     // paths). Do not recursively peel 쯤 or treat a preceding particle/ending
     // as a noun phrase: those attachment classes need separate evidence.
@@ -2192,7 +2211,7 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
             if a.rules.iter().any(|r| r == "suffix.nominal.i")
                 || a.morphemes
                     .iter()
-                    .any(|m| matches!(m.form.as_str(), "적" | "쯤"))
+                    .any(|m| matches!(m.form.as_str(), "적" | "쯤" | "씩"))
             {
                 continue;
             }

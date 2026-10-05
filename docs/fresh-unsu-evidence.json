@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scope": "Original narrative HTML fragment retained exactly from fetched full page; original complete page hashes/URLs remain provenance in source record, not an offline replay of publisher navigation. Browser/CLI captures describe committed COV022t build before new -씩 work.",
+  "narrative_fragment_sha256": "dc2765ae2d228b33288e8ee5075f42f0def0d5e9100cae016c415adc65e6f230",
+  "narrative_fragment_file": "docs/fresh-unsu-narrative.html.gz",
+  "source_file": "docs/fresh-unsu-source.json",
+  "cli_capture_file": "docs/fresh-unsu-cli.json.gz",
+  "browser_capture_file": "docs/fresh-unsu-browser.json.gz",
+  "review_file": "docs/fresh-unsu-review.json",
+  "options_file": "docs/fresh-unsu-options.json",
+  "attribution": "운수 좋은 날, 현진건; pinned Korean Wikisource transcription revision 457472. Source notices and publisher observations retained in source record.",
+  "files": {
+    "docs/fresh-unsu-source.json": "ca63015b5701265dd92f3dceeaec99252dedb4fec41b23b4c3fd5f6dbfe3ca36",
+    "docs/fresh-unsu-cli.json.gz": "d61a29c475c95538aeb08dc6e3f93f2080df927dbc8e8de396883dd828798278",
+    "docs/fresh-unsu-browser.json.gz": "1cda7fc0f95b52161be2072cd6be66807400c84f229376bbd9ae8b69dd9a21e0",
+    "docs/fresh-unsu-review.json": "54ea13002e36490af6e18605964734866b0f5308fba3cbd837f03be6eb67da52",
+    "docs/fresh-unsu-options.json": "9578bba4cfa35ca96f7a386bf956b6ba54e2ec4b237c53d5274833ace6710179",
+    "docs/fresh-unsu-narrative.html.gz": "a6ce2112811859f124fb3dc472720057f110dc89fd079a90587d00a0a41b9973"
+  },
+  "browser_producer": {
+    "text": "import assert from 'node:assert/strict';\nimport {createRequire} from 'node:module';\nimport {readFile,writeFile} from 'node:fs/promises';\nimport {createHash} from 'node:crypto';\nimport {execFileSync} from 'node:child_process';\nconst root='/home/josh/projects/klem';\nconst source=JSON.parse(await readFile('/tmp/klem-fresh-unsu-source.json','utf8'));\nconst cli='/nix/store/sbkbpzhakddagl5i06r54n0sfkkwd54z-klem-0.1.0/bin/klem';\nconst db=root+'/data/dictionaries/krdict/krdict.db';\nconst {chromium}=createRequire(root+'/web/package.json')('playwright');\nconst browser=await chromium.launch({executablePath:'/nix/store/g0yvxs8p2ijrvmxpd5mim1ni0fyk9bnh-chromium-154.0.8037.57/bin/chromium',args:['--no-sandbox']});\nconst captures=[],errors=[];\ntry {\n const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:true});\n page.on('pageerror',e=>errors.push(String(e)));await page.goto('http://127.0.0.1:41017');\n for(const passage of source.selected_passages) {\n  for(const encoding of ['NFC','NFD']) {\n   const text=passage.text.normalize(encoding);\n   await page.getByLabel('Dictionary matches only').uncheck();\n   await page.getByLabel('Your sentence',{exact:true}).fill(text);\n   const wait=page.waitForResponse(r=>r.url().endsWith('/api/analyze'));\n   await page.getByRole('button',{name:'Analyze sentence',exact:true}).click();\n   const res=await wait;assert.equal(res.status(),200);const api=await res.json();\n   await page.waitForFunction(t=>document.querySelector('.sentence')?.textContent===t,text);\n   const checks=[];\n   for(const [mode,flag] of [['raw',null],['headword','--dict-only'],['compatible','--dict-compatible']]) {\n    if(flag){await page.getByLabel('Dictionary matches only').check();if(mode==='compatible')await page.getByLabel('Exclude known grammar conflicts').check();else await page.getByLabel('Exclude known grammar conflicts').uncheck();}\n    else await page.getByLabel('Dictionary matches only').uncheck();\n    const records=execFileSync(cli,['text','-','--dictionary',db,...(flag?[flag]:[])],{input:text,encoding:'utf8'}).trim().split('\\n').map(JSON.parse);\n    const download=page.waitForEvent('download');await page.getByRole('button',{name:'Export JSON',exact:true}).click();\n    const exported=JSON.parse(await readFile(await(await download).path(),'utf8'));assert.deepEqual(exported.records,records);\n    checks.push({mode,cli_records:records,exported_records:exported.records});\n   }\n   await page.getByLabel('Dictionary matches only').uncheck();\n   const diagrams=await page.getByRole('region',{name:'Sentence breakdown',exact:true}).locator('.breakdown-word').evaluateAll(words=>words.map(word=>({surface:word.querySelector('.breakdown-surface > span')?.textContent,selected:word.querySelector('select')?.value,parts:[...word.querySelectorAll('.breakdown-part')].map(part=>({form:part.querySelector('.part-form')?.textContent,label:part.querySelector('.part-gloss')?.textContent,title:part.getAttribute('title')}))})));\n   const words=api.records.filter(r=>r.analysis);assert.equal(diagrams.length,words.length);\n   diagrams.forEach((d,i)=>{assert.equal(d.surface,words[i].surface);assert.ok(d.parts.length);});\n   const screenshots={};\n   if(encoding==='NFC') {\n    const region=page.getByRole('region',{name:'Sentence breakdown',exact:true});await region.scrollIntoViewIfNeeded();\n    const desktop='/tmp/klem-fresh-unsu-'+passage.paragraph_index+'-desktop.png';await page.screenshot({path:desktop});screenshots.desktop=desktop;\n    await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));\n    await region.scrollIntoViewIfNeeded();const mobile='/tmp/klem-fresh-unsu-'+passage.paragraph_index+'-mobile.png';await page.screenshot({path:mobile});screenshots.mobile=mobile;\n    await page.setViewportSize({width:1440,height:1000});\n   }\n   captures.push({passage_id:passage.id,paragraph_index:passage.paragraph_index,encoding,request:{text},response:api,checks,diagrams,screenshots});\n  }\n }\n assert.deepEqual(errors,[]);\n const hash=async p=>createHash('sha256').update(await readFile(p)).digest('hex');\n await writeFile('/tmp/klem-fresh-unsu-browser.json',JSON.stringify({source_sha256:await hash('/tmp/klem-fresh-unsu-source.json'),cli_sha256:await hash(cli),dictionary_sha256:await hash(db),producer_sha256:await hash('/tmp/klem-fresh-passage-browser.mjs'),captures,errors,scope:'Actual diagrams and all three export modes for four uniformly selected unseen paragraphs in NFC/NFD. Linguistic quality and default-gloss ambiguities require separate explicit review.'},null,2)+'\\n');\n console.log('Verified eight original-passage API/browser renders, 24 CLI/export comparisons, exact input preservation and desktop/mobile layout.');\n} finally {await browser.close();}\n",
+    "sha256": "d07227662e97a0d2e5e5eadc6ada53f1e43d1e32db085ae1c33c908da1b6baf4"
+  },
+  "options_producer": {
+    "text": "import assert from 'node:assert/strict';\nimport {createRequire} from 'node:module';\nimport {readFile,writeFile} from 'node:fs/promises';\nconst root='/home/josh/projects/klem';\nconst source=JSON.parse(await readFile('/tmp/klem-fresh-unsu-source.json','utf8'));\nconst {chromium}=createRequire(root+'/web/package.json')('playwright');\nconst browser=await chromium.launch({executablePath:'/nix/store/g0yvxs8p2ijrvmxpd5mim1ni0fyk9bnh-chromium-154.0.8037.57/bin/chromium',args:['--no-sandbox']});\nconst captures=[];\ntry {\n const page=await browser.newPage({viewport:{width:1440,height:1000}});\n await page.goto('http://127.0.0.1:41017');\n const passage=source.selected_passages.find(p=>p.paragraph_index===81);\n for(const encoding of ['NFC','NFD']) {\n  const text=passage.text.normalize(encoding);\n  await page.getByLabel('Your sentence',{exact:true}).fill(text);\n  const wait=page.waitForResponse(r=>r.url().endsWith('/api/analyze'));\n  await page.getByRole('button',{name:'Analyze sentence',exact:true}).click();\n  const response=await wait;assert.equal(response.status(),200);\n  const api=await response.json();\n  await page.waitForFunction(t=>document.querySelector('.sentence')?.textContent===t,text);\n  const word=api.records.find(r=>r.surface.normalize('NFC')==='먹지를');\n  const index=word.analysis.analyses.findIndex(a=>a.lemmas.length===1&&a.lemmas[0].text==='먹다'&&a.morphemes.map(m=>m.form).join(',')==='지,를');\n  assert.ok(index>=0);\n  const cards=page.getByRole('region',{name:'Sentence breakdown',exact:true}).locator('.breakdown-word').filter({has:page.locator('.breakdown-surface > span',{hasText:text.includes('ᄆ')?'먹지를':'먹지를'})});\n  assert.equal(await cards.count(),2);\n  for(let occurrence=0;occurrence<2;occurrence++) {\n   const card=cards.nth(occurrence);\n   const before=await card.locator('select').inputValue();\n   await card.locator('select').selectOption(String(index));\n   const forms=await card.locator('.part-form').allTextContents();\n   assert.deepEqual(forms,['먹','지','를']);\n   captures.push({passage_id:passage.id,encoding,occurrence,before_selected_index:Number(before),selected_index:index,analysis:word.analysis.analyses[index],forms,labels:await card.locator('.part-gloss').allTextContents()});\n  }\n }\n await writeFile('/tmp/klem-fresh-unsu-options.json',JSON.stringify({captures,scope:'Actual user selection of preserved 먹다 + 지 + 를 alternatives for both occurrences in NFC/NFD. No contextual ranking, sense disambiguation or gold judgment claimed.'},null,2)+'\\n');\n console.log('Verified four real dropdown selections reveal 먹 + 지 + 를 while preserving the noun alternative.');\n} finally {await browser.close();}\n",
+    "sha256": "10de4bf796906636d7fa236f949c3813f84148282bb8b66e0b448b539a4f9ae4"
+  },
+  "screenshots": {
+    "docs/fresh-unsu-screenshots/0-desktop.png": {
+      "sha256": "07a626660a1364b41cf54acf0d0ea70417071e7c8f414e9e327d3ec00e578c91",
+      "paragraph_index": 0,
+      "viewport": "desktop"
+    },
+    "docs/fresh-unsu-screenshots/0-mobile.png": {
+      "sha256": "82611c793808e0f76de637ff3f43cb589f0eaf91eb7146bea543a1be8d3d1c1d",
+      "paragraph_index": 0,
+      "viewport": "mobile"
+    },
+    "docs/fresh-unsu-screenshots/27-desktop.png": {
+      "sha256": "6bfbb983b274fba0e471fe04f8056bb9850e4fcd3ba5f37536b0d62e9c543147",
+      "paragraph_index": 27,
+      "viewport": "desktop"
+    },
+    "docs/fresh-unsu-screenshots/27-mobile.png": {
+      "sha256": "1ab4f05c10d105ca221b9b759b9ea5ef55f68bdae08aaf78618facf53ab19f2e",
+      "paragraph_index": 27,
+      "viewport": "mobile"
+    },
+    "docs/fresh-unsu-screenshots/54-desktop.png": {
+      "sha256": "a693cb9bf449ded503d6307a4e96ee6620cc3bbea500850a493ca167dbc9ff56",
+      "paragraph_index": 54,
+      "viewport": "desktop"
+    },
+    "docs/fresh-unsu-screenshots/54-mobile.png": {
+      "sha256": "f499bfc22dd9c92ccb16980c8add52a32e21db53cb6c5fa36939c4ad514b9a1b",
+      "paragraph_index": 54,
+      "viewport": "mobile"
+    },
+    "docs/fresh-unsu-screenshots/81-desktop.png": {
+      "sha256": "5a9554fdbbb70c43b1da97aa9b57af7e0221477ef9bbe4f12e7f20f54ab04ed5",
+      "paragraph_index": 81,
+      "viewport": "desktop"
+    },
+    "docs/fresh-unsu-screenshots/81-mobile.png": {
+      "sha256": "d9ad5887a3aac3844b0cb6d57b9eb2bab82cbc9e5125c99856d55e760e76f93b",
+      "paragraph_index": 81,
+      "viewport": "mobile"
+    }
+  }
+}

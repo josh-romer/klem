@@ -336,6 +336,16 @@
                 ./tools/hada_remaining_release.py
                 ./tools/hada_remaining_performance.py
                 ./tools/test_hada_remaining_release.py
+                ./tools/ssik_audit.py
+                ./tools/ssik_comparison.py
+                ./tools/ssik_runtime.py
+                ./tools/ssik_corpora.py
+                ./tools/ssik_broad.py
+                ./tools/ssik_morphology.py
+                ./tools/ssik_release.py
+                ./tools/ssik_performance.py
+                ./tools/fresh_passage_audit.py
+                ./web/tests/ssik.mjs
                 ./tools/nominal_si_hada_audit.py
                 ./tools/test_nominal_si_hada_audit.py
                 ./tools/nominal_si_hada_runtime.py
@@ -603,6 +613,17 @@
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify
             python tools/review_inventory.py --verify
+            python tools/ssik_audit.py
+            python tools/ssik_comparison.py
+            python tools/ssik_runtime.py
+            python tools/ssik_corpora.py --verify
+            python tools/ssik_broad.py --verify
+            python tools/ssik_morphology.py
+            python tools/ssik_broad.py --verify --report docs/ssik-packaged-observations.json.gz
+            python tools/ssik_corpora.py --verify --report docs/ssik-packaged-corpora.json.gz
+            python tools/ssik_release.py --verify
+            python tools/ssik_performance.py --verify
+            python tools/fresh_passage_audit.py
             touch "$out"
           '';
         });

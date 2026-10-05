@@ -1,5 +1,40 @@
 # Performance
 
+## Native noun-origin -되다 formations (COV-022m)
+
+Measured 2026-10-04 on the same AMD Ryzen AI MAX+ 395, Linux x86-64, comparing
+the verified Nix packages immediately before and after 1,570 additional finite
+formations (1,728 total). Input is the complete pinned MuJeong novel, 786,078
+UTF-8 bytes. Five fresh processes per version/workload were interleaved with
+version order reversed on alternate rounds. Filesystem data was warm and each
+CLI cache started empty. No Cargo, Nix, browser or corpus checks ran during
+timing. Measurements include startup, dictionary access, candidate processing,
+JSONL serialization and output to `/dev/null`; GNU Time supplies process peak RSS.
+
+| Workload | Cache budget | Before median | After median | Before peak RSS | After peak RSS |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Unannotated JSONL | 0 | 1.328 s | 1.320 s | 4.21 MiB | 4.35 MiB |
+| Unannotated JSONL | 8 MiB | 0.850 s | 0.849 s | 15.54 MiB | 15.54 MiB |
+| Raw candidates with dictionary annotations | 0 | 2.144 s | 2.169 s | 15.48 MiB | 15.79 MiB |
+| Raw candidates with dictionary annotations | 8 MiB | 1.805 s | 1.824 s | 27.18 MiB | 26.98 MiB |
+| Headword-only | 8 MiB | 1.868 s | 1.877 s | 26.87 MiB | 27.00 MiB |
+| Compatible | 8 MiB | 1.835 s | 1.852 s | 26.97 MiB | 26.86 MiB |
+| Headword-only with spacing | 8 MiB | 2.448 s | 2.461 s | 38.17 MiB | 38.32 MiB |
+| Compatible with spacing | 8 MiB | 2.423 s | 2.449 s | 37.88 MiB | 37.94 MiB |
+
+The [archive](doeda-native-performance.json) retains all eighty samples, exact
+commands, package/input hashes and the actual producer. The
+[offline gate](../tools/doeda_native_performance.py) recomputes medians, throughput
+and peaks. Six additional untimed uncached dictionary streams match the
+independently captured cached [broad streams](doeda-native-observations.json.gz),
+179,112 records each. Raw annotations and unannotated output remain separate
+workloads; spacing uses the default documented bounds.
+
+Median changes range from -0.57% to +1.16% in these local samples. This historical
+novel provides no portable latency bound, statistical equivalence, modern-fiction
+benchmark or contextual precision measurement. The measurements below retain
+their earlier engine scopes.
+
 ## Source-listed -되다 suffixes (COV-022m)
 
 Measured 2026-10-04 on an AMD Ryzen AI MAX+ 395, Linux x86-64, using the

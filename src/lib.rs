@@ -7,6 +7,7 @@
 //! ```
 pub mod breakdown;
 pub mod dictionary;
+mod doeda_native_forms;
 mod doeda_suffix;
 mod engine;
 mod grammar;

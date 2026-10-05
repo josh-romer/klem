@@ -61,6 +61,7 @@ impl Fixture {
             "krdict-emphatic-ending.json",
             "krdict-doeda-complement.json",
             "krdict-doeda-suffix.json",
+            "krdict-doeda-native.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -320,7 +321,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (4028, 1994)
+        (19728, 1994)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

@@ -2204,3 +2204,20 @@ corpora, [KAIST r2.15](https://github.com/UniversalDependencies/UD_Korean-Kaist/
 and [GSD r2.15](https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15).
 Their CC BY-SA 4.0 annotation license and the underlying text rights described
 in the upstream READMEs apply separately from the code and dictionary licenses.
+
+`doeda-native-formations.json` records 1,570 additional finite nominal/verb
+formation proposals with matching full native whole/noun origin evidence,
+individual review references and ten shared explicit inflection templates.
+Formation ID plus variant ID gives each of the 15,700 authored structural cases
+a stable identity. The complete 1,850-entry evidence review and before snapshots
+are in `docs/doeda-native-review.json.gz` and
+`docs/doeda-native-source-preflight.json.gz`; multilingual native entries and
+all earlier corpus annotations remain unchanged. These cases are agent-authored
+regressions, not contextual gold or independent linguistic review.
+
+`krdict-doeda-native.json` retains 4,319 complete English-projected native entries
+for the production importer. `doeda-native-import.json` anchors the adapter,
+original export files and preserved multilingual preflight. RelatedForm is
+excluded as in earlier adapters; original notes, senses, forms, grammatical
+patterns and examples are preserved. Attribution: National Institute of Korean
+Language, Korean Basic Dictionary, CC BY-SA 2.0 KR, separate from klem's code.

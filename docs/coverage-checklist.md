@@ -4943,8 +4943,8 @@ review remains open under the completion review below.
   derivations remain open beyond these thirty forms.
 
 - [ ] **COV-022m — Noun/root/adverb formation with -되다.**
-  **Partial: source-listed formations implemented and checked against broad
-  streams/corpora; native formation review pending.**
+  **Partial: source-listed and reviewed native nominal formations implemented;
+  unresolved base roles and broader native verification pending.**
   COV-019ah's held-out token `MH2_0069-s169/7` 타도되었다 has original gold
   타도 + 되 + 었 + 다 and an already recovered whole 타도되다 analysis. The pinned
   dictionary lacks that whole head but retains noun 타도 (79461) and 타도하다
@@ -5064,9 +5064,81 @@ review remains open under the completion review below.
   or statistical equivalence. The [performance gate](../tools/doeda_suffix_performance.py)
   recomputes medians/peaks and rejects lost workloads, misleading summaries and
   cache-hash drift. [Measurement scope](performance.md) and full commands are
-  retained. Broader performance/modern-text sampling,
-  all 1,850 native-lead reviews and context/register/independent checks remain
-  open; this checkpoint does not close COV-022m.
+  retained. These package/corpus/performance results describe the 158-form
+  implementation before the subsequent native expansion below.
+  **Native formation checkpoint:** the
+  [individual native review](doeda-native-review.json.gz) gives all 1,850
+  literal entries an evidence disposition: 1,748 have exact native noun-origin
+  matches, 22 retain earlier source-listed roles, and 80 remain unresolved.
+  Whole and base entry hashes, every recorded origin, competing homonyms,
+  native classes and unresolved roles retain separate records; origin absence
+  alone is never a conflict. The [formation manifest](../tests/fixtures/doeda-native-formations.json)
+  proposes 1,570 additional distinct nominal/verb heads, supplying 15,700 stable
+  case IDs across ten inflection/composition variants. The engine now supports
+  1,728 finite heads total, preserving whole-head readings. The
+  [immutable native preflight](doeda-native-source-preflight.json.gz) captures
+  all 94,200 actual before records across three filters, all original whole-head
+  parents/components and 4,319 complete native entries. No proposed split path
+  was present before expansion; every proposed path had an original whole-head
+  parent. The [importer projection](../tests/fixtures/doeda-native-import.json)
+  anchors a complete English-only adapter; full multilingual originals remain
+  in the preflight. [Rust source tests](../tests/doeda_native_sources.rs) verify
+  every whole/noun origin pair, all exact owned components in NFC/NFD, both
+  dictionary filters and recovery-index bounds. Central raw/policy ledgers each
+  add 15,700 required paths; the [original ledger snapshot](doeda-native-ledger-before.json.gz)
+  and [append verifier](../tools/doeda_native_regressions.py) preserve every
+  earlier case and source reference. The [native diagnostics](doeda-native-diagnostics.json.gz)
+  compare all 94,200 records and retain 23,550 stable individual additions.
+  Every addition reconstructs from original whole-head owners; all old candidates,
+  dictionary assessments/slots and relative order survive. Mutation guards reject
+  borrowed noun origins, invented root roles, changed native leads and lost
+  candidates/assessments. This structural coverage selects no contextual sense:
+  explicit origin differences remain lexical-identity leads, including 半減 in
+  반감되다 versus the available 反感 noun and competing 결정/구조/조정 entries.
+  Current headword/POS policy and displayed hints do not settle those identities.
+  The [native packaged checks](doeda-native-packaged-checks.json.gz) retain the
+  successful Nix build (890 Rust tests passed, zero failed, one ignored), full
+  release/debug parity across all 94,200 records, 31,400 NFC/NFD API case checks,
+  and 4,319 complete dictionary endpoints. Six representative browser diagrams
+  cover past and contracted forms, nominalization/topic and copula composition,
+  present adnominals and formal politeness. Six Unicode/filter exports match the
+  release CLI with spacing enabled; source clicks and desktop/mobile layout were
+  checked. This browser sample is distinct from the complete API cohort. The
+  [packaged gate](../tools/doeda_native_package.py) rejects missing encoded cases,
+  rewritten candidates/native assessments, incorrect owned order, changed native
+  entries and missing filter exports. Reproducible runners are
+  [the API harness](../tools/doeda_native_runtime.py) and
+  [the browser harness](../web/tests/doeda-native.mjs).
+  The [native broad comparison](doeda-native-observations.json.gz) checks all
+  eight original streams (1,128,312 records), saving 1,878 changed records,
+  755 individually attributed changes and 387 complete native owners. Every
+  original candidate, assessment, slot and spacing alternative retains its
+  relative order. The [native corpus comparison](doeda-native-corpora.json.gz)
+  preserves all 66,570 original gold rows and independently compares all 32,096
+  distinct convertible surfaces, including exact punctuation-bearing word calls.
+  It tracks 621 added candidates across 583 words against original whole-head
+  parents and retains every original sentence and ten-column annotation for
+  all 700 changed token occurrences. No original expected lemma, match or recovered group
+  is rewritten or lost. [Broad](../tools/doeda_native_compare.py) and
+  [corpus](../tools/doeda_native_corpora.py) gates reject stream/gold/context drift,
+  lost candidates or spacing alternatives and borrowed derivational roles.
+  Recall and p95/max ambiguity remain unchanged. Mean candidates increase from
+  6.176508 to 6.188839 / 5.991711 to 6.002695 in KAIST dev/test and from
+  5.663730 to 5.675243 / 5.749975 to 5.758181 in GSD dev/test; these are structural
+  additions with unjudged contextual precision. The
+  [native timing archive](doeda-native-performance.json) retains eighty
+  interleaved fresh-process samples across eight full-novel workloads and six
+  independent uncached/cached dictionary stream comparisons. All 179,112 records
+  per stream remain byte-identical across cache budgets. Cached unannotated
+  output takes a median 0.849 seconds, dictionary filters 1.85–1.88 seconds,
+  and spacing 2.45–2.46 seconds on this machine; peak process RSS is 38.32 MiB.
+  Median changes versus the exact previous package range from -0.57% to +1.16%,
+  establishing no portable bound or statistical equivalence. The
+  [performance gate](../tools/doeda_native_performance.py) recomputes summaries
+  and rejects omitted workloads, mislabeled annotations and cache-hash drift.
+  [Measurement scope](performance.md) retains the full methodology.
+  The 80 unresolved leads, opaque/formal base history, homonym identity,
+  context/register and independent review remain open; COV-022m is not closed.
 
 ### P3: dictionary and representation boundaries
 

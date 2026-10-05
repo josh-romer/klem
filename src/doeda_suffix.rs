@@ -1,4 +1,4 @@
-//! Source-listed -되다 formations (KRDict 74902; COV-022m).
+//! Source-listed and reviewed native -되다 formations (KRDict 74902; COV-022m).
 //! Whole heads, source conflicts and unreviewed native leads remain separate.
 use crate::{Lemma, LemmaKind, Morpheme, MorphemeKind, engine::PredicateClass};
 
@@ -267,11 +267,20 @@ pub(crate) fn formation(head: &str) -> Option<(&'static str, LemmaKind, Predicat
     if !head.ends_with("되다") {
         return None;
     }
-    let i = FORMS
-        .binary_search_by_key(&head, |&(word, _, _, _)| word)
+    if let Ok(i) = FORMS.binary_search_by_key(&head, |&(word, _, _, _)| word) {
+        let (_, base, kind, class) = FORMS[i];
+        return Some((base, kind, class));
+    }
+    // These extra native heads have individually reviewed whole/noun origin
+    // pairs and verb POS; they add no rule for arbitrary nominal spellings.
+    let i = crate::doeda_native_forms::FORMS
+        .binary_search_by_key(&head, |&(word, _)| word)
         .ok()?;
-    let (_, base, kind, class) = FORMS[i];
-    Some((base, kind, class))
+    Some((
+        crate::doeda_native_forms::FORMS[i].1,
+        LemmaKind::Nominal,
+        PredicateClass::Verb,
+    ))
 }
 
 pub(crate) fn rule(class: PredicateClass) -> &'static str {

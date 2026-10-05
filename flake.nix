@@ -229,6 +229,24 @@
                 ./tools/test_doeda_suffix_compare.py
                 ./tools/test_doeda_suffix_corpora.py
                 ./tools/test_doeda_suffix_performance.py
+                ./tools/doeda_native_audit.py
+                ./tools/doeda_native_preflight.py
+                ./tools/doeda_native_implementation.py
+                ./tools/doeda_native_regressions.py
+                ./tools/doeda_native_diagnostics.py
+                ./tools/doeda_native_runtime.py
+                ./tools/doeda_native_package.py
+                ./tools/doeda_native_compare.py
+                ./tools/doeda_native_corpora.py
+                ./tools/doeda_native_performance.py
+                ./tools/test_doeda_native_audit.py
+                ./tools/test_doeda_native_diagnostics.py
+                ./tools/test_doeda_native_package.py
+                ./tools/test_doeda_native_compare.py
+                ./tools/test_doeda_native_corpora.py
+                ./tools/test_doeda_native_performance.py
+                ./src/doeda_native_forms.rs
+                ./web/tests/doeda-native.mjs
                 ./web/tests/doeda-complement.mjs
                 ./web/tests/doeda-suffix.mjs
                 ./src/engine.rs ./src/grammar.rs
@@ -342,6 +360,16 @@
             python tools/doeda_suffix_corpora.py --verify
             python tools/doeda_suffix_performance.py --verify
             python -m unittest discover -s tools -p 'test_doeda_suffix_*.py'
+            python tools/doeda_native_audit.py --verify
+            python tools/doeda_native_preflight.py --verify
+            python tools/doeda_native_implementation.py --verify
+            python tools/doeda_native_regressions.py --verify
+            python tools/doeda_native_diagnostics.py --verify
+            python tools/doeda_native_package.py --verify
+            python tools/doeda_native_compare.py --verify
+            python tools/doeda_native_corpora.py --verify
+            python tools/doeda_native_performance.py --verify
+            python -m unittest discover -s tools -p 'test_doeda_native_*.py'
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify

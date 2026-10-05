@@ -4367,6 +4367,13 @@ remain shared with the earlier templates, and original input spans are kept.
 
 Suffix KRDict 74902 explicitly lists 133 passive verb formations and 24 adjective
 formations. The engine supports those finite heads plus corpus-backed 타도되다.
+It also supports 1,570 further finite nominal/verb heads whose complete native
+whole and noun entries record the same origin, for 1,728 heads total. Each new
+head has an individual evidence review and ten stable structural cases; missing,
+opaque, competing and nested bases retain separate unresolved dispositions.
+These are finite lexical licenses, with whole-verb POS supplying the suffix's
+inflection class. Origin matching does not choose a sentence sense or license
+arbitrary nouns, and unknown origins are not negative evidence.
 It expands existing whole-predicate candidates into a base lemma and canonical
 Suffix 되다, followed by that suffix's own prefinals and ending. For example,
 타도되었다 offers 타도 Nominal + 되다 Suffix + 었 Prefinal + 다 Ending;
@@ -4392,6 +4399,11 @@ required structural paths from unjudged homonym senses and contextual meanings.
 Evidence: [complete source checkpoint](doeda-suffix-source-preflight.json.gz),
 [corrections](../tests/fixtures/doeda-suffix-corrections.json),
 [source/ownership tests](../tests/doeda_suffix_sources.rs), and
-[ledger verifier](../tools/doeda_suffix_regressions.py). COV-022m remains open for
-other native heads, finer source conflicts, corpus/runtime/performance checks,
+[ledger verifier](../tools/doeda_suffix_regressions.py). The
+[native formation review](doeda-native-review.json.gz),
+[native preflight](doeda-native-source-preflight.json.gz),
+[native ownership/filter tests](../tests/doeda_native_sources.rs), and
+[native diagnostics](doeda-native-diagnostics.json.gz) extend this finite scope.
+COV-022m remains open for unresolved native heads, finer source conflicts,
+fresh native corpus/runtime/performance checks,
 formal/historical base analysis and independent contextual/register review.

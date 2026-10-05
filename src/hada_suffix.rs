@@ -1,9 +1,24 @@
-//! Source-listed -화하다/-시하다 verbs, with independently sourced deeper noun bases.
+//! Source-listed noun -하다 verbs/adjectives and independently sourced deeper -화/-시 bases.
 use crate::{
     Lemma, LemmaKind, Morpheme, MorphemeKind, doeda_identity::OriginSource, engine::PredicateClass,
 };
 pub(crate) const RULE: &str = "suffix.verb.hada";
+pub(crate) const ADJECTIVE_RULE: &str = "suffix.adjective.hada";
+pub(crate) fn rule(class: PredicateClass) -> &'static str {
+    match class {
+        PredicateClass::Adjective => ADJECTIVE_RULE,
+        _ => RULE,
+    }
+}
 pub(crate) fn formation(head: &str) -> Option<(&'static str, LemmaKind, PredicateClass)> {
+    if let Some(base) = head.strip_suffix("하다") {
+        if let Some(source) = PRIMARY_ADJECTIVAL.iter().find(|s| s.base == base) {
+            return Some((source.base, LemmaKind::Nominal, PredicateClass::Adjective));
+        }
+        if let Some(source) = PRIMARY_VERBAL.iter().find(|s| s.base == base) {
+            return Some((source.base, LemmaKind::Nominal, PredicateClass::Verb));
+        }
+    }
     let base = match head {
         "가속화하다" => "가속화",
         "가시화하다" => "가시화",
@@ -50,17 +65,27 @@ pub(crate) fn owned_source(
     rules: &[String],
     morphs: &[Morpheme],
 ) -> Option<&'static OriginSource> {
-    if lemma.kind != LemmaKind::Nominal || !rules.iter().any(|r| r == RULE) {
+    if lemma.kind != LemmaKind::Nominal {
         return None;
     }
     let first = morphs.first()?;
     if first.kind != MorphemeKind::Suffix {
         return None;
     }
+    if first.form == "하다"
+        && rules.iter().any(|r| r == ADJECTIVE_RULE)
+        && let Some(source) = PRIMARY_ADJECTIVAL.iter().find(|s| s.base == lemma.text)
+    {
+        return Some(source);
+    }
+    if !rules.iter().any(|r| r == RULE) {
+        return None;
+    }
     if first.form == "하다" {
         DIRECT
             .iter()
             .chain(SI_DIRECT)
+            .chain(PRIMARY_VERBAL)
             .find(|s| s.base == lemma.text)
     } else if first.form == "화"
         && crate::nominal_hwa::owner(lemma, rules, morphs)
@@ -85,7 +110,15 @@ pub(crate) fn owner_class(
     rules: &[String],
     morphs: &[Morpheme],
 ) -> Option<PredicateClass> {
-    owned_source(lemma, rules, morphs).map(|_| PredicateClass::Verb)
+    owned_source(lemma, rules, morphs).map(|source| {
+        if morphs.first().is_some_and(|m| m.form == "하다")
+            && PRIMARY_ADJECTIVAL.iter().any(|s| s.base == source.base)
+        {
+            PredicateClass::Adjective
+        } else {
+            PredicateClass::Verb
+        }
+    })
 }
 const DIRECT: &[OriginSource] = &[
     OriginSource {
@@ -487,3 +520,86 @@ const SI_NESTED: &[OriginSource] = &[
         whole_origins_complete: true,
     },
 ];
+
+// Primary noun-based senses from the frozen original -하다 examples.
+const PRIMARY_VERBAL: &[OriginSource] = &[
+    OriginSource {
+        base: "공부",
+        expected_origins: &["工夫"],
+        whole_entries: &["krdict:23394"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "밥",
+        expected_origins: &[],
+        whole_entries: &["krdict:57702"],
+        whole_origins_complete: false,
+    },
+    OriginSource {
+        base: "빨래",
+        expected_origins: &[],
+        whole_entries: &["krdict:61003"],
+        whole_origins_complete: false,
+    },
+    OriginSource {
+        base: "사랑",
+        expected_origins: &[],
+        whole_entries: &["krdict:62743"],
+        whole_origins_complete: false,
+    },
+    OriginSource {
+        base: "생각",
+        expected_origins: &[],
+        whole_entries: &["krdict:66376"],
+        whole_origins_complete: false,
+    },
+    OriginSource {
+        base: "절",
+        expected_origins: &[],
+        whole_entries: &["krdict:77949"],
+        whole_origins_complete: false,
+    },
+];
+// 공부하다 => 공부 (동사)
+// 밥하다 => 밥 (동사)
+// 빨래하다 => 빨래 (동사)
+// 사랑하다 => 사랑 (동사)
+// 생각하다 => 생각 (동사)
+// 절하다 => 절 (동사)
+const PRIMARY_ADJECTIVAL: &[OriginSource] = &[
+    OriginSource {
+        base: "건강",
+        expected_origins: &["健康"],
+        whole_entries: &["krdict:17317"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "순수",
+        expected_origins: &["純粹"],
+        whole_entries: &["krdict:64567"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "정직",
+        expected_origins: &["正直"],
+        whole_entries: &["krdict:31765"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "진실",
+        expected_origins: &["眞實"],
+        whole_entries: &["krdict:28994"],
+        whole_origins_complete: true,
+    },
+    OriginSource {
+        base: "행복",
+        expected_origins: &["幸福"],
+        whole_entries: &["krdict:72481"],
+        whole_origins_complete: true,
+    },
+];
+// 건강하다 => 건강 (형용사)
+// 순수하다 => 순수 (형용사)
+// 정직하다 => 정직 (형용사)
+// 진실하다 => 진실 (형용사)
+// 행복하다 => 행복 (형용사)

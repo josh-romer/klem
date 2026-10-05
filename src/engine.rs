@@ -2251,9 +2251,12 @@ fn add_doeda_suffixes(out: &mut Vec<Analysis>) {
     );
 }
 fn add_hada_suffixes(out: &mut Vec<Analysis>) {
-    add_predicate_suffixes(out, crate::hada_suffix::formation, "하다", |_| {
-        crate::hada_suffix::RULE
-    });
+    add_predicate_suffixes(
+        out,
+        crate::hada_suffix::formation,
+        "하다",
+        crate::hada_suffix::rule,
+    );
 }
 fn add_predicate_suffixes(
     out: &mut Vec<Analysis>,
@@ -2565,6 +2568,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                     | "suffix.verb.doeda"
                     | "suffix.adjective.doeda"
                     | "suffix.verb.hada"
+                    | "suffix.adjective.hada"
                     | "compound.predicate.well_doeda"
             )
         })

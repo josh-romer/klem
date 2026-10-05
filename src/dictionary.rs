@@ -663,6 +663,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                 r == "suffix.verb.doeda"
                     || r == crate::nominal_hwa::RULE
                     || r == crate::hada_suffix::RULE
+                    || r == crate::hada_suffix::ADJECTIVE_RULE
             }) {
                 continue;
             }

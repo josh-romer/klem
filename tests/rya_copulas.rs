@@ -1,4 +1,6 @@
 //! COV-017br: vowel-final omitted-copula hypotheses, distinct from certified paths.
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 use klem::dictionary::{
     Compatibility, Dictionary, DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict,
 };
@@ -193,13 +195,22 @@ fn every_original_path_native_assessment_and_order_is_preserved() {
                         "{surface}"
                     );
                 }
-                for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+                for a in new
+                    .analyses
+                    .iter()
+                    .filter(|a| !old.analyses.contains(a) && !hada_preservation::is_addition(a))
+                {
                     assert!(
                         a.rules.iter().any(|r| r == "ending.rya")
                             && a.rules.iter().any(|r| r == "copula.omitted_rya"),
                         "{surface}: {a:?}"
                     );
                 }
+                let mut reviewed = (*new).clone();
+                reviewed
+                    .analyses
+                    .retain(|a| old.analyses.contains(a) || !hada_preservation::is_addition(a));
+                hada_preservation::assert_preserved(&new, &reviewed);
             }
         }
     }

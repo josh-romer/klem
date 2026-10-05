@@ -1869,8 +1869,11 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.adjectival.dap" => {
             "Separate adjective-forming -답다 from a nominal base, with ㅂ-irregular vowel attachment."
         }
+        "suffix.adjective.hada" => {
+            "Separate adjectival -하다 from a source-listed noun formation; retain its independently recorded nominal base and adjective attachment class, alongside the whole lexical head."
+        }
         "suffix.verb.hada" => {
-            "Separate -하다 from a source-listed -화하다 or -시하다 verb; its independently licensed nominal base keeps -화 or -시 distinct, while the suffix owns prefinals, endings and verbal attachment class. Whole lexical readings remain."
+            "Separate -하다 from a source-listed noun formation or -화하다/-시하다 verb; its independently licensed nominal base keeps nested -화 or -시 distinct, while the suffix owns prefinals, endings and verbal attachment class. Whole lexical readings remain."
         }
         "suffix.verb.doeda" => {
             "A source-listed passive verb formed from a nominal base and -되다; prefinals and endings belong to the suffix, while the whole lexical head remains a separate candidate."

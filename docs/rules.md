@@ -4407,3 +4407,47 @@ Evidence: [complete source checkpoint](doeda-suffix-source-preflight.json.gz),
 COV-022m remains open for unresolved native heads, finer source conflicts,
 fresh native corpus/runtime/performance checks,
 formal/historical base analysis and independent contextual/register review.
+
+## Primary noun-based -하다 senses (COV-022s)
+
+The frozen [KRDict -하다 entry](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88475)
+provides six senses and 28 original example groups. Its first two senses
+explicitly attach to some nouns. The current implementation covers their
+six verb bases 공부, 밥, 빨래, 사랑, 생각, 절 and five adjective bases 건강,
+순수, 정직, 진실, 행복. The original whole lexical heads remain available.
+
+Each new candidate restores an existing whole-head analysis, replacing that
+predicate lemma with the separately listed noun and inserting suffix 하다
+at its own component boundary. `suffix.verb.hada` and
+`suffix.adjective.hada` record the respective source class. Existing ending,
+prefinal, particle and auxiliary rules apply to that owner. For example,
+공부하시다 offers 공부 + 하다 + 시 + 다 alongside 공부하다 + 시 + 다;
+건강해요 offers 건강 + 하다 + 어 + 요 and the independently retained 어요
+bundle. Adjective formation excludes present verbal endings and progressive
+있다 on the new path, including 건강하는, 건강한다 and 건강하고있다.
+The raw whole-word hypotheses retain their existing behavior.
+
+Recorded origins describe the relationship between dictionary homonyms.
+정직 (正直) matches the recorded origin of 정직하다; 정직 (停職) has a
+recorded difference. Both entries remain visible as distinct alternatives.
+Where the whole head lacks a recorded origin, including 사랑하다 and 절하다,
+the relationship remains unknown even when a noun homonym has an origin.
+No origin is invented, and a grammatical hypothesis does not select a
+contextual dictionary sense. The browser labels the source-listed adjective
+suffix as “State / adjective formation” and retains the full six-sense source
+entry when it is opened.
+
+[Stable cases](../tests/fixtures/hada-nominal-sources.json) preserve 88 required
+and 26 forbidden judgments, all independently identified with `hada-noun-`
+IDs. The [original source baseline](hada-nominal-preflight.json.gz) retains
+all 28 groups, 138 complete native entries, 649 earlier words and 1,048
+original corpus rows. [CLI diagnostics](hada-nominal-diagnostics.json.gz),
+[runtime checks](hada-nominal-runtime-checks.json.gz),
+[full-stream comparisons](hada-nominal-observations.json.gz) and
+[held-out corpus comparisons](hada-nominal-corpora.json.gz) preserve each
+addition's whole-head parent and the original analyses and annotations.
+
+The seventeen remaining examples in the sound/manner, adverb, root and
+bound-noun senses remain explicit follow-up work. Arbitrary noun attachment,
+additional inflected forms, contextual validity and independent Korean-language
+review remain open in the [coverage checklist](coverage-checklist.md).

@@ -144,7 +144,13 @@ export function parts(
       (adnominalBase || (previous && "lemma" in previous &&
         previous.lemma === (a.rules.includes("derivation.nominal.compound") || a.rules.includes("derivation.nominal.root_compound") ? 1 : 0)));
     const adverbI = m.kind === "suffix" && m.form === "이" && a.rules.includes("suffix.adverbial.i");
-    const label = nominalI || adverbI
+    const adjectivalHada = m.kind === "suffix" && m.form === "하다" &&
+      a.rules.includes("suffix.adjective.hada") && previousLemma?.kind === "nominal" &&
+      ["건강", "순수", "정직", "진실", "행복"].includes(previousLemma.text);
+    const label = adjectivalHada
+      ? { ...grammarLabels[key], label: "State / adjective formation",
+          note: "Source-listed noun + -하다 adjective formation (sense 2). The whole lexical reading and other -하다 senses remain available." }
+      : nominalI || adverbI
       ? { ...grammarLabels[key], label: nominalI ? "Noun-forming suffix" : "Adverb-forming suffix",
           sources: grammarLabels[key].sources.filter((source) => source.id === (nominalI ? 88924 : 88927)) }
       : enumerativeDa || emphaticDa

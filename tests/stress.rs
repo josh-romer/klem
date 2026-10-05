@@ -1,3 +1,5 @@
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 use klem::{LemmaKind, Lemmatizer, MorphemeKind};
 use sha2::{Digest, Sha256};
 #[path = "support/written_vowel_history.rs"]
@@ -26,7 +28,14 @@ fn output_matches_reviewed_snapshots() {
         serde_json::from_str(include_str!("fixtures/doeda-role-stress.json")).unwrap();
     let engine = Lemmatizer::new();
     for snapshot in snapshots {
-        let result = engine.analyze_word(&snapshot.word).unwrap();
+        let current = engine.analyze_word(&snapshot.word).unwrap();
+        let mut result = current.clone();
+        result
+            .analyses
+            .retain(|a| !hada_preservation::is_addition(a));
+        // New noun-hada paths must invert to retained whole-head parents.
+        // All original optimization and spelling fingerprints still apply below.
+        hada_preservation::assert_preserved(&current, &result);
         let legacy = if let Some(change) = roles["changes"]
             .as_array()
             .unwrap()

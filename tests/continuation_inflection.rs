@@ -1,6 +1,8 @@
 //! COV-019ae: native source tensions and immediate inflection owners.
 #[path = "../tools/adjectival_allomorph.rs"]
 mod allomorph;
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 use klem::dictionary::{
     AttachmentRule, Compatibility, Dictionary, DictionaryFilter, DictionarySession,
     SqliteDictionary, import_krdict,
@@ -137,7 +139,7 @@ fn original_raw_paths_and_four_historical_tensions_remain_unchanged() {
         // COV-017bu: preserve the snapshot and apply only the sourced owner correction.
         frozen.analyses.retain(|a| !allomorph::reviewed_removal(a));
         let actual = engine.analyze_word(surface).unwrap();
-        assert_eq!(actual, frozen, "{surface}");
+        hada_preservation::assert_preserved(&actual, &frozen);
         assert_eq!(
             actual,
             engine

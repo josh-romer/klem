@@ -39,6 +39,7 @@
                 ./tools/corpus.rs
                 ./tools/validity.rs
                 ./tools/adjectival_allomorph.rs
+                ./tools/hada_nominal_preservation.rs
                 ./README.md
                 ./LICENSE-MIT
                 ./LICENSE-APACHE
@@ -307,6 +308,17 @@
                 ./tools/nominal_si_hada_release.py
                 ./tools/nominal_si_hada_performance.py
                 ./tools/test_nominal_si_hada_release.py
+                ./tools/hada_nominal_release.py
+                ./tools/hada_nominal_performance.py
+                ./tools/test_hada_nominal_release.py
+                ./tools/hada_nominal_broad.py
+                ./tools/hada_nominal_corpora.py
+                ./tools/test_hada_nominal_release_audits.py
+                ./tools/hada_nominal_runtime.py
+                ./tools/test_hada_nominal_runtime.py
+                ./web/tests/hada-nominal.mjs
+                ./tools/hada_nominal_audit.py
+                ./tools/test_hada_nominal_audit.py
                 ./tools/nominal_si_hada_audit.py
                 ./tools/test_nominal_si_hada_audit.py
                 ./tools/nominal_si_hada_runtime.py
@@ -344,6 +356,7 @@
                 ./examples/audit_adjectival_allomorph.rs
                 ./web/tests/adjectival-allomorph.mjs
                 ./tools/adjectival_allomorph.rs
+                ./tools/hada_nominal_preservation.rs
                 ./tools/native_lmf.py ./tools/test_native_lmf.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
@@ -531,6 +544,18 @@
             python tools/nominal_hwa_hada_performance.py --verify
             python -m unittest discover -s tools -p 'test_nominal_hwa_hada_release.py'
             python tools/nominal_si_hada_audit.py --verify --comparison docs/nominal-si-hada-diagnostics.json.gz
+            python tools/hada_nominal_audit.py --verify
+            python -m unittest discover -s tools -p 'test_hada_nominal_audit.py'
+            python tools/hada_nominal_runtime.py --verify
+            python -m unittest discover -s tools -p 'test_hada_nominal_runtime.py'
+            python tools/hada_nominal_broad.py --verify
+            python tools/hada_nominal_corpora.py --verify
+            python -m unittest discover -s tools -p 'test_hada_nominal_release_audits.py'
+            python tools/hada_nominal_release.py --verify
+            python tools/hada_nominal_broad.py --verify --report docs/hada-nominal-packaged-observations.json.gz
+            python tools/hada_nominal_corpora.py --verify --report docs/hada-nominal-packaged-corpora.json.gz
+            python tools/hada_nominal_performance.py --verify
+            python -m unittest discover -s tools -p 'test_hada_nominal_release.py'
             python -m unittest discover -s tools -p 'test_nominal_si_hada_audit.py'
             python tools/nominal_si_hada_runtime.py --verify
             python -m unittest discover -s tools -p 'test_nominal_si_hada_runtime.py'

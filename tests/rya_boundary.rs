@@ -1,4 +1,6 @@
 //! COV-017br: source-listed -랴 + concessive particles and own-owner uncertainty.
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 use klem::dictionary::{
     Compatibility, Dictionary, DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict,
 };
@@ -144,7 +146,11 @@ fn original_raw_paths_and_known_conflicts_survive_with_unreviewed_prefinals_unkn
                     old.analyses.iter().collect::<Vec<_>>(),
                     "{surface}"
                 );
-                for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+                for a in new
+                    .analyses
+                    .iter()
+                    .filter(|a| !old.analyses.contains(a) && !hada_preservation::is_addition(a))
+                {
                     assert!(
                         a.rules.iter().any(|r| r == "ending.rya")
                             && a.rules.iter().any(|r| {
@@ -153,6 +159,11 @@ fn original_raw_paths_and_known_conflicts_survive_with_unreviewed_prefinals_unkn
                         "{surface}: {a:?}"
                     );
                 }
+                let mut reviewed = (*new).clone();
+                reviewed
+                    .analyses
+                    .retain(|a| old.analyses.contains(a) || !hada_preservation::is_addition(a));
+                hada_preservation::assert_preserved(&new, &reviewed);
                 let annotation = dictionary.annotate(&new).unwrap();
                 for (index, a) in old.analyses.iter().enumerate() {
                     let actual = serde_json::to_value(annotation.assess(a)).unwrap();

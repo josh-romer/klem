@@ -1,6 +1,8 @@
 //! COV-019ad: source-scoped immediate-left classes, independent of raw generation.
 #[path = "../tools/adjectival_allomorph.rs"]
 mod allomorph;
+#[path = "../tools/hada_nominal_preservation.rs"]
+mod hada_preservation;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{
@@ -103,7 +105,7 @@ fn complete_sources_and_prechange_raw_paths_are_preserved() {
         // COV-017bu: preserve the snapshot and apply only the sourced owner correction.
         frozen.analyses.retain(|a| !allomorph::reviewed_removal(a));
         let actual = engine.analyze_word(surface).unwrap();
-        assert_eq!(actual, frozen, "{surface}");
+        hada_preservation::assert_preserved(&actual, &frozen);
         assert_eq!(
             actual,
             engine

@@ -5636,6 +5636,107 @@ review remains open under the completion review below.
   its exact terminal log is archived. Wider forms, contextual judgments and
   independent Korean-language review remain open.
 
+- [ ] **COV-022s — Primary noun-based verbal and adjectival -하다 senses.**
+  **Partial: eleven source-listed noun owners implemented and verified.**
+  The six original sense-1 noun verbs
+  (공부, 밥, 빨래, 사랑, 생각, 절) and five original sense-2 noun adjectives
+  (건강, 순수, 정직, 진실, 행복) gain separately owned -하다 paths. Whole
+  lexical readings and separately recorded origins remain independent.
+  The [frozen baseline](hada-nominal-preflight.json.gz) preserves 649 words
+  in three modes from the tested COV-022r package, 138 complete native entries
+  and 1,048 original corpus rows across all 28 primary -하다 examples.
+  The seventeen sound/manner, adverb, root and bound-noun examples remain
+  explicit future work; their source data is retained.
+  [Stable cases](../tests/fixtures/hada-nominal-sources.json) append 88 required
+  and 26 forbidden judgments with independent `hada-noun-` IDs. Every required
+  shape retains its frozen whole-head parent. Seven
+  [focused tests](../tests/hada_nominal.rs) cover class boundaries, Unicode,
+  all 649 earlier word orders, 1,048 original rows, all 138 native entries,
+  정직 origin homonyms and forged class flags. Eleven earlier -시하다/-화하다
+  tests and the full candidate ledger pass. The initial dictionary regression
+  exposed a missing adjectival-origin lookup trigger; the failed log is
+  retained, and the trigger is fixed. The frontend build passed and displays
+  adjectival 하 separately as state/adjective formation. The
+  [independent source/CLI audit](../tools/hada_nominal_audit.py) verifies
+  all 28 original example groups, 138 native entries, 1,048 untouched corpus
+  rows, 114 stable cases and all twelve Unicode/cache/filter streams. The
+  [actual diagnostics](hada-nominal-diagnostics.json.gz) track 1,062 additions
+  (354 in each mode over 292 surfaces), each with an independently restored
+  whole-head parent and a stable change ID. Original candidates, dictionary
+  readings and order remain preserved. The audit exposed missing whole-head
+  origins being treated as evidence of a difference for 사랑/절 homonyms;
+  five originless owner tables now retain `unknown`, with a separate regression.
+  Strict historical continuation and -으랴 snapshot checks accept only
+  independently restored noun-hada additions; their original fixtures remain
+  unchanged. The third full Rust run reached the -으랴 copula snapshot and
+  exposed an additional strict historical check; its adaptation and the seven
+  noun-hada tests now pass together (12 tests). The initial failed suite and
+  pre-fix CLI capture remain retained locally. Ten source/CLI mutation guards
+  passed. The [runtime receipts](hada-nominal-runtime-checks.json.gz) and
+  [verifier](../tools/hada_nominal_runtime.py) preserve 1,298 encoded API/CLI
+  word comparisons, 708 added component orders, 138 full before/after native
+  entry endpoints, eight browser diagrams and six exact filtered exports.
+  The [browser test](../web/tests/hada-nominal.mjs) checks study/honorific,
+  healthy/adjectival, honest/origin homonyms and love/missing-origin paths,
+  whole alternatives, dictionary/source links and mobile layout. The stress
+  snapshot keeps all original fingerprints and spelling projections; every
+  added noun-hada path must invert to a retained whole-head parent first.
+  All nine integration targets from stress through written-vowel compatibility
+  pass. The fourth full Rust run passed all 937 tests (one ignored, 207
+  completed batches). Five runtime mutation guards passed. The
+  [full-stream report](hada-nominal-observations.json.gz) captures all 1,128,312
+  original frames: 3,230 frames gain 3,763 independently parent-attributed paths.
+  All old paths, reading assessments and order remain preserved. The 435
+  previously omitted origin fields now populated in existing noun summaries
+  are tracked separately against the exact complete native records; empty
+  recorded origins do not certify a difference. The
+  [corpus report](hada-nominal-corpora.json.gz) preserves all 66,570 original
+  held-out gold rows and 32,096 word analyses, with 56 additions over 49 words
+  and no changed gold outcomes. Each addition retains its original ten-column
+  rows, full sentences and whole-word parent.
+  [Supported scope and boundaries](rules.md#primary-noun-based--하다-senses-cov-022s)
+  document the finite classes, retained lexical alternatives, origin uncertainty
+  and seventeen original source leads that remain open. The broader
+  [verifiers and guards](../tools/test_hada_nominal_release_audits.py) check
+  these changes individually; all eight full-stream/corpus mutation guards
+  passed. The Clippy branch-style fix passed warnings-as-errors across all
+  targets and 21 targeted suffix/stress regressions. All twelve final debug
+  streams match the independent diagnostics byte for byte. Documentation
+  tests passed. The [initial Nix pass](hada-nominal-initial-nix.log.gz)
+  completed all three checks: 938 Rust tests (one ignored, 202 batches),
+  SolidJS assets and the full inventory audit. Its optimized CLI matches all
+  twelve independently audited source streams byte for byte. This first
+  package records the immutable pre-style-fix snapshot; the corrected-source
+  [corrected-source Nix check](hada-nominal-corrected-package-nix.log.gz)
+  separately passed all 938 tests, one ignored, across 202 batches. The separately preserved
+  [initial package receipts](hada-nominal-initial-packaged-checks.json.gz)
+  verify 1,298 API word calls, 138 complete native entries, eight diagrams and
+  six exports against debug evidence. Its
+  [full-stream capture](hada-nominal-initial-packaged-observations.json.gz)
+  preserves every audited addition and origin-field enrichment, and its
+  [release-evaluated corpora](hada-nominal-initial-packaged-corpora.json.gz)
+  preserve all 66,570 gold rows and 32,096 words. Ten release and three stream
+  mutation guards passed against these actual first-package receipts; they
+  remain explicitly separate from the corrected package. The corrected
+  [package/API/browser receipt](hada-nominal-packaged-checks.json.gz) passes
+  all twelve source streams, 1,298 encoded API comparisons, 138 complete
+  native endpoints, eight diagrams and six exports against the debug evidence.
+  Its [full-stream receipt](hada-nominal-packaged-observations.json.gz) and
+  [release-evaluated corpora](hada-nominal-packaged-corpora.json.gz) match all
+  independently audited additions, origin-field enrichments, retained parents
+  and original gold outcomes. Six [novel cache streams](hada-nominal-cache-parity.json)
+  retain 179,112 records each with pairwise identical outputs at zero/8 MiB.
+  The [80 paired timings](hada-nominal-performance.json) cover all eight novel
+  workloads after every own build/audit job ended, with both versions pinned
+  to the same CPU. Observed median elapsed changes range from -1.10% to +0.14%;
+  startup, serialization, load and frequency context are recorded without an
+  equivalence or causal claim. All sixteen release/stream/timing mutation guards
+  passed. The [final Nix pass](hada-nominal-final-nix.log.gz) completed all
+  three checks, including these completed receipts and guards; its exact
+  terminal log is archived. Wider noun owners/forms, all seventeen retained examples
+  from the other suffix senses, contextual judgments and independent
+  Korean-language review remain open.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**

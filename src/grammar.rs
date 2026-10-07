@@ -702,6 +702,8 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다던"
                             | "다더니"
                             | "다나"
+                            | "다마는"
+                            | "다만"
                             | "다더니만"
                             | "다더니마는"
                             | "다던데"
@@ -978,6 +980,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "자거나",
             "자면",
             "자마자",
+            "다마는",
+            "다만",
             "다마다",
             "거든",
             "거든요",
@@ -1338,6 +1342,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("습니다", "니다", "습니다", 17),
             ("습니까", "니까", "습니까", 17),
             ("는다", "다", "는다", 4),
+            ("는다마는", "다마는", "는다마는", 4),
+            ("는다만", "다만", "는다만", 4),
             ("는다고", "다고", "는다고", 4),
             ("는다는", "다는", "는다는", 4),
             ("는다면", "다면", "는다면", 4),
@@ -2017,6 +2023,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.retrospective" => "Recover retrospective 더 after other prefinal markers.",
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
+        }
+        "ending.declarative_contrast" => {
+            "Recover the source-owned -다마는/-다만 and present -(느)ㄴ다마는/-(느)ㄴ다만 connective bundles; retain final-ending plus particle alternatives without selecting a contextual sense."
         }
         "prefinal.conjectural_ni" => {
             "Recover source-attested literary (으)리 before 니 or 니라, preserving written allomorphs and earlier honorific/past/modal ownership without selecting a contextual sense."

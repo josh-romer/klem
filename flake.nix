@@ -84,9 +84,26 @@
               exec ${klem}/bin/klem-web --assets ${web-assets}/share/klem-web "$@"
             '';
           };
+          corpus-adapter = klem.overrideAttrs (old: {
+            pname = "klem-corpus-adapter";
+            cargoBuildFlags = [ "--example" "evaluate" ];
+            # The main check tests this exact library source. Adapter parity
+            # checks separately exercise every held-out annotated corpus row.
+            doCheck = false;
+            installPhase = ''
+              runHook preInstall
+              mkdir -p $out/bin
+              cp target/${pkgs.stdenv.hostPlatform.rust.rustcTarget}/release/examples/evaluate $out/bin/klem-corpus-adapter
+              runHook postInstall
+            '';
+            meta = old.meta // {
+              description = "Korean annotated-corpus evaluation adapter";
+              mainProgram = "klem-corpus-adapter";
+            };
+          });
         in
         {
-          inherit klem web web-assets;
+          inherit klem web web-assets corpus-adapter;
           default = klem;
         });
 
@@ -111,7 +128,7 @@
       checks = forAllSystems (system:
         let pkgs = nixpkgs.legacyPackages.${system};
         in {
-          inherit (self.packages.${system}) klem web-assets;
+          inherit (self.packages.${system}) klem web-assets corpus-adapter;
           inventory-review = pkgs.runCommand "klem-inventory-review" {
             nativeBuildInputs = [ pkgs.python3 ];
             src = pkgs.lib.fileset.toSource {
@@ -393,6 +410,21 @@
                 ./tools/literary_ri_prefinal_adapter_replay.py
                 ./tools/literary_ri_prefinal_runtime.py
                 ./tools/test_literary_ri_prefinal_runtime.py
+                ./tools/literary_ri_prefinal_sources.py
+                ./tools/test_literary_ri_prefinal_sources.py
+                ./tools/klem_declarative_contrast_inversion.py
+                ./tools/declarative_contrast_audit.py
+                ./tools/test_declarative_contrast_audit.py
+                ./tools/declarative_contrast_preservation.py
+                ./tools/test_declarative_contrast_preservation.py
+                ./tools/declarative_contrast_replay.py
+                ./tools/declarative_contrast_adapter_replay.py
+                ./tools/declarative_contrast_runtime.py
+                ./tools/test_declarative_contrast_runtime.py
+                ./tools/declarative_contrast_performance.py
+                ./tools/capture_declarative_contrast_performance.py
+                ./tools/test_declarative_contrast_performance.py
+                ./web/tests/declarative-contrast.mjs
                 ./web/tests/literary-ri-prefinal-model.mjs
                 ./web/tests/literary-ri-prefinal.mjs
                 ./web/tests/double-past-prefinal.mjs
@@ -763,8 +795,18 @@
             python -m unittest discover -s tools -p 'test_literary_ri_prefinal_audit.py'
             python tools/literary_ri_prefinal_preservation.py
             python -m unittest discover -s tools -p 'test_literary_ri_prefinal_preservation.py'
+            python tools/literary_ri_prefinal_sources.py --proof docs/literary-ri-prefinal-historical-sources.json.gz
+            python -m unittest discover -s tools -p 'test_literary_ri_prefinal_sources.py'
             python tools/literary_ri_prefinal_runtime.py
             python -m unittest discover -s tools -p 'test_literary_ri_prefinal_runtime.py'
+            python tools/declarative_contrast_audit.py
+            python -m unittest discover -s tools -p 'test_declarative_contrast_audit.py'
+            python tools/declarative_contrast_preservation.py
+            python -m unittest discover -s tools -p 'test_declarative_contrast_preservation.py'
+            python tools/declarative_contrast_runtime.py
+            python -m unittest discover -s tools -p 'test_declarative_contrast_runtime.py'
+            python -m unittest discover -s tools -p 'test_declarative_contrast_performance.py'
+            python tools/declarative_contrast_performance.py --verify
             python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'
             python tools/reported_dana_native.py
             python tools/reported_dana_corpora.py

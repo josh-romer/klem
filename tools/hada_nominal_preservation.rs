@@ -1,4 +1,6 @@
 //! Prove sourced -하다 paths against unchanged historical whole-head parents.
+#[path = "../tests/support/declarative_contrast_history.rs"]
+mod contrast_history;
 use klem::{LemmaKind, MorphemeKind, WordAnalysis, breakdown::Component};
 use serde_json::Value;
 use std::sync::OnceLock;
@@ -82,6 +84,28 @@ pub fn assert_preserved(actual: &WordAnalysis, frozen: &WordAnalysis) {
         .iter()
         .filter(|a| !frozen.analyses.contains(a))
     {
+        if addition
+            .rules
+            .iter()
+            .any(|r| r == "ending.declarative_contrast")
+        {
+            let remaining = contrast_history::assert_addition(
+                "tests/fixtures/hada-remaining-sources.json",
+                &actual.normalized,
+                addition,
+            );
+            let nominal = contrast_history::assert_addition(
+                "tests/fixtures/hada-nominal-sources.json",
+                &actual.normalized,
+                addition,
+            );
+            assert_eq!(remaining, nominal);
+            assert!(
+                frozen.analyses.contains(&remaining),
+                "contrast needs an exact original split-particle parent"
+            );
+            continue;
+        }
         // COV-017bx: the distinct friendly final preserves the exact old
         // adnominal parent. It can coexist with an earlier sourced 하다 split;
         // after restoring the final, keep proving that split below as well.

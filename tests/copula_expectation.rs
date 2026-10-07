@@ -1,5 +1,7 @@
 //! Authored structural probes: primary omission rule plus source ending notes.
 //! These are not directly attested sentence judgments or corpus gold.
+#[path = "support/declarative_contrast_history.rs"]
+mod contrast_history;
 #[path = "deoniman_support/parent.rs"]
 mod deoniman_parent;
 #[path = "reported_dana_support/parent.rs"]
@@ -200,6 +202,14 @@ fn complete_original_source_words_preserve_order_and_attribute_each_addition() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.declarative_contrast") {
+                contrast_history::assert_addition(
+                    "tests/copula-expectation-full-source.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "prefinal.conjectural_ni") {
                 ri_history::assert_addition("tests/copula-expectation-full-source.json", word, a);
                 continue;

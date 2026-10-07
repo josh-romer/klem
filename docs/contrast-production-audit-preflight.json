@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "scope": "Actual repository-layout execution of all new source/preservation/historical-package audits and controls with the proposed25-file source tree and canonical catalog. Original root tree untouched. Root and immutable Nix-source verification remain pending.",
+  "tools": {
+    "literary_ri_prefinal_sources.py": "3f59902394951e3020275f8c32d69d7a8a2e36aa2aea268a5c8f02dd122c4d2f",
+    "test_literary_ri_prefinal_sources.py": "005fe5b0fe6269eeac29304782bccff8da265289a4b9fdec246c117be9156e0a",
+    "literary_ri_prefinal_runtime.py": "1874bf17e348e2c6204a3b5220f2c13bdd1c79d9a6520066d4509065e6845d6c",
+    "declarative_contrast_audit.py": "1252bb576376c01bdab9fa29509edbca0c30fd9541ae38f14b7dadd315cace4f",
+    "test_declarative_contrast_audit.py": "f445fc68d46009d9e3b3ff1195581e0898ea871171175ad409e1035f516159ed",
+    "declarative_contrast_preservation.py": "304a3b90f8505e57562b4ed9ed0fe718c0ebf09a1d8f8a49b36aa7f44777550d",
+    "test_declarative_contrast_preservation.py": "f90eaf8f35d09be7c576aefde57ca5e18cb2f6f498df9fd9eddafa5946d5f571",
+    "klem_declarative_contrast_inversion.py": "12b672fe92a1bae4f99df0c4fb9788e1707aba341e8b6b306aba38ef27caed98"
+  },
+  "logs": {
+    "source-audit-preflight": {
+      "path": "/tmp/klem-contrast-production-source-audit-preflight.log",
+      "sha256": "7de64229366b434338d66c65c75246ee1563ae2581774681ea3a401d60ecb226"
+    },
+    "historical-runtime-preflight": {
+      "path": "/tmp/klem-contrast-production-historical-runtime-preflight.log",
+      "sha256": "efb121ec8cc82884b941a19b73f2475fe2d2a44a8dd284c2bdc9f72d92d6462a"
+    },
+    "source-controls-preflight": {
+      "path": "/tmp/klem-contrast-production-source-controls-preflight.log",
+      "sha256": "80acf0b4b1a03cc0c413b30efaacfc1dc287ab45b1c60fc73f7db745897fc850"
+    },
+    "preservation-preflight": {
+      "path": "/tmp/klem-contrast-production-preservation-preflight.log",
+      "sha256": "20c71344112d2bd159e85489c0eaad5620a2a900d3d5a5f494f3c85c071af47e"
+    },
+    "historical-source-controls": {
+      "path": "/tmp/klem-contrast-production-historical-source-controls.log",
+      "sha256": "b2932c2b3c1dc9b7c75521c90be8825624f0ab46b3fb93fde821919cf1834bec"
+    },
+    "historical-runtime-controls": {
+      "path": "/tmp/klem-contrast-production-historical-runtime-controls.log",
+      "sha256": "38cdff5a63d18b55a86942848705876301aafda2af7f45e258dc1fd34d5435f5"
+    },
+    "preservation-controls": {
+      "path": "/tmp/klem-contrast-production-preservation-controls.log",
+      "sha256": "e8a9baf330d47509b24cf0d0310ddd65bdf2986ea7d42b15afeded44a4ff5f06"
+    }
+  },
+  "controls": {
+    "source": 12,
+    "preservation": 16,
+    "historical_source": 9,
+    "historical_runtime": 16
+  }
+}

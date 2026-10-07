@@ -73,8 +73,10 @@ def verify_package(package, cli, browser, hada):
     assert package['state'] == 'passed' and package['exit_code'] == 0 and package['snapshot_unchanged']
     # Bind the new typed model and catalog as well as the unchanged breakdown.ts.
     # An older six-diagram capture alone cannot establish current package behavior.
+    from literary_ri_prefinal_sources import package_source_texts
+    sources = package_source_texts(package)
     for path, value in package['snapshot']['files'].items():
-        assert sha((ROOT / path).read_bytes()) == value['sha256'], path
+        assert sha(sources[path].encode()) == value['sha256'], path
     assert {'src/engine.rs', 'web/src/model.ts', 'web/src/breakdown.ts',
             'web/src/grammar-labels.json'} <= package['snapshot']['files'].keys()
     output = next(p for p in package['outputs'] if p.endswith('-klem-0.1.0'))
@@ -83,14 +85,14 @@ def verify_package(package, cli, browser, hada):
     main = read(BASE / 'literary-ri-prefinal-main-browser.json')
     assert browser['producer_sha256'] == sha((ROOT / 'web/tests/literary-ri-prefinal.mjs').read_bytes())
     assert browser['cli_sha256'] == hada['cli_sha256'] == cli['cli_sha256']
-    assert browser['catalog_sha256'] == sha((ROOT / 'web/src/grammar-labels.json').read_bytes())
+    assert browser['catalog_sha256'] == sha(sources['web/src/grammar-labels.json'].encode())
     assert api_semantics(browser['responses']) == api_semantics(main['responses'])
     for key in ['exports', 'diagrams', 'native', 'opened', 'modeJudgments', 'errors']:
         assert browser[key] == main[key], key
     assert len(browser['diagrams']) == 60 and len(browser['exports']) == 6
     assert len(browser['native']) == 182 and len(browser['opened']) == 2
     assert hada['producer_sha256'] == sha((ROOT / 'web/tests/hada-remaining-scoped.mjs').read_bytes())
-    assert hada['frontend_sha256'] == sha((ROOT / 'web/src/breakdown.ts').read_bytes())
+    assert hada['frontend_sha256'] == sha(sources['web/src/breakdown.ts'].encode())
     assert inspect_cases(hada) == 6
     before = read(BASE / 'literary-ri-prefinal-main-hada-scoped-browser.json')
     assert scoped_semantics(hada['checks']) == scoped_semantics(before['checks'])

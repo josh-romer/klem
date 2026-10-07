@@ -4789,3 +4789,50 @@ current packaged captures. Only current-call elapsed time is excluded from
 cross-build API equality. The Nix web launcher/help pass. No new timing or
 precision claim is made; broader lexical/compositional, contextual/register
 and independent Korean review remain open.
+
+## Declarative contrast connectives (COV-017ch)
+
+KRDict entries 80321–80326 provide six complete connective senses and 24
+original example groups for -다마는/-다만 and their present -ㄴ다/-는다
+variants. The engine emits canonical 다마는, 다만, 는다마는 and 는다만
+endings with `ending.declarative_contrast` provenance. Each whole ending
+keeps its earlier final-ending plus concessive-particle reading as an
+alternative. The browser labels each ordered whole ending “Although / but
+(connective)” and links its source entries; particle alternatives keep their
+own sources and labels.
+
+Bare plain forms follow adjectives; the listed 시, past and modal markers
+allow their own immediately preceding predicate. Present verbal forms take
+-ㄴ다 after vowel/ㄹ stems and -는다 after other consonants; 시 is permitted,
+and past/modal present-bundle hypotheses are excluded. Attached -ㄴ다 does
+not restore an irregular ㅂ stem: 도운다만 → 돕다 is specifically forbidden,
+while 돕는다만 → 돕다 is retained. Dictionary attachment assesses each
+Native homonym and immediate owner independently. Raw hypotheses without known lexical classes remain available. Compatible
+filtering additionally rejects source-backed Native attachment conflicts.
+Structural stem/allomorph exclusions apply to every mode.
+
+Unreviewed bare stative/copular, negative, bundled-marker and outer-particle
+compositions remain Unknown. Original 하다만 occurs after 서투르기는 across
+whitespace: an isolated word cannot establish that auxiliary relation. Native
+auxiliary adjective 62899 remains Unknown and eligible, without borrowing
+its verb homonyms or selecting a contextual lexical sense. Joined auxiliary
+cases have separate owner-specific tests.
+
+[Individual judgments](../tests/fixtures/declarative-contrast-validity.json),
+[owner and import tests](../tests/declarative_contrast.rs),
+[all original sources](declarative-contrast-source-discovery.json.gz),
+[complete 115-entry preparation](declarative-contrast-broad-owner-preparation.json.gz),
+and [coverage status](coverage-checklist.md) distinguish supported structural
+cases from unjudged extensions. Current-main and actual Nix package/CLI/browser
+validation pass, including the separately built corpus evaluation adapter.
+The [combined Nix gate](declarative-contrast-combined-nix.json) passes Rust,
+SolidJS assets, the corpus adapter and inventory review. The bounded original
+source item is closed; broader compositions and independent review remain
+open. Preservation and test success do not measure precision or establish
+contextual correctness.
+
+The optional Nix corpus evaluator is available with
+`nix run .#corpus-adapter -- kaist data/corpora/kaist/ko_kaist-ud-dev.conllu`
+(after obtaining the pinned corpus data). It builds the existing `evaluate`
+example from the same source as the main package; the main Nix check runs the
+library and CLI tests, while actual adapter replay verifies every annotated row.

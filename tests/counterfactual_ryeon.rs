@@ -1,3 +1,5 @@
+#[path = "support/declarative_contrast_history.rs"]
+mod contrast_history;
 #[path = "copula_expectation_support/parent.rs"]
 mod copula_expectation_parent;
 #[path = "deoniman_support/parent.rs"]
@@ -276,6 +278,14 @@ fn full_source_cohort_retains_candidate_order_and_attributes_new_paths() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.declarative_contrast") {
+                contrast_history::assert_addition(
+                    "tests/fixtures/counterfactual-ryeon-sources.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules
                 .iter()
                 .any(|r| matches!(r.as_str(), "ending.deoniman" | "ending.reported_deoni"))

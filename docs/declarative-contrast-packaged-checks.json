@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "main_nix_session": 13292,
+  "main_release_tests": {
+    "passed": 1033,
+    "failed": 0,
+    "ignored": 1,
+    "batches": 218
+  },
+  "compiled_source_files": 915,
+  "snapshot_unchanged": true,
+  "auxiliary_nix_session": 28244,
+  "adapter_rust_source_files": 898,
+  "cli_session": 56167,
+  "adapter_session": 25893,
+  "browser_session": 65963,
+  "runtime_audit_session": 16325,
+  "runtime_controls_session": 36495,
+  "runtime_controls": 27,
+  "launcher_help_and_api_exit_code": 0,
+  "owned_servers_stopped": {
+    "direct_package": {
+      "session": 32534,
+      "exit_code": 1,
+      "signal": "SIGINT"
+    },
+    "nix_launcher": {
+      "session": 61645,
+      "exit_code": 1,
+      "signal": "SIGINT"
+    }
+  },
+  "intentional_shutdowns": true,
+  "counts": {
+    "source_frames": 3036,
+    "individual_mode_judgments": 252,
+    "broad_frames": 1128312,
+    "corpus_words": 32096,
+    "original_gold_rows": 66570,
+    "whole_diagrams": 64,
+    "particle_diagrams": 48,
+    "exports": 6,
+    "native_entries": 115,
+    "source_panes": 6,
+    "launcher_source_api_frames": 1012
+  },
+  "screenshots_inspected": [
+    "docs/declarative-contrast-packaged-desktop.png",
+    "docs/declarative-contrast-packaged-mobile.png"
+  ],
+  "files_sha256": {
+    "docs/declarative-contrast-package-nix.json": "d5cfb8c256f3583a2fff4352cebcbe9502ca8e43d988b926c1d783d87a580267",
+    "docs/declarative-contrast-package-nix.log.gz": "d1e8008703530b341b5b3a0d5061b4586510afe6f67ba413f55c15f69501e4f2",
+    "docs/declarative-contrast-auxiliary-nix.json": "58ecd130b7597ce71e5292774ca637774b9100701efa24644bedc4e1e63e7a18",
+    "docs/declarative-contrast-auxiliary-nix.log.gz": "49a5c0bc7966d6374ea3673b7ba3f94c5c19df8e67ee44266376964c958fab50",
+    "docs/declarative-contrast-packaged-cli-replay.json": "5e21192677c9bcedc2140da074263da9279c1a6ea0fb1bfcb39265645c053e24",
+    "docs/declarative-contrast-packaged-cli-replay.log.gz": "38d868da3573baa34ca3cb02a21892d9faa6aa5470f117e47b823f02c703dc61",
+    "docs/declarative-contrast-packaged-adapter-replay.json.gz": "ab9a3b53af7fb1a5d597f42d91baa786fa549e727af2a7f33fc6d71cf521b7cd",
+    "docs/declarative-contrast-packaged-adapter-replay.log.gz": "d130205e620acb637a91ee54115f1bf20880e5e4769932a56960ec440a637866",
+    "docs/declarative-contrast-packaged-browser.json": "b2ed03576ef2c92e147742011d84443fa7383186bdc59853e24a0e7074ee66d6",
+    "docs/declarative-contrast-packaged-browser.log.gz": "efa51b388b1f6f1eca220d05bd58d0acdd545deb664bb624bed77f751efcfd79",
+    "docs/declarative-contrast-packaged-desktop.png": "beb83a224f4a5476960c7aaabb21c7c1d6319ed26446352581b082287e841f45",
+    "docs/declarative-contrast-packaged-mobile.png": "5714e06e1a3dd1c39717664e80005f218925a41fc0cdfd8ee5c3ce5bebe8e26e",
+    "docs/declarative-contrast-web-launcher.json": "077300a5d75b35ab9871ab700c8d87bc342268f9b36ff162a8921f4e202457e4",
+    "docs/declarative-contrast-web-launcher.log.gz": "b098d1823c5ca4c386437f24bda984482f806b9b3542ba8009a1e4be5927a3a9",
+    "docs/declarative-contrast-packaged-runtime-audit.log.gz": "0ed5256b33b873ed4fc244984d7c9baa40f7c378e3ef19d56c95713d5779170f",
+    "docs/declarative-contrast-packaged-runtime-controls.log.gz": "3a0643e4b0bbf379c808a9516803199bb07cbc228c7488e3a9a3b4499e7baa1b"
+  },
+  "scope": "Actual independent Nix main package and assets, separately Nix-built corpus example sharing all898 main Rust inputs, and actual Nix launcher. Every CLI/source/corpus/ordered browser record matches main/prototype. Only finite nonnegative current-call elapsed_ms excluded. Novel timing/cache checks and final combined inventory gate remain pending. No candidate precision or contextual correctness claim."
+}

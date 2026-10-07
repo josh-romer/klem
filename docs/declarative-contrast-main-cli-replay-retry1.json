@@ -1,0 +1,2286 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "cli": "/tmp/klem-declarative-contrast-main-cli",
+  "cli_sha256": "335286d9fb922ecce003fcb5c2484fe1b21f01164bb8e3be7d31c7823f4a1686",
+  "runs": [
+    {
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "-",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "3710dbefbf78ee234eb154c41c76d4824ce60ec0486ebf7567697fd913a35e11",
+      "records": 506,
+      "exact_prototype_output": true
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "-",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "fc0b032387bb445f08efd62eb91a4b2c8ba1a02380086cbae1a4d2784533bd36",
+      "records": 506,
+      "exact_prototype_output": true
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "-",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "c88bd187a520eb0642e8978b228294291012a521df69adb68530a510cd08e8ee",
+      "records": 506,
+      "exact_prototype_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "-",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "0a48dc815de0bee192da358be2f7c97d246f8963551babd4681d982a9cb62edd",
+      "records": 506,
+      "exact_prototype_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "-",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "8ac36828315eb4a950b507e86d8b0566269d4ad22243096eec4897bb188bb8f1",
+      "records": 506,
+      "exact_prototype_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "-",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "add917ba82d14fcb31f4d221301a231da76f7ad7828ef4bf79293cf85f80acd8",
+      "records": 506,
+      "exact_prototype_output": true
+    }
+  ],
+  "judgments": [
+    {
+      "case": "declarative-contrast-original-80321-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "raw",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "headword",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80321-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80322-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80323-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80324-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80325-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-1",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-2",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-3",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-original-80326-4",
+      "judgment": "whole-source-connective",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다마는",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다마는",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-가는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-살는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹었는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-먹겠는다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-도운다만",
+      "judgment": "present-stem-and-marker-boundary",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "forbidden",
+      "present": false
+    },
+    {
+      "case": "declarative-contrast-boundary-간다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-산다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-먹는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    },
+    {
+      "case": "declarative-contrast-boundary-돕는다만",
+      "judgment": "present-allomorph",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "verdict": "required",
+      "present": true
+    }
+  ],
+  "broad": [
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-raw",
+      "records": 77584,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "7fbc4c6454b4338eb27185bb3cedcc101ddae3ca52d2325c6f460acb1877eb66",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-headword",
+      "records": 77584,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "cc35513e324fa558feb349441cd6af167ce602b393c8be6f152b6ab6c4474de8",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-compatible",
+      "records": 77584,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "6e587abe90b0f8c89b8d15fb39be529ceb4bbaa78822b775d1b90c4ec80ef01e",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "records": 179112,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "8c574cfa50ca283af1f8484e19ddc844bc645c8e91b70a2ee3a0c895181523d3",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword",
+      "records": 179112,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "9c4923ec47f8e165bf9609229130cf1409d01541632185e421e982925286cc8a",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible",
+      "records": 179112,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "66fddf61bb0a18ea5649cf8b2b7b0f8a15d54a21ba08b5a059a17bc55d9557d4",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword-spacing",
+      "records": 179112,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-only",
+        "--suggest-spacing"
+      ],
+      "exit_code": 0,
+      "sha256": "815898246885c8a3e441ec5c0ff142cc0649643607744d4faf14ab3a1287d4d0",
+      "exact_prototype_output": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible-spacing",
+      "records": 179112,
+      "command": [
+        "/tmp/klem-declarative-contrast-main-cli",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db",
+        "--dict-compatible",
+        "--suggest-spacing"
+      ],
+      "exit_code": 0,
+      "sha256": "f4377afb1f997d20e4e4450b20f61906628ff81cb18b4c67ed61858557332dc7",
+      "exact_prototype_output": true
+    }
+  ],
+  "corpora": {
+    "unique_surfaces": 32096,
+    "original_gold_rows": 66570,
+    "exact_prototype_word_analyses": true,
+    "word_analyses_sha256": "18fbeea6105a1195d99e5da0d06562625a37ad7341747002d95d0c440e35f5d3"
+  },
+  "frozen_inputs": {
+    "/tmp/klem-declarative-contrast-main-cli": "335286d9fb922ecce003fcb5c2484fe1b21f01164bb8e3be7d31c7823f4a1686",
+    "data/dictionaries/krdict/krdict.db": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+    "/home/josh/projects/klem/docs/declarative-contrast-source-discovery.json.gz": "69ca60e49269c8ac585946bf3972a91bf0319cbbfc12490239967324bbbfe5b2",
+    "/home/josh/projects/klem/docs/declarative-contrast-prototype-source-replay.json.gz": "303a5ac11ece8192f84267adbdbe22e3ac11e1e3530f3bd5b32bf428932d501a",
+    "/home/josh/projects/klem/docs/declarative-contrast-prototype-broad.json.gz": "5d1c79ae41bf8ba5ec92b7c29d6505592ec3d213b0e42195f1f7b7b4511302b3",
+    "/home/josh/projects/klem/docs/declarative-contrast-prototype-corpora.json.gz": "b3cc20d036b9ced02628d48c43476e334aaacb165d62616f334e5bce149dbd45",
+    "/home/josh/projects/klem/tests/fixtures/declarative-contrast-validity.json": "0e56f9991aed3185d992676c61ba67299a516c4b3e2bbfe1022fe22b558849de",
+    "/home/josh/projects/klem/tools/declarative_contrast_replay.py": "3d1e021bcd432d72ca6b4e142dfc40aa4573f83d72f1d4dcaa5c1be17f4473ee",
+    "/tmp/klem-written-vowel-candidate-input.txt": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+    "/home/josh/projects/klem/data/books/mujeong.txt": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc"
+  },
+  "inputs_unchanged": true,
+  "finished_at": "2026-10-07T21:04:03.191271+00:00",
+  "producer": {
+    "text": "\"\"\"Replay actual main/release CLI outputs against the frozen complete prototype.\n\nFull stream hashes, all held-out WordAnalysis objects and individual judgments\nmust match. This is build parity, not a candidate precision estimate.\n\"\"\"\nimport argparse\nimport datetime\nimport hashlib\nimport json\nimport subprocess\nimport unicodedata\nfrom pathlib import Path\n\nfrom declarative_contrast_audit import ROOT, matches, read, sha\nfrom doeda_native_corpora import words_from_cli\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--cli', type=Path, required=True)\n    parser.add_argument('--dictionary', type=Path, required=True)\n    parser.add_argument('--output', type=Path, required=True)\n    args = parser.parse_args()\n    assert not args.output.exists()\n    source_path = ROOT/'docs/declarative-contrast-source-discovery.json.gz'\n    expected_path = ROOT/'docs/declarative-contrast-prototype-source-replay.json.gz'\n    broad_path = ROOT/'docs/declarative-contrast-prototype-broad.json.gz'\n    corpus_path = ROOT/'docs/declarative-contrast-prototype-corpora.json.gz'\n    suite_path = ROOT/'tests/fixtures/declarative-contrast-validity.json'\n    producer_path = Path(__file__)\n    paths = [args.cli, args.dictionary, source_path, expected_path, broad_path, corpus_path, suite_path, producer_path]\n    frozen = {str(p):sha(p.read_bytes()) for p in paths}\n    source, expected, broad, corpus, suite = map(read, [source_path, expected_path, broad_path, corpus_path, suite_path])\n    runs, judgments, broad_runs = [], [], []\n    for run in expected['runs']:\n        text = unicodedata.normalize(run['encoding'], source['input'])\n        flags = {'raw':[], 'headword':['--dict-only'], 'compatible':['--dict-compatible']}[run['mode']]\n        command = [str(args.cli),'text','-','--dictionary',str(args.dictionary),*flags]\n        result = subprocess.run(command, input=text.encode(), capture_output=True, check=True)\n        assert sha(result.stdout) == run['after_sha256'] and result.stdout.decode() == run['jsonl']\n        runs.append({'encoding':run['encoding'], 'mode':run['mode'], 'command':command, 'exit_code':0,\n                     'sha256':sha(result.stdout), 'records':len(result.stdout.splitlines()), 'exact_prototype_output':True})\n        words = ' '.join(dict.fromkeys(c['surface'] for c in suite['cases']))\n        result = subprocess.run(command,input=unicodedata.normalize(run['encoding'],words).encode(),capture_output=True,check=True)\n        records = {r['analysis']['normalized']:r for r in map(json.loads,result.stdout.splitlines()) if r.get('analysis')}\n        for case in suite['cases']:\n            for judgment in case['judgments']:\n                present = any(matches(p,judgment) for p in records.get(case['surface'],{}).get('analysis',{}).get('analyses',[]))\n                assert present == (judgment['verdict']=='required'), (case['id'],run['encoding'],run['mode'])\n                judgments.append({'case':case['id'], 'judgment':judgment['id'], 'encoding':run['encoding'],\n                                  'mode':run['mode'], 'verdict':judgment['verdict'], 'present':present})\n    for previous in broad['comparisons']:\n        path = Path(previous['source'])\n        assert sha(path.read_bytes()) == previous['source_sha256']\n        frozen[str(path)] = sha(path.read_bytes())\n        mode = previous['mode']\n        flags = ['--dict-compatible'] if 'compatible' in mode else ['--dict-only'] if 'headword' in mode else []\n        command = [str(args.cli),'text',str(path),'--dictionary',str(args.dictionary),*flags,*(['--suggest-spacing'] if 'spacing' in mode else [])]\n        digest, records = hashlib.sha256(), 0\n        job = subprocess.Popen(command,stdout=subprocess.PIPE)\n        try:\n            for line in job.stdout:\n                digest.update(line)\n                records += 1\n            assert job.wait() == 0\n        finally:\n            if job.poll() is None:\n                job.terminate()\n                job.wait()\n        assert digest.hexdigest() == previous['after_jsonl_sha256'] and records == previous['records']\n        broad_runs.append({k:previous[k] for k in ['source','source_sha256','mode','records']} |\n                          {'command':command,'exit_code':0,'sha256':digest.hexdigest(),'exact_prototype_output':True})\n        print(mode,records,'actual frames match',flush=True)\n    words = words_from_cli(args.cli, sorted(corpus['after_words']))\n    assert words == corpus['after_words'] and len(words) == 32096\n    assert len(runs)==6 and len(judgments)==252 and sum(r['records'] for r in broad_runs)==1128312\n    assert all(sha(Path(path).read_bytes())==digest for path,digest in frozen.items())\n    report = {'schema_version':1,'state':'passed','exit_code':0,'cli':str(args.cli),'cli_sha256':frozen[str(args.cli)],\n              'runs':runs,'judgments':judgments,'broad':broad_runs,\n              'corpora':{'unique_surfaces':32096,'original_gold_rows':66570,'exact_prototype_word_analyses':True,\n                         'word_analyses_sha256':sha(json.dumps(words,ensure_ascii=False,sort_keys=True).encode())},\n              'frozen_inputs':frozen,'inputs_unchanged':True,'finished_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),\n              'producer':{'text':producer_path.read_text(),'sha256':frozen[str(producer_path)]},\n              'scope':'Actual configured CLI parity with all frozen prototype source/mode judgments, full broad streams and every original held-out word output. Gold data and candidate precision are separately audited.',\n              'contextual_verdict':'unjudged','independent_review':'pending'}\n    args.output.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\n    print('Passed actual full CLI parity:',3036,'source frames;',252,'judgments;',1128312,'broad frames;',32096,'corpus words.',flush=True)\n\n\nif __name__ == '__main__':\n    main()\n",
+    "sha256": "3d1e021bcd432d72ca6b4e142dfc40aa4573f83d72f1d4dcaa5c1be17f4473ee"
+  },
+  "scope": "Actual configured CLI parity with all frozen prototype source/mode judgments, full broad streams and every original held-out word output. Gold data and candidate precision are separately audited.",
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

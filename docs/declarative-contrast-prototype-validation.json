@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "state": "isolated-prototype-validated-main-integration-pending",
+  "proposal_sha256": "d331bfbd9116efde3aa1c7204f010439317b33a5a3537a154fcfce8aed0db271",
+  "all_25_proposal_files_unchanged": true,
+  "full_rust": {
+    "passed": 1033,
+    "failed": 0,
+    "ignored": 1,
+    "batches": 218
+  },
+  "pinned_downloaded_corpus_passed": true,
+  "clippy_exit_code": 0,
+  "source_controls": 12,
+  "preservation_controls": 16,
+  "historical_source_controls": 9,
+  "historical_runtime_guards": 16,
+  "artifacts": {
+    "/tmp/klem-declarative-contrast-prototype-full-rust-retry2.json": "770dc86c98e3ae267fc8ae86b19571cd83ac454d2f0ba73b5040d82c0e443caa",
+    "/tmp/klem-declarative-contrast-prototype-full-rust-retry2.log": "35bfef39ba114e20ce001bbb3604c8554c2cbc3e536a43b3bf3f07b76e5cd67b",
+    "/tmp/klem-declarative-contrast-prototype-pinned-corpus.json": "5d8ced92fdfd2697219e27b4deaec33375d35eae0a59e754e4574b31c3c3f51c",
+    "/tmp/klem-declarative-contrast-prototype-pinned-corpus.log": "e24b56a1e85959409042bb7d19ea193a2079199236bffb3df013d27dff2e43c3",
+    "/tmp/klem-declarative-contrast-prototype-final-clippy.log": "e98d838752d92ccc58244d7edebdaf146cacddec7d99ac9f551af819f3e330e2",
+    "/tmp/klem-declarative-contrast-prototype-source-controls-retry1.log": "7797f8e189d516fe6925cfa1717b90b9c75fa66853d10a5f178e784bea8b7abb",
+    "/tmp/klem-declarative-contrast-prototype-preservation-controls.log": "917caced4dfb6353e6b1d25b54d8c19d0bcdf3f6a7c3f68ff8cf15892599c20e",
+    "/tmp/klem-declarative-contrast-prototype-helper-pin-controls.log": "dab844e34287ea764638e016b0fd0fa7e46d765b817c3fa3dd57f90f2c29c960",
+    "/tmp/klem-literary-ri-prefinal-historical-sources-controls.log": "67c9b2acf8eb9bf556179ac2f76e50b3ae69830a75cfd12dff26ed6c071a28ee",
+    "/tmp/klem-literary-ri-prefinal-historical-runtime-preflight.log": "a7b74078006484a9f41e7df78eba342bb2e2d5cb310a2c8a58c9d99b17de3571"
+  },
+  "scope": "Current isolated code and appended candidate ledger are validated. Main runtime, release/Nix package and production browser are not asserted. Main integration must preserve all901 historical literary-package source inputs and pass fresh independent checks."
+}

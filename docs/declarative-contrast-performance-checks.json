@@ -1,0 +1,25 @@
+{
+  "state": "passed",
+  "exit_code": 0,
+  "capture_session": 64585,
+  "audit_exit_code": 0,
+  "controls_exit_code": 0,
+  "controls": 20,
+  "paired_samples": 80,
+  "workloads": 8,
+  "cpu_affinity": [
+    31
+  ],
+  "cache_streams": 6,
+  "frames_per_cache_stream": 179112,
+  "files_sha256": {
+    "docs/declarative-contrast-performance.json": "483f59dff3642c0f0193e9de4db9478978238eccf706b75d7c94fd453ee9a548",
+    "docs/declarative-contrast-performance.log.gz": "697dd2977a108ce3afd4c4474897cd7341d86b5e019718bc0458c7876ec26a5b",
+    "docs/declarative-contrast-performance-audit.log.gz": "4e6f3ad2eb46035ad80331a904076d92da8c67be922db741eea20ac2762fe83a",
+    "docs/declarative-contrast-performance-controls.log.gz": "ec92d89f3899f67dbf764f5d4b69d485693ede4d7cfb136405bb3e00141144ee",
+    "tools/capture_declarative_contrast_performance.py": "b3100740b8bf8ee287666ad42d9aa6b035700cd69556691429d31cbc1f4d2e6c",
+    "tools/declarative_contrast_performance.py": "351521b403ffb448a0bd1a97f824a098a9627263447c995b788d20a2ec10b72e",
+    "tools/test_declarative_contrast_performance.py": "eeda7379036b87fd50bc67cee7242c8dd48018de280f47b23844dbf3351258f5"
+  },
+  "scope": "Actual before/after Nix release binaries, five alternating fresh-process pairs per full-novel workload on one allowed CPU, with every input and complete producer frozen. All eighty timings, load/frequency contexts and GNU time/RSS values retained; six actual full novel output streams bind to the prototype and packaged replay. No statistical equivalence, causal performance or contextual precision claim."
+}

@@ -61,6 +61,8 @@ pub enum AttachmentRule {
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
+    /// KRDict 80321/80322: plain bare -다마는/-다만 follows adjectives.
+    BareAdjectivalContrast,
     BareVerbalQuestion,
     /// KRDict 73878/73888: bare adjectival/copular -ㄴ감/-은감.
     BareRefutingAdjective,
@@ -2264,6 +2266,59 @@ impl Annotation {
                         // an earlier owner's tense or dictionary homonym.
                         if unlisted_prefinal || (form == "게끔" && lemma.kind == LemmaKind::Copula) {
                             status = Compatibility::Unknown;
+                        }
+                    }
+                    if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        && let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(),
+                            "다마는" | "다만" | "는다마는" | "는다만")
+                    {
+                        // Assess each entry of the immediate owner separately.
+                        // A verbal homonym cannot license an adjectival entry,
+                        // and an earlier owner's prefinal cannot license this ending.
+                        let form = analysis.morphemes[i].form.as_str();
+                        let present = matches!(form, "는다마는" | "는다만");
+                        let owner = if derived_adjective {
+                            Some(PredicateClass::Adjective)
+                        } else if unclassified_derivation {
+                            None
+                        } else {
+                            class.or(negative_lexical).or({
+                                if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {
+                                    match pos {
+                                        "동사" | "보조 동사" => Some(PredicateClass::Verb),
+                                        "형용사" | "보조 형용사" => Some(PredicateClass::Adjective),
+                                        _ => None,
+                                    }
+                                } else { None }
+                            })
+                        };
+                        let negative = matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다");
+                        let conflict = if present
+                            && matches!(owner, Some(PredicateClass::Adjective | PredicateClass::Copula))
+                            && !negative
+                        { Some(AttachmentRule::PresentDeclarativeVerb) }
+                        else if !present && bare && matches!(owner, Some(PredicateClass::Verb))
+                            && !matches!(lemma.text.as_str(), "있다" | "계시다") && !negative
+                        { Some(AttachmentRule::BareAdjectivalContrast) }
+                        else { None };
+                        if let Some(rule) = conflict {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        } else if status == Compatibility::Compatible {
+                            // The six sources explicitly list 시, past and modal
+                            // for plain -다; present -ㄴ다/-는다 permits 시 only.
+                            // Copular, negative, bundled-marker and postfinal
+                            // extensions still need their own source review.
+                            let unlisted = morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if (analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && if present { analysis.morphemes[*j].form != "시" }
+                                       else { !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠") })
+                                    || analysis.morphemes[*j].kind == MorphemeKind::Particle));
+                            if unlisted || negative || owner.is_none()
+                                || (!present && matches!(owner, Some(PredicateClass::Copula)))
+                                || (!present && bare && matches!(lemma.text.as_str(), "있다" | "계시다"))
+                            { status = Compatibility::Unknown; }
                         }
                     }
                     if let Some(i) = ending

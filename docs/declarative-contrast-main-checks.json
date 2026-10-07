@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "state": "main-validation-passed-package-pending",
+  "focused_rust": {
+    "passed": 55,
+    "failed": 0,
+    "batches": 9
+  },
+  "formatting_exit_code": 0,
+  "clippy_exit_code": 0,
+  "frontend_exit_code": 0,
+  "source_integrity_exit_code": 0,
+  "historical_runtime_exit_code": 0,
+  "main_browser": {
+    "path": "docs/declarative-contrast-main-browser.json",
+    "sha256": "66d8a4928d17ebbe2011392d34a381b060daf9112e037b06697ec19931ff163f",
+    "whole_diagrams": 64,
+    "particle_diagrams": 48,
+    "exports": 6,
+    "native_entries": 115,
+    "source_panes": 6,
+    "mode_judgments": 252,
+    "source_api_frames": 1012,
+    "desktop_and_mobile_inspected": true
+  },
+  "first_cli_replay": {
+    "path": "docs/declarative-contrast-main-cli-replay-first.json",
+    "sha256": "f2d5b0c34de2c6b31b7884ccdf21172d342c9bb059da134a40b09f33779ac4b4",
+    "state": "passed-initial-capture",
+    "remaining_capture_work": "Retry adds frozen producer identity and independently checked corpus WordAnalysis digest. First capture remains unchanged."
+  },
+  "logs": {
+    "main-focused-rust": {
+      "path": "docs/declarative-contrast-main-focused-rust.log.gz",
+      "sha256": "9b645f08f43e07543507ef5d5a497ca4e5da37f1847afbeff044412fe9d714db"
+    },
+    "main-clippy": {
+      "path": "docs/declarative-contrast-main-clippy.log.gz",
+      "sha256": "45d2f8268f7c5d1ff7932e798ed93dc946e20bb771acdd01ef73d0d067b3cd0d"
+    },
+    "main-frontend": {
+      "path": "docs/declarative-contrast-main-frontend.log.gz",
+      "sha256": "8ab805373d8dad769facf2fb303dc63406d5213e7098f7c30ed0f5c5f07f4fbd"
+    },
+    "main-source-audit": {
+      "path": "docs/declarative-contrast-main-source-audit.log.gz",
+      "sha256": "14daff1e962830c4af0f9254ca3da527cf72ae9508abc29b1d5235c21e70f6be"
+    },
+    "main-historical-runtime": {
+      "path": "docs/declarative-contrast-main-historical-runtime.log.gz",
+      "sha256": "4bf58c6ac2ba68ff67371bad864ca5226cad900f7fa1b5bdc7e9f872530724da"
+    }
+  },
+  "scope": "Actual integrated main checks pass, including full Rust, downloaded corpus, actual complete source/broad/word/adapter replay and browser. Independent actual new Nix packages/browser and release timing remain pending; no candidate precision or contextual certification.",
+  "full_rust": {
+    "path": "docs/declarative-contrast-main-full-rust.json",
+    "sha256": "d9f896e5e5c396aebee94f74078dcd7202864316fef0eda429f8de7755f22f1d",
+    "passed": 1033,
+    "ignored": 1,
+    "batches": 218,
+    "compile_inputs": 895,
+    "inputs_unchanged": true
+  },
+  "cli_replay": {
+    "path": "docs/declarative-contrast-main-cli-replay-retry1.json",
+    "sha256": "eb7a47147269bc6693755a2c3d71c746209a39a1dcf7f46b427834891fd75c2f",
+    "source_frames": 3036,
+    "judgments": 252,
+    "broad_frames": 1128312,
+    "corpus_words": 32096,
+    "producer_and_corpus_digest_bound": true
+  },
+  "adapter_replay": {
+    "path": "docs/declarative-contrast-main-adapter-replay.json.gz",
+    "sha256": "364f851de880ae751f643502af86d73d4da14d434b4bdf979d686b6e20328f8b",
+    "rows": 66570,
+    "partitions": 4,
+    "exact_prototype_output": true
+  },
+  "pinned_downloaded_corpus_passed": true
+}

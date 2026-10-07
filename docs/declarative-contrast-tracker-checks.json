@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "finished_at": "2026-10-07T23:02:50.142183+00:00",
+  "combined_gate_sha256": "f6d32f2df8e39ee4d5fb6106e7d6c808ba51c3c0507f691502b77793cf107249",
+  "combined_gate_outputs": [
+    "/nix/store/vjzd75bd9niiyisc3x6krcqyv2z2wx5b-klem-0.1.0",
+    "/nix/store/899hn914npbp8qbd940f6rsp8sxlqsmd-klem-web-assets-0.1.0",
+    "/nix/store/3d5129nbsajhnbwp83skvgf65y29cjfi-klem-corpus-adapter-0.1.0",
+    "/nix/store/qdaa2x10m58w1kwy241kp6npdlz4929c-klem-inventory-review"
+  ],
+  "documentation_snapshot": {
+    "docs/coverage-checklist.md": {
+      "sha256": "11fc57893a54f479dc6e11545fb98d7381b67d018cac587b3ee38dda6beca231",
+      "bytes": 526760
+    },
+    "docs/rules.md": {
+      "sha256": "1033e47d15b8db47dae8be635d045629c0a16dbc06ed70d77562dace00b9e912",
+      "bytes": 333437
+    },
+    "docs/inventory-review-queue.json": {
+      "sha256": "ed3b1a620a967cdc28a25bfab44b7266eb259bda5f5fee3d836abada4b110d41",
+      "bytes": 3529251
+    },
+    "docs/inventory-reviews.json": {
+      "sha256": "5688b20d9f50f6c95b453bc4b44b8a3e8e5a16194d8dc4820d1a30988279dff3",
+      "bytes": 1356505
+    }
+  },
+  "documentation_inputs_unchanged": true,
+  "changed_prior_tracked_files": [
+    "docs/coverage-checklist.md",
+    "docs/inventory-review-queue.json",
+    "docs/inventory-reviews.json",
+    "docs/rules.md"
+  ],
+  "all_other_2591_prior_tracked_files_unchanged": true,
+  "tested_compile_frontend_files_unchanged": 915,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "tools/review_inventory.py",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"entries\": 715, \"by_pos\": {\"보조 동사\": 40, \"보조 형용사\": 14, \"어미\": 504, \"조사\": 157}, \"by_review\": {\"scoped\": 465, \"unreviewed\": 250}, \"with_catalog_links\": 469, \"with_judgment_citations\": 494}\n",
+      "stderr": "",
+      "log": "docs/declarative-contrast-tracker-verify.log.gz"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_review_inventory.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.019s\n\nOK\n",
+      "log": "docs/declarative-contrast-tracker-controls.log.gz"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "log": null
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "log": null
+    }
+  ],
+  "inventory_counts": {
+    "entries": 715,
+    "by_pos": {
+      "보조 동사": 40,
+      "보조 형용사": 14,
+      "어미": 504,
+      "조사": 157
+    },
+    "by_review": {
+      "scoped": 465,
+      "unreviewed": 250
+    },
+    "with_catalog_links": 469,
+    "with_judgment_citations": 494
+  },
+  "closed_checklist": "COV-017ch",
+  "source_reviews_closed_with_bounded_scope": [
+    "krdict:80321",
+    "krdict:80322",
+    "krdict:80323",
+    "krdict:80324",
+    "krdict:80325",
+    "krdict:80326"
+  ],
+  "producer": {
+    "text": "\"\"\"Validate documentation-only bounded closure against the completed Nix gate.\"\"\"\nimport datetime\nimport gzip\nimport hashlib\nimport json\nimport subprocess\nfrom pathlib import Path\n\nROOT=Path('/home/josh/projects/klem')\nOUTPUT=ROOT/'docs/declarative-contrast-tracker-checks.json'\nassert not OUTPUT.exists()\nsha=lambda raw:hashlib.sha256(raw).hexdigest()\ncombined_path=ROOT/'docs/declarative-contrast-combined-nix.json'\ncombined=json.loads(combined_path.read_text())\nassert combined['state']=='passed' and combined['exit_code']==0\nassert all(combined[k] is True for k in ['snapshot_unchanged','head_unchanged','staged_diff_unchanged'])\nassert set(combined['expected_runtime_outputs'])<=set(combined['outputs']) and len(combined['outputs'])==4\ncombined_log=ROOT/'docs/declarative-contrast-combined-nix.log.gz'\nassert sha(gzip.decompress(combined_log.read_bytes()))==combined['log_sha256']\nchanged={name for name,row in combined['snapshot']['files'].items() if sha((ROOT/name).read_bytes())!=row['sha256']}\nexpected={'docs/coverage-checklist.md','docs/rules.md','docs/inventory-reviews.json','docs/inventory-review-queue.json'}\nassert changed==expected,changed\npackage=json.loads((ROOT/'docs/declarative-contrast-package-nix.json').read_text())\ncompile_files=package['snapshot']['files']\nassert len(compile_files)==915 and all(sha((ROOT/name).read_bytes())==row['sha256'] for name,row in compile_files.items())\ntracked_snapshot={name:{'sha256':sha((ROOT/name).read_bytes()),'bytes':(ROOT/name).stat().st_size} for name in expected}\ncommands=[['python3','tools/review_inventory.py','--verify'],['python3','-m','unittest','discover','-s','tools','-p','test_review_inventory.py'],['git','diff','--check'],['git','diff','--cached','--check']]\nresults=[]\nfor index,command in enumerate(commands):\n    result=subprocess.run(command,cwd=ROOT,capture_output=True)\n    assert result.returncode==0,(command,result.stderr.decode())\n    log_name='docs/declarative-contrast-tracker-'+('verify' if index==0 else 'controls')+'.log.gz' if index<2 else None\n    if log_name:\n        dest=ROOT/log_name;assert not dest.exists();dest.write_bytes(gzip.compress(result.stdout+result.stderr,mtime=0))\n    results.append({'command':command,'exit_code':result.returncode,'stdout':result.stdout.decode(),'stderr':result.stderr.decode(),'log':log_name})\nassert all(sha((ROOT/name).read_bytes())==row['sha256'] for name,row in tracked_snapshot.items())\nqueue=json.loads((ROOT/'docs/inventory-review-queue.json').read_text())\nassert queue['counts']['by_review']=={'scoped':465,'unreviewed':250}\nchecklist=(ROOT/'docs/coverage-checklist.md').read_text()\nassert '- [x] **COV-017ch' in checklist and '- [ ] **COV-017ci' in checklist\nreviews=json.loads((ROOT/'docs/inventory-reviews.json').read_text())['entries']\nselected=[e for e in reviews if e['id'] in {f'krdict:{i}' for i in range(80321,80327)}]\nassert len(selected)==6 and all(e['status']=='scoped' and 'Final combined Nix inventory gate' not in e['remaining'] for e in selected)\nproducer=Path(__file__)\nreport={'schema_version':1,'state':'passed','exit_code':0,'finished_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),\n        'combined_gate_sha256':sha(combined_path.read_bytes()),'combined_gate_outputs':combined['outputs'],\n        'documentation_snapshot':tracked_snapshot,'documentation_inputs_unchanged':True,\n        'changed_prior_tracked_files':sorted(changed),'all_other_2591_prior_tracked_files_unchanged':True,\n        'tested_compile_frontend_files_unchanged':915,'commands':results,'inventory_counts':queue['counts'],\n        'closed_checklist':'COV-017ch','source_reviews_closed_with_bounded_scope':[e['id'] for e in selected],\n        'producer':{'text':producer.read_text(),'sha256':sha(producer.read_bytes())},\n        'scope':'Terminal all-four-check Nix gate proves exact implementation/package/source audits. Subsequent changes are four documentation/review/queue files only; all915 compile/frontend files remain exact. Final regenerated queue verifier and nine integrity controls pass on the closed tracker, following its explicit documentation-only verification rule. No repeated application rebuild is required for this metadata-only closure. COV017ci and the full coverage goal,250 unreviewed inventory entries, broader composition, candidate precision, contextual/register and independent Korean review remain open.'}\nOUTPUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\nprint('Closed finite declarative contrast scope; nine tracker controls;915 tested compile/frontend files unchanged.',flush=True)\n",
+    "sha256": "e6363a1a699fb98cdef1d081701abb85ce0820a4d2570ea5bfc5521dc3db7483"
+  },
+  "scope": "Terminal all-four-check Nix gate proves exact implementation/package/source audits. Subsequent changes are four documentation/review/queue files only; all915 compile/frontend files remain exact. Final regenerated queue verifier and nine integrity controls pass on the closed tracker, following its explicit documentation-only verification rule. No repeated application rebuild is required for this metadata-only closure. COV017ci and the full coverage goal,250 unreviewed inventory entries, broader composition, candidate precision, contextual/register and independent Korean review remain open."
+}

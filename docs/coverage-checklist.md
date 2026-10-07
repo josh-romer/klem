@@ -2595,32 +2595,142 @@ review remains open under the completion review below.
   review remain open. Subsequent tracker and queue edits are documentation.
 
 
-- [ ] **COV-017ch — Original declarative contrast -다마는/-다만 families.**
-  **Isolated prototype; main integration pending:** six unreviewed entries 80321–80326 preserve all six
-  senses and twenty-four original groups, including every dialogue reply.
-  [Current-main source captures](declarative-contrast-source-discovery.json.gz)
-  retain six complete NFC/NFD raw/headword/compatible streams of 506 records
-  each. [Individual occurrence observations](declarative-contrast-target-observations.json)
-  locate all twenty-four original targets. Existing final-ending + 만/마는
-  particle paths already recover dictionary-compatible heads for each target;
-  these captures do not establish intended lexical senses, bundled connective
-  licenses or the dictionary ownership of displayed components. [Complete Native/English preparation](declarative-contrast-owner-preparation.json.gz)
-  verifies 63 entries and all same-head homonyms; [expanded boundary preparation](declarative-contrast-boundary-owner-preparation.json.gz)
-  verifies 98 complete Native owners against the original LMF. The isolated
-  [focused prototype](declarative-contrast-prototype-boundaries.json.gz) passes
-  seven Rust tests, including the production importer, all 24 source targets,
-  42 individual structural cases (32 required/10 path-specific forbidden),
-  Native verb/adjective homonym assessments and exact preservation of all
-  earlier paths, order and entry assessments for 62 authored boundary words
-  in NFC/NFD raw/headword/compatible modes (372 actual prior CLI calls).
-  Present -ㄴ다 does not restore ㅂ before this connective; ordinary
-  -는다 attaches to consonant-final stems, including 돕는다만.
-  Whole connectives remain separate from older particle alternatives.
-  Immediate-owner auxiliary/negative/copular review, full main and historical
-  regression integration, broader/source-stream and corpus preservation,
-  teaching-source links and actual packaged/Nix verification remain pending.
-  No new production rule or inventory disposition has been introduced;
-  contextual/register, candidate precision and independent review remain open.
+- [x] **COV-017ch — Original declarative contrast -다마는/-다만 families.**
+  **Complete for the bounded original-source scope:** six source
+  entries 80321–80326 preserve all six senses and twenty-four complete original
+  groups, including every dialogue reply. Whole -다마는/-다만 and present
+  -ㄴ다/-는다 variants have separate ordered connective readings and source
+  labels; all earlier final-ending + 만/마는 particle readings remain.
+  Plain bare forms follow source-owned adjectives; 시, past and modal forms
+  keep their immediate predicate owner. Present variants distinguish vowel/ㄹ
+  and other consonant stems, permit honorific 시, and reject the specifically
+  tested wrong stem/past/modal and ㅂ-recovery paths. Native verb/adjective
+  homonyms receive separate assessments. Negative, bare stative/copular,
+  bundled-marker and outer-particle extensions retain Unknown where their
+  individual licenses are unreviewed. The isolated original 하다만 after
+  서투르기는 cannot determine an auxiliary role across whitespace: Native
+  auxiliary adjective 62899 remains Unknown and filter eligible; its verbal
+  homonyms do not license the bare whole connective. No contextual sense or
+  register is selected.
+
+  The [current implementation](../tests/declarative_contrast.rs) includes
+  eleven source, Native-import, owner, boundary and Unicode tests. The shared
+  [candidate ledger](../tests/fixtures/validity.json) preserves every older
+  case and adds 42 individually identified cases: 32 required and ten
+  path-specific forbidden judgments. [Complete owner preparation](declarative-contrast-broad-owner-preparation.json.gz)
+  verifies all 115 original LMF/Native entries and English projections,
+  including same-head homonyms. The [fresh isolated full suite](declarative-contrast-prototype-full-rust-retry2.json)
+  passes 1,033 tests, one ignored, across 218 batches with its entire source
+  snapshot unchanged; the [downloaded corpus regression](declarative-contrast-prototype-pinned-corpus.json)
+  passes separately. Clippy also passes. These isolated results do not
+  establish current-main or actual-package parity.
+
+  [Six complete source replays](declarative-contrast-prototype-source-replay.json.gz)
+  preserve all 3,036 original frames, previous paths/order, Native assessments,
+  dictionary entries and original UTF-8 spans. [Exact occurrence auditing](declarative-contrast-prototype-source-target-audit.json.gz)
+  binds all twenty-four source targets in every NFC/NFD dictionary mode to
+  144 actual frame observations. The [portable source audit](../tools/declarative_contrast_audit.py)
+  and twelve mutation controls independently validate that evidence.
+  [Eight full broad comparisons](declarative-contrast-prototype-broad.json.gz)
+  preserve 1,128,312 records and spacing metadata while individually tracking
+  55 unjudged additions with exact earlier particle parents. [Held-out word captures](declarative-contrast-prototype-corpora.json.gz)
+  retain 32,096 actual word outputs and all 66,570 original annotated rows:
+  two words gain two unjudged alternatives, with no changed gold outcome.
+  [Actual Rust adapters](declarative-contrast-prototype-adapter.json.gz)
+  independently bind every row and summary; only one candidate-count summary
+  changes, and the other three outputs remain byte exact. The [preservation audit](../tools/declarative_contrast_preservation.py)
+  derives every captured addition and recomputes all corpus outcomes; sixteen
+  controls reject altered tracking, parents, source helpers and gold data.
+  Across forty-seven older fixtures, 21,298 surfaces retain previous paths;
+  the [two new historical paths](declarative-contrast-prototype-legacy-history.json)
+  have individually source-bound inverse parents rather than replaced baselines.
+
+  The isolated browser verifies 64 ordered whole-connective diagrams, 48
+  separate particle diagrams, six exact exports, all 252 case/mode/encoding
+  observations, all six source panes and 115 complete Native endpoints.
+  [Browser evidence](declarative-contrast-prototype-browser.json) and the
+  [ten additional owner responses](declarative-contrast-prototype-broad-owner-browser.json)
+  retain those actual results; desktop/mobile renders were inspected.
+  [Repository-layout preflight](contrast-production-audit-preflight.json)
+  passes all 53 source, preservation and historical-package controls with the
+  proposed source tree. [Historical source reconstruction](literary-ri-prefinal-historical-sources.json.gz)
+  keeps all 901 tested literary-package inputs bound to exact old source
+  contents and both independently reconstructed Nix archive hashes, allowing
+  new source work without weakening or rewriting the prior package evidence.
+
+  The [integrated main checks](declarative-contrast-main-checks.json) pass
+  55 focused Rust tests across nine batches, including stress and historical
+  overlays; Clippy, formatting and SolidJS build checks pass. Actual main
+  browser checks repeat all 64 whole/48 particle diagrams, six exports,
+  252 mode observations, six source panes and 115 complete Native endpoints;
+  desktop/mobile renders were inspected. The first actual main CLI capture
+  matches every source frame, all 1,128,312 broad records and every held-out
+  word output. Its initial capture remains unchanged alongside the final proof.
+  The final main replay also passes with
+  frozen producer identity and the complete corpus output digest recorded.
+  The full main suite passes 1,033 tests, one ignored, across 218 batches with
+  all 895 compile inputs unchanged; the downloaded corpus test passes
+  separately. All four actual main Rust adapters reproduce every one of the
+  66,570 annotated rows and their prototype summaries byte for byte.
+  The [actual main runtime audit](declarative-contrast-main-runtime-checks.json)
+  passes with seventeen controls rejecting altered producers, dropped source
+  frames, changed individual judgments, incomplete Native metadata and browser
+  errors. CLI/export/source API parity excludes only finite, nonnegative
+  current-call elapsed time; contextual correctness remains unjudged.
+  [Benchmark verifier preflight](declarative-contrast-performance-controls-preflight.json)
+  passes ten controls against eighty previously captured release measurements.
+  This initial preflight validates the timing verifier against earlier captures.
+  [Actual packaged checks](declarative-contrast-packaged-checks.json) pass
+  1,033 Nix release tests, one ignored, across 218 batches, with all 915
+  compile/frontend inputs unchanged. The fresh Nix CLI reproduces every source,
+  broader and held-out word output. The separate Nix corpus-adapter package
+  shares the exact 898 Rust inputs and reproduces all 66,570 original gold rows
+  and summaries. Packaged SolidJS/browser checks repeat every diagram, export,
+  source pane and complete Native entry; desktop/mobile renders were inspected.
+  The actual Nix launcher serves byte-identical packaged index/JS/CSS and both
+  full source API responses. All twenty-seven runtime integrity controls pass.
+  Both owned loopback servers were intentionally stopped after verification.
+  [Fresh release performance checks](declarative-contrast-performance-checks.json)
+  pass eighty alternating before/after measurements across eight full-novel
+  workloads on one allowed CPU. All six cached/uncached dictionary streams
+  preserve the expected 179,112 frames. Cached rule-only and raw dictionary
+  median times are 0.883 and 1.821 seconds; observed before/after variation is
+  recorded without a statistical-equivalence or causality claim. Twenty timing
+  integrity controls pass. All six primary entries now have bounded source
+  reviews; 250 inventory entries remain unreviewed.
+
+  The [combined flake gate](declarative-contrast-combined-nix.json) passes all
+  four actual checks: Rust, SolidJS assets, corpus adapter and inventory review.
+  Its [complete log](declarative-contrast-combined-nix.log.gz) and immutable
+  source profiles bind every result to the frozen 2,595 tracked files, unchanged
+  staged changes and HEAD. [Final tracker checks](declarative-contrast-tracker-checks.json)
+  verify the bounded closure and regenerated review queue; these documentation
+  changes leave all 915 tested compile/frontend inputs unchanged.
+
+  Broader attachment composition, candidate precision, contextual/register
+  and independent Korean review remain open under COV-013/COV-017 and the
+  completion review; this finite source closure does not certify those tasks.
+
+- [ ] **COV-017ci — Original ostensible-reason -답시고 family.**
+  **Original-source gap verified; implementation pending.** Complete primary
+  entries 80316–80318 retain all three senses and twelve original groups,
+  including dialogue replies. The unchanged main CLI has no whole-ending
+  interpretation for any of the twelve original target occurrences in any
+  of six NFC/NFD raw, headword or compatible modes. The
+  [complete baseline capture](ostensible-reason-source-discovery.json.gz)
+  preserves all six 233-frame streams, seventy-two target/mode observations,
+  exact original spans, Native entries and source attachment notes. Existing
+  identity and other speculative paths are retained as baseline observations;
+  their existence does not cover the missing endings.
+  Implement adjective/prefinal -답시고 and the source-listed present verb
+  allomorphs -ㄴ답시고/-는답시고, preserving earlier candidates and immediate
+  predicate/auxiliary ownership. Add individual source and boundary judgments,
+  dictionary homonym assessments, and ordered viewer labels with complete
+  source links. Review all source groups, phonological/prefinal boundaries,
+  import and normalization/filtering modes, historical and held-out corpus
+  preservation, actual main/package CLI and browser outputs, and the flake
+  gate before closing this item. Contextual speaker attitude, candidate
+  precision and independent Korean review remain separate requirements.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -6781,7 +6891,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 477 currently emitted canonical grammar forms.** The initial catalog
+  for all 564 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -4687,3 +4687,39 @@ separately from the code license. The English adapter retains only English
 translations; the Native model preserves all original senses, examples, notes
 and forms. Original LMF fields and full-export hashes remain in the archived
 source preparation; no multimedia is redistributed.
+
+## Original past-prefinal examples and source aliases (COV-017ce)
+
+The existing canonical past marker 었 represents written 았/었/였. The viewer's
+explicit source map now includes [66954](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66954),
+[68719](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68719) and
+[68723](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68723),
+preserving the original -었- entry first. These entries retain all nine senses,
+including future certainty; the program leaves contextual meaning unselected.
+The rule candidates and lexical dictionary filters are unchanged.
+
+All 38 original groups remain. The independent ㅆ-coda scan distinguishes 44
+primary occurrences from twelve incidental forms, including lexical 있-. Five
+exact boundaries reject 가었다/먹았다/하았다/하었다/좋었다 only for their named
+canonical past structures. The source example 잠갔니 preserves 잠그다 despite
+the broad -았- note's vowel restriction; spelling restoration remains relevant.
+Both 보셨어요 → 보다 + 시 + 었 + 어 + 요 and the whole -어요 ending survive.
+Broader paradigms and independent Korean review remain open.
+
+The preserved Native/LMF and English fixtures derive from the September 2026
+한국어기초사전 export by the National Institute of Korean Language (국립국어원),
+under [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/) and
+its [copyright policy](https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo).
+English adapters retain only English translations; complete Native entries and
+original LMF fields remain archived. Dictionary data are licensed separately
+from the code. Authored structural regressions are not independently annotated
+sentence gold.
+
+Final COV-017ce validation passes 1,012 main and release Rust tests (one ignored),
+Clippy, all complete Nix package/assets/inventory checks, and actual packaged
+source/API/browser parity. The six 638-frame source streams and forty exact
+boundary/control outputs are unchanged, as are the complete Native fields and
+all 310 checked new/legacy diagrams. All three primary past entries can be
+opened from the viewer. The actual Nix launcher builds and its help invocation
+succeeds. These finite structural/source checks do not select contextual
+meanings or certify every speculative candidate.

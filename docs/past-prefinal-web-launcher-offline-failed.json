@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "state": "failed",
+  "exit_code": 1,
+  "session_id": 23814,
+  "command": "nix build --offline --no-link --print-out-paths -L .#web",
+  "log_sha256": "3363db9333065c4265796c16bd062a2bc541d6be3abd049e33aef0dc78462f65",
+  "scope": "Offline web launcher check; package/assets themselves are valid and actual browser checks passed. Inspect dependency-fetch errors before retrying with substituters."
+}

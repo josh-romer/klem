@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "session_id": 49406,
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--impure",
+    "--file",
+    "/tmp/klem-past-prefinal-focused-check.nix"
+  ],
+  "outputs": [
+    "/nix/store/5sya2vd0gs55lkzkzrpr4j68956fjnc0-klem-past-prefinal-source-audit"
+  ],
+  "source_controls_passed": 13,
+  "log_sha256": "edad1e17fbc35898079993a04388f11efde2274802b46c2e6694c88c6780554a",
+  "scope": "Focused sandboxed inventory queue, complete past-prefinal source audit, main browser preservation audit and thirteen corruption controls. Full package/assets/inventory gates remain separate."
+}

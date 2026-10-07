@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 451 scoped
-  dispositions; 264 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 454 scoped
+  dispositions; 261 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2430,6 +2430,53 @@ review remains open under the completion review below.
   [Actual packaged CLI replay](present-prefinal-packaged-cli.json) verifies six
   exact 134-frame source streams, with raw/headword/compatible NFC/NFD parity.
   The new packaged CLI is byte-identical to the previously tested CLI.
+
+- [x] **COV-017ce — Original past-prefinal -았-/-었-/-였- examples and source links.**
+  **Implemented for the bounded original-source structures and viewer source links.**
+  Complete original entries 66954/68719/68723 retain nine senses and
+  all 38 example groups. An independent literal scan records all 56 words with
+  a ㅆ coda: 44 primary target occurrences and twelve explicit incidental
+  dispositions, including lexical 있- and other allomorphs inside original
+  dialogues. The 49 stable cases contain 45 required structures and five exact
+  spelling prohibitions. Both 보셨어요 decompositions remain; 잠갔니 preserves
+  the source-owned eu-deletion exception to the broad vowel note. Canonical 었
+  continues to represent 았/었/였 without choosing past-event, continuing-result
+  or future-certainty meaning. All 99 finite named Native/LMF owners retain
+  complete original fields and English projections. Six captured full streams
+  preserve 638 NFC/NFD frames each, and forty spelling-boundary/control calls
+  retain their original raw and compatible outputs. Main-project focused Rust
+  validation passes twelve tests across the web, source and global suites.
+  The actual before API retains both complete source streams and all three
+  exact primary Native endpoints, but its canonical past lookup exposes only
+  -었-. The explicit catalog aliases now include -았- and -였-, preserving the
+  original source first and leaving other labels unchanged. Evidence:
+  [source regressions](../tests/past_prefinal.rs), [source/condition audit](../tools/past_prefinal_audit.py),
+  [thirteen integrity controls](../tools/test_past_prefinal_audit.py), and
+  [individual literal tracking](past-prefinal-literal-inventory.json).
+  Three scoped COV-013 dispositions preserve broader paradigm/composition,
+  contextual/register and independent Korean review as pending. The
+  [full main Rust run](past-prefinal-main-full-rust.json) passes 1,012 tests
+  with one ignored across 214 batches. [Main browser checks](past-prefinal-main-browser-checks.json)
+  verify 90 new and 220 legacy diagrams, twelve exact CLI exports, all 99 new
+  and 208 legacy Native endpoints, and all three past source entries opened
+  in the viewer. Original NFC/NFD API streams retain every record and all
+  metadata apart from the two new source aliases. Desktop/mobile screenshots
+  were inspected. The initial heading-selector failure is preserved beside
+  the successful retry. [Evaluation](past-prefinal-evaluation.json) records
+  the complete verification. [Final Nix checks](past-prefinal-final-nix.json)
+  build the Rust package and assets and pass every inventory audit; release
+  Rust tests pass 1,012 with one ignored across 214 batches. All 54 staged
+  inputs and the staged diff remain exact through terminal success.
+  [Actual packaged checks](past-prefinal-packaged-checks.json) preserve all
+  main/API/browser records, Native fields, ordered diagrams and twelve exports.
+  The packaged CLI exactly replays six 638-frame source streams and forty
+  spelling-boundary/control outputs; its bytes equal the original tested CLI.
+  [The Nix web launcher](past-prefinal-web-launcher.json) builds and
+  `nix run --offline .#web -- --help` succeeds. The offline missing-dependency
+  and configured-cache failures are preserved; selecting the official Nix
+  cache fetched ShellCheck and completed the launcher. No production grammar
+  changes or new novel timing claims are made. Closure/queue documentation
+  follows terminal verification; broader COV-013 and contextual review stay open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

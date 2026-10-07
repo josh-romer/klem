@@ -374,6 +374,10 @@
                 ./tools/reported_dana_inputs.py
                 ./tools/present_prefinal_audit.py
                 ./tools/test_present_prefinal_audit.py
+                ./tools/past_prefinal_audit.py
+                ./tools/test_past_prefinal_audit.py
+                ./web/tests/past-prefinal.mjs
+                ./src/bin/klem-web/grammar_labels.rs
                 ./tools/test_reported_dana_inputs.py
                 ./tools/reported_dana_audit.py
                 ./tools/reported_dana_native.py
@@ -729,6 +733,8 @@
             python tools/reported_dana_audit.py
             python tools/present_prefinal_audit.py
             python -m unittest discover -s tools -p 'test_present_prefinal_audit.py'
+            python tools/past_prefinal_audit.py
+            python -m unittest discover -s tools -p 'test_past_prefinal_audit.py'
             python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'
             python tools/reported_dana_native.py
             python tools/reported_dana_corpora.py

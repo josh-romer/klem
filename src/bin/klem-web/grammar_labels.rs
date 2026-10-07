@@ -87,6 +87,46 @@ mod tests {
     use std::{fs, path::PathBuf};
 
     #[test]
+    fn canonical_past_lookup_keeps_all_three_original_allomorph_entries() {
+        let path = std::env::temp_dir().join(format!("klem-past-labels-{}.db", std::process::id()));
+        struct Cleanup(PathBuf);
+        impl Drop for Cleanup {
+            fn drop(&mut self) {
+                let _ = fs::remove_file(&self.0);
+            }
+        }
+        let _cleanup = Cleanup(path.clone());
+        import_krdict(
+            &[PathBuf::from(
+                "tests/fixtures/krdict-past-prefinal-english.json",
+            )],
+            &path,
+            "past-allomorph-source-test",
+        )
+        .unwrap();
+        let db = SqliteDictionary::open(path).unwrap();
+        let mut session = DictionarySession::new(&db, 1024 * 1024);
+        let sources = lookup(&mut session, MorphemeKind::Prefinal, "-었-").unwrap();
+        assert_eq!(
+            sources.iter().map(|e| e.id.as_str()).collect::<Vec<_>>(),
+            ["krdict:68719", "krdict:66954", "krdict:68723"]
+        );
+        for source in &sources {
+            let native = db.entry(&source.id).unwrap().unwrap();
+            assert_eq!(native.senses.len(), 3);
+            assert!(native.senses[2].definition.contains("미래"));
+        }
+        for kind in [
+            MorphemeKind::Ending,
+            MorphemeKind::Particle,
+            MorphemeKind::Suffix,
+            MorphemeKind::Prefix,
+        ] {
+            assert!(lookup(&mut session, kind, "-었-").unwrap().is_empty());
+        }
+    }
+
+    #[test]
     fn every_label_source_resolves_from_the_attributed_offline_dictionary() {
         let path = std::env::temp_dir().join(format!("klem-labels-{}.db", std::process::id()));
         struct Cleanup(PathBuf);
@@ -112,6 +152,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-deoniman-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-reported-command-deoni-english.json"),
                 PathBuf::from("tests/fixtures/krdict-reported-dana-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

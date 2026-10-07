@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-017ce"
+  ],
+  "state": "passed",
+  "pid": 3860369,
+  "started_at": "2026-10-07T13:05:27.269384+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "snapshot": {
+    "head": "99d781bf74a0f8cccbfa6209015db8c7bbf0f0a4",
+    "staged_diff_sha256": "f45c6b885cd2bdbee0932ab7b0e4ea572c812f4ff18d45a1100f4c8ea6345698",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "aa07994d6cb38d279fbee60136c9da1a25d8808acaf0a093e69267fea68b8468",
+        "bytes": 506743
+      },
+      "docs/inventory-audit.md": {
+        "sha256": "90a984d1fd39e447166f2693dfa9f5b83a9b6daadf3ccafdfc4355523d8ac9ac",
+        "bytes": 67817
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "253e125601cde3d658f96da06d3bf9a6b402b96a7f3ee99808dde285a85c5a12",
+        "bytes": 3467347
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "06b90b57089bcda34acef4524b85a1a5a52de58447471efb452fdc4462db44bd",
+        "bytes": 1316126
+      },
+      "docs/past-prefinal-before-api-finding.json": {
+        "sha256": "efc27c508b59de05c3853234aa94c06f4def438f5c9139481540c0177fe40810",
+        "bytes": 791
+      },
+      "docs/past-prefinal-before-api.json.gz": {
+        "sha256": "a65613ff5fbfbcd36ab47ecfc6d462e0ca365c0f0c664926e38c581289e49978",
+        "bytes": 332015
+      },
+      "docs/past-prefinal-boundary-capture.json.gz": {
+        "sha256": "97f03bb45a4d0899969c0c0ae0dfee73dbd95d3bf736cc6fb7c034cfec066fcf",
+        "bytes": 5065
+      },
+      "docs/past-prefinal-browser-first-failed.json": {
+        "sha256": "9cfb83c4f70bf76de998767d79fd923d6b0e12cf8df93426e6154f6fa8a810d6",
+        "bytes": 9075
+      },
+      "docs/past-prefinal-browser-first-failed.log.gz": {
+        "sha256": "36cb942f729ab123091a3efae45ed2a142acfadbcadaf7f8a5eb114cf4cad213",
+        "bytes": 212
+      },
+      "docs/past-prefinal-catalog-after.json": {
+        "sha256": "9fdbe9854df498a70bd714586d9385a38ce15accd5b8a39dfca0820596eebe32",
+        "bytes": 183658
+      },
+      "docs/past-prefinal-catalog-before.json": {
+        "sha256": "d8f3213e4902bc0c98c06c490a257903b6ecd33ee1ae14a6e450dd4b2f80eb6e",
+        "bytes": 183476
+      },
+      "docs/past-prefinal-evaluation.json": {
+        "sha256": "3577838396960f130b1884d6ebab6c3d268b427597ec61ae112d88b85257defd",
+        "bytes": 6751
+      },
+      "docs/past-prefinal-focused-check.nix.txt": {
+        "sha256": "f7210e7de456d20554c393fc57ed63d439e8d901800fcbf90bb61ab27a94712d",
+        "bytes": 438
+      },
+      "docs/past-prefinal-focused-nix-failed.json": {
+        "sha256": "d28decf5b6a0942a4b0ebc143217c7432597618f9cf3b00c57e9f8f61da0d829",
+        "bytes": 513
+      },
+      "docs/past-prefinal-focused-nix-failed.log.gz": {
+        "sha256": "31a273dc3b813fa9afe079622f7884d230095ab1b147873c020f2b4791ae6f7e",
+        "bytes": 932
+      },
+      "docs/past-prefinal-focused-nix-retry-failed.json": {
+        "sha256": "f79d45abba74b8961ac351723de206a4ba94136386ea3ff7dc46b732f9686773",
+        "bytes": 316
+      },
+      "docs/past-prefinal-focused-nix-retry-failed.log.gz": {
+        "sha256": "7710706491be25174f3eaa8241e5dceaac84da02db351e70cf9d8e36eecb828d",
+        "bytes": 545
+      },
+      "docs/past-prefinal-focused-nix.json": {
+        "sha256": "57ebae2de630d997055cff3acfb3b2f1aed3867463b14384942e0de4cf812821",
+        "bytes": 650
+      },
+      "docs/past-prefinal-focused-nix.log.gz": {
+        "sha256": "5553a016141b590397f385f075c80caf34ef4734f4351e81f9916bcd0fbf43de",
+        "bytes": 612
+      },
+      "docs/past-prefinal-judgments.json": {
+        "sha256": "d7d5682da822f80f9463c3fadb3c0f8763cc764cf44f86cf03d102b3a69f8a46",
+        "bytes": 97106
+      },
+      "docs/past-prefinal-literal-inventory.json": {
+        "sha256": "6fb7303a0464bf9730a77f09cbf790327e5534145e3129b6ffe216486e80342d",
+        "bytes": 35721
+      },
+      "docs/past-prefinal-main-browser-checks.json": {
+        "sha256": "55b02187f9fa6f88064bd3ef03eafa3e21093eccaba4f6082f53f982b2bdac33",
+        "bytes": 1434
+      },
+      "docs/past-prefinal-main-browser.json.gz": {
+        "sha256": "916602c1b4c8ab8d2860d72a6dfa61cba6aaeb63ad979a03c77bdf936f8d2cb3",
+        "bytes": 648503
+      },
+      "docs/past-prefinal-main-browser.log.gz": {
+        "sha256": "2f15386d9c34eabccabfd2b5caa655dc4de36e6a9b13a9054673d765ba3d7c52",
+        "bytes": 133
+      },
+      "docs/past-prefinal-main-desktop.png": {
+        "sha256": "add4a4dc3beb15d7b17435c82402f6bb8ce692d2220df24514c926a94ddbd158",
+        "bytes": 110677
+      },
+      "docs/past-prefinal-main-focused-rust.json": {
+        "sha256": "4831d1bc4adbc02650c7baa6b41f76b7106868ef76d0453bad2392eeaffc8606",
+        "bytes": 404
+      },
+      "docs/past-prefinal-main-focused-rust.log.gz": {
+        "sha256": "b0b86cb217b34f72620db22b3f5ef3b8beb717beaa855456aa5d412c512efb8e",
+        "bytes": 786
+      },
+      "docs/past-prefinal-main-full-rust.json": {
+        "sha256": "3a0c560fef7f6c7e61841477554cb32a5c87b96e27d06a117a0bdda3cc39ebdd",
+        "bytes": 518
+      },
+      "docs/past-prefinal-main-full-rust.log.gz": {
+        "sha256": "bfd3c40c0e8d1ce6898305a9df8565c8f2ef67820f756d7682f1a359e209c607",
+        "bytes": 23716
+      },
+      "docs/past-prefinal-main-inventory-controls.log.gz": {
+        "sha256": "9c20130f75f1d637033f25b1074276871ccf3b1fc898e7c242ae680b081604e9",
+        "bytes": 54
+      },
+      "docs/past-prefinal-main-inventory-verify.log.gz": {
+        "sha256": "69dd80d70442077b71425964e75c07f6ef928be4f781ceef1754d454623aa773",
+        "bytes": 179
+      },
+      "docs/past-prefinal-main-legacy-browser.json.gz": {
+        "sha256": "cb8efdc9974cd1466608df7060555d0df4d4bd63e80f31ae35cbfd5d2fb892fc",
+        "bytes": 1058258
+      },
+      "docs/past-prefinal-main-legacy-browser.log.gz": {
+        "sha256": "47a25b6aacd5e5d7248e29c2606ad803818e34c9b27d2776e1cdf52c2db094f2",
+        "bytes": 126
+      },
+      "docs/past-prefinal-main-mobile.png": {
+        "sha256": "5a471865f58da6d12c10e92560fa5ec82170b3ef4ef8d760994f35917c5278b8",
+        "bytes": 31472
+      },
+      "docs/past-prefinal-main-source-audit.log.gz": {
+        "sha256": "295c404ce4294c80ad5cbe3602025c642f07991c3940422ab79ca2696d28863b",
+        "bytes": 249
+      },
+      "docs/past-prefinal-main-source-controls.log.gz": {
+        "sha256": "f62ea42880d4bbd276027341cbd97568dd76592ff8a7cff22e04f5d52e3c334a",
+        "bytes": 54
+      },
+      "docs/past-prefinal-native-preparation.json.gz": {
+        "sha256": "876c87cf35ac156891a6b2130018575e7ce1ba8b1c980b578c30c7eb3d0390a1",
+        "bytes": 13436
+      },
+      "docs/past-prefinal-owner-preparation.json.gz": {
+        "sha256": "cc141152569ecb4ff6683e7d713ba4ade86ad386a59da5987f039c810711fa6e",
+        "bytes": 1040860
+      },
+      "docs/past-prefinal-preparation-history.json.gz": {
+        "sha256": "e3e0256a825540d697394f6c7a432728dcff4590dc8a4b501b83c96fed9adb48",
+        "bytes": 2220374
+      },
+      "docs/past-prefinal-source-discovery.json.gz": {
+        "sha256": "21b964c30a8a648cba332c9a26030252f1c56082dadf82308780793734a00ce6",
+        "bytes": 236301
+      },
+      "docs/rules.md": {
+        "sha256": "3b70160f18537911274e7b544ee675b651ea52957e40213401ce81dcf7ddb9b4",
+        "bytes": 325413
+      },
+      "flake.nix": {
+        "sha256": "a7da858c1cb0533bd46f20f085a7c372a69e4b23169bcf83d77bf1f5fa3dd4de",
+        "bytes": 42196
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "4b4a9338014aad383c65cee1ba6903806ee9ded7ea5e7ebf19597cfca8b1a4a0",
+        "bytes": 10034
+      },
+      "tests/fixtures/krdict-past-prefinal-english.json": {
+        "sha256": "33fd67e33e5d8e4f8e7be1e827b304e81cc9b7d8d1dbc71af43aa6cb6d308157",
+        "bytes": 2424322
+      },
+      "tests/fixtures/krdict-past-prefinal-labels.json": {
+        "sha256": "bc048745688e9eca0afbffb13602f57cff47d6939e659cc42939f6e6839e107f",
+        "bytes": 25121
+      },
+      "tests/fixtures/past-prefinal-native.json": {
+        "sha256": "337d8fd4e657e4df744b3d158c83dba5404b251af451ec1faa90d0b85d2781c5",
+        "bytes": 1845448
+      },
+      "tests/fixtures/past-prefinal-validity.json": {
+        "sha256": "68081182b1ce9238ef1073d0d68ef637151471cdfaba0c20c931c90b8c076d71",
+        "bytes": 43742
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "d8f744228a5ae10ea97fbcbaf661919fc6538cee31007cb10c448c2cc9779574",
+        "bytes": 31577229
+      },
+      "tests/past_prefinal.rs": {
+        "sha256": "73c1279ed93c6aab1583845f8308e08cd35ca890f09a6b088784db1a854065db",
+        "bytes": 3619
+      },
+      "tests/validity.rs": {
+        "sha256": "8d13f1a777145927343ec719a673ffc4de722fe1de18802c63b4fd2f66b35cde",
+        "bytes": 4004
+      },
+      "tools/past_prefinal_audit.py": {
+        "sha256": "b8bd214ae3824dd474ff4ede036e1dac05a5dcb28ba8f04970877687df7943a3",
+        "bytes": 18082
+      },
+      "tools/test_past_prefinal_audit.py": {
+        "sha256": "11d1249049a413907ffa48e08f0589798defc90c539dcbdf478ddbf2f677193c",
+        "bytes": 6070
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "9fdbe9854df498a70bd714586d9385a38ce15accd5b8a39dfca0820596eebe32",
+        "bytes": 183658
+      },
+      "web/tests/past-prefinal.mjs": {
+        "sha256": "0e1b261e6783f80395938c398ebcd5874e66a03fc64f914d97ff725c1738665d",
+        "bytes": 8499
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-07T13:55:55.507594+00:00",
+  "log_sha256": "3eef1c56669ff9ed130529e1cee7311124d5e7e427f9a325b50453d54f11e49a",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/km1xwdvlmvl9m4l4jpljfhkkh3a8j7pm-klem-0.1.0",
+    "/nix/store/09fcgv5y63k1xxpwgh0rsmp7qqgzxdw7-klem-web-assets-0.1.0",
+    "/nix/store/zqah10a8bm06sb2dxfqvjbf09n7p0913-klem-inventory-review"
+  ]
+}

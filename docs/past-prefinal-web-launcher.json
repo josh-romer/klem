@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "session_id": 37446,
+  "output": "/nix/store/a7h4qiyw53vp9fi9ds9wfsya4kfiyhfr-klem-web",
+  "rust_package": "/nix/store/km1xwdvlmvl9m4l4jpljfhkkh3a8j7pm-klem-0.1.0",
+  "assets_package": "/nix/store/09fcgv5y63k1xxpwgh0rsmp7qqgzxdw7-klem-web-assets-0.1.0",
+  "log_sha256": "411f942427c2a7cb1aa8a9a7f408815e4a5cff4cbd424bcd240e44b8b8b3b1cb",
+  "wrapper_sha256": "4b17058fbc4a2300f067e150acaca8ef71456c09e3115ac243e73e2e235bebdf",
+  "cache": "https://cache.nixos.org",
+  "dependency_fetch": "ShellCheck0.11.0,1.49MiB; actual official-cache substitution after offline/upstream403 and configured-third-party-cache timeout failures.",
+  "scope": "Actual Nix web launcher built and ShellCheck validated against the current Rust package/assets; flake app help invocation is recorded separately.",
+  "help_exit_code": 0,
+  "help_session_id": 45230,
+  "help_command": "nix run --offline .#web -- --help",
+  "help_log_sha256": "f2a3aff71bbbbfc6872e41ceb7012ed2988560ad56d3096d292098faf7b702e3"
+}

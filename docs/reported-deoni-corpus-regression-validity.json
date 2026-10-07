@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "review_status": "Corpus lemma recovery regression from unchanged pinned GSD annotation; alternative candidate validity and independent linguistic review remain unjudged.",
+  "sources": {
+    "reported-deoni-gsd-test-s619-2": "https://raw.githubusercontent.com/UniversalDependencies/UD_Korean-GSD/60ffc4f2f0cbf0bf816f0d44a7339512f5ce9c25/ko_gsd-ud-test.conllu"
+  },
+  "cases": [
+    {
+      "id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "judgments": [
+        {
+          "id": "annotated-predicate-lemma",
+          "lemmas": [
+            "주다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "verdict": "required",
+          "source": "reported-deoni-gsd-test-s619-2",
+          "reason": "Original pinned GSD test-s619/2 annotation 주+ㄴ다더니/VV+EC requires recovering 주다. This judgment covers the annotated predicate lemma; it does not classify the other emitted candidates or certify a dictionary sense."
+        }
+      ]
+    }
+  ]
+}

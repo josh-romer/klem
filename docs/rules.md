@@ -4594,3 +4594,36 @@ These are grammar hints; the selected dictionary sense and sentence context
 remain unjudged. [The coverage tracker](coverage-checklist.md) records the
 individual source cases, negative allomorph controls, ambiguity preservation,
 source-cohort comparisons, browser/export checks and remaining review work.
+
+### Emphatic and recalled reports (COV-017ca/cb)
+
+The finite recalled-statement inventory is `더니만`, `더니마는`,
+`다더니`, `는다더니` and the latter pair's `만/마는` extensions.
+The first pair uses `ending.deoniman`; quoted statements use
+`ending.reported_deoni`. Canonical `는다더니` also represents the attached
+`-ㄴ다더니` spelling, so `준다더니` recovers `주다 + 는다더니`.
+Honorific, past and modal prefinals remain separate morphemes. Derived
+adjectives retain their suffix. These paths preserve the old `더니` or
+`다던/는다던` structural counterparts and introduce no implicit reporting
+`하다`. Primary attachment notes and full examples remain in the
+[source fixture](../tests/fixtures/deoniman-sources.json).
+
+`라더니` and `으라더니` use `ending.reported_command_deoni`.
+The first represents factual copulas/negative statements and vowel/ㄹ verb
+commands; ordinary consonant commands use the second. Only the source-listed
+honorific prefinal slots receive command support. Command branches do not
+borrow factual past/modal slots or the negative-command alias.
+`재기라더니` can retain `재다 + 기 + 이다 + 라더니`; its source example
+does not require the separate noun `재기`. The source-attested adjective wish
+`같으라더니` retains `Unknown` dictionary assessment. The complete primary
+entries 82004/89662, their senses and groups remain in the
+[source fixture](../tests/fixtures/reported-command-deoni-sources.json).
+
+Dictionary judgments distinguish each ending's own attachment classes.
+Known present adjective/copula conflicts with quoted verb allomorphs remain
+visible. Unlisted prefinals/followers, honorific-only bare verb reports and
+unlisted reported copulas retain uncertainty. Dictionary membership, a
+structural counterpart and a glossary hint do not identify the contextual
+sense. The [coverage tracker](coverage-checklist.md) separates annotated lemma
+recovery, authored component judgments, unjudged alternatives, preservation
+checks and the release gates.

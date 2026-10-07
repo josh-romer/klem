@@ -700,6 +700,9 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다네"
                             | "다는데"
                             | "다던"
+                            | "다더니"
+                            | "다더니만"
+                            | "다더니마는"
                             | "다던데"
                             | "다며"
                             | "다면서"
@@ -820,6 +823,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다네",
             "다는데",
             "다던",
+            "다더니",
+            "다더니만",
+            "다더니마는",
             "다던데",
             "자던",
             "자던데",
@@ -925,6 +931,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "든",
             "더라도",
             "더니",
+            "더니만",
+            "더니마는",
             "더라",
             "더라고",
             "더라는",
@@ -1045,6 +1053,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("리만큼", "으리만큼", 0),
             ("련만", "으련만", 0),
             ("련마는", "으련마는", 0),
+            ("더니만", "더니만", 0),
+            ("더니마는", "더니마는", 0),
             ("더라도", "더라도", 0),
             ("던데", "던데", 0),
             ("던데요", "던데요", 0),
@@ -1196,6 +1206,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라네", "라네", "으라네"),
             ("으라는데", "라는데", "으라는데"),
             ("으라던", "라던", "으라던"),
+            ("으라더니", "라더니", "으라더니"),
             ("으라던데", "라던데", "으라던데"),
             ("으라며", "라며", "으라며"),
             ("으라면서", "라면서", "으라면서"),
@@ -1332,6 +1343,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다네", "다네", "는다네", 4),
             ("는다는데", "다는데", "는다는데", 4),
             ("는다던", "다던", "는다던", 4),
+            ("는다더니", "다더니", "는다더니", 4),
+            ("는다더니만", "다더니만", "는다더니만", 4),
+            ("는다더니마는", "다더니마는", "는다더니마는", 4),
             ("는다던데", "다던데", "는다던데", 4),
             ("는다며", "다며", "는다며", 4),
             ("는다면서", "다면서", "는다면서", 4),
@@ -1429,6 +1443,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라든가",
             "라네",
             "라는데",
+            "라더니",
             "라던",
             "라던데",
             "라며",
@@ -2147,6 +2162,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.counterfactual_ryeon" => {
             "Recover -(으)련만 and -(으)련마는 with their own stem allomorphs; retain conjectural and contextual interpretations separately."
+        }
+        "ending.reported_command_deoni" => {
+            "Recover source-listed -라더니 factual copular/negative and -(으)라더니 command reports with separate stem and honorific boundaries; preserve contextual alternatives without inserting an implicit reporting lemma."
+        }
+        "ending.reported_deoni" => {
+            "Recover source-listed -다더니/-ㄴ다더니/-는다더니 as quoted observation endings; preserve canonical components and contextual alternatives without inserting an implicit reporting lemma."
+        }
+        "ending.deoniman" => {
+            "Recover primary -더니만/-더니마는 whole-ending readings and source-attested quoted statement bundles while retaining split alternatives. Contextual sense and register remain unselected."
         }
         "ending.degree_rimankeum" => {
             "Recover -(으)리만큼 as a degree or grounds ending with its own stem allomorph; keep lexical and contextual interpretations separate."

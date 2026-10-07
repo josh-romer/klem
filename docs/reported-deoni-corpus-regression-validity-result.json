@@ -1,0 +1,419 @@
+{
+  "schema_version": 1,
+  "review_status": "Corpus lemma recovery regression from unchanged pinned GSD annotation; alternative candidate validity and independent linguistic review remain unjudged.",
+  "cases": 1,
+  "required_total": 1,
+  "required_present": 1,
+  "forbidden_total": 0,
+  "forbidden_present": 0,
+  "emitted_nonidentity": 16,
+  "judged_nonidentity": 1,
+  "violations": [],
+  "review_queue": [
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "더",
+            "kind": "prefinal"
+          },
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_prefinal",
+          "ending",
+          "prefinal.retrospective"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "더",
+            "kind": "prefinal"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_prefinal",
+          "ending",
+          "prefinal.retrospective"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_deoni"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "더",
+            "kind": "prefinal"
+          },
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "prefinal.retrospective"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "더",
+            "kind": "prefinal"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "boundary.regular",
+          "ending",
+          "prefinal.retrospective"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다더",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다더",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다더다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다더다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다덜다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다덜다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다덯다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "reported-deoni-gsd-test-s619-2",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "줄다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는다더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_deoni"
+        ],
+        "unchanged": false
+      }
+    }
+  ]
+}

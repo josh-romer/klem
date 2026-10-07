@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "scope": "Complete immutable tested package source, independently reconstructed canonical NAR and recursive store path; original661 development-recorded files remain scoped separately from189 supplemental captures. Local verification precedes the new combined final flake gate.",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "tools/reported_deoni_complete_sources.py",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "log": "docs/reported-deoni-complete-source-audit.log.gz",
+      "uncompressed_log_sha256": "3f73d15e9205626840e3ce176b0de63ee14de4ba0b7952d562688b78d3de7e12"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_reported_deoni_complete_sources.py"
+      ],
+      "exit_code": 0,
+      "log": "docs/reported-deoni-complete-source-tests.log.gz",
+      "uncompressed_log_sha256": "2a2b404e07fc4f829dd5ca6afb516efd7fdf8a62d113091d2a3852c8c2dc0f45"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reported_deoni_release.py",
+        "--verify"
+      ],
+      "exit_code": 0,
+      "log": "docs/reported-deoni-complete-release-audit.log.gz",
+      "uncompressed_log_sha256": "5b3b9d6075f2f6bde8f010407078e6391fbb1559ca12f8067334ecb5b7ef3ab6"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_reported_deoni_release.py"
+      ],
+      "exit_code": 0,
+      "log": "docs/reported-deoni-complete-release-tests.log.gz",
+      "uncompressed_log_sha256": "d0aac428704992ca3b7dad9b7a0a92d5734202706fe99f19ead9924e497c9dd4"
+    }
+  ],
+  "files": {
+    "tools/reported_deoni_complete_sources.py": "734c395fccf7167e3b88ede4e0aecaba038f6e48f6b388b0aea12e30bdc110f6",
+    "tools/test_reported_deoni_complete_sources.py": "455c6b90f5201d0c2c60701644acae8a7d8331967aa161b2b7a77077b04d446e",
+    "tools/reported_deoni_release.py": "b36df4bca4a410b632a22b6e687d0dc2a88eea19f7b4666cee0b5bc277ab01d1",
+    "flake.nix": "39d53f933c34c8946f1ace78a963dcfdd907f21de692c97c6f8b69fda990157d",
+    "docs/reported-deoni-package-complete-sources.json": "dbc3e49eb10c74be68f2b99ae20301f492bbeaf48b97e0a14d0a6585828b6265",
+    "docs/reported-deoni-package-source-supplement.json.gz": "c4af4448c6bbb29e5a215e00be2ba3048025dab47bde489c36a03df2804e126c",
+    "docs/reported-deoni-package-complete-sources-original.json": "8aa08a3335c82f95a39ac92f688978481ba66c32a39d1167aefdbad368244e68"
+  },
+  "package_source_files": 850,
+  "development_recorded_files": 661,
+  "supplemental_files": 189,
+  "supplemental_annotated_fixtures": 184,
+  "source_corruption_controls": 8,
+  "release_controls": 8
+}

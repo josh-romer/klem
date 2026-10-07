@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "clippy": {
+    "command": [
+      "cargo",
+      "clippy",
+      "--locked",
+      "--offline",
+      "--features",
+      "web",
+      "-j",
+      "4",
+      "--all-targets",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "exit_code": 0,
+    "scope": "Full all-targets Clippy before the recorded two test-module declaration reorderings; no application code changed afterward."
+  },
+  "fmt": {
+    "command": [
+      "cargo",
+      "fmt",
+      "--all",
+      "--",
+      "--check"
+    ],
+    "exit_code": 0,
+    "failure_preserved": true
+  },
+  "formatted_regressions": {
+    "command": [
+      "cargo",
+      "test",
+      "--locked",
+      "--offline",
+      "--features",
+      "web",
+      "-j",
+      "4",
+      "--test",
+      "degree_rimankeum",
+      "--test",
+      "counterfactual_ryeon"
+    ],
+    "exit_code": 0,
+    "passed": 12,
+    "batches": 2
+  },
+  "web_build": {
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit_code": 0
+  },
+  "portable_evidence_audits": {
+    "source": {
+      "exit_code": 0,
+      "controls": 4
+    },
+    "broad": {
+      "exit_code": 0,
+      "controls": 3
+    },
+    "corpora": {
+      "exit_code": 0,
+      "rows": 66570
+    },
+    "additional_corpus_parent_controls": {
+      "exit_code": 0,
+      "tests": 5,
+      "first_test_runner_attribute_collision_preserved": true
+    }
+  },
+  "log_sha256": {
+    "clippy": "6c74dccd867b5d3c7cb332823beee0ef0b9884aa4aabf16b52f6bec1a32d8a30",
+    "fmt-failed": "7a62b9272fb070e9a1843e35e8233e897913653d31cf88ae28453624efad73c4",
+    "fmt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "formatted-regressions": "3534e4598804634daa1671ebb92540f901c46b537095a70747eb2b553c327f33",
+    "web-build": "2011c86fd3a16e1ab594f63e43961b8cb8fd782e49352b056dc3355a6457f5b0",
+    "source-audit": "7ae5dde5d6c131462cf9da75ede41a1f8553cdfec5e0a307d96e84f4be1eb8aa",
+    "broad-audit": "b134c1a6868a68a814bc2866d918a11cd6b8a8b14ed89b3a6b5cef6a9cd45507",
+    "corpora-audit": "0f747c5aa3984b57de437ad5601d03ec511b818d2fdd98723a798c6926cbb79a",
+    "evidence-tests-failed": "b512701635c2d5c36675ddfc5dbc1f06cb837b8bbbedd970d50de659203d2061",
+    "evidence-tests": "c95b2a85ccf136c1ece707c5f486ad0c1b10062d6244b4f82dbab3b55f154288"
+  },
+  "scope": "Integrated development checks; packaged/Nix/cache/performance gates remain separate."
+}

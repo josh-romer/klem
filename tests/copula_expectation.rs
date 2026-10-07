@@ -1,5 +1,7 @@
 //! Authored structural probes: primary omission rule plus source ending notes.
 //! These are not directly attested sentence judgments or corpus gold.
+#[path = "deoniman_support/parent.rs"]
+mod deoniman_parent;
 use klem::breakdown::Component;
 use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
@@ -194,6 +196,13 @@ fn complete_original_source_words_preserve_order_and_attribute_each_addition() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules
+                .iter()
+                .any(|r| matches!(r.as_str(), "ending.deoniman" | "ending.reported_deoni"))
+            {
+                deoniman_parent::assert_report_parent(word, a);
+                continue;
+            }
             additions += 1;
             assert!(a.rules.iter().any(|r| r == "copula.omitted_ending"));
             assert!(a.breakdown().is_some());

@@ -1,3 +1,5 @@
+#[path = "deoniman_support/parent.rs"]
+mod deoniman_parent;
 use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use std::{path::PathBuf, sync::OnceLock};
@@ -94,6 +96,13 @@ fn frozen_source_orders_are_retained_and_new_paths_have_exact_parents() {
             .collect();
         assert_eq!(retained, old.analyses, "{word}");
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules
+                .iter()
+                .any(|r| matches!(r.as_str(), "ending.deoniman" | "ending.reported_deoni"))
+            {
+                deoniman_parent::assert_report_parent(word, a);
+                continue;
+            }
             assert!(command(a), "unattributed {word}: {a:?}");
             assert!(a.breakdown().is_some(), "unordered {word}: {a:?}");
             let mut parent = a.clone();

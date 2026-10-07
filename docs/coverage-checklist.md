@@ -2177,6 +2177,139 @@ review remains open under the completion review below.
   These checked items cover the bounded source-owned implementation; contextual
   and independent Korean review remain open under the parent inventory.
 
+- [x] **COV-017ca — Emphatic and directly recalled statements with -더니.**
+  **Implemented for the bounded source-owned forms.** The bounded forms are
+  더니만/더니마는, 다더니/는다더니 and their 만/마는 extensions.
+  [Complete source preparation](reported-deoni-source-preparation.json.gz)
+  preserves the primary entries 85796/85826, direct-report entries
+  81999/82000/82003 and supporting -더니 entries 81522/85795, including every
+  original note and example group. Exact captured -더니 or -다던/-는다던
+  counterparts establish structural provenance; they do not certify a sense.
+  The implementation keeps predicate/copula roles, auxiliary components,
+  honorific/past/modal slots, derived adjectives and present verb allomorphs
+  separate. It does not introduce an implicit reporting 하다. Dictionary
+  assessments retain Unknown for unlisted extensions and preserve conflicts.
+  [Family tests](../tests/deoniman.rs) and the global ledger include 57 stable
+  cases: 49 required and eight forbidden judgments. One is an unchanged pinned
+  [GSD corpus regression](reported-deoni-corpus-regression.json): test-s619/2
+  준다더니 requires 주다. Its judgment covers the annotated predicate lemma;
+  the other emitted candidates remain unjudged.
+
+- [x] **COV-017cb — Recalled copulas and commands -라더니/-으라더니.**
+  **Implemented for the bounded source-owned forms.** The
+  [complete primary sources](reported-command-deoni-source-preparation.json.gz)
+  preserve entries 82004/89662, all five senses, 20 original groups and the
+  actual prior -라던/-으라던 counterparts. Factual copulas and 아니다 remain
+  distinct from verb commands, with the consonant/ㄹ/vowel boundary and
+  source-listed honorific slots. Source-attested proverbial 같으라더니 is
+  retained as an uncertain adjective wish. 재기라더니 preserves the predicate
+  nominalization 재다 + 기 + 이다 rather than requiring the noun 재기.
+  [Family tests](../tests/reported_command_deoni.rs) and the global ledger
+  contain 31 stable cases: 25 required and six forbidden judgments. Command
+  spellings do not borrow factual past/modal licenses or negative aliases.
+  Unlisted dictionary attachment contexts remain Unknown.
+
+  **Joint evidence for COV-017ca/cb:** the combined ledger contains 88 cases
+  (74 required, 14 forbidden). The earlier [full prototype Rust receipt](reported-deoni-prototype-rust.json)
+  passes 1,000 tests, one ignored, against its original 87-case inputs. The
+  additional corpus case and updated count assertions pass in the separate
+  [15-test expanded-ledger run](reported-deoni-expanded-ledger-rust.json).
+  The [six complete source streams](reported-deoni-prototype-source-streams.json.gz)
+  preserve 378,774 frames from 131 complete owners, 5,464 original groups and
+  10,856 distinct words. Every prior path, dictionary assessment and original
+  NFC/NFD span is retained. The 243 distinct additions have actual prior
+  structural counterparts and stable individual observations.
+  [All 66,570 original gold rows](reported-deoni-prototype-corpora.json.gz)
+  and 32,096 full word analyses are retained; one previous lemma miss is
+  recovered. Every row outcome and ambiguity summary is independently checked
+  against the captured full CLI analyses. The [eight broad comparisons](reported-deoni-prototype-broad.json.gz)
+  preserve all 1,128,312 frames and spacing payloads; 49 additions across three
+  novel words retain exact parents and complete original occurrence lines.
+  Their contextual verdicts remain unjudged. The unchanged
+  [complete broad inputs](reported-deoni-broad-inputs.json.gz) are archived.
+  [All matched dictionary owners](reported-deoni-observation-native.json.gz)
+  preserve 167 complete Native/LMF entries and independently verified SQLite
+  and English projections, including incompatible and uncertain homonyms.
+  The [prototype browser](reported-deoni-prototype-browser.json.gz) passes
+  146 selected NFC/NFD diagrams and six exact CLI exports for the original
+  87-case suite; its screenshots were inspected. The expanded
+  [entry API closure](reported-deoni-prototype-entry-api.json.gz) verifies all
+  167 full entries. Both owned previews were stopped. Portable source and broad
+  audits include controls for changed dictionary readings, wrong parents,
+  invented contextual verdicts, missing entries/observations and altered
+  original novel lines.
+  The [integrated full Rust run](reported-deoni-main-rust.json) passes 1,000
+  tests with one ignored; its recorder captures 661 unchanged source inputs.
+  Their exact [archived texts](reported-deoni-main-rust-sources.json.gz) preserve
+  that recorded subset, rather than a complete source closure.
+  The later formatting change only reorders two test-module declarations;
+  its receipt and focused rerun are preserved. [Clippy, formatting, frontend
+  build and portable evidence controls](reported-deoni-main-checks.json) pass.
+  [Actual production CLI/evaluator parity](reported-deoni-main-production.json)
+  exactly matches all six source, four corpus and eight broad streams plus
+  all 32,096 word analyses. Twelve earlier degree/counterfactual source streams
+  retain every prior candidate and dictionary assessment; their 18 changed
+  frames have captured actual old counterparts. The [production browser](reported-deoni-main-browser.json.gz)
+  passes 148 diagrams, six exports and all 167 Native endpoints, retaining all
+  earlier 146 diagrams exactly. Desktop/mobile screenshots were inspected;
+  the owned preview was stopped.
+  The [actual Nix package build](reported-deoni-package-nix.json) passes all
+  1,000 tests (one ignored) and the SolidJS asset build. The 661 recorded
+  full-suite inputs match the [immutable package source](reported-deoni-package-sources.json),
+  with only the two recorded formatting changes. The
+  [complete source manifest](reported-deoni-package-complete-sources.json)
+  and [supplemental original texts](reported-deoni-package-source-supplement.json.gz)
+  preserve all 850 actual package inputs, including 184 annotated fixtures
+  and five ancillary files omitted by the earlier recorder. Every omitted
+  input is unchanged from the preceding commit; the original development
+  receipt retains its recorded scope. The [complete-source verifier](../tools/reported_deoni_complete_sources.py)
+  reconstructs the canonical 700,016,488-byte NAR, including directories and
+  executable flags, and computes its recursive Nix store path offline.
+  This binds every input to the tested derivation rather than only matching
+  separately recorded file hashes. Eight [corruption and baseline controls](../tools/test_reported_deoni_complete_sources.py)
+  cover missing fixtures/directories, changed gold text, executable flags,
+  source anchors and replacement NAR hashes. Their [local check receipt](reported-deoni-complete-source-checks.json)
+  preserves the audit and eight passing source controls alongside the
+  release audit and its eight controls. [Packaged CLI and browser
+  parity](reported-deoni-packaged-checks.json) passes every source, legacy and
+  broad stream, 32,096 complete corpus word analyses, 148 diagrams, six exports
+  and 167 full entry endpoints. The packaged evaluator is not installed; gold
+  outcomes transfer through exact full WordAnalysis equality.
+  [The release verifier](../tools/reported_deoni_release.py) and eight
+  [evidence controls](../tools/test_reported_deoni_release.py) pass.
+  [Cache parity](reported-deoni-cache-parity.json) passes every novel record
+  under all three dictionary modes at zero and 8 MiB budgets.
+  [Eighty actual timing samples](reported-deoni-performance.json) preserve
+  forty interleaved pairs across eight whole-novel workloads, pinned to the
+  same CPU after every owned build/audit job stopped. Median elapsed changes
+  range from −4.3% to +0.6%; load/frequency and RSS context is retained, with
+  no statistical-equivalence or isolated-clock claim. The
+  [performance verifier](../tools/reported_deoni_performance.py) checks every
+  command, sample, summary and cache-stream fingerprint. The first timing
+  attempt collected no samples because the previous package had been removed
+  from the Nix store; its [failure log](reported-deoni-performance-producer-failed.log.gz)
+  is preserved. [The exact committed baseline restoration](reported-deoni-baseline-restoration.json)
+  reproduces its original derivation/output, binary SHA, 38 source fingerprints
+  and 983 passing tests (one ignored) before the successful timing run.
+  The [earlier combined Nix gate](reported-deoni-pre-supplement-nix.json)
+  passes all three outputs with its original 113-file snapshot unchanged; its
+  [terminal log](reported-deoni-pre-supplement-nix.log.gz) is preserved. That
+  gate predates the supplemental source audit and does not validate it.
+  [The final three-output Nix gate](reported-deoni-final-nix.json) passes
+  the Rust package, SolidJS assets and the complete offline inventory audit,
+  including all 850 immutable package inputs and the eight source controls.
+  Its [unaltered terminal log](reported-deoni-final-nix.log.gz) and receipt
+  retain three outputs and the unchanged 130-file staged snapshot. The
+  earlier [failed gate](reported-deoni-final-nix-failed.json) and
+  [log](reported-deoni-final-nix-failed.log.gz) preserve dependency-download
+  failures before the inventory audit ran. The successful gate uses Nix’s
+  configured binary cache for build dependencies; every audit reads only
+  captured local evidence. These checked items close the bounded
+  implementation and release scope.
+  Contextual sense and independent Korean review
+  remain open. The prior runner argument/schema failures are preserved;
+  successful checks never overwrite their evidence.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

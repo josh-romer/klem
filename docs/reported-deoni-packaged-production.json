@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "prototype_parity": true,
+  "inputs_unchanged": true,
+  "nix_outputs": {
+    "klem": "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0",
+    "web-assets": "/nix/store/k171mgajwyj36mncq279wz865kr0hm0m-klem-web-assets-0.1.0"
+  },
+  "package_receipt_sha256": "5d671cdcf3946fabf9ea6a11fe97df0d897685910479ff6c010ef19792b4a7c9",
+  "frozen_inputs": {
+    "docs/reported-deoni-main-production.json": "a648ec3af9a8653d10a9eb388cddda8389dc34fea20053c6cb26d48d7717a359",
+    "docs/reported-deoni-prototype-source-streams.json.gz": "958d362eb02b2aa43b1bcce962100f3c9b4812cfd4759378509812850cd3ebde",
+    "docs/reported-deoni-prototype-corpora.json.gz": "78a13af74813ca83f5111600fafa884fca0115da3fb38e3414bd09b709d259f1",
+    "docs/reported-deoni-prototype-broad.json.gz": "eb00ca0d69cae2174dfade9dc8253c7093291546d970e11e2a1f763b69736409"
+  },
+  "binaries": {
+    "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem": "01dbf1fb5fa5a1e1f637277b406d5c8520f46879f59cf812b1ac2cd7f6a1121d",
+    "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5"
+  },
+  "source_runs": [
+    {
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "fb18ee1e7b7d589c6bdc5ae170fe6f537a63d70efc4e14d43520edcaade1f8d5",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "9fdcc3f387be98deb73e79d555f53bc0df36ddf9560e8af3240960ab67dc7a1f",
+      "records": 63129,
+      "expected_sha256": "9fdcc3f387be98deb73e79d555f53bc0df36ddf9560e8af3240960ab67dc7a1f"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "fb18ee1e7b7d589c6bdc5ae170fe6f537a63d70efc4e14d43520edcaade1f8d5",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "6c1be895500a16287567613a8587dbc56ef2ec35b02e88fc8bcc928110089a07",
+      "records": 63129,
+      "expected_sha256": "6c1be895500a16287567613a8587dbc56ef2ec35b02e88fc8bcc928110089a07"
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "fb18ee1e7b7d589c6bdc5ae170fe6f537a63d70efc4e14d43520edcaade1f8d5",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "f0a30f23d64eb7f54fd01bde58f3234a12d9f6232891e587030777a3c1d7105e",
+      "records": 63129,
+      "expected_sha256": "f0a30f23d64eb7f54fd01bde58f3234a12d9f6232891e587030777a3c1d7105e"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "556bf0fe71845fa121ddb3d6a163632ad483e573aa663ef02ebd7cbc6ff0a2ad",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "c63ba99df98a7dcaf019b7127a65fdcf978f40e762f85f5c2bd861f1448087fe",
+      "records": 63129,
+      "expected_sha256": "c63ba99df98a7dcaf019b7127a65fdcf978f40e762f85f5c2bd861f1448087fe"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "556bf0fe71845fa121ddb3d6a163632ad483e573aa663ef02ebd7cbc6ff0a2ad",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "64d2aa79d3970f25d53bd76b4c516a38ef36837861de16ddda531710f78a2fb9",
+      "records": 63129,
+      "expected_sha256": "64d2aa79d3970f25d53bd76b4c516a38ef36837861de16ddda531710f78a2fb9"
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "556bf0fe71845fa121ddb3d6a163632ad483e573aa663ef02ebd7cbc6ff0a2ad",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "55220cfaac11a552bd2e6e54f6722fcbe1ec697026e7518502b3153f00890044",
+      "records": 63129,
+      "expected_sha256": "55220cfaac11a552bd2e6e54f6722fcbe1ec697026e7518502b3153f00890044"
+    }
+  ],
+  "broad_runs": [
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-raw",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "95d0c98b8aa4e8c14536bd49d450657c737d988081069cf8aeb36d7d3f9d35d7",
+      "records": 77584,
+      "expected_sha256": "95d0c98b8aa4e8c14536bd49d450657c737d988081069cf8aeb36d7d3f9d35d7"
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-headword",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "93599af059a9a260dddc25db6cdb8ec03281ea30696113c6fc46237180ed2a40",
+      "records": 77584,
+      "expected_sha256": "93599af059a9a260dddc25db6cdb8ec03281ea30696113c6fc46237180ed2a40"
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-compatible",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "8d34027b57715759ab9c2e34280b79843d59daac99f1fc38725d35844f900003",
+      "records": 77584,
+      "expected_sha256": "8d34027b57715759ab9c2e34280b79843d59daac99f1fc38725d35844f900003"
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "d009362907b939e5ad2ea94b237b6cf69b7872fa7e696b92f0c5a17792750c77",
+      "records": 179112,
+      "expected_sha256": "d009362907b939e5ad2ea94b237b6cf69b7872fa7e696b92f0c5a17792750c77"
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "cc37c13c35715b555ed0106eec750ab2858169fba74f43bcc085dec5949a33a3",
+      "records": 179112,
+      "expected_sha256": "cc37c13c35715b555ed0106eec750ab2858169fba74f43bcc085dec5949a33a3"
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "c02c25fc4dbddd821605d6c2df3f90f0b4d90913e231c3704de078dde353287b",
+      "records": 179112,
+      "expected_sha256": "c02c25fc4dbddd821605d6c2df3f90f0b4d90913e231c3704de078dde353287b"
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword-spacing",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only",
+        "--suggest-spacing"
+      ],
+      "exit_code": 0,
+      "sha256": "0d463ca01ab62816510897377a2a679030962ce0636e8bedb67b035eaa8fdf0f",
+      "records": 179112,
+      "expected_sha256": "0d463ca01ab62816510897377a2a679030962ce0636e8bedb67b035eaa8fdf0f"
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible-spacing",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible",
+        "--suggest-spacing"
+      ],
+      "exit_code": 0,
+      "sha256": "9d859460561e1634e090109a8d955bd68ff98264e15106779006eaba7439323d",
+      "records": 179112,
+      "expected_sha256": "9d859460561e1634e090109a8d955bd68ff98264e15106779006eaba7439323d"
+    }
+  ],
+  "legacy_source_runs": [
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "2f428c644ec471c3fdaeffba9c58a168035bcd73b238ac43e5fae48cb53c3010",
+      "prior_stream_sha256": "1b93a3aa2b1760823e611037a6fe4fccca93c75372bfa79b562cea2a20b40b3d",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "725e8b69f23ecabcb058a2cae8d23546d789917ec05f7825486dadc34d88f999",
+      "records": 24433,
+      "expected_sha256": "725e8b69f23ecabcb058a2cae8d23546d789917ec05f7825486dadc34d88f999"
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "2f428c644ec471c3fdaeffba9c58a168035bcd73b238ac43e5fae48cb53c3010",
+      "prior_stream_sha256": "721e6d2a89f7ab51f6d91825af818b5efa1bc3f1aa4d7c9f167d5e74fd56a536",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "3d56a9e635b9874bfd81fb2f1df344f8acfe135933f1dc238b7283898cd1598d",
+      "records": 24433,
+      "expected_sha256": "3d56a9e635b9874bfd81fb2f1df344f8acfe135933f1dc238b7283898cd1598d"
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "2f428c644ec471c3fdaeffba9c58a168035bcd73b238ac43e5fae48cb53c3010",
+      "prior_stream_sha256": "378c12ad1b6fa438f0807e9b93031455bef066e00c75a44570450d10725b8c53",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "632ca5d75a8aff0f4b835c0fc37b560f9021baf213990c6c01a86a2f70037202",
+      "records": 24433,
+      "expected_sha256": "632ca5d75a8aff0f4b835c0fc37b560f9021baf213990c6c01a86a2f70037202"
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "3e72e981dea568b1dfafdfa09b686bc83a21a87bbe048331e63dbbe0caafa7ee",
+      "prior_stream_sha256": "d160b43c28ff864dcd1f1035e7cf93a951b576dc245102b66765e69e4e9af5bd",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e2f95032af62a2281c157b81e8c7797e8c5fe5d971fca0b7b57c026c7e823d85",
+      "records": 24433,
+      "expected_sha256": "e2f95032af62a2281c157b81e8c7797e8c5fe5d971fca0b7b57c026c7e823d85"
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "3e72e981dea568b1dfafdfa09b686bc83a21a87bbe048331e63dbbe0caafa7ee",
+      "prior_stream_sha256": "c394cce74e965e85a94c9a992cdeec93e3e2b9d466f6b26572afb854285771e5",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "64957dbf67aa245523818dcc9968a7f5d888a8e29a01af776ccbed4f39b688ba",
+      "records": 24433,
+      "expected_sha256": "64957dbf67aa245523818dcc9968a7f5d888a8e29a01af776ccbed4f39b688ba"
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "3e72e981dea568b1dfafdfa09b686bc83a21a87bbe048331e63dbbe0caafa7ee",
+      "prior_stream_sha256": "e64ec4f5fd715080e600e31481a577accf67fba4265d844cd7b904a9a9061f15",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "2cd32aff83bfc7dfbec42dcda5b5f385e9f6a82de3489acd422ebbe4befc4195",
+      "records": 24433,
+      "expected_sha256": "2cd32aff83bfc7dfbec42dcda5b5f385e9f6a82de3489acd422ebbe4befc4195"
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "229acdaba0df595bd75c2afe6041ed659da4f4891ac514dcd76dfe1e0f923726",
+      "prior_stream_sha256": "21ffaa55ea4f739f2f161aa3f692106d69bbe0ae8a780c9a0007bbeca5e0de3d",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "13d4bb72d65e6becd985503f19fb417b8de0b49253187c5200c3955ba0149d70",
+      "records": 27177,
+      "expected_sha256": "13d4bb72d65e6becd985503f19fb417b8de0b49253187c5200c3955ba0149d70"
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "229acdaba0df595bd75c2afe6041ed659da4f4891ac514dcd76dfe1e0f923726",
+      "prior_stream_sha256": "b36860ed477a60bbd59bc9c9fe7c6182020bf25bed4b62304027e1c91817a064",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "034ecd79a5092f142898781eb8df924887dc1829147f510c2dbe2b1cff07e08b",
+      "records": 27177,
+      "expected_sha256": "034ecd79a5092f142898781eb8df924887dc1829147f510c2dbe2b1cff07e08b"
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "229acdaba0df595bd75c2afe6041ed659da4f4891ac514dcd76dfe1e0f923726",
+      "prior_stream_sha256": "fbd00908c0bfd34e990161e26f109ae39f85f05a7ca4c1230db9047e1ad7a98a",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "d071fd4a920652e4bb024b092976f08a24f3beefdc907a5d403aac950146e233",
+      "records": 27177,
+      "expected_sha256": "d071fd4a920652e4bb024b092976f08a24f3beefdc907a5d403aac950146e233"
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "0f706d0f30265b68ae7bf892e1ec9b22cf78058e3ac94524874b042d67109f7c",
+      "prior_stream_sha256": "b5f55ed6800f3422bfb66759d01639743d5e95cfd2410cdc82d231d20ecff074",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "a3714766386b5d6d662338d33a90612c97c3b46ccc6288b10dc35fc9fe0ac8f3",
+      "records": 27177,
+      "expected_sha256": "a3714766386b5d6d662338d33a90612c97c3b46ccc6288b10dc35fc9fe0ac8f3"
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "0f706d0f30265b68ae7bf892e1ec9b22cf78058e3ac94524874b042d67109f7c",
+      "prior_stream_sha256": "5560641d89b686140040062fa91b1fc81c56108e577d4eeae481925d18eb02ee",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "dc2a5cdcf34f83799e21cb895f8709b3fb1487622f9ab4645f5f645d874161f1",
+      "records": 27177,
+      "expected_sha256": "dc2a5cdcf34f83799e21cb895f8709b3fb1487622f9ab4645f5f645d874161f1"
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "0f706d0f30265b68ae7bf892e1ec9b22cf78058e3ac94524874b042d67109f7c",
+      "prior_stream_sha256": "e613c457429cf66ac0dbd235bb02512ced7793111339409351dd5248bd05789b",
+      "command": [
+        "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "b65a10350676b1e7648da5a760153e4f9b9b8d78a6f3e38a8b2a49bc70b271ba",
+      "records": 27177,
+      "expected_sha256": "b65a10350676b1e7648da5a760153e4f9b9b8d78a6f3e38a8b2a49bc70b271ba"
+    }
+  ],
+  "corpus_words": 32096,
+  "corpus_word_sha256": "89d8b4432bd37b7d48e038506151b56c75e95e37ab0b4c02c8ca9d866178c62c",
+  "corpus_reference_runs": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "report_lines": 22221,
+      "reference_evaluator_jsonl_sha256": "95c388484605b643af58f8ed45f4dd415ac4088d30a315b21a70f6e2e8e61e75"
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "report_lines": 24491,
+      "reference_evaluator_jsonl_sha256": "bc8f467e0e8ee48f7326a4dbed71f6c3a6e7317e706d95be0b59693e2e1645b9"
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "report_lines": 9990,
+      "reference_evaluator_jsonl_sha256": "adc77aade3452a1ace745a6616cf8b378c412987c30e5187053fb285b129175c"
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "report_lines": 9872,
+      "reference_evaluator_jsonl_sha256": "64777e79264d8052ca307bf2dc926c0aca2a0dca40bc45e46aadc26c7d452aff"
+    }
+  ],
+  "corpus_validation": {
+    "method": "Exact packaged CLI WordAnalysis equality for every original gold surface, tied to the independently verified evaluator results; no packaged evaluator executable is claimed.",
+    "verified_gold_rows": 66570
+  },
+  "producer": {
+    "text": "\"\"\"Verify actual packaged CLI outputs; transfer gold only by full WordAnalysis equality.\"\"\"\nimport hashlib,json,sys,unicodedata\nfrom pathlib import Path\nROOT=Path('/home/josh/projects/klem');sys.path.insert(0,str(ROOT/'tools'))\nfrom copula_expectation_production import read,sha,replay\nfrom doeda_native_corpora import words_from_cli\nRECEIPT=Path('/tmp/klem-reported-deoni-package-nix.json')\nOUTPUT=Path('/tmp/klem-reported-deoni-packaged-production.json');assert not OUTPUT.exists()\npackage=json.loads(RECEIPT.read_text());assert package['state']=='passed' and package['exit_code']==0 and package['snapshot_unchanged']\nassert len(package['outputs'])==2\nrust=[Path(p) for p in package['outputs'] if (Path(p)/'bin/klem').is_file()]\nassets=[Path(p) for p in package['outputs'] if (Path(p)/'share/klem-web/index.html').is_file()]\nassert len(rust)==len(assets)==1;CLI=rust[0]/'bin/klem';DB=ROOT/'data/dictionaries/krdict/krdict.db'\nassert not (CLI.parent/'examples/evaluate').exists(),'Revisit claimed corpus method if package layout changes'\nmain=read('docs/reported-deoni-main-production.json');assert main['state']=='passed'\npaths=['docs/reported-deoni-main-production.json','docs/reported-deoni-prototype-source-streams.json.gz','docs/reported-deoni-prototype-corpora.json.gz','docs/reported-deoni-prototype-broad.json.gz']\nfrozen={p:sha(ROOT/p) for p in paths};binaries={str(p):sha(p) for p in [CLI,DB]}\nsource=read(paths[1]);runs=[]\nfor old in main['source_runs']:\n request=unicodedata.normalize(old['encoding'],source['input'])\n assert hashlib.sha256(request.encode()).hexdigest()==old['input_sha256']\n result=replay([str(CLI),*old['command'][1:]],old['sha256'],old['records'],request)\n runs.append({key:old[key] for key in ['encoding','mode','input_sha256']}|result)\n print('packaged source',old['encoding'],old['mode'],old['records'],flush=True)\ncorpus=read(paths[2]);words=words_from_cli(CLI,sorted(corpus['after_words']))\nassert words==corpus['after_words'] and len(words)==32096\nword_hash=hashlib.sha256(json.dumps(words,ensure_ascii=False,sort_keys=True).encode()).hexdigest();assert word_hash==main['corpus_word_sha256']\nreferences=[]\nfor old in corpus['corpora']:\n assert sha(ROOT/old['source'])==old['source_sha256']\n references.append({key:old[key] for key in ['corpus','partition','source','source_sha256','report_lines']}|{'reference_evaluator_jsonl_sha256':hashlib.sha256(old['after_jsonl'].encode()).hexdigest()})\nbroad_runs=[]\nfor old in main['broad_runs']:\n assert sha(old['source'])==old['source_sha256']\n result=replay([str(CLI),*old['command'][1:]],old['sha256'],old['records'])\n broad_runs.append({key:old[key] for key in ['source','source_sha256','mode']}|result)\n print('packaged broad',old['mode'],old['records'],flush=True)\nlegacy=[]\nfor old in main['legacy_source_runs']:\n original=read(f\"docs/{old['family']}-cohort.json.gz\")\n request=unicodedata.normalize(old['encoding'],original['input'])\n assert hashlib.sha256(request.encode()).hexdigest()==old['input_sha256']\n result=replay([str(CLI),*old['command'][1:]],old['sha256'],old['records'],request)\n legacy.append({key:old[key] for key in ['family','encoding','mode','input_sha256','prior_stream_sha256']}|result)\n print('packaged legacy',old['family'],old['encoding'],old['mode'],old['records'],flush=True)\nassert len(runs)==6 and sum(r['records'] for r in runs)==378774\nassert len(broad_runs)==8 and sum(r['records'] for r in broad_runs)==1128312\nassert len(legacy)==12 and sum(r['records'] for r in legacy)==309660\nassert len(references)==4 and sum(r['report_lines']-1 for r in references)==66570\nassert all(sha(ROOT/p)==digest for p,digest in frozen.items()) and all(sha(p)==digest for p,digest in binaries.items())\nproducer=Path(__file__)\nreport={'schema_version':1,'state':'passed','prototype_parity':True,'inputs_unchanged':True,'nix_outputs':{'klem':str(rust[0]),'web-assets':str(assets[0])},'package_receipt_sha256':sha(RECEIPT),'frozen_inputs':frozen,'binaries':binaries,'source_runs':runs,'broad_runs':broad_runs,'legacy_source_runs':legacy,'corpus_words':len(words),'corpus_word_sha256':word_hash,'corpus_reference_runs':references,'corpus_validation':{'method':'Exact packaged CLI WordAnalysis equality for every original gold surface, tied to the independently verified evaluator results; no packaged evaluator executable is claimed.','verified_gold_rows':66570},'producer':{'text':producer.read_text(),'sha256':sha(producer)},'scope':'Actual packaged CLI equality for all18 source/legacy and eight broad streams plus32096 full original words. Gold transfer is explicitly distinguished from running an evaluator in the package. Contextual and independent linguistic certification remain separate.'}\nOUTPUT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n');print('Actual packaged source/broad/legacy/corpus-word parity passes.',flush=True)\n",
+    "sha256": "c21751b34a1ef30960ef94f0de8e6d093b87d56180448cc7ea4b6e64bccaee90"
+  },
+  "scope": "Actual packaged CLI equality for all18 source/legacy and eight broad streams plus32096 full original words. Gold transfer is explicitly distinguished from running an evaluator in the package. Contextual and independent linguistic certification remain separate."
+}

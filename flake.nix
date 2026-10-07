@@ -359,6 +359,19 @@
                 ./tools/copula_expectation_release.py
                 ./tools/test_copula_expectation_release.py
                 ./tools/copula_expectation_performance.py
+                ./tools/reported_deoni_parent.py
+                ./tools/reported_deoni_audit.py
+                ./tools/reported_deoni_broad.py
+                ./tools/reported_deoni_corpora.py
+                ./tools/reported_deoni_production.py
+                ./tools/reported_deoni_browser.py
+                ./tools/test_reported_deoni.py
+                ./tools/reported_deoni_release.py
+                ./tools/test_reported_deoni_release.py
+                ./tools/reported_deoni_complete_sources.py
+                ./tools/test_reported_deoni_complete_sources.py
+                ./tools/reported_deoni_performance.py
+                ./web/tests/reported-deoni.mjs
                 ./web/tests/copula-expectation.mjs
                 ./src/dictionary/attachment.rs
                 ./tools/degree_expectation_performance.py
@@ -683,6 +696,14 @@
             python tools/copula_expectation_release.py --verify
             python -m unittest discover -s tools -p 'test_copula_expectation_release.py'
             python tools/copula_expectation_performance.py --verify
+            python tools/reported_deoni_audit.py
+            python tools/reported_deoni_corpora.py
+            python tools/reported_deoni_broad.py
+            python -m unittest discover -s tools -p 'test_reported_deoni.py'
+            python tools/reported_deoni_release.py --verify
+            python -m unittest discover -s tools -p 'test_reported_deoni_release.py'
+            python -m unittest discover -s tools -p 'test_reported_deoni_complete_sources.py'
+            python tools/reported_deoni_performance.py --verify
             python tools/friendly_command_runtime.py
             python tools/friendly_command_corpora.py --verify
             python tools/friendly_command_broad.py --verify

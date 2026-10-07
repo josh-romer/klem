@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+  "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+  "source_url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Korean-GSD/60ffc4f2f0cbf0bf816f0d44a7339512f5ce9c25/ko_gsd-ud-test.conllu",
+  "gold_row": {
+    "id": "id:test-s619/2",
+    "before": {
+      "id": "id:test-s619/2",
+      "surface": "준다더니",
+      "expected": [
+        "주다"
+      ],
+      "matched": false,
+      "recovered": 0,
+      "recovered_sets": []
+    },
+    "after": {
+      "id": "id:test-s619/2",
+      "surface": "준다더니",
+      "expected": [
+        "주다"
+      ],
+      "matched": true,
+      "recovered": 1,
+      "recovered_sets": [
+        [
+          0
+        ]
+      ]
+    },
+    "complete_sentence": "# sent_id = test-s619\n# text = 연락 준다더니 전화할 때까지 절대 연락 안 줌;\n# translit = .yeon.rag .jun.da.deo.ni .jeon.hwa.hal .ddae.gga.ji .jeol.dae .yeon.rag .an .jum;\n1\t연락\t연락\tNOUN\tNNG\t_\t2\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n2\t준다더니\t주+ㄴ다더니\tVERB\tVV+EC\t_\t8\tadvcl\t_\tTranslit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni\n3\t전화할\t전화+하+ㄹ\tVERB\tNNG+XSV+ETM\t_\t8\tadvcl\t_\tTranslit=.jeon.hwa.hal|LTranslit=.jeon.hwa+.ha+ㄹ\n4\t때까지\t때+까지\tADV\tNNG+JX\t_\t3\tmark\t_\tTranslit=.ddae.gga.ji|LTranslit=.ddae+.gga.ji\n5\t절대\t절대\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.jeol.dae|LTranslit=.jeol.dae\n6\t연락\t연락\tNOUN\tNNG\t_\t8\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n7\t안\t안\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.an|LTranslit=.an\n8\t줌\t줌\tNOUN\tNNG\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jum|LTranslit=.jum\n9\t;\t;\tPUNCT\tSP\t_\t8\tpunct\t_\tTranslit=;|LTranslit=;",
+    "original_row": [
+      "2",
+      "준다더니",
+      "주+ㄴ다더니",
+      "VERB",
+      "VV+EC",
+      "_",
+      "8",
+      "advcl",
+      "_",
+      "Translit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni"
+    ]
+  },
+  "suite": "/tmp/klem-reported-deoni-corpus-regression-validity.json",
+  "suite_sha256": "41c1bafc9953a6b4b42a267ba160b5a127450ed3ea0445361decc8c683f4041f",
+  "corpus_capture_sha256": "78a13af74813ca83f5111600fafa884fca0115da3fb38e3414bd09b709d259f1",
+  "candidate_observations": [
+    {
+      "id": "reported-deoni-corpus-74be172bc8982afc7a3a6f31",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "주다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는다더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_deoni"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "준다던",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "주다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는다던",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reporting_retrospective"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "occurrences": [
+        {
+          "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+          "id": "id:test-s619/2",
+          "complete_sentence": "# sent_id = test-s619\n# text = 연락 준다더니 전화할 때까지 절대 연락 안 줌;\n# translit = .yeon.rag .jun.da.deo.ni .jeon.hwa.hal .ddae.gga.ji .jeol.dae .yeon.rag .an .jum;\n1\t연락\t연락\tNOUN\tNNG\t_\t2\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n2\t준다더니\t주+ㄴ다더니\tVERB\tVV+EC\t_\t8\tadvcl\t_\tTranslit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni\n3\t전화할\t전화+하+ㄹ\tVERB\tNNG+XSV+ETM\t_\t8\tadvcl\t_\tTranslit=.jeon.hwa.hal|LTranslit=.jeon.hwa+.ha+ㄹ\n4\t때까지\t때+까지\tADV\tNNG+JX\t_\t3\tmark\t_\tTranslit=.ddae.gga.ji|LTranslit=.ddae+.gga.ji\n5\t절대\t절대\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.jeol.dae|LTranslit=.jeol.dae\n6\t연락\t연락\tNOUN\tNNG\t_\t8\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n7\t안\t안\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.an|LTranslit=.an\n8\t줌\t줌\tNOUN\tNNG\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jum|LTranslit=.jum\n9\t;\t;\tPUNCT\tSP\t_\t8\tpunct\t_\tTranslit=;|LTranslit=;",
+          "original_row": [
+            "2",
+            "준다더니",
+            "주+ㄴ다더니",
+            "VERB",
+            "VV+EC",
+            "_",
+            "8",
+            "advcl",
+            "_",
+            "Translit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reported-deoni-corpus-4442d356d31e9e0a44fe7659",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "준다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_deoni"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "준다던",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "준다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다던",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reporting_retrospective"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "occurrences": [
+        {
+          "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+          "id": "id:test-s619/2",
+          "complete_sentence": "# sent_id = test-s619\n# text = 연락 준다더니 전화할 때까지 절대 연락 안 줌;\n# translit = .yeon.rag .jun.da.deo.ni .jeon.hwa.hal .ddae.gga.ji .jeol.dae .yeon.rag .an .jum;\n1\t연락\t연락\tNOUN\tNNG\t_\t2\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n2\t준다더니\t주+ㄴ다더니\tVERB\tVV+EC\t_\t8\tadvcl\t_\tTranslit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni\n3\t전화할\t전화+하+ㄹ\tVERB\tNNG+XSV+ETM\t_\t8\tadvcl\t_\tTranslit=.jeon.hwa.hal|LTranslit=.jeon.hwa+.ha+ㄹ\n4\t때까지\t때+까지\tADV\tNNG+JX\t_\t3\tmark\t_\tTranslit=.ddae.gga.ji|LTranslit=.ddae+.gga.ji\n5\t절대\t절대\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.jeol.dae|LTranslit=.jeol.dae\n6\t연락\t연락\tNOUN\tNNG\t_\t8\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n7\t안\t안\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.an|LTranslit=.an\n8\t줌\t줌\tNOUN\tNNG\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jum|LTranslit=.jum\n9\t;\t;\tPUNCT\tSP\t_\t8\tpunct\t_\tTranslit=;|LTranslit=;",
+          "original_row": [
+            "2",
+            "준다더니",
+            "주+ㄴ다더니",
+            "VERB",
+            "VV+EC",
+            "_",
+            "8",
+            "advcl",
+            "_",
+            "Translit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reported-deoni-corpus-d6f812f6ae6385b19b8bdea0",
+      "surface": "준다더니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "줄다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는다더니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_deoni"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "준다던",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "줄다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는다던",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reporting_retrospective"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "occurrences": [
+        {
+          "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+          "id": "id:test-s619/2",
+          "complete_sentence": "# sent_id = test-s619\n# text = 연락 준다더니 전화할 때까지 절대 연락 안 줌;\n# translit = .yeon.rag .jun.da.deo.ni .jeon.hwa.hal .ddae.gga.ji .jeol.dae .yeon.rag .an .jum;\n1\t연락\t연락\tNOUN\tNNG\t_\t2\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n2\t준다더니\t주+ㄴ다더니\tVERB\tVV+EC\t_\t8\tadvcl\t_\tTranslit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni\n3\t전화할\t전화+하+ㄹ\tVERB\tNNG+XSV+ETM\t_\t8\tadvcl\t_\tTranslit=.jeon.hwa.hal|LTranslit=.jeon.hwa+.ha+ㄹ\n4\t때까지\t때+까지\tADV\tNNG+JX\t_\t3\tmark\t_\tTranslit=.ddae.gga.ji|LTranslit=.ddae+.gga.ji\n5\t절대\t절대\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.jeol.dae|LTranslit=.jeol.dae\n6\t연락\t연락\tNOUN\tNNG\t_\t8\tobj\t_\tTranslit=.yeon.rag|LTranslit=.yeon.rag\n7\t안\t안\tADV\tMAG\t_\t8\tadvmod\t_\tTranslit=.an|LTranslit=.an\n8\t줌\t줌\tNOUN\tNNG\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jum|LTranslit=.jum\n9\t;\t;\tPUNCT\tSP\t_\t8\tpunct\t_\tTranslit=;|LTranslit=;",
+          "original_row": [
+            "2",
+            "준다더니",
+            "주+ㄴ다더니",
+            "VERB",
+            "VV+EC",
+            "_",
+            "8",
+            "advcl",
+            "_",
+            "Translit=.jun.da.deo.ni|LTranslit=.ju+ㄴ.da.deo.ni"
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "A separate pinned-corpus lemma regression; the88th proposed case when integrated. Original87-case suite and fullRust receipt remain preserved unchanged. No forbidden judgment inferred for other alternatives."
+}

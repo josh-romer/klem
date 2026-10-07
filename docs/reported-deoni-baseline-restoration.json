@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "commit": "6b746fec943ffd0dbd6a36e7c279859db4e578ae",
+  "package": "/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0",
+  "derivation": "/nix/store/3r3yzsj1rpgq3w0q8wsi1kgl1jhrbs7r-klem-0.1.0.drv",
+  "source": "/nix/store/585x4pkp0gn4mkvqywzcqi2zp8p4hkv3-source",
+  "cli_sha256": "adc4df2f5ec58f23466fcc7b14feb21603ff7ecd1fd2128a43a5abcb4df771ae",
+  "previous_receipt_sha256": "eae679be84876a4d89cf2fefa7475b02944dbffd87bbe63453c6c1efd83f3e05",
+  "source_proof_sha256": "b480fc30c82fbe60bfd5c597346f33faca8f4fe9eabd8c38bc5aefe1c1ed7efc",
+  "source_files_verified": 38,
+  "rust_passed": 983,
+  "rust_ignored": 1,
+  "rust_batches": 209,
+  "restore_log_sha256": "bec8b88e57ca8f2d01884d7b714cdd5e4a065d83d41bdd16b01f0136dee0ea49",
+  "producer": {
+    "text": "\"\"\"Verify the rebuilt exact baseline before any timing sample is collected.\"\"\"\nimport gzip,hashlib,json,re\nfrom pathlib import Path\nROOT=Path('/home/josh/projects/klem')\nproof=json.loads((ROOT/'docs/copula-expectation-package-sources.json').read_text())\nprevious=json.loads((ROOT/'docs/copula-expectation-packaged-checks.json').read_text())\npackage=Path(previous['nix_outputs']['klem']);source=Path(proof['source']);cli=package/'bin/klem'\nassert str(package)==proof['package']=='/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0'\nassert hashlib.sha256(cli.read_bytes()).hexdigest()==previous['cli_sha256']\nassert Path('/tmp/klem-reported-deoni-baseline-root').resolve()==package\nfor name,record in proof['files'].items():\n raw=(source/name).read_bytes();assert hashlib.sha256(raw).hexdigest()==record['sha256'] and len(raw)==record['bytes'],name\nlog=Path('/tmp/klem-reported-deoni-baseline-restore-committed.log').read_bytes();text=log.decode()\nassert proof['derivation'] in text and proof['source'] in text\nassert text.splitlines()[-1]==str(package)\nbatches=re.findall(r'test result: ok\\. (\\d+) passed; 0 failed; (\\d+) ignored;',text)\nassert (sum(int(n) for n,i in batches),sum(int(i) for n,i in batches),len(batches))==(983,1,209)\nassert 'FAILED' not in text and 'error:' not in text\np=Path(__file__);out=ROOT/'docs/reported-deoni-baseline-restoration.json';assert not out.exists()\nreport={'schema_version':1,'state':'passed','commit':'6b746fec943ffd0dbd6a36e7c279859db4e578ae','package':str(package),'derivation':proof['derivation'],'source':str(source),'cli_sha256':previous['cli_sha256'],'previous_receipt_sha256':hashlib.sha256((ROOT/'docs/copula-expectation-packaged-checks.json').read_bytes()).hexdigest(),'source_proof_sha256':hashlib.sha256((ROOT/'docs/copula-expectation-package-sources.json').read_bytes()).hexdigest(),'source_files_verified':len(proof['files']),'rust_passed':983,'rust_ignored':1,'rust_batches':209,'restore_log_sha256':hashlib.sha256(log).hexdigest(),'producer':{'text':p.read_text(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()},'scope':'Exact recorded baseline derivation/output,38 original source fingerprints and binary SHA reproduced after store removal. Baseline tests repeat successfully; no performance samples collected by this verifier.'}\nout.write_text(json.dumps(report,indent=2)+'\\n');dst=ROOT/'docs/reported-deoni-baseline-restoration.log.gz';assert not dst.exists();dst.write_bytes(gzip.compress(log,mtime=0))\nprint('Restored exact prior baseline, all38 source fingerprints and binary SHA;983 tests/1 ignored pass.')\n",
+    "sha256": "bd84a4c02f3da1747c24136f8824354da6ab61d305b392248bb2f2659b676ff2"
+  },
+  "scope": "Exact recorded baseline derivation/output,38 original source fingerprints and binary SHA reproduced after store removal. Baseline tests repeat successfully; no performance samples collected by this verifier."
+}

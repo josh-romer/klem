@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-017ca",
+    "COV-017cb"
+  ],
+  "state": "passed",
+  "pid": 2670857,
+  "started_at": "2026-10-07T05:38:39.183958+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets"
+  ],
+  "snapshot": {
+    "head": "6b746fec943ffd0dbd6a36e7c279859db4e578ae",
+    "staged_diff_sha256": "82c6f0b6cea7d76a8e2652fb3cc890d0228be8804285669bbd2daab5328fa296",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "88960e96b1abd59cbf489d6640301183587f653feb140ccd88ca5bba3cc04e58",
+        "bytes": 491273
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "f4e0b1acd2616fd4621b2c4075d6396cdb016d16ad63447bb250803e2e36c192",
+        "bytes": 3404108
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "d0d09ed3ed1dbc51a779fa1005fff19faacccf7829825e1828dde64a3088c40b",
+        "bytes": 1278321
+      },
+      "docs/reported-command-deoni-source-preparation.json.gz": {
+        "sha256": "1aa7fcadda82a45d19843ae75523bd6491502812e0e1abafb5943fe6043a460e",
+        "bytes": 24545
+      },
+      "docs/reported-deoni-broad-inputs.json.gz": {
+        "sha256": "7d43206bb6add22e79cb27173ff049cf501e9dcdabe307c9d5a4cacc2ab26902",
+        "bytes": 389879
+      },
+      "docs/reported-deoni-corpora-failed.json": {
+        "sha256": "fe4b16c6edb267a74391b17fb125029bc609a61c11055f8a0ec53b31a8b4e37f",
+        "bytes": 491
+      },
+      "docs/reported-deoni-corpora-failed.log.gz": {
+        "sha256": "e18d885eec70646de9b28367c2f7eebc7c760e9ddf7cf62a63a95729ca38817a",
+        "bytes": 476
+      },
+      "docs/reported-deoni-corpus-regression-validity-result.json": {
+        "sha256": "8a3a9491e656dbae47fd4938fc1dc1b28d53e3ffe746e0f2446b548c94bced77",
+        "bytes": 8817
+      },
+      "docs/reported-deoni-corpus-regression-validity.json": {
+        "sha256": "41c1bafc9953a6b4b42a267ba160b5a127450ed3ea0445361decc8c683f4041f",
+        "bytes": 1053
+      },
+      "docs/reported-deoni-corpus-regression.json": {
+        "sha256": "a5a0552431094a41bf8521e4911b52ef7db232a49334095d95d34e4d4180fcca",
+        "bytes": 10409
+      },
+      "docs/reported-deoni-expanded-ledger-rust.json": {
+        "sha256": "7fb60398e027550b643c247d111d872ceb6c07aaf5e4d147c3995abc7a69df6e",
+        "bytes": 953
+      },
+      "docs/reported-deoni-expanded-ledger-rust.log.gz": {
+        "sha256": "beaa7b4e4d9bb20b4b6acd912818570d742143dff92a810b636814c737c510e6",
+        "bytes": 775
+      },
+      "docs/reported-deoni-integration.json.gz": {
+        "sha256": "50b9eb25cb1f04b77f79ff54ecb564705d66096c69820d422575c5b54894dc94",
+        "bytes": 2702149
+      },
+      "docs/reported-deoni-main-broad-audit.log.gz": {
+        "sha256": "5719211d8a3898efc9ef9263c104f46a9c0804678d2a42c60e5c1177e64b5768",
+        "bytes": 186
+      },
+      "docs/reported-deoni-main-browser.json.gz": {
+        "sha256": "d3be9b691b74c26dc9bba3b104cd06369026d27d5e6e208dfa645bb12381220f",
+        "bytes": 985526
+      },
+      "docs/reported-deoni-main-checks.json": {
+        "sha256": "5cadf2f510a9e54871ec626619ae2551a177d994a8cd275d1dac90e619316a8c",
+        "bytes": 2409
+      },
+      "docs/reported-deoni-main-clippy.log.gz": {
+        "sha256": "43ce8475acb214421cd6884d65390dd0cefdc20860e8fe4c4bca7dc56954a9f5",
+        "bytes": 130
+      },
+      "docs/reported-deoni-main-corpora-audit.log.gz": {
+        "sha256": "4dbf0b7a06ae7720621f10b62d26fcd321a2ef655fab310346d6ba1cc7884c6d",
+        "bytes": 108
+      },
+      "docs/reported-deoni-main-evidence-tests-failed.log.gz": {
+        "sha256": "d999eaede1cc666d57feb59192a39c22d965eec23b40c6d0c25f1f5bcbce393b",
+        "bytes": 403
+      },
+      "docs/reported-deoni-main-evidence-tests.log.gz": {
+        "sha256": "a0e3267a3244c01cfa8cff813b8af7bbabc6d9d7d1e732ae5cfdd0abd21bcf6c",
+        "bytes": 54
+      },
+      "docs/reported-deoni-main-fmt-failed.log.gz": {
+        "sha256": "3f99b1f51b384b1ff6625d84b05b334aa76fa6231d340e583023d3ff6a3dc1f3",
+        "bytes": 262
+      },
+      "docs/reported-deoni-main-fmt.log.gz": {
+        "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+        "bytes": 20
+      },
+      "docs/reported-deoni-main-formatted-regressions.log.gz": {
+        "sha256": "cbfd6f4213bb81c29f43faf59cfacfefe9cbb794e0f8a526b410edd709b620c5",
+        "bytes": 520
+      },
+      "docs/reported-deoni-main-formatting.json": {
+        "sha256": "1518c7b6a49153dde0c8ecdea32046f290af999b90f7d914a4096ee9193a8de9",
+        "bytes": 643
+      },
+      "docs/reported-deoni-main-production.json": {
+        "sha256": "a648ec3af9a8653d10a9eb388cddda8389dc34fea20053c6cb26d48d7717a359",
+        "bytes": 896162
+      },
+      "docs/reported-deoni-main-production.log.gz": {
+        "sha256": "e4bdc1c25811c0139e91e37ebc36afe200b0295b5acc7ccf27804e4588c7508c",
+        "bytes": 389
+      },
+      "docs/reported-deoni-main-rust-sources.json.gz": {
+        "sha256": "5cc2e13db49e892c603825cbfe48deae8ddc482ebff1e2edc519dc0e7c53167f",
+        "bytes": 49494727
+      },
+      "docs/reported-deoni-main-rust.json": {
+        "sha256": "af0ed772019ecca45b1d6e4a53b7ffed5ca7d7d9ba73111fdc2b20d72efa46df",
+        "bytes": 73961
+      },
+      "docs/reported-deoni-main-rust.log.gz": {
+        "sha256": "fb7ca86833cb9a07a51fa7eb586055116d6f12bd84352f7e4722c3df3a6047a3",
+        "bytes": 23169
+      },
+      "docs/reported-deoni-main-source-audit.log.gz": {
+        "sha256": "0ba1cd0bbed2ef4206e90406e35b2f44fc47029857d359224fc169c1a27e5c40",
+        "bytes": 220
+      },
+      "docs/reported-deoni-main-web-build.log.gz": {
+        "sha256": "62e42d0f86bdcadd5232a1b35a5d585d7a56cd3409234d46bb7ab280a2bc3c22",
+        "bytes": 403
+      },
+      "docs/reported-deoni-native-closure.json.gz": {
+        "sha256": "41d88685de5dcdda47c45d825e8408b9d226c43739763067562a6fd660e8b16d",
+        "bytes": 1183902
+      },
+      "docs/reported-deoni-observation-native-corrected-failed.json": {
+        "sha256": "304b2f708ebdcd88333bc640087fe505d9b6125f48e789df0bb1c838a0e2233f",
+        "bytes": 682
+      },
+      "docs/reported-deoni-observation-native-corrected-failed.log.gz": {
+        "sha256": "ac8b22ab7cc157ae759f63f482b6cc7ef838b66b59a0d11a52cebbd024c6fa06",
+        "bytes": 191
+      },
+      "docs/reported-deoni-observation-native-failed.json": {
+        "sha256": "8f695e287a511e5e38596099eff662de0820550ef60174c5ed25b547a32b6031",
+        "bytes": 561
+      },
+      "docs/reported-deoni-observation-native-failed.log.gz": {
+        "sha256": "ddc40055dca2aa41abb7a7f9fffae0dbd88408a11d4556c92ddd13479369b79d",
+        "bytes": 191
+      },
+      "docs/reported-deoni-observation-native.json.gz": {
+        "sha256": "743cbb2c6d1117fab083921d3431676d641f24a02bf92b139b09080b2e483afe",
+        "bytes": 1591392
+      },
+      "docs/reported-deoni-prototype-broad-audit.log.gz": {
+        "sha256": "5719211d8a3898efc9ef9263c104f46a9c0804678d2a42c60e5c1177e64b5768",
+        "bytes": 186
+      },
+      "docs/reported-deoni-prototype-broad.json.gz": {
+        "sha256": "eb00ca0d69cae2174dfade9dc8253c7093291546d970e11e2a1f763b69736409",
+        "bytes": 24566
+      },
+      "docs/reported-deoni-prototype-browser.json.gz": {
+        "sha256": "70b9b3f7aa6a9ae6d0c4f4e353eb32af0665be850b571236a5273e4ffb833711",
+        "bytes": 829855
+      },
+      "docs/reported-deoni-prototype-corpora.json.gz": {
+        "sha256": "78a13af74813ca83f5111600fafa884fca0115da3fb38e3414bd09b709d259f1",
+        "bytes": 5908080
+      },
+      "docs/reported-deoni-prototype-entry-api.json.gz": {
+        "sha256": "484187ac456cd616a6d0769a1abdcecf9784b0ee89bc8db9fbd74665b0a0c78a",
+        "bytes": 594444
+      },
+      "docs/reported-deoni-prototype-integration.json.gz": {
+        "sha256": "a4b5f6f33b83a10f75b14b3f45cf1fc63cfc0056dd8090cc23239781abdd25f7",
+        "bytes": 2701369
+      },
+      "docs/reported-deoni-prototype-parent.py.txt": {
+        "sha256": "2538afc164b7b31059e6b3943610760d92369405a9128053936d3bd03b77b923",
+        "bytes": 2861
+      },
+      "docs/reported-deoni-prototype-rust.json": {
+        "sha256": "6d0d251dad3408e47c78a7a548ae3e1f8d6b1182766aa68c0f35e13b1492e408",
+        "bytes": 74028
+      },
+      "docs/reported-deoni-prototype-rust.log.gz": {
+        "sha256": "d9deab20cf688214c2ff2887642cd6812d324a9e73232362b97e65e2f857a0a7",
+        "bytes": 23613
+      },
+      "docs/reported-deoni-prototype-source-audit.log.gz": {
+        "sha256": "0ba1cd0bbed2ef4206e90406e35b2f44fc47029857d359224fc169c1a27e5c40",
+        "bytes": 220
+      },
+      "docs/reported-deoni-prototype-source-streams.json.gz": {
+        "sha256": "958d362eb02b2aa43b1bcce962100f3c9b4812cfd4759378509812850cd3ebde",
+        "bytes": 44292990
+      },
+      "docs/reported-deoni-source-preparation.json.gz": {
+        "sha256": "1ea2808e48b35cfee3457a78a31aa9c147214bf24898a968b9b8fd01734f6958",
+        "bytes": 42029
+      },
+      "docs/rules.md": {
+        "sha256": "dfe50442254f74f7a131cc5188627b15201118bb53a3f455e3b0c3a33a8eac08",
+        "bytes": 319739
+      },
+      "flake.nix": {
+        "sha256": "6b58aa136d95b4ca543aa28762d213dcb8cf3abc7fc0ab8db1d46d77d790248d",
+        "bytes": 39216
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "2644be9c42eeeba34655b0923210ec61d076ebc1149c204e7dc553d064a03bf1",
+        "bytes": 8372
+      },
+      "src/dictionary/attachment.rs": {
+        "sha256": "166e653a9103dd6171321c30b6d77966294a81c6500293349b48394ed5cee8a2",
+        "bytes": 137646
+      },
+      "src/engine.rs": {
+        "sha256": "cf0f3219cf9fa54785e80438a891ca98e415387fcd0755fcbdf8b928dbdc78db",
+        "bytes": 219341
+      },
+      "src/grammar.rs": {
+        "sha256": "cf8ea2cf6fac36f86c253eece68ead688c8cc6f13f183eb5be1b1eb07bcd1185",
+        "bytes": 106034
+      },
+      "tests/copula_expectation.rs": {
+        "sha256": "70c175cf85409150e7bc19b12127a1b4c74c28e11a87eeea165e76149c45f721",
+        "bytes": 11548
+      },
+      "tests/counterfactual_ryeon.rs": {
+        "sha256": "7ac5dfce3704ce5222f2e9b72c267ac07a0b8541434c8a1a2a07d864074d1d71",
+        "bytes": 11596
+      },
+      "tests/degree_rimankeum.rs": {
+        "sha256": "7b7be304d1074f41d174035e7d12c16bb83b574f0422ef0571b66e7363907494",
+        "bytes": 10795
+      },
+      "tests/deoniman.rs": {
+        "sha256": "e88a94d0211e36de006070463562df1860532d2f2d65163eb63b1ce07906d4ed",
+        "bytes": 16793
+      },
+      "tests/deoniman_support/parent.rs": {
+        "sha256": "93a9c9cb64e051c7a954704185fb78208235ba2df344ed3a1e28058ccdfffd9e",
+        "bytes": 1903
+      },
+      "tests/fixtures/deoniman-cross-family-parents.json": {
+        "sha256": "b2345f9883188e2664573fce8082888ffbcd050eb2017d89d52db8a100b702d9",
+        "bytes": 42508
+      },
+      "tests/fixtures/deoniman-emphatic-validity.json": {
+        "sha256": "96aea6004535bae23c43f9ef2a049fa4decfffc35ad2e2a134dbb38053fcbe06",
+        "bytes": 26978
+      },
+      "tests/fixtures/deoniman-sources.json": {
+        "sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+        "bytes": 28577975
+      },
+      "tests/fixtures/krdict-deoniman-english.json": {
+        "sha256": "68c01844104645c7135b3ed9e18afdb1015eed697928a8a4794cbf31e61afce5",
+        "bytes": 1882632
+      },
+      "tests/fixtures/krdict-deoniman-labels.json": {
+        "sha256": "856e7970dc7005b9492237630caecfa3a55ac59f121e6a44af3d6e442f29c270",
+        "bytes": 53177
+      },
+      "tests/fixtures/krdict-reported-command-deoni-english.json": {
+        "sha256": "839bd4efa4dc39325e2ae738e040e51bdb9ca927556000971b414e12f80c1410",
+        "bytes": 23503
+      },
+      "tests/fixtures/krdict-reported-deoni-english.json": {
+        "sha256": "37d316922eeb551e4fe41a94c652860564838a50c8067a777376cfcc3921514b",
+        "bytes": 1373262
+      },
+      "tests/fixtures/reported-command-deoni-sources.json": {
+        "sha256": "43c6fee5d67dd9422fdecd42f01ae279ca230276e2c3cb9d55c4226d643ad2ea",
+        "bytes": 564010
+      },
+      "tests/fixtures/reported-command-deoni-validity.json": {
+        "sha256": "2dd289e9b2a075411f94948ada51da94c46ffe70f6e2891ed775f7ab88fdb966",
+        "bytes": 28140
+      },
+      "tests/fixtures/reported-deoni-native.json": {
+        "sha256": "24e2809f7514eee63ed96ec061346d4429f74fef226fad0a0d8a552d785134b3",
+        "bytes": 958940
+      },
+      "tests/fixtures/reported-deoni-validity.json": {
+        "sha256": "e08f122ab16a57b512099bc534abd6d1d7523005df8a29dd2c42f5288110e584",
+        "bytes": 23341
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "81cd4d333d77ee76e81c38f1ee3a37cfae69a414c8b7ef2faa5ba2f014617093",
+        "bytes": 31483656
+      },
+      "tests/friendly_command.rs": {
+        "sha256": "5484747e24197047ab17468ac1b0ce0a81b395f746c3078e7a0e25a1820c01a3",
+        "bytes": 9921
+      },
+      "tests/reported_command_deoni.rs": {
+        "sha256": "beb16f89a874961df087bbc2a8c75f2480de106a4c29eea428b7a525d34dc29a",
+        "bytes": 11761
+      },
+      "tests/validity.rs": {
+        "sha256": "7b0c2910449a3890f758256b68abfb1f11b9e811de1ad0bdc37b11ab93d76de9",
+        "bytes": 4004
+      },
+      "tools/reported_deoni_audit.py": {
+        "sha256": "4b3c04062506d28e94e8b54b6a0dac56ccd7af4240488e3dbe24a84c6928bbd6",
+        "bytes": 7868
+      },
+      "tools/reported_deoni_broad.py": {
+        "sha256": "6db23f8d653a093f79eea2110464f981dcc56717e783bbbb491fd32944090957",
+        "bytes": 5511
+      },
+      "tools/reported_deoni_browser.py": {
+        "sha256": "34f842bd69340402f690bed9999d9c1afeeb44ca97b4289a8dc2f1f3c7733a5b",
+        "bytes": 5218
+      },
+      "tools/reported_deoni_corpora.py": {
+        "sha256": "4e1a42cc156543913a0324a995307102e6eff972a351a4247867d6ad3fa0448e",
+        "bytes": 5897
+      },
+      "tools/reported_deoni_parent.py": {
+        "sha256": "1b8858ee4d23699556008faf9154f53411d1d9ba1b9a0b269f1e024f74708f8a",
+        "bytes": 3489
+      },
+      "tools/reported_deoni_production.py": {
+        "sha256": "1db6ecd819e76076c5039e7b5009db7dbf1dddbad52f329d67a6934591d4bdfe",
+        "bytes": 6664
+      },
+      "tools/test_reported_deoni.py": {
+        "sha256": "737a670b4a02982aff1aba417a9c03e2d7919007348c89cbd845d466bd756a0c",
+        "bytes": 2560
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "b28f111c3cc8134899a44fcb5c7d97388dc090c67c50388928984f0a6ff82064",
+        "bytes": 182972
+      },
+      "web/tests/reported-deoni.mjs": {
+        "sha256": "78c1f1cfafd228e9e331f8dfcc3770b8277c315a9c2c8b3b0b25572b65e6b265",
+        "bytes": 6783
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-07T06:02:36.538091+00:00",
+  "log_sha256": "b7cb1cd27577f9fc5c3c0e6c4432cff5cfa69cc26582f57c14cdf248eb203740",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0",
+    "/nix/store/k171mgajwyj36mncq279wz865kr0hm0m-klem-web-assets-0.1.0"
+  ]
+}

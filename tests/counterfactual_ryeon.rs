@@ -1,5 +1,7 @@
 #[path = "copula_expectation_support/parent.rs"]
 mod copula_expectation_parent;
+#[path = "deoniman_support/parent.rs"]
+mod deoniman_parent;
 use klem::{Analysis, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use unicode_normalization::UnicodeNormalization;
@@ -57,6 +59,13 @@ fn original_counterfactual_examples_recover_heads_and_preserve_every_old_candida
         let parent: WordAnalysis =
             serde_json::from_value(source["companion_analyses"][&companion].clone()).unwrap();
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules
+                .iter()
+                .any(|r| matches!(r.as_str(), "ending.deoniman" | "ending.reported_deoni"))
+            {
+                deoniman_parent::assert_report_parent(word, a);
+                continue;
+            }
             if a.rules.iter().any(|r| r == "copula.omitted_ending") {
                 copula_expectation_parent::assert_omission_parent(word, a);
                 continue;
@@ -267,6 +276,13 @@ fn full_source_cohort_retains_candidate_order_and_attributes_new_paths() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules
+                .iter()
+                .any(|r| matches!(r.as_str(), "ending.deoniman" | "ending.reported_deoni"))
+            {
+                deoniman_parent::assert_report_parent(word, a);
+                continue;
+            }
             if a.rules.iter().any(|r| r == "copula.omitted_ending") {
                 copula_expectation_parent::assert_omission_parent(word, a);
                 continue;

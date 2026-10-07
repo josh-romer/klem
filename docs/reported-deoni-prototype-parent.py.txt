@@ -1,0 +1,51 @@
+import copy,json,subprocess
+from pathlib import Path
+OLD=Path('/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0/bin/klem')
+parents={}
+markers={'ending.deoniman','ending.reported_deoni','ending.reported_command_deoni'}
+forms={'더니만':'더니','더니마는':'더니','다더니':'다던','는다더니':'는다던','다더니만':'다던','다더니마는':'다던','는다더니만':'는다던','는다더니마는':'는다던','라더니':'라던','으라더니':'으라던'}
+def actual_parent(word,path):
+ inverse=copy.deepcopy(path);touched=[]
+ for m in inverse['morphemes']:
+  if m['form'] in forms:
+   touched.append(m['form']);m['form']=forms[m['form']]
+ assert len(touched)==1,(word,touched)
+ canonical=touched[0];bare=canonical in ['더니만','더니마는']
+ inverse['rules']=[r for r in inverse['rules'] if r not in markers]
+ if not bare:inverse['rules'].append('ending.reporting_retrospective')
+ inverse['rules']=sorted(set(inverse['rules']))
+ if bare:pairs=[(canonical,'더니')]
+ elif canonical.startswith('으라') or canonical=='라더니':pairs=[('라더니','라던')]
+ else:
+  suffix='더니마는' if canonical.endswith('더니마는') else '더니만' if canonical.endswith('더니만') else '더니'
+  pairs=[(suffix,'던')]
+ proposals=set()
+ for old,new in pairs:
+  start=0
+  while True:
+   at=word.find(old,start)
+   if at<0:break
+   proposals.add(word[:at]+new+word[at+len(old):]);start=at+1
+ for parent_word in sorted(proposals):
+  if parent_word not in parents:parents[parent_word]=json.loads(subprocess.check_output([str(OLD),'word',parent_word]))
+  if inverse in parents[parent_word]['analyses']:return parent_word,inverse
+ raise AssertionError((word,path,inverse,sorted(proposals)))
+
+def frame(before, after):
+ assert {k:v for k,v in before.items() if k not in ['analysis','dictionary']}=={k:v for k,v in after.items() if k not in ['analysis','dictionary']}
+ if before['kind']!='word':
+  assert before==after
+  return []
+ old=before['analysis']['analyses'];new=after['analysis']['analyses']
+ assert [p for p in new if p in old]==old,(before['surface'],'candidate loss/order')
+ assert {k:v for k,v in before['analysis'].items() if k!='analyses'}=={k:v for k,v in after['analysis'].items() if k!='analyses'}
+ added=[p for p in new if p not in old]
+ for path in added:
+  assert markers.intersection(path['rules']),(before['surface'],path)
+  actual_parent(after['analysis']['normalized'],path)
+ if 'dictionary' in before:
+  bd=before['dictionary'];ad=after['dictionary']
+  assert {k:v for k,v in bd.items() if k not in ['readings','lemmas']}=={k:v for k,v in ad.items() if k not in ['readings','lemmas']}
+  assert [l for l in ad['lemmas'] if l in bd['lemmas']]==bd['lemmas']
+  for i,path in enumerate(old):assert bd['readings'][i]==ad['readings'][new.index(path)],(before['surface'],'prior dictionary reading')
+ return added

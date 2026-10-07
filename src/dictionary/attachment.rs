@@ -2269,11 +2269,12 @@ impl Annotation {
                     if let Some(i) = ending
                         && matches!(analysis.morphemes[i].form.as_str(),
                             "더니만" | "더니마는" | "다더니" | "다더니만" | "다더니마는"
-                            | "는다더니" | "는다더니만" | "는다더니마는")
+                            | "는다더니" | "는다더니만" | "는다더니마는"
+                            | "다나" | "는다나")
                     {
                         let form = analysis.morphemes[i].form.as_str();
-                        let present = matches!(form, "는다더니" | "는다더니만" | "는다더니마는");
-                        let plain_report = matches!(form, "다더니" | "다더니만" | "다더니마는");
+                        let present = matches!(form, "는다더니" | "는다더니만" | "는다더니마는" | "는다나");
+                        let plain_report = matches!(form, "다더니" | "다더니만" | "다더니마는" | "다나");
                         let owner = if derived_adjective { Some(PredicateClass::Adjective) }
                             else { class.or(negative_lexical).or({
                                 if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {

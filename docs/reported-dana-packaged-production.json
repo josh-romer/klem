@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "inputs_unchanged": true,
+  "source_runs": [
+    {
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "83b85f01962bda8b2674a5b236bbb4ae30b73e1419efb47dc30541ae8d15273a",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "91743d566913d6e2452f9cd491ff9ac9843e9701035455715acb9c525a48aeee",
+      "records": 41283
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "83b85f01962bda8b2674a5b236bbb4ae30b73e1419efb47dc30541ae8d15273a",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "85d7db90d63af5233ca6a89fdf5d72a70a2b0d42c4eb23a5060b0cd5da806e9c",
+      "records": 41283
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "83b85f01962bda8b2674a5b236bbb4ae30b73e1419efb47dc30541ae8d15273a",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "040955a28b812791ccd5f710b2625c89a72a692e5fb1659597e44ed5960ca897",
+      "records": 41283
+    },
+    {
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "4133e434a9352809bf546f6e921ca29d1597c60baf18c123ff87dc03b4011b8c",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "54406925c0ab42d1a9397a9286070b1214817d0cd2b0646d6715fbbe1c2935ba",
+      "records": 41283
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "4133e434a9352809bf546f6e921ca29d1597c60baf18c123ff87dc03b4011b8c",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "cd87a74ee90d1931ca5bf6a69d5b017716c58b26ac6a74f279e150fd5da75cff",
+      "records": 41283
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "4133e434a9352809bf546f6e921ca29d1597c60baf18c123ff87dc03b4011b8c",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "60948a044c618dbe5a8e4cb76a777cb67a8b614159e2806377c1230dfa02cbe4",
+      "records": 41283
+    }
+  ],
+  "broad_runs": [
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-raw",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "95d0c98b8aa4e8c14536bd49d450657c737d988081069cf8aeb36d7d3f9d35d7",
+      "records": 77584
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-headword",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "93599af059a9a260dddc25db6cdb8ec03281ea30696113c6fc46237180ed2a40",
+      "records": 77584
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-compatible",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/tmp/klem-written-vowel-candidate-input.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "8d34027b57715759ab9c2e34280b79843d59daac99f1fc38725d35844f900003",
+      "records": 77584
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "d009362907b939e5ad2ea94b237b6cf69b7872fa7e696b92f0c5a17792750c77",
+      "records": 179112
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "cc37c13c35715b555ed0106eec750ab2858169fba74f43bcc085dec5949a33a3",
+      "records": 179112
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "c02c25fc4dbddd821605d6c2df3f90f0b4d90913e231c3704de078dde353287b",
+      "records": 179112
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword-spacing",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only",
+        "--suggest-spacing"
+      ],
+      "exit_code": 0,
+      "sha256": "0d463ca01ab62816510897377a2a679030962ce0636e8bedb67b035eaa8fdf0f",
+      "records": 179112
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible-spacing",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "/home/josh/projects/klem/data/books/mujeong.txt",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible",
+        "--suggest-spacing"
+      ],
+      "exit_code": 0,
+      "sha256": "9d859460561e1634e090109a8d955bd68ff98264e15106779006eaba7439323d",
+      "records": 179112
+    }
+  ],
+  "corpus_words": 32096,
+  "corpus_word_sha256": "89d8b4432bd37b7d48e038506151b56c75e95e37ab0b4c02c8ca9d866178c62c",
+  "corpus_reference_runs": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "source": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "source_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "report_lines": 22221,
+      "reference_evaluator_jsonl_sha256": "95c388484605b643af58f8ed45f4dd415ac4088d30a315b21a70f6e2e8e61e75"
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "report_lines": 24491,
+      "reference_evaluator_jsonl_sha256": "bc8f467e0e8ee48f7326a4dbed71f6c3a6e7317e706d95be0b59693e2e1645b9"
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "source": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "source_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "report_lines": 9990,
+      "reference_evaluator_jsonl_sha256": "adc77aade3452a1ace745a6616cf8b378c412987c30e5187053fb285b129175c"
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "source": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "source_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "report_lines": 9872,
+      "reference_evaluator_jsonl_sha256": "64777e79264d8052ca307bf2dc926c0aca2a0dca40bc45e46aadc26c7d452aff"
+    }
+  ],
+  "evaluator_runs": [],
+  "corpus_validation": {
+    "method": "Exact CLI WordAnalysis equality for every original gold surface, tied to independently verified captured evaluator results; no evaluator execution claimed.",
+    "verified_gold_rows": 66570
+  },
+  "frozen_inputs": {
+    "docs/reported-dana-prototype-source-streams.json.gz": "24e352d8bcf9287fd14ef7b7bdd856c6bf8180258ebaba150eb65e1fab9a745c",
+    "docs/reported-dana-prototype-corpora.json.gz": "034ff8b793ea9367a89bd78baee8b2a88b09c9393bc30ee4ad18ee97d1054dbb",
+    "docs/reported-dana-prototype-broad.json.gz": "479073b7c5bb02ef68404f678a5cf33e492ee11b9705ba009caf25629a4c481c",
+    "/tmp/klem-written-vowel-candidate-input.txt": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+    "/home/josh/projects/klem/data/books/mujeong.txt": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+    "/home/josh/projects/klem/data/corpora/kaist/ko_kaist-ud-dev.conllu": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+    "/home/josh/projects/klem/data/corpora/kaist/ko_kaist-ud-test.conllu": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+    "/home/josh/projects/klem/data/corpora/gsd/ko_gsd-ud-dev.conllu": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+    "/home/josh/projects/klem/data/corpora/gsd/ko_gsd-ud-test.conllu": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa"
+  },
+  "binaries": {
+    "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd",
+    "/tmp/klem-reported-dana-prototype/data/dictionaries/krdict/krdict.db": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5"
+  },
+  "producer": {
+    "text": "\"\"\"Replay actual CLI source/broad streams and every original annotated word.\"\"\"\n\nimport argparse, hashlib, json, subprocess, tempfile, unicodedata\nfrom concurrent.futures import ThreadPoolExecutor\nfrom pathlib import Path\nfrom reported_dana_corpora import ROOT, read, sha\n\n\ndef file_sha(path):\n    return hashlib.sha256(Path(path).read_bytes()).hexdigest()\n\n\ndef replay(command, expected_hash, expected_records, request=None):\n    digest = hashlib.sha256()\n    count = 0\n    with tempfile.TemporaryFile() as input_file:\n        if request is not None:\n            input_file.write(request.encode())\n            input_file.seek(0)\n        process = subprocess.Popen(\n            command, cwd=ROOT, stdin=input_file, stdout=subprocess.PIPE\n        )\n        try:\n            for line in process.stdout:\n                digest.update(line)\n                count += 1\n            code = process.wait()\n            assert code == 0, (command, code)\n        finally:\n            if process.poll() is None:\n                process.terminate()\n                process.wait()\n    assert (digest.hexdigest(), count) == (expected_hash, expected_records), command\n    return {\n        \"command\": command,\n        \"exit_code\": code,\n        \"sha256\": digest.hexdigest(),\n        \"records\": count,\n    }\n\n\ndef capture(cli, output, evaluator=None):\n    cli = Path(cli).resolve()\n    output = Path(output)\n    assert not output.exists()\n    paths = [\n        \"docs/reported-dana-prototype-source-streams.json.gz\",\n        \"docs/reported-dana-prototype-corpora.json.gz\",\n        \"docs/reported-dana-prototype-broad.json.gz\",\n    ]\n    frozen = {name: sha(name) for name in paths}\n    dictionary = ROOT / \"data/dictionaries/krdict/krdict.db\"\n    binaries = {str(path): file_sha(path) for path in [cli, dictionary]}\n    source = read(paths[0])\n    source_runs = []\n    for encoding, modes in source[\"runs\"].items():\n        request = unicodedata.normalize(encoding, source[\"input\"])\n        for mode, stages in modes.items():\n            old = stages[\"after\"]\n            result = replay(\n                [str(cli), *old[\"command\"][1:]],\n                old[\"sha256\"],\n                len(old[\"jsonl\"].splitlines()),\n                request,\n            )\n            source_runs.append(\n                {\n                    \"encoding\": encoding,\n                    \"mode\": mode,\n                    \"input_sha256\": hashlib.sha256(request.encode()).hexdigest(),\n                    **result,\n                }\n            )\n            print(\"source\", encoding, mode, result[\"records\"], flush=True)\n    broad_runs = []\n    for old in read(paths[2])[\"comparisons\"]:\n        assert file_sha(old[\"source\"]) == old[\"source_sha256\"]\n        frozen[old[\"source\"]] = old[\"source_sha256\"]\n        result = replay(\n            [str(cli), *old[\"commands\"][1][1:]],\n            old[\"after_jsonl_sha256\"],\n            old[\"records\"],\n        )\n        broad_runs.append(\n            {key: old[key] for key in [\"source\", \"source_sha256\", \"mode\"]} | result\n        )\n        print(\"broad\", old[\"mode\"], result[\"records\"], flush=True)\n    corpus = read(paths[1])\n    words = words_from_cli(cli, sorted(corpus[\"after_words\"]))\n    assert words == corpus[\"after_words\"] and len(words) == 32096\n    references = []\n    evaluator_runs = []\n    if evaluator is not None:\n        evaluator = Path(evaluator).resolve()\n        assert evaluator.is_file()\n        binaries[str(evaluator)] = file_sha(evaluator)\n    for old in corpus[\"corpora\"]:\n        # Historical paths refer to the original unchanged corpus files.\n        corpus_source = Path(old[\"command\"][2])\n        if not corpus_source.is_absolute():\n            corpus_source = Path(\"/home/josh/projects/klem\") / corpus_source\n        assert file_sha(corpus_source) == old[\"source_sha256\"]\n        frozen[str(corpus_source)] = old[\"source_sha256\"]\n        references.append(\n            {\n                key: old[key]\n                for key in [\n                    \"corpus\",\n                    \"partition\",\n                    \"source\",\n                    \"source_sha256\",\n                    \"report_lines\",\n                ]\n            }\n            | {\n                \"reference_evaluator_jsonl_sha256\": hashlib.sha256(\n                    old[\"after_jsonl\"].encode()\n                ).hexdigest()\n            }\n        )\n        if evaluator is not None:\n            # Preserve the original relative input header; use the original workspace cwd.\n            result = subprocess.run(\n                [str(evaluator), old[\"corpus\"], old[\"source\"]],\n                cwd=\"/home/josh/projects/klem\",\n                capture_output=True,\n                check=True,\n            )\n            assert (\n                hashlib.sha256(result.stdout).hexdigest()\n                == references[-1][\"reference_evaluator_jsonl_sha256\"]\n            )\n            assert len(result.stdout.splitlines()) == old[\"report_lines\"]\n            evaluator_runs.append(\n                {\n                    \"command\": result.args,\n                    \"exit_code\": result.returncode,\n                    \"sha256\": hashlib.sha256(result.stdout).hexdigest(),\n                    \"records\": old[\"report_lines\"],\n                }\n            )\n    assert (\n        len(source_runs) == 6 and sum(run[\"records\"] for run in source_runs) == 247698\n    )\n    assert len(broad_runs) == 8 and sum(run[\"records\"] for run in broad_runs) == 1128312\n    assert (\n        len(references) == 4\n        and sum(run[\"report_lines\"] - 1 for run in references) == 66570\n    )\n    assert all(sha(name) == value for name, value in frozen.items())\n    assert all(file_sha(path) == value for path, value in binaries.items())\n    producer = Path(__file__)\n    report = {\n        \"schema_version\": 1,\n        \"state\": \"passed\",\n        \"inputs_unchanged\": True,\n        \"source_runs\": source_runs,\n        \"broad_runs\": broad_runs,\n        \"corpus_words\": len(words),\n        \"corpus_word_sha256\": hashlib.sha256(\n            json.dumps(words, ensure_ascii=False, sort_keys=True).encode()\n        ).hexdigest(),\n        \"corpus_reference_runs\": references,\n        \"evaluator_runs\": evaluator_runs,\n        \"corpus_validation\": {\n            \"method\": \"Actual evaluator parity and full WordAnalysis equality.\"\n            if evaluator is not None\n            else \"Exact CLI WordAnalysis equality for every original gold surface, tied to independently verified captured evaluator results; no evaluator execution claimed.\",\n            \"verified_gold_rows\": 66570,\n        },\n        \"frozen_inputs\": frozen,\n        \"binaries\": binaries,\n        \"producer\": {\"text\": producer.read_text(), \"sha256\": file_sha(producer)},\n        \"scope\": \"Actual source/broad stream and complete corpus-word parity. Evaluator executions, when requested, are recorded separately; prior source-cohort retention is a separate gate. Contextual and independent judgments remain open.\",\n    }\n    output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + \"\\n\")\n    print(\n        \"Actual CLI source6/broad8/fullWords32096 parity passed; evaluator runs:\",\n        len(evaluator_runs),\n        flush=True,\n    )\n\n\ndef words_from_cli(cli, surfaces):\n    text = \"\\n\".join(surfaces) + \"\\n\"\n    result = subprocess.run(\n        [str(cli), \"text\", \"-\"], input=text, text=True, capture_output=True, check=True\n    )\n    records = [json.loads(line) for line in result.stdout.splitlines() if line]\n    assert \"\".join(r[\"surface\"] for r in records) == text\n    starts = {}\n    offset = 0\n    for surface in surfaces:\n        starts[offset] = surface\n        offset += len(surface.encode()) + 1\n    whole = {\n        r[\"surface\"]: r[\"analysis\"]\n        for r in records\n        if r[\"kind\"] == \"word\"\n        and starts.get(r[\"span\"][\"start\"]) == r[\"surface\"]\n        and r[\"span\"][\"end\"] == r[\"span\"][\"start\"] + len(r[\"surface\"].encode())\n    }\n    missing = [s for s in surfaces if s not in whole]\n\n    # CoNLL-U tokens can contain punctuation. Preserve the exact original\n    # word interface for them rather than rewriting gold token boundaries.\n    def analyze(surface):\n        out = subprocess.run(\n            [str(cli), \"word\", surface], text=True, capture_output=True, check=True\n        )\n        return surface, json.loads(out.stdout)\n\n    with ThreadPoolExecutor(max_workers=4) as pool:\n        whole.update(pool.map(analyze, missing))\n    assert set(whole) == set(surfaces)\n    print(\n        len(surfaces) - len(missing),\n        \"exact text tokens and\",\n        len(missing),\n        \"punctuation-bearing original word calls\",\n        flush=True,\n    )\n    return whole\n\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--cli\", required=True)\n    parser.add_argument(\"--output\", required=True)\n    parser.add_argument(\"--evaluator\")\n    args = parser.parse_args()\n    capture(args.cli, args.output, args.evaluator)\n",
+    "sha256": "ebadba81967c682ea720abddb6ea2ad9bec8481f33e13d040ec261e6e91064b6"
+  },
+  "scope": "Actual source/broad stream and complete corpus-word parity. Evaluator executions, when requested, are recorded separately; prior source-cohort retention is a separate gate. Contextual and independent judgments remain open."
+}

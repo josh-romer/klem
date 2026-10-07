@@ -4627,3 +4627,32 @@ structural counterpart and a glossary hint do not identify the contextual
 sense. The [coverage tracker](coverage-checklist.md) separates annotated lemma
 recovery, authored component judgments, unjudged alternatives, preservation
 checks and the release gates.
+
+## Casual reported or uncertain statements -다나/-ㄴ다나/-는다나
+
+The rule `ending.reported_dana` adds canonical 다나 and 는다나 without an
+implicit reporting 하다. [The complete primary entries](reported-dana-source-preparation.json.gz)
+preserve -ㄴ다나 (74691), -는다나 (74697) and -다나 (74698), their six
+senses and all 28 original example groups. Irritation at a report and
+uncertainty about it remain separate senses; a recovered structure does not
+select between them.
+
+Canonical 는다나 covers vowel/ㄹ verb -ㄴ다나 and other consonant verb
+-는다나, including source-listed honorific uses. Plain 다나 retains adjective,
+시, past and modal boundaries. Thus 간다나 can recover 가다 + 는다나,
+먹는다나 recovers 먹다 + 는다나, 같다나 recovers 같다 + 다나, and
+들었다나 retains 듣다 + 었 + 다나 alongside the other rule-generated
+hypotheses. Plain derived adjectives remain available. Present verb
+allomorphs do not inherit copula or derived-adjective licenses; independent
+caller-supplied hypotheses are still assessed. Present copulas and unlisted
+attachment contexts retain dictionary uncertainty.
+
+An incidental 어쨌다나 inside a -는다나 source group uses the plain -다나
+allomorph. The source-group citation and morphological ownership are tracked
+separately. All 84 additions to the 26 source surfaces have captured old
+-다고/-는다고 counterparts, changing only the ending and its family marker.
+The [42-case suite](../tests/fixtures/reported-dana-validity.json) supplies 36
+required and six forbidden judgments, also included in the global ledger.
+Other generated candidates, contextual senses and independent Korean review
+remain unjudged. Source, corpus, browser and release evidence is tracked under
+COV-017cc in [the coverage checklist](coverage-checklist.md).

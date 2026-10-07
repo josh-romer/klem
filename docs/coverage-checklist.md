@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-06.
+Last reviewed: 2026-10-07.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -174,10 +174,10 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 437 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/017bu–bw/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 278 entries have no disposition in this
-  ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
-  implementation and scoped disposition, verified with full finite gates.
+  The [manual review ledger](inventory-reviews.json) records 449 scoped
+  dispositions; 266 entries await a disposition, including entries with
+  implemented behavior elsewhere. The previous 마다 gap has a sourced modern
+  structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
   open. COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -222,8 +222,8 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bm and COV-017bt implemented; COV-017aw/az remain open.**
+- [ ] **COV-017 — Further ending families.** **Partial: the checked subitems
+  document implemented scope; unchecked subitems below retain remaining work.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -2309,6 +2309,94 @@ review remains open under the completion review below.
   Contextual sense and independent Korean review
   remain open. The prior runner argument/schema failures are preserved;
   successful checks never overwrite their evidence.
+
+- [x] **COV-017cc — Casual reported or uncertain statements -다나/-ㄴ다나/-는다나.**
+  **Implemented for the bounded source-owned forms.**
+  The complete primary entries 74691/74697/74698 retain six senses, 28 original
+  example groups and 31 literal target occurrences across 26 surfaces. The two
+  uses (irritation at a report and uncertainty about it) remain separate
+  homonyms; structural recovery does not choose a contextual sense. One
+  incidental 어쨌다나 in a -는다나 example uses the plain -다나 allomorph,
+  with source-group ownership and morphological ownership tracked separately.
+  Canonical -는다나 represents both open/ㄹ -ㄴ다나 and closed -는다나
+  verb forms. Plain -다나 retains adjective, honorific, past and modal paths.
+  It introduces no implicit reporting 하다. Dictionary assessments keep
+  unlisted slots and present copulas uncertain; present verb allomorphs do
+  not inherit copula or derived-adjective licenses. Plain derived adjectives
+  remain available, as do independently supplied hypotheses for assessment.
+  The 42 stable cases comprise 36 required and six forbidden judgments.
+  All 84 source-surface additions have exact captured old -다고/-는다고
+  counterparts, retaining every other path field. Six complete source
+  streams retain 247,698 NFC/NFD frames, 3,383 original groups, 7,464 distinct
+  words and all prior candidate/dictionary ordering; 134 distinct new paths
+  have stable individual observations whose contextual verdicts remain
+  unjudged. All 85 matched Native/LMF owners retain their complete original
+  entries and independent SQLite/English projections.
+  The prototype retains all 66,570 original gold outcomes, 32,096 complete
+  word analyses and eight broad streams (1,128,312 frames), without claiming
+  a corpus-recall gain. Portable source, Native, corpus and broad audits
+  include corruption controls. Browser verification passes 220 selected
+  NFC/NFD diagrams, six exact CLI/export comparisons and 208 complete Native
+  endpoints; all 148 previous diagrams remain exact. New-ending desktop and
+  mobile screenshots were inspected, and both owned previews were stopped.
+  Three earlier source-cohort regressions now validate the new 드렸다나
+  paths against exact old 드렸다고 analyses while retaining their original
+  assertions. Their focused rerun passes all 29 tests across four suites.
+  The isolated full Rust run passes 1,005 tests with one ignored; the
+  expanded global ledger passes in nine focused tests. Its actual Nix Rust
+  package and SolidJS assets also build, with 1,005 release tests passing.
+  All 859 immutable package-source files match the frozen input record and
+  original 850-input baseline plus 19 recorded updates/additions. The complete
+  704,297,464-byte NAR reproduces the tested recursive source store path.
+  An additional eighteen-stream regression retains all 688,434 earlier
+  reported/degree/counterfactual frames and tracks 20 new occurrences against
+  exact old parents; both matched owners are retained in the 85-entry closure.
+  [Complete-source verification](../tools/reported_dana_sources.py) and
+  [eight integrity controls](../tools/test_reported_dana_sources.py) pass.
+  [Actual packaged CLI/browser checks](reported-dana-packaged-checks.json)
+  retain all six source and eight broad streams, 32,096 full word outputs,
+  220 diagrams, six exports and 208 full Native endpoints. New-ending
+  desktop/mobile screenshots were inspected and the owned preview stopped.
+  The generic prototype-suite flag in the original browser receipt is
+  distinguished explicitly from its actual Nix-store binary/asset provenance.
+  [The rebuilt debug CLI bridge](reported-dana-rebuilt-prototype-production.json)
+  verifies every source/broad stream, full word and four evaluator outputs
+  after Cargo changed its binary fingerprint. Original captures remain intact.
+  [Integrated main-source/package binding](reported-dana-main-package-binding.json)
+  confirms all 859 inputs and the exact tested package/assets outputs. The
+  [actual packaged legacy replay](reported-dana-packaged-legacy.json) matches all
+  eighteen streams and 688,434 frames. The [release audit](../tools/reported_dana_release.py)
+  passes, with [twelve integrity controls](../tools/test_reported_dana_release.py)
+  rejecting real build errors, failed tests and corrupted runtime evidence.
+  Its original failure classified successful Nix substituter retry warnings as
+  fatal errors; the original log is preserved and only those specific timeout
+  warnings are accepted alongside the successful build receipt and full tests.
+  Main Clippy and the SolidJS production build pass.
+  [Whole-novel cache parity](reported-dana-cache-parity.json) retains 179,112
+  exact frames in all three dictionary modes with zero and 8 MiB caches.
+  [Eighty paired measurements](reported-dana-performance.json) compare eight
+  workloads against the previous package on the same CPU. Median changes range
+  from 2.1% faster to 1.1% slower; annotated novel medians are 1.8–2.5 seconds.
+  [The timing audit](../tools/reported_dana_performance.py) and eight corruption
+  controls pass. These observations do not establish statistical equivalence,
+  CPU isolation or constant clocks.
+  [The first combined gate](reported-dana-final-nix-failed.json) passed the
+  earlier historical audits and new source/corpus/broad checks, then exposed a legacy
+  verifier reading a runtime-only temporary input. Its terminal failure log is
+  preserved. The legacy and release verifiers now check the complete archived
+  input bytes against their captured hashes through a shared portable adapter;
+  five controls reject missing/altered snapshots and access to original paths.
+  [All new-family audits pass in the Nix sandbox](reported-dana-portable-nix.json),
+  including the five input tests, eight source tests, twelve release tests and
+  eight performance tests. All 120 staged files remained unchanged. The first
+  focused run's stale-queue failure is preserved separately; the regenerated
+  queue and nine queue controls pass.
+  [The final combined Nix gate](reported-dana-final-nix.json) passes the Rust
+  package, SolidJS assets and complete offline inventory checks. Its
+  [terminal log](reported-dana-final-nix.log.gz) retains all three outputs and
+  the unchanged 123-file staged snapshot, including the complete source,
+  release and performance audits and their corruption controls.
+  Contextual senses, speculative heads and independent Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

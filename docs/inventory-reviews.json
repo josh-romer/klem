@@ -37597,6 +37597,486 @@
           "judgment": "deoniman-authored-boundary-27-forbidden"
         }
       ]
+    },
+    {
+      "id": "krdict:74691",
+      "source_sha256": "6f9eda9b07320b1e3aec25f6841f7424b4b8ddbdb80bb46eaedbd00a10e5325a",
+      "status": "scoped",
+      "checklist": [
+        "COV-017cc"
+      ],
+      "scope": "Finite source-owned casual reported/uncertain statement forms with all original notes/groups, own allomorph and prefinal boundaries, complete Native/LMF/SQLite/English retention, exact old structural counterparts and stable individual cases. Two contextual senses remain separate and unjudged; no implicit reporting hada.",
+      "remaining": "The bounded implementation passes 1,005 Rust tests, all original corpus outcomes and 32,096 full word outputs, source/broad stream preservation, 220 browser diagrams, 208 full Native endpoints and six exports. Main source binding confirms all 859 tested inputs and the actual Nix package/assets. The packaged legacy replay matches all 18 earlier streams and 688,434 records; twelve release-integrity controls pass. Six whole-novel cache streams match with caching disabled and enabled. All 80 paired full-novel measurements and eight performance-integrity controls pass; measured median changes range from 2.1% faster to 1.1% slower without a statistical-equivalence claim. The final combined Nix Rust/frontend/inventory gate passes with all 123 staged input files unchanged; bounded implementation and release scope is verified. Contextual senses, speculative heads, unlisted slots and independent Korean review remain unjudged.",
+      "evidence": [
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "every_source_judgment_and_authored_boundary_is_tracked"
+        },
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "dictionary_classes_belong_to_the_report_owner_and_keep_unlisted_slots_unknown"
+        },
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "every_native_owner_retains_all_notes_examples_forms_and_english_senses"
+        },
+        {
+          "path": "tools/reported_dana_audit.py"
+        },
+        {
+          "path": "tools/reported_dana_native.py"
+        },
+        {
+          "path": "tools/reported_dana_corpora.py"
+        },
+        {
+          "path": "tools/reported_dana_broad.py"
+        },
+        {
+          "path": "docs/reported-dana-prototype-full-rust.json"
+        },
+        {
+          "path": "docs/reported-dana-expanded-ledger-rust.json"
+        },
+        {
+          "path": "docs/reported-dana-package-nix.json"
+        },
+        {
+          "path": "docs/reported-dana-package-sources.json"
+        },
+        {
+          "path": "tools/reported_dana_sources.py"
+        },
+        {
+          "path": "tools/test_reported_dana_sources.py"
+        },
+        {
+          "path": "docs/reported-dana-packaged-checks.json"
+        },
+        {
+          "path": "docs/reported-dana-rebuilt-prototype-production.json"
+        },
+        {
+          "path": "tools/reported_dana_legacy_audit.py"
+        },
+        {
+          "path": "docs/reported-dana-main-package-binding.json"
+        },
+        {
+          "path": "docs/reported-dana-packaged-legacy.json"
+        },
+        {
+          "path": "tools/reported_dana_release.py"
+        },
+        {
+          "path": "tools/test_reported_dana_release.py"
+        },
+        {
+          "path": "docs/reported-dana-cache-parity.json"
+        },
+        {
+          "path": "docs/reported-dana-performance.json"
+        },
+        {
+          "path": "tools/reported_dana_performance.py"
+        },
+        {
+          "path": "tools/test_reported_dana_performance.py"
+        },
+        {
+          "path": "tools/reported_dana_inputs.py"
+        },
+        {
+          "path": "tools/test_reported_dana_inputs.py"
+        },
+        {
+          "path": "docs/reported-dana-final-nix-failed.json"
+        },
+        {
+          "path": "docs/reported-dana-portable-nix.json"
+        },
+        {
+          "path": "docs/reported-dana-final-nix.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reported-dana-74691-2-1-0-25",
+          "judgment": "reported-dana-74691-2-1-0-25-structure"
+        },
+        {
+          "case": "reported-dana-74691-1-4-0-22",
+          "judgment": "reported-dana-74691-1-4-0-22-structure"
+        },
+        {
+          "case": "reported-dana-74691-1-1-0-20",
+          "judgment": "reported-dana-74691-1-1-0-20-structure"
+        },
+        {
+          "case": "reported-dana-74691-1-3-0-33",
+          "judgment": "reported-dana-74691-1-3-0-33-structure"
+        },
+        {
+          "case": "reported-dana-74691-1-0-0-19",
+          "judgment": "reported-dana-74691-1-0-0-19-structure"
+        },
+        {
+          "case": "reported-dana-74691-1-1-0-25",
+          "judgment": "reported-dana-74691-1-1-0-25-structure"
+        },
+        {
+          "case": "reported-dana-74691-2-3-1-20",
+          "judgment": "reported-dana-74691-2-3-1-20-structure"
+        },
+        {
+          "case": "reported-dana-74691-2-0-0-24",
+          "judgment": "reported-dana-74691-2-0-0-24-structure"
+        },
+        {
+          "case": "reported-dana-74691-1-2-0-28",
+          "judgment": "reported-dana-74691-1-2-0-28-structure"
+        },
+        {
+          "case": "reported-dana-74691-2-2-0-26",
+          "judgment": "reported-dana-74691-2-2-0-26-structure"
+        },
+        {
+          "case": "reported-dana-authored-31",
+          "judgment": "reported-dana-authored-31-structure"
+        },
+        {
+          "case": "reported-dana-authored-36",
+          "judgment": "reported-dana-authored-36-structure"
+        },
+        {
+          "case": "reported-dana-authored-37",
+          "judgment": "reported-dana-authored-37-structure"
+        },
+        {
+          "case": "reported-dana-authored-39",
+          "judgment": "reported-dana-authored-39-structure"
+        },
+        {
+          "case": "reported-dana-authored-41",
+          "judgment": "reported-dana-authored-41-structure"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74697",
+      "source_sha256": "567dcaf8d488e6e5ae59a1f89febc14ef6c390b2b81bc550a594d031ff85b4e2",
+      "status": "scoped",
+      "checklist": [
+        "COV-017cc"
+      ],
+      "scope": "Finite source-owned casual reported/uncertain statement forms with all original notes/groups, own allomorph and prefinal boundaries, complete Native/LMF/SQLite/English retention, exact old structural counterparts and stable individual cases. Two contextual senses remain separate and unjudged; no implicit reporting hada.",
+      "remaining": "The bounded implementation passes 1,005 Rust tests, all original corpus outcomes and 32,096 full word outputs, source/broad stream preservation, 220 browser diagrams, 208 full Native endpoints and six exports. Main source binding confirms all 859 tested inputs and the actual Nix package/assets. The packaged legacy replay matches all 18 earlier streams and 688,434 records; twelve release-integrity controls pass. Six whole-novel cache streams match with caching disabled and enabled. All 80 paired full-novel measurements and eight performance-integrity controls pass; measured median changes range from 2.1% faster to 1.1% slower without a statistical-equivalence claim. The final combined Nix Rust/frontend/inventory gate passes with all 123 staged input files unchanged; bounded implementation and release scope is verified. Contextual senses, speculative heads, unlisted slots and independent Korean review remain unjudged.",
+      "evidence": [
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "every_source_judgment_and_authored_boundary_is_tracked"
+        },
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "dictionary_classes_belong_to_the_report_owner_and_keep_unlisted_slots_unknown"
+        },
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "every_native_owner_retains_all_notes_examples_forms_and_english_senses"
+        },
+        {
+          "path": "tools/reported_dana_audit.py"
+        },
+        {
+          "path": "tools/reported_dana_native.py"
+        },
+        {
+          "path": "tools/reported_dana_corpora.py"
+        },
+        {
+          "path": "tools/reported_dana_broad.py"
+        },
+        {
+          "path": "docs/reported-dana-prototype-full-rust.json"
+        },
+        {
+          "path": "docs/reported-dana-expanded-ledger-rust.json"
+        },
+        {
+          "path": "docs/reported-dana-package-nix.json"
+        },
+        {
+          "path": "docs/reported-dana-package-sources.json"
+        },
+        {
+          "path": "tools/reported_dana_sources.py"
+        },
+        {
+          "path": "tools/test_reported_dana_sources.py"
+        },
+        {
+          "path": "docs/reported-dana-packaged-checks.json"
+        },
+        {
+          "path": "docs/reported-dana-rebuilt-prototype-production.json"
+        },
+        {
+          "path": "tools/reported_dana_legacy_audit.py"
+        },
+        {
+          "path": "docs/reported-dana-main-package-binding.json"
+        },
+        {
+          "path": "docs/reported-dana-packaged-legacy.json"
+        },
+        {
+          "path": "tools/reported_dana_release.py"
+        },
+        {
+          "path": "tools/test_reported_dana_release.py"
+        },
+        {
+          "path": "docs/reported-dana-cache-parity.json"
+        },
+        {
+          "path": "docs/reported-dana-performance.json"
+        },
+        {
+          "path": "tools/reported_dana_performance.py"
+        },
+        {
+          "path": "tools/test_reported_dana_performance.py"
+        },
+        {
+          "path": "tools/reported_dana_inputs.py"
+        },
+        {
+          "path": "tools/test_reported_dana_inputs.py"
+        },
+        {
+          "path": "docs/reported-dana-final-nix-failed.json"
+        },
+        {
+          "path": "docs/reported-dana-portable-nix.json"
+        },
+        {
+          "path": "docs/reported-dana-final-nix.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reported-dana-74698-2-3-0-15",
+          "judgment": "reported-dana-74698-2-3-0-15-structure"
+        },
+        {
+          "case": "reported-dana-74697-2-3-0-35",
+          "judgment": "reported-dana-74697-2-3-0-35-structure"
+        },
+        {
+          "case": "reported-dana-74697-1-0-0-23",
+          "judgment": "reported-dana-74697-1-0-0-23-structure"
+        },
+        {
+          "case": "reported-dana-74697-2-0-0-23",
+          "judgment": "reported-dana-74697-2-0-0-23-structure"
+        },
+        {
+          "case": "reported-dana-74697-1-2-0-29",
+          "judgment": "reported-dana-74697-1-2-0-29-structure"
+        },
+        {
+          "case": "reported-dana-74697-2-1-0-38",
+          "judgment": "reported-dana-74697-2-1-0-38-structure"
+        },
+        {
+          "case": "reported-dana-74697-1-3-0-30",
+          "judgment": "reported-dana-74697-1-3-0-30-structure"
+        },
+        {
+          "case": "reported-dana-74697-2-2-0-43",
+          "judgment": "reported-dana-74697-2-2-0-43-structure"
+        },
+        {
+          "case": "reported-dana-74697-1-4-1-42",
+          "judgment": "reported-dana-74697-1-4-1-42-structure"
+        },
+        {
+          "case": "reported-dana-74697-1-1-0-26",
+          "judgment": "reported-dana-74697-1-1-0-26-structure"
+        },
+        {
+          "case": "reported-dana-authored-38",
+          "judgment": "reported-dana-authored-38-structure"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74698",
+      "source_sha256": "4b4afb42b19152830a6c2ed18b6179c6ec549dadb2248d43991388fc8b1a25ab",
+      "status": "scoped",
+      "checklist": [
+        "COV-017cc"
+      ],
+      "scope": "Finite source-owned casual reported/uncertain statement forms with all original notes/groups, own allomorph and prefinal boundaries, complete Native/LMF/SQLite/English retention, exact old structural counterparts and stable individual cases. Two contextual senses remain separate and unjudged; no implicit reporting hada.",
+      "remaining": "The bounded implementation passes 1,005 Rust tests, all original corpus outcomes and 32,096 full word outputs, source/broad stream preservation, 220 browser diagrams, 208 full Native endpoints and six exports. Main source binding confirms all 859 tested inputs and the actual Nix package/assets. The packaged legacy replay matches all 18 earlier streams and 688,434 records; twelve release-integrity controls pass. Six whole-novel cache streams match with caching disabled and enabled. All 80 paired full-novel measurements and eight performance-integrity controls pass; measured median changes range from 2.1% faster to 1.1% slower without a statistical-equivalence claim. The final combined Nix Rust/frontend/inventory gate passes with all 123 staged input files unchanged; bounded implementation and release scope is verified. Contextual senses, speculative heads, unlisted slots and independent Korean review remain unjudged.",
+      "evidence": [
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "every_source_judgment_and_authored_boundary_is_tracked"
+        },
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "dictionary_classes_belong_to_the_report_owner_and_keep_unlisted_slots_unknown"
+        },
+        {
+          "path": "tests/reported_dana.rs",
+          "test": "every_native_owner_retains_all_notes_examples_forms_and_english_senses"
+        },
+        {
+          "path": "tools/reported_dana_audit.py"
+        },
+        {
+          "path": "tools/reported_dana_native.py"
+        },
+        {
+          "path": "tools/reported_dana_corpora.py"
+        },
+        {
+          "path": "tools/reported_dana_broad.py"
+        },
+        {
+          "path": "docs/reported-dana-prototype-full-rust.json"
+        },
+        {
+          "path": "docs/reported-dana-expanded-ledger-rust.json"
+        },
+        {
+          "path": "docs/reported-dana-package-nix.json"
+        },
+        {
+          "path": "docs/reported-dana-package-sources.json"
+        },
+        {
+          "path": "tools/reported_dana_sources.py"
+        },
+        {
+          "path": "tools/test_reported_dana_sources.py"
+        },
+        {
+          "path": "docs/reported-dana-packaged-checks.json"
+        },
+        {
+          "path": "docs/reported-dana-rebuilt-prototype-production.json"
+        },
+        {
+          "path": "tools/reported_dana_legacy_audit.py"
+        },
+        {
+          "path": "docs/reported-dana-main-package-binding.json"
+        },
+        {
+          "path": "docs/reported-dana-packaged-legacy.json"
+        },
+        {
+          "path": "tools/reported_dana_release.py"
+        },
+        {
+          "path": "tools/test_reported_dana_release.py"
+        },
+        {
+          "path": "docs/reported-dana-cache-parity.json"
+        },
+        {
+          "path": "docs/reported-dana-performance.json"
+        },
+        {
+          "path": "tools/reported_dana_performance.py"
+        },
+        {
+          "path": "tools/test_reported_dana_performance.py"
+        },
+        {
+          "path": "tools/reported_dana_inputs.py"
+        },
+        {
+          "path": "tools/test_reported_dana_inputs.py"
+        },
+        {
+          "path": "docs/reported-dana-final-nix-failed.json"
+        },
+        {
+          "path": "docs/reported-dana-portable-nix.json"
+        },
+        {
+          "path": "docs/reported-dana-final-nix.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reported-dana-74698-1-0-0-17",
+          "judgment": "reported-dana-74698-1-0-0-17-structure"
+        },
+        {
+          "case": "reported-dana-74698-1-4-0-33",
+          "judgment": "reported-dana-74698-1-4-0-33-structure"
+        },
+        {
+          "case": "reported-dana-74698-1-1-0-22",
+          "judgment": "reported-dana-74698-1-1-0-22-structure"
+        },
+        {
+          "case": "reported-dana-74698-2-2-0-32",
+          "judgment": "reported-dana-74698-2-2-0-32-structure"
+        },
+        {
+          "case": "reported-dana-74697-1-2-0-34",
+          "judgment": "reported-dana-74697-1-2-0-34-structure"
+        },
+        {
+          "case": "reported-dana-74698-1-4-0-38",
+          "judgment": "reported-dana-74698-1-4-0-38-structure"
+        },
+        {
+          "case": "reported-dana-74698-1-5-0-24",
+          "judgment": "reported-dana-74698-1-5-0-24-structure"
+        },
+        {
+          "case": "reported-dana-74698-2-0-0-13",
+          "judgment": "reported-dana-74698-2-0-0-13-structure"
+        },
+        {
+          "case": "reported-dana-74698-1-2-0-32",
+          "judgment": "reported-dana-74698-1-2-0-32-structure"
+        },
+        {
+          "case": "reported-dana-74698-1-3-0-33",
+          "judgment": "reported-dana-74698-1-3-0-33-structure"
+        },
+        {
+          "case": "reported-dana-74698-2-1-0-24",
+          "judgment": "reported-dana-74698-2-1-0-24-structure"
+        },
+        {
+          "case": "reported-dana-authored-32",
+          "judgment": "reported-dana-authored-32-structure"
+        },
+        {
+          "case": "reported-dana-authored-33",
+          "judgment": "reported-dana-authored-33-structure"
+        },
+        {
+          "case": "reported-dana-authored-34",
+          "judgment": "reported-dana-authored-34-structure"
+        },
+        {
+          "case": "reported-dana-authored-35",
+          "judgment": "reported-dana-authored-35-structure"
+        },
+        {
+          "case": "reported-dana-authored-40",
+          "judgment": "reported-dana-authored-40-structure"
+        }
+      ]
     }
   ]
 }

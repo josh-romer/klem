@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--offline",
+    "--features",
+    "web",
+    "--no-fail-fast",
+    "-j",
+    "4",
+    "--manifest-path",
+    "/tmp/klem-reported-dana-prototype/Cargo.toml"
+  ],
+  "cargo_incremental": "0",
+  "target": "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo",
+  "passed": 1005,
+  "ignored": 1,
+  "batches": 212,
+  "uncompressed_log_sha256": "3ce998899f944f975e4a590380b6d1f6ea979ab61459e75c5ebb29700d2a74e2",
+  "scope": "Completed isolated full Rust run after exact-parent source-cohort guard corrections and before the prepared global-ledger merge. No launch-time input freeze manifest is claimed. Original failed runs remain preserved; actual main/package release gates remain open."
+}

@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "inputs_unchanged": true,
+  "runs": [
+    {
+      "family": "reported-deoni",
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "fb18ee1e7b7d589c6bdc5ae170fe6f537a63d70efc4e14d43520edcaade1f8d5",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "772ba8fccad1e48363a1bd68846acc47a26084c3d8eb022eee0224acfef8b30f",
+      "records": 63129
+    },
+    {
+      "family": "reported-deoni",
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "fb18ee1e7b7d589c6bdc5ae170fe6f537a63d70efc4e14d43520edcaade1f8d5",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "918e79ff507fa653c91db379e487e584bd1d20dabbd4cb24cc83e28dc05a5bbc",
+      "records": 63129
+    },
+    {
+      "family": "reported-deoni",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "fb18ee1e7b7d589c6bdc5ae170fe6f537a63d70efc4e14d43520edcaade1f8d5",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "36e176b53d507d6596644e4dc2987ecb5514c45ea03d095f198d244bc419b01b",
+      "records": 63129
+    },
+    {
+      "family": "reported-deoni",
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "556bf0fe71845fa121ddb3d6a163632ad483e573aa663ef02ebd7cbc6ff0a2ad",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "f651913c5d3f121a2542209c836a51ae5516de678d94f02c57744b6079a0d279",
+      "records": 63129
+    },
+    {
+      "family": "reported-deoni",
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "556bf0fe71845fa121ddb3d6a163632ad483e573aa663ef02ebd7cbc6ff0a2ad",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "5383276aff9cccc130530a23981484df99e98b489d001ccfe00803c33447ea3e",
+      "records": 63129
+    },
+    {
+      "family": "reported-deoni",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "556bf0fe71845fa121ddb3d6a163632ad483e573aa663ef02ebd7cbc6ff0a2ad",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "602d06d79619917bef995d071ebc6b105866a5332572c88186c0aaddfdb3565a",
+      "records": 63129
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "2f428c644ec471c3fdaeffba9c58a168035bcd73b238ac43e5fae48cb53c3010",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "6bfd6bda158d60042fdfe4afe32f9ab7db381b69faa33b5a9102be1b2d7438fa",
+      "records": 24433
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "2f428c644ec471c3fdaeffba9c58a168035bcd73b238ac43e5fae48cb53c3010",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "aef036329a68bec8b124b878904028b9da2cafd2d789eedc12c059b465f33317",
+      "records": 24433
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "2f428c644ec471c3fdaeffba9c58a168035bcd73b238ac43e5fae48cb53c3010",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "5d41cb4ad1a6d2de015618808b28ca5ca60c20ecd02b2fe1f57b2c7e391dffc3",
+      "records": 24433
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "3e72e981dea568b1dfafdfa09b686bc83a21a87bbe048331e63dbbe0caafa7ee",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "1139b1598a0f2126e0e94878955067704179421e11271e5ce444643e4bddaee9",
+      "records": 24433
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "3e72e981dea568b1dfafdfa09b686bc83a21a87bbe048331e63dbbe0caafa7ee",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "01246dd307be7b3efd5e2d49d0171969723fd72db0c0c49037357ccd42b3d729",
+      "records": 24433
+    },
+    {
+      "family": "degree-rimankeum",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "3e72e981dea568b1dfafdfa09b686bc83a21a87bbe048331e63dbbe0caafa7ee",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "d16c8238799f5e6eacddc3cca69eee69e2c58cc9a3f5e2ac1275ddef9b47c0a7",
+      "records": 24433
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFC",
+      "mode": "raw",
+      "input_sha256": "229acdaba0df595bd75c2afe6041ed659da4f4891ac514dcd76dfe1e0f923726",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "13d4bb72d65e6becd985503f19fb417b8de0b49253187c5200c3955ba0149d70",
+      "records": 27177
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFC",
+      "mode": "headword",
+      "input_sha256": "229acdaba0df595bd75c2afe6041ed659da4f4891ac514dcd76dfe1e0f923726",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "034ecd79a5092f142898781eb8df924887dc1829147f510c2dbe2b1cff07e08b",
+      "records": 27177
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "input_sha256": "229acdaba0df595bd75c2afe6041ed659da4f4891ac514dcd76dfe1e0f923726",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "d071fd4a920652e4bb024b092976f08a24f3beefdc907a5d403aac950146e233",
+      "records": 27177
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFD",
+      "mode": "raw",
+      "input_sha256": "0f706d0f30265b68ae7bf892e1ec9b22cf78058e3ac94524874b042d67109f7c",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "a3714766386b5d6d662338d33a90612c97c3b46ccc6288b10dc35fc9fe0ac8f3",
+      "records": 27177
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFD",
+      "mode": "headword",
+      "input_sha256": "0f706d0f30265b68ae7bf892e1ec9b22cf78058e3ac94524874b042d67109f7c",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "sha256": "dc2a5cdcf34f83799e21cb895f8709b3fb1487622f9ab4645f5f645d874161f1",
+      "records": 27177
+    },
+    {
+      "family": "counterfactual-ryeon",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "input_sha256": "0f706d0f30265b68ae7bf892e1ec9b22cf78058e3ac94524874b042d67109f7c",
+      "command": [
+        "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "b65a10350676b1e7648da5a760153e4f9b9b8d78a6f3e38a8b2a49bc70b271ba",
+      "records": 27177
+    }
+  ],
+  "cli": "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem",
+  "cli_sha256": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "frozen_inputs": {
+    "docs/reported-dana-prototype-legacy.json.gz": "aba14f051640b206b7cc98e984525ee2dfd0f0ba82a1e898f06f5c04ae1bceec",
+    "docs/reported-deoni-prototype-source-streams.json.gz": "958d362eb02b2aa43b1bcce962100f3c9b4812cfd4759378509812850cd3ebde",
+    "docs/reported-deoni-main-production.json": "a648ec3af9a8653d10a9eb388cddda8389dc34fea20053c6cb26d48d7717a359",
+    "docs/degree-rimankeum-cohort.json.gz": "cb407d4b7b2d591253f2be3b18746e8350a848e2632be1fdd8ed119dd14aec3d",
+    "docs/counterfactual-ryeon-cohort.json.gz": "1f0947fa84eb71ea4e85348201e20555ce3632d606581c6da8f3657544aaaac3"
+  },
+  "producer": {
+    "text": "\"\"\"Match every actual packaged legacy stream to the independently audited capture.\"\"\"\n\nimport argparse\nimport hashlib\nimport json\nfrom pathlib import Path\nfrom reported_dana_corpora import ROOT, read, sha\nfrom reported_dana_legacy import specifications\nfrom reported_dana_production import file_sha, replay\n\n\ndef capture(cli, output):\n    cli = Path(cli).resolve()\n    output = Path(output)\n    assert not output.exists()\n    previous_path = \"docs/reported-dana-prototype-legacy.json.gz\"\n    previous = read(previous_path)\n    frozen = {previous_path: sha(previous_path)}\n    specs, paths = specifications()\n    frozen.update({name: sha(name) for name in paths})\n    cli_sha = file_sha(cli)\n    dictionary = ROOT / \"data/dictionaries/krdict/krdict.db\"\n    dictionary_sha = file_sha(dictionary)\n    runs = []\n    for spec, old in zip(specs, previous[\"comparisons\"], strict=True):\n        assert all(\n            spec[key] == old[key] for key in [\"family\", \"encoding\", \"mode\", \"records\"]\n        )\n        result = replay(\n            [str(cli), *spec[\"arguments\"]],\n            old[\"after_sha256\"],\n            old[\"records\"],\n            spec[\"input\"],\n        )\n        runs.append(\n            {key: old[key] for key in [\"family\", \"encoding\", \"mode\", \"input_sha256\"]}\n            | result\n        )\n        print(\n            \"packaged legacy\",\n            old[\"family\"],\n            old[\"encoding\"],\n            old[\"mode\"],\n            result[\"records\"],\n            flush=True,\n        )\n    assert len(runs) == 18 and sum(run[\"records\"] for run in runs) == 688434\n    assert file_sha(cli) == cli_sha and file_sha(dictionary) == dictionary_sha\n    assert all(sha(name) == value for name, value in frozen.items())\n    producer = Path(__file__)\n    report = {\n        \"schema_version\": 1,\n        \"state\": \"passed\",\n        \"inputs_unchanged\": True,\n        \"runs\": runs,\n        \"cli\": str(cli),\n        \"cli_sha256\": cli_sha,\n        \"dictionary_sha256\": dictionary_sha,\n        \"frozen_inputs\": frozen,\n        \"producer\": {\n            \"text\": producer.read_text(),\n            \"sha256\": hashlib.sha256(producer.read_bytes()).hexdigest(),\n        },\n        \"scope\": \"Actual packaged CLI equality for all18 independently reconstructed earlier source streams,688434frames. Existing paths/order/readings/byte spans and20 individual additions transfer by exact full-stream equality; contextual and independent review remain unjudged.\",\n    }\n    output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--cli\", required=True)\n    parser.add_argument(\"--output\", required=True)\n    args = parser.parse_args()\n    capture(args.cli, args.output)\n",
+    "sha256": "9659623383a8c64f1ab67f904da5f3cdeaf56904576bb2fb3cec7a5ee921acd1"
+  },
+  "scope": "Actual packaged CLI equality for all18 independently reconstructed earlier source streams,688434frames. Existing paths/order/readings/byte spans and20 individual additions transfer by exact full-stream equality; contextual and independent review remain unjudged."
+}

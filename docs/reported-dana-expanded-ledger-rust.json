@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "passed": 9,
+  "required": 30534,
+  "forbidden": 4076,
+  "new_required": 36,
+  "new_forbidden": 6,
+  "scope": "Global ledger and new family focused Rust suites after the separately preserved1005-test full run. Existing judgments unchanged; emitted alternatives stay in the unjudged queue.",
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--offline",
+    "--features",
+    "web",
+    "-j",
+    "4",
+    "--manifest-path",
+    "/tmp/klem-reported-dana-prototype/Cargo.toml",
+    "--test",
+    "validity",
+    "--test",
+    "reported_dana"
+  ],
+  "log_sha256": "20c5e8670f1ada879bf504b3538ce53b1897685593ca3909c7e5a5ed79074c28"
+}

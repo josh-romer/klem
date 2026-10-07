@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "capture_sha256": "034ff8b793ea9367a89bd78baee8b2a88b09c9393bc30ee4ad18ee97d1054dbb",
+  "prior_sha256": "78a13af74813ca83f5111600fafa884fca0115da3fb38e3414bd09b709d259f1",
+  "checks": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "before": {
+        "rows": 22220,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 137681
+      },
+      "after": {
+        "rows": 22220,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 137681
+      }
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "before": {
+        "rows": 24490,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 147133
+      },
+      "after": {
+        "rows": 24490,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 147133
+      }
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "before": {
+        "rows": 9989,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 56728
+      },
+      "after": {
+        "rows": 9989,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 56728
+      }
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "before": {
+        "rows": 9871,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 56891
+      },
+      "after": {
+        "rows": 9871,
+        "gold_outcomes_verified": true,
+        "summary_fields_verified": [
+          "adapter_coverage",
+          "common_misses",
+          "converted_rows",
+          "gold_lemmas",
+          "grouped_lemma_recall",
+          "grouped_matches",
+          "lemma_recall",
+          "max_candidates",
+          "mean_candidates",
+          "p95_candidates",
+          "recovered_gold_lemmas",
+          "transformed_grouped_recall",
+          "transformed_matches",
+          "transformed_rows"
+        ],
+        "candidate_count_sum": 56891
+      }
+    }
+  ],
+  "producer": {
+    "text": "\"\"\"Independently recompute every unchanged held-out outcome and candidate metric.\"\"\"\nimport gzip,hashlib,json,sys\nfrom pathlib import Path\nROOT=Path('/home/josh/projects/klem');sys.path.insert(0,str(ROOT/'tools'))\nfrom reported_deoni_corpora import verify_rows\nfrom copula_expectation_production import read,sha\npath=Path('/tmp/klem-reported-dana-prototype-corpora.json.gz');current=read(path)\nprevious=read('docs/reported-deoni-prototype-corpora.json.gz')\nassert current['inputs_unchanged'] and current['previous_report_sha256']==sha(ROOT/'docs/reported-deoni-prototype-corpora.json.gz')\nassert current['after_words']==previous['after_words'] and len(current['after_words'])==32096\nassert current['changed_words']=={} and current['candidate_changes']==[] and current['actual_prior_companions']=={}\nassert current['after_word_sha256']==hashlib.sha256(json.dumps(current['after_words'],ensure_ascii=False,sort_keys=True).encode()).hexdigest()\nassert hashlib.sha256(current['producer']['text'].encode()).hexdigest()==current['producer']['sha256']\nassert len(current['corpora'])==len(previous['corpora'])==4\nchecks=[]\nfor actual,old in zip(current['corpora'],previous['corpora'],strict=True):\n assert all(actual[k]==old[k] for k in ['corpus','partition','source','source_sha256','report_lines'])\n assert actual['exit_code']==0 and actual['command'][1:]==[actual['corpus'],actual['source']]\n assert actual['before_jsonl']==old['after_jsonl']\n rows=[json.loads(line) for line in actual['after_jsonl'].splitlines()]\n before=[json.loads(line) for line in actual['before_jsonl'].splitlines()]\n assert rows==before and len(rows)==actual['report_lines']\n assert actual['changed_gold_outcomes']==[] and actual['changed_summary_fields']=={}\n assert sha(ROOT/actual['source'])==actual['source_sha256']==hashlib.sha256(actual['original_source_text'].encode()).hexdigest()\n for summary in [rows[0],before[0]]:assert summary['input_sha256']==actual['source_sha256'] and summary['input']==actual['source']\n checks.append({'corpus':actual['corpus'],'partition':actual['partition'],'before':verify_rows(before,previous['after_words']),'after':verify_rows(rows,current['after_words'])})\nassert sum(r['after']['rows'] for r in checks)==66570\np=Path(__file__);output=Path('/tmp/klem-reported-dana-prototype-corpora-audit.json');assert not output.exists()\noutput.write_text(json.dumps({'schema_version':1,'state':'passed','capture_sha256':sha(path),'prior_sha256':sha(ROOT/'docs/reported-deoni-prototype-corpora.json.gz'),'checks':checks,'producer':{'text':p.read_text(),'sha256':sha(p)}},indent=2)+'\\n')\nprint('Independently verified all66570 unchanged annotated outcomes and ambiguity summaries; all32096 complete word outputs unchanged.')\n",
+    "sha256": "2085921caf4bb4df94968626fe5c77a9422940b5f61fb386b8260e6297600fa1"
+  }
+}

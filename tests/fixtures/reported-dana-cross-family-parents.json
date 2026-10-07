@@ -1,0 +1,634 @@
+{
+  "schema_version": 1,
+  "before_cli_sha256": "01dbf1fb5fa5a1e1f637277b406d5c8520f46879f59cf812b1ac2cd7f6a1121d",
+  "actual_prior_companions": {
+    "드렸다고": {
+      "normalized": "드렸다고",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "드려다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.yeo_absorption",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "드렸다",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "드렸다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "드렸다고",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "드렸다다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "드렸하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "드리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    }
+  },
+  "individual_additions": [
+    {
+      "family": "copula",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드려다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.reported_dana",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드려다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "copula",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드렸다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_dana"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드렸다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "copula",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드리다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.reported_dana",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드리다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "degree",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드려다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.reported_dana",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드려다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "degree",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드렸다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_dana"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드렸다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "degree",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드리다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.reported_dana",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드리다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "deoniman",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드려다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.reported_dana",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드려다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "deoniman",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드렸다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_dana"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드렸다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "family": "deoniman",
+      "surface": "드렸다나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드리다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.reported_dana",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "드렸다고",
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "드리다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "contextual_verdict": "unjudged"
+    }
+  ]
+}

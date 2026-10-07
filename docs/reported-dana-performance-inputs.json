@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "checklist": [
+    "COV-017cc"
+  ],
+  "nix_outputs": {
+    "klem": "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0",
+    "web-assets": "/nix/store/4f3xqpp17qvapfdnb74jn6zil8w72kgv-klem-web-assets-0.1.0"
+  },
+  "cli_sha256": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd",
+  "before_cli_sha256": "01dbf1fb5fa5a1e1f637277b406d5c8520f46879f59cf812b1ac2cd7f6a1121d",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "comparisons": [
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-raw",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/tmp/klem-written-vowel-candidate-input.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/tmp/klem-written-vowel-candidate-input.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 77584,
+      "before_jsonl_sha256": "95d0c98b8aa4e8c14536bd49d450657c737d988081069cf8aeb36d7d3f9d35d7",
+      "after_jsonl_sha256": "95d0c98b8aa4e8c14536bd49d450657c737d988081069cf8aeb36d7d3f9d35d7",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-headword",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/tmp/klem-written-vowel-candidate-input.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-only"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/tmp/klem-written-vowel-candidate-input.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-only"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 77584,
+      "before_jsonl_sha256": "93599af059a9a260dddc25db6cdb8ec03281ea30696113c6fc46237180ed2a40",
+      "after_jsonl_sha256": "93599af059a9a260dddc25db6cdb8ec03281ea30696113c6fc46237180ed2a40",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "mode": "candidate-compatible",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/tmp/klem-written-vowel-candidate-input.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-compatible"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/tmp/klem-written-vowel-candidate-input.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-compatible"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 77584,
+      "before_jsonl_sha256": "8d34027b57715759ab9c2e34280b79843d59daac99f1fc38725d35844f900003",
+      "after_jsonl_sha256": "8d34027b57715759ab9c2e34280b79843d59daac99f1fc38725d35844f900003",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 179112,
+      "before_jsonl_sha256": "d009362907b939e5ad2ea94b237b6cf69b7872fa7e696b92f0c5a17792750c77",
+      "after_jsonl_sha256": "d009362907b939e5ad2ea94b237b6cf69b7872fa7e696b92f0c5a17792750c77",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-only"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-only"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 179112,
+      "before_jsonl_sha256": "cc37c13c35715b555ed0106eec750ab2858169fba74f43bcc085dec5949a33a3",
+      "after_jsonl_sha256": "cc37c13c35715b555ed0106eec750ab2858169fba74f43bcc085dec5949a33a3",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-compatible"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-compatible"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 179112,
+      "before_jsonl_sha256": "c02c25fc4dbddd821605d6c2df3f90f0b4d90913e231c3704de078dde353287b",
+      "after_jsonl_sha256": "c02c25fc4dbddd821605d6c2df3f90f0b4d90913e231c3704de078dde353287b",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword-spacing",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-only",
+          "--suggest-spacing"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-only",
+          "--suggest-spacing"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 179112,
+      "before_jsonl_sha256": "0d463ca01ab62816510897377a2a679030962ce0636e8bedb67b035eaa8fdf0f",
+      "after_jsonl_sha256": "0d463ca01ab62816510897377a2a679030962ce0636e8bedb67b035eaa8fdf0f",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    },
+    {
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible-spacing",
+      "commands": [
+        [
+          "/nix/store/p0xh9pk9m2nm8373vzicgdpx5w1yz6z7-klem-0.1.0/bin/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-compatible",
+          "--suggest-spacing"
+        ],
+        [
+          "/home/josh/projects/klem/web/test-results/reported-dana-prototype-cargo/debug/klem",
+          "text",
+          "/home/josh/projects/klem/data/books/mujeong.txt",
+          "--dictionary",
+          "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+          "--dict-compatible",
+          "--suggest-spacing"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ],
+      "records": 179112,
+      "before_jsonl_sha256": "9d859460561e1634e090109a8d955bd68ff98264e15106779006eaba7439323d",
+      "after_jsonl_sha256": "9d859460561e1634e090109a8d955bd68ff98264e15106779006eaba7439323d",
+      "changed_frames": [],
+      "original_bytes_conserved": true
+    }
+  ],
+  "capture_sha256": {
+    "docs/reported-dana-packaged-checks.json": "97eca195970b2446cfa115c86e3bff3f67f82da42002f5a107f46fb055e16e97",
+    "docs/reported-dana-packaged-production.json": "eaf1627b0b552a58efeb4568b12acb9b0b62375457820c2aa2c927ec336ff332",
+    "docs/reported-dana-prototype-broad.json.gz": "479073b7c5bb02ef68404f678a5cf33e492ee11b9705ba009caf25629a4c481c"
+  },
+  "scope": "Performance anchors only: comparisons retain original prototype commands. Exact actual packaged output equality is independently checked by reported_dana_release.py; timing records identify actual old/new store binaries."
+}

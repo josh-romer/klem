@@ -370,6 +370,27 @@
                 ./tools/test_reported_deoni_release.py
                 ./tools/reported_deoni_complete_sources.py
                 ./tools/test_reported_deoni_complete_sources.py
+                ./tools/reported_dana_parent.py
+                ./tools/reported_dana_inputs.py
+                ./tools/test_reported_dana_inputs.py
+                ./tools/reported_dana_audit.py
+                ./tools/reported_dana_native.py
+                ./tools/reported_dana_corpora.py
+                ./tools/reported_dana_broad.py
+                ./tools/reported_dana_legacy.py
+                ./tools/reported_dana_legacy_audit.py
+                ./tools/reported_dana_legacy_replay.py
+                ./tools/reported_dana_release.py
+                ./tools/test_reported_dana_release.py
+                ./tools/reported_dana_cache.py
+                ./tools/reported_dana_timing.py
+                ./tools/reported_dana_performance.py
+                ./tools/test_reported_dana_performance.py
+                ./tools/reported_dana_production.py
+                ./tools/reported_dana_browser.py
+                ./tools/reported_dana_sources.py
+                ./tools/test_reported_dana_sources.py
+                ./web/tests/reported-dana.mjs
                 ./tools/reported_deoni_performance.py
                 ./web/tests/reported-deoni.mjs
                 ./web/tests/copula-expectation.mjs
@@ -703,6 +724,18 @@
             python tools/reported_deoni_release.py --verify
             python -m unittest discover -s tools -p 'test_reported_deoni_release.py'
             python -m unittest discover -s tools -p 'test_reported_deoni_complete_sources.py'
+            python tools/reported_dana_audit.py
+            python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'
+            python tools/reported_dana_native.py
+            python tools/reported_dana_corpora.py
+            python tools/reported_dana_broad.py
+            python tools/reported_dana_legacy_audit.py
+            python tools/reported_dana_sources.py --verify
+            python -m unittest discover -s tools -p 'test_reported_dana_sources.py'
+            python tools/reported_dana_release.py --verify
+            python -m unittest discover -s tools -p 'test_reported_dana_release.py'
+            python tools/reported_dana_performance.py --verify
+            python -m unittest discover -s tools -p 'test_reported_dana_performance.py'
             python tools/reported_deoni_performance.py --verify
             python tools/friendly_command_runtime.py
             python tools/friendly_command_corpora.py --verify

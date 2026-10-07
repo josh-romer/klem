@@ -111,6 +111,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-degree-expectation-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-deoniman-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-reported-command-deoni-english.json"),
+                PathBuf::from("tests/fixtures/krdict-reported-dana-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

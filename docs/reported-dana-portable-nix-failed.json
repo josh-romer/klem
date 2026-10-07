@@ -1,0 +1,514 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-017cc"
+  ],
+  "state": "failed",
+  "scope": "Focused new-family portability audit; full combined gate remains open",
+  "pid": 3465181,
+  "started_at": "2026-10-07T10:01:03.201522+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--file",
+    "/tmp/klem-reported-dana-portable-check.nix",
+    "--impure",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "1",
+    "--no-link",
+    "--print-out-paths",
+    "-L"
+  ],
+  "snapshot": {
+    "head": "3896ca835aacb5ebfcd52cb39f961558238c0af8",
+    "staged_diff_sha256": "960175b347b087b65cb018d8772f5b2464a24c0173d5dfb39acb8d2e08bd4af1",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "63165c8b41120f1c469a42d8a9c2ac655b11498915d95ea96e171a013698efde",
+        "bytes": 501194
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "49b13ce62f9a773aa5d980aeeb605f57f16351eabefa8588273931a4072bd790",
+        "bytes": 3435269
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "099f18fb952f3134fa5d7e3bba3b5bd42a3dcbd7177af16f7b72ece3e660446e",
+        "bytes": 1297290
+      },
+      "docs/reported-dana-browser-native.json.gz": {
+        "sha256": "7822750a438e067b9d589f875002f80734f4be31ecb993bffce55439cd2d09dd",
+        "bytes": 711665
+      },
+      "docs/reported-dana-cache-parity.json": {
+        "sha256": "a2483eb0f5c3f95f0c3b8df164739943cea21d8498cc1d0231ae066a0e294a12",
+        "bytes": 6747
+      },
+      "docs/reported-dana-cache-parity.log.gz": {
+        "sha256": "3eeaa5ef3ada21f71e681dff10611e66a6411ed92c569173a790ff2152d6a9a2",
+        "bytes": 89
+      },
+      "docs/reported-dana-cross-family-regressions.log.gz": {
+        "sha256": "a8334879439fb1fc57740736bd1f43a88698f8d5775c448dad6ade1250c6d19e",
+        "bytes": 1174
+      },
+      "docs/reported-dana-expanded-ledger-rust.json": {
+        "sha256": "61674b72a26c5bd6c2f44b4109a5b17a43e9e8f22d236c361fbbf84e2c8a42b1",
+        "bytes": 707
+      },
+      "docs/reported-dana-expanded-ledger-rust.log.gz": {
+        "sha256": "6ca1408a61a3110e2a2736f02fbc692b5336db56190f1bea999794583edb68c1",
+        "bytes": 657
+      },
+      "docs/reported-dana-final-inventory-controls.log.gz": {
+        "sha256": "37154271553223ba46ad63a07e78e2f3d13f9370154c677acc1caf56e83f89cf",
+        "bytes": 54
+      },
+      "docs/reported-dana-final-inventory-verify.log.gz": {
+        "sha256": "d8a9ca78974125938067daf29ac98836a7daed07228d81498f3d51e8ed8730fa",
+        "bytes": 179
+      },
+      "docs/reported-dana-final-nix-failed.json": {
+        "sha256": "9bda79171d2f6ec07b6b43cd2c4e3a3323d3bdcc02439a0926ca3d783efff59a",
+        "bytes": 19988
+      },
+      "docs/reported-dana-final-nix-failed.log.gz": {
+        "sha256": "41991df8a2a377d29976b14eba1e53d2653d0a6e50739cefc1e97161dc685100",
+        "bytes": 8890
+      },
+      "docs/reported-dana-first-browser.mjs.txt": {
+        "sha256": "6d3ef6cdbe037a68ae33c567be586ad3d592fcb15e4ad9976f67485b901272b5",
+        "bytes": 7145
+      },
+      "docs/reported-dana-integration.json.gz": {
+        "sha256": "055146841b7ea60bd11ea8c2c660733aeae691cae70638a647da4d776302171a",
+        "bytes": 1455246
+      },
+      "docs/reported-dana-main-clippy.log.gz": {
+        "sha256": "33af6c35ba413273a40cf2cff67731af2803f6a4eca9816b59311e7cd5abc5f5",
+        "bytes": 466
+      },
+      "docs/reported-dana-main-inventory-controls.log.gz": {
+        "sha256": "ddb853da885afb1050161492285db41170b505a6bdd60a5ae5d9e9bdd46dc2f4",
+        "bytes": 54
+      },
+      "docs/reported-dana-main-inventory-verify.log.gz": {
+        "sha256": "d8a9ca78974125938067daf29ac98836a7daed07228d81498f3d51e8ed8730fa",
+        "bytes": 179
+      },
+      "docs/reported-dana-main-native-audit.log.gz": {
+        "sha256": "ec5aca33899fcaf59f1680079ad142d22d858aecd5137437ca73fac8f39a6ae0",
+        "bytes": 204
+      },
+      "docs/reported-dana-main-package-binding.json": {
+        "sha256": "9e03f185779db4bfc0d61b47df6e10dec9e22b3f262ef2d8752a3a133f9ac400",
+        "bytes": 160156
+      },
+      "docs/reported-dana-main-package-binding.log.gz": {
+        "sha256": "f8774a952e27cee49953583c1d90fba165b54adeb3f90c9003ffdac255aa12d2",
+        "bytes": 187
+      },
+      "docs/reported-dana-main-source-audit.log.gz": {
+        "sha256": "30eae419cb82ba514fa7148fa9a0fd11f8acd49904724729bb6855a1532c3488",
+        "bytes": 219
+      },
+      "docs/reported-dana-main-source-closure-audit.log.gz": {
+        "sha256": "d7af57f5383f5887553f485eb24b2a49b06761e9f7f7402e04e6a900da8e98df",
+        "bytes": 187
+      },
+      "docs/reported-dana-main-source-closure-tests.log.gz": {
+        "sha256": "81345c745ec3518451caf677afc8a8d3f89340db0ec6189e05da8ba1dd67b34d",
+        "bytes": 54
+      },
+      "docs/reported-dana-main-web-build.log.gz": {
+        "sha256": "b68c4786a2e11d11d7bbce1574e6b85949d92e016b72232222a750b91281a919",
+        "bytes": 402
+      },
+      "docs/reported-dana-native-preparation.json.gz": {
+        "sha256": "037d8a67c124d2e7205f426c315b013a74f12b70e03be9c2e7875aa286de7215",
+        "bytes": 909666
+      },
+      "docs/reported-dana-observation-native.json.gz": {
+        "sha256": "c80e06e849b6810bf465c4d85c60fb243e82b82daf1c96d85d41cff159788e78",
+        "bytes": 946455
+      },
+      "docs/reported-dana-package-nix.json": {
+        "sha256": "1cf9d03662cdbe63cd0bd6e6745c931b1a6a22c8d9bbc95a5479b9f8ae3b6955",
+        "bytes": 139632
+      },
+      "docs/reported-dana-package-nix.log.gz": {
+        "sha256": "24199ae1922ab9beadf692ee739f3890ee046b7e7ef82f930cb41ba3e26c6d0c",
+        "bytes": 26593
+      },
+      "docs/reported-dana-package-source-capture.log.gz": {
+        "sha256": "f7eb3f5b101f5a527d6af72bdbe31fba27c256722d5dbdbe3f8d1d54a9f0aa3c",
+        "bytes": 150
+      },
+      "docs/reported-dana-package-sources.json": {
+        "sha256": "a1f686c3f1bbe1450fd139efe33f8da448eacb98b503ca822d0267594c74c44b",
+        "bytes": 169584
+      },
+      "docs/reported-dana-packaged-browser.json.gz": {
+        "sha256": "1cf004e300846b98ce7c48e98e70596253dff3304f3236c7afe435db16a9efd3",
+        "bytes": 1227376
+      },
+      "docs/reported-dana-packaged-browser.log.gz": {
+        "sha256": "51497596de936c8f446711c98f3336d408c181d59adc640fd4204a7fe4624a8d",
+        "bytes": 168
+      },
+      "docs/reported-dana-packaged-checks.json": {
+        "sha256": "97eca195970b2446cfa115c86e3bff3f67f82da42002f5a107f46fb055e16e97",
+        "bytes": 1338
+      },
+      "docs/reported-dana-packaged-legacy.json": {
+        "sha256": "a1a202779d934cdeadc70b67e2d624271b106ff8abdff0148bcd10ae2a8f28da",
+        "bytes": 14405
+      },
+      "docs/reported-dana-packaged-legacy.log.gz": {
+        "sha256": "7cc00d6d0146fc2f6dc799061f3adc50fbf7e869199080c1f60e9fe7559772ef",
+        "bytes": 179
+      },
+      "docs/reported-dana-packaged-production.json": {
+        "sha256": "eaf1627b0b552a58efeb4568b12acb9b0b62375457820c2aa2c927ec336ff332",
+        "bytes": 21397
+      },
+      "docs/reported-dana-packaged-production.log.gz": {
+        "sha256": "7d477a6e6f0338376df8b4034a5846b431f0dedab3bac20ea9c954131aaddb09",
+        "bytes": 246
+      },
+      "docs/reported-dana-performance-audit.log.gz": {
+        "sha256": "76e72d127c462c59fdfdfd8b8168462695fc05c28c32227db24d8b431b524061",
+        "bytes": 62
+      },
+      "docs/reported-dana-performance-controls.log.gz": {
+        "sha256": "a642ed36cec5d40e3bef200419822b346ac4bc2be6d246cb169c06c6b04c9760",
+        "bytes": 54
+      },
+      "docs/reported-dana-performance-inputs.json": {
+        "sha256": "a2d9ec096e159192c0f8518bef41c92cbeeb2811505162fdadc210b79f9729fa",
+        "bytes": 10708
+      },
+      "docs/reported-dana-performance-producer.log.gz": {
+        "sha256": "2a0916ba708455b784413b9d22942e9f4091d0661886e7f4ece701e45534debe",
+        "bytes": 575
+      },
+      "docs/reported-dana-performance.json": {
+        "sha256": "687815c3b873c49375659f1a6751988b446e70d45e3734e6d3220cc4b86674e3",
+        "bytes": 83197
+      },
+      "docs/reported-dana-portable-broad-audit.log.gz": {
+        "sha256": "3087385744d01a616890a833c493cb11d16b0e00ef400b98c08944496cb041e9",
+        "bytes": 159
+      },
+      "docs/reported-dana-portable-corpora-audit.log.gz": {
+        "sha256": "2599a4c29d6b067722c99ba39fef298f23681d0bb82b821b5515dbc47ac806ea",
+        "bytes": 466
+      },
+      "docs/reported-dana-portable-input-controls.log.gz": {
+        "sha256": "33f88a47360ca563f3a4c78b9270791afe9f4719b672959cc96aae8209cd4b29",
+        "bytes": 54
+      },
+      "docs/reported-dana-portable-legacy-audit-failed.log.gz": {
+        "sha256": "82337f1cb9ce64de2c2049fa86a91999c495ef0142cff036994a3a673b942ede",
+        "bytes": 231
+      },
+      "docs/reported-dana-portable-legacy-audit.log.gz": {
+        "sha256": "f84976e03cc149b8a451e21ec49267cadb5490fba1c30de222bc1fc33bb57fa8",
+        "bytes": 216
+      },
+      "docs/reported-dana-portable-native-audit.log.gz": {
+        "sha256": "ec5aca33899fcaf59f1680079ad142d22d858aecd5137437ca73fac8f39a6ae0",
+        "bytes": 204
+      },
+      "docs/reported-dana-portable-source-audit.log.gz": {
+        "sha256": "30eae419cb82ba514fa7148fa9a0fd11f8acd49904724729bb6855a1532c3488",
+        "bytes": 219
+      },
+      "docs/reported-dana-prototype-broad.json.gz": {
+        "sha256": "479073b7c5bb02ef68404f678a5cf33e492ee11b9705ba009caf25629a4c481c",
+        "bytes": 3576
+      },
+      "docs/reported-dana-prototype-browser-focused.json.gz": {
+        "sha256": "432015cbd4b5536fbdcfd54c414c2b5658859eeb7c4be5afe2c7ac1b274b89bc",
+        "bytes": 1227268
+      },
+      "docs/reported-dana-prototype-browser-focused.log.gz": {
+        "sha256": "51497596de936c8f446711c98f3336d408c181d59adc640fd4204a7fe4624a8d",
+        "bytes": 168
+      },
+      "docs/reported-dana-prototype-browser.json.gz": {
+        "sha256": "e59ae135ff43347b81e7ee734329438089d364c3af5edac2867ffb984588743d",
+        "bytes": 1221250
+      },
+      "docs/reported-dana-prototype-browser.log.gz": {
+        "sha256": "51497596de936c8f446711c98f3336d408c181d59adc640fd4204a7fe4624a8d",
+        "bytes": 168
+      },
+      "docs/reported-dana-prototype-corpora-audit.json": {
+        "sha256": "86c83269b931cf2038f0a2754e29fac5bcfa354c546b791d5c262210867e15ae",
+        "bytes": 8127
+      },
+      "docs/reported-dana-prototype-corpora.json.gz": {
+        "sha256": "034ff8b793ea9367a89bd78baee8b2a88b09c9393bc30ee4ad18ee97d1054dbb",
+        "bytes": 5905377
+      },
+      "docs/reported-dana-prototype-full-rust-all-targets-failed.log.gz": {
+        "sha256": "96fece48621dc0524dc103288e7ed324540c0cbf4b9b6235f3fc4dde5dad5563",
+        "bytes": 24207
+      },
+      "docs/reported-dana-prototype-full-rust-failed.log.gz": {
+        "sha256": "796bd812b307d4384f05c296c55c6e8f6625ceadcaecd374ce4f2763f3b3bec2",
+        "bytes": 293
+      },
+      "docs/reported-dana-prototype-full-rust-retry-failed.log.gz": {
+        "sha256": "3d9d789c89855d4bb46f6d5e4789b7af9b664305d76dc44be0f2a92ebce7b222",
+        "bytes": 5148
+      },
+      "docs/reported-dana-prototype-full-rust.json": {
+        "sha256": "fb6d784629ae400dfa363c2f3e8fc19554db7e3178d093456b0af9f2a2cc1cda",
+        "bytes": 829
+      },
+      "docs/reported-dana-prototype-full-rust.log.gz": {
+        "sha256": "743984d46a38ce57cbafb4844364353439e6845943fe095a2fd5373ca4d69a04",
+        "bytes": 23527
+      },
+      "docs/reported-dana-prototype-legacy-failed.log.gz": {
+        "sha256": "789f3e3848e8360e29b36962180ee9ed48188dad0d0f41e2335a5c208fddeebe",
+        "bytes": 469
+      },
+      "docs/reported-dana-prototype-legacy.json.gz": {
+        "sha256": "aba14f051640b206b7cc98e984525ee2dfd0f0ba82a1e898f06f5c04ae1bceec",
+        "bytes": 13859
+      },
+      "docs/reported-dana-prototype-legacy.log.gz": {
+        "sha256": "17ce2cd7d842b6e12de7ba3a5e56fccfb87a6a56a86a8524c773b65c4390499c",
+        "bytes": 239
+      },
+      "docs/reported-dana-prototype-parent.py.txt": {
+        "sha256": "92e0a354e8d83c842845e8e2871f7dbd721bb1f87ba98bb618b6fa46ffc841d3",
+        "bytes": 2165
+      },
+      "docs/reported-dana-prototype-source-streams.json.gz": {
+        "sha256": "24e352d8bcf9287fd14ef7b7bdd856c6bf8180258ebaba150eb65e1fab9a745c",
+        "bytes": 29168944
+      },
+      "docs/reported-dana-prototype-web-build.log.gz": {
+        "sha256": "4fa8aaa42a91a03dc73920b65a2106f60398d58b1818c36bb6ac390ecf217305",
+        "bytes": 402
+      },
+      "docs/reported-dana-rebuilt-prototype-production.json": {
+        "sha256": "68e39125b1c8296061dcc59dc3795fcf4264f32f7871d62cfa12bc01586d3656",
+        "bytes": 23127
+      },
+      "docs/reported-dana-rebuilt-prototype-production.log.gz": {
+        "sha256": "e133ec290445e393b3db6ef02fa57135f8d570b1f885d3b58e57824105421b04",
+        "bytes": 246
+      },
+      "docs/reported-dana-release-audit-failed.log.gz": {
+        "sha256": "03046f62a63d1ae6735d6ed0fc6e82fa32cac094411d9fd7ee04eca5a2f2b9fc",
+        "bytes": 245
+      },
+      "docs/reported-dana-release-audit-retry-failed.log.gz": {
+        "sha256": "77e153b3294001a1274751211deefaf201b8705f50e4ad76b551bd289f02f787",
+        "bytes": 271
+      },
+      "docs/reported-dana-release-audit.log.gz": {
+        "sha256": "e9f8ede076db69366565ee4b9f4a5c4a2507c5f67af846e8f0cdde251d010bac",
+        "bytes": 179
+      },
+      "docs/reported-dana-release-controls-failed.log.gz": {
+        "sha256": "0b2f47d8ce6bbd9faec1ebb31a66ce1e0cec37687c8ef79a54f47ad64f316786",
+        "bytes": 456
+      },
+      "docs/reported-dana-release-controls.log.gz": {
+        "sha256": "fbf2dbe9547519559203f0b84396cd229b9d2f8f31eb0ea03ba048aed8a2cbfb",
+        "bytes": 56
+      },
+      "docs/reported-dana-source-preparation.json.gz": {
+        "sha256": "7db8a99b0a3d93034d6e47d0a2b5f6c2d726665c97295d718085b590b0f34c0a",
+        "bytes": 32935
+      },
+      "docs/rules.md": {
+        "sha256": "435ecf926d9b7a0941ceca7ba4afccfa101167bb5f3640a487040ecd2653e2dd",
+        "bytes": 321597
+      },
+      "flake.nix": {
+        "sha256": "7f1d5123ca2e990dfc1d647089e7350386b343c38abf329cdacec0e3f09c785e",
+        "bytes": 41627
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "597b619f816593c09100f2d795fbdf5d0e7a3f33ccf4fa8fb060447a9fed6cd6",
+        "bytes": 8454
+      },
+      "src/dictionary/attachment.rs": {
+        "sha256": "f4a678fb2a182f0bbf6ad0f67ac4bec6d7b64f97f55ea776db8028db791c6262",
+        "bytes": 137724
+      },
+      "src/engine.rs": {
+        "sha256": "755ede919ef12a2593f544aa6248fe4ecc2eed0c687614c156c271a5b7cc9788",
+        "bytes": 220014
+      },
+      "src/grammar.rs": {
+        "sha256": "5afcbb33652da00398857d9d3d61ad1a4a7ea62325b64f23a1b10589ec08cf5f",
+        "bytes": 106481
+      },
+      "tests/copula_expectation.rs": {
+        "sha256": "612bd2f228898237d2dbf8966b9ff4eabffa738874f01d5387717e9e3da571aa",
+        "bytes": 11806
+      },
+      "tests/degree_rimankeum.rs": {
+        "sha256": "629dba18334223a4418bd67c221c9ec628efff01e710acb8d756f6edc94a4927",
+        "bytes": 11053
+      },
+      "tests/deoniman.rs": {
+        "sha256": "a2e2660254bdb177bd1a074773be9b1af4a101cf54ef342352f4b11cef6857a2",
+        "bytes": 17053
+      },
+      "tests/fixtures/krdict-reported-dana-english.json": {
+        "sha256": "5ee64500113c9c90438386d67d0ae3b40a2e2d25471703316152cd9a1a11956a",
+        "bytes": 2003162
+      },
+      "tests/fixtures/krdict-reported-dana-labels.json": {
+        "sha256": "8a7ff5438c31067d0fbb0c7ba84999a578d45ce476a0a0c988d72480fefe0480",
+        "bytes": 31625
+      },
+      "tests/fixtures/reported-dana-cross-family-parents.json": {
+        "sha256": "bc64474a16fe6a73e5f753eacefe6c39df559c173f7ff56955a462f5021f47b3",
+        "bytes": 13511
+      },
+      "tests/fixtures/reported-dana-native.json": {
+        "sha256": "b68474247a2889ad296ddd48e89b182b353b9085c63939c85aef8a4cb6b15e88",
+        "bytes": 1493643
+      },
+      "tests/fixtures/reported-dana-source-captures.json": {
+        "sha256": "b8c8f7d66ab1a409a4c495f726ffc2ccdf5631b15a4c392954c6e29e009f6d98",
+        "bytes": 595483
+      },
+      "tests/fixtures/reported-dana-source-judgments.json": {
+        "sha256": "e9681c10dbb88817d7842f7ed3fa4f632cc4b5f8424b4bbba997b9478dcaf55f",
+        "bytes": 54649
+      },
+      "tests/fixtures/reported-dana-validity.json": {
+        "sha256": "e5ef82f9e5e1c8d6129d75a6d26e2f11a59aa2c2b82c250f54805ccf656141c2",
+        "bytes": 36190
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "f5507523dd9b855cfcd867df79460f9307220ff3ea9e46e78b87205ccfcbae0c",
+        "bytes": 31519660
+      },
+      "tests/reported_dana.rs": {
+        "sha256": "7b69a1498cb6e3a6f2cc17a2240f5abba3955b6c98b8d6da34adcb10764a9806",
+        "bytes": 9690
+      },
+      "tests/reported_dana_support/parent.rs": {
+        "sha256": "a9866641165331c65db0e974f111c3a5fc05c16f416f28cac5e107fab0a09e2c",
+        "bytes": 2364
+      },
+      "tests/validity.rs": {
+        "sha256": "a30c5be7a7e91e7cea8e53278bffa889a8042b6a417e7d60656d0a25af6b2788",
+        "bytes": 4004
+      },
+      "tools/reported_dana_audit.py": {
+        "sha256": "7954f7419a7a7cd2ae17092e4311d0b8f85e28d7552cfaf75befc10f708cb9b3",
+        "bytes": 9659
+      },
+      "tools/reported_dana_broad.py": {
+        "sha256": "3ac75650bb57af244757f3ba9d5a6555f602e49cf3cdd2a1b40e8236f863a517",
+        "bytes": 3961
+      },
+      "tools/reported_dana_browser.py": {
+        "sha256": "27361d8aebabe28f1e3a0b4c929533c47e763647091ee07c0ccc0c3c020962b7",
+        "bytes": 5929
+      },
+      "tools/reported_dana_cache.py": {
+        "sha256": "4b6b3cd2f5f06d2d6ead2d3608268f7f349384b85edea2dbdaa8549949915cfa",
+        "bytes": 2638
+      },
+      "tools/reported_dana_corpora.py": {
+        "sha256": "45ce123f064e7bbbde783321a11db9d5bd843bbf5822b480e5d875439cfd9509",
+        "bytes": 7854
+      },
+      "tools/reported_dana_inputs.py": {
+        "sha256": "d0b4ec3a3f4d33e064b9ac7b21617305c39b281a5fd3ceb45436d593a21e66ec",
+        "bytes": 1489
+      },
+      "tools/reported_dana_legacy.py": {
+        "sha256": "4d94fd4aecc6e407b6b646ce16dab8585fba0fc3c0b9ede444a7623db04184d3",
+        "bytes": 10177
+      },
+      "tools/reported_dana_legacy_audit.py": {
+        "sha256": "d6c7fbfb474ed105ea0213231fa944c007f82c29ad062a99ea3b7909a12b4648",
+        "bytes": 10435
+      },
+      "tools/reported_dana_legacy_replay.py": {
+        "sha256": "9659623383a8c64f1ab67f904da5f3cdeaf56904576bb2fb3cec7a5ee921acd1",
+        "bytes": 2777
+      },
+      "tools/reported_dana_native.py": {
+        "sha256": "b88a008c6870419121bc67d8406c6c390fc50e22c191f01cc28ef93149efab54",
+        "bytes": 7733
+      },
+      "tools/reported_dana_parent.py": {
+        "sha256": "fc344c4e6c63e09b3820d7b1882f9747c54c41aa15daedcdbd6aedfb4d876aa0",
+        "bytes": 2370
+      },
+      "tools/reported_dana_performance.py": {
+        "sha256": "ac4a043db83724a75fafa2df8f125c44883c2da6b18828dfe938a81ab28ab6ac",
+        "bytes": 3450
+      },
+      "tools/reported_dana_production.py": {
+        "sha256": "ebadba81967c682ea720abddb6ea2ad9bec8481f33e13d040ec261e6e91064b6",
+        "bytes": 8948
+      },
+      "tools/reported_dana_release.py": {
+        "sha256": "ddc85ddbda626f193541558a1dc8d53c7ddd52349b109e150c473b47c104d088",
+        "bytes": 9553
+      },
+      "tools/reported_dana_sources.py": {
+        "sha256": "1179a9c2ee04938a784d9dbeb3f134100fcf39ca535ff4718a6ca2451f89db91",
+        "bytes": 6425
+      },
+      "tools/reported_dana_timing.py": {
+        "sha256": "03a50807c965940b801f84462b665fbf4cb76990929dc02dae0445e9e6a029a5",
+        "bytes": 5741
+      },
+      "tools/test_reported_dana_inputs.py": {
+        "sha256": "cfecaefd175846492fa966f75ba4dc49be9a5f3e93cc83c7a95f6eeaaecf7ea7",
+        "bytes": 2455
+      },
+      "tools/test_reported_dana_performance.py": {
+        "sha256": "8b1be11989c9919e6371b17bc9b575faac9ca2ee239b0cb6d0448b5ef5c19342",
+        "bytes": 2276
+      },
+      "tools/test_reported_dana_release.py": {
+        "sha256": "f69728b303ff406567c98d10aad425620898854bd2fa497ec4ed5a9f73dd5cc1",
+        "bytes": 5181
+      },
+      "tools/test_reported_dana_sources.py": {
+        "sha256": "331e2df0f01ef7e9226eec36893164718c13ad0e4031f3a4688127f6152022a0",
+        "bytes": 4137
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "d8f3213e4902bc0c98c06c490a257903b6ecd33ee1ae14a6e450dd4b2f80eb6e",
+        "bytes": 183476
+      },
+      "web/tests/reported-dana.mjs": {
+        "sha256": "7a0f4e4c3e9baa2a11339eb31c87e8b51b774f89bf901fec67e2391e708049c2",
+        "bytes": 7384
+      }
+    }
+  },
+  "audit_expression": {
+    "text": "let\n  flake = builtins.getFlake \"git+file:///home/josh/projects/klem\";\nin\nflake.checks.x86_64-linux.inventory-review.overrideAttrs (_: {\n  name = \"klem-reported-dana-portable-audit\";\n  buildCommand = ''\n    cd \"$src\"\n    export PYTHONDONTWRITEBYTECODE=1\n    python tools/review_inventory.py --verify\n    python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'\n    python tools/reported_dana_audit.py\n    python tools/reported_dana_native.py\n    python tools/reported_dana_corpora.py\n    python tools/reported_dana_broad.py\n    python tools/reported_dana_legacy_audit.py\n    python tools/reported_dana_sources.py --verify\n    python -m unittest discover -s tools -p 'test_reported_dana_sources.py'\n    python tools/reported_dana_release.py --verify\n    python -m unittest discover -s tools -p 'test_reported_dana_release.py'\n    python tools/reported_dana_performance.py --verify\n    python -m unittest discover -s tools -p 'test_reported_dana_performance.py'\n    touch \"$out\"\n  '';\n})\n",
+    "sha256": "2be20a064871ee9cf02817fe57127bace9dfac05c0217d519912e5677b5ea7d9"
+  },
+  "exit_code": 1,
+  "finished_at": "2026-10-07T10:01:47.890831+00:00",
+  "log_sha256": "e7a161ed90c7c8dd719f76a22c1e0e640c4951350d749ee7d6ddc966a7c4d352",
+  "snapshot_unchanged": true,
+  "outputs": []
+}

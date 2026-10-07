@@ -1,5 +1,7 @@
 #[path = "copula_expectation_support/parent.rs"]
 mod copula_expectation_parent;
+#[path = "reported_dana_support/parent.rs"]
+mod reported_dana_parent;
 use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use unicode_normalization::UnicodeNormalization;
@@ -78,6 +80,10 @@ fn every_original_source_word_retains_all_previous_candidates_in_order() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.reported_dana") {
+                reported_dana_parent::assert_report_parent("deoniman", word, a);
+                continue;
+            }
             if !family(a) && a.rules.iter().any(|r| r == "copula.omitted_ending") {
                 copula_expectation_parent::assert_omission_parent(word, a);
                 continue;

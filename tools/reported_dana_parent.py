@@ -1,0 +1,56 @@
+"""Only invert the new report ending; retain every other path field."""
+
+import copy
+
+
+def actual_parent(word, path, parents):
+    inverse = copy.deepcopy(path)
+    assert inverse["rules"].count("ending.reported_dana") == 1
+    inverse["rules"].remove("ending.reported_dana")
+    touched = []
+    for morpheme in inverse["morphemes"]:
+        if morpheme["kind"] == "ending" and morpheme["form"] in {"다나", "는다나"}:
+            touched.append(morpheme["form"])
+            morpheme["form"] = "다고" if morpheme["form"] == "다나" else "는다고"
+    assert len(touched) == 1, (word, path)
+    candidates = set()
+    start = 0
+    while (at := word.find("다나", start)) >= 0:
+        candidates.add(word[:at] + "다고" + word[at + len("다나") :])
+        start = at + 1
+    for companion in sorted(candidates):
+        if companion in parents and inverse in parents[companion]["analyses"]:
+            return companion, inverse
+    raise AssertionError((word, path, inverse, sorted(candidates)))
+
+
+def frame(before, after, parents):
+    assert {k: v for k, v in before.items() if k not in {"analysis", "dictionary"}} == {
+        k: v for k, v in after.items() if k not in {"analysis", "dictionary"}
+    }
+    if before["kind"] != "word":
+        assert before == after
+        return []
+    old, new = before["analysis"]["analyses"], after["analysis"]["analyses"]
+    assert [p for p in new if p in old] == old, (
+        before["surface"],
+        "old candidate/order loss",
+    )
+    assert {k: v for k, v in before["analysis"].items() if k != "analyses"} == {
+        k: v for k, v in after["analysis"].items() if k != "analyses"
+    }
+    added = [p for p in new if p not in old]
+    for path in added:
+        actual_parent(after["analysis"]["normalized"], path, parents)
+    if "dictionary" in before:
+        prior, current = before["dictionary"], after["dictionary"]
+        assert {k: v for k, v in prior.items() if k not in {"lemmas", "readings"}} == {
+            k: v for k, v in current.items() if k not in {"lemmas", "readings"}
+        }
+        assert [l for l in current["lemmas"] if l in prior["lemmas"]] == prior["lemmas"]
+        for i, path in enumerate(old):
+            assert prior["readings"][i] == current["readings"][new.index(path)], (
+                before["surface"],
+                path,
+            )
+    return added

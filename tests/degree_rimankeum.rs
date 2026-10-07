@@ -2,6 +2,8 @@
 mod copula_expectation_parent;
 #[path = "deoniman_support/parent.rs"]
 mod deoniman_parent;
+#[path = "reported_dana_support/parent.rs"]
+mod reported_dana_parent;
 use klem::{Analysis, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use unicode_normalization::UnicodeNormalization;
@@ -259,6 +261,10 @@ fn full_source_cohort_retains_candidate_order_and_attributes_new_paths() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.reported_dana") {
+                reported_dana_parent::assert_report_parent("degree", word, a);
+                continue;
+            }
             if a.rules
                 .iter()
                 .any(|r| matches!(r.as_str(), "ending.deoniman" | "ending.reported_deoni"))

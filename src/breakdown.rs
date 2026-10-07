@@ -194,6 +194,8 @@ impl Analysis {
             return None;
         }
         let mut parts = Vec::with_capacity(self.lemmas.len() + self.morphemes.len());
+        let friendly_command = self.rules.iter().any(|r| r == "ending.friendly_command.n");
+        let mut friendly_owners = 0;
         let mut cursor = 0;
         if prefixed {
             parts.push(Component::Morpheme(0));
@@ -412,6 +414,7 @@ impl Analysis {
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;
             } else if !noun_suffix && (predicate || derived_predicate) {
+                let owner_start = cursor;
                 while self
                     .morphemes
                     .get(cursor)
@@ -422,6 +425,17 @@ impl Analysis {
                 }
                 if self.morphemes.get(cursor)?.kind != MorphemeKind::Ending {
                     return None;
+                }
+                if friendly_command && self.morphemes[cursor].form == "ㄴ" {
+                    if cursor != owner_start
+                        || derived_predicate
+                        || index + 1 != self.lemmas.len()
+                        || !matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary)
+                        || !lemma.text.ends_with("오다")
+                    {
+                        return None;
+                    }
+                    friendly_owners += 1;
                 }
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;
@@ -435,7 +449,8 @@ impl Analysis {
                 cursor += 1;
             }
         }
-        (cursor == self.morphemes.len()).then_some(parts)
+        (cursor == self.morphemes.len() && (!friendly_command || friendly_owners == 1))
+            .then_some(parts)
     }
 }
 

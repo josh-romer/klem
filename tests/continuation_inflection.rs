@@ -162,10 +162,9 @@ fn original_raw_paths_and_four_historical_tensions_remain_unchanged() {
             .as_object_mut()
             .unwrap()
             .remove("dictionary");
-        assert_eq!(
-            filtered,
-            serde_json::from_value::<WordAnalysis>(frozen_headword).unwrap(),
-            "{surface}"
+        hada_preservation::assert_preserved(
+            &filtered,
+            &serde_json::from_value::<WordAnalysis>(frozen_headword).unwrap(),
         );
     }
 }

@@ -107,6 +107,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-nominal-hwa-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-hada-suffix-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-ssik-english.json"),
+                PathBuf::from("tests/fixtures/krdict-friendly-command-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

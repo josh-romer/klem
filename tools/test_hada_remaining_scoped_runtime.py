@@ -32,6 +32,22 @@ class ScopedGuards(unittest.TestCase):
         with self.assertRaises(AssertionError):
             audit.inspect(report)
 
+    def test_current_frontend_has_exact_original_source_parent(self):
+        text = (audit.ROOT / 'web/src/breakdown.ts').read_bytes().decode('utf8')
+        self.assertEqual(audit.frontend_parent_sha(text), self.report['frontend_sha256'])
+
+    def test_unrelated_suffix_label_change_cannot_borrow_command_inverse(self):
+        text = (audit.ROOT / 'web/src/breakdown.ts').read_bytes().decode('utf8')
+        changed = text.replace('Auxiliary adjective formation', 'Unscoped adjective formation', 1)
+        self.assertNotEqual(changed, text)
+        self.assertNotEqual(audit.frontend_parent_sha(changed), self.report['frontend_sha256'])
+
+    def test_missing_source_selection_edit_is_not_an_exact_inverse(self):
+        text = (audit.ROOT / 'web/src/breakdown.ts').read_bytes().decode('utf8')
+        changed = text.replace('(attachedN ? undefined : entries[0])', 'entries[0]', 1)
+        with self.assertRaises(AssertionError):
+            audit.frontend_parent_sha(changed)
+
 
 if __name__ == '__main__':
     unittest.main()

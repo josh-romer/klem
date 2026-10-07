@@ -82,6 +82,36 @@ pub fn assert_preserved(actual: &WordAnalysis, frozen: &WordAnalysis) {
         .iter()
         .filter(|a| !frozen.analyses.contains(a))
     {
+        // COV-017bx: the distinct friendly final preserves the exact old
+        // adnominal parent. It can coexist with an earlier sourced 하다 split;
+        // after restoring the final, keep proving that split below as well.
+        let command_parent = if addition
+            .rules
+            .iter()
+            .any(|r| r == "ending.friendly_command.n")
+        {
+            assert!(
+                addition.breakdown().is_some(),
+                "command needs owned components"
+            );
+            let mut parent = addition.clone();
+            parent.rules.retain(|r| r != "ending.friendly_command.n");
+            let ending = parent
+                .morphemes
+                .iter_mut()
+                .rev()
+                .find(|m| m.kind == MorphemeKind::Ending)
+                .expect("command needs a final ending");
+            assert_eq!(ending.form, "ㄴ");
+            ending.form = "은".into();
+            Some(parent)
+        } else {
+            None
+        };
+        let addition = command_parent.as_ref().unwrap_or(addition);
+        if frozen.analyses.contains(addition) {
+            continue;
+        }
         assert!(
             is_addition(addition),
             "unattributed addition {}",

@@ -1123,3 +1123,16 @@ source notes, while other represented prefinals become Unknown only when that
 owner would otherwise be Compatible. Earlier owners and known conflicts retain
 their assessments. This does not certify a contextual caution sense, spoken
 register, or any unreviewed prefinal/follower combination.
+
+### Friendly command -ㄴ (COV-017bx)
+
+KRDict 73877 restricts the colloquial command to 오다 or verbs formed with
+오다 and illustrates adults addressing children or small animals. The distinct
+`ending.friendly_command.n` analysis owns a bare final 오다-ending predicate.
+Lexical verb entries retain the ordinary compatible status under the finite
+policy; compatibility does not identify register, addressee or a command sense.
+The full native continuative auxiliary entry 69517 is retained separately.
+Its command-ending attachment, token-initial auxiliary readings and following
+particles remain unknown; they are not rejected because source examples are
+absent. The same-spelled adnominal ending 78634 remains a separate component
+source in the viewer, including existing noun formations.

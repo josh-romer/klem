@@ -2221,3 +2221,25 @@ original export files and preserved multilingual preflight. RelatedForm is
 excluded as in earlier adapters; original notes, senses, forms, grammatical
 patterns and examples are preserved. Attribution: National Institute of Korean
 Language, Korean Basic Dictionary, CC BY-SA 2.0 KR, separate from klem's code.
+
+### Friendly command -ㄴ (COV-017bx)
+
+`krdict-friendly-command-original.json` retains sixty complete original LMF
+entries from the pinned September 2026 Korean Basic Dictionary export. These
+include command ending 73877 (homonym 2), adnominal ending 78634, 57 discovered
+오다-final verb entries, and the separate continuative auxiliary 오다 69517.
+All senses, annotations and 1,874 example groups remain. The English adapter
+changes only the `Equivalent` language selection to 영어; the full native
+entries remain separately in `friendly-command-sources.json` and the preflight.
+`krdict-friendly-command-labels.json` contains only 73877 so the viewer's combined
+label fixture does not duplicate the existing 78634 entry.
+
+The source fixture preserves 4,794 actual baseline word outputs from the
+committed Nix binary and seven stable judgments: four required original
+command examples and three non-오다 exclusions. The other spelling inventory,
+continuative auxiliary attachment, addressee/register and contextual senses
+remain unjudged. The original coarse corpus annotations are not rewritten.
+Attribution: National Institute of Korean Language (국립국어원), 한국어기초사전;
+[KRDict 73877](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73877).
+The original dictionary fields retain the existing CC-BY-SA-2.0-KR attribution
+and [license policy](https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo).

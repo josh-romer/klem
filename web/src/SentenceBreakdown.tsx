@@ -76,6 +76,7 @@ export default function SentenceBreakdown(props: {
       if (a.lemmas[0].kind === "adverbial") return `${text} · adverb base`;
       if (a.lemmas[0].kind === "nominal") return `${text} · noun base`;
     }
+    if (a.rules.includes("ending.friendly_command.n")) return `${text} · friendly command`;
     return text;
   };
   function component(part: Part, index: number) {

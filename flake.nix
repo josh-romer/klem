@@ -344,6 +344,14 @@
                 ./tools/ssik_adverb_runtime.py
                 ./tools/ssik_adverb_outer_tails.py
                 ./tools/friendly_command_preparation.py
+                ./tools/friendly_command_audit.py
+                ./tools/friendly_command_runtime.py
+                ./tools/friendly_command_comparison.py
+                ./tools/friendly_command_corpora.py
+                ./tools/friendly_command_broad.py
+                ./tools/friendly_command_release.py
+                ./tools/friendly_command_performance.py
+                ./web/tests/friendly-command.mjs
                 ./tools/ssik_adverb_corpora.py
                 ./tools/ssik_adverb_broad.py
                 ./tools/ssik_adverb_release.py
@@ -642,6 +650,14 @@
             python tools/ssik_adverb_runtime.py
             python tools/ssik_adverb_outer_tails.py
             python tools/friendly_command_preparation.py
+            python tools/friendly_command_audit.py
+            python tools/friendly_command_runtime.py
+            python tools/friendly_command_corpora.py --verify
+            python tools/friendly_command_broad.py --verify
+            python tools/friendly_command_corpora.py --verify --report docs/friendly-command-packaged-corpora.json.gz
+            python tools/friendly_command_broad.py --verify --report docs/friendly-command-packaged-observations.json.gz
+            python tools/friendly_command_release.py --verify
+            python tools/friendly_command_performance.py --verify
             python tools/ssik_adverb_corpora.py --verify
             python tools/ssik_adverb_broad.py --verify
             python tools/ssik_adverb_broad.py --verify --report docs/ssik-adverb-packaged-observations.json.gz

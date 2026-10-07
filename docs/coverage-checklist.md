@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-05.
+Last reviewed: 2026-10-06.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -1948,24 +1948,106 @@ review remains open under the completion review below.
 
 
 - [ ] **COV-017bx — Friendly command final -ㄴ on 오다 compounds.**
-  **Missing as a distinct ending analysis; the lexical lemmas are already
-  recovered through the adnominal ending.** [KRDict 73877](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73877)
+  **Implemented for bare 오다-final stem hypotheses; broader validation and
+  independent linguistic review remain open.** [KRDict 73877](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73877)
   describes a friendly colloquial command used by adults addressing children
-  or small animals, restricted to 오다 or verbs formed with 오다. The
-  independently [audited](../tools/friendly_command_preparation.py)
-  [source preparation](friendly-command-source-preparation.json.gz) preserves
-  both -ㄴ ending homonyms, all five original command example groups and
-  57 dictionary 오다-final verb entries for lexical-class review.
-  Actual discovery captures for 온, 날아온, 내려온 and 돌아온 recover the
-  lexical predicate with 은 but lack a distinct friendly-command provenance.
-  Add the source-specific final-ending path, preserve existing adnominal and
-  contracted-particle readings, and verify canonical components, attachment
-  ownership, native dictionary/source labels and CLI/browser parity.
-  오다-final spelling alone does not settle a lexical or auxiliary command
-  license; review that inventory before declaring broader compound coverage.
-  Other prefinals, following particles and contextual addressee/register remain
-  unjudged. This preparation is not an implementation baseline or a completed
-  regression gate.
+  or small animals, restricted to 오다 or verbs formed with 오다. The original
+  [source preparation](friendly-command-source-preparation.json.gz) remains
+  unchanged. A new [preflight](friendly-command-preflight.json.gz) preserves
+  sixty complete native/LMF owners, including both -ㄴ ending homonyms,
+  lexical 오다 and continuative auxiliary 오다, all five original command
+  groups and 1,874 complete example groups across the source cohort.
+  The separately retained 57-entry 오다-final verb inventory is a discovery
+  queue; spelling alone does not determine command sense or register.
+
+  The runtime adds canonical Ending ㄴ with `ending.friendly_command.n`
+  provenance after a bare recovered 오다-final stem. It retains the existing
+  은 adnominal, contracted-particle and whole-word readings. The [regressions](../tests/friendly_command.rs)
+  verify all four original command spellings (온, 날아온, 내려온, 돌아온),
+  NFC/NFD equality, immediate ending ownership, forged shapes and complete
+  native imports. All 4,794 frozen unique-word candidate orders remain;
+  each addition has an exact original parent after changing only its ending
+  ㄴ to 은 and removing the command marker. Seven stable source judgments
+  cover four required lexical examples and three non-오다 exclusions.
+  Unlisted prefinal controls describe the implemented scope and are not
+  linguistic forbidden judgments. Dictionary policy retains continuative
+  auxiliary 오다 and following-particle hypotheses as unknown rather than
+  claiming that the lexical command source licenses them.
+
+  The viewer distinguishes command source 73877 from adnominal source 78634
+  using the analysis provenance. Existing ㄴ in 못난이 and 흰둥이 is not
+  relabeled as a command. The [source audit](../tools/friendly_command_audit.py)
+  verifies original groups, complete native projections, frozen CLI outputs
+  and individual ledger cases. Focused parser/import/source checks and the
+  SolidJS build pass. [Actual twenty-four source streams](friendly-command-diagnostics.json.gz)
+  cover both before/after binaries, all three dictionary filters, NFC/NFD and
+  enabled/disabled caches. The [independent runtime audit](../tools/friendly_command_runtime.py)
+  preserves every original order, reading assessment and flat entry, and proves
+  exact adnominal parents for 633 additions per raw stream (371 headword /
+  364 compatible). [Actual browser evidence](friendly-command-browser.json.gz)
+  verifies twelve command/adnominal diagrams, sixty complete native endpoints
+  and six CLI/export comparisons. [Bounded actual API requests](friendly-command-api.json.gz)
+  cover all 21,198 source frames in each encoding for both binaries; all original
+  component orders remain and 1,266 added orders match exact parent indices.
+  Application limits are unchanged. The independently audited [held-out corpus comparison](friendly-command-corpora.json.gz)
+  preserves all 66,570 original gold outcomes and 32,096 word outputs, with
+  91 added paths across 27 spellings and no coarse recall change. Historical
+  [continuation regressions](friendly-command-parent-regressions.log.gz)
+  retain their original snapshots and prove each command addition by exact
+  parent inversion; lost paths and unrelated provenance fail the check.
+  The [initial failure](friendly-command-parent-failure.log.gz) is retained.
+  [Full novel and candidate diagnostics](friendly-command-observations.json.gz)
+  retain all 1,128,312 original frames and individually attribute 838 token
+  paths across 505 changed frames. Thirty-two additional component paths occur
+  inside existing spacing suggestions; all split positions, original segment
+  paths, reading assessments and component orders remain. Each added component
+  has an exact old adnominal parent. The [independent broad verifier](../tools/friendly_command_broad.py)
+  recomputes stable observation IDs and retains the [original capture](friendly-command-observations-capture.json.gz).
+  No new split boundary or spacing alternative is added; the initial check
+  requiring byte-identical spacing payloads was refined to audit the added
+  component candidates rather than overwrite the prior evidence.
+  The [Nix SolidJS asset build](friendly-command-nix-assets.json) passes.
+  The [full Rust suite](friendly-command-full-rust.log.gz) passes 964 tests
+  with one ignored downloaded-corpus test; that [pinned corpus regression](friendly-command-pinned-corpus.log.gz)
+  passes separately. [Clippy](friendly-command-clippy.log.gz) passes with
+  warnings denied, and the [Rust snapshot receipt](friendly-command-rust-checks.json)
+  records actual terminal-zero results against 813 unchanged validation inputs.
+  The [Nix Rust package receipt](friendly-command-nix-package.json) records
+  terminal zero, 964 passing release tests and an unchanged 48-file snapshot.
+  The [packaged source/browser capture](friendly-command-packaged-checks.json.gz)
+  retains twelve identical release/debug CLI streams, complete source API
+  parity with 1,266 added orders, twelve inspected source diagrams, sixty
+  complete native endpoints and six CLI/export comparisons. The
+  [full-novel cache comparison](friendly-command-cache-parity.json) preserves
+  all 179,112 records in each dictionary mode with caches enabled and disabled.
+  Independent [packaged corpus](friendly-command-packaged-corpora.json.gz)
+  and [full-stream](friendly-command-packaged-observations.json.gz) audits
+  reproduce the debug evidence exactly, including original gold, all candidate
+  orders and the 838 token/32 spacing-component observation IDs. The
+  [release verifier](../tools/friendly_command_release.py) checks actual
+  source/API/browser captures and complete release/debug stream parity.
+  [Eighty paired novel measurements](friendly-command-performance.json)
+  pass the [performance verifier](../tools/friendly_command_performance.py):
+  cached dictionary-filtered medians are 1.86–1.88 seconds and optional spacing
+  medians 2.46–2.50 seconds on this host, about 2–4% slower than the previous
+  package across workloads. Samples include startup and serialization; this
+  is a local descriptive comparison, not a precision or equivalence estimate.
+  Release and performance audits are wired into the flake. The [final combined
+  Nix gate](friendly-command-final-nix.json) passed the Rust package, SolidJS
+  assets and inventory review checks with all 65 staged inputs unchanged;
+  its [complete log](friendly-command-final-nix.log.gz) is retained. The
+  [first frozen run](friendly-command-final-nix-first-failure.json)
+  reached the historical nested-하다 renderer audit, whose exact frontend hash
+  did not account for the new command branch. The original capture remains
+  unchanged. An exact inverse of only the command-specific source edits restores
+  its original frontend hash; a [fresh packaged browser capture](friendly-command-hada-scoped-browser.json)
+  independently repeats all six earlier diagrams with identical CLI records,
+  selected labels and complete component orders. Seven scoped-renderer tests
+  also reject unrelated label changes and an incomplete source inverse.
+  The earlier [interrupted compilation](friendly-command-interrupted-rust.log.gz)
+  has no completed result and is not counted as a passing full suite.
+  Contextual addressee/register, lexical sense, auxiliary command attachment,
+  other prefinals/particles and independent review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -749,6 +749,14 @@ pub(crate) fn endings() -> &'static [Ending] {
     RULES.get_or_init(|| {
         use Boundary::*;
         let mut out = Vec::new();
+        // KRDict 73877: colloquial friendly command after 오다 or an
+        // 오다-final verb. The engine checks the recovered owner separately.
+        out.push(Ending {
+            suffix: "",
+            form: "ㄴ",
+            boundary: Attached(4),
+            connector: false,
+        });
         // NIKL 305262 and FAQ 6416: separate regular modern endings;
         // -거라 is not restricted to 가다, and 오거라 coexists with 오너라.
         for (suffix, boundary) in [("거라", Literal), ("너라", ComeStem)] {
@@ -2075,6 +2083,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.direct_command" => {
             "Separate modern command -거라 from a verb stem, or -너라 from an 오다-final stem. These are independent regular endings; lexical mood, register and intervening prefinals require separate review."
+        }
+        "ending.friendly_command.n" => {
+            "Separate colloquial friendly-command -ㄴ from a bare 오다-final stem. KRDict 73877 illustrates adults addressing children or small animals; speaker, addressee, register, lexical sense and auxiliary attachment remain contextual hypotheses."
         }
         "ending.activity_reason" => {
             "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."

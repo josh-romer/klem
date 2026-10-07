@@ -36500,6 +36500,74 @@
           "judgment": "emphatic-ending-b1f8870ba578339c4db5b105-path"
         }
       ]
+    },
+    {
+      "id": "krdict:73877",
+      "source_sha256": "4d341a662e9e8dc1226ce58b59d5e232108dd693db2b2b8abba34b9a4ba5a0c7",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bx"
+      ],
+      "scope": "Bare 오다-final friendly-command hypotheses with source-owned canonical ㄴ. Four original lexical example spellings are required, three non-오다 stems excluded. Existing adnominal and contracted-particle readings are retained; contextual command sense, register and addressee remain unjudged. Complete native lexical and continuative auxiliary 오다 entries are separately retained; auxiliary command attachment and following particles are assessed unknown.",
+      "remaining": "Packaged Rust/release parity, cache/performance and final Nix validation pending. Full Rust, separately downloaded corpus, Clippy, source-wide CLI/API/browser, held-out corpus and full broad-stream preservation checks pass. The 57-entry spelling inventory is an unjudged lexical queue, not proof of command sense. Other prefinals/particles, contextual role/register and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/friendly_command.rs",
+          "test": "original_command_examples_preserve_adnominals_and_unicode"
+        },
+        {
+          "path": "tests/friendly_command.rs",
+          "test": "frozen_source_orders_are_retained_and_new_paths_have_exact_parents"
+        },
+        {
+          "path": "tests/friendly_command.rs",
+          "test": "complete_native_import_and_conditional_auxiliary_assessment"
+        },
+        {
+          "path": "tests/friendly_command.rs",
+          "test": "command_breakdown_checks_immediate_owner_and_provenance"
+        },
+        {
+          "path": "tests/friendly_command.rs",
+          "test": "individual_source_judgments"
+        },
+        {
+          "path": "tests/fixtures/friendly-command-sources.json"
+        },
+        {
+          "path": "tools/friendly_command_audit.py"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "friendly-command-required-온",
+          "judgment": "friendly-command-required-온-structure"
+        },
+        {
+          "case": "friendly-command-required-날아온",
+          "judgment": "friendly-command-required-날아온-structure"
+        },
+        {
+          "case": "friendly-command-required-내려온",
+          "judgment": "friendly-command-required-내려온-structure"
+        },
+        {
+          "case": "friendly-command-required-돌아온",
+          "judgment": "friendly-command-required-돌아온-structure"
+        },
+        {
+          "case": "friendly-command-forbidden-간",
+          "judgment": "friendly-command-forbidden-간-structure"
+        },
+        {
+          "case": "friendly-command-forbidden-먹은",
+          "judgment": "friendly-command-forbidden-먹은-structure"
+        },
+        {
+          "case": "friendly-command-forbidden-좋은",
+          "judgment": "friendly-command-forbidden-좋은-structure"
+        }
+      ]
     }
   ]
 }

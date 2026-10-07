@@ -166,7 +166,16 @@ export function parts(
         : remainingAdjective ? "Auxiliary adjective formation" : "Auxiliary verb formation"
       : remainingAdjective && remainingVerb ? "Verb / adjective formation"
         : remainingAdjective ? "State / adjective formation" : "Action / verb formation";
-    const label = remainingHada
+    const attachedN = m.kind === "ending" && m.form === "ㄴ";
+    const friendlyCommand = attachedN && a.rules.includes("ending.friendly_command.n");
+    const label = attachedN
+      ? { ...grammarLabels[key],
+          label: friendlyCommand ? "Friendly command (come)" : "Noun modifier",
+          note: friendlyCommand
+            ? "Colloquial command illustrated for an adult addressing a child or small animal. Context, lexical sense and auxiliary attachment remain open."
+            : "Adnominal ending; separate from the same-spelled friendly command.",
+          sources: grammarLabels[key].sources.filter((s) => s.id === (friendlyCommand ? 73877 : 78634)) }
+      : remainingHada
       ? { ...grammarLabels[key], label: remainingLabel,
           note: `Source-listed ${remainingHada.role.replace("_", " ")} + -하다 formation (sense ${remainingHada.sense}).${remainingHada.role === "root" ? " Root status does not assert a standalone dictionary entry." : ""} Context and other -하다 senses remain open; the whole lexical reading is retained.` }
       : adjectivalHada
@@ -187,7 +196,7 @@ export function parts(
     const entries = result.grammar[key] ?? [];
     const entry =
       label?.sources.map((s) => entries.find((e) => e.id === `krdict:${s.id}`))
-        .find((e) => e !== undefined) ?? entries[0];
+        .find((e) => e !== undefined) ?? (attachedN ? undefined : entries[0]);
     // 하 + 어/었 is displayed as 하 + 여/였. Keep canonical lookup/index intact.
     const afterHa =
       previous &&

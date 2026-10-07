@@ -1305,6 +1305,19 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible
+                        && analysis.rules.iter().any(|r| r == "ending.friendly_command.n")
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "ㄴ")
+                        && (lemma.kind != LemmaKind::Predicate
+                            || pos != "동사"
+                            || !bare
+                            || morphs.len() != 1)
+                    {
+                        // KRDict 73877 supplies lexical command examples.
+                        // Continuative auxiliary 오다 (69517) and following
+                        // particles are retained as unreviewed hypotheses.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
                         && !bare
                         && ending.is_some_and(|i| analysis.morphemes[i].form == "음세")
                     {

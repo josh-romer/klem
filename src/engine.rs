@@ -1096,6 +1096,11 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "너라" && !p.stem.ends_with('오') {
                     continue;
                 }
+                // KRDict 73877 lists direct 오다/오다-final stems. Other
+                // prefinals need separate evidence; do not reuse adnominal 은.
+                if ending.form == "ㄴ" && (!p.stem.ends_with('오') || !p.morphs.is_empty()) {
+                    continue;
+                }
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
                 if p.rules.iter().any(|r| r == "copula.omitted_polite")
                     && (ending.form != "으리까"
@@ -1755,6 +1760,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if ending.form == "ㄴ" {
+                    p.rules.push("ending.friendly_command.n".into());
+                }
                 if matches!(ending.form, "거라" | "너라") {
                     p.rules.push("ending.direct_command".into());
                 }

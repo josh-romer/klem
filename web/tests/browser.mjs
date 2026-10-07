@@ -117,6 +117,12 @@ try {
   const grammarLabelSources = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-grammar-labels.json"), "utf8"),
   );
+  const friendlyCommandLabels = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-friendly-command-labels.json"), "utf8"),
+  );
+  grammarLabelSources.LexicalResource.Lexicon.LexicalEntry.push(
+    ...friendlyCommandLabels.LexicalResource.Lexicon.LexicalEntry,
+  );
   const adverbRoots = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-adverb-roots.json"), "utf8"),
   );

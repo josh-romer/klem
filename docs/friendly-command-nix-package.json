@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bx",
+  "state": "passed",
+  "pid": 1349726,
+  "started_at": "2026-10-06T22:22:54.495748+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/tmp/klem-nix-build-1000",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets"
+  ],
+  "snapshot": {
+    "head": "ff9af63520fdb750403e5f355ec5d3691c85b155",
+    "staged_diff_sha256": "dfad47fd28b0c61bdb82f5f031d68356051188c9efcf9e81f83cf9b299d701cc",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "a9e0308e94794e49274f34cdbd8fb25c9693d75f3f18ad3228568728b2a66ece",
+        "bytes": 467261
+      },
+      "docs/dictionary-attachments.md": {
+        "sha256": "4893fc48f807bca76b00a8517e3dac043b807f61a0c313574f8f5fb12e8ff047",
+        "bytes": 81070
+      },
+      "docs/friendly-command-api.json.gz": {
+        "sha256": "fad5a12dc0e27f381f651291a5adb4846039cbd52373780b786447cd52a851b4",
+        "bytes": 13559852
+      },
+      "docs/friendly-command-browser.json.gz": {
+        "sha256": "26829042a53bdcafa260e064642316e53793c1e2b1f8ccde3ce4aa6055717083",
+        "bytes": 196014
+      },
+      "docs/friendly-command-clippy.log.gz": {
+        "sha256": "74f56d229af88587e6bd155a5529cc5555d68c39c6b8c9a9cd5b8ddc02add1fd",
+        "bytes": 130
+      },
+      "docs/friendly-command-corpora.json.gz": {
+        "sha256": "70b39548ad7241a0f0100941a17ea0601676b25d458be08a3a53ebbcf0859369",
+        "bytes": 3123672
+      },
+      "docs/friendly-command-diagnostics.json.gz": {
+        "sha256": "b32707f5a2759eee529fadadf9c0ce30025bb80349fafea10154417367d0f0bd",
+        "bytes": 27674684
+      },
+      "docs/friendly-command-focused.log.gz": {
+        "sha256": "2847caa681d85a0b1bd35b9b6bbe7b4d777bef5c0ea244f91aac3ac4d287e314",
+        "bytes": 803
+      },
+      "docs/friendly-command-full-rust.log.gz": {
+        "sha256": "9caea9589928e0eb455fe194c33b5e034303c00c6d028b0a122cb630e26f3079",
+        "bytes": 22355
+      },
+      "docs/friendly-command-interrupted-rust.log.gz": {
+        "sha256": "e61e44130f07f4d3a445b2a061904c7f0e9db7b1b0108e17739fbf7e003660bb",
+        "bytes": 70
+      },
+      "docs/friendly-command-nix-assets.json": {
+        "sha256": "fead21e92c6bc25010909a3199fad0e152bce6b0896d2109b4d23672de84ef0d",
+        "bytes": 362
+      },
+      "docs/friendly-command-nix-assets.log.gz": {
+        "sha256": "fe40a9e69ac29df697270addd318f3c223d634a9d896cd5d72c558bf5265f371",
+        "bytes": 1654
+      },
+      "docs/friendly-command-observations-capture.json.gz": {
+        "sha256": "c96899e848666dcaf3654fff81c11e9d1a283307fc68632035f59c0be2a93fa2",
+        "bytes": 308206
+      },
+      "docs/friendly-command-observations.json.gz": {
+        "sha256": "6d030c32858c34f93976054c9c234b38b580d011ed17df6dbfec45cd89cf0abb",
+        "bytes": 453135
+      },
+      "docs/friendly-command-parent-failure.log.gz": {
+        "sha256": "23322aa55ec985375986ad8ac6a5c55bd43f4f68691b59b7af5b357155ecc6a0",
+        "bytes": 4586
+      },
+      "docs/friendly-command-parent-regressions.log.gz": {
+        "sha256": "78bf66fbb141e863b1082f50d85bf4147c64df250b10e2ea30ccac4d83901ed6",
+        "bytes": 683
+      },
+      "docs/friendly-command-pinned-corpus.log.gz": {
+        "sha256": "4f45dd057191a57d29f3a7493f05d9ac8084bd75bd98e565ca7dd1fdcb6e17db",
+        "bytes": 225
+      },
+      "docs/friendly-command-preflight.json.gz": {
+        "sha256": "bff2c05d11ec0b2cafea5addffeeece8e88a2ba6a1ddbf66e68802ea278b9740",
+        "bytes": 4180432
+      },
+      "docs/friendly-command-rust-checks.json": {
+        "sha256": "0047cd4428035a3a953fb316f0e7ad7a426ee1e4030f8ba1f0d0b1e50bebcf9f",
+        "bytes": 92036
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "2cb070d974a6a3934b17ae67806a0791401af562d560b2cfcb74cfccf150c82a",
+        "bytes": 3347499
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "599da16436334f74193e9432e1004dee556acd15347ec8dda3c026c99fd62f91",
+        "bytes": 1239794
+      },
+      "docs/rules.md": {
+        "sha256": "37461eaf44c453f1a3da9e599d59d8162bd577377cf3c1c2ce6812cb06df1f11",
+        "bytes": 314863
+      },
+      "flake.nix": {
+        "sha256": "abc4e22b863ac38fd4f90e751603d7987b4a41816f22c55406d888ba820d7b70",
+        "bytes": 36225
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "fdccf6eb8b0c61cca9cd6f4e08390cc9410f34bc31c8393e2085df4248222bbf",
+        "bytes": 8116
+      },
+      "src/breakdown.rs": {
+        "sha256": "cb528237a9fe4123ea3b8d1a30629a33d8887e29140fe15900af0058a1aa6578",
+        "bytes": 22169
+      },
+      "src/dictionary/attachment.rs": {
+        "sha256": "b0c868a3e53a1f22b0797c7598cdc6b32a9a7fec7a836e1076c0ce76e2b00f34",
+        "bytes": 106826
+      },
+      "src/engine.rs": {
+        "sha256": "6c3a733547965659c1d2c83ae9b5a46f1a0a601a7335c447279e4fadb1902982",
+        "bytes": 217309
+      },
+      "src/grammar.rs": {
+        "sha256": "2594dda75d5240715e7274259bd7c8b6be56b1a798661df9369f48bc728d572a",
+        "bytes": 103595
+      },
+      "tests/continuation_inflection.rs": {
+        "sha256": "43a2cf18d483306b629b9909611e606dbc7d643a8d4aba22df2f3d4ed2cd0051",
+        "bytes": 14370
+      },
+      "tests/fixtures/README.md": {
+        "sha256": "6855c146a606784de87a8622a2a029ec300284189759c9c1288cca1331a6d4e4",
+        "bytes": 161116
+      },
+      "tests/fixtures/friendly-command-sources.json": {
+        "sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+        "bytes": 16045565
+      },
+      "tests/fixtures/krdict-friendly-command-english.json": {
+        "sha256": "16dc56dc8d916ece8c6f495cfb79ed8266b9e0de27e9eadeea82dfb88391fffe",
+        "bytes": 1104594
+      },
+      "tests/fixtures/krdict-friendly-command-labels.json": {
+        "sha256": "2317bf7555b97166b51efb923eb7844f5f6fb92e63698d98c395c18cd2162e73",
+        "bytes": 3443
+      },
+      "tests/fixtures/krdict-friendly-command-original.json": {
+        "sha256": "ec711fc0714bf56b736e7a0884de42c5f82be11398e401b0408f54603bf28a86",
+        "bytes": 2235041
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "4a2ec99b21f5d898b645f0793978067af4f0d2e25be343aa95d944c6908a655f",
+        "bytes": 28476350
+      },
+      "tests/friendly_command.rs": {
+        "sha256": "74ee6f5e7faffcffea637034e4e661d0f78785c5ee5663f4d715fa5f5c9c5980",
+        "bytes": 9604
+      },
+      "tests/validity.rs": {
+        "sha256": "d52a9c01e1293d43879ed63c9819573e9efb4c3d46bdfbfef114418aaf0be79d",
+        "bytes": 4004
+      },
+      "tools/friendly_command_audit.py": {
+        "sha256": "d382ecdf49551f465651b618577dbefd3ae99b9c09206ea6b3d57c7e911ba4d4",
+        "bytes": 5028
+      },
+      "tools/friendly_command_broad.py": {
+        "sha256": "6481723e1ce31d8b58209038693e3e8e9b4c0bea8a8046edf49c987bcd5e8c75",
+        "bytes": 8679
+      },
+      "tools/friendly_command_comparison.py": {
+        "sha256": "022e9cbe4c8a0da7283f5283fdbdb1e7aa6d91d1c1d5c2b6abe078b8ad94e50b",
+        "bytes": 600
+      },
+      "tools/friendly_command_corpora.py": {
+        "sha256": "2b4198ff093400da4babca20aa952f2171c4f5963b8225df7de18f0a7c097772",
+        "bytes": 7990
+      },
+      "tools/friendly_command_runtime.py": {
+        "sha256": "7a5f2788146f46fcc6b2f31f6ac50355dd82dbe3cfcbd4c25d6a466d90bc525d",
+        "bytes": 9480
+      },
+      "tools/hada_nominal_preservation.rs": {
+        "sha256": "85e92cbf65c996bac5eb34df924ed5148353b807b793bf374f60ecb2268c208e",
+        "bytes": 8361
+      },
+      "web/src/SentenceBreakdown.tsx": {
+        "sha256": "f47f7a08b0c2c80329ecbef3019b082a3c5dc83766c7bd8b6268cc392b6b91ad",
+        "bytes": 9683
+      },
+      "web/src/breakdown.ts": {
+        "sha256": "0901fbc38308651143c224109c7521c251cb5b4fe6da4f61da64914b5b30c7d8",
+        "bytes": 13986
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "7319069b0fa2f8af9ac3e5e4e9fe4f25a0ee54b2f9af9bd70a7163e6977cea05",
+        "bytes": 178757
+      },
+      "web/tests/browser.mjs": {
+        "sha256": "67b663f99eb6b7f1199f6f9dda34afc69f87fbab7bbc2c080387fac467349380",
+        "bytes": 543454
+      },
+      "web/tests/friendly-command.mjs": {
+        "sha256": "a9fb13b1a252299a9e3c215f357fb368cf1e7e9b313feb8f5b7cc2b8666ecddf",
+        "bytes": 6507
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-06T22:46:14.121581+00:00",
+  "log_sha256": "4e4f7df39b4f2beaa065d8715255ee71c167c74a07b0d66ebb323404ede52bd7",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/5hz7c4id9hnmrk3712hfynak0aw7d5fx-klem-0.1.0",
+    "/nix/store/6pcis11hs3g4sqadf8yp7phkc3izar02-klem-web-assets-0.1.0"
+  ]
+}

@@ -1136,3 +1136,20 @@ Its command-ending attachment, token-initial auxiliary readings and following
 particles remain unknown; they are not rejected because source examples are
 absent. The same-spelled adnominal ending 78634 remains a separate component
 source in the viewer, including existing noun formations.
+
+### Degree and counterfactual expectation endings (COV-017by/bz)
+
+Canonical 으리만큼 retains the separately documented -리만큼/-으리만큼
+allomorphs (87692/86608). Native notes list predicates, honorific and past
+attachments. An otherwise compatible represented copula, unlisted prefinal
+or owned following particle remains Unknown. A token-initial auxiliary
+reading still follows the existing conditional auxiliary policy.
+
+Canonical 으련만 and 으련마는 preserve two distinct ending families
+(86546/86603 and 86545/86602). Their sources additionally list 이다.
+Source-listed predicate/copula, honorific and past attachments retain their
+ordinary assessments; other represented markers and followers preserve
+uncertainty. These rules apply to the immediate owner and preserve earlier
+owners and known conflicts. Exact structural source regressions and complete
+native imports do not select a contextual sense or establish linguistic
+precision. Release validation remains tracked in the coverage checklist.

@@ -123,6 +123,12 @@ try {
   grammarLabelSources.LexicalResource.Lexicon.LexicalEntry.push(
     ...friendlyCommandLabels.LexicalResource.Lexicon.LexicalEntry,
   );
+  const degreeExpectationLabels = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-degree-expectation-labels.json"), "utf8"),
+  );
+  grammarLabelSources.LexicalResource.Lexicon.LexicalEntry.push(
+    ...degreeExpectationLabels.LexicalResource.Lexicon.LexicalEntry,
+  );
   const adverbRoots = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-adverb-roots.json"), "utf8"),
   );

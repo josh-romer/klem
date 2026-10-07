@@ -1626,6 +1626,366 @@ impl Annotation {
                         // or register; established owner conflicts still win.
                         status = Compatibility::Unknown;
                     }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "으리만큼")
+                        && (lemma.kind == LemmaKind::Copula
+                            || morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if (analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && !crate::engine::honorific_prefinal(&analysis.morphemes[*j].form)
+                                    && analysis.morphemes[*j].form != "었")
+                                    || analysis.morphemes[*j].kind == MorphemeKind::Particle)))
+                    {
+                        // Native 87692/86608 list predicates, honorific and past.
+                        // Unlisted owners/markers/followers retain uncertainty.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| {
+                            matches!(analysis.morphemes[i].form.as_str(), "거라" | "너라")
+                        })
+                        && (!bare
+                            || !matches!(pos, "동사" | "보조 동사"))
+                        && !reviewed_past_direct_command(&matched.entry, lemma, analysis, morphs)
+                    {
+                        // The modern sources establish direct verbal stems.
+                        // Honorific/tense/mood and adjectival or copular wishes
+                        // need separate review; do not invent a POS-wide ban.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && analysis.rules.iter().any(|r| r == "ending.friendly_command.n")
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "ㄴ")
+                        && (lemma.kind != LemmaKind::Predicate
+                            || pos != "동사"
+                            || !bare
+                            || morphs.len() != 1)
+                    {
+                        // KRDict 73877 supplies lexical command examples.
+                        // Continuative auxiliary 오다 (69517) and following
+                        // particles are retained as unreviewed hypotheses.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && !bare
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "음세")
+                    {
+                        // The reviewed sources list bare verbs. Generic
+                        // prefinal hypotheses survive without claiming that
+                        // this new final licenses every such combination.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| unreviewed_neuni_prefinals(analysis, morphs, i))
+                    {
+                        status = Compatibility::Unknown;
+                    }
+                    // A separately written auxiliary has unknown context,
+                    // but its known lexical class still constrains this bare
+                    // exclamation boundary. Do not let that context uncertainty
+                    // override the entry's reviewed inflectional conflict.
+                    if lemma.kind == LemmaKind::Predicate
+                        && status == Compatibility::Unknown
+                        && bare
+                        && let Some(i) = ending
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let rule = if crate::engine::present_exclamation(form)
+                            && (pos == "보조 형용사" || (pos == "보조 동사" && lemma.text == "있다"))
+                        {
+                            Some(AttachmentRule::BareExclamationVerb)
+                        } else if matches!(form, "구나" | "군" | "군요" | "구먼")
+                            && pos == "보조 동사"
+                            && !matches!(lemma.text.as_str(), "있다" | "계시다" | "않다" | "아니하다" | "못하다")
+                        {
+                            Some(AttachmentRule::BareExclamationAdjective)
+                        } else { None };
+                        if let Some(rule) = rule {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        }
+                    }
+                    if lemma.kind == LemmaKind::Predicate
+                        && status == Compatibility::Unknown
+                        && let Some(i) = ending
+                        && (crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
+                            || crate::engine::reporting_retrospective(&analysis.morphemes[i].form))
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let rule = if crate::engine::present_declarative(form) && pos == "보조 형용사" {
+                            Some(AttachmentRule::PresentDeclarativeVerb)
+                        } else if bare && (crate::engine::plain_quoted_exclamation(form)
+                            || crate::engine::plain_reporting_retrospective(form))
+                            && pos == "보조 동사"
+                            && !matches!(lemma.text.as_str(), "있다" | "계시다" | "않다" | "아니하다" | "못하다")
+                        { Some(AttachmentRule::BareAdjectivalReport) } else { None };
+                        if let Some(rule) = rule {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        }
+                    }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
+                        && (crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
+                            || crate::engine::plain_reporting_retrospective(&analysis.morphemes[i].form)
+                            || matches!(analysis.morphemes[i].form.as_str(), "라던" | "라던데"))
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let listed: &[&str] = if crate::engine::present_declarative(form) {
+                            &["시"]
+                        } else if form == "라던" {
+                            if morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if analysis.morphemes[*j].form == "으리")) {
+                                &["시", "었", "겠", "으리"]
+                            } else { &["시"] }
+                        }
+                        else if form == "라던데" { &["시", "더", "으리", "었", "겠"] }
+                        else { &["시", "었", "겠"] };
+                        // Listing -시- in an adjective report's note does not
+                        // establish a verb's present report without -ㄴ다/-는다.
+                        // Preserve the hypothesis without certifying that class
+                        // extension. Past/modal reports have separate evidence.
+                        let honorific_verb_report = (crate::engine::plain_quoted_exclamation(form)
+                            || crate::engine::plain_reporting_retrospective(form)
+                            || matches!(form, "라던" | "라던데"))
+                            && matches!(pos, "동사" | "보조 동사")
+                            && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
+                            && morphs.iter().all(|c| !matches!(c, Component::Morpheme(j)
+                                if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && analysis.morphemes[*j].form != "시"));
+                        if morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !listed.contains(&analysis.morphemes[*j].form.as_str())))
+                            || honorific_verb_report
+                        { status = Compatibility::Unknown; }
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "라던"
+                        && !matches!(pos, "동사" | "보조 동사")
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].form == "으리"))
+                    {
+                        // Native expectation reports attest verbal (으)리라던.
+                        // Their copular/adjectival class extensions are hypotheses.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::reporting_retrospective(&analysis.morphemes[i].form)
+                        && analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요")
+                    {
+                        // The polite source notes are narrower than their core
+                        // report entries. Bare verbal 냐 and honorific commands
+                        // remain hypotheses, rather than certified extensions.
+                        let form = analysis.morphemes[i].form.as_str();
+                        if (form == "냐던데" && bare && matches!(pos, "동사" | "보조 동사"))
+                            || (form == "으라던데" && morphs.iter().any(|c|
+                                matches!(c, Component::Morpheme(j)
+                                    if analysis.morphemes[*j].kind == MorphemeKind::Prefinal)))
+                        { status = Compatibility::Unknown; }
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "더라는군"
+                        && analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요")
+                    {
+                        // NIKL's terminal 군 + 요 transfers through the native
+                        // experience-report expansion. No direct quoted example
+                        // was found; do not certify that contextual license.
+                        status = Compatibility::Unknown;
+                    }
+                    if lemma.kind == LemmaKind::Predicate
+                        && status == Compatibility::Unknown && bare
+                        && let Some(i) = ending
+                        && crate::engine::quoted_question_report(&analysis.morphemes[i].form)
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let existential_or_negative = lemma.text.ends_with("있다")
+                            || lemma.text.ends_with("없다")
+                            || matches!(lemma.text.as_str(), "계시다" | "않다" | "아니하다" | "못하다");
+                        let rule = if crate::engine::verbal_quoted_question(form)
+                            && pos == "보조 형용사" && !existential_or_negative
+                        { Some(AttachmentRule::BareVerbalQuestion) }
+                        else if crate::engine::adjectival_question(form)
+                            && pos == "보조 동사" && !existential_or_negative
+                        { Some(AttachmentRule::BareAdjectivalQuestion) }
+                        else { None };
+                        if let Some(rule) = rule {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        }
+                    }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
+                        && crate::engine::quoted_question_report(&analysis.morphemes[i].form)
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠")))
+                    {
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && lemma.kind == LemmaKind::Auxiliary && bare && class.is_none()
+                        && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                        && ending.is_some_and(|i|
+                            crate::engine::verbal_quoted_question(&analysis.morphemes[i].form)
+                            || (crate::engine::quoted_question_report(&analysis.morphemes[i].form)
+                                && crate::engine::adjectival_question(&analysis.morphemes[i].form)))
+                    {
+                        // Negation inherits the preceding predicate's class.
+                        // An unclassified lexical head cannot borrow a homonym's
+                        // dictionary POS to settle this later owner's question.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
+                        && crate::engine::verbal_quoted_question(&analysis.morphemes[i].form)
+                        && ((pos == "형용사"
+                            && !lemma.text.ends_with("있다") && !lemma.text.ends_with("없다"))
+                            || lemma.kind == LemmaKind::Copula
+                            || (crate::engine::quoted_conditional_question(&analysis.morphemes[i].form)
+                                && (derived_adjective || matches!(class, Some(PredicateClass::Adjective)))))
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
+                        && morphs.iter().all(|c| !matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && analysis.morphemes[*j].form != "시"))
+                    {
+                        // The note lists -시-, but does not directly settle
+                        // this nonverbal owner's honorific-only extension.
+                        // Preserve it as unknown; past/modal examples provide
+                        // distinct evidence and are not excluded here.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::quoted_conditional_question(&analysis.morphemes[i].form)
+                        && ((analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요"))
+                            || (lemma.kind == LemmaKind::Auxiliary && bare
+                                && (matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                                    || (analysis.morphemes[i].form == "으냐면"
+                                        && matches!(lemma.text.as_str(), "있다" | "계시다")))))
+                    {
+                        // Native 요 sense 2 permits connective followers, but
+                        // these quoted contractions have no directly reviewed
+                        // polite example. Negative-owner paradigms remain
+                        // COV-019h; do not settle them from a borrowed POS.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "읍시다")
+                        && (matches!(pos, "형용사" | "보조 형용사")
+                            || derived_adjective
+                            || matches!(class, Some(PredicateClass::Adjective))
+                            || (lemma.kind == LemmaKind::Auxiliary
+                                && class.is_none()
+                                && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")))
+                    {
+                        // The formal proposal entries specify verbs. NIKL
+                        // 318597 describes contextual adjective wishes, so a
+                        // POS label cannot justify pruning those hypotheses.
+                        // Unclassified negatives do not borrow lexical POS
+                        // from a preceding homonym. Existing conflicts win.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::quoted_proposal_exclamation(&analysis.morphemes[i].form)
+                        && (matches!(pos, "형용사" | "보조 형용사")
+                            || derived_adjective
+                            || matches!(class, Some(PredicateClass::Adjective))
+                            || (lemma.kind == LemmaKind::Auxiliary
+                                && (class.is_none() || matches!(lemma.text.as_str(), "있다" | "계시다")))
+                            || morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
+                            || (analysis.morphemes[i].form == "자는군"
+                                && analysis.morphemes.get(i + 1).is_some_and(|m|
+                                    m.kind == MorphemeKind::Particle && m.form == "요")))
+                    {
+                        // NIKL allows contextual adjective wishes, but the four
+                        // quoted entries do not certify those readings. Keep
+                        // existential/negative auxiliary owners, unlisted
+                        // prefinals and inferred 군 + 요 independently Unknown.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "으랴"
+                        && ((lemma.kind == LemmaKind::Copula
+                            && analysis.rules.iter().any(|r| r == "copula.omitted_rya"))
+                            || morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠"))))
+                    {
+                        // The four native -랴/-으랴 entries cover rhetorical,
+                        // offer and enumerative senses collectively. Their
+                        // notes name honorific/past/modal prefinals; other
+                        // immediate-owner extensions remain hypotheses without
+                        // certifying an unreviewed sense or register. A prior
+                        // auxiliary owner's markers do not supply this test.
+                        // General vowel-final copula omission plus the Rya
+                        // copula license is similarly an unreviewed composition.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "을라"
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었")))
+                    {
+                        // Native 77345/77346 name honorific 시 and past 었.
+                        // Other immediate-owner markers remain hypotheses;
+                        // markers owned by earlier lexical/auxiliary heads
+                        // cannot change this owner's assessment.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::quoted_ra_exclamation(&analysis.morphemes[i].form)
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let is_command = crate::engine::quoted_command_exclamation(form);
+                        let listed: &[&str] = if is_command { &["시"] } else { &["시", "더", "으리"] };
+                        if morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !listed.contains(&analysis.morphemes[*j].form.as_str())))
+                            || (is_command && (matches!(pos, "형용사" | "보조 형용사")
+                                || derived_adjective || matches!(class, Some(PredicateClass::Adjective))))
+                            || (!is_command && !bare && lemma.kind != LemmaKind::Copula
+                                && (matches!(pos, "동사" | "형용사" | "보조 동사" | "보조 형용사")
+                                    || derived_adjective || matches!(class, Some(PredicateClass::Verb | PredicateClass::Adjective)))
+                                && lemma.text != "아니다")
+                            || (matches!(form, "라는군" | "으라는군")
+                                && analysis.morphemes.get(i + 1).is_some_and(|m|
+                                    m.kind == MorphemeKind::Particle && m.form == "요"))
+                        {
+                            // Honorific/copular extensions, adjective wishes
+                            // and inferred quoted 군 + 요 remain candidates,
+                            // without automatic grammaticality certification.
+                            status = Compatibility::Unknown;
+                        }
+                    }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "냐는군" | "느냐는군" | "으냐는군")
+                        && analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요")
+                    {
+                        // The quoted contraction plus polite particle is an
+                        // inferred candidate, not a directly reviewed source
+                        // example. Preserve it without certifying the license
+                        // or register; established owner conflicts still win.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| matches!(analysis.morphemes[i].form.as_str(), "으련만" | "으련마는"))
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if (analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !crate::engine::honorific_prefinal(&analysis.morphemes[*j].form)
+                                && analysis.morphemes[*j].form != "었")
+                                || analysis.morphemes[*j].kind == MorphemeKind::Particle))
+                    {
+                        // Primary entries list predicates/copula, honorific and past.
+                        // Other markers and followers remain uncertain.
+                        status = Compatibility::Unknown;
+                    }
                     if status == Compatibility::Compatible && let Some(i) = ending {
                         let form = analysis.morphemes[i].form.as_str();
                         let listed: Option<&[&str]> = if crate::engine::present_exclamation(form)

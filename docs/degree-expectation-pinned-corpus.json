@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "exit_code": 0,
+  "command": [
+    "cargo",
+    "test",
+    "--locked",
+    "--offline",
+    "--features",
+    "web",
+    "-j",
+    "4",
+    "--test",
+    "corpus",
+    "pinned_full_corpus_regressions",
+    "--",
+    "--ignored"
+  ],
+  "engine_sha256": "8c351e73452e1c0a44a64db838bc15e0d1e9fdd2d1037cb47623887bbb86d12d",
+  "grammar_sha256": "5c324bba57237fd0ff2b76a9e43f001d9f370c057b586113704bcdf71e7573ec",
+  "test_sha256": "7303682f8076fbb5bbb331781eb85a772c511555b3d8d38414f5a056831e642a",
+  "log_sha256": "873520090436183f15bf6dd6a592035d83748484a3fce6d9c883c49afd862222"
+}

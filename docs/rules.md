@@ -12,6 +12,8 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | Regular predicates | 먹고, 먹지만, 먹는데, 먹기, 가는, 간다 |
 | Modern direct commands | 먹거라, 살거라, 오거라, 들어오너라, 먹어보거라 |
 | Friendly colloquial command | 온, 날아온, 내려온, 돌아온; distinct canonical ㄴ with existing 은 adnominal retained |
+| Degree/grounds | 하리만큼, 싶으리만큼, 가까우리만큼; canonical 으리만큼 with paired stem allomorphs |
+| Counterfactual expectation | 가련만, 좋으련만, 갔으련마는; separate canonical 으련만 and 으련마는 |
 | Comparative endings | 보듯, 보듯이, 살듯, 보셨듯이 |
 | Present conditional | 한다면, 산다면, 먹는다면, 먹으신다면 |
 | Shortened adnominal expressions | 먹으려는, 살려는, 도우려는, 먹자는, 바꿔보자는 |
@@ -4552,3 +4554,43 @@ KRDict 70070 restricts 밖에 to nouns or -기 nominalizations; the example does
 not by itself establish an adverb-base attachment class. That alternative
 remains unjudged without adding an adverb rule or declaring it linguistically
 forbidden. The additional scan does not rewrite the original 362 occurrences.
+
+### Degree and counterfactual expectation endings (COV-017by/bz)
+
+The degree/grounds pair `-리만큼/-으리만큼` produces canonical Ending
+`으리만큼`, with rule `ending.degree_rimankeum`. For example,
+`가까우리만큼` retains `가깝다 + 으리만큼` through ㅂ-irregular recovery.
+The counterfactual pairs `-련만/-으련만` and `-련마는/-으련마는`
+produce separate canonical Endings `으련만` and `으련마는`, with
+`ending.counterfactual_ryeon`. `갔으련마는` retains
+`가다 + 었 + 으련마는`. Vowel and lexical ㄹ stems use the short written
+allomorph; ordinary consonant stems use the full allomorph. Existing whole-word,
+lexical and other grammatical hypotheses remain available.
+
+The primary degree entries are KRDict
+[87692](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87692)
+and [86608](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86608).
+The latter retains the original short-form 창피하리만큼 example despite its
+full-form attachment note; the short counterpart licenses that spelling.
+The counterfactual sources are
+[86546](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86546),
+[86603](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86603),
+[86545](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86545)
+and [86602](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86602).
+Their complete original groups and Native/LMF fields are preserved in the
+[degree fixture](../tests/fixtures/degree-rimankeum-sources.json) and
+[counterfactual fixture](../tests/fixtures/counterfactual-ryeon-sources.json).
+
+Both families retain the source-listed honorific and past attachments.
+The counterfactual sources explicitly include 이다. A represented copula with
+으리만큼, other unlisted prefinals, and owned following particles retain
+`Unknown` dictionary compatibility when no known conflict already applies.
+This uncertainty does not remove the raw candidate or establish a grammatical
+ban. Derived 답다 readings retain their own suffix component and inflection.
+
+The reader labels these endings “To such a degree” and “Counterfactual
+expectation” and links the corresponding short/full dictionary entries.
+These are grammar hints; the selected dictionary sense and sentence context
+remain unjudged. [The coverage tracker](coverage-checklist.md) records the
+individual source cases, negative allomorph controls, ambiguity preservation,
+source-cohort comparisons, browser/export checks and remaining review work.

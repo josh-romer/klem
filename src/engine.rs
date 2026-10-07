@@ -1809,6 +1809,12 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "음세" {
                     p.rules.push("ending.volitional_promise".into());
                 }
+                if matches!(ending.form, "으련만" | "으련마는") {
+                    p.rules.push("ending.counterfactual_ryeon".into());
+                }
+                if ending.form == "으리만큼" {
+                    p.rules.push("ending.degree_rimankeum".into());
+                }
                 if ending.form == "으리까" {
                     p.rules.push("ending.literary_question_ri".into());
                 }
@@ -3261,6 +3267,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 // Keep derived 답다 beside lexical adjectives such as 넓다.
                 | "으려고"
                 | "으리라"
+                | "으리만큼"
+                | "으련만"
+                | "으련마는"
                 | "으리"
                 | "으리라고"
                 | "으리까"

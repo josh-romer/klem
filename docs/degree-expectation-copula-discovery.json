@@ -1,0 +1,2331 @@
+{
+  "schema_version": 1,
+  "preparation_only": true,
+  "cli_sha256": "2c9b1e68e2fb3a68b59c88019a264f07168168c8692819d66b9b0d96f8eacd5e",
+  "observations": [
+    {
+      "id": "degree-expectation-copula-discovery-친구련만",
+      "surface": "친구련만",
+      "nominal": "친구",
+      "ending": "으련만",
+      "command": [
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "word",
+        "친구련만"
+      ],
+      "exit_code": 0,
+      "json": "{\"normalized\":\"친구련만\",\"analyses\":[{\"lemmas\":[{\"text\":\"친구다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"으련만\",\"kind\":\"ending\"}],\"rules\":[\"boundary.eu\",\"ending\",\"ending.counterfactual_ryeon\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"만\",\"kind\":\"particle\"}],\"rules\":[\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"만\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.adverbial_focus\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"어\",\"kind\":\"ending\"},{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"contraction.identical\",\"ending\",\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"boundary.attached\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련만\",\"kind\":\"unclassified\"}],\"morphemes\":[],\"rules\":[\"identity\"],\"unchanged\":true},{\"lemmas\":[{\"text\":\"친구련말다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"deletion.rieul\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련맣다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]},{\"lemmas\":[{\"text\":\"친궇다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"으련만\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"ending.counterfactual_ryeon\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]}]}\n",
+      "json_sha256": "3caebe1f587f08c0ca154cdf374b20b7434a487a417e12d710f9cc9e0274fdd8",
+      "analysis": {
+        "normalized": "친구련만",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "친구다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으련만",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending",
+              "ending.counterfactual_ryeon"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "만",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "만",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련만",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련말다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련맣다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친궇다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으련만",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.counterfactual_ryeon",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "target_copular_path_present": false,
+      "existing_companion": {
+        "surface": "친구리라",
+        "analysis": {
+          "normalized": "친구리라",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending",
+                "ending.factual_ra",
+                "prefinal.conjectural_ra"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리라",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구맇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친궇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "ending.factual_ra",
+                "irregular.hieut",
+                "prefinal.conjectural_ra"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친궇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "example_origin": "authored boundary probe",
+      "contextual_verdict": "unjudged",
+      "linguistic_license": "requires source review",
+      "judgment": "observation, neither required nor forbidden"
+    },
+    {
+      "id": "degree-expectation-copula-discovery-학생련만",
+      "surface": "학생련만",
+      "nominal": "학생",
+      "ending": "으련만",
+      "command": [
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "word",
+        "학생련만"
+      ],
+      "exit_code": 0,
+      "json": "{\"normalized\":\"학생련만\",\"analyses\":[{\"lemmas\":[{\"text\":\"학생련\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"만\",\"kind\":\"particle\"}],\"rules\":[\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"만\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.adverbial_focus\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"어\",\"kind\":\"ending\"},{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"contraction.identical\",\"ending\",\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"boundary.attached\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련만\",\"kind\":\"unclassified\"}],\"morphemes\":[],\"rules\":[\"identity\"],\"unchanged\":true},{\"lemmas\":[{\"text\":\"학생련말다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"deletion.rieul\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련맣다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]}]}\n",
+      "json_sha256": "079923056b31d1a5d4425bc10899a629dee34fb973a31f3f97dd0ca76b20d2f5",
+      "analysis": {
+        "normalized": "학생련만",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "학생련",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "만",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "만",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련만",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련말다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련맣다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "target_copular_path_present": false,
+      "existing_companion": {
+        "surface": "학생리라",
+        "analysis": {
+          "normalized": "학생리라",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "학생리",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리라",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생맇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "example_origin": "authored boundary probe",
+      "contextual_verdict": "unjudged",
+      "linguistic_license": "requires source review",
+      "judgment": "observation, neither required nor forbidden"
+    },
+    {
+      "id": "degree-expectation-copula-discovery-친구련마는",
+      "surface": "친구련마는",
+      "nominal": "친구",
+      "ending": "으련마는",
+      "command": [
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "word",
+        "친구련마는"
+      ],
+      "exit_code": 0,
+      "json": "{\"normalized\":\"친구련마는\",\"analyses\":[{\"lemmas\":[{\"text\":\"친구다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"으련마는\",\"kind\":\"ending\"}],\"rules\":[\"boundary.eu\",\"ending\",\"ending.counterfactual_ryeon\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.adverbial_focus\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마느\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마느\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마느다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"boundary.attached\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마는\",\"kind\":\"unclassified\"}],\"morphemes\":[],\"rules\":[\"identity\"],\"unchanged\":true},{\"lemmas\":[{\"text\":\"친구련마늘다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"deletion.rieul\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마늫다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]},{\"lemmas\":[{\"text\":\"친구련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"ending\"}],\"rules\":[\"boundary.regular\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"어\",\"kind\":\"ending\"},{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"contraction.identical\",\"ending\",\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구련말다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"ending\"}],\"rules\":[\"deletion.rieul\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친궇다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"으련마는\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"ending.counterfactual_ryeon\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]}]}\n",
+      "json_sha256": "a2567d2c56cf52cf5710bb2c3990899a528bff18ce41f9b78e3886a6d696d5ba",
+      "analysis": {
+        "normalized": "친구련마는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "친구다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으련마는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending",
+              "ending.counterfactual_ryeon"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구련말다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친궇다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으련마는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.counterfactual_ryeon",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "target_copular_path_present": false,
+      "existing_companion": {
+        "surface": "친구리라",
+        "analysis": {
+          "normalized": "친구리라",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending",
+                "ending.factual_ra",
+                "prefinal.conjectural_ra"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리라",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구맇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친궇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "ending.factual_ra",
+                "irregular.hieut",
+                "prefinal.conjectural_ra"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친궇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "example_origin": "authored boundary probe",
+      "contextual_verdict": "unjudged",
+      "linguistic_license": "requires source review",
+      "judgment": "observation, neither required nor forbidden"
+    },
+    {
+      "id": "degree-expectation-copula-discovery-학생련마는",
+      "surface": "학생련마는",
+      "nominal": "학생",
+      "ending": "으련마는",
+      "command": [
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "word",
+        "학생련마는"
+      ],
+      "exit_code": 0,
+      "json": "{\"normalized\":\"학생련마는\",\"analyses\":[{\"lemmas\":[{\"text\":\"학생련마\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.adverbial_focus\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마느\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마느\",\"kind\":\"adverbial\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"particle\",\"particle.contraction.n\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마느다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"boundary.attached\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마는\",\"kind\":\"unclassified\"}],\"morphemes\":[],\"rules\":[\"identity\"],\"unchanged\":true},{\"lemmas\":[{\"text\":\"학생련마늘다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"deletion.rieul\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마늫다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"은\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]},{\"lemmas\":[{\"text\":\"학생련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"ending\"}],\"rules\":[\"boundary.regular\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련마다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"어\",\"kind\":\"ending\"},{\"form\":\"는\",\"kind\":\"particle\"}],\"rules\":[\"contraction.identical\",\"ending\",\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생련말다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"는\",\"kind\":\"ending\"}],\"rules\":[\"deletion.rieul\",\"ending\"],\"unchanged\":false}]}\n",
+      "json_sha256": "7d61fd96f1b627606e19707f76adf7935fd7edd75ebb0076b19cf0ed3fbdfb9d",
+      "analysis": {
+        "normalized": "학생련마는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "학생련마",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련마다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생련말다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "target_copular_path_present": false,
+      "existing_companion": {
+        "surface": "학생리라",
+        "analysis": {
+          "normalized": "학생리라",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "학생리",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리라",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생맇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "example_origin": "authored boundary probe",
+      "contextual_verdict": "unjudged",
+      "linguistic_license": "requires source review",
+      "judgment": "observation, neither required nor forbidden"
+    },
+    {
+      "id": "degree-expectation-copula-discovery-친구리만큼",
+      "surface": "친구리만큼",
+      "nominal": "친구",
+      "ending": "으리만큼",
+      "command": [
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "word",
+        "친구리만큼"
+      ],
+      "exit_code": 0,
+      "json": "{\"normalized\":\"친구리만큼\",\"analyses\":[{\"lemmas\":[{\"text\":\"친구다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"으리만큼\",\"kind\":\"ending\"}],\"rules\":[\"boundary.eu\",\"ending\",\"ending.degree_rimankeum\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구리\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"만큼\",\"kind\":\"particle\"}],\"rules\":[\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구리만크다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"음\",\"kind\":\"ending\"}],\"rules\":[\"boundary.attached\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"친구리만큼\",\"kind\":\"unclassified\"}],\"morphemes\":[],\"rules\":[\"identity\"],\"unchanged\":true},{\"lemmas\":[{\"text\":\"친구리만킇다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"음\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]},{\"lemmas\":[{\"text\":\"친궇다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"으리만큼\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"ending.degree_rimankeum\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]}]}\n",
+      "json_sha256": "9512dd6a8b53171498123a70da3a16b2297f5987ed40c0600b1339a62098fa6f",
+      "analysis": {
+        "normalized": "친구리만큼",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "친구다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으리만큼",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending",
+              "ending.degree_rimankeum"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "만큼",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구리만크다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구리만큼",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친구리만킇다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "친궇다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으리만큼",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.degree_rimankeum",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "target_copular_path_present": false,
+      "existing_companion": {
+        "surface": "친구리라",
+        "analysis": {
+          "normalized": "친구리라",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending",
+                "ending.factual_ra",
+                "prefinal.conjectural_ra"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리라",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구리이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친구맇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친궇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "ending.factual_ra",
+                "irregular.hieut",
+                "prefinal.conjectural_ra"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "친궇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으리라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "example_origin": "authored boundary probe",
+      "contextual_verdict": "unjudged",
+      "linguistic_license": "requires source review",
+      "judgment": "observation, neither required nor forbidden"
+    },
+    {
+      "id": "degree-expectation-copula-discovery-학생리만큼",
+      "surface": "학생리만큼",
+      "nominal": "학생",
+      "ending": "으리만큼",
+      "command": [
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "word",
+        "학생리만큼"
+      ],
+      "exit_code": 0,
+      "json": "{\"normalized\":\"학생리만큼\",\"analyses\":[{\"lemmas\":[{\"text\":\"학생리\",\"kind\":\"nominal\"}],\"morphemes\":[{\"form\":\"만큼\",\"kind\":\"particle\"}],\"rules\":[\"particle\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생리만크다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"음\",\"kind\":\"ending\"}],\"rules\":[\"boundary.attached\",\"ending\"],\"unchanged\":false},{\"lemmas\":[{\"text\":\"학생리만큼\",\"kind\":\"unclassified\"}],\"morphemes\":[],\"rules\":[\"identity\"],\"unchanged\":true},{\"lemmas\":[{\"text\":\"학생리만킇다\",\"kind\":\"predicate\"}],\"morphemes\":[{\"form\":\"음\",\"kind\":\"ending\"}],\"rules\":[\"ending\",\"irregular.hieut\"],\"unchanged\":false,\"spelling_paths\":[[{\"morpheme_index\":0,\"class\":\"hieut_irregular\"}]]}]}\n",
+      "json_sha256": "48bd3bf09fb933ca455062191df855ad27d11b3caea20563e7810040b6fab0ff",
+      "analysis": {
+        "normalized": "학생리만큼",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "학생리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "만큼",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생리만크다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생리만큼",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "학생리만킇다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "target_copular_path_present": false,
+      "existing_companion": {
+        "surface": "학생리라",
+        "analysis": {
+          "normalized": "학생리라",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "학생리",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리라",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리라다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생리이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula.zero",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "학생맇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으라",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "example_origin": "authored boundary probe",
+      "contextual_verdict": "unjudged",
+      "linguistic_license": "requires source review",
+      "judgment": "observation, neither required nor forbidden"
+    }
+  ],
+  "sources": [
+    "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86546",
+    "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86545",
+    "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=307961"
+  ],
+  "producer": {
+    "text": "\"\"\"Preserve shortened-copula discovery without assigning linguistic gold.\"\"\"\nimport hashlib,json,subprocess,unicodedata\nfrom pathlib import Path\nROOT=Path('/home/josh/projects/klem');CLI=Path('/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem')\nrows=[]\nfor ending in ['련만','련마는','리만큼']:\n for noun in ['친구','학생']:\n  word=noun+ending;request=word;command=[str(CLI),'word',request];r=subprocess.run(command,text=True,capture_output=True,check=True);a=json.loads(r.stdout)\n  canonical={'련만':'으련만','련마는':'으련마는','리만큼':'으리만큼'}[ending]\n  target=lambda p:p['lemmas']==[{'text':noun,'kind':'nominal'},{'text':'이다','kind':'copula'}] and p['morphemes']==[{'form':canonical,'kind':'ending'}]\n  nfd=json.loads(subprocess.check_output([str(CLI),'word',unicodedata.normalize('NFD',word)]));assert a==nfd\n  companion=noun+'리라';prior=json.loads(subprocess.check_output([str(CLI),'word',companion]))\n  rows.append({'id':'degree-expectation-copula-discovery-'+word,'surface':word,'nominal':noun,'ending':canonical,'command':command,'exit_code':r.returncode,'json':r.stdout,'json_sha256':hashlib.sha256(r.stdout.encode()).hexdigest(),'analysis':a,'target_copular_path_present':any(target(p) for p in a['analyses']),'existing_companion':{'surface':companion,'analysis':prior},'example_origin':'authored boundary probe','contextual_verdict':'unjudged','linguistic_license':'requires source review','judgment':'observation, neither required nor forbidden'})\nassert not any(r['target_copular_path_present'] for r in rows)\np=Path(__file__);out=ROOT/'docs/degree-expectation-copula-discovery.json';assert not out.exists();out.write_text(json.dumps({'schema_version':1,'preparation_only':True,'cli_sha256':hashlib.sha256(CLI.read_bytes()).hexdigest(),'observations':rows,'sources':['https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86546','https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86545','https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=307961'],'producer':{'text':p.read_text(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()},'scope':'Actual NFC/NFD discovery only. Existing 으리라 companions do not prove a license for every ending. Vowel-final and consonant-final nominal boundaries remain separately observed. Explicit 이다 paths are already implemented; degree/copula compatibility remains Unknown. Do not overwrite original datasets or promote source absence to a ban.'},ensure_ascii=False,indent=2)+'\\n')\nprint('Preserved six authored NFC/NFD shortened-copula observations; no required/forbidden judgments assigned.')\n",
+    "sha256": "23eb76f3d4f299668c43b8cff97086fa201ce30b75fcc523ff54b4e86b860b17"
+  },
+  "scope": "Actual NFC/NFD discovery only. Existing 으리라 companions do not prove a license for every ending. Vowel-final and consonant-final nominal boundaries remain separately observed. Explicit 이다 paths are already implemented; degree/copula compatibility remains Unknown. Do not overwrite original datasets or promote source absence to a ban."
+}

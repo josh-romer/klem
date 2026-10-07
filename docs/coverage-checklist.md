@@ -2049,6 +2049,130 @@ review remains open under the completion review below.
   Contextual addressee/register, lexical sense, auxiliary command attachment,
   other prefinals/particles and independent review remain open.
 
+- [x] **COV-017by — Degree/grounds -(으)리만큼.** **Implemented and verified for the preserved source examples and
+  bounded structural candidate scope.** Native
+  [87692 -리만큼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87692)
+  and [86608 -으리만큼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86608)
+  supply nine original groups and eight distinct spellings. The unchanged
+  [source preparation](degree-rimankeum-source-preparation.json.gz) preserves
+  43 complete native/LMF owners and the observed missing paths before this
+  change. It also preserves the source tension: 창피하리만큼 appears in the
+  full-form entry despite its consonant attachment note; the short-form
+  counterpart licenses that boundary.
+
+  The runtime adds canonical Ending 으리만큼 with `ending.degree_rimankeum`,
+  regular and irregular stem allomorphs, lexical ㄹ retention, and derived
+  답다 paths. Source-listed honorific and past combinations retain their
+  dictionary assessments. Unlisted copulas, other prefinals and owned
+  following particles retain Unknown when represented. The reader displays
+  “To such a degree” and links both complete source entries. The
+  [six regressions](../tests/degree_rimankeum.rs) verify all original lexical
+  paths, NFC/NFD equality, full native imports, stable per-example judgments,
+  wrong-allomorph controls and ordered components. The isolated
+  [cohort comparison](degree-rimankeum-cohort.json.gz) covers 2,073 complete
+  original groups and 5,019 distinct words in all three dictionary modes and
+  both encodings. Every earlier candidate and reading assessment remains;
+  each added path has an exact independently captured 으리라 companion.
+  These structural proposals do not select a contextual sense or establish
+  an independent linguistic precision estimate. Production CLI/API/browser,
+  corpus/novel, packaged release, cache/performance and final inventory checks
+  pass. Contextual and independent linguistic review remain open.
+
+- [x] **COV-017bz — Counterfactual expectation -(으)련만/-(으)련마는.**
+  **Implemented and verified for the preserved source examples and
+  bounded structural candidate scope.** Native [86546 -련만](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86546),
+  [86603 -으련만](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86603),
+  [86545 -련마는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86545)
+  and [86602 -으련마는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86602)
+  retain all nineteen original groups and spellings in the unchanged
+  [source preparation](counterfactual-ryeon-source-preparation.json.gz),
+  with 44 complete native/LMF owners and 114 actual missing-path observations
+  across encodings and filters before implementation.
+
+  The runtime keeps canonical Ending 으련만 and 으련마는 separate, with
+  `ending.counterfactual_ryeon` provenance, paired stem allomorphs, lexical ㄹ
+  retention and derived 답다 paths. The sources explicitly list 이다,
+  predicates, honorific and past attachments; other represented markers and
+  following particles retain uncertainty. “Counterfactual expectation” links
+  the appropriate two-entry family in the reader. The
+  [six regressions](../tests/counterfactual_ryeon.rs) cover all nineteen original
+  cases, six specific wrong-allomorph controls, NFC/NFD, complete imports,
+  copular/prefinal assessment and component order. The isolated
+  [cohort comparison](counterfactual-ryeon-cohort.json.gz) preserves every old
+  candidate and reading assessment across 2,334 original groups and 5,463
+  distinct words; additions have exact captured 으리라 companions. Both new
+  families also pass their twelve regressions together. Contextual sense,
+  independent review remain open; the initial captures remain explicitly
+  prototype evidence. Production performance and final Nix validation pass.
+
+  **Joint production validation for COV-017by/bz:** the integrated
+  [source streams](degree-expectation-main-cohort.json.gz) exactly reproduce
+  all twelve isolated after streams. The [bounded actual API comparison](degree-expectation-main-api.json.gz)
+  verifies 206,440 before/after frames and preserves every earlier component
+  order; all 346 added orders have actual prior-package 으리라 counterparts.
+  [Production browser evidence](degree-expectation-main-browser.json.gz)
+  covers 54 NFC/NFD diagrams, twelve CLI/export comparisons and 67 complete
+  native entries, with inspected desktop/mobile renders. The independent
+  [runtime audit](../tools/degree_expectation_runtime.py) replays these results.
+  [Held-out corpus evidence](degree-expectation-main-corpora.json.gz) retains
+  all 66,570 original gold outcomes and 32,096 word outputs unchanged. The
+  [broad comparison](degree-expectation-main-observations-capture.json.gz)
+  preserves 1,128,312 frames, earlier candidates and assessments, and every
+  spacing payload. Its 146 additions across 101 changed frames have exact
+  [captured prior-package companions](degree-expectation-main-companions.json.gz).
+  [Forty-six full native owners](degree-expectation-main-broad-native-closure.json.gz)
+  are retained for matched novel hypotheses; 33 unmatched raw heads remain
+  unjudged. Main targeted regressions and the expanded ledger pass, including
+  three explicit lexical-ㄹ wrong-full-allomorph controls. The
+  [isolated full Rust suite](degree-expectation-prototype-rust.json) passes
+  976 tests with one ignored corpus test; this precedes the additional controls
+  and does not replace production release checks. [Clippy](degree-expectation-main-clippy.log.gz)
+  and [SolidJS assets](degree-expectation-main-assets.log.gz) pass. These
+  offline audits are wired into the flake. The [actual Nix package receipt](degree-expectation-package-nix.json)
+  records 976 release tests, one intentionally ignored downloaded-corpus test,
+  208 result batches and an unchanged staged snapshot. The separately run
+  [downloaded corpus regression](degree-expectation-pinned-corpus.json) passes.
+  [Packaged runtime evidence](degree-expectation-packaged-checks.json.gz) proves
+  exact source streams, 206,440 API frames, all 346 component additions,
+  54 inspected browser diagrams, twelve exports, 67 complete native endpoints,
+  all 1,128,312 broad records and every one of the 32,096 corpus word analyses.
+  [The release verifier](../tools/degree_expectation_release.py) independently
+  checks those captures, source fingerprints, Nix test counts and commands.
+  The [original packaging failure](degree-expectation-package-failed.json)
+  remains preserved: Nix's build users could not traverse the temporary directory
+  beneath the private home directory. Retrying in a dedicated accessible
+  disk-backed directory passed without changing the frozen application inputs.
+  Default dictionary hints still expose sense ambiguity: the inspected 싶다
+  diagram shows “sipda”, and 됐으련만 can show the adjective hint “thick;
+  hard-boiled”. Complete source entries and alternatives remain available;
+  these hints are not certified contextual translations.
+  [All 146 individual novel additions](degree-expectation-individual-observations.json.gz)
+  retain stable review IDs, exact prior companions, source owners/senses,
+  original occurrence context and dictionary assessments; their contextual
+  verdicts remain unjudged. [The individual verifier](../tools/degree_expectation_individual.py)
+  reproduces the complete queue and rejects missing or changed rows.
+  [Cache parity](degree-expectation-cache-parity.json) passes for every one of
+  179,112 records under all three dictionary modes at zero and 8 MiB budgets.
+  [Eighty actual timing samples](degree-expectation-performance.json) preserve
+  forty interleaved same-CPU pairs over eight whole-novel workloads, with startup,
+  serialization, load/frequency context and RSS measurements. Median elapsed
+  changes range from −0.8% to +1.8%; these samples do not establish statistical
+  equivalence or isolated clocks. [The performance verifier](../tools/degree_expectation_performance.py)
+  checks every command, sample, source fingerprint and cache-stream hash.
+  The [rule scope](rules.md#degree-and-counterfactual-expectation-endings-cov-017bybz)
+  is published. Shortened copular follow-ups remain separately tracked in
+  COV-020s. The [first final-gate receipt](degree-expectation-final-nix-failed.json)
+  and [unaltered failure log](degree-expectation-final-nix-failed.log.gz) preserve
+  an inventory packaging failure: its source fileset omitted
+  `src/dictionary/attachment.rs`, which the release verifier fingerprints.
+  The 71 staged inputs remained unchanged during that failed run. The fileset
+  now includes that source file. [The final three-output Nix gate](degree-expectation-final-nix.json)
+  passes for Rust, SolidJS assets and the full offline inventory audit. Its
+  [unaltered log](degree-expectation-final-nix.log.gz) and receipt preserve the
+  command, all three store outputs and the unchanged 73-file staged snapshot.
+  These checked items cover the bounded source-owned implementation; contextual
+  and independent Korean review remain open under the parent inventory.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -4060,6 +4184,25 @@ review remains open under the completion review below.
   `lexical-nada-discovery-7b1f871bde65cd5d1aeba52a` (발표 났다던데),
   through another explicit overlay; the immutable pending row remains visible. The 57 construction boundaries, 4,587
   discoveries outside this cohort and all contextual/independent review remain open.
+
+- [ ] **COV-020s — Shortened copulas before degree/expectation endings.**
+  **Audit needed.** The [preserved boundary discovery](degree-expectation-copula-discovery.json)
+  records six actual authored NFC/NFD probes against the validated package.
+  Explicit 친구이련만 and 학교였으련만 have represented copular readings;
+  친구련만, 친구련마는 and 친구리만큼 lack the proposed 친구 + 이다 path.
+  The matching 학생 probes retain the consonant-final nominal boundary as a
+  separate observation. These are authored probes, not annotated source examples
+  and not required/forbidden judgments. The existing 으리라 companions do not
+  by themselves license every new ending.
+  Audit the short counterfactual entries' explicit 이다 notes against primary
+  copula-omission evidence; distinguish the degree sources' unlisted copula class.
+  [NIKL's omission discussion](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=307961)
+  describes a general tendency and leaves special environments to further study;
+  it does not settle these particular spellings. Preserve both noun boundaries,
+  explicit/past copulas, existing candidates and uncertainty. For source-licensed
+  additions, add stable judgments and exact component/offset, dictionary,
+  CLI/export/browser and broader regression checks. COV-017by/bz's currently
+  verified explicit-copula paths do not silently close this omission audit.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

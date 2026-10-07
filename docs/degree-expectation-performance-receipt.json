@@ -1,0 +1,33 @@
+{
+  "state": "passed",
+  "pid": 1811442,
+  "started_at": "2026-10-07T01:08:12.142832+00:00",
+  "package_sha256": "e6bf5a079484f88d93617bde3556a6a2a6bc04d3980e79ed8e7b879637b829e7",
+  "steps": [
+    {
+      "name": "cache",
+      "command": [
+        "python3",
+        "/tmp/klem-degree-expectation-cache-parity.py",
+        "--cli",
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem",
+        "--output",
+        "/tmp/klem-degree-expectation-cache-parity.json"
+      ],
+      "exit_code": 0,
+      "log_sha256": "9c428d0e8bbf7bec126c4433db1feab1d203de9209e28511710c740f5a3b8dcb"
+    },
+    {
+      "name": "timing",
+      "command": [
+        "python3",
+        "/tmp/klem-degree-expectation-novel-timing.py",
+        "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0/bin/klem"
+      ],
+      "exit_code": 0,
+      "log_sha256": "780c7402808eb4920556bc78372693f0318b6db2abde342886627741cca9e0c6"
+    }
+  ],
+  "exit_code": 0,
+  "finished_at": "2026-10-07T01:11:44.176990+00:00"
+}

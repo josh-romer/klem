@@ -345,6 +345,16 @@
                 ./tools/ssik_adverb_outer_tails.py
                 ./tools/friendly_command_preparation.py
                 ./tools/friendly_command_audit.py
+                ./tools/degree_expectation_audit.py
+                ./tools/degree_expectation_parent.py
+                ./tools/degree_expectation_runtime.py
+                ./tools/degree_expectation_corpora.py
+                ./tools/degree_expectation_broad.py
+                ./tools/degree_expectation_release.py
+                ./src/dictionary/attachment.rs
+                ./tools/degree_expectation_performance.py
+                ./tools/degree_expectation_individual.py
+                ./web/tests/degree-expectation.mjs
                 ./tools/friendly_command_runtime.py
                 ./tools/friendly_command_comparison.py
                 ./tools/friendly_command_corpora.py
@@ -651,6 +661,13 @@
             python tools/ssik_adverb_outer_tails.py
             python tools/friendly_command_preparation.py
             python tools/friendly_command_audit.py
+            python tools/degree_expectation_audit.py
+            python tools/degree_expectation_runtime.py
+            python tools/degree_expectation_corpora.py
+            python tools/degree_expectation_broad.py --verify
+            python tools/degree_expectation_release.py --verify
+            python tools/degree_expectation_performance.py --verify
+            python tools/degree_expectation_individual.py
             python tools/friendly_command_runtime.py
             python tools/friendly_command_corpora.py --verify
             python tools/friendly_command_broad.py --verify

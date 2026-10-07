@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-017by",
+    "COV-017bz"
+  ],
+  "state": "passed",
+  "pid": 1944993,
+  "started_at": "2026-10-07T01:59:45.164361+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "snapshot": {
+    "head": "699c882c74f70e4cb0966c0142aa79f073b9e8d3",
+    "staged_diff_sha256": "e8d87fe22c541c2a01c2ec28f0f593bfe018ef15595bc81e0a2f9e0b7a4aa53b",
+    "files": {
+      "docs/counterfactual-ryeon-cohort.json.gz": {
+        "sha256": "1f0947fa84eb71ea4e85348201e20555ce3632d606581c6da8f3657544aaaac3",
+        "bytes": 17882215
+      },
+      "docs/counterfactual-ryeon-source-preparation.json.gz": {
+        "sha256": "c1f3154d2dfabee0f523ceec1dc1baca7d973d7d7a677064fbb14addf0f14f5d",
+        "bytes": 471889
+      },
+      "docs/coverage-checklist.md": {
+        "sha256": "c5fcf06015636398ec91d92502c8e67237b79d1c2bd4107944be877cfd5c9867",
+        "bytes": 480012
+      },
+      "docs/degree-expectation-cache-parity.json": {
+        "sha256": "6e2577051c925e5c66466aca519f107cc0841ab595e541a2b25203ee8d77ef17",
+        "bytes": 5541
+      },
+      "docs/degree-expectation-copula-discovery.json": {
+        "sha256": "26f3400a555c12ad237b104e780da31d1c8f71a246635fa697891f348dd0632b",
+        "bytes": 72444
+      },
+      "docs/degree-expectation-final-inventory-tests.log.gz": {
+        "sha256": "f28e3d9f1e056411626cc57dd29fc03fd575ff0f0ce47f2ea017c3b7bcf0e642",
+        "bytes": 54
+      },
+      "docs/degree-expectation-final-inventory-verify.log.gz": {
+        "sha256": "24f08ec699528dd8d0d254eab9f03c9eed467259e4fe06f05b7a86278f3ea7c4",
+        "bytes": 179
+      },
+      "docs/degree-expectation-final-nix-failed.json": {
+        "sha256": "3e47248adecb4d40a90adac734b0784ff747d48f780230a30b4d5deec82bcfb2",
+        "bytes": 12984
+      },
+      "docs/degree-expectation-final-nix-failed.log.gz": {
+        "sha256": "4023411d0f3079b5bede5092427ce392889a1d5a640f1208f1d07897bc4e8476",
+        "bytes": 7755
+      },
+      "docs/degree-expectation-individual-audit.log.gz": {
+        "sha256": "74cda6669470b93d8fa1ab198f4ed803e34874ea7977f4b756bff0188f7d1a22",
+        "bytes": 72
+      },
+      "docs/degree-expectation-individual-observations.json.gz": {
+        "sha256": "1a45619d561dbc93d83172b5a4beea9ddb55df0cabaf20e21b26f3d76ddb0c7f",
+        "bytes": 31440
+      },
+      "docs/degree-expectation-main-api.json.gz": {
+        "sha256": "72a09be7d773d68b860f11f9a2eff3c77d9ccc64e0544367f972d63b42e32a08",
+        "bytes": 31209242
+      },
+      "docs/degree-expectation-main-assets.log.gz": {
+        "sha256": "c5c3dbd39c3b50504fa39a1428568128bdef1c99a9e7bca12032f61f81fde5e0",
+        "bytes": 405
+      },
+      "docs/degree-expectation-main-broad-native-closure.json.gz": {
+        "sha256": "06786753b01b4f2b1ed30a7f82a31bf2adc60a2eea779feffe31a4d47bac7ae2",
+        "bytes": 411376
+      },
+      "docs/degree-expectation-main-browser.json.gz": {
+        "sha256": "d551639e09a7f3c3afc34d115d2e63eb5edba6321e2f82cb7bc424b717659f53",
+        "bytes": 345693
+      },
+      "docs/degree-expectation-main-clippy.log.gz": {
+        "sha256": "a53bb4095d89e3ba6676c2419633fcb35b423993226ff8b4c8ac933f8f3addd8",
+        "bytes": 459
+      },
+      "docs/degree-expectation-main-cohort.json.gz": {
+        "sha256": "ac2e66e3038a7cb05d13002acf15d6f509623f74a145e5cf2325f369b135f843",
+        "bytes": 16587511
+      },
+      "docs/degree-expectation-main-companions.json.gz": {
+        "sha256": "5ba3e3986eb3b25fdceb40834dce8713aea06fbfec9a719feb1e4ed2f811bca9",
+        "bytes": 5601
+      },
+      "docs/degree-expectation-main-corpora.json.gz": {
+        "sha256": "4625ec38fe7950db553c67222510042155b95ca41f80b3fa558e7368be584d5e",
+        "bytes": 3044389
+      },
+      "docs/degree-expectation-main-observations-capture.json.gz": {
+        "sha256": "3c2db1ff1e2eb4d215fe2cf655c541db87a12e9cb762cf0e912f6ca9e8dbf81b",
+        "bytes": 37569
+      },
+      "docs/degree-expectation-offline-audits.json": {
+        "sha256": "3bf5c57b0c6c4cb242dd51034cef90cb9fc51b3eedc95341a11c2b3638414976",
+        "bytes": 1298
+      },
+      "docs/degree-expectation-package-failed.json": {
+        "sha256": "e0cd2260d1bf89dc8d5fea794918325f54e4767f3f48a30208ee5196d62fd9c8",
+        "bytes": 5572
+      },
+      "docs/degree-expectation-package-failed.log.gz": {
+        "sha256": "250ca0b8bb0c0ee18dfcca4e8de2f0cfd982da2fef1591f1477df0727c418f87",
+        "bytes": 415
+      },
+      "docs/degree-expectation-package-nix.json": {
+        "sha256": "a1a3aea7822a7bfdac2a261930a39de57320de66fbf586801dce5e017b667c07",
+        "bytes": 5681
+      },
+      "docs/degree-expectation-package-nix.log.gz": {
+        "sha256": "5cb0af2f9a10bafd02eeb2863ebd8902d23599c74d08805efc427e3f99bfce3a",
+        "bytes": 25677
+      },
+      "docs/degree-expectation-packaged-api.json.gz": {
+        "sha256": "1567ddf1e062b954c39075fad24bdb9316370ace16b86e0370b0ae9e482d9813",
+        "bytes": 31209411
+      },
+      "docs/degree-expectation-packaged-browser.json.gz": {
+        "sha256": "3d94ae778799c07a65b07e00aa8753cf4ead3ea6c52cbb771c7882e2408b2a5f",
+        "bytes": 345693
+      },
+      "docs/degree-expectation-packaged-checks.json.gz": {
+        "sha256": "e6bf5a079484f88d93617bde3556a6a2a6bc04d3980e79ed8e7b879637b829e7",
+        "bytes": 51739698
+      },
+      "docs/degree-expectation-packaged-cohort.json.gz": {
+        "sha256": "de7ae8b36ff0093e8caad9b47f699b605fc9c17ce842a7e421eb75372d2263f5",
+        "bytes": 16587779
+      },
+      "docs/degree-expectation-packaged-streams.json.gz": {
+        "sha256": "9229e3479b9438ba316aeca305c97370656401188ecbcfd6b14ac971b85ae8b9",
+        "bytes": 2208407
+      },
+      "docs/degree-expectation-performance-audit.log.gz": {
+        "sha256": "76e72d127c462c59fdfdfd8b8168462695fc05c28c32227db24d8b431b524061",
+        "bytes": 62
+      },
+      "docs/degree-expectation-performance-cache.log.gz": {
+        "sha256": "b0bc9d6a48a4b92e9db6af723f6c62a205fbcf953590025e4ba20294f90e1e4c",
+        "bytes": 202
+      },
+      "docs/degree-expectation-performance-receipt.json": {
+        "sha256": "1677ed7fecdb304a09d8dabdc286d500e58e66d820849e8d4b71bae23a55aa44",
+        "bytes": 1010
+      },
+      "docs/degree-expectation-performance-timing.log.gz": {
+        "sha256": "b195473b462e7b3e60489982e0965f35bf8fb1830d7a3961cdd94ef9d04b0f84",
+        "bytes": 585
+      },
+      "docs/degree-expectation-performance.json": {
+        "sha256": "22b8c8925a3f475da0b2f2fa159042dbef79b6d4f4b794c887ebf4ba7e78049d",
+        "bytes": 83824
+      },
+      "docs/degree-expectation-pinned-corpus.json": {
+        "sha256": "175d7b42b90938617e58ddaa1fb7359e11c2d4392416f43244e2d1c734ea3392",
+        "bytes": 606
+      },
+      "docs/degree-expectation-pinned-corpus.log.gz": {
+        "sha256": "97f2bd146c038d9746f32e8b393e8fd56ca9506be1e27614e71324db62520180",
+        "bytes": 278
+      },
+      "docs/degree-expectation-prototype-rust.json": {
+        "sha256": "b07f41a3543107f42804bad61da3dda766ce043028add62ec755303facd4c604",
+        "bytes": 69693
+      },
+      "docs/degree-expectation-prototype-rust.log.gz": {
+        "sha256": "a1b5f0aa2de87d2c196b783452e02dd875c1dc9fe5776ffa70aae80614157692",
+        "bytes": 23375
+      },
+      "docs/degree-expectation-release-audit.log.gz": {
+        "sha256": "3c25cc246fdbbf0c0875d5030b60363b78f07ee6ddc43ba1737ba3c2b690668f",
+        "bytes": 136
+      },
+      "docs/degree-rimankeum-cohort.json.gz": {
+        "sha256": "cb407d4b7b2d591253f2be3b18746e8350a848e2632be1fdd8ed119dd14aec3d",
+        "bytes": 16296337
+      },
+      "docs/degree-rimankeum-source-preparation.json.gz": {
+        "sha256": "59d238b8aa43ebc307c935a6d2b0aef3a200e6003096e08e14bc1d0838112074",
+        "bytes": 423322
+      },
+      "docs/dictionary-attachments.md": {
+        "sha256": "6f4f1474159f742e6f5ba2326540dd61370383b9ad4b865ebc2d5aa6bc8de2f1",
+        "bytes": 82096
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "bdb92e02fa05edc141b74386eafd0f66722efcbf9d6c75e60f2509f7f52960a6",
+        "bytes": 3375821
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "2306982fb2c0b4151b9e6a9b39c5f5d952c88562a557e93c4cb8ffe5bfb9eee5",
+        "bytes": 1258227
+      },
+      "docs/rules.md": {
+        "sha256": "8005cb5dc2b8499d04fecdea1a3b944363dfd13b40a51f4c6ba8e82e58a35357",
+        "bytes": 317684
+      },
+      "flake.nix": {
+        "sha256": "cbd1de93895b5dc1cc67928c0ca982e8d4f2c6ffba12d7e8cbda7d9c2f6a73dc",
+        "bytes": 37647
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "6099db329d725127d2f892656c44aacdaef2df4184dc2a66ef1d51b8e655c70c",
+        "bytes": 8203
+      },
+      "src/dictionary/attachment.rs": {
+        "sha256": "4fd90195824ac2e1a720d9d5ead633da24d2e05c6369217d419444c48edd2b62",
+        "bytes": 131687
+      },
+      "src/engine.rs": {
+        "sha256": "8c351e73452e1c0a44a64db838bc15e0d1e9fdd2d1037cb47623887bbb86d12d",
+        "bytes": 217705
+      },
+      "src/grammar.rs": {
+        "sha256": "5c324bba57237fd0ff2b76a9e43f001d9f370c057b586113704bcdf71e7573ec",
+        "bytes": 104312
+      },
+      "tests/counterfactual_ryeon.rs": {
+        "sha256": "d3660be4d79e021241ba39ae28c186d7da1ef21b108c96913e6e249803d4eb22",
+        "bytes": 10570
+      },
+      "tests/degree_rimankeum.rs": {
+        "sha256": "b57b6c601411e1399bdeb05792f2894b006573ef1637936fb5d1a2f45d7ee6a7",
+        "bytes": 9769
+      },
+      "tests/fixtures/counterfactual-ryeon-sources.json": {
+        "sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+        "bytes": 18781790
+      },
+      "tests/fixtures/counterfactual-ryeon-validity.json": {
+        "sha256": "563f7a5906703c13349a629833f20ce35985f3f11b31f28a86e8f322e2077381",
+        "bytes": 21993
+      },
+      "tests/fixtures/degree-rimankeum-sources.json": {
+        "sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+        "bytes": 16883782
+      },
+      "tests/fixtures/degree-rimankeum-validity.json": {
+        "sha256": "5a71418839e44558d67ebd22ef15f3aab05ccfbeddbecbf2d6510c96e1f6c9ee",
+        "bytes": 10406
+      },
+      "tests/fixtures/krdict-counterfactual-ryeon-english.json": {
+        "sha256": "66d21df1a076ec362e408486302bad4df31fddedd6aa9d9a249b8d81b5954beb",
+        "bytes": 1335524
+      },
+      "tests/fixtures/krdict-degree-expectation-labels.json": {
+        "sha256": "0897b6247f14e969c528a8277a2f0a0f9d49baddc0a62c47c60860d287770349",
+        "bytes": 28486
+      },
+      "tests/fixtures/krdict-degree-rimankeum-english.json": {
+        "sha256": "0ac4ec9b536350e3cd350a654ef050a7d225d399096059595cf30779ee379386",
+        "bytes": 1224654
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "eab8c1893751a488870839cf7e9496519f751795cc1a42b999d79de1061a1bf1",
+        "bytes": 31380213
+      },
+      "tests/validity.rs": {
+        "sha256": "d1507a6408059ab029fe97cf07a57da2ba9accfae5d40472ea40bac61e4285d9",
+        "bytes": 4004
+      },
+      "tools/degree_expectation_audit.py": {
+        "sha256": "0b23cbc508e9120a9d149de6080b8b6d368164c9870d77cc99a2790a9dac70ee",
+        "bytes": 4674
+      },
+      "tools/degree_expectation_broad.py": {
+        "sha256": "97b74efc03b9403a5e87142a302f34f5811f961257d4a4b6ebd0a06c9a32bcd8",
+        "bytes": 7829
+      },
+      "tools/degree_expectation_corpora.py": {
+        "sha256": "dec94b91a96ed940df667c753d95a0a0764c7dfd59784cc9ec1878f366f89ef7",
+        "bytes": 4122
+      },
+      "tools/degree_expectation_individual.py": {
+        "sha256": "1c1bf291c3343f39d58b21f9426885bf610d320ed139830c806e46d6cf8da8e4",
+        "bytes": 1322
+      },
+      "tools/degree_expectation_parent.py": {
+        "sha256": "78d530dc9f54dda01e577fe90a395edf6540a7b7fa15ac224e964215a57ad69d",
+        "bytes": 1134
+      },
+      "tools/degree_expectation_performance.py": {
+        "sha256": "b6f0394193870689a0fdaac27b9a16f2b0ea8ee8cbd0d68cc542923111ba43cb",
+        "bytes": 2351
+      },
+      "tools/degree_expectation_release.py": {
+        "sha256": "19479b0a08ccb5d84e505a7d6d764c7fac6cba49e84636bf4c9c77bc2507d265",
+        "bytes": 9299
+      },
+      "tools/degree_expectation_runtime.py": {
+        "sha256": "7a1c95e2f9da5658c7eda0569c557f7b0e508baa4946699ccabca7fc89a06848",
+        "bytes": 5902
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "384dcc29fa1c15488a1227edd1e6b6efe2a342afe704e29d2a5b0a77485c3442",
+        "bytes": 180010
+      },
+      "web/tests/browser.mjs": {
+        "sha256": "e308d37afd41cd8ff91ec4c0073795f6c54097b9995c27dae5e9fe7a14dbfdac",
+        "bytes": 543743
+      },
+      "web/tests/degree-expectation.mjs": {
+        "sha256": "6a29fe5ef39332f1baa9e6815d9c4abe54226ca6841b692a6b0245618ee29996",
+        "bytes": 6404
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-07T02:38:27.676504+00:00",
+  "log_sha256": "21be17eba11ef01e4dd03038cdcf9c7ac7c4e8f857dfbf4023802ffb38ee3083",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/wc9jds3jyx2svx6gyyy7k88zvhqgx4qa-klem-0.1.0",
+    "/nix/store/i160q25abpzbiqfigz3rp49n377hyksy-klem-web-assets-0.1.0",
+    "/nix/store/zi2llc32k615fpxhhknxzkx3ysjxxzg2-klem-inventory-review"
+  ]
+}

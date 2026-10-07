@@ -1239,6 +1239,11 @@ pub(crate) fn endings() -> &'static [Ending] {
             // Native 79260/79261 (rhetorical question / offer) and
             // 80308/80306 (enumeration). Keep the lexical ㄹ boundary.
             ("으랴", "랴", "으랴"),
+            // Native KRdict 87692/86608: degree or grounds ending.
+            ("으리만큼", "리만큼", "으리만큼"),
+            // Native 86545/86602 and 86546/86603: counterfactual expectation.
+            ("으련마는", "련마는", "으련마는"),
+            ("으련만", "련만", "으련만"),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -2134,6 +2139,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.concessive" => {
             "Recover concessive -(으)ㄴ들/-(으)ㄹ망정/지언정 or counterfactual -던들 with its reviewed stem and prefinal boundary; retain separate particle readings."
+        }
+        "ending.counterfactual_ryeon" => {
+            "Recover -(으)련만 and -(으)련마는 with their own stem allomorphs; retain conjectural and contextual interpretations separately."
+        }
+        "ending.degree_rimankeum" => {
+            "Recover -(으)리만큼 as a degree or grounds ending with its own stem allomorph; keep lexical and contextual interpretations separate."
         }
         "ending.expectation_contrast" => {
             "Recover -건만 and -건마는 as distinct expectation-versus-result endings; preserve explicit copulas and vowel-final omitted copulas without choosing a contextual interpretation."

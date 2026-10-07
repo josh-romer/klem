@@ -4764,3 +4764,28 @@ endpoint comparisons. Six historical nested-suffix diagrams and fourteen
 controls bind the audit repair to the actual new package without rewriting
 historical captures. The Nix launcher and help invocation pass. Broader
 lexical/compositional, contextual and independent Korean review remain open.
+
+COV-017cg adds the original literary RI sources and their explicitly listed NI
+and NIra followers to main. Canonical 으리 + 으니라 components retain a typed
+context hint rather than assigning the bare ending’s stative label to a verb.
+Formal RIDA remains a bundle under the NIKL segmentation reference. The original
+source groups, full Native/LMF data, every historical fixture and every prior
+candidate remain in separate evidence. Raw D/S/B class membership stays a
+hypothesis; six named provider spelling conflicts are rejected only in compatible
+mode. Positive 도우리니/도우리니라 source-owned spelling cases complement those
+restrictions. Main release verification remains pending, as do broader lexical
+and composition conditions, contextual senses and independent Korean review.
+
+Final COV-017cg validation passes the complete Nix Rust/assets/inventory gate
+with all staged inputs unchanged and the exact independently verified runtime
+outputs. Main and release Rust each pass 1,022 tests (one ignored). Actual
+packaged replay preserves six 275-frame source streams, 168 named word outputs,
+all 1,128,312 broad records and 32,096 corpus words. Main Rust adapters preserve
+all 66,570 annotated rows and summaries. Browser verification covers 394
+RI/past/double-past/legacy diagrams, six fresh nested auxiliary diagrams,
+24 exports and 526 complete Native endpoint comparisons. Thirty-eight
+corruption controls pass; the source/model/package bindings require actual
+current packaged captures. Only current-call elapsed time is excluded from
+cross-build API equality. The Nix web launcher/help pass. No new timing or
+precision claim is made; broader lexical/compositional, contextual/register
+and independent Korean review remain open.

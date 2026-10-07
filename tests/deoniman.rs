@@ -2,6 +2,8 @@
 mod copula_expectation_parent;
 #[path = "reported_dana_support/parent.rs"]
 mod reported_dana_parent;
+#[path = "support/literary_ri_prefinal_history.rs"]
+mod ri_history;
 use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use unicode_normalization::UnicodeNormalization;
@@ -80,6 +82,10 @@ fn every_original_source_word_retains_all_previous_candidates_in_order() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "prefinal.conjectural_ni") {
+                ri_history::assert_addition("tests/fixtures/deoniman-sources.json", word, a);
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.reported_dana") {
                 reported_dana_parent::assert_report_parent("deoniman", word, a);
                 continue;

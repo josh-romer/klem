@@ -117,6 +117,13 @@
             src = pkgs.lib.fileset.toSource {
               root = ./.;
               fileset = pkgs.lib.fileset.unions [
+                # Package audits bind the complete Rust and frontend source
+                # snapshots, including manifests and production import tests.
+                ./Cargo.toml ./Cargo.lock ./src ./examples
+                ./README.md ./LICENSE-MIT ./LICENSE-APACHE
+                ./tools/corpus.rs ./tools/validity.rs
+                ./web/package.json ./web/package-lock.json ./web/index.html
+                ./web/tsconfig.json ./web/vite.config.ts ./web/src ./web/public
                 ./tools/review_inventory.py ./tools/test_review_inventory.py
                 ./tools/excluded_paradigm_audit.py
                 ./tools/excluded_paradigm_queue.py
@@ -378,6 +385,16 @@
                 ./tools/test_past_prefinal_audit.py
                 ./tools/double_past_prefinal_audit.py
                 ./tools/test_double_past_prefinal_audit.py
+                ./tools/literary_ri_prefinal_audit.py
+                ./tools/test_literary_ri_prefinal_audit.py
+                ./tools/literary_ri_prefinal_preservation.py
+                ./tools/test_literary_ri_prefinal_preservation.py
+                ./tools/literary_ri_prefinal_replay.py
+                ./tools/literary_ri_prefinal_adapter_replay.py
+                ./tools/literary_ri_prefinal_runtime.py
+                ./tools/test_literary_ri_prefinal_runtime.py
+                ./web/tests/literary-ri-prefinal-model.mjs
+                ./web/tests/literary-ri-prefinal.mjs
                 ./web/tests/double-past-prefinal.mjs
                 ./web/tests/double-past-prefinal-model.mjs
                 ./web/src/model.ts
@@ -742,6 +759,12 @@
             python -m unittest discover -s tools -p 'test_past_prefinal_audit.py'
             python tools/double_past_prefinal_audit.py
             python -m unittest discover -s tools -p 'test_double_past_prefinal_audit.py'
+            python tools/literary_ri_prefinal_audit.py
+            python -m unittest discover -s tools -p 'test_literary_ri_prefinal_audit.py'
+            python tools/literary_ri_prefinal_preservation.py
+            python -m unittest discover -s tools -p 'test_literary_ri_prefinal_preservation.py'
+            python tools/literary_ri_prefinal_runtime.py
+            python -m unittest discover -s tools -p 'test_literary_ri_prefinal_runtime.py'
             python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'
             python tools/reported_dana_native.py
             python tools/reported_dana_corpora.py

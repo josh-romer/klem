@@ -101,9 +101,68 @@ pub(super) fn has_double_past(
     })
 }
 
+/// Source-listed modal + literary assertion must be adjacent in this reading.
+pub(super) fn has_literary_ri_assertion(
+    morphemes: &[klem::Morpheme],
+    order: &[klem::breakdown::Component],
+) -> bool {
+    order.windows(2).any(|pair| {
+        let [
+            klem::breakdown::Component::Morpheme(first),
+            klem::breakdown::Component::Morpheme(second),
+        ] = pair
+        else {
+            return false;
+        };
+        morphemes
+            .get(*first)
+            .is_some_and(|m| m.kind == MorphemeKind::Prefinal && m.form == "으리")
+            && morphemes
+                .get(*second)
+                .is_some_and(|m| m.kind == MorphemeKind::Ending && m.form == "으니라")
+    })
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn literary_ri_assertion_requires_same_reading_adjacency_and_kinds() {
+        use klem::breakdown::Component::{Lemma, Morpheme};
+        let mut morphs = klem::Lemmatizer::new()
+            .analyze_word("가리니라")
+            .unwrap()
+            .analyses
+            .into_iter()
+            .find(|a| {
+                a.lemmas[0].text == "가다"
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(["으리", "으니라"])
+            })
+            .unwrap()
+            .morphemes;
+        let order = [Lemma(0), Morpheme(0), Morpheme(1)];
+        assert!(has_literary_ri_assertion(&morphs, &order));
+        assert!(!has_literary_ri_assertion(
+            &morphs,
+            &[Lemma(0), Morpheme(0), Lemma(1), Morpheme(1)]
+        ));
+        assert!(!has_literary_ri_assertion(
+            &morphs,
+            &[Lemma(0), Morpheme(1)]
+        ));
+        assert!(!has_literary_ri_assertion(
+            &morphs,
+            &[Lemma(0), Morpheme(1), Morpheme(0)]
+        ));
+        morphs[0].kind = MorphemeKind::Ending;
+        assert!(!has_literary_ri_assertion(&morphs, &order));
+        morphs[0].kind = MorphemeKind::Prefinal;
+        morphs[1].kind = MorphemeKind::Prefinal;
+        assert!(!has_literary_ri_assertion(&morphs, &order));
+    }
     #[test]
     fn double_past_sources_require_exactly_two_adjacent_reading_components() {
         use klem::breakdown::Component::{Lemma, Morpheme};

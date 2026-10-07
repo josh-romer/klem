@@ -2036,9 +2036,12 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
             }
         }
     }
-    // Conjectural (으)리 precedes this source-listed factual family only.
+    // Complete KRDict52612/86606 sources also attest ri+ni and list ri+nira.
+    // Keep the existing source-listed factual family and formal rida bundle.
     // Preserve existing bundled -(으)리라 / -(으)리라고 alternatives.
     for ending in [
+        "니",
+        "니라",
         "란",
         "라",
         "라도",
@@ -2076,16 +2079,29 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                     {
                         record_spelling(&mut p, &r, matches!(boundary, Boundary::EuFull));
                         p.morphs.push(morph("으리", MorphemeKind::Prefinal));
-                        p.morphs.push(morph(ending, MorphemeKind::Ending));
+                        p.morphs.push(morph(
+                            if ending == "니라" {
+                                "으니라"
+                            } else {
+                                ending
+                            },
+                            MorphemeKind::Ending,
+                        ));
                         p.rules.extend(r.rules.clone());
                         p.rules.extend([
-                            if ending == "란" {
+                            if matches!(ending, "니" | "니라") {
+                                "prefinal.conjectural_ni"
+                            } else if ending == "란" {
                                 "prefinal.conjectural_quotation"
                             } else {
                                 "prefinal.conjectural_ra"
                             }
                             .into(),
-                            if ending == "란" {
+                            if ending == "니" {
+                                "ending"
+                            } else if ending == "니라" {
+                                "ending.literary_assertion"
+                            } else if ending == "란" {
                                 "ending.adnominal_expression"
                             } else {
                                 "ending.factual_ra"

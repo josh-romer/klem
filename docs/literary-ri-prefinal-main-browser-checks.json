@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scope": "Current main RI build: new RI UI plus unchanged past and double-past source frames. Each browser producer checks actual API, exports and Native endpoints. Nix packaged verification remains pending.",
+  "runs": [
+    {
+      "suite": "ri",
+      "session_id": 38480,
+      "exit_code": 0,
+      "receipt": "docs/literary-ri-prefinal-main-browser.json",
+      "receipt_sha256": "7bd0b43d3b74e4c4327f826ab45951d6a8e0200801b7d7414c5de5156a947672",
+      "diagrams": 60,
+      "exports": 6,
+      "native_entries": 182,
+      "opened": 2,
+      "cli_sha256": "9eb4e7cca094ec66307a6ca0eb4b6938c251a9be0ae28272b7a532ec6e2c0957"
+    },
+    {
+      "suite": "past",
+      "session_id": 83797,
+      "exit_code": 0,
+      "receipt": "docs/literary-ri-prefinal-main-past-browser.json",
+      "receipt_sha256": "83d20ec9847d88abeeeafab9b75d9993ab34c15d5e85f0479b349b13f53ece10",
+      "diagrams": 90,
+      "exports": 6,
+      "native_entries": 99,
+      "opened": 3,
+      "cli_sha256": "9eb4e7cca094ec66307a6ca0eb4b6938c251a9be0ae28272b7a532ec6e2c0957"
+    },
+    {
+      "suite": "double-past",
+      "session_id": 15766,
+      "exit_code": 0,
+      "receipt": "docs/literary-ri-prefinal-main-double-past-browser.json",
+      "receipt_sha256": "2609ef55a54cb898d6c944654c4b8d7a6a8ebd83552f33928a9e3d401b218f24",
+      "diagrams": 24,
+      "exports": 6,
+      "native_entries": 37,
+      "opened": 3,
+      "cli_sha256": "9eb4e7cca094ec66307a6ca0eb4b6938c251a9be0ae28272b7a532ec6e2c0957"
+    },
+    {
+      "suite": "legacy",
+      "session_id": 65116,
+      "exit_code": 0,
+      "receipt": "docs/literary-ri-prefinal-main-legacy-browser.json",
+      "receipt_sha256": "b8923aa44ee8679803bf13ded2e3fa26da5e28d778e8f8fd54c6b049e795f1ea",
+      "diagrams": 220,
+      "exports": 6,
+      "native_entries": 208,
+      "cli_sha256": "9eb4e7cca094ec66307a6ca0eb4b6938c251a9be0ae28272b7a532ec6e2c0957",
+      "scope": "Historical producer retains prototype:true metadata; this invocation used the actual main binary."
+    }
+  ],
+  "previous_terminal_attempts": [
+    {
+      "session_id": 24986,
+      "exit_code": 1,
+      "cause": "Sandbox denied Chromium socket operation before any application checks. Actual browser retry83797 passed.",
+      "log": "docs/literary-ri-prefinal-main-past-sandbox-failure.log.gz"
+    }
+  ],
+  "owned_main_server_stopped": {
+    "session_id": 52114,
+    "terminal_exit": 130
+  },
+  "screenshots_inspected": [
+    "docs/literary-ri-prefinal-main-desktop.png",
+    "docs/literary-ri-prefinal-main-mobile.png"
+  ]
+}

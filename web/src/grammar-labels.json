@@ -1627,7 +1627,7 @@
         "pos": "어미"
       }
     ],
-    "note": "Prefinal representation scoped to factual -라/-라서/-라고/-라면 and quoted -란. Existing -(으)리라 and -(으)리라고 bundled endings remain alternatives."
+    "note": "Prefinal representation scoped to factual -라/-라서/-라고/-라면, quoted -란 and source-listed -니/-니라. Existing -(으)리라 and -(으)리라고 bundled endings remain alternatives; formal -(으)리다 keeps its listener-politeness bundle. Conjectural and intention senses require context."
   },
   "-으리라": {
     "kind": "ending",
@@ -7893,6 +7893,43 @@
     "components": [
       "었",
       "었"
+    ]
+  },
+  "-으리니라": {
+    "kind": "ending",
+    "label": "Literary assertion",
+    "sources": [
+      {
+        "id": 86606,
+        "headword": "-으리-",
+        "pos": "어미"
+      },
+      {
+        "id": 52612,
+        "headword": "-리-",
+        "pos": "어미"
+      },
+      {
+        "id": 86126,
+        "headword": "-으니라",
+        "pos": "어미"
+      },
+      {
+        "id": 86127,
+        "headword": "-니라",
+        "pos": "어미"
+      }
+    ],
+    "note": "Source-listed (으)리 + 니라 composition. The preceding modal licenses this follower after verbs as well as adjectives; the ordinary bare -니라 stative label does not decide the root class here. Canonical components and all source senses remain separate; no contextual meaning is selected.",
+    "context": [
+      {
+        "form": "으리",
+        "kind": "prefinal"
+      },
+      {
+        "form": "으니라",
+        "kind": "ending"
+      }
     ]
   }
 }

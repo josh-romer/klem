@@ -114,6 +114,15 @@ impl RenderMetadata {
                         );
                     }
                 }
+                if a.breakdown().is_some_and(|order| {
+                    grammar_labels::has_literary_ri_assertion(&a.morphemes, &order)
+                }) && !self.grammar.contains_key("-으리니라")
+                {
+                    self.grammar.insert(
+                        "-으리니라".to_owned(),
+                        grammar_labels::lookup(lookups, MorphemeKind::Ending, "-으리니라")?,
+                    );
+                }
                 if a.breakdown()
                     .is_some_and(|order| grammar_labels::has_double_past(&a.morphemes, &order))
                     && !self.grammar.contains_key("-었었-")

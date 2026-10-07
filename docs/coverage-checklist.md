@@ -2526,6 +2526,102 @@ review remains open under the completion review below.
   Broader lexical/copular/composition, speculative-candidate, contextual and
   independent Korean review limits remain open in the three COV-013 dispositions.
 
+- [x] **COV-017cg — Original literary -리-/-으리- sources and common followers.**
+  **Implemented for the bounded original-source structures and viewer links.**
+  Complete primary entries 52612/86606 preserve all four senses and eighteen
+  original groups. Three missing original heads now recover: 행복하리니 →
+  행복하다, 오리니 → 오다 and 깨달으리니 → 깨닫다. Source-listed -니 and
+  -니라 followers join the existing factual/quoted family. Honorific 드시리라
+  retains 들다 + 시 + 으리 + 라 with the complete eating homonym; formal
+  -(으)리다 retains its listener-politeness bundle. Thirty required structures
+  include ten explicitly listed common-follower probes and two positive 돕다
+  spelling counterparts. Six purely phonological boundaries are forbidden in
+  raw mode. Six additional dictionary-owned D/S/B spelling restrictions retain
+  their unknown lexical-class hypotheses in raw/headword modes and are rejected
+  only in compatible mode; no blanket raw lemma ban is introduced.
+  Typed contextual source hints label ordered 으리 + 으니라 as literary assertion
+  without borrowing the bare ending's stative root label. Canonical atoms and
+  NI homonyms remain; temporal/modal/contextual meanings are not selected.
+  Five main focused tests and thirty-eight portable integrity controls pass.
+  The complete main suite passes 1,022 tests, one ignored, across 217 batches
+  with all 881 frozen inputs unchanged. Clippy and formatting checks pass.
+  Actual main browser checks pass 60 RI, 90 past, 24 double-past and 220 legacy
+  diagrams, 24 exact exports and 182/99/37/208 complete Native endpoint checks. The isolated
+  complete Rust suite passes 1,021 tests with one ignored across 216 batches.
+  Its final browser checks pass 56 NFC/NFD diagrams, six exports, 56 complete
+  Native entries and both primary source clicks. All six 275-frame source
+  streams and 160 original word probes retain previous candidates/readings;
+  eight supplemental positive B calls also pass. Actual Rust adapters preserve
+  all 66,570 held-out rows and every summary; all 32,096 corpus words are exact.
+  Eight full candidate/novel comparisons retain 1,128,312 records, old Native
+  assessments, token spans and spacing payloads while tracking 731 unjudged
+  additions individually. All eight actual baseline stream hashes match the
+  earlier archived captures. Across 47 original historical fixtures, 21,298
+  surfaces retain all prior paths; seventeen new paths on nine words have exact
+  overlays. Twenty-four focused historical tests pass without rewriting older
+  judgments. All 182 finite matched-owner Native/LMF entries, English projections
+  and same-head homonyms also survive an actual Rust import; broader owners and
+  candidate/contextual/independent Korean review remain open.
+  Evidence: [source/mode tests](../tests/literary_ri_prefinal.rs),
+  [complete broader owner imports](../tests/literary_ri_prefinal_broad_owners.rs),
+  [portable source audit](../tools/literary_ri_prefinal_audit.py),
+  [integrity controls](../tools/test_literary_ri_prefinal_audit.py),
+  [complete captured preservation audit](../tools/literary_ri_prefinal_preservation.py),
+  [twelve preservation controls](../tools/test_literary_ri_prefinal_preservation.py),
+  [actual full main Rust suite](literary-ri-prefinal-main-full-rust.json),
+  [actual main browsers](literary-ri-prefinal-main-browser-checks.json),
+  [actual main CLI replay](literary-ri-prefinal-main-cli-replay.json.gz),
+  [actual main adapter replay](literary-ri-prefinal-main-adapter-replay.json.gz),
+  [runtime replay audit](../tools/literary_ri_prefinal_runtime.py),
+  [evaluation](literary-ri-prefinal-evaluation.json),
+  [complete original sources](literary-ri-prefinal-source-discovery.json.gz),
+  [individual legacy overlays](../tests/fixtures/literary-ri-prefinal-history.json),
+  [actual broad comparisons](literary-ri-prefinal-prototype-broad.json.gz), and
+  [actual Rust corpus adapters](literary-ri-prefinal-prototype-adapter.json.gz).
+  Actual main CLI replay reproduces all six source streams, 168 named probes,
+  1,128,312 broad candidate/novel records and 32,096 corpus words byte for byte.
+  Current main Rust adapters also reproduce all 66,570 annotated rows and
+  summaries exactly. The independent Nix package passes 1,022 release tests, one ignored, across
+  217 batches with all 901 frozen runtime inputs unchanged. Actual packaged
+  CLI/API/browser parity and the Nix web launcher pass, including six fresh
+  nested auxiliary diagrams bound to the current model/catalog/package.
+  [Packaged checks](literary-ri-prefinal-packaged-checks.json) preserve failed
+  verifier attempts and exclude only current-call elapsed time from exact
+  cross-build API equality. The [complete combined Nix gate](literary-ri-prefinal-combined-checks.json)
+  passes with all frozen staged files and their staged diff unchanged, using
+  the exact independently verified runtime outputs.
+  Closure records this bounded source/structure/viewer scope; broader
+  composition, candidate precision, contextual/register and independent Korean
+  review remain open. Subsequent tracker and queue edits are documentation.
+
+
+- [ ] **COV-017ch — Original declarative contrast -다마는/-다만 families.**
+  **Isolated prototype; main integration pending:** six unreviewed entries 80321–80326 preserve all six
+  senses and twenty-four original groups, including every dialogue reply.
+  [Current-main source captures](declarative-contrast-source-discovery.json.gz)
+  retain six complete NFC/NFD raw/headword/compatible streams of 506 records
+  each. [Individual occurrence observations](declarative-contrast-target-observations.json)
+  locate all twenty-four original targets. Existing final-ending + 만/마는
+  particle paths already recover dictionary-compatible heads for each target;
+  these captures do not establish intended lexical senses, bundled connective
+  licenses or the dictionary ownership of displayed components. [Complete Native/English preparation](declarative-contrast-owner-preparation.json.gz)
+  verifies 63 entries and all same-head homonyms; [expanded boundary preparation](declarative-contrast-boundary-owner-preparation.json.gz)
+  verifies 98 complete Native owners against the original LMF. The isolated
+  [focused prototype](declarative-contrast-prototype-boundaries.json.gz) passes
+  seven Rust tests, including the production importer, all 24 source targets,
+  42 individual structural cases (32 required/10 path-specific forbidden),
+  Native verb/adjective homonym assessments and exact preservation of all
+  earlier paths, order and entry assessments for 62 authored boundary words
+  in NFC/NFD raw/headword/compatible modes (372 actual prior CLI calls).
+  Present -ㄴ다 does not restore ㅂ before this connective; ordinary
+  -는다 attaches to consonant-final stems, including 돕는다만.
+  Whole connectives remain separate from older particle alternatives.
+  Immediate-owner auxiliary/negative/copular review, full main and historical
+  regression integration, broader/source-stream and corpus preservation,
+  teaching-source links and actual packaged/Nix verification remain pending.
+  No new production rule or inventory disposition has been introduced;
+  contextual/register, candidate precision and independent review remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

@@ -92,9 +92,15 @@ export const grammarHeadword = (m: { form: string; kind: string }) =>
 export function grammarContextHeadword(analysis: Analysis, index: number, order?: Component[] | null): string {
   const current = analysis.morphemes[index];
   const base = grammarHeadword(current);
-  if (current.kind !== "prefinal" || current.form !== "었" || !order) return base;
+  if (!order) return base;
   const position = order.findIndex(c => "morpheme" in c && c.morpheme === index);
   if (position < 0) return base;
+  const previous = order[position - 1];
+  if (current.kind === "ending" && current.form === "으니라" && previous && "morpheme" in previous) {
+    const preceding = analysis.morphemes[previous.morpheme];
+    if (preceding?.kind === "prefinal" && preceding.form === "으리") return "-으리니라";
+  }
+  if (current.kind !== "prefinal" || current.form !== "었") return base;
   const past = (c?: Component) => c && "morpheme" in c &&
     analysis.morphemes[c.morpheme]?.kind === "prefinal" && analysis.morphemes[c.morpheme]?.form === "었";
   let left = position, right = position;

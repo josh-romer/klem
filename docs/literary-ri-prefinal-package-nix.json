@@ -1,0 +1,3644 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "pid": 464826,
+  "started_at": "2026-10-07T17:30:31.627576+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#packages.x86_64-linux.klem",
+    ".#packages.x86_64-linux.web-assets"
+  ],
+  "source_profiles": {
+    "klem": "/nix/store/csh7r4nqcjx0g1z58rj177gyl5ikg6ly-source",
+    "web-assets": "/nix/store/qvdycyv0jnddm6qj0mjbyj2s96s8mpjc-source"
+  },
+  "snapshot": {
+    "files": {
+      "Cargo.lock": {
+        "sha256": "c11caa3e24060175d0555d6fc322d37e6c1d48b05bf3dcee9ea5476ec5de2ba2",
+        "bytes": 9659
+      },
+      "Cargo.toml": {
+        "sha256": "28742313bee712f5f14385dfa63a372921750429e1838173360cb2873ec0bb1b",
+        "bytes": 677
+      },
+      "LICENSE-APACHE": {
+        "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+        "bytes": 9723
+      },
+      "LICENSE-MIT": {
+        "sha256": "c0be08560d8ef6e731b7cf62cf26064f43b9c2f2945a66a8c8a3a94459aa7560",
+        "bytes": 1074
+      },
+      "README.md": {
+        "sha256": "ffc3e1ceac440d6484c0bdd298f46fa42f1b2b53b8b42d587dd5d0240abef267",
+        "bytes": 17389
+      },
+      "docs/adverb-root-inventory.json": {
+        "sha256": "bdf7a361fefb772fc6e372f9b935fff777f24ccb346a41699caf4b72b2fe1e88",
+        "bytes": 14174
+      },
+      "docs/continuation-gold-residual-preflight.json": {
+        "sha256": "7900602b4f5a23f8dbc5495141b39694ee2cf9ed19742d0465ab57f4d2c9b71a",
+        "bytes": 158939
+      },
+      "docs/continuation-inflection-source-preflight.json": {
+        "sha256": "4fa9ab5d5181c7fbaa686a3ee372f3865c5230a1978b601faeab111f9d3e67de",
+        "bytes": 118946
+      },
+      "docs/continuation-left-source-preflight.json": {
+        "sha256": "68952e488f5f2fe750185dc7596bd5b0b52797706608a95c05a3b886163c4721",
+        "bytes": 474490
+      },
+      "docs/question-case-source-preflight.json": {
+        "sha256": "f220c94ee64ceba7c72536e71aef104fba3c57eefa52b768d3a1cf48e7e1e215",
+        "bytes": 4894839
+      },
+      "docs/question-clause-additive-preflight.json": {
+        "sha256": "305cbc60ac02d32d2611c9f158a4a18d4a10fb6837166505bb34be2a6dceced5",
+        "bytes": 27248
+      },
+      "docs/ssik-morphology-projection.json": {
+        "sha256": "e06172db30919449a97191c24b114f12faf20a80f2b160bed18df39fbaab5906",
+        "bytes": 34333
+      },
+      "examples/audit_adjectival_allomorph.rs": {
+        "sha256": "89913c3d11c5255e524a72ac373b93142e5e5477c4d43a102716479bc2f31001",
+        "bytes": 740
+      },
+      "examples/benchmark.rs": {
+        "sha256": "64db272a2196a846b015c086e4fa3e34673d717deb2f40407178624795915d13",
+        "bytes": 3476
+      },
+      "examples/benchmark_stream.rs": {
+        "sha256": "8e0dfd9e229fb3c5134dfd8c82cb3f9782261e7773c1aa6a09bdf3bd4cd3e7ce",
+        "bytes": 3032
+      },
+      "examples/dictionary_coverage.rs": {
+        "sha256": "232d42c4627fd9c4d2e4003d647efa28ece234da273357c3e4265dd4ada571a6",
+        "bytes": 3748
+      },
+      "examples/evaluate.rs": {
+        "sha256": "7f6cfc3c45d6dc14a382d0120db8b9c239ded51faf827b869863780a04a6eb70",
+        "bytes": 1131
+      },
+      "examples/evaluate_validity.rs": {
+        "sha256": "ec91994b66ffc000cbf98ac59b9fa34573557e583a0eb7e35be86d318b2dff07",
+        "bytes": 855
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "6a35c3459abd2cb863706d26de9a16001df8339dc0057374d211e1a334ecb2d2",
+        "bytes": 14173
+      },
+      "src/bin/klem-web.rs": {
+        "sha256": "75916eab50e878b013c134cbff3a9a0df6084466071734b773aeceaacff20432",
+        "bytes": 20619
+      },
+      "src/breakdown.rs": {
+        "sha256": "cb528237a9fe4123ea3b8d1a30629a33d8887e29140fe15900af0058a1aa6578",
+        "bytes": 22169
+      },
+      "src/dictionary/attachment.rs": {
+        "sha256": "f4a678fb2a182f0bbf6ad0f67ac4bec6d7b64f97f55ea776db8028db791c6262",
+        "bytes": 137724
+      },
+      "src/dictionary/import.rs": {
+        "sha256": "f877ad28736093de1a53365a3335678fd53daaad57888f67a2a67dd05345b05b",
+        "bytes": 13212
+      },
+      "src/dictionary/pos.rs": {
+        "sha256": "4d7f7073df0197d590a117647379286a5c862a25d55f51d2f82d27595cbcc868",
+        "bytes": 3275
+      },
+      "src/dictionary.rs": {
+        "sha256": "5b6181243407f1270874eea5e10eb02526ea95fbd70494b6cd7395b40250ad06",
+        "bytes": 31392
+      },
+      "src/dictionary_cli.rs": {
+        "sha256": "2a9351e21d7fe06125a68240f6bcd8e0aba18107d17f18458c8ee928eb135c68",
+        "bytes": 1957
+      },
+      "src/doeda_identity.rs": {
+        "sha256": "dc8edacdc1818559cba82cd5ca88b76726018f5f4a2513055a2218cfc0e3c3c2",
+        "bytes": 34668
+      },
+      "src/doeda_native_forms.rs": {
+        "sha256": "d6100f03307aca47e699fc82ce407d049a8ee8dadaa38005c7f915e46f77b65e",
+        "bytes": 51518
+      },
+      "src/doeda_originless_forms.rs": {
+        "sha256": "a3bb92e2b20a1d6273bfd89e4a6b2b90ec6cfe090cc892b05c10008b7aa03e6a",
+        "bytes": 3521
+      },
+      "src/doeda_suffix.rs": {
+        "sha256": "e1eeedd4dc3c5c443081ddabbcf7d6480a646281db9751809fd735738f0baff5",
+        "bytes": 15023
+      },
+      "src/engine.rs": {
+        "sha256": "739f74c90f554d43448e8ed8b97067f2bce89c404f7777897b91a8acd7046c9f",
+        "bytes": 220725
+      },
+      "src/grammar.rs": {
+        "sha256": "bc48d4c16ad094e4e7e10c4ca3d291c609eb2c0e70248a1025a6662f2ba46eaf",
+        "bytes": 109196
+      },
+      "src/hada_remaining.rs": {
+        "sha256": "515a4035e985a0899f3e6c4e910ffce75d1d6edd999a2d9bcb7f6ee5acd4a7f4",
+        "bytes": 10244
+      },
+      "src/hada_suffix.rs": {
+        "sha256": "e472bb275e990ef45dfe1dcefff15a85b7f792b35d852748d91a81592db7e4f7",
+        "bytes": 18302
+      },
+      "src/hangul.rs": {
+        "sha256": "615c24455744054bc6b2bf42dc28f8c0f7bcde0e252e0b3821423fe962e1f84d",
+        "bytes": 1376
+      },
+      "src/lib.rs": {
+        "sha256": "9ad53859e9ca7fb4b9ad96f26f7ea48a3fd403cf20ef42e606f088f0a421239f",
+        "bytes": 8226
+      },
+      "src/main.rs": {
+        "sha256": "bb849ac17d169c80a0f2298f6c04edc5f983cd6c95473fa123d6801020829bb7",
+        "bytes": 11984
+      },
+      "src/nominal_hwa.rs": {
+        "sha256": "d8171d2c22639b0f6284437dcfe9e2209e99eac0e551bd04b5e70f9a4b56a1a9",
+        "bytes": 13321
+      },
+      "src/nominal_si.rs": {
+        "sha256": "4a30b3006574cce3abac427e3a0de6bd03d8d341f5573a09b2ec104e38cce686",
+        "bytes": 3070
+      },
+      "src/predicate_compound.rs": {
+        "sha256": "f01613089c5a045d7ddbcd179ccd37db1f95cd0a5351815bd7e87a44f58a25b9",
+        "bytes": 916
+      },
+      "src/pronunciation.rs": {
+        "sha256": "c3133e56881c4e9d02f741e36ef5966166d04e8f1d624238a00c085b36c7ce0b",
+        "bytes": 1344
+      },
+      "src/spacing.rs": {
+        "sha256": "2898ad924fd1e16e130dfca6ef8df7a4de8cd7a23645dee43adfcdbb3f7d88fe",
+        "bytes": 22515
+      },
+      "src/text.rs": {
+        "sha256": "5ef733732a66f033e791826595c9ec50e46b67435e5c002b4594adff1e34d073",
+        "bytes": 5689
+      },
+      "tests/additive_particles.rs": {
+        "sha256": "fa85e73922b937bf32d46715ad16c2b52a356dd7e92e130c9c9a0ce8befb1959",
+        "bytes": 5352
+      },
+      "tests/adjectival_allomorph_streams.rs": {
+        "sha256": "db40791172031fc08d09cf796431ef3156edb24d54099c875c453ede950f7d51",
+        "bytes": 1529
+      },
+      "tests/adjectival_allomorphs.rs": {
+        "sha256": "a38da569733f9d21202dec7b79615d45c417c4f7631f521d9d7458dd296e5dfc",
+        "bytes": 10513
+      },
+      "tests/adjectival_question.rs": {
+        "sha256": "143f121cd9a17c1aa7c603840a19cac415777dada7926c419d139baf8d134fd3",
+        "bytes": 5197
+      },
+      "tests/adnominal_expressions.rs": {
+        "sha256": "d0e54585562ae4147f74ac6b48051ac38120ee21410277fd65449206837730c8",
+        "bytes": 4537
+      },
+      "tests/adverb_copulas.rs": {
+        "sha256": "f17c288a41b8248d9a90f485c1545994427c14811e6ad1b08da596f232c2cf21",
+        "bytes": 5629
+      },
+      "tests/adverb_focus.rs": {
+        "sha256": "e751644d2f97a5e9c0eec3791ebeee7f5aed4be3c646065de954eeb99284a0d9",
+        "bytes": 6454
+      },
+      "tests/adverb_roots.rs": {
+        "sha256": "e69e6843ba21297ccff31abb75e624bab447a934aa51c32df701927450bbfbe8",
+        "bytes": 5299
+      },
+      "tests/adverbs.rs": {
+        "sha256": "f0288975be9aed85ad93766c8390f33834f09544e5c65bed8a16ca1b61f4fa25",
+        "bytes": 8880
+      },
+      "tests/approximation.rs": {
+        "sha256": "d41eb00f869eae0343c11fc80516d605bc1eebb30bb397cae835b5f1f8849aff",
+        "bytes": 5052
+      },
+      "tests/auxiliary_dictionary.rs": {
+        "sha256": "f11368607da00f32a1f8d36c6628e518c3d733678a26777824e9167c6729b67d",
+        "bytes": 8821
+      },
+      "tests/auxiliary_inventory.rs": {
+        "sha256": "72cf767c3b5711c36146bbe1eaf42d43e4df15604dae6b8db4fb06d931438f76",
+        "bytes": 22658
+      },
+      "tests/auxiliary_left_class.rs": {
+        "sha256": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
+        "bytes": 5350
+      },
+      "tests/background_ba.rs": {
+        "sha256": "0ee2a3aa9c0a254ed3ad57ff909c81eea5b5a7ad39b500f8cc9fbbe6a5a13a35",
+        "bytes": 10901
+      },
+      "tests/bare_noun_spacing.rs": {
+        "sha256": "5bf92e4939482c2b61db6fc7c1a589dfc760495cef0d8121a8bed8232db54964",
+        "bytes": 21235
+      },
+      "tests/bieup.rs": {
+        "sha256": "16829f68b2f3c7c4d539f9e1a6e365beee3dc9ca8fa7c8c5611f4fca5acc0c19",
+        "bytes": 11401
+      },
+      "tests/candidate_correctness.rs": {
+        "sha256": "56ebfd8e6e5f5de5e967926e217f27e4fcb5e293a35038f8a5c64e7faf8b7745",
+        "bytes": 16450
+      },
+      "tests/carry_aux.rs": {
+        "sha256": "6c514809c45da9b60f90f1c244c5204b9208be263d6f0e6db471293350d9297f",
+        "bytes": 8278
+      },
+      "tests/causal_endings.rs": {
+        "sha256": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
+        "bytes": 5010
+      },
+      "tests/caution_endings.rs": {
+        "sha256": "8c90964fc467fdf19306ba6e66ef29c1a6dc4e96f778655d40bd72c79f8247ec",
+        "bytes": 11370
+      },
+      "tests/chigo_particles.rs": {
+        "sha256": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
+        "bytes": 6452
+      },
+      "tests/cli.rs": {
+        "sha256": "d0c5b26b39b3ef2245adc10bdcf6cf5accfb76ec09d89b6995f37db6ec68d2bc",
+        "bytes": 1836
+      },
+      "tests/comparative_endings.rs": {
+        "sha256": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
+        "bytes": 3947
+      },
+      "tests/comparison_case.rs": {
+        "sha256": "e623a85baf58e25253ba0426bad9836e4331bc7ef3d728b64a408707fd4adf31",
+        "bytes": 5953
+      },
+      "tests/comparison_particles.rs": {
+        "sha256": "b952185fb9649dfea149abb33f8c37ba4452c926d2ab8ada39ac6d62e5059920",
+        "bytes": 5140
+      },
+      "tests/complex_bieup.rs": {
+        "sha256": "e405925dc1ca71624e38bef2a49ab77d3d1d48980345dd337d1a1d5550964d86",
+        "bytes": 19996
+      },
+      "tests/concessive_designation.rs": {
+        "sha256": "228dee6cff8706d9c512ed422e074f04a2bbe81fb4fc06885cc274ae2002301a",
+        "bytes": 7310
+      },
+      "tests/concessive_endings.rs": {
+        "sha256": "1dfde65ac303643dfe2bc0009924dcfd64ef214a6c9e1d3089179edff79e8551",
+        "bytes": 5882
+      },
+      "tests/conditional_endings.rs": {
+        "sha256": "8b2bd953bff17fa4a4b9d09f202d728f9d83bb36853b351a1699da3bd1af2765",
+        "bytes": 4796
+      },
+      "tests/conditional_question.rs": {
+        "sha256": "345af074b39ded20fbf76ea2f4dd0e529475e113c45811af1c029516f8db9568",
+        "bytes": 18899
+      },
+      "tests/conjectural_aux.rs": {
+        "sha256": "7254550a14ac73387bdc64757413d09ac2051f56cc5da044a12a96a72f29d056",
+        "bytes": 11523
+      },
+      "tests/connective_copulas.rs": {
+        "sha256": "b227e7ffee70e2e6ebba701f5eaafba6d5c34254420971f4c4d094c34568332d",
+        "bytes": 5278
+      },
+      "tests/continuation_aux.rs": {
+        "sha256": "42cfb0c08c87397255092d7aa4032d46407397ab7ba95381f480eb8df5ddd92a",
+        "bytes": 8346
+      },
+      "tests/continuation_inflection.rs": {
+        "sha256": "43a2cf18d483306b629b9909611e606dbc7d643a8d4aba22df2f3d4ed2cd0051",
+        "bytes": 14370
+      },
+      "tests/continuation_left.rs": {
+        "sha256": "52a794a9d2e3162a8ba2fcf3b96e1b05428242e884c7b54fc62593fe9e8135cb",
+        "bytes": 14677
+      },
+      "tests/continuation_residuals.rs": {
+        "sha256": "0537625521df601af15b82ee6ed8177d37c80826f8e0edc21f418dd1ad82968a",
+        "bytes": 11180
+      },
+      "tests/continuative_class.rs": {
+        "sha256": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
+        "bytes": 9120
+      },
+      "tests/continuative_topic.rs": {
+        "sha256": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
+        "bytes": 5695
+      },
+      "tests/copula-expectation-before.json": {
+        "sha256": "4ef2b15b9d5cc1caf0560b58e13db5bf8198a920bc9b4cdb73d4d720e11a5c35",
+        "bytes": 120171
+      },
+      "tests/copula-expectation-full-source.json": {
+        "sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+        "bytes": 22458370
+      },
+      "tests/copula-expectation-validity.json": {
+        "sha256": "f2743e819aa3521c5039dde026b1303dceaf67de84a4cbb9f34e4b450799f854",
+        "bytes": 25802
+      },
+      "tests/copula_expectation.rs": {
+        "sha256": "45a655f7b1497cdca7d453c0c0067c4a98e6eb1bdb974d602e4db556cb11690a",
+        "bytes": 12085
+      },
+      "tests/copula_expectation_support/parent.rs": {
+        "sha256": "6e426ebb7fc8a1942087b2c56ae831e7f0a6ae6ab13df9d555dcce45dcc67da9",
+        "bytes": 1398
+      },
+      "tests/copula_fragments.rs": {
+        "sha256": "94dd2eb7215f01a8a76d52a9d6327882f3c5758ed38d3ba24aac479165ea8e80",
+        "bytes": 3678
+      },
+      "tests/copula_yo.rs": {
+        "sha256": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
+        "bytes": 4194
+      },
+      "tests/copular_command_exclamation.rs": {
+        "sha256": "dcbf739d1bbced4d0e79cd3e36a328eb1e06d5bc485677fa23d1549c6389419f",
+        "bytes": 17435
+      },
+      "tests/core_case.rs": {
+        "sha256": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
+        "bytes": 8794
+      },
+      "tests/corpus.rs": {
+        "sha256": "7303682f8076fbb5bbb331781eb85a772c511555b3d8d38414f5a056831e642a",
+        "bytes": 131313
+      },
+      "tests/counterfactual_ryeon.rs": {
+        "sha256": "7ac5dfce3704ce5222f2e9b72c267ac07a0b8541434c8a1a2a07d864074d1d71",
+        "bytes": 11596
+      },
+      "tests/daga.rs": {
+        "sha256": "7251d8b98515301f36bb97c3f16e35b2344a823e9efdb6eecf5570e21dc8840b",
+        "bytes": 4674
+      },
+      "tests/daga_source.rs": {
+        "sha256": "674fc3820034625550fd6f887fe72af9ac977fe66906c505e1e31a6abaf95691",
+        "bytes": 12002
+      },
+      "tests/daji.rs": {
+        "sha256": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
+        "bytes": 5571
+      },
+      "tests/dajiman.rs": {
+        "sha256": "183a7565f853bdf25210d9885b2ed531784d6f689f9d97370f088c90c532660e",
+        "bytes": 8676
+      },
+      "tests/danda.rs": {
+        "sha256": "c7676344ee45e26a302ccc148073210d46af0cc315d8f9994e284707106594ab",
+        "bytes": 5758
+      },
+      "tests/danikka.rs": {
+        "sha256": "a2e0907e285e0df46a889fa4589be49347e1092a9947a3adb09eceebeb5d8ef8",
+        "bytes": 11448
+      },
+      "tests/degree_rimankeum.rs": {
+        "sha256": "06b626423e28f8c945ebb2db78edcabb9e7cf2d58e538f71ad4c1ce2b54f8c22",
+        "bytes": 11414
+      },
+      "tests/deictic_vowel.rs": {
+        "sha256": "4765cc90c6f149512067b786b2a1a2d0bdb1d1c8696b0af83e980724c48ecaec",
+        "bytes": 10678
+      },
+      "tests/deoniman.rs": {
+        "sha256": "791979b004cc2cd5b0b011c868299998cdf1a53ec3221bda6d863de1cebe704f",
+        "bytes": 17327
+      },
+      "tests/deoniman_support/parent.rs": {
+        "sha256": "93a9c9cb64e051c7a954704185fb78208235ba2df344ed3a1e28058ccdfffd9e",
+        "bytes": 1903
+      },
+      "tests/derivation.rs": {
+        "sha256": "1ff13fbd0c6a09678088171fd6f023a0e5d163def1409284396d8d40c5258993",
+        "bytes": 6867
+      },
+      "tests/desire_topic.rs": {
+        "sha256": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
+        "bytes": 6783
+      },
+      "tests/destination_particles.rs": {
+        "sha256": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
+        "bytes": 7903
+      },
+      "tests/deul_aux.rs": {
+        "sha256": "e20650954008274fa5ea71fe86879a8e28e2e4eef3c8d69c60777db7fbc79a82",
+        "bytes": 13119
+      },
+      "tests/dictionary.rs": {
+        "sha256": "ae344d96b39fe878a361780599c0cdfe4e52a335df72c5d20c62b8b62dacc7ef",
+        "bytes": 287243
+      },
+      "tests/dictionary_attachments.rs": {
+        "sha256": "050f47b6db9e329c710faae15b06659a7c0d9424bf01fbbaaa4d6e4acc54ddf0",
+        "bytes": 38178
+      },
+      "tests/digeut_siot.rs": {
+        "sha256": "7d51144710558055626280f9b9cebce66a7c8e675bd30194e773c8a31bcf0bfb",
+        "bytes": 10573
+      },
+      "tests/direct_command_review.rs": {
+        "sha256": "5db54efda2ca9dd11da2b1c462c42fe0ef95675e80e87a981051e82cacf308c7",
+        "bytes": 10787
+      },
+      "tests/doe_endings.rs": {
+        "sha256": "f9da534bcfbbf4ad3c543afa015f541ad4ebebeacf1fb206046e40c68741132f",
+        "bytes": 5017
+      },
+      "tests/doeda_complement_sources.rs": {
+        "sha256": "ce2e97408333313bc34ecbf2cdde8c0fc2716eea8c48524ff6012b7a7e0bac4d",
+        "bytes": 15780
+      },
+      "tests/doeda_identity.rs": {
+        "sha256": "6f1a14d408a0720dfc615b970bd6e57628ef8d778725a2de81d064fad472bafd",
+        "bytes": 8939
+      },
+      "tests/doeda_native_sources.rs": {
+        "sha256": "3481e0a9c500e252a81d2823b1cb575f9cacdd50eebe2df0f8760f11a35c0b83",
+        "bytes": 7441
+      },
+      "tests/doeda_originless_sources.rs": {
+        "sha256": "9ba6a8989c5d57a117bd73f00823af3b67041155ebdbd277d763247841503d90",
+        "bytes": 14499
+      },
+      "tests/doeda_partial_origins.rs": {
+        "sha256": "38e344b5fab8fac90097e6dc2c66cddf7c910e17ce7b77ef16337847405abf78",
+        "bytes": 12011
+      },
+      "tests/doeda_role_sources.rs": {
+        "sha256": "dd62461d4e0f785135ce31de41f9160e2df368b33730de588cb70bdb964f8663",
+        "bytes": 12495
+      },
+      "tests/doeda_suffix_sources.rs": {
+        "sha256": "1471f80020f43b2d0c2811ad1e3c0fb4cf547a6fd9fc351520d5906336388b5a",
+        "bytes": 15489
+      },
+      "tests/double_past_prefinal.rs": {
+        "sha256": "f027b1d7b8f0e55f4ef68d1bf31843261d862efc949dbd5b128c0e88ec9d6bda",
+        "bytes": 3675
+      },
+      "tests/emphatic_endings.rs": {
+        "sha256": "ad6f02b014fb0094a6e6e71e9c2eda4f05d096c3627030ee3601d0562782c4ec",
+        "bytes": 10070
+      },
+      "tests/emphatic_particles.rs": {
+        "sha256": "508385f7bf89f5824262697e6a7cadcb4e4bcfbd7c2f41d12d564775fd9551de",
+        "bytes": 10125
+      },
+      "tests/enumerative_da.rs": {
+        "sha256": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
+        "bytes": 5874
+      },
+      "tests/enumerative_particles.rs": {
+        "sha256": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
+        "bytes": 10105
+      },
+      "tests/eumse.rs": {
+        "sha256": "aa87905305c4fd85bb80eeef1b3359364102edc74e59be288a947c8d2f85e2a1",
+        "bytes": 10476
+      },
+      "tests/exclamation.rs": {
+        "sha256": "338acf52bf750798b8d42968d3b554cc53cbb14ef15b3f912607570aae69275e",
+        "bytes": 14477
+      },
+      "tests/excluded_paradigms.rs": {
+        "sha256": "a295c9b437c1a962e451b1676c3ce025f34787ba82d883e0fbb837797cf0a584",
+        "bytes": 12056
+      },
+      "tests/existential_paradigms.rs": {
+        "sha256": "06c7f3bd14833e835c6f78ee4884c5b29607edc08c59c6b81d4fe0d7e41ab610",
+        "bytes": 5988
+      },
+      "tests/extent_particles.rs": {
+        "sha256": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
+        "bytes": 6722
+      },
+      "tests/eya.rs": {
+        "sha256": "75f750a84f9169c40d6471880e9cf972e4f5104acec55d100ffbd00f0fddfdfd",
+        "bytes": 6160
+      },
+      "tests/finite_vowel.rs": {
+        "sha256": "ab2a26d298404f3fc4f63c2ee3b5466a8ea0be9fef667a35fbf190781ba79061",
+        "bytes": 8472
+      },
+      "tests/fixtures/LICENSE.txt": {
+        "sha256": "899b1804a12ebc090b96339614eede1b64b686721b650a71430b55b5235f7f79",
+        "bytes": 202
+      },
+      "tests/fixtures/README.md": {
+        "sha256": "6855c146a606784de87a8622a2a029ec300284189759c9c1288cca1331a6d4e4",
+        "bytes": 161116
+      },
+      "tests/fixtures/adjectival-allomorph-additional-native.json": {
+        "sha256": "f7f41b0cf08e1991e525a73d3ba4e8f2a9fd90f693a9ba292aa56fd0acb1b33d",
+        "bytes": 33434
+      },
+      "tests/fixtures/adjectival-allomorph-corrections.json": {
+        "sha256": "d92f3892b02103bbeb5314f34a3305f649b5f17a596affa705f850fa36ae656c",
+        "bytes": 354652
+      },
+      "tests/fixtures/adjectival-allomorph-derived-supplement.json": {
+        "sha256": "990348f00242912430f8939ac88a011e966283ab5d24ad17c49112439cc17987",
+        "bytes": 575941
+      },
+      "tests/fixtures/adjectival-allomorph-policy-corrections.json": {
+        "sha256": "24c8dd8e305379a72df78bd402b3500509f95dba4553ac583947bd5a61e203b0",
+        "bytes": 15052
+      },
+      "tests/fixtures/adjectival-allomorph-preflight.json": {
+        "sha256": "fc05f40ed9d58e8e10c63b8782353c7f407b63911513474f4d4c1515b5fadb01",
+        "bytes": 5809291
+      },
+      "tests/fixtures/adjectival-allomorph-stream-removals.json": {
+        "sha256": "f0909fe252e17b56ca378b7b2bf52ab2068d15ec4916e4de5f3cd0d75686693a",
+        "bytes": 2119843
+      },
+      "tests/fixtures/auxiliary-dictionary.json": {
+        "sha256": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
+        "bytes": 55035
+      },
+      "tests/fixtures/ba-sources.json": {
+        "sha256": "a28e3718ee58b224b039a7e326a298557ea96ffcd233fa23ee663f3a29bf263a",
+        "bytes": 215876
+      },
+      "tests/fixtures/bare-noun-spacing-additional-pairs.json": {
+        "sha256": "5fd69f4e20a56715b873eca87b3f33162a612d710df99ac0645b0de70af93b01",
+        "bytes": 148726
+      },
+      "tests/fixtures/bare-noun-spacing-judgment-updates.json": {
+        "sha256": "f111db7d9fc0bc59f7ce4fa0e5e03dd0c289e6e56239930c9381bd9ccede0b7d",
+        "bytes": 9031
+      },
+      "tests/fixtures/bare-noun-spacing-sources.json": {
+        "sha256": "a9fa1a11f626a23c044d5d73f67bc50f20616e135d21cbbfefb358176906accb",
+        "bytes": 2297802
+      },
+      "tests/fixtures/bare-noun-spacing-validity.json": {
+        "sha256": "2f1d9f788df5e4e714a0a04b731d66c7c8dafc42cabcf13ed04eed92c14e830a",
+        "bytes": 68340
+      },
+      "tests/fixtures/bieup-sources.json": {
+        "sha256": "087a11b8f5a8b1a01dd85ba5ab7b373071bc5e94f44814fd9c1586ff381a1eb7",
+        "bytes": 1777823
+      },
+      "tests/fixtures/carry-aux-sources.json": {
+        "sha256": "f33e4faf02399a48d5d8b2e8e6239371504d4ac27ced19712c06b3d4ebaf3e13",
+        "bytes": 52990
+      },
+      "tests/fixtures/caution-ending-additional-native.json": {
+        "sha256": "933c8de4e80ba162cc4eb5f2569c01949442419c6b6dca58759843951314792a",
+        "bytes": 2248562
+      },
+      "tests/fixtures/caution-ending-sources.json": {
+        "sha256": "ddd5f19db17973045af69e317b264857b54ce494f0452f90e8c41e0079cf1114",
+        "bytes": 4037514
+      },
+      "tests/fixtures/complex-bieup-sources.json": {
+        "sha256": "776295f3b9ac713cfbb983d5f651a70c43092926b8cbb5a7b03dd1a4d6f0482a",
+        "bytes": 1127247
+      },
+      "tests/fixtures/conditional-question-sources.json": {
+        "sha256": "81905c0d0345a8c1ec143aa456a2903cfea2729bec5bfd8966131396478e948d",
+        "bytes": 23194
+      },
+      "tests/fixtures/conjectural-aux-entry-judgments.json": {
+        "sha256": "3aa2575d19ea4dccca9530e2abc62ef5dad89fa803d1c72c1a8834f390bde0a9",
+        "bytes": 76016
+      },
+      "tests/fixtures/conjectural-aux-sources.json": {
+        "sha256": "5ccdaecbb7a34326bc9271ba779a69aeacfd51601b399192f660201c14fc825c",
+        "bytes": 80461
+      },
+      "tests/fixtures/continuation-aux-sources.json": {
+        "sha256": "93cc540be285b15bba1ccce404e140e9121a370cd632f7b3757fd306b44d2aa6",
+        "bytes": 34623
+      },
+      "tests/fixtures/continuation-inflection-additional.json": {
+        "sha256": "aa50e0ce8c8d75a80ecc74ecccbf97750984320e3793b42a65e654c909b89f1b",
+        "bytes": 3927865
+      },
+      "tests/fixtures/continuation-inflection-judgments.json": {
+        "sha256": "2f8ec6c9a1af42a1cca09f53e604b36fba9aaf4478f1c0ddca01420479e1ed73",
+        "bytes": 31994
+      },
+      "tests/fixtures/continuation-inflection-sources.json": {
+        "sha256": "cb682b1bee17458d9ca6438ce490c07588265058b79c09009457ee5bad4b2740",
+        "bytes": 18908713
+      },
+      "tests/fixtures/continuation-left-entry-judgments.json": {
+        "sha256": "e6f54f547dbb566d817c0252e5c2653d6cce13cd12872402053ed35bbceb36b7",
+        "bytes": 153897
+      },
+      "tests/fixtures/continuation-left-sources.json": {
+        "sha256": "bb222026c1a3503a7155113907cd2c72efd439c9def05f5706c2f24e312ce032",
+        "bytes": 8577741
+      },
+      "tests/fixtures/continuation-left-vowel-compat-judgments.json": {
+        "sha256": "25a5ee46667b6f43c38e9f31227c326fd0c821bfba2ce4586b9d8dd7348f0cbd",
+        "bytes": 977530
+      },
+      "tests/fixtures/continuation-left-written-vowel-judgments.json": {
+        "sha256": "d67154f7bc381ac058023817df7bf3a8d6b32d70d10cc62ffdf9692a99d534b4",
+        "bytes": 161972
+      },
+      "tests/fixtures/continuation-residual-sources.json": {
+        "sha256": "9d9cacfed389930269ba825819cca3370532b3368534bebe304b26be34f153cb",
+        "bytes": 1582427
+      },
+      "tests/fixtures/continuation-residual-validity.json": {
+        "sha256": "fa305cffe75ebbbf26880b3ae549de98c223aedf0ec0b6712f6323c6457ebe28",
+        "bytes": 10340
+      },
+      "tests/fixtures/copular-command-exclamation-sources.json": {
+        "sha256": "b20af342cae7795ed56e35014c3d91049fdbbde9839240cb9c8bef0eb7a218e6",
+        "bytes": 54225
+      },
+      "tests/fixtures/counterfactual-ryeon-sources.json": {
+        "sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+        "bytes": 18781790
+      },
+      "tests/fixtures/counterfactual-ryeon-validity.json": {
+        "sha256": "563f7a5906703c13349a629833f20ce35985f3f11b31f28a86e8f322e2077381",
+        "bytes": 21993
+      },
+      "tests/fixtures/daga-native-sources.json": {
+        "sha256": "76839cc15242346f9f07c15a81995fdf045f10d5e781ef3822783434de7d9537",
+        "bytes": 15859
+      },
+      "tests/fixtures/degree-rimankeum-sources.json": {
+        "sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+        "bytes": 16883782
+      },
+      "tests/fixtures/degree-rimankeum-validity.json": {
+        "sha256": "5a71418839e44558d67ebd22ef15f3aab05ccfbeddbecbf2d6510c96e1f6c9ee",
+        "bytes": 10406
+      },
+      "tests/fixtures/deictic-vowel-sources.json": {
+        "sha256": "53aeed70652b70ca72907b8dc9c2261df412dff6b6a58c3b2ab86acae212fca8",
+        "bytes": 1414500
+      },
+      "tests/fixtures/deoniman-cross-family-parents.json": {
+        "sha256": "b2345f9883188e2664573fce8082888ffbcd050eb2017d89d52db8a100b702d9",
+        "bytes": 42508
+      },
+      "tests/fixtures/deoniman-emphatic-validity.json": {
+        "sha256": "96aea6004535bae23c43f9ef2a049fa4decfffc35ad2e2a134dbb38053fcbe06",
+        "bytes": 26978
+      },
+      "tests/fixtures/deoniman-sources.json": {
+        "sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+        "bytes": 28577975
+      },
+      "tests/fixtures/deul-aux-entry-judgments.json": {
+        "sha256": "9d8fe36bbbc3ca559530597b93a5ea94b68d1ca73a33d3bfb50c6c75bd921cff",
+        "bytes": 89742
+      },
+      "tests/fixtures/deul-aux-sources.json": {
+        "sha256": "9b3506faf4f085ea2e0c10b158128e12bdaf11627c0fdee942f7e232160a4e5f",
+        "bytes": 198067
+      },
+      "tests/fixtures/dictionary-attachments.json": {
+        "sha256": "42d9f2f9d23eba713dd2cd3ca482b1e4c16527c9b74fa0e2122faa25b4d3ab72",
+        "bytes": 20402855
+      },
+      "tests/fixtures/digeut-siot-sources.json": {
+        "sha256": "f241c430f1c1ddc2b93c1113124c7f7df78ce2ea006939fbdc9f12ea8010814c",
+        "bytes": 586052
+      },
+      "tests/fixtures/direct-command-review-sources.json": {
+        "sha256": "70e14f788e8b3f366c8722d3a1e77ffe48bbed204dd7f0268f489435c1ac0422",
+        "bytes": 623443
+      },
+      "tests/fixtures/doeda-complement-bridge-boundaries.json": {
+        "sha256": "cf0b84075bf3b69fbeb3a9ebb9f7e0e15e32e1a02a7027e897fc4877be8f585f",
+        "bytes": 1186
+      },
+      "tests/fixtures/doeda-complement-corrections.json": {
+        "sha256": "2d4d093b44e76db12cb6e42c37e27087d2371522eef1ed083a366fd0489c26b0",
+        "bytes": 10009
+      },
+      "tests/fixtures/doeda-complement-sources.json": {
+        "sha256": "e069a758943e1d991e3ecfd8bc6050e53be7369bdf8491232c4302a86f8cf004",
+        "bytes": 3270649
+      },
+      "tests/fixtures/doeda-identity-sources.json": {
+        "sha256": "8e95800938cc8a0dc6349bbbee180257cecbce2603e57adca7d3e9c7760a3214",
+        "bytes": 348794
+      },
+      "tests/fixtures/doeda-native-formations.json": {
+        "sha256": "710a79ef90ed8405c19152c52fb2c4cc0a8019361d0cf4e0de8ed8c9708a63c4",
+        "bytes": 1036771
+      },
+      "tests/fixtures/doeda-native-import.json": {
+        "sha256": "bb25c577563d21d2d6d441c8af44fbeb5c3185f0f71812d25925805f00476ec9",
+        "bytes": 1948
+      },
+      "tests/fixtures/doeda-originless-before.json": {
+        "sha256": "145fec31913abeac5f071bf610f89d4dfe47eb0d12f9b068cd792b2b7d089257",
+        "bytes": 1091597
+      },
+      "tests/fixtures/doeda-originless-formations.json": {
+        "sha256": "ac27c3b1caf8212153f57543587d35599fe95474e5b7b375c77cd04faa67a362",
+        "bytes": 23908
+      },
+      "tests/fixtures/doeda-originless-import.json": {
+        "sha256": "af8d5e70d1ff3a5bc59d766aadb43a35afd83b74480d2819c2e0a54f1d477f32",
+        "bytes": 1993
+      },
+      "tests/fixtures/doeda-partial-origin-import.json": {
+        "sha256": "868bdb2876d9eb1d090ce11e3bf256380be95c67b54689e7b5e6907c85d54d15",
+        "bytes": 1135
+      },
+      "tests/fixtures/doeda-partial-origin-sources.json": {
+        "sha256": "f9f9bbc2f2ac316b7710cccaf9bd9529e56a183319e22f660f9eeae59468eba2",
+        "bytes": 418953
+      },
+      "tests/fixtures/doeda-role-historical.json": {
+        "sha256": "ad013a43b52325d37a08febec1202b41719c521a6d2a72d32b7c03c2938ff6c2",
+        "bytes": 29237
+      },
+      "tests/fixtures/doeda-role-sources.json": {
+        "sha256": "422f78a8bca649261cad3c6a555b0ee0ad320a214ced19ea160a1dc37c59f7c3",
+        "bytes": 1517675
+      },
+      "tests/fixtures/doeda-role-stress.json": {
+        "sha256": "5009507fd80ca439367f6493e60cf7324169b991decfd0bd68fa735c4caa4eef",
+        "bytes": 18290
+      },
+      "tests/fixtures/doeda-suffix-corrections.json": {
+        "sha256": "c41f6f8caab7b0b50e39ea498efed6b9bf079d411f2015f6734762b57675d7bf",
+        "bytes": 57133
+      },
+      "tests/fixtures/doeda-suffix-sources.json": {
+        "sha256": "ec6383acc3e7c13a38c775b6eef0b2aa7f59f5a8b6963988a6e7d489bc2fdfbb",
+        "bytes": 19059940
+      },
+      "tests/fixtures/double-past-prefinal-native.json": {
+        "sha256": "3c5d25a34d2910e061a1f7f566e23dab56b583049e1128d19f39f57c10b247e2",
+        "bytes": 855963
+      },
+      "tests/fixtures/double-past-prefinal-validity.json": {
+        "sha256": "ae1e4505f58c3a3709764bc74aa508e0a76691112369e7187a13376d93ededc2",
+        "bytes": 17560
+      },
+      "tests/fixtures/emphatic-ending-sources.json": {
+        "sha256": "a63a758431dd4424f94ba3c75d379d9d47c9b8a307670307766e16890a8cb635",
+        "bytes": 2662154
+      },
+      "tests/fixtures/eumse-sources.json": {
+        "sha256": "052eb9d9b5e984214a4797954cfd835eaf2028a7505f46a989b5cbfa356ddf31",
+        "bytes": 51357
+      },
+      "tests/fixtures/exclamation-sources.json": {
+        "sha256": "7b8fb47dbbfde9a20923ba2a9f9e0654a734e15ce744c0e74822cb46ffd6ff1f",
+        "bytes": 124638
+      },
+      "tests/fixtures/excluded-paradigm-sources.json": {
+        "sha256": "0cde6ac61fd799bf76860b889ddef2417d14839bf25e3df06999d5b2e2c2874f",
+        "bytes": 3758918
+      },
+      "tests/fixtures/existential-paradigm-sources.json": {
+        "sha256": "b655c111e497a75ab652a47d96fcdb5b2552c1fba615216be38e1b07b68f086b",
+        "bytes": 18487
+      },
+      "tests/fixtures/finite-vowel-sources.json": {
+        "sha256": "fd883f797f66aacf1849c018d89a55bf5bbe482e5d261030b6a191176edbeaa1",
+        "bytes": 1459686
+      },
+      "tests/fixtures/foreign-nominal-gold.json": {
+        "sha256": "b19267f34ea6ea998ff3a73cd11b28f5693a81eb9feb7da16ffb5ce720ca614e",
+        "bytes": 4854
+      },
+      "tests/fixtures/friendly-command-sources.json": {
+        "sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+        "bytes": 16045565
+      },
+      "tests/fixtures/future-question-additional-native.json": {
+        "sha256": "d7ea0746c34bbe4dea6b50688015451b7250b01e4aaad3d5bc257ce57ecf4ec2",
+        "bytes": 3584335
+      },
+      "tests/fixtures/future-question-corpus-supplement.json": {
+        "sha256": "f2bea48d85ff30ad5ba50918d77332b89ddd2856933d8fd2f3b0678aabe62d42",
+        "bytes": 43029
+      },
+      "tests/fixtures/future-question-sources.json": {
+        "sha256": "a8e4f4e0f62a56bce8c77045e01e08e7ffed3d160e8bedec672515eca7712c04",
+        "bytes": 5827444
+      },
+      "tests/fixtures/gam-question-implemented.json": {
+        "sha256": "b5c202b84280823cc3e37bbb5af40a6cabed93c13e1a9a8683151dc89f236cfe",
+        "bytes": 1167498
+      },
+      "tests/fixtures/gam-question-sources.json": {
+        "sha256": "2cd8ab46f043f4bc6c2c95872864c505e81f7c026702899d42327c7ea74b5394",
+        "bytes": 1563953
+      },
+      "tests/fixtures/geol-sources.json": {
+        "sha256": "f051cdc17498176a8a6eec391dafb389ea058d35ac2bf2cdbc311e2e0da7088e",
+        "bytes": 104596
+      },
+      "tests/fixtures/geon-contrast-entry-judgments.json": {
+        "sha256": "01dbf5dee624cecc79771fd4eb42b5ff968e4bcc5b398a9404b2cf85fbec6448",
+        "bytes": 115385
+      },
+      "tests/fixtures/geon-contrast-sources.json": {
+        "sha256": "716fea3802eb643b8c5c086648efa5e6cb6f09ef94ef28de3cd697284c8e5f6a",
+        "bytes": 16556
+      },
+      "tests/fixtures/gera-nera-sources.json": {
+        "sha256": "4708e4e5694c69a46b8248bb17abb3831c153c75390501d55fadc01ba1998e19",
+        "bytes": 1554308
+      },
+      "tests/fixtures/gsd-adjectival-question.conllu": {
+        "sha256": "ca3ac5c1c53a89d829fba092362543378de203f461b18b18c2c08a50e21803c7",
+        "bytes": 2038
+      },
+      "tests/fixtures/gsd-adverb-copulas.conllu": {
+        "sha256": "956549ac6de76058375e05bfd89f871956dd1967b8c76aa26b31794ea8c48418",
+        "bytes": 7502
+      },
+      "tests/fixtures/gsd-adverb-focus.conllu": {
+        "sha256": "e732bc9ffe442e00f0d1d04dedd8b285df3b741cb4a6ccb60fcef713e3c2533c",
+        "bytes": 8774
+      },
+      "tests/fixtures/gsd-adverb-roots.conllu": {
+        "sha256": "14647cf16877e8afe91c844c2da8dea2c69f3ffdbe8d61ec999bdf422ebea4d6",
+        "bytes": 1996
+      },
+      "tests/fixtures/gsd-auxiliary-classes.conllu": {
+        "sha256": "5a6c42cd9e3c52d244fa969fca1a7fe11b22ca53f180743e33c0f82508967943",
+        "bytes": 2624
+      },
+      "tests/fixtures/gsd-auxiliary-inventory.conllu": {
+        "sha256": "56a5f9d311f3e4668fd330f21f93d0a11863894d4b1761bf33ab4e69ccae3314",
+        "bytes": 654
+      },
+      "tests/fixtures/gsd-bieup.conllu": {
+        "sha256": "011914bad79be9cd46a22cdaa2a6052be0eebf87609a7e8b0e614449b716c6dc",
+        "bytes": 6584
+      },
+      "tests/fixtures/gsd-causal.conllu": {
+        "sha256": "61276f47212521af739ac66f10d26d5b93ad982ff7ebe257940cdf9e5eecf1c6",
+        "bytes": 3245
+      },
+      "tests/fixtures/gsd-chigo.conllu": {
+        "sha256": "6e412837e26c539d291d1182fd46298c8df82156bae220d253e498e7140393f1",
+        "bytes": 899
+      },
+      "tests/fixtures/gsd-concessive-endings.conllu": {
+        "sha256": "50884e9439c31b1f0c676e79bd1288fbd7694c97fadd174a4b28671d6390edd0",
+        "bytes": 1477
+      },
+      "tests/fixtures/gsd-conditional.conllu": {
+        "sha256": "86eb98d4b60fb9d7a6093d5c9add24adc0ff35c8fd5c1f2459a080656008dd15",
+        "bytes": 840
+      },
+      "tests/fixtures/gsd-conjectural-aux.conllu": {
+        "sha256": "30303caecd0b853d480a6a85438d61d45230797795027dddc92e9e13f29b3860",
+        "bytes": 16148
+      },
+      "tests/fixtures/gsd-connective-copulas.conllu": {
+        "sha256": "1d11ca961de1d2eecee8c5d2b529b0db12451f0bc122ed4067cb05f59a5ba85a",
+        "bytes": 4506
+      },
+      "tests/fixtures/gsd-core-case.conllu": {
+        "sha256": "749ca033fbd2354055e359962d72786d41d92720daf60b90ed37a444a3f0c568",
+        "bytes": 5485
+      },
+      "tests/fixtures/gsd-daga.conllu": {
+        "sha256": "8d693c394c1bf0c36004906c52973e645b1fd2e7070ab4869a46626a68b34e65",
+        "bytes": 655
+      },
+      "tests/fixtures/gsd-daji.conllu": {
+        "sha256": "b930f1fa0c61efa44028ffb666ee831d5507212b2a8c9940c93515e934349c2c",
+        "bytes": 438
+      },
+      "tests/fixtures/gsd-danda.conllu": {
+        "sha256": "29c70607342470b3ed310a7fe03aa60eb179cd3d896e7024954c541169c7f8fc",
+        "bytes": 424
+      },
+      "tests/fixtures/gsd-deictic-vowel.conllu": {
+        "sha256": "48bcd29654d445c65cfa35df2a685df5bb04afdff013a43220ca4286af19ff55",
+        "bytes": 16450
+      },
+      "tests/fixtures/gsd-destination-particles.conllu": {
+        "sha256": "9f568e0c57bb9d0eb003b0c3cc3f9824192c4bad99e83e309e10c710c2b98d90",
+        "bytes": 1234
+      },
+      "tests/fixtures/gsd-deul-aux.conllu": {
+        "sha256": "be2b31eec61e50be7eb337b9e2792fe96fd608b11289b9204df8efec0aa73374",
+        "bytes": 6511
+      },
+      "tests/fixtures/gsd-digeut-siot.conllu": {
+        "sha256": "7e11ae6adcdf7e9dd90be05747350c87378c50857484f7be8f7350c80e92292f",
+        "bytes": 8262
+      },
+      "tests/fixtures/gsd-direct-command-review.conllu": {
+        "sha256": "ab433a47fd6428fcad255b6622a86418bdd63046b1a53e74f90200caf39c4073",
+        "bytes": 2062
+      },
+      "tests/fixtures/gsd-doe.conllu": {
+        "sha256": "b48c140048c8f2c7497a92649ced62e72ad0047cfed024a383f54ff828289664",
+        "bytes": 2259
+      },
+      "tests/fixtures/gsd-emphatic-particles.conllu": {
+        "sha256": "0adecc6f14dbc2bd06c57400204af42143030e9227a859c659223637f5a703ed",
+        "bytes": 2557
+      },
+      "tests/fixtures/gsd-enumerative-da.conllu": {
+        "sha256": "e96b577728ab9c3ff7d2afcbfc58d5f0893fb72d8dba762b1f8c5903854cdab4",
+        "bytes": 607
+      },
+      "tests/fixtures/gsd-existential-paradigms.conllu": {
+        "sha256": "89ee68d68bd54db9fd80cf0dbf29d3c1cf94a9d3e9419dc3772f90f612ea03ee",
+        "bytes": 2160
+      },
+      "tests/fixtures/gsd-foreign-nominals.conllu": {
+        "sha256": "9daf87e2926257afc28bb9ef6740f077992be70e81429e1734a1f0bf2e0f3d54",
+        "bytes": 33233
+      },
+      "tests/fixtures/gsd-geol.conllu": {
+        "sha256": "57684a5e1110aa51ac6f074ece298752b9025c86ae8886f22b1279a4bf62db6d",
+        "bytes": 554
+      },
+      "tests/fixtures/gsd-geon-contrast.conllu": {
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "bytes": 1
+      },
+      "tests/fixtures/gsd-hada-aux.conllu": {
+        "sha256": "fdad9e577b8d8209d47e2d2170b2dc29361f188c90948fa26a7a64bc9b86517e",
+        "bytes": 204892
+      },
+      "tests/fixtures/gsd-hada-ki.conllu": {
+        "sha256": "1936862c34fd00d0f5dd1351377eb492c1522e56e413c129caa46dafca7c9914",
+        "bytes": 1973
+      },
+      "tests/fixtures/gsd-hieut-compatibility.conllu": {
+        "sha256": "5e6540c719dcf7a3d89b1c53adcce7e309741303a4779ae9e64df3c6e5e3f00a",
+        "bytes": 6857
+      },
+      "tests/fixtures/gsd-honorific-copulas.conllu": {
+        "sha256": "40143a2727a82275b3711ed5aa718bff0a06215fe1780123d9876542d89eddc8",
+        "bytes": 3198
+      },
+      "tests/fixtures/gsd-intensive-aux.conllu": {
+        "sha256": "e5d86056fc372ed1b81c487999279501cd24c33f3d5f51a202c0f2f03b76473e",
+        "bytes": 4105
+      },
+      "tests/fixtures/gsd-intention-connectives.conllu": {
+        "sha256": "997fc6768ff7e944799da4e7b5a9daf9932b42f67ff1bc5198cef2853e3dd0c7",
+        "bytes": 697
+      },
+      "tests/fixtures/gsd-intention-endings.conllu": {
+        "sha256": "bc4e68e954f54ec4a29e10acfe6f998fc532bead21c517044ff90b6400a3fe53",
+        "bytes": 2046
+      },
+      "tests/fixtures/gsd-lexical-malda.conllu": {
+        "sha256": "8024838472879153c7082a7611152a8f2dc77a8b54d7c6d6ce057e901c557390",
+        "bytes": 15658
+      },
+      "tests/fixtures/gsd-negative-auxiliaries.conllu": {
+        "sha256": "8f3e3fb822b2cf69287fa2e082468b8474595d8bcc2886b36893aafc9c421619",
+        "bytes": 427
+      },
+      "tests/fixtures/gsd-negative-classes.conllu": {
+        "sha256": "eba29baf10806b63ec9a00327e5dd99f9e29e5fe2634431f7840b0d1350a3b5b",
+        "bytes": 8040
+      },
+      "tests/fixtures/gsd-neuni.conllu": {
+        "sha256": "d5fbd803699834e18d1d397dec6d54d6083f616aa4cc373db7c898638dbf9ea5",
+        "bytes": 4645
+      },
+      "tests/fixtures/gsd-neura.conllu": {
+        "sha256": "bffe19d3b83d7cde8c52b2fc3291bfbbec4c30e41627c8297496aa0f558e6593",
+        "bytes": 2307
+      },
+      "tests/fixtures/gsd-nominal-i.conllu": {
+        "sha256": "20ce06294a93095aad2ef0c4528f87af21c822751c6ee3867dd246a207ce9418",
+        "bytes": 1208
+      },
+      "tests/fixtures/gsd-obligation.conllu": {
+        "sha256": "1698832841c985808c8f906dcaf164e5260ba31b3a3fff9def527178b0b53b4d",
+        "bytes": 3284
+      },
+      "tests/fixtures/gsd-omitted-connectives.conllu": {
+        "sha256": "6ad49669c60db6e71637146553edad24be99ac5b2813412074be76b99e41d3ff",
+        "bytes": 4795
+      },
+      "tests/fixtures/gsd-omitted-copulas.conllu": {
+        "sha256": "18a349bbee5f77dabf54cc4ab5f245e45f10d21903fbb814665ca30500ab31f9",
+        "bytes": 5517
+      },
+      "tests/fixtures/gsd-opaque-adverbs.conllu": {
+        "sha256": "d96f5194173b06a84d8bc2108d7618a3e261c848d3b2e611b7b9bde84d351d6e",
+        "bytes": 1495
+      },
+      "tests/fixtures/gsd-particle-chains.conllu": {
+        "sha256": "6ad48d38bc7585603cebb6cbbcf31b1ba7b064314223c43495e98de25f49b291",
+        "bytes": 1143
+      },
+      "tests/fixtures/gsd-polite-annotation-conflict.conllu": {
+        "sha256": "90a197092d5a783b07ab7477616ccad655e9686b7a8bd1a43c0ca377d2e00472",
+        "bytes": 3747
+      },
+      "tests/fixtures/gsd-post-ending-particles.conllu": {
+        "sha256": "87aafe05342185f671cb9e53979f2c99ea34ae3c4cccc4205a48c642fdbb904a",
+        "bytes": 3904
+      },
+      "tests/fixtures/gsd-potential-aux.conllu": {
+        "sha256": "62f46805161b2237c7af259c8af9f34b5ca5d0cfe5b03e58063c271d2fb10e56",
+        "bytes": 1491
+      },
+      "tests/fixtures/gsd-prefinal-copulas.conllu": {
+        "sha256": "2febdc81afc467f8c02ce67130f137376d2f19b0fc092c57c50563d33e52abf8",
+        "bytes": 2169
+      },
+      "tests/fixtures/gsd-present-licenses.conllu": {
+        "sha256": "33374425cc0ba29751aef42337b9cf5bb074b9cc28981fb30b7ef9c886b5d3bf",
+        "bytes": 1915
+      },
+      "tests/fixtures/gsd-question-copulas.conllu": {
+        "sha256": "d7a3cb5784b7d2fbd8bc93e6b112b3bb264aff5bae6f544a24406ef8af2f397d",
+        "bytes": 3226
+      },
+      "tests/fixtures/gsd-quoted-alternatives.conllu": {
+        "sha256": "ffa5227727cc3f94909f704ab78b6979ee23cc81656b5cf26985ccb3c9924514",
+        "bytes": 1075
+      },
+      "tests/fixtures/gsd-quoted-definitions.conllu": {
+        "sha256": "1b74335d07f77f4fa2177b15f6f761c302a65ecc9d0e190ccd8c63894c1a1cd6",
+        "bytes": 4142
+      },
+      "tests/fixtures/gsd-ra-conditions.conllu": {
+        "sha256": "ca3ac5c1c53a89d829fba092362543378de203f461b18b18c2c08a50e21803c7",
+        "bytes": 2038
+      },
+      "tests/fixtures/gsd-repetitive-aux.conllu": {
+        "sha256": "b3a9da4979f901d3dfd070351e72986e28d6e00b33f66de82a308d38796df06a",
+        "bytes": 5704
+      },
+      "tests/fixtures/gsd-report-myeo.conllu": {
+        "sha256": "3ad42aef77d26feb58f441b24d925b853e53d532b2ddd08643524b086c3337e1",
+        "bytes": 8361
+      },
+      "tests/fixtures/gsd-report-ne.conllu": {
+        "sha256": "a0d2bdeb2845f9e8c1bc5d6379556e66ac7393b85387a9972a50df4828a45bbe",
+        "bytes": 1658
+      },
+      "tests/fixtures/gsd-report-ni.conllu": {
+        "sha256": "65593e78307483f72ca37e4be589d54d4323829c99d85cfa44c229c2a532e4fb",
+        "bytes": 743
+      },
+      "tests/fixtures/gsd-reporting.conllu": {
+        "sha256": "6c4a5fa86b6fefe5fcdaf9aaf85b7f87cdd3988620dcf5a6847f69c41eb2e92d",
+        "bytes": 1708
+      },
+      "tests/fixtures/gsd-request-aux.conllu": {
+        "sha256": "48f6f64a3ac49a8e3696cd2523a921e2043e78e880c4845cb1108f782d03821e",
+        "bytes": 6380
+      },
+      "tests/fixtures/gsd-result-connectives.conllu": {
+        "sha256": "8d8cbec8c07d2e3f25721a7bcfc18a12876a3f1288a09aab274d923b29938473",
+        "bytes": 2390
+      },
+      "tests/fixtures/gsd-retrospective-adnominals.conllu": {
+        "sha256": "d9ac7f0c2db41576702f8f3dd9d3e4f72923d003b3c7bfc6e232feeb05074087",
+        "bytes": 2000
+      },
+      "tests/fixtures/gsd-retrospective-connectives.conllu": {
+        "sha256": "4b0e9894e2403321c61e3a203f4756489a52569aa033222f47bc3cdb9f7333ce",
+        "bytes": 1825
+      },
+      "tests/fixtures/gsd-retrospective-licenses.conllu": {
+        "sha256": "ec0f21ca6991e4f6c3f546a0c93576bbe8293d1caf71ff64d6faccd1bea53381",
+        "bytes": 4319
+      },
+      "tests/fixtures/gsd-reu.conllu": {
+        "sha256": "1c2c7422925819864115f48a889152a467bff04033d017a31ee59681a3443805",
+        "bytes": 6183
+      },
+      "tests/fixtures/gsd-ryeo-expressions.conllu": {
+        "sha256": "3ef4175e0aa08fcea9f64ce2b38027a4f7238942b29c456938ff1f350bf93cc2",
+        "bytes": 2686
+      },
+      "tests/fixtures/gsd-short-reports.conllu": {
+        "sha256": "3a8be6bdf9112683ef8f5e64e591bc2046a5d6952af9d12efb963f354fba8813",
+        "bytes": 1602
+      },
+      "tests/fixtures/gsd-short-stems.conllu": {
+        "sha256": "e625c54ce6aeac1890122a80f1a13fa06d149ec2891fa720c112b348a16c40a7",
+        "bytes": 8581
+      },
+      "tests/fixtures/gsd-source-particles.conllu": {
+        "sha256": "8e2598d2d5ce448f932a7895f92ede29b77522d4e73805ce155cd99f8f5de415",
+        "bytes": 4033
+      },
+      "tests/fixtures/gsd-transition-aux.conllu": {
+        "sha256": "eeed28c66a3d0371914b370dc46f97054595da27572bd01707554bd5bac458ac",
+        "bytes": 70472
+      },
+      "tests/fixtures/gsd-written-vowel.conllu": {
+        "sha256": "6686b8f7d11089faebeb5f1de91b4fac9d5195dca1a7302387587923c86b1d57",
+        "bytes": 15574
+      },
+      "tests/fixtures/gsd.conllu": {
+        "sha256": "8caf3394e80f9dfeeacfd04693a6c6dc10ad232403ad3c53c2f25a7cacd70253",
+        "bytes": 5178
+      },
+      "tests/fixtures/hada-aux-entry-judgments.json": {
+        "sha256": "fb0dd3f6b5f2aa8fc155eae04e4fc5b81d091b77c8de61b4cba68671ee3f7889",
+        "bytes": 211113
+      },
+      "tests/fixtures/hada-aux-sources.json": {
+        "sha256": "c955f725cf1ce1d1d7180411c3089ba0d64c95c5b0113a46b21b74025e1f3867",
+        "bytes": 402755
+      },
+      "tests/fixtures/hada-nominal-sources.json": {
+        "sha256": "dd7820f2e97e016457ad637a24fd37c64c5374b6938e94dad6666d584fba4019",
+        "bytes": 7125951
+      },
+      "tests/fixtures/hada-remaining-sources.json": {
+        "sha256": "374565668a66d053cc86d7f1389e84b47e773eafae9a7fb10e382297805fc42d",
+        "bytes": 7590714
+      },
+      "tests/fixtures/hieut-compatibility-sources.json": {
+        "sha256": "2b09d7f319e9ab552ea732651043d8f24b8f2583ee0a35191bc4ffba4a1b5e35",
+        "bytes": 544666
+      },
+      "tests/fixtures/humble-sources.json": {
+        "sha256": "c2a2643da3be0ab7a46ca1bbff012e6a4632099fa60286983dc6966666c056ec",
+        "bytes": 3736
+      },
+      "tests/fixtures/intensive-aux-entry-judgments.json": {
+        "sha256": "93de131e2f1d623b0c88feeee8536eb7737ff941906eae5fec5523efcd229efb",
+        "bytes": 119650
+      },
+      "tests/fixtures/intensive-aux-sources.json": {
+        "sha256": "595843f85457b85a346a104c0fbfb3a9c91cc9b869e542539427481e2fe18d19",
+        "bytes": 537213
+      },
+      "tests/fixtures/jaop-sources.json": {
+        "sha256": "ec3a5b9e970cf6a05ac7fb82fc2f85b680e8a777217014b46ad473cef3c51bf6",
+        "bytes": 10462
+      },
+      "tests/fixtures/kaist-additive-particles.conllu": {
+        "sha256": "2de09cb69d1ee5f7a9f62447dcb993632556677cb7a9bc7a0471ac42064115fc",
+        "bytes": 16867
+      },
+      "tests/fixtures/kaist-adnominal.conllu": {
+        "sha256": "c5a83930448d7a5fd2ff5f637391d4d19b0641c22a222142df862d190268dcce",
+        "bytes": 4104
+      },
+      "tests/fixtures/kaist-adverb-copulas.conllu": {
+        "sha256": "4832ef5da52782aafde2fe9cea1be99dbd3fa2594bbca2b14aff7cba7a52e7a9",
+        "bytes": 814
+      },
+      "tests/fixtures/kaist-adverb-expansion.conllu": {
+        "sha256": "899671426042e98441f09361a64154803c34837930d5d2f94f763c47b27cd9fb",
+        "bytes": 6128
+      },
+      "tests/fixtures/kaist-adverb-focus.conllu": {
+        "sha256": "fb2471f9a77fe9fd37b32b9ee65b5e1b283c1c675301fe80648adf012b07cfa1",
+        "bytes": 2882
+      },
+      "tests/fixtures/kaist-adverb-roots.conllu": {
+        "sha256": "d437a9109a2bea2cec87917b8ce2aaa6d26a369ffd7603380f202f057faa1786",
+        "bytes": 5931
+      },
+      "tests/fixtures/kaist-adverbs.conllu": {
+        "sha256": "bb0005b639cb6460dc670d3f9441c85419ee7bfb429b9eb582bced1d17f2c4eb",
+        "bytes": 4463
+      },
+      "tests/fixtures/kaist-approximation.conllu": {
+        "sha256": "b87c1105fa4f520c462459ac28c098c0d41ece6d79a99f4aae96a8eb19e7c020",
+        "bytes": 2465
+      },
+      "tests/fixtures/kaist-auxiliary-inventory.conllu": {
+        "sha256": "d74df9adf361e7437d67ca4c20c560e891af8d165b8da6e537263a471273e255",
+        "bytes": 5697
+      },
+      "tests/fixtures/kaist-bieup.conllu": {
+        "sha256": "2ce371bb3de7701b28b40a1d0879b1a55fccb8b1fb4223e0ac9795250c7e73c7",
+        "bytes": 6583
+      },
+      "tests/fixtures/kaist-carry-aux.conllu": {
+        "sha256": "3d309e697a997a19993e02431e589d2b787377b21543ef6370157fff0ecf64a5",
+        "bytes": 2387
+      },
+      "tests/fixtures/kaist-comparative.conllu": {
+        "sha256": "8f578d7a1afe56ed605f56f20f783d344bed7cd30dbd99d433fd7e24b3355623",
+        "bytes": 3587
+      },
+      "tests/fixtures/kaist-comparison-case.conllu": {
+        "sha256": "c8cb7d91b7b55226a46b9a8e46c397562a176f6fd00419bb6bbeb8beee019e82",
+        "bytes": 10106
+      },
+      "tests/fixtures/kaist-complex-bieup.conllu": {
+        "sha256": "c11bc4f39fbb6d85eb23fc6a35961018e6846f41247d0d9b694d7f7b6a443eac",
+        "bytes": 12239
+      },
+      "tests/fixtures/kaist-concessive-endings.conllu": {
+        "sha256": "50dac22dce61470f76295d883ed7bacb68e93fb2246ea69035850cfdea47624a",
+        "bytes": 8614
+      },
+      "tests/fixtures/kaist-conditional.conllu": {
+        "sha256": "ca6ac464e4aad1b3a3e97482d7dc18a33bc2760bcc3d39a98e5bca47e0cc5a3d",
+        "bytes": 3339
+      },
+      "tests/fixtures/kaist-conjectural-aux.conllu": {
+        "sha256": "faef15039735499124d5b9e3af9371c7aa795c2d07c9bfc5fda5b13db1bf839a",
+        "bytes": 37934
+      },
+      "tests/fixtures/kaist-connective-copulas.conllu": {
+        "sha256": "d5f82c47e1e3fe260f448c0830571f0c3550e840367e39eae9208dbc147f9934",
+        "bytes": 4429
+      },
+      "tests/fixtures/kaist-continuation-aux.conllu": {
+        "sha256": "357d802fa4214f46e9f2b2d1cfc10ae0dda1af9881a2bfaae60a4258d92eb899",
+        "bytes": 16361
+      },
+      "tests/fixtures/kaist-copula-fragments.conllu": {
+        "sha256": "7d41539494b22218c9211848f4095a78e17b37c2fc59ffb56ad7a0a48d485027",
+        "bytes": 3398
+      },
+      "tests/fixtures/kaist-copula-yo.conllu": {
+        "sha256": "e7755038e58d2930c68a9329ce245b70f9ad5f303f62ee20fd7060bb77bb7ce1",
+        "bytes": 9345
+      },
+      "tests/fixtures/kaist-core-case.conllu": {
+        "sha256": "e8e77dc9cfda68cfedeb27cca2942408d6e306157b9e76dc3658c6e53343fe53",
+        "bytes": 2694
+      },
+      "tests/fixtures/kaist-daga.conllu": {
+        "sha256": "0f4438c4b860ba94168aace1209ca3afda4663eea35748e5c4becfb436b7eaf5",
+        "bytes": 3499
+      },
+      "tests/fixtures/kaist-dajiman.conllu": {
+        "sha256": "217d4f5404fe968401037fb29e3e299661d98f996252c87b3051c72a7d32b31e",
+        "bytes": 9196
+      },
+      "tests/fixtures/kaist-danda.conllu": {
+        "sha256": "7401fca5d018be8a121a96d4f1731939a777a57824d81bec8733e48aa269da52",
+        "bytes": 8173
+      },
+      "tests/fixtures/kaist-danikka.conllu": {
+        "sha256": "6f90468f96bfad4e9494f1afa673caff2f001209ac8b0a4a6cb4f19e20b18072",
+        "bytes": 2955
+      },
+      "tests/fixtures/kaist-deictic-vowel.conllu": {
+        "sha256": "50a58801f05cc49365c922b101bd4cb466a9bb08aa2742246045d037ef3cd087",
+        "bytes": 12731
+      },
+      "tests/fixtures/kaist-destination-particles.conllu": {
+        "sha256": "6aeb7951b3c2e2904c99f4c9fc492af36259de28a759988659d33a5c0d6b7020",
+        "bytes": 3129
+      },
+      "tests/fixtures/kaist-deul-aux.conllu": {
+        "sha256": "9281e8e53d127c9b0bd666128609db9a2e3b48d8d799502123353478c921d47e",
+        "bytes": 38447
+      },
+      "tests/fixtures/kaist-digeut-siot.conllu": {
+        "sha256": "dc8c5515ee2acc7acc56f6e0e4eedbf3daf17f57263bfdffb4c491c54661e069",
+        "bytes": 5503
+      },
+      "tests/fixtures/kaist-direct-command-review.conllu": {
+        "sha256": "560d350ad8a9eea77538e3500d37fcb5946b0c63a18fd4072ef4ba46dd7b6fe9",
+        "bytes": 3277
+      },
+      "tests/fixtures/kaist-doe.conllu": {
+        "sha256": "e19a7ade1dafe5744d754e6cfd7f0b697e61ce80072f18eaa47d504c0ef82643",
+        "bytes": 1785
+      },
+      "tests/fixtures/kaist-emphatic-particles.conllu": {
+        "sha256": "94cd7d93ea121af17465aacd4671101c6ae258a7c83f04283848519bdf3f3f09",
+        "bytes": 20724
+      },
+      "tests/fixtures/kaist-enumerative-particles.conllu": {
+        "sha256": "6acde586ef080f89b749bd694c046d7d50efbcd34e69032e421531b3009744f3",
+        "bytes": 6585
+      },
+      "tests/fixtures/kaist-eumse.conllu": {
+        "sha256": "83f01174578116f1b7fc9d00287562083146f0a9ed8ea7cedecca2f1d00180dc",
+        "bytes": 522
+      },
+      "tests/fixtures/kaist-exclamation.conllu": {
+        "sha256": "fe44f50d7788fc5d5afbc4b61574e6393250a47a6ae7ac9e9e3587a16f7d2b13",
+        "bytes": 6779
+      },
+      "tests/fixtures/kaist-existential-paradigms.conllu": {
+        "sha256": "e515bfc57b3cb1b75a5bc9ea31f3621ae745a2cd5dfbd57937940eff40b71914",
+        "bytes": 2029
+      },
+      "tests/fixtures/kaist-extent.conllu": {
+        "sha256": "75484680d96c28ce5f84f656dd6fc85440c35ac7cb7ed58610c0550f1eff6edc",
+        "bytes": 3497
+      },
+      "tests/fixtures/kaist-eya.conllu": {
+        "sha256": "083ebf0e8cf1a09af9bcbdb95a1a7e3cac9963796e2c94b7d8c0a9c15bc46b4e",
+        "bytes": 4033
+      },
+      "tests/fixtures/kaist-finite-vowel.conllu": {
+        "sha256": "217b27f1f62348b11d2bc8f6755fab7ed56e5ea4d867c60e1935e6d958eec607",
+        "bytes": 5788
+      },
+      "tests/fixtures/kaist-foreign-nominals.conllu": {
+        "sha256": "5040a9aa1712051cda8064bf42732a742c2c0705fbe48a9b315a7326c93fca11",
+        "bytes": 26501
+      },
+      "tests/fixtures/kaist-geol.conllu": {
+        "sha256": "5f72ebe45557dcbb19f75590dae6e785fab550dae0b5127aebf6a852212af60f",
+        "bytes": 3114
+      },
+      "tests/fixtures/kaist-geon-contrast.conllu": {
+        "sha256": "43cf424831fe434f55e8b96969781a98cffbf16a189619ca9564d6e92a3a6afd",
+        "bytes": 5843
+      },
+      "tests/fixtures/kaist-hada-aux.conllu": {
+        "sha256": "e57341dddd14fb70cc17ea680c34200b9fa5df41c261c1572e3a892c83a9e2ab",
+        "bytes": 295448
+      },
+      "tests/fixtures/kaist-hada-complex.conllu": {
+        "sha256": "2ac4c29aa20dc675329c84a2e14ba6675e06390dd045d0c76b166b1d9578b303",
+        "bytes": 1337
+      },
+      "tests/fixtures/kaist-hada-ki.conllu": {
+        "sha256": "dc893234419a35809c2e80a235438481463584e725925928f08940ef8642f5bd",
+        "bytes": 1924
+      },
+      "tests/fixtures/kaist-hieut-compatibility.conllu": {
+        "sha256": "fb272b67da387cfc4f6748b27b04d3e0df9335d2e39bc8c83cc4c900b96173b8",
+        "bytes": 4833
+      },
+      "tests/fixtures/kaist-honorific-copulas.conllu": {
+        "sha256": "62292f2d430775adb16e4987cc6146f0871e1472bf9cd7ae045f5c7cdfdbda3f",
+        "bytes": 1623
+      },
+      "tests/fixtures/kaist-intensive-aux.conllu": {
+        "sha256": "89ee225c6947cb9bcd4783d3963d9c9e3b5782726f68bc50bdfb98cf7847adc4",
+        "bytes": 1997
+      },
+      "tests/fixtures/kaist-intention-connectives.conllu": {
+        "sha256": "023f1ce1f7f6023f005bdb2c12ac67eb644bde6dd71eaf19378de6d86198d741",
+        "bytes": 2513
+      },
+      "tests/fixtures/kaist-intention-endings.conllu": {
+        "sha256": "22b31ff27363e70d6d546a236fc4f7fb342fc33e1aecb4d85732014e86a6ad87",
+        "bytes": 19008
+      },
+      "tests/fixtures/kaist-jimaneun.conllu": {
+        "sha256": "3edb1bf3c512a5d3b5a4dda6d65a3f8ab1907c98ebf2755e5245145afac5f650",
+        "bytes": 10497
+      },
+      "tests/fixtures/kaist-kkaena.conllu": {
+        "sha256": "f63ee94c0b243f7c4f6ed9f108ee895ebacb2077fdc1766226fb111115c63a17",
+        "bytes": 984
+      },
+      "tests/fixtures/kaist-lexical-malda.conllu": {
+        "sha256": "99b8dc93198b7094177dc3ea28f13929843a2f099dcf031a7181140669f35ce7",
+        "bytes": 53855
+      },
+      "tests/fixtures/kaist-llachimyeon.conllu": {
+        "sha256": "5e833176938ba709e0f90c8cfad99685b1c038b995abf108ed6b49dec8324bee",
+        "bytes": 5035
+      },
+      "tests/fixtures/kaist-necessity-search.conllu": {
+        "sha256": "0f4f5c02ac5a1c10e0cba7e301b4deff407260c54e19e9de2d13525fe139929e",
+        "bytes": 1441
+      },
+      "tests/fixtures/kaist-negative-classes.conllu": {
+        "sha256": "fc6b257c432e8529ce11677b1f1f490c38861d93996429565bc0e1bed194901b",
+        "bytes": 14680
+      },
+      "tests/fixtures/kaist-negative-contractions.conllu": {
+        "sha256": "b87c1105fa4f520c462459ac28c098c0d41ece6d79a99f4aae96a8eb19e7c020",
+        "bytes": 2465
+      },
+      "tests/fixtures/kaist-neuni.conllu": {
+        "sha256": "b1082d841332a4b3d9dc82ded52f7c36a40799fdad60f913705497500bffab76",
+        "bytes": 4739
+      },
+      "tests/fixtures/kaist-neura.conllu": {
+        "sha256": "7259620593edfda0d6a67f393dc52f1ecf9a6c516b88fce5003ea431e6b2ea01",
+        "bytes": 15044
+      },
+      "tests/fixtures/kaist-nira.conllu": {
+        "sha256": "5dee082d7414cd8025524bb5895dad6f363f15f452c5cfcbfa979065312710b1",
+        "bytes": 1959
+      },
+      "tests/fixtures/kaist-noh-contraction.conllu": {
+        "sha256": "5cc0ab6c0c36097ee1d01564311d7bcb3b31b03603d012d4b5e00253b9bef33e",
+        "bytes": 1413
+      },
+      "tests/fixtures/kaist-nominal-copulas.conllu": {
+        "sha256": "2e4f01d4fbdd18e194f2e810a7cdd04859c18b5952bad3dc1856b8b53dc8dbbb",
+        "bytes": 803
+      },
+      "tests/fixtures/kaist-nominal-i.conllu": {
+        "sha256": "feca29129d9f85cef2d138d4b0fa7d97808a9de09d8ae8695663e334f6275ae9",
+        "bytes": 4014
+      },
+      "tests/fixtures/kaist-noun-base.conllu": {
+        "sha256": "4a1556e2385bd360ef06de578a893bdd3b561e4edfb3b32bc2bedcc88a5006d3",
+        "bytes": 690
+      },
+      "tests/fixtures/kaist-noun-compound.conllu": {
+        "sha256": "25f3869bcaf90ebab36ab4c3ecbd82f5f7a1bc9c26ec27cb04de248580be3369",
+        "bytes": 9186
+      },
+      "tests/fixtures/kaist-noun-root.conllu": {
+        "sha256": "dc318e011497c7422e4bef4728ea286878180ac44c7077a4a657358ad4115c3e",
+        "bytes": 8331
+      },
+      "tests/fixtures/kaist-obligation.conllu": {
+        "sha256": "a3d39ea946631de4000c13fcffab9929b25cf89084bb7c8b3c2046e537cb6b8e",
+        "bytes": 3614
+      },
+      "tests/fixtures/kaist-omitted-connectives.conllu": {
+        "sha256": "0fa35118a76da451a4d63426d45859f1bbd213a7cb0f2ee3db8992982de06b78",
+        "bytes": 8727
+      },
+      "tests/fixtures/kaist-omitted-copulas.conllu": {
+        "sha256": "ce6c33848edb12767b466a4bdfc251713e69a5883d9b642fe0d25776a0a9bd0c",
+        "bytes": 4639
+      },
+      "tests/fixtures/kaist-opaque-adverbs.conllu": {
+        "sha256": "d7e9d464efe2d9f227aaf3be1efa33df42d1321ee303c29ad8a254cb7789077e",
+        "bytes": 1259
+      },
+      "tests/fixtures/kaist-particle-chains.conllu": {
+        "sha256": "d8ea91a60969dd95b959edebecd2f17c532eb9dc8300bc0f00d160d4d7bd65d7",
+        "bytes": 6001
+      },
+      "tests/fixtures/kaist-post-ending-particles.conllu": {
+        "sha256": "f1db8069ae84359835a225e0b8cc1373dbbb01d31c1d59834a036a2e7c5d0fda",
+        "bytes": 8026
+      },
+      "tests/fixtures/kaist-potential-aux.conllu": {
+        "sha256": "da04a2f8160603981f9b6eac1a79d253f828bf1fcf719d2deeb79aac07de3b4f",
+        "bytes": 20916
+      },
+      "tests/fixtures/kaist-prefinal-copulas.conllu": {
+        "sha256": "ecbce2d886d3de0792cd77d83aca8255ee0b32afe4530dc0925a25a72d9a0343",
+        "bytes": 1081
+      },
+      "tests/fixtures/kaist-prefinal-licenses.conllu": {
+        "sha256": "3830c07943483bb4f8259b1c65fae1d66eedec6adbc8f66c2331a47e7f65e85e",
+        "bytes": 1877
+      },
+      "tests/fixtures/kaist-pretence-aux.conllu": {
+        "sha256": "9a079ce60fcb054a6bb0c2eb497178b40d876638a58651c5429c80bbe138df81",
+        "bytes": 2821
+      },
+      "tests/fixtures/kaist-propositive.conllu": {
+        "sha256": "443a6d605a27038b86d6e3bccb132c44c807b570518702b7fc2461a93f495867",
+        "bytes": 1319
+      },
+      "tests/fixtures/kaist-question-copulas.conllu": {
+        "sha256": "e055ac254d5740e915ef5c2734a3e599de6ceea1c39b81a1e68bc859c651920a",
+        "bytes": 4763
+      },
+      "tests/fixtures/kaist-quoted-alternatives.conllu": {
+        "sha256": "91935920f9d2d7fca1cbb3ce380b23d8971017965a3886c6f80c10f316aef170",
+        "bytes": 4015
+      },
+      "tests/fixtures/kaist-quoted-definitions.conllu": {
+        "sha256": "e9d90611f02e4aa2a2c6c3bffa71eb0fd2c433090d9266a2812e3832ba1e7b75",
+        "bytes": 34760
+      },
+      "tests/fixtures/kaist-quoted-neuni.conllu": {
+        "sha256": "06266c3436753cd72d63e6edb7664ce44d242848f738f3153bd9c246f7b957ff",
+        "bytes": 4242
+      },
+      "tests/fixtures/kaist-quoted-questions.conllu": {
+        "sha256": "ee06462465b8c47cef325ef70421de0c3be60093c1cf18e5bdfe7a748f2f51f9",
+        "bytes": 4151
+      },
+      "tests/fixtures/kaist-ra-conditions.conllu": {
+        "sha256": "73474e01a1f268ffab5b51519ec72fe55fd8d4eb7b21669736e25dfb4d1477bc",
+        "bytes": 4597
+      },
+      "tests/fixtures/kaist-range-case.conllu": {
+        "sha256": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
+        "bytes": 3996
+      },
+      "tests/fixtures/kaist-repetitive-aux.conllu": {
+        "sha256": "e75a34ee48a1b6191e65c90c524f56bf5b83f71f9a0ae3562031593a47cc3b26",
+        "bytes": 57591
+      },
+      "tests/fixtures/kaist-report-myeo.conllu": {
+        "sha256": "cbefb3cbe28c12dbbefb3892b3e92f1b35ee2aea24f81a45237e53971641dcf7",
+        "bytes": 5196
+      },
+      "tests/fixtures/kaist-report-ne.conllu": {
+        "sha256": "de2a82c021a1e0e13533f1794de85dcb806a1833a42fb356506cb3ff08fff5e9",
+        "bytes": 5695
+      },
+      "tests/fixtures/kaist-report-ni.conllu": {
+        "sha256": "c64d0940253fbe551563bcb24bc805b485f88984da278190f84aeb86f4ea85ea",
+        "bytes": 3874
+      },
+      "tests/fixtures/kaist-reporting.conllu": {
+        "sha256": "5cbdb189be3eecb6d43e62022ffce0157a05c66f6c85aa399ff4c21b43f751e9",
+        "bytes": 3194
+      },
+      "tests/fixtures/kaist-request-aux.conllu": {
+        "sha256": "751b1a1427ad9a376cfc2d3c5dfb3ebdff429836bbcdaecac792e9021a7fa4bc",
+        "bytes": 6724
+      },
+      "tests/fixtures/kaist-result-connectives.conllu": {
+        "sha256": "23ad0501a7082546c3f04130c6c9410fbf6a121ab4b2be35b9c806ce25ab2933",
+        "bytes": 2229
+      },
+      "tests/fixtures/kaist-retrospective-adnominals.conllu": {
+        "sha256": "1631e19bebbd635f78f33a07556de844f92b5adbc05851b29a4837326c40a1ce",
+        "bytes": 2212
+      },
+      "tests/fixtures/kaist-retrospective-connectives.conllu": {
+        "sha256": "a98d63aa1c87249fab76c0b13d8967ac9072992716fc0d8f3c56ff459ab47a59",
+        "bytes": 4204
+      },
+      "tests/fixtures/kaist-retrospective-licenses.conllu": {
+        "sha256": "c56c0c732de2c7c80d44bea5b44837c62757cd604af018f529990bdd7adfb6a1",
+        "bytes": 3143
+      },
+      "tests/fixtures/kaist-reu.conllu": {
+        "sha256": "b480c618d440206f05cd40486dda8aaf876fbe838e954bb92b036ed216c0b2d6",
+        "bytes": 6047
+      },
+      "tests/fixtures/kaist-ryeo-expressions.conllu": {
+        "sha256": "2e9bc12fa1356ae024fdb139e4212b1dc03b97ba9b2fb5238d894e198e90e58c",
+        "bytes": 13285
+      },
+      "tests/fixtures/kaist-ryeogo-copulas.conllu": {
+        "sha256": "7f557dabb6e312143694999045c45232f8eb884582cb5e3098135f68ee4fc0b5",
+        "bytes": 1175
+      },
+      "tests/fixtures/kaist-ryeona.conllu": {
+        "sha256": "144cefe58ae830b8a7164f32d3012f8fd6cbd0038cffe56409fef3884d9501c0",
+        "bytes": 1012
+      },
+      "tests/fixtures/kaist-seo-connectives.conllu": {
+        "sha256": "e75f2a62d4e43c5eecb5ec2066930f337218eedc31e5ba54ced48564b35c28f4",
+        "bytes": 16119
+      },
+      "tests/fixtures/kaist-short-clauses.conllu": {
+        "sha256": "1ccdec06811d9001816d79531a256f901c6cfb3ff1395faf904fd149794b4800",
+        "bytes": 2748
+      },
+      "tests/fixtures/kaist-short-recipient.conllu": {
+        "sha256": "82f24a9103c3809b861cefebb394ff5d093afb027917a6a023707c0253450d5f",
+        "bytes": 5149
+      },
+      "tests/fixtures/kaist-short-stems.conllu": {
+        "sha256": "2b2a4e6c8a01521750fa6bb510884a99bd34747d8ea98696a5ac5dd09fdbe9cc",
+        "bytes": 8837
+      },
+      "tests/fixtures/kaist-soseo.conllu": {
+        "sha256": "62255b785165a98ebbe03531434dae49650df8b67a007f9908d3482b905c7dee",
+        "bytes": 1509
+      },
+      "tests/fixtures/kaist-source-particles.conllu": {
+        "sha256": "6ac051d317d607fe9c0141db05c6ed8fa05eac8526965bf13949d107756439b2",
+        "bytes": 1489
+      },
+      "tests/fixtures/kaist-transition-aux.conllu": {
+        "sha256": "646ff27904d5b491e03537d8fe0528eac59e9574d329c0e840f31771eb4a6ec2",
+        "bytes": 186178
+      },
+      "tests/fixtures/kaist-uncertainty.conllu": {
+        "sha256": "8b5ec5dfb78cc50c331746035e2269800cd28521ccdb78ca06d84361b1deded6",
+        "bytes": 2033
+      },
+      "tests/fixtures/kaist-vocative.conllu": {
+        "sha256": "99418bc9296fa7f859260b1b9289974a14688f5d7a13c21f64b46012fda69ba2",
+        "bytes": 1518
+      },
+      "tests/fixtures/kaist-written-vowel.conllu": {
+        "sha256": "6b45182a0b56a13da60b0e22b57ac3188ff68fe2dd126264092561476e47e77f",
+        "bytes": 87134
+      },
+      "tests/fixtures/kaist.conllu": {
+        "sha256": "5c5a4d982726f430807316cb86592ec2571158970dc1db141d96d1d018289add",
+        "bytes": 3525
+      },
+      "tests/fixtures/krdict-additive-particles.json": {
+        "sha256": "b125fe0c49e06bd0ed333cccbc3fcbd67330ae6a01d8a2ab2a04d42bd888584a",
+        "bytes": 1145523
+      },
+      "tests/fixtures/krdict-adjectival-allomorph-derived.json": {
+        "sha256": "f7a5e7e10e6b6e6811d76deb9637264ababfb34bc7748305fb01295fb2ef5103",
+        "bytes": 7922
+      },
+      "tests/fixtures/krdict-adjectival-allomorph.json": {
+        "sha256": "71f9e8c86ca7ec8c1288a0a45374e13a94ac909edd77b66c4b6bb222c9ca10ba",
+        "bytes": 22774235
+      },
+      "tests/fixtures/krdict-adjectival-question.json": {
+        "sha256": "8aae7a3abdaedca58d020f63e14038a7f988ecf6e4dbb457eb152f26c812351f",
+        "bytes": 179948
+      },
+      "tests/fixtures/krdict-adnominal.json": {
+        "sha256": "7eda7b32d876ced84065a5a334c01757cacaa4ee7192288edfbb80892f6ad88f",
+        "bytes": 22005
+      },
+      "tests/fixtures/krdict-adverb-copulas.json": {
+        "sha256": "d4ef45baf0d990b753145da246c8fba36ce8d3280d11127a993f0361da382914",
+        "bytes": 312347
+      },
+      "tests/fixtures/krdict-adverb-expansion.json": {
+        "sha256": "ab7a83aa8b4ca9c3568e4d60a6e7e7987afd80d64b548d330434a59f413d52ca",
+        "bytes": 30512
+      },
+      "tests/fixtures/krdict-adverb-focus.json": {
+        "sha256": "b1197998826bc92133c742bfcc114d30d08fec04999724185013403670ce1513",
+        "bytes": 116032
+      },
+      "tests/fixtures/krdict-adverb-roots.json": {
+        "sha256": "33c0913e8804be95d6190fda9b620de1f40158b2c111ae8bba716d0d1a1da0f3",
+        "bytes": 162457
+      },
+      "tests/fixtures/krdict-adverbs.json": {
+        "sha256": "da0af96ef4f1722fed5242c7e473e01e38a8d8a2820cad0260cb867f8a9e4022",
+        "bytes": 111692
+      },
+      "tests/fixtures/krdict-approximation.json": {
+        "sha256": "f209907f4a5edb3b08c482e2cfc7cc527e5a3c5abcdfdc24ea5fe6b737837526",
+        "bytes": 183541
+      },
+      "tests/fixtures/krdict-attachment-connectives.json": {
+        "sha256": "890107ad7efa45e2ff1096b84422cd7a31b03b7ba0d023629ed13e1afbe911bf",
+        "bytes": 18349
+      },
+      "tests/fixtures/krdict-attachments.json": {
+        "sha256": "b829dc8b4c04141a7114a91b673fbb273d61b70b63299d4c69a73c8685b6f1b4",
+        "bytes": 176498
+      },
+      "tests/fixtures/krdict-auxiliary-classes.json": {
+        "sha256": "b7e36c6bf71f54b195b9d2a6aee4a55596db49608c7d065a38809d3eb9107c29",
+        "bytes": 5766
+      },
+      "tests/fixtures/krdict-auxiliary-dictionary.json": {
+        "sha256": "cc5307f6555f8e34e7579720cc825ae9a0d35393de40e8930fd6c3733d9eb63b",
+        "bytes": 301654
+      },
+      "tests/fixtures/krdict-auxiliary-inventory.json": {
+        "sha256": "41748dcae063735e5cb87e55c903e1fa61c50dc58c6f511936b0ce03fb0845a2",
+        "bytes": 141548
+      },
+      "tests/fixtures/krdict-ba.json": {
+        "sha256": "d0405f25d4d3a38105cb27417418f64879667ea8f879875b5c4a154f72ab34ef",
+        "bytes": 2132131
+      },
+      "tests/fixtures/krdict-bare-noun-spacing-additional.json": {
+        "sha256": "f9e4ee5668149fba58ea367a1422104182aba51c41d3e14b410291893151c701",
+        "bytes": 22845
+      },
+      "tests/fixtures/krdict-bare-noun-spacing.json": {
+        "sha256": "2f6ff15ab8f91b3a7cdd0ceca6ea39e3452543e69f8a52c13014a7e5d4734a19",
+        "bytes": 397321
+      },
+      "tests/fixtures/krdict-bieup.json": {
+        "sha256": "72627637d2499b6a8f6f2230818b4094840f025947eabf0fe908c1810426f3f5",
+        "bytes": 5180513
+      },
+      "tests/fixtures/krdict-breakdown.json": {
+        "sha256": "c3f1a6708ac0c6edb645d10eda48e602829ba41132d97371d21668c050f40016",
+        "bytes": 60137
+      },
+      "tests/fixtures/krdict-carry-aux.json": {
+        "sha256": "e5e189524597bcf173cb5ca6e36b370347d1d2167abd48dc2aa37e94353f6835",
+        "bytes": 963338
+      },
+      "tests/fixtures/krdict-causal.json": {
+        "sha256": "8a4646cd90b6a17e39f1d66928f531333641abb91c221601de97ee7f758ad0fd",
+        "bytes": 60984
+      },
+      "tests/fixtures/krdict-caution-ending-additional.json": {
+        "sha256": "6b464efe32a91779de2c200d0df78fc4b84c0cc4548391cd8e57c56669ff915a",
+        "bytes": 2046020
+      },
+      "tests/fixtures/krdict-caution-ending.json": {
+        "sha256": "8e409ff6a050b301346d5ef86fe4fa4186897c8bfc2bcf36d020ea112cce1a33",
+        "bytes": 3251727
+      },
+      "tests/fixtures/krdict-chigo.json": {
+        "sha256": "504b018e387d3c7b93efac3a610568d4328a264eb36e5b83c4c49a05cf6dc8ae",
+        "bytes": 224061
+      },
+      "tests/fixtures/krdict-colloquial-copulas.json": {
+        "sha256": "9bcfe95d4fa6b11ab5028b40188ade466d903cdf8130481eb9d55c6503dd9a8f",
+        "bytes": 167904
+      },
+      "tests/fixtures/krdict-comparative.json": {
+        "sha256": "0dd7ccffa582de498333b77c1a9b2dcab5beda16c67324aa965ba5ac3e900f57",
+        "bytes": 18292
+      },
+      "tests/fixtures/krdict-comparison-case.json": {
+        "sha256": "c02f2fdd45911e9feb0d8eefe6bffa99da84d9b6d184c8bf0c636b816ec9e424",
+        "bytes": 320200
+      },
+      "tests/fixtures/krdict-comparison-particles.json": {
+        "sha256": "7d855feab4200f6c6752599b977255bba5e3ff5a95f4b214cb9c2c4147a7a3a6",
+        "bytes": 653225
+      },
+      "tests/fixtures/krdict-complex-bieup.json": {
+        "sha256": "af39151b1b001041933d2fe4ef9ea9cdd5dff410e99c06cd30b4b7bb9caa8f34",
+        "bytes": 551805
+      },
+      "tests/fixtures/krdict-concessive-designation.json": {
+        "sha256": "aa47bb36b6622caa4b46c9f4c2a1df394dbe80137496b65a8c9b1400d7bc3dfb",
+        "bytes": 179326
+      },
+      "tests/fixtures/krdict-concessive-endings.json": {
+        "sha256": "0ba2788146a9caef3ff3601c17e876fe1ed4b87a8d96d7e526332b6a0bfa0be5",
+        "bytes": 123726
+      },
+      "tests/fixtures/krdict-conditional-question.json": {
+        "sha256": "061614da33bcb92e2ff49d7667055bbf8972e0e9d15abc2b7e1eb0df5752f16d",
+        "bytes": 1676221
+      },
+      "tests/fixtures/krdict-conditional.json": {
+        "sha256": "4b61d74383a4e555169f1dc28618ec1c4b9224c4a39b4bf1c0e786356a8c63d2",
+        "bytes": 32978
+      },
+      "tests/fixtures/krdict-conjectural-aux.json": {
+        "sha256": "38fddd8754b8cf25ac74e7b7bcb0d64307ce2f5d79e58eb7d369d2261f5776d1",
+        "bytes": 2567098
+      },
+      "tests/fixtures/krdict-connective-copulas.json": {
+        "sha256": "fa9afaf50ac16b07a7460aedfa92a032017bf2292d4b97a91c4241a493fdae66",
+        "bytes": 125865
+      },
+      "tests/fixtures/krdict-continuation-aux.json": {
+        "sha256": "96d52285155ffd477a8fa18b170142ca15a1b1ac058709559380a92eb2598195",
+        "bytes": 3176696
+      },
+      "tests/fixtures/krdict-continuation-inflection-additional.json": {
+        "sha256": "2dcad39f82d408374afe1ce4972565ddae1bead929700e00ccbb27f3ffc46717",
+        "bytes": 3091058
+      },
+      "tests/fixtures/krdict-continuation-inflection.json": {
+        "sha256": "2168535104b0e4c60c1232c76fb3a65b88f27c4de4cba0c6a2c623488dd9b673",
+        "bytes": 3248026
+      },
+      "tests/fixtures/krdict-continuation-left.json": {
+        "sha256": "0b702d7af9219848ebd347e51ed8b2c4766e42d9ba942ab83bd1229ebf4fd564",
+        "bytes": 1832547
+      },
+      "tests/fixtures/krdict-continuation-residual.json": {
+        "sha256": "d16eaa15a9a5a606c87a6b2ca72268df97a239debe66d5b81bb0dbb00d61630a",
+        "bytes": 691382
+      },
+      "tests/fixtures/krdict-continuative-topic.json": {
+        "sha256": "61f7f269a4388fe1b0fe89dac253582c8e28cfd32f62b8cfc64784a0b878bd27",
+        "bytes": 391475
+      },
+      "tests/fixtures/krdict-copula-yo.json": {
+        "sha256": "c2753e27fbee207d6fa218e34f0939701a358edb5f352ce04736f17869ac2b73",
+        "bytes": 18231
+      },
+      "tests/fixtures/krdict-copular-class.json": {
+        "sha256": "463dee29d7405060e0d1909048488ed0334d43ac31f672a0aaaac13041ff2950",
+        "bytes": 807604
+      },
+      "tests/fixtures/krdict-copular-command-exclamation.json": {
+        "sha256": "f2e2fa6ba99fd4b34be9058855cf354770cb320280ab4a38d245225f34d9ca89",
+        "bytes": 2540635
+      },
+      "tests/fixtures/krdict-core-case.json": {
+        "sha256": "40b00da88f1517c5b68f02e5e3b60e0e7b747e8a60466c46d208da475df9041b",
+        "bytes": 201108
+      },
+      "tests/fixtures/krdict-counterfactual-ryeon-english.json": {
+        "sha256": "66d21df1a076ec362e408486302bad4df31fddedd6aa9d9a249b8d81b5954beb",
+        "bytes": 1335524
+      },
+      "tests/fixtures/krdict-daga-native.json": {
+        "sha256": "504ceddf70a03209d6d212e3d8ea209ea1e24cf40efdec2c8e6ce308ba347632",
+        "bytes": 1434134
+      },
+      "tests/fixtures/krdict-daga.json": {
+        "sha256": "0a3d4242982b637c0cf2fd4d4f51eaa566a03576eeede7a6efe9de013cff4860",
+        "bytes": 24717
+      },
+      "tests/fixtures/krdict-daji.json": {
+        "sha256": "59304e911a9f9dc53c57568546fcb93874dedc6c8c45206341a1ac342ec77861",
+        "bytes": 4455903
+      },
+      "tests/fixtures/krdict-dajiman.json": {
+        "sha256": "eff0b9e5aff31e71dd20ae227d13012c568f2033719c69e2f4d640cc4c4e2bc0",
+        "bytes": 2154843
+      },
+      "tests/fixtures/krdict-danda.json": {
+        "sha256": "03252baa271268de50a7bdf4b256ea34ae934809a808335dc5a56b46631fcb95",
+        "bytes": 2857465
+      },
+      "tests/fixtures/krdict-danikka.json": {
+        "sha256": "00318deb786a4a873f83154722241cabe6674ea29cc87aee409250eb33a206f4",
+        "bytes": 2977903
+      },
+      "tests/fixtures/krdict-degree-expectation-labels.json": {
+        "sha256": "0897b6247f14e969c528a8277a2f0a0f9d49baddc0a62c47c60860d287770349",
+        "bytes": 28486
+      },
+      "tests/fixtures/krdict-degree-rimankeum-english.json": {
+        "sha256": "0ac4ec9b536350e3cd350a654ef050a7d225d399096059595cf30779ee379386",
+        "bytes": 1224654
+      },
+      "tests/fixtures/krdict-deictic-vowel.json": {
+        "sha256": "8812bb4ec228edc125c1796e5c7ca8e71eb9f3cfffa3b6ab004ca7bc9565a825",
+        "bytes": 798995
+      },
+      "tests/fixtures/krdict-deoniman-english.json": {
+        "sha256": "68c01844104645c7135b3ed9e18afdb1015eed697928a8a4794cbf31e61afce5",
+        "bytes": 1882632
+      },
+      "tests/fixtures/krdict-deoniman-labels.json": {
+        "sha256": "856e7970dc7005b9492237630caecfa3a55ac59f121e6a44af3d6e442f29c270",
+        "bytes": 53177
+      },
+      "tests/fixtures/krdict-derivation.json": {
+        "sha256": "da9c6b094b00ed3a24e718350b612925215d6d4e8615bff78bbbbe6fd796d031",
+        "bytes": 77133
+      },
+      "tests/fixtures/krdict-destination-particles.json": {
+        "sha256": "1f91c059e430d984814ba83ce775024afaa2cc30758e6cc7990e390f36bbe34b",
+        "bytes": 101869
+      },
+      "tests/fixtures/krdict-deul-aux.json": {
+        "sha256": "d1e174499a2d41b606b080a2a95150b1bd873ff936accec25ec7fb60bd8afe4a",
+        "bytes": 1278688
+      },
+      "tests/fixtures/krdict-digeut-siot.json": {
+        "sha256": "0d6f2e394a037465a4edb7ae60cc7ffc9ad69902cddc7a375314b36c7221f9d7",
+        "bytes": 2281575
+      },
+      "tests/fixtures/krdict-direct-command-review.json": {
+        "sha256": "b521b8258d2fe113766fbefe834a43bfbe01a05a9760c7ce70b2e439f51475ed",
+        "bytes": 504358
+      },
+      "tests/fixtures/krdict-doe.json": {
+        "sha256": "e94092f5bc7761322385c8da78dc678da8da8bbdfce6cc47651c17d210cf5612",
+        "bytes": 333935
+      },
+      "tests/fixtures/krdict-doeda-complement.json": {
+        "sha256": "d938a8f01f754fb07a98d4b4cb0a7c59f6f4c45226adf47a2f1b38f35d66cb1b",
+        "bytes": 2006519
+      },
+      "tests/fixtures/krdict-doeda-native.json": {
+        "sha256": "57beebf47e99868a53a08b8836eb87f5c38b2d5606593af0e0f85822c672dfd6",
+        "bytes": 12031238
+      },
+      "tests/fixtures/krdict-doeda-originless.json": {
+        "sha256": "fc80d1d83a53fbb094bc5d39ccfb19221f682c623433c12b839fdb6d73adb1d9",
+        "bytes": 565580
+      },
+      "tests/fixtures/krdict-doeda-partial-origin.json": {
+        "sha256": "a756bbc5b18ff8a0cfa47400ff8ec82ff97105cdf03636a8bdcaa19b5c175390",
+        "bytes": 46211
+      },
+      "tests/fixtures/krdict-doeda-role.json": {
+        "sha256": "0d59775e9d76bc54b9feaea26bcb7a8fb7574afe8675ebf2adbdcce162ad038b",
+        "bytes": 1044788
+      },
+      "tests/fixtures/krdict-doeda-suffix-labels.json": {
+        "sha256": "ad7f78bdc35dd214f534838e4a99bbe94dba139c456d3dfd0a27fa987b9fc3bd",
+        "bytes": 54552
+      },
+      "tests/fixtures/krdict-doeda-suffix.json": {
+        "sha256": "5741f311d4574c299b569c00258831894b4a37fa9aa5ee8fcafc8b95ec5f3faf",
+        "bytes": 3856541
+      },
+      "tests/fixtures/krdict-double-past-prefinal-english.json": {
+        "sha256": "51bc352df34bd3ffab7af8eee14e9d46b6ff609e41b35d6753a04bcc51b0ee5a",
+        "bytes": 1099717
+      },
+      "tests/fixtures/krdict-double-past-prefinal-labels.json": {
+        "sha256": "3cd65430eab2cd303be5a7b68e9f61f404ae46ec40ab48e1c5529c6532c34bfe",
+        "bytes": 14667
+      },
+      "tests/fixtures/krdict-emphatic-ending-labels.json": {
+        "sha256": "6598d31b048b5f728ab8719b612fbaa8e5a67d5f151c69cb779084f8ce681441",
+        "bytes": 13849
+      },
+      "tests/fixtures/krdict-emphatic-ending.json": {
+        "sha256": "abe85f726560da7ccdae6d1d953947d5413456672b72486f179de4ceec08941b",
+        "bytes": 3214829
+      },
+      "tests/fixtures/krdict-emphatic-particles.json": {
+        "sha256": "cb1a50911ad57d16320cbc265576e7677044a2f09c3cab5725afa864f0a8f54a",
+        "bytes": 167157
+      },
+      "tests/fixtures/krdict-enumerative-da.json": {
+        "sha256": "e3016929e1471cc086ee906724a34f2b26ba49044dc2f9d35be52cb31689f825",
+        "bytes": 50668
+      },
+      "tests/fixtures/krdict-enumerative-particles.json": {
+        "sha256": "31382154fe5e45880d12927203d8714d0cdff1f99f0f5125f7c2c540e4a03b9c",
+        "bytes": 50643
+      },
+      "tests/fixtures/krdict-eumse.json": {
+        "sha256": "f6554d87c16365f409c21e0cd2d2542123f302117c6a30119bca174e645a9bfd",
+        "bytes": 2541659
+      },
+      "tests/fixtures/krdict-exclamation.json": {
+        "sha256": "437e091b002a1d989c8d715e721c3f173871ca623cbfff3a4da13e066620394c",
+        "bytes": 4197144
+      },
+      "tests/fixtures/krdict-excluded-paradigm.json": {
+        "sha256": "2946c22dc110b232755d19052e7b3d5ab2a0d3d0796c09424d8c4216bc4bda0a",
+        "bytes": 780938
+      },
+      "tests/fixtures/krdict-existential-paradigms.json": {
+        "sha256": "c19e44f2ecdf02673c241707bc34a6ef0abfe42321f3d1bebe7a269101f94ed3",
+        "bytes": 657472
+      },
+      "tests/fixtures/krdict-expressive-hada.json": {
+        "sha256": "9547c0d50c84a2d0972601dbbae0e0eb5b34d3c159c023d6db09d8883449c357",
+        "bytes": 18931
+      },
+      "tests/fixtures/krdict-extent.json": {
+        "sha256": "5eb4b10954e0a55761848a0f58bfc6eac71ea9abd263fef310581e8b6a464735",
+        "bytes": 435195
+      },
+      "tests/fixtures/krdict-eya.json": {
+        "sha256": "193c9bf52d1717ef2feb2a6f9551ce2ee3664133454da08e9b90da8d33621fb4",
+        "bytes": 176574
+      },
+      "tests/fixtures/krdict-finite-vowel.json": {
+        "sha256": "830e1347d36ba479193a386a5ee3c48c27ccac2e9d3fb051d885bf7905c8c8ed",
+        "bytes": 1184314
+      },
+      "tests/fixtures/krdict-friendly-command-english.json": {
+        "sha256": "16dc56dc8d916ece8c6f495cfb79ed8266b9e0de27e9eadeea82dfb88391fffe",
+        "bytes": 1104594
+      },
+      "tests/fixtures/krdict-friendly-command-labels.json": {
+        "sha256": "2317bf7555b97166b51efb923eb7844f5f6fb92e63698d98c395c18cd2162e73",
+        "bytes": 3443
+      },
+      "tests/fixtures/krdict-friendly-command-original.json": {
+        "sha256": "ec711fc0714bf56b736e7a0884de42c5f82be11398e401b0408f54603bf28a86",
+        "bytes": 2235041
+      },
+      "tests/fixtures/krdict-future-question-additional.json": {
+        "sha256": "570682c6970a96d4de7b3e10ba509a1852dac3222cde07c526a2b0ff11ce7474",
+        "bytes": 4697590
+      },
+      "tests/fixtures/krdict-future-question.json": {
+        "sha256": "6a0294a06adcecbc99479ecc3da2a747855d5b0c40c13ac30783c3968572806d",
+        "bytes": 10078685
+      },
+      "tests/fixtures/krdict-gam-question-implemented-additional.json": {
+        "sha256": "dc466b648f73ca6acb15ce694e81adb8144d5c3c21b37c84a827b282a7fc06a1",
+        "bytes": 1010478
+      },
+      "tests/fixtures/krdict-gam-question-labels.json": {
+        "sha256": "a128cd047271bce863654fd340c4c453ca731e209a76fee5f38276154bb355e0",
+        "bytes": 22409
+      },
+      "tests/fixtures/krdict-gam-question.json": {
+        "sha256": "d843d9b822bc13302c56a11814c2f267ece53c53309514c6d9546158e04f9b4c",
+        "bytes": 4162577
+      },
+      "tests/fixtures/krdict-geol.json": {
+        "sha256": "5a2267952a1530aab42d31890de25c3a502aebc50c5d532a5a3566c3df0710a0",
+        "bytes": 3428841
+      },
+      "tests/fixtures/krdict-geon-contrast.json": {
+        "sha256": "f4fbdb94e4aaaf02f3b71ebf7f53f778585f41ae18ab7cc11e2babe93122d4f0",
+        "bytes": 1367198
+      },
+      "tests/fixtures/krdict-gera-nera.json": {
+        "sha256": "37c2b0c10c64125a61b258a09471fa71fbd33bd77e38c60d4485cd792f65dbca",
+        "bytes": 2515606
+      },
+      "tests/fixtures/krdict-grammar-labels.json": {
+        "sha256": "bf61a6e336b50cdcc64c5f6b3aba90a120683d46329add5dc29cc20b435313e0",
+        "bytes": 4340680
+      },
+      "tests/fixtures/krdict-hada-aux.json": {
+        "sha256": "f38b6bd34179b4c8ef689b108652244bae445b2787b1413abeaa1b5328514604",
+        "bytes": 1818324
+      },
+      "tests/fixtures/krdict-hada-complex.json": {
+        "sha256": "36baf791cf9ccb42cd20d2ed01b493cd06f5ab6850b764fa73217a0dca245463",
+        "bytes": 335540
+      },
+      "tests/fixtures/krdict-hada-ki.json": {
+        "sha256": "dc327b1ddf9aed9b9b0ab923225174abf96d2c5fe4e443825488bd31995ee2bc",
+        "bytes": 9132
+      },
+      "tests/fixtures/krdict-hada-six-sense.json": {
+        "sha256": "1726ec4bf0e5ad9ddb5785a220632ef1434fad87295963bf0268c0d6c6bda53f",
+        "bytes": 2477134
+      },
+      "tests/fixtures/krdict-hada-suffix-labels.json": {
+        "sha256": "9e32799f0a6586c7d90cd1b4e0656877cb9c4bbbb2a73ca923f22f9130491dc0",
+        "bytes": 16833
+      },
+      "tests/fixtures/krdict-hada.json": {
+        "sha256": "e276b6df4a353566da217e05a9858f36ee0be02c2481da1f4ab511ee63979bea",
+        "bytes": 53957
+      },
+      "tests/fixtures/krdict-hieut-compatibility.json": {
+        "sha256": "463e6185ca61bad2323b2a77f22094de8bed2a25cf38724f6e85e0ed3f18a982",
+        "bytes": 2211828
+      },
+      "tests/fixtures/krdict-honorific-copulas.json": {
+        "sha256": "8bc7b3f3e5f8865e9e5a1e5750e7a29b90645458cc2d4a0c34622a4fa23e9b6b",
+        "bytes": 85370
+      },
+      "tests/fixtures/krdict-humble.json": {
+        "sha256": "ec99767217202b6b2d2e97e330bf02002bb2dc22a7587a6b21d0bfa8541655f9",
+        "bytes": 1185942
+      },
+      "tests/fixtures/krdict-intensive-aux.json": {
+        "sha256": "93dc50697860d81e858d0bbc2b510d4826691f91fb39bdd3f5cfc9f6de612ce6",
+        "bytes": 2562310
+      },
+      "tests/fixtures/krdict-intention-connectives.json": {
+        "sha256": "6877baac8fbbfa919c47c960853b56f1ed2de07d9cc37108b01945746b53aa4e",
+        "bytes": 373001
+      },
+      "tests/fixtures/krdict-jaop.json": {
+        "sha256": "bd09f438609fe4cdf603295be63c1b3cbc84735a6b28e9d716c89de6f09f3087",
+        "bytes": 1878400
+      },
+      "tests/fixtures/krdict-jimaneun.json": {
+        "sha256": "cf2750224be796b901030df52ca4dab8f9539bcd24a75c24004db922fa90b6c6",
+        "bytes": 1611901
+      },
+      "tests/fixtures/krdict-kkaena.json": {
+        "sha256": "028dd13d15df30bcd2dc8d861b8d16c3692db5dd9eda7d46eb312f4bb56bc2f4",
+        "bytes": 52693
+      },
+      "tests/fixtures/krdict-lexical-malda.json": {
+        "sha256": "9de0f2637932eceff5a4cc7cafc7077793f9d5a865e96f2f5889de238058a328",
+        "bytes": 1654969
+      },
+      "tests/fixtures/krdict-lexical-nada-dependencies.json": {
+        "sha256": "5c97b714fd711842733e9357919be6e4c2969bf6de31d688b969a851c88637ba",
+        "bytes": 52040
+      },
+      "tests/fixtures/krdict-lexical-nada-listed-additional.json": {
+        "sha256": "4f4d1bb7e6c97e808ba7dd38a5e0c553e6c8f797e9a9635c90f1e2cc059d008f",
+        "bytes": 12297
+      },
+      "tests/fixtures/krdict-lexical-nada-listed.json": {
+        "sha256": "458fd0c01e685b8c2979d889b70fe00aff1c2733ac6d73347d0369d6f5c12ac8",
+        "bytes": 6031457
+      },
+      "tests/fixtures/krdict-lexical-nada-priority.json": {
+        "sha256": "36072f8787b647e2a3b60eee1a6bf8f8477c82ae1dde61cbfc5dcbb1ca42e9ef",
+        "bytes": 2360
+      },
+      "tests/fixtures/krdict-lexical-nada-spacing.json": {
+        "sha256": "a2ad01e834f00bb71b9173669b5fb6246e28947279650ff388f8ebd5cfcf6f60",
+        "bytes": 3459618
+      },
+      "tests/fixtures/krdict-literary-ri-prefinal-broad-english.json": {
+        "sha256": "0cb4fdb5166455f71eef4c12ccdf1e61245635a13d897c3d1b96a6e40717161c",
+        "bytes": 4586637
+      },
+      "tests/fixtures/krdict-literary-ri-prefinal-english.json": {
+        "sha256": "5d79ce59424cbee1dcbd2ce85d416942bb97e1f00f2979f7bbb7d2200b6dcc18",
+        "bytes": 1475859
+      },
+      "tests/fixtures/krdict-llachimyeon.json": {
+        "sha256": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
+        "bytes": 1972662
+      },
+      "tests/fixtures/krdict-llago.json": {
+        "sha256": "147d6fc46e5a4a17a6014019f1814c63e6a75e7d9877098b6cdfb511606febb1",
+        "bytes": 2628311
+      },
+      "tests/fixtures/krdict-mada-case.json": {
+        "sha256": "550d98c9be46c9ae3b711ae831ba4b8cd54d7f8f2bce2e2a4ef9a72f56a7b747",
+        "bytes": 768428
+      },
+      "tests/fixtures/krdict-malda-inflection.json": {
+        "sha256": "dbfaa11ee72919f08019f8dbd0bf91ec86e89267e92221e909e203db9196f970",
+        "bytes": 716571
+      },
+      "tests/fixtures/krdict-naikka.json": {
+        "sha256": "b33d28804d720d5930430ed20afa7d4af2bab42ac786923bf005a346ad5d1f6e",
+        "bytes": 1957741
+      },
+      "tests/fixtures/krdict-native-conditionals.json": {
+        "sha256": "5a082e1755df2e970bae98c65105fa8cbeb27ab408d1654574e03e2444cd9f90",
+        "bytes": 478222
+      },
+      "tests/fixtures/krdict-necessity.json": {
+        "sha256": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
+        "bytes": 2022794
+      },
+      "tests/fixtures/krdict-negative-auxiliaries.json": {
+        "sha256": "996646c98410a7b9cc8c251e3b35566871d0d41d60a4e159cda10d85e549d4da",
+        "bytes": 19492
+      },
+      "tests/fixtures/krdict-negative-classes.json": {
+        "sha256": "30a578b099a925ab61ef6291f233c31c2ff5c63e44f600d909e9e9aed4432df8",
+        "bytes": 2887104
+      },
+      "tests/fixtures/krdict-negative-contractions.json": {
+        "sha256": "589dfeb793fc9d404d5d1cf62c1a40d659ba606370a016ac40f923d97e77bc5f",
+        "bytes": 24121
+      },
+      "tests/fixtures/krdict-neuni-comparison.json": {
+        "sha256": "556298de687521c96d1e365187f6d6875f27c8674bad289368e9e13cf27a2ada",
+        "bytes": 1277937
+      },
+      "tests/fixtures/krdict-neuni.json": {
+        "sha256": "cf6554fad2a9ab0af136e4e431a89f23b7870ab106653bd9d162c3078ed6d1a2",
+        "bytes": 2474896
+      },
+      "tests/fixtures/krdict-neura.json": {
+        "sha256": "2d911be51629dec30313326776c7bca57d4c5466e7a3322331bcbd019f1a13d7",
+        "bytes": 1812683
+      },
+      "tests/fixtures/krdict-nira.json": {
+        "sha256": "d9b919bfe354e16fb9c714f677ad6538108c159c070d74a5f964bfad3b83af31",
+        "bytes": 565527
+      },
+      "tests/fixtures/krdict-noh-contraction.json": {
+        "sha256": "879f7fec03939e17fc718b20b85964775b657287859789d2e22d722461a43a7e",
+        "bytes": 287367
+      },
+      "tests/fixtures/krdict-nominal-copulas.json": {
+        "sha256": "9d47694d2a1573e6bd6d310ac8dccf2d9c8c27af3a27570849edfd3537bf89a7",
+        "bytes": 6692
+      },
+      "tests/fixtures/krdict-nominal-hwa-hada.json": {
+        "sha256": "4ca3b2396cdecdbe687bea6d31eb5e5806eb4d5c2d1128998f30c93d548474ef",
+        "bytes": 2072293
+      },
+      "tests/fixtures/krdict-nominal-hwa-labels.json": {
+        "sha256": "f6fa4046c8b514f5c6b223b060f2c632e49579d44ad150c4215270bff78ee07b",
+        "bytes": 13259
+      },
+      "tests/fixtures/krdict-nominal-hwa.json": {
+        "sha256": "3cf6632f6908c92e49a5e336484bd556a773f334b7f4801a2b965ddc6e21495d",
+        "bytes": 2055545
+      },
+      "tests/fixtures/krdict-nominal-i.json": {
+        "sha256": "e06abc501e00ca3d11bbac3a7c0624c691aa370304718c3d6665a74048e2a71c",
+        "bytes": 745776
+      },
+      "tests/fixtures/krdict-nominal-si-hada.json": {
+        "sha256": "87a50614ddc46ee7ee7147ad77d641bd30b9eb1d85e0fc39b7853e4d16a1f9ed",
+        "bytes": 655206
+      },
+      "tests/fixtures/krdict-nominal-si-labels.json": {
+        "sha256": "0459b43124c2ced551f87d4d5be3873dea675835074bc40c72eca4cfd188a201",
+        "bytes": 4890
+      },
+      "tests/fixtures/krdict-nominal-si.json": {
+        "sha256": "d7d98ed324242b783c4e15f4a30e56a89c0b2c7f311b916ffeb9bd73716b0347",
+        "bytes": 490144
+      },
+      "tests/fixtures/krdict-noun-adnominal.json": {
+        "sha256": "3a0048b9f85e81428d6cd882205331aaba206f917648b1a28ccefb0c86e450bf",
+        "bytes": 328623
+      },
+      "tests/fixtures/krdict-noun-base.json": {
+        "sha256": "4af27f036159c99ffef267ddb34e095ffe0f2c17d3c142dc716d34971b73e4c5",
+        "bytes": 258940
+      },
+      "tests/fixtures/krdict-noun-compound.json": {
+        "sha256": "565fb0a7abc559f9db1dd84fb38903021beb98774991ba5780b1b339bd803e21",
+        "bytes": 655289
+      },
+      "tests/fixtures/krdict-noun-fan.json": {
+        "sha256": "affc2ff041f9a2b610a392e46b91d6a046612824d0d6b2871c33a06bb2150b20",
+        "bytes": 247597
+      },
+      "tests/fixtures/krdict-noun-formation.json": {
+        "sha256": "ae94d4dcf8ea6f4c6adcb2625ff5067f4a6a0bc719547d3a80dfb63d80b09a34",
+        "bytes": 252619
+      },
+      "tests/fixtures/krdict-noun-internal.json": {
+        "sha256": "01065313652d97faee9a583152629dcb88acc5f17baae281ccf9160d0371d81a",
+        "bytes": 400548
+      },
+      "tests/fixtures/krdict-noun-predicate.json": {
+        "sha256": "091a29573d53fbb4c38d5a6ac4c5bbe0bbc2de1c76b240a6442293b7d9a5ef07",
+        "bytes": 208019
+      },
+      "tests/fixtures/krdict-noun-root.json": {
+        "sha256": "24d663f0122ca3713c66b858561a52318985695a91588136ef854322e9bfe5d4",
+        "bytes": 358692
+      },
+      "tests/fixtures/krdict-noun-sound.json": {
+        "sha256": "d6579c2e35afa6c86546e33383fd0f4cd51b38efe98391b9312993359f8ceea9",
+        "bytes": 347304
+      },
+      "tests/fixtures/krdict-omitted-connectives.json": {
+        "sha256": "07a9cb5cc744d6b7223fb80104456d69b1c63728da2bc86a95f59a05c1a20397",
+        "bytes": 93962
+      },
+      "tests/fixtures/krdict-opaque-adverbs.json": {
+        "sha256": "0688e16e2acb3630f3f3b9a0e1d457c5605b63da1a666fcbc536d21afe5abb4b",
+        "bytes": 39668
+      },
+      "tests/fixtures/krdict-optsi.json": {
+        "sha256": "c5ba77e8a9e9a654b4cb886f8dcea048ef0ed151d54e5295e3c215db0a14a92e",
+        "bytes": 1571333
+      },
+      "tests/fixtures/krdict-particle-chains.json": {
+        "sha256": "8c8ebbf3e1d73e852d716eaa02a1c246639f7ae98d75da9c09099833164ba625",
+        "bytes": 185551
+      },
+      "tests/fixtures/krdict-particles.json": {
+        "sha256": "f63248613f77025564c8bd149915680b420459262cf6e31632c3c11a62948f6e",
+        "bytes": 122864
+      },
+      "tests/fixtures/krdict-past-prefinal-english.json": {
+        "sha256": "33fd67e33e5d8e4f8e7be1e827b304e81cc9b7d8d1dbc71af43aa6cb6d308157",
+        "bytes": 2424322
+      },
+      "tests/fixtures/krdict-past-prefinal-labels.json": {
+        "sha256": "bc048745688e9eca0afbffb13602f57cff47d6939e659cc42939f6e6839e107f",
+        "bytes": 25121
+      },
+      "tests/fixtures/krdict-phonetic-paradigm.json": {
+        "sha256": "65f59c03c76ab65491418487777ab4be0ac56910660e1e7114ae091437e224d0",
+        "bytes": 51118
+      },
+      "tests/fixtures/krdict-polite-copula.json": {
+        "sha256": "7037b2cf0e673740c2d795017db22e4b44ac4397b399ba9a5cd294bc6b35837f",
+        "bytes": 600505
+      },
+      "tests/fixtures/krdict-polite.json": {
+        "sha256": "f45195f0a6fa26993086722c4295cc3a72cd435b16134998c163291e8c2844f1",
+        "bytes": 1549755
+      },
+      "tests/fixtures/krdict-post-ending-particles.json": {
+        "sha256": "67fc68247d9d46651631df9d8dd1ade9a32bc00c41575a68d99d5c8fc5379bff",
+        "bytes": 18437
+      },
+      "tests/fixtures/krdict-potential-aux.json": {
+        "sha256": "28f3aa187ed0062b8ca0df547b8424c5b8ed81b3d9a047bbfad125f35acf907d",
+        "bytes": 2513628
+      },
+      "tests/fixtures/krdict-prefinal-copulas.json": {
+        "sha256": "c2baab2b19f0c115fd2a3d3ccc371449a05d206fff3c44a726239792bfd1cd80",
+        "bytes": 253203
+      },
+      "tests/fixtures/krdict-present-licenses.json": {
+        "sha256": "dac7ef822c58fce8bda5b60a8379ab49fb6db49413d7ba6cc29f7454f29e4852",
+        "bytes": 369276
+      },
+      "tests/fixtures/krdict-present-prefinal-english.json": {
+        "sha256": "7814eee51915f258f6d20fcf6af01b444f7b32a3266ab59c1817ec406a3376d9",
+        "bytes": 1014726
+      },
+      "tests/fixtures/krdict-pretence-aux.json": {
+        "sha256": "bee33f81e6608f5dc403a8bd74e579f47e22857e416934a31d95c1ec247be89c",
+        "bytes": 2082823
+      },
+      "tests/fixtures/krdict-proposal-audit.json": {
+        "sha256": "f2a5983f9063439056b1d2e20ef2a74ccbcd1eec8c27e12dab92a1efa50d06f2",
+        "bytes": 1194885
+      },
+      "tests/fixtures/krdict-proposal-exclamation.json": {
+        "sha256": "89b3ac01b4f892dc49e16c8ccb68dc51e97cc5c66139c5d49bc567776ab85123",
+        "bytes": 1558022
+      },
+      "tests/fixtures/krdict-question-additive.json": {
+        "sha256": "3286dc9cba992cf60ecaf15b3b6046acb3812f3f9343f153cb6c5a55f19e69ae",
+        "bytes": 636769
+      },
+      "tests/fixtures/krdict-question-copulas.json": {
+        "sha256": "6cbf269bbe360285131f0b1934a7591f4a764a833062201294678c984427febc",
+        "bytes": 300558
+      },
+      "tests/fixtures/krdict-question-exclamation.json": {
+        "sha256": "2a30236b9650d139ea7c642e9b275c3a25a19372d725c516d8db6c94710672b2",
+        "bytes": 2014669
+      },
+      "tests/fixtures/krdict-question-topic.json": {
+        "sha256": "8c01ba7b5dc32f73d6d97355a907f7eadfb43483be0ced444a3988f13111100b",
+        "bytes": 531383
+      },
+      "tests/fixtures/krdict-quote-followers.json": {
+        "sha256": "2fb23175296383085ff1227f7ff9127a3388c8bd00ba52bf165e77c4a212ac43",
+        "bytes": 956333
+      },
+      "tests/fixtures/krdict-quoted-alternatives.json": {
+        "sha256": "fa71ceca9f959a38679e19120d728ad78188c0cd8dce9053b5caad969fed114d",
+        "bytes": 79260
+      },
+      "tests/fixtures/krdict-quoted-bakke.json": {
+        "sha256": "e6e164a1bfeabeb9b70724a9ab78e86f0f4bd76e6bdca414fa9c7bb7c4dddd85",
+        "bytes": 1395531
+      },
+      "tests/fixtures/krdict-quoted-exclamation.json": {
+        "sha256": "e7a5dfd90e7fa87185f1ed4014576705dad9a2103f81b3386cba577e819cece2",
+        "bytes": 2807447
+      },
+      "tests/fixtures/krdict-quoted-neuni.json": {
+        "sha256": "06c78484cd54fe4eeaa44bdae6e2e83c117c6c57765579f07cafdcc0310a5413",
+        "bytes": 3477195
+      },
+      "tests/fixtures/krdict-quoted-questions.json": {
+        "sha256": "c0fdbc2503586765490a847dba17875695804f29ac9da811115ca2aed05bda5b",
+        "bytes": 39055
+      },
+      "tests/fixtures/krdict-ra-conditions.json": {
+        "sha256": "44fac0e0665850f6e48026b4992623143a2d71538a83b219ecfe33b48af3fa04",
+        "bytes": 175774
+      },
+      "tests/fixtures/krdict-range-case.json": {
+        "sha256": "7cb01e45d8f2e1728db7bd26f8b76dd0229b5f5959d1e22fa53760cf825006e8",
+        "bytes": 259581
+      },
+      "tests/fixtures/krdict-repetitive-aux.json": {
+        "sha256": "54ee3017068459067246110364485e7a73d56002f6a460f3ce8b6501d78c80bc",
+        "bytes": 977691
+      },
+      "tests/fixtures/krdict-report-myeo.json": {
+        "sha256": "54e48b6fbe4832b56f4bcd7c4c852c957323c379deff3445345168687179f309",
+        "bytes": 380043
+      },
+      "tests/fixtures/krdict-report-ne.json": {
+        "sha256": "7adc39e233884c87856850f971b55f286ebe98f46fd4d5072a7a5c93d3cdcf79",
+        "bytes": 433455
+      },
+      "tests/fixtures/krdict-report-ni.json": {
+        "sha256": "1531ec621e056a000c3d9e2c4deb3e5885e661f3f69e90a83d63fa28430da50e",
+        "bytes": 556239
+      },
+      "tests/fixtures/krdict-reported-command-deoni-english.json": {
+        "sha256": "839bd4efa4dc39325e2ae738e040e51bdb9ca927556000971b414e12f80c1410",
+        "bytes": 23503
+      },
+      "tests/fixtures/krdict-reported-dana-english.json": {
+        "sha256": "5ee64500113c9c90438386d67d0ae3b40a2e2d25471703316152cd9a1a11956a",
+        "bytes": 2003162
+      },
+      "tests/fixtures/krdict-reported-dana-labels.json": {
+        "sha256": "8a7ff5438c31067d0fbb0c7ba84999a578d45ce476a0a0c988d72480fefe0480",
+        "bytes": 31625
+      },
+      "tests/fixtures/krdict-reported-deoni-english.json": {
+        "sha256": "37d316922eeb551e4fe41a94c652860564838a50c8067a777376cfcc3921514b",
+        "bytes": 1373262
+      },
+      "tests/fixtures/krdict-reported-retrospective-additional.json": {
+        "sha256": "dff4f3404d48709403c2c86d2e11df8a075027320a86cf1713bd51d79bce5aaf",
+        "bytes": 7263050
+      },
+      "tests/fixtures/krdict-reported-retrospective-corrections.json": {
+        "sha256": "ec5b622470643a01bd11370b0138a5952ea51ad066245d2fcb9e2d3e873e4d36",
+        "bytes": 83742
+      },
+      "tests/fixtures/krdict-reported-retrospective-labels.json": {
+        "sha256": "0be42d23453c46c2dba30af1e06cd94c2a4375cdec259db3bf84e5ed082d469f",
+        "bytes": 179380
+      },
+      "tests/fixtures/krdict-reported-retrospective.json": {
+        "sha256": "18538a55d11a6c4e8a04d3a00090be70feddfb6a595f6aebda9c288f24f69261",
+        "bytes": 6287706
+      },
+      "tests/fixtures/krdict-reporting.json": {
+        "sha256": "8d44d2c9b23df15b09bf1f34027934b04d9160af751b24237453b1b62115f873",
+        "bytes": 130709
+      },
+      "tests/fixtures/krdict-request-aux.json": {
+        "sha256": "658189aa5bc7fe7a7287ce1bcc5b9c54f222882b4c8de4ca90b1e1e6a7aec5ab",
+        "bytes": 2059162
+      },
+      "tests/fixtures/krdict-result-connectives.json": {
+        "sha256": "3a2962ffe3c6801613facdbcfa7a51822239117252d9be5619fd31e9b4210b96",
+        "bytes": 549653
+      },
+      "tests/fixtures/krdict-reu.json": {
+        "sha256": "d58a80a874ad70ec098212fec5dd2ff1b3aa6e708ff7b75c5f608d9ea0dd97e6",
+        "bytes": 2362476
+      },
+      "tests/fixtures/krdict-rikka.json": {
+        "sha256": "eec0a5df7d07887fd86d8c1b2d5d429538a4e9ba7d374048dfb76002d014d8e4",
+        "bytes": 2048983
+      },
+      "tests/fixtures/krdict-rya-boundary.json": {
+        "sha256": "885f4e74109ec6e0553e0cfd7e71a063660ee10bca4b80b8608564e1f50bd153",
+        "bytes": 2657730
+      },
+      "tests/fixtures/krdict-rya-copula-additional.json": {
+        "sha256": "5c6e4d816f55036eacb687a71ccec1d2c0e3cff99f617d4f031a30d47cf93b5c",
+        "bytes": 179985
+      },
+      "tests/fixtures/krdict-rya-copula.json": {
+        "sha256": "5bbb6cba16eb28dbd4d99c575b32bc4ca07b8b67a3184a83f10a19420ceb3ecd",
+        "bytes": 3304674
+      },
+      "tests/fixtures/krdict-ryeo-expressions.json": {
+        "sha256": "5ab616a6691bd8600f83b4377989bbc067d837a923ff4b5cf20bcbd72da0ec69",
+        "bytes": 3671188
+      },
+      "tests/fixtures/krdict-ryeogo-expansions.json": {
+        "sha256": "69c770afba12dbce4e2b464a858480fde202ca06a017a74e6643888355ea9c76",
+        "bytes": 89427
+      },
+      "tests/fixtures/krdict-ryeogo-extra.json": {
+        "sha256": "f1c15fa6d13d2b0800c696befeec0581c3190a9cb0bab6c93f5bfcdf2d3cacbe",
+        "bytes": 2400
+      },
+      "tests/fixtures/krdict-ryeogo-licenses.json": {
+        "sha256": "e278449b9e17e76832162472021f9b5da29909edd62f50eff6f484cf8bd091ed",
+        "bytes": 1467250
+      },
+      "tests/fixtures/krdict-ryeona.json": {
+        "sha256": "07dea9e509c79352052e77941e604120e2cae82ff36b04065b67a6bb104b7e16",
+        "bytes": 808687
+      },
+      "tests/fixtures/krdict-seo-connectives.json": {
+        "sha256": "1c4483cb8b7d233ca7bfe2534782b03ca2c43004cd7813f3e81c29bef1e790a3",
+        "bytes": 527889
+      },
+      "tests/fixtures/krdict-short-clauses.json": {
+        "sha256": "66c635f9163d091ffcefd728914903d60412deb102b1273ba616d7d2bc67b6df",
+        "bytes": 38176
+      },
+      "tests/fixtures/krdict-short-recipient.json": {
+        "sha256": "7d775982ec384305631f7b3c1c677e1d84a56e18c878e678c48d3f71897e612b",
+        "bytes": 166445
+      },
+      "tests/fixtures/krdict-short-reports.json": {
+        "sha256": "b417f89bb22bd376ceef601029528582244ce86f7664ba3597c457dcbb482df7",
+        "bytes": 3379866
+      },
+      "tests/fixtures/krdict-short-stems.json": {
+        "sha256": "e007cb4862ff19f078640d186f391929af108b7727e99b8675b35f3943071ab5",
+        "bytes": 1238629
+      },
+      "tests/fixtures/krdict-soseo.json": {
+        "sha256": "a937cae2441955ebf048c700411244531e614fd641ec1acc36f56615b42df55a",
+        "bytes": 2106404
+      },
+      "tests/fixtures/krdict-source-head.json": {
+        "sha256": "66782520a47c3fddac2e431914c893478858665018da2d26565793dca0aad4ca",
+        "bytes": 127949
+      },
+      "tests/fixtures/krdict-source-particles.json": {
+        "sha256": "270b74c49d686423f2a13084f74e60330ea7125f3a27ef1410e53217aa725d00",
+        "bytes": 97610
+      },
+      "tests/fixtures/krdict-spacing.json": {
+        "sha256": "2dfb0c9676d69bebf21a57f8baa930ce077d60fc88d3b6687e0d84a71b8ec3a3",
+        "bytes": 1274555
+      },
+      "tests/fixtures/krdict-ssik-adverb-english.json": {
+        "sha256": "1599e086c1fc16453ff3fd1ebb9e010dfe8133ab838ce05d7149c3e87a6df401",
+        "bytes": 4580163
+      },
+      "tests/fixtures/krdict-ssik-adverb-original.json": {
+        "sha256": "9ba066187bc464934995319aa4322caf7f097e647c531446ff1552635689ab7c",
+        "bytes": 9433673
+      },
+      "tests/fixtures/krdict-ssik-english.json": {
+        "sha256": "6db8fc0b2d0dcc9282207018863da8bd09e99ebef57b5d80062007f9282cc4d1",
+        "bytes": 226594
+      },
+      "tests/fixtures/krdict-ssik-original.json": {
+        "sha256": "11143116d7856bc96235e4a28d13b36a89929375d349f942bbca03775fea30a8",
+        "bytes": 469232
+      },
+      "tests/fixtures/krdict-stative-report.json": {
+        "sha256": "61a40c2b258f65336ed57f6f8d32a8f6c802675008fcce2c19e163ea18bb6e46",
+        "bytes": 404167
+      },
+      "tests/fixtures/krdict-transition-aux.json": {
+        "sha256": "024b00b5ed36e80e956a296db63e40fc254571252ec05785d1f8f8cb04c1a844",
+        "bytes": 3138178
+      },
+      "tests/fixtures/krdict-uncertainty.json": {
+        "sha256": "28e0cd4920388b12347ff45e91027672b0498610c5336b77a395b9c7e11adb0a",
+        "bytes": 475153
+      },
+      "tests/fixtures/krdict-vocative.json": {
+        "sha256": "8748140aa8a753108f81f457a011ff03fb428ecb08ebb1c425179a5e0a093d51",
+        "bytes": 167674
+      },
+      "tests/fixtures/krdict-well-doeda.json": {
+        "sha256": "04ea183f566ea1a74e6ca07de9cd7f765ff126d8e380cd2ff85ac07c4154cb7a",
+        "bytes": 308553
+      },
+      "tests/fixtures/krdict-written-vowel-compat.json": {
+        "sha256": "c11238f0f891c63998ed509fcc1fd14c30304e173c3cbb9b318798ad1cc65713",
+        "bytes": 1823648
+      },
+      "tests/fixtures/krdict-written-vowel.json": {
+        "sha256": "f6f0caa484e799a6b7d84c9950aac2ef9e2eb8768f9811b04fac37d6ac574499",
+        "bytes": 864045
+      },
+      "tests/fixtures/krdict.json": {
+        "sha256": "2ac061c214b425b67c59f3a51a0b951c84d228656b79347c94b2e58e61b7fd9a",
+        "bytes": 52585
+      },
+      "tests/fixtures/lexical-malda-sources.json": {
+        "sha256": "888bfbe68a1ab71b00239c51621f0c2369890ff776de35910b9a7a7afecfb3af",
+        "bytes": 525367
+      },
+      "tests/fixtures/lexical-nada-dependencies.json": {
+        "sha256": "6ea54d7cfd23b06eb6ae84361284266dcf91c72d2be32ed1a4098b5418caf9c6",
+        "bytes": 66306
+      },
+      "tests/fixtures/lexical-nada-listed-additional-native.json": {
+        "sha256": "4bef42dabe19caff7cd3335bf9b82e723eda0de6556814a44c0f8e802e972d59",
+        "bytes": 9998
+      },
+      "tests/fixtures/lexical-nada-listed-priority.json": {
+        "sha256": "f33d50bb38a07cc329d3f4f74d6487dba95ed4249dd2a8f3ac5ff048bac6677b",
+        "bytes": 236099
+      },
+      "tests/fixtures/lexical-nada-listed.json": {
+        "sha256": "0c40cce1b894817620fda80905c80e323fb739eeabe833943ebe0b934e89810b",
+        "bytes": 6053124
+      },
+      "tests/fixtures/lexical-nada-priority-supplement.json": {
+        "sha256": "448186f49a3b9b92832294f8566df56842450e08e7816534bc9062fcedec3f4c",
+        "bytes": 4153
+      },
+      "tests/fixtures/lexical-nada-spacing.json": {
+        "sha256": "0e1d31d217f3a518617960f0cdcdcc07ee2e69fd366263d3118ea6006af76bc7",
+        "bytes": 2817544
+      },
+      "tests/fixtures/literary-ri-prefinal-broad-native.json": {
+        "sha256": "35ad3e6419cb3766aa560b6abef439d043c7857d7e62099d5eaec122733180e7",
+        "bytes": 3317578
+      },
+      "tests/fixtures/literary-ri-prefinal-history.json": {
+        "sha256": "91c674c01a99e9f499963db45fbf753d61dfbd14de9523894ddbc2e420577812",
+        "bytes": 113468
+      },
+      "tests/fixtures/literary-ri-prefinal-native.json": {
+        "sha256": "c348d7cc8aa83f827e7476df29176abf379972ea40118931d76a35c96d28069c",
+        "bytes": 1106950
+      },
+      "tests/fixtures/literary-ri-prefinal-policy-validity.json": {
+        "sha256": "a9dcfa9ecb7527db99d53ff64cbcf94be61b5962d83399c6e1b219c39e7c4a01",
+        "bytes": 35700
+      },
+      "tests/fixtures/literary-ri-prefinal-validity.json": {
+        "sha256": "ab6d861357a2a650f4732063f00f71580adcc856710c585af7d563fe951d3320",
+        "bytes": 30828
+      },
+      "tests/fixtures/llago-sources.json": {
+        "sha256": "a439ffece9caf2eb5e158f2852c5140dc0ed0b468f3179e3a52ca5fe9c49d025",
+        "bytes": 29428
+      },
+      "tests/fixtures/mada-case-sources.json": {
+        "sha256": "0e413463172cc61df5dd4178b66732826436dca410f6581d07de2f4a2530fbaf",
+        "bytes": 13578
+      },
+      "tests/fixtures/malda-inflection-sources.json": {
+        "sha256": "41b85d328714c7d683d8d2867e84eced4441455ab649e1625ecad52a294a7a30",
+        "bytes": 2058753
+      },
+      "tests/fixtures/naikka-sources.json": {
+        "sha256": "e3a67ad3049b2a9690703c757fa06e68eb5eea6d3f547ee5707b9d85ec5b8d17",
+        "bytes": 5523
+      },
+      "tests/fixtures/native-conditionals-sources.json": {
+        "sha256": "8a5a1974cf85cc39ef1f06cc07a0365fbd1e6b4d061a75a17c0685a2b44b4349",
+        "bytes": 15487
+      },
+      "tests/fixtures/native-pos-boundaries.json": {
+        "sha256": "ab993b8e1b76c84d110ca59414e21b51ff5bbb0975ed1aff262be1c0c553c262",
+        "bytes": 576752
+      },
+      "tests/fixtures/native-pos-policy.json": {
+        "sha256": "1f4b8a43f0a77262df126c78f15146acec3220183598045abe05c79e7956ebcc",
+        "bytes": 31525
+      },
+      "tests/fixtures/native-pos-sources.json": {
+        "sha256": "d00f171a7f8a674322325c93390c52f0e8c6d964721f89b2633e34360825b784",
+        "bytes": 1140381
+      },
+      "tests/fixtures/negative-class-entry-judgments.json": {
+        "sha256": "9056032598305900a88fe717b0cdfe780f035f9decb9b16ca9ccb31070de3b49",
+        "bytes": 96136
+      },
+      "tests/fixtures/negative-class-sources.json": {
+        "sha256": "0a4d727be9d4a6627583e8abbec21b4d15a68c8b9b73b627373d1faa14ea6c05",
+        "bytes": 55727
+      },
+      "tests/fixtures/neuni-comparison-sources.json": {
+        "sha256": "81ad5d89ab1098f9392fc798ca5c97490897e7d93f5d56e5747b4a6f2ed6e200",
+        "bytes": 16060
+      },
+      "tests/fixtures/neuni-sources.json": {
+        "sha256": "37c105ed9c3588f6d582de0bdd2810945e4ec44636aaa5a05fe2ea68a3606236",
+        "bytes": 128875
+      },
+      "tests/fixtures/neura-sources.json": {
+        "sha256": "3e82827aeea9831d0fd3cf05beca95a52ac38faadfe44161d587d3bff3221808",
+        "bytes": 5019
+      },
+      "tests/fixtures/nominal-hwa-hada-sources.json": {
+        "sha256": "6d6be3f92836cdd157eb0a1ef316ee6576c15043352128a45328389f217ae183",
+        "bytes": 6350665
+      },
+      "tests/fixtures/nominal-hwa-sources.json": {
+        "sha256": "16e11c1c3cb140373cfbd3ace58b36b9efe820305cb8656b9fb3cd14b8733107",
+        "bytes": 6396487
+      },
+      "tests/fixtures/nominal-i-sources.json": {
+        "sha256": "593cd104409a02741123673685d16df317c19c353f65bdb58174b1d7a0b1447a",
+        "bytes": 24613
+      },
+      "tests/fixtures/nominal-si-hada-sources.json": {
+        "sha256": "4b43d7643158fe4aabf5e7da85580080acd6d36117f258943e7a043b2320c05c",
+        "bytes": 2017919
+      },
+      "tests/fixtures/nominal-si-sources.json": {
+        "sha256": "65a109c4223c2b72300a2079d7aa5235cfb757ddbafc9f7977cce919f6a02e9c",
+        "bytes": 1557169
+      },
+      "tests/fixtures/noun-adnominal-sources.json": {
+        "sha256": "7f821483f9457593c8c4e160c311bdbde6742cac8daa9c1b7f7eb5fbd5d55a3a",
+        "bytes": 28165
+      },
+      "tests/fixtures/noun-base-sources.json": {
+        "sha256": "c89c7faa8921b60001e1143d9ca1d8a4573a1104f9a18cfb7ded9b3330986eb9",
+        "bytes": 23620
+      },
+      "tests/fixtures/noun-compound-sources.json": {
+        "sha256": "56efcc644ad4c27b65b37932301051924919d4a4cc1386e2ac4283fb928d48b8",
+        "bytes": 28300
+      },
+      "tests/fixtures/noun-fan-sources.json": {
+        "sha256": "3fd3a0e02365634c356767efce919c77fafa1398952bd56af8fe15c4bbdbf0f0",
+        "bytes": 23667
+      },
+      "tests/fixtures/noun-formation-sources.json": {
+        "sha256": "06a2fbcc75bf4b101eb27e250de5149c0fab314e744382ed5c9dd857f48c7711",
+        "bytes": 31975
+      },
+      "tests/fixtures/noun-internal-sources.json": {
+        "sha256": "6d23160d956e268653b09e11f8938bedf479d8e8627268f9cc8e507d5b4a022b",
+        "bytes": 25781
+      },
+      "tests/fixtures/noun-predicate-sources.json": {
+        "sha256": "bbcf1eb433270670d6be2ce4f26d65781562cfc78e7b8a163bf500deac318fda",
+        "bytes": 21371
+      },
+      "tests/fixtures/noun-root-sources.json": {
+        "sha256": "f20281e23a139d38174e1cf429aef6f201d16add8daabd5ba5c6a9f184b45ece",
+        "bytes": 30952
+      },
+      "tests/fixtures/noun-sound-sources.json": {
+        "sha256": "b2918bdc5e3559296de575ff22806f0d3ec91a4a74a2036ffea99aac4dcc9496",
+        "bytes": 24438
+      },
+      "tests/fixtures/opaque-adverb-sources.json": {
+        "sha256": "31ca88a4e61c6014d63844d7440cbec1b2ed4065f9d2897a92e5926b12b64a6d",
+        "bytes": 48826
+      },
+      "tests/fixtures/optimization.json": {
+        "sha256": "c447aff04e1d3a56bf0ee54707e4c27c00a61d255b49707ce2a46104859d5e50",
+        "bytes": 40763
+      },
+      "tests/fixtures/optsi-sources.json": {
+        "sha256": "68a3990e07d840923e1af6801cbb7c7f7175f2a9b436448a0a89e8767ee459e2",
+        "bytes": 4364
+      },
+      "tests/fixtures/past-prefinal-native.json": {
+        "sha256": "337d8fd4e657e4df744b3d158c83dba5404b251af451ec1faa90d0b85d2781c5",
+        "bytes": 1845448
+      },
+      "tests/fixtures/past-prefinal-validity.json": {
+        "sha256": "68081182b1ce9238ef1073d0d68ef637151471cdfaba0c20c931c90b8c076d71",
+        "bytes": 43742
+      },
+      "tests/fixtures/phonetic-paradigm-sources.json": {
+        "sha256": "36f24d31036eb0a9e672d132d0923a0e253491928a21e559e099071b8d484142",
+        "bytes": 297003
+      },
+      "tests/fixtures/polite-copula-preserved.json": {
+        "sha256": "a8555d94e3e5e49fbde1ce3a3079c969c548936f46edfc9c5ea1753e5268e249",
+        "bytes": 39765
+      },
+      "tests/fixtures/polite-copula-sources.json": {
+        "sha256": "b2f4eb1b0fd38304941ef7ffd09295994dcc16611bb1b8199fce9aa32eb8970b",
+        "bytes": 2797
+      },
+      "tests/fixtures/polite-sources.json": {
+        "sha256": "2e70e5b9f357377788fc748d0d2937a506ed15ce56b84bd22d6a50a2d4ef5bff",
+        "bytes": 8319
+      },
+      "tests/fixtures/potential-aux-entry-judgments.json": {
+        "sha256": "cf981ce8271df3fc654809ec65878e0e362b374a2b61be2ba7477421e1c7090d",
+        "bytes": 273027
+      },
+      "tests/fixtures/potential-aux-sources.json": {
+        "sha256": "913b6d5cfd9952cf6d57434e5e9e918c18b780c0b9a70ee101186e0117c622eb",
+        "bytes": 69891
+      },
+      "tests/fixtures/present-prefinal-native.json": {
+        "sha256": "3554623deca0a75cd0786a19d3b49f61965fce5741b1f808047e3aab4f4b5041",
+        "bytes": 806344
+      },
+      "tests/fixtures/present-prefinal-policy.json": {
+        "sha256": "fdb9ede8ab190a9621ddf1c7c105e6d9267ed86071bb593c084d1f786a5a5719",
+        "bytes": 15196
+      },
+      "tests/fixtures/present-prefinal-validity.json": {
+        "sha256": "cc02ed14cafc944dfb489ffdf19b8b9a156681e1940818e9cfe9fff960e808f5",
+        "bytes": 14443
+      },
+      "tests/fixtures/pretence-aux-entry-judgments.json": {
+        "sha256": "706ed2b330988b89ef20e17e509b5e8443067470ae96f0ab5c824a98e9a887cb",
+        "bytes": 90016
+      },
+      "tests/fixtures/pretence-aux-sources.json": {
+        "sha256": "7dcf2fe89438f5acd3750fe1ada2d395bf344d1145646556aaae64bb4a4895b4",
+        "bytes": 148972
+      },
+      "tests/fixtures/proposal-audit-sources.json": {
+        "sha256": "73ca2396417312756f3a649708aa3ccaee4d30eb226e5b211cda3484090ed1d7",
+        "bytes": 17404
+      },
+      "tests/fixtures/proposal-exclamation-sources.json": {
+        "sha256": "55c2d1891484f391a4b1212431325cae3aa894ac45d48dec119d2428e8cf8d15",
+        "bytes": 21299
+      },
+      "tests/fixtures/question-additive-sources.json": {
+        "sha256": "713e2535645c1b2f948477bfb1071bb48481606dc4b1d387054ea398c8dd2f6c",
+        "bytes": 789100
+      },
+      "tests/fixtures/question-exclamation-sources.json": {
+        "sha256": "73ebb1887f4eaa52e645dd5be9846e5801c9c6b9713f0e2d49275629bcf28ede",
+        "bytes": 55997
+      },
+      "tests/fixtures/question-topic-sources.json": {
+        "sha256": "7e09d51e5156fa7e0a65bd6964dde0b7dab660c8d35548324278b63db9bcc189",
+        "bytes": 6057994
+      },
+      "tests/fixtures/quote-followers-sources.json": {
+        "sha256": "856778db3abb81f1e8808c659198a9795aff3c1fae7c97e42afec9f2bcbdf022",
+        "bytes": 28224
+      },
+      "tests/fixtures/quoted-definition-gold.json": {
+        "sha256": "69b75773f6077310a6d4edf650f07a57ea244cc18ff7636ac3f0486dfc8473fd",
+        "bytes": 3670
+      },
+      "tests/fixtures/quoted-exclamation-sources.json": {
+        "sha256": "b2f960b6bbcd3fce8d66878a9fa4c9e8088f470dc92880558ec298e31d1ca19c",
+        "bytes": 56483
+      },
+      "tests/fixtures/quoted-neuni-sources.json": {
+        "sha256": "d0d6ecd240239de7cedbd2035d60ad5fd2ba1956f9bdb1e5924b634197d0fc45",
+        "bytes": 183546
+      },
+      "tests/fixtures/repetitive-aux-policy.json": {
+        "sha256": "513e73f9fc8c75a139b351e1251748ac3b65455b5f8804d3b5b6662a2cc27876",
+        "bytes": 7866
+      },
+      "tests/fixtures/repetitive-aux-sources.json": {
+        "sha256": "b10f8d062156251dc0e610109021cb5012d5552c476dbbfc13ff544052a8a8d0",
+        "bytes": 37634
+      },
+      "tests/fixtures/reported-command-deoni-sources.json": {
+        "sha256": "43c6fee5d67dd9422fdecd42f01ae279ca230276e2c3cb9d55c4226d643ad2ea",
+        "bytes": 564010
+      },
+      "tests/fixtures/reported-command-deoni-validity.json": {
+        "sha256": "2dd289e9b2a075411f94948ada51da94c46ffe70f6e2891ed775f7ab88fdb966",
+        "bytes": 28140
+      },
+      "tests/fixtures/reported-dana-cross-family-parents.json": {
+        "sha256": "bc64474a16fe6a73e5f753eacefe6c39df559c173f7ff56955a462f5021f47b3",
+        "bytes": 13511
+      },
+      "tests/fixtures/reported-dana-native.json": {
+        "sha256": "b68474247a2889ad296ddd48e89b182b353b9085c63939c85aef8a4cb6b15e88",
+        "bytes": 1493643
+      },
+      "tests/fixtures/reported-dana-source-captures.json": {
+        "sha256": "b8c8f7d66ab1a409a4c495f726ffc2ccdf5631b15a4c392954c6e29e009f6d98",
+        "bytes": 595483
+      },
+      "tests/fixtures/reported-dana-source-judgments.json": {
+        "sha256": "e9681c10dbb88817d7842f7ed3fa4f632cc4b5f8424b4bbba997b9478dcaf55f",
+        "bytes": 54649
+      },
+      "tests/fixtures/reported-dana-validity.json": {
+        "sha256": "e5ef82f9e5e1c8d6129d75a6d26e2f11a59aa2c2b82c250f54805ccf656141c2",
+        "bytes": 36190
+      },
+      "tests/fixtures/reported-deoni-native.json": {
+        "sha256": "24e2809f7514eee63ed96ec061346d4429f74fef226fad0a0d8a552d785134b3",
+        "bytes": 958940
+      },
+      "tests/fixtures/reported-deoni-validity.json": {
+        "sha256": "e08f122ab16a57b512099bc534abd6d1d7523005df8a29dd2c42f5288110e584",
+        "bytes": 23341
+      },
+      "tests/fixtures/reported-retrospective-additional-native.json": {
+        "sha256": "e84106024d587be8c359b781a6053fa9fa8779c40670a6243facd491fb518639",
+        "bytes": 5457822
+      },
+      "tests/fixtures/reported-retrospective-boundaries.json": {
+        "sha256": "cedb074c9d479ef84f3f46824d93f9a9fa4f57d9c375a90e73df7faeb0d6b02c",
+        "bytes": 71609
+      },
+      "tests/fixtures/reported-retrospective-corrections.json": {
+        "sha256": "0a8944b82420f91f5d0f027df530783f186679f7043ea2890c69282970f3c99d",
+        "bytes": 173565
+      },
+      "tests/fixtures/reported-retrospective-followers.json": {
+        "sha256": "1e5de8d53c2eba74221fe91afd421fd7da6e04799167d7423ef50c56b3634bed",
+        "bytes": 15683
+      },
+      "tests/fixtures/reported-retrospective-sources.json": {
+        "sha256": "55df84c5c0ef2bd053155109249ab58c98f15c3f764cf43106f3d66229a31e29",
+        "bytes": 10314992
+      },
+      "tests/fixtures/request-aux-sources.json": {
+        "sha256": "a9fd62840b548e53e9084f24e5b09973f08e670fb0182cd75af195ff2e25ef2a",
+        "bytes": 147073
+      },
+      "tests/fixtures/reu-sources.json": {
+        "sha256": "307c9b8afeac912d4d8caf62f8ba69fc3477d3598b12a3eac2c1fdd8425bc053",
+        "bytes": 664935
+      },
+      "tests/fixtures/rikka-corpus-targets.json": {
+        "sha256": "b589faf2b5ffb2da4c03a842431e12b05225429972fde0ca58f9902ed3b4c293",
+        "bytes": 29640
+      },
+      "tests/fixtures/rikka-sources.json": {
+        "sha256": "e59e63449fe4273fa2b72614e7eac0dcfb31d167b9b16b91589117ed80c9eb85",
+        "bytes": 7517
+      },
+      "tests/fixtures/rya-boundary-regressions.json": {
+        "sha256": "f98bd12219f08efff5ea36422afb9263b71706ba4ac7c6efc7f4bee27886c466",
+        "bytes": 1370595
+      },
+      "tests/fixtures/rya-boundary-sources.json": {
+        "sha256": "74b25955c95fa2ea1a3722d657473b8ec2413175a37d0c1742b997eab39c9268",
+        "bytes": 19374
+      },
+      "tests/fixtures/rya-copula-additional-native.json": {
+        "sha256": "81ab2b27846cd30634d9a621797a87db3bf79f1a7873e99e22d17ba544746ba3",
+        "bytes": 200897
+      },
+      "tests/fixtures/rya-copula-regressions.json": {
+        "sha256": "8dad7a88583f79718487f04b2b0b921e359098fd4f43039ec2b250d531a9cacb",
+        "bytes": 1953044
+      },
+      "tests/fixtures/ryeo-expressions-sources.json": {
+        "sha256": "83bdf37b511b5713685906f6083301fd707ee5f17e479ae91d71e2c5f4aae50e",
+        "bytes": 53216
+      },
+      "tests/fixtures/ryeogo-expansion-assessments.json": {
+        "sha256": "d150694431498bb86b8232217bb2a6214f7477fd886b433eed8bcf2a5ec69972",
+        "bytes": 78352
+      },
+      "tests/fixtures/ryeogo-expansion-sources.json": {
+        "sha256": "dc9987ef9fd563101645bee0652f19402f7b0c6bacc015fd917f88aa14bf0ab2",
+        "bytes": 87806
+      },
+      "tests/fixtures/ryeogo-license-assessments.json": {
+        "sha256": "64d0295fc1651bced66b391b6b87d104be168d641448743ddd2e1d2e768b812a",
+        "bytes": 52239
+      },
+      "tests/fixtures/ryeogo-license-sources.json": {
+        "sha256": "bb803af39a4cc2b8aa60c030194b16345c99cf6f39d4118ba35a8c9f55692a6a",
+        "bytes": 1149862
+      },
+      "tests/fixtures/short-reports-sources.json": {
+        "sha256": "ced0da963b5599790fb978be6118387b88094d8d6d22fba67b8e674244faaa48",
+        "bytes": 85596
+      },
+      "tests/fixtures/short-stem-sources.json": {
+        "sha256": "dcbe9557fa9a7118447c7ef0fa504162c1b9e30809c58177c3d7239383ab2bc5",
+        "bytes": 365508
+      },
+      "tests/fixtures/soseo-sources.json": {
+        "sha256": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
+        "bytes": 8346
+      },
+      "tests/fixtures/source-head-primary-reviews.json": {
+        "sha256": "7a693a02b2bb182bc79ed08b31343a1437e8280807fbf05e3f1882f875226305",
+        "bytes": 3113
+      },
+      "tests/fixtures/source-head-sources.json": {
+        "sha256": "46ad07956769f7175936d201a297707e7b9529526727a73c6684f04a991fe8af",
+        "bytes": 839699
+      },
+      "tests/fixtures/spacing-sources.json": {
+        "sha256": "6aa273df558ff54b1ec937ad76438341b29fc68a69c9d36d8311703d8573af24",
+        "bytes": 3905
+      },
+      "tests/fixtures/spacing-validity.json": {
+        "sha256": "4a6a582dac431b789ae6023a26fc4c2e1bdc52b5bbf51c2b957983471a2dd8bd",
+        "bytes": 21813
+      },
+      "tests/fixtures/ssik-adverb-sources.json": {
+        "sha256": "7ec19c5fd0293168f25aa8210b0565da698a907ce184a7e607f15c65d588252f",
+        "bytes": 11220346
+      },
+      "tests/fixtures/ssik-sources.json": {
+        "sha256": "4c1f72c73f61e1a29e3e670cae48b0fe92480a7e37dc4277ed531b68051c21a6",
+        "bytes": 825478
+      },
+      "tests/fixtures/transition-aux-entry-judgments.json": {
+        "sha256": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
+        "bytes": 358874
+      },
+      "tests/fixtures/transition-aux-sources.json": {
+        "sha256": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
+        "bytes": 3105126
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "563f4233c913319ac052eac2dcd74fc04888cbee60eeb87add9df9705d91bb4f",
+        "bytes": 31624708
+      },
+      "tests/fixtures/well-doeda-sources.json": {
+        "sha256": "eb02f9b0a80bfeb60fd4b6e2c19693b7926176d4b10b973cbf3ee177527488a8",
+        "bytes": 229213
+      },
+      "tests/fixtures/written-vowel-compat-snapshot-audit.json": {
+        "sha256": "9aad02343ce31ff911b6bcbac795c8c25d5bc0c4c5520087b1c1119719505b0c",
+        "bytes": 2004326
+      },
+      "tests/fixtures/written-vowel-compat-sources.json": {
+        "sha256": "072b22762bb2e0a3ec8ea7083a887d2148dbd1cf06ebe7b5e0c7cd7b4efb05b0",
+        "bytes": 20899026
+      },
+      "tests/fixtures/written-vowel-snapshot-audit.json": {
+        "sha256": "cfa2af4d21ea0000082f350e3a3e72c799d137b9607be30af297e82831fee2d8",
+        "bytes": 64424
+      },
+      "tests/fixtures/written-vowel-sources.json": {
+        "sha256": "082265a4e624792bdfc2d121c05ede74718a3b5b958b558ea10a0ff8ab5322ca",
+        "bytes": 5521547
+      },
+      "tests/foreign_nominals.rs": {
+        "sha256": "c7e8d81e1d0a9c1c2101d6710b9bf84e3391f62434a06b2713e160326a2d8ebe",
+        "bytes": 7225
+      },
+      "tests/friendly_command.rs": {
+        "sha256": "dccfba5d475c1c8722dde033a70e1332e346977e978761c2642a8e66b36ced0c",
+        "bytes": 10282
+      },
+      "tests/future_questions.rs": {
+        "sha256": "71cae0694333d2a7c9b6f784e0d08580dbe73af7a07760e04870d2dea62b2e56",
+        "bytes": 16288
+      },
+      "tests/gam_questions.rs": {
+        "sha256": "e84ee87884570646f4c3a13ba91ef2b4e7fc534a1c8c630636a8164e3940d268",
+        "bytes": 11107
+      },
+      "tests/geol.rs": {
+        "sha256": "4615b2b5bbce7a8d749964b17b307eab383a1ae5e9c6d65f6c4be2ceacfd9cc7",
+        "bytes": 9556
+      },
+      "tests/geon_contrast.rs": {
+        "sha256": "4190afb4c3360e075d40d39a9931081968250ad23293df29c256558208e581fc",
+        "bytes": 11612
+      },
+      "tests/gera_nera.rs": {
+        "sha256": "aa2b63f8a07d7d66d2d5eef4a73ee1dd5c9d4c99d943676107f7cb5af26d200e",
+        "bytes": 8701
+      },
+      "tests/hada.rs": {
+        "sha256": "c4216ec0b960749c2f5297e5890193a6c0af567dee7641e82c37624b6b353e03",
+        "bytes": 10456
+      },
+      "tests/hada_aux.rs": {
+        "sha256": "1965bfdb22a4e8e16e05c977ecaa6dfdaddc4f305b46279a5256d84b85eecb41",
+        "bytes": 12619
+      },
+      "tests/hada_complex.rs": {
+        "sha256": "c6fd4c54ea86066e598865b43685f9e95043365466f1675a7e14d3fc33647886",
+        "bytes": 8724
+      },
+      "tests/hada_nominal.rs": {
+        "sha256": "3be5a937f6c6a4e226e2b4167a26f6a4007d81b9e519808345abb20f80d2f176",
+        "bytes": 10951
+      },
+      "tests/hada_remaining.rs": {
+        "sha256": "3e3728cb119d0c9fcbb93c2812f7d72c2629c947f00bbd3a9f5dca7e4560fe1f",
+        "bytes": 12156
+      },
+      "tests/hieut_compatibility.rs": {
+        "sha256": "f557736f7275cbdb7e73217b9a760e9054e99ca29c6d1a9c747ea35ad807d4e6",
+        "bytes": 13329
+      },
+      "tests/honorific_copulas.rs": {
+        "sha256": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
+        "bytes": 8162
+      },
+      "tests/humble.rs": {
+        "sha256": "ccbb7d13422bc0ed2ea98f0ddbe5f4711a576238b4e443837d2e616df78f0778",
+        "bytes": 6958
+      },
+      "tests/intensive_aux.rs": {
+        "sha256": "8089c2c8c17aff69a454b7e2dc9f459f21fc04f4b40595d3113442646561619f",
+        "bytes": 13050
+      },
+      "tests/intention_connectives.rs": {
+        "sha256": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
+        "bytes": 6132
+      },
+      "tests/intention_endings.rs": {
+        "sha256": "ebe339c2392b0ec5bd0e3f9c1c9d3e9c2cfeb3f2da0d6ea9e1e2073460abb258",
+        "bytes": 7821
+      },
+      "tests/jaop.rs": {
+        "sha256": "e5081779f79dc01f263cb3889647412b618d449928022f9a4c2bd31869b944b9",
+        "bytes": 8647
+      },
+      "tests/jimaneun.rs": {
+        "sha256": "f49f4ed45712b4365d0bd16f8e37fc882bc9079a2c711d0d806542a7e300d217",
+        "bytes": 3402
+      },
+      "tests/kkaena.rs": {
+        "sha256": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
+        "bytes": 5636
+      },
+      "tests/lexical_malda.rs": {
+        "sha256": "37053286917ea69409f57759fdf5b9b34ee110460a393010eed8b11982fa21a6",
+        "bytes": 9388
+      },
+      "tests/lexical_nada_spacing.rs": {
+        "sha256": "84200c567f7f5e14c004967b445b4d9da30803fd68888221fdfca23fe70a8840",
+        "bytes": 34611
+      },
+      "tests/literary_ri_prefinal.rs": {
+        "sha256": "162b891deb4953ab00bc36357d702808a83a1e7797af0cbd8e1ab80e45815c84",
+        "bytes": 6331
+      },
+      "tests/literary_ri_prefinal_broad_owners.rs": {
+        "sha256": "908a572025be36b9da241216f278f4776544fec32c90472651150cfcc774f247",
+        "bytes": 2031
+      },
+      "tests/llachimyeon.rs": {
+        "sha256": "2c01312a510253d4e25988765754494f7bc05cf96a6af76e45d57c07547ea1dc",
+        "bytes": 8661
+      },
+      "tests/llago.rs": {
+        "sha256": "5c3263828be6ae019337dd6151b383ccb2835584bdea921764455e781a508d7d",
+        "bytes": 5616
+      },
+      "tests/mada_case.rs": {
+        "sha256": "026ba853e525efc1ac98252388385fdc962582e1d51ec2b51e7ea9cd696fa52e",
+        "bytes": 10223
+      },
+      "tests/malda_inflection.rs": {
+        "sha256": "4e4e87725e23afdba6a55a1ac190fadbe588f49962540ecddf3b4ddd6bc07a2e",
+        "bytes": 9331
+      },
+      "tests/naikka.rs": {
+        "sha256": "ae435f8c1551a4402a3097c0e7b34b50a053608a3158881f86d86603ff8442b1",
+        "bytes": 7560
+      },
+      "tests/native_conditionals.rs": {
+        "sha256": "32ba010fd6043a103ba9b4a8abcbe0bc272c9af86d883037d0a670ed73ab7277",
+        "bytes": 10710
+      },
+      "tests/native_pos.rs": {
+        "sha256": "f7f1cd553d3bb75aa828c08221e85edfcd8d8f710c697c6b625d967879db028f",
+        "bytes": 34453
+      },
+      "tests/necessity.rs": {
+        "sha256": "6efda60359e567a1918bd9fee20a51f719f18a65a16ea5d0a074ebfa9422a66e",
+        "bytes": 6237
+      },
+      "tests/negative_classes.rs": {
+        "sha256": "b50554df0a3ff49fbb85852b470d161d35ff1047b7e7cee05fbb52d6f2ff997e",
+        "bytes": 13555
+      },
+      "tests/negative_contractions.rs": {
+        "sha256": "bc62045028df94a26438db8ec6a77b9d196c0df0a230f72ed240ace88bd751b9",
+        "bytes": 5889
+      },
+      "tests/neuni.rs": {
+        "sha256": "5ec00d3d7a1a159567c9d62a6b86a297e4b9c534ebe448b6d7c98b57095fa845",
+        "bytes": 12909
+      },
+      "tests/neuni_comparison.rs": {
+        "sha256": "f54b62c8516fd1c7d234835da3a6c6b6f1d2cd6192f320e044a18bb742b2d193",
+        "bytes": 9655
+      },
+      "tests/neura.rs": {
+        "sha256": "1c3bcb9f923651477d58f507856e45441c1c4efd7a5b272f9c66d3d9937506f6",
+        "bytes": 9243
+      },
+      "tests/nira.rs": {
+        "sha256": "cace34737dd52a13c3a646e8256d1f2c2c7d8e7fa3f0b9c6d4dd791cdb18a8fa",
+        "bytes": 8727
+      },
+      "tests/noh_contraction.rs": {
+        "sha256": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
+        "bytes": 7976
+      },
+      "tests/nominal_copulas.rs": {
+        "sha256": "3f69842759c479a775bdf3ac8af758e18cace6e7f71006ddd9b32f8fd6cde8c7",
+        "bytes": 5948
+      },
+      "tests/nominal_hwa.rs": {
+        "sha256": "171ba992942bf03c59b3cd677acbb1d506eec81f20dca5cace6ca6ab0dcbbb3e",
+        "bytes": 15563
+      },
+      "tests/nominal_hwa_hada.rs": {
+        "sha256": "802f996b04e429bef228bee4ef11b606887f175b76188e2bb4a989db32030257",
+        "bytes": 11387
+      },
+      "tests/nominal_i.rs": {
+        "sha256": "ed449b276c838937e51768b47f1870f9ed213b398ba574055e159c8dea4ac8bf",
+        "bytes": 14343
+      },
+      "tests/nominal_si.rs": {
+        "sha256": "1251bdf843774ae829e4e2cb12fb3ad15cd96403a0eaaa294a1930dc8b8e4d40",
+        "bytes": 11459
+      },
+      "tests/nominal_si_hada.rs": {
+        "sha256": "b5bf0752abd6d93cc3333cc9d357c1d9b3a5bdddd21906e773dcb40ba64c032b",
+        "bytes": 15753
+      },
+      "tests/noun_adnominal.rs": {
+        "sha256": "83f81074add4944a127ec606fa7a172eaabcee06bf70bb6c439871827ffa2d54",
+        "bytes": 15046
+      },
+      "tests/noun_base.rs": {
+        "sha256": "2ecb7e1956f34502e98752279fc267abaeb7f998fe18704d1e72ee356cb3229a",
+        "bytes": 16142
+      },
+      "tests/noun_compound.rs": {
+        "sha256": "baa55df1921e79b7176565dea8cd72acc29898f767155c364056083e859d6c29",
+        "bytes": 15265
+      },
+      "tests/noun_fan.rs": {
+        "sha256": "82cba4acccac2b0284ba7ae75bfbf1ae299df52964e17bdbd3c1dcc31e460a95",
+        "bytes": 14829
+      },
+      "tests/noun_formation.rs": {
+        "sha256": "cb1cb4cf960d086e07f8c80447c767d4de34bcb02d9c4b9c7043605305d92115",
+        "bytes": 14373
+      },
+      "tests/noun_internal.rs": {
+        "sha256": "4690f54cd586d7f6e616446420a8620613401e1bc98880aae033ced5e28f31f4",
+        "bytes": 15041
+      },
+      "tests/noun_predicate.rs": {
+        "sha256": "c1300d7b1c2dc9ce32bdca3340d49ecf459e63d58d50760465bf74a73d6d8cc4",
+        "bytes": 13445
+      },
+      "tests/noun_root.rs": {
+        "sha256": "3a6121dc9b94ec5fb9e771f65a37209b25617b2ff1428cbead679a67170e71af",
+        "bytes": 18701
+      },
+      "tests/noun_sound.rs": {
+        "sha256": "8ab3c1e1a235454dceade89c38435d467039deaf563dbaa96e1e176afe02945a",
+        "bytes": 16098
+      },
+      "tests/obligation.rs": {
+        "sha256": "02a79d30d3f71a419eb3feebd8a76d60753049aae9750d65010bc2367f2862e4",
+        "bytes": 6808
+      },
+      "tests/omitted_connectives.rs": {
+        "sha256": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
+        "bytes": 7957
+      },
+      "tests/omitted_copulas.rs": {
+        "sha256": "f9e4cbef49479ac70d70fa0aba833d153bee16d2b41356851c7f87d80370ef2e",
+        "bytes": 5342
+      },
+      "tests/opaque_adverbs.rs": {
+        "sha256": "e2ff2b2e50224b7ee331fa0be42d055155fdf726990fa791b017c6547685c45f",
+        "bytes": 13971
+      },
+      "tests/optsi.rs": {
+        "sha256": "6935bf4a5b86c17cbc58fb40678952ebd168682baddaf996e0318e47eed31182",
+        "bytes": 7867
+      },
+      "tests/particles.rs": {
+        "sha256": "1b84dd333a62ee80e11fd1152a389d475da4bb84950f76b12d1863fcffc4ea6f",
+        "bytes": 13805
+      },
+      "tests/past_prefinal.rs": {
+        "sha256": "73c1279ed93c6aab1583845f8308e08cd35ca890f09a6b088784db1a854065db",
+        "bytes": 3619
+      },
+      "tests/phonetic_paradigms.rs": {
+        "sha256": "3475944189c6016b0b4d9655726f2cd0cb1f3338798de637607102e6442886bb",
+        "bytes": 7396
+      },
+      "tests/polite.rs": {
+        "sha256": "77ea4a81b4e706437d3769e7c0ff0df80b2987c45b0d48c8fe08cf09c1a8fbf3",
+        "bytes": 8322
+      },
+      "tests/polite_copulas.rs": {
+        "sha256": "4eb74066eebfde648de9c25d40e6c8745ade678f600b9b520d659e9bdc7349d3",
+        "bytes": 5695
+      },
+      "tests/potential_aux.rs": {
+        "sha256": "552abaf065f906630d69a2742290fa0886fe864e67b86dce4bc2c88121ded09b",
+        "bytes": 12595
+      },
+      "tests/prefinal_copulas.rs": {
+        "sha256": "2898476eead2aec9180ac1775bc0742ad86fcfa65ea690c865a687e63113d003",
+        "bytes": 9009
+      },
+      "tests/prefinal_licenses.rs": {
+        "sha256": "700471bed14d600ccd8678a05fa59d6fa3620b135a60c3149a7b32c4c5f5bdb8",
+        "bytes": 9249
+      },
+      "tests/present_licenses.rs": {
+        "sha256": "eaff7b990aa9fab07bb1978c5dbc99709cf9955e722dcd875a69d5b3981302d9",
+        "bytes": 3041
+      },
+      "tests/present_prefinal.rs": {
+        "sha256": "af410bc39ea6e902a91bb1fba318d036be399ed59914968ef5d916ae601a1cf3",
+        "bytes": 4016
+      },
+      "tests/pretence_aux.rs": {
+        "sha256": "a0c33ae0309a71fc05438cab81abcc4c06c25b30337024323413441fdec9f875",
+        "bytes": 12493
+      },
+      "tests/proposal_exclamation.rs": {
+        "sha256": "0c090f3bdc83a80e94a0ebfd428fb694919f967dc11029642e337750005f9373",
+        "bytes": 16422
+      },
+      "tests/proposal_review.rs": {
+        "sha256": "29ecc5fcaf45c3cf2f2464163cc3be9bb56d2843737d55177c0c7f72ec1bf1e0",
+        "bytes": 11932
+      },
+      "tests/propositive_endings.rs": {
+        "sha256": "cbb8284cfff726724ef6b00a75d532fea07476b83d49581fe1fbfec5f9e9bf19",
+        "bytes": 2637
+      },
+      "tests/question_additive.rs": {
+        "sha256": "d9dc4a42699b63205e48d89cd94d855fb0d8bdd2fbf413dbf20bdf12b252a124",
+        "bytes": 15031
+      },
+      "tests/question_copulas.rs": {
+        "sha256": "ab4d8122ea796f7605e30d52d975f68e300f347364fce3f9b8fe1aba89c254cd",
+        "bytes": 9703
+      },
+      "tests/question_exclamation.rs": {
+        "sha256": "6de6ed4b00f02f4bd56cae68d6b58034b9d757ca0ad45a26aed22cd0e6a7f00d",
+        "bytes": 17083
+      },
+      "tests/question_topic.rs": {
+        "sha256": "63b19b32a1285f7310e6b52511c9296b74791c2dd2f58681f07f4c73d54e0467",
+        "bytes": 14474
+      },
+      "tests/quote_followers.rs": {
+        "sha256": "03ee6651d4224116fad506b5623c90287c9108ea031ec28647bc7fdbc837ae32",
+        "bytes": 11942
+      },
+      "tests/quoted_alternatives.rs": {
+        "sha256": "ca5e0506e870de7338ce5cba2bfda8639def2de09cbd66a9564b1b68a2630aa5",
+        "bytes": 7697
+      },
+      "tests/quoted_bakke.rs": {
+        "sha256": "9c5f0cca917cd0ca1093262f634a5acca878b91adbdd19aa0a57ae5a1aa89e42",
+        "bytes": 5592
+      },
+      "tests/quoted_definitions.rs": {
+        "sha256": "2aeae4e66cba05723278d8b25c3598b5722ea43784e374048ee486e17b474b04",
+        "bytes": 7860
+      },
+      "tests/quoted_exclamation.rs": {
+        "sha256": "e4ef9bf7068c4305e55b15e9651f33a4dae463bde5503297eccee598756a9351",
+        "bytes": 14353
+      },
+      "tests/quoted_neuni.rs": {
+        "sha256": "abaf50ed3bb07b9d07cf0de699329ba629a48241c428fd42f611720998fa35dc",
+        "bytes": 13467
+      },
+      "tests/quoted_questions.rs": {
+        "sha256": "a47a195eb69d19addbeb174dcb76e3be14a8b2a02d0969de008adab208ec2688",
+        "bytes": 8115
+      },
+      "tests/ra_conditions.rs": {
+        "sha256": "11fb4970c75f5f22851dc4f927e9c64058d7211483a086740f9cbf67f4da4c8b",
+        "bytes": 8877
+      },
+      "tests/range_case_particles.rs": {
+        "sha256": "25e9b75fe1d217b3847ff347443a41b85d55b17243725a56d5f0ca9f5ab3b6fd",
+        "bytes": 5244
+      },
+      "tests/repetitive_aux.rs": {
+        "sha256": "de62a192d5cd30763cd91aa8893a21c61d9cc7dc4e52b34440737a1431550c70",
+        "bytes": 13015
+      },
+      "tests/report_myeo_endings.rs": {
+        "sha256": "a177b31312b04b97fa70289b5a432cbb928a7bc289c8545481fbeeb7da3f8be8",
+        "bytes": 18547
+      },
+      "tests/report_ne_endings.rs": {
+        "sha256": "ed7d5584554f87a82dccc13ff0814729bb1db99318e622642b089ba127c5500d",
+        "bytes": 16734
+      },
+      "tests/report_ni_endings.rs": {
+        "sha256": "ac64ae7829a4cf0c816599b8fa81685b75888c71f630bbcf35099767bde66c8d",
+        "bytes": 3265
+      },
+      "tests/reported_command_deoni.rs": {
+        "sha256": "beb16f89a874961df087bbc2a8c75f2480de106a4c29eea428b7a525d34dc29a",
+        "bytes": 11761
+      },
+      "tests/reported_dana.rs": {
+        "sha256": "7b69a1498cb6e3a6f2cc17a2240f5abba3955b6c98b8d6da34adcb10764a9806",
+        "bytes": 9690
+      },
+      "tests/reported_dana_support/parent.rs": {
+        "sha256": "a9866641165331c65db0e974f111c3a5fc05c16f416f28cac5e107fab0a09e2c",
+        "bytes": 2364
+      },
+      "tests/reported_retrospectives.rs": {
+        "sha256": "6e0ebc5ab21b44fda15f7f27699978688cc295161d6905912047531a5d293bbf",
+        "bytes": 17361
+      },
+      "tests/reporting_endings.rs": {
+        "sha256": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
+        "bytes": 6563
+      },
+      "tests/request_aux.rs": {
+        "sha256": "71809c700fb4255b9e9c7c46b60695bc1683bf49d842b1894031a9b4f85d4542",
+        "bytes": 8167
+      },
+      "tests/result_connectives.rs": {
+        "sha256": "eeea82da6faf976af62dd8d02c895b7bf5ba3bef0cc25ab0a5c32b82be2adcb3",
+        "bytes": 7049
+      },
+      "tests/retrospective_adnominals.rs": {
+        "sha256": "6c3d7eede76917b5c5d76159ef0f05fbed1b9c39752034594e9657bf925d67bc",
+        "bytes": 10921
+      },
+      "tests/retrospective_connectives.rs": {
+        "sha256": "b14cb45785467763ccaa679df949ab3d2b7c58a69e803e1ed39d31c5a86d21f6",
+        "bytes": 10466
+      },
+      "tests/retrospective_licenses.rs": {
+        "sha256": "782f6bd547a54ad6d664566c70cfe1d5bea8fc5b423f2ed04596a761924938f7",
+        "bytes": 7763
+      },
+      "tests/reu.rs": {
+        "sha256": "178eded189f5492b84ab006644d5c56878f2978ab2db62dea929087f322e516a",
+        "bytes": 18042
+      },
+      "tests/rikka.rs": {
+        "sha256": "7937cf36526339cef28c7650f4cc1285c3ab6d871b438584d24888f338590d63",
+        "bytes": 8451
+      },
+      "tests/rules.rs": {
+        "sha256": "56ac5b8943a819a40350d5d8c8012facded6f16988125974f8b41a3a58e7d0d8",
+        "bytes": 6806
+      },
+      "tests/rya_boundary.rs": {
+        "sha256": "37ce0c1fa9e34594bef053c5c84c89c5ef7e945cb8762a6d3bf0a8d8ba823835",
+        "bytes": 13536
+      },
+      "tests/rya_copulas.rs": {
+        "sha256": "49db23811054653e3edc4139af6e6472d67847dd0b3558998c6c66d7da6bb629",
+        "bytes": 11484
+      },
+      "tests/ryeo_expressions.rs": {
+        "sha256": "94d6b018bf3e2dbeb04dcd85b82efd35f9ca3f1277a866b92f2efa21571d772f",
+        "bytes": 7445
+      },
+      "tests/ryeogo.rs": {
+        "sha256": "d523976bafe5368d6f44ff2fd03038f14e82322f3050171b683c5f23491c1543",
+        "bytes": 5188
+      },
+      "tests/ryeogo_expansions.rs": {
+        "sha256": "59dda330f49584bf4087fb81997a134cfc558ab1f8208f9357cf119b47127bb6",
+        "bytes": 11611
+      },
+      "tests/ryeogo_licenses.rs": {
+        "sha256": "e37561dfbde140cfa76548cd71848b9149fe4448a00dda206edd12a64d644844",
+        "bytes": 8200
+      },
+      "tests/ryeona.rs": {
+        "sha256": "88491f4f048676ba04d18e5ccf6af00d6c9cee63782bde1c569f3c3df25397e0",
+        "bytes": 5691
+      },
+      "tests/seo_connectives.rs": {
+        "sha256": "16fe785640f46da0d453bc2db93c70eb089dacf7d092f65b9dc8cb0d40851680",
+        "bytes": 6306
+      },
+      "tests/short_clauses.rs": {
+        "sha256": "d3e1dbb93de840f53c3474ebf4e41e346dc57a0d1225c5d5738226d52ede46a3",
+        "bytes": 3223
+      },
+      "tests/short_recipient.rs": {
+        "sha256": "b68799cfedf5fef3db46df1f11dcf641816570b0bbf27db1a2f2b9fb37018a84",
+        "bytes": 5220
+      },
+      "tests/short_reports.rs": {
+        "sha256": "c7af427398f7b04ec2f36d6392775fcd00d65250999178441eab9f0eed325c67",
+        "bytes": 11120
+      },
+      "tests/short_stems.rs": {
+        "sha256": "a455611b14f7088a5a0fd4ad134d88089aac9716761184f78c2db7a67f03c041",
+        "bytes": 11723
+      },
+      "tests/soseo.rs": {
+        "sha256": "26ed056b762ff2c61ac2465ede22622157aff283f5478bab968336c32c7c2625",
+        "bytes": 8414
+      },
+      "tests/source_heads.rs": {
+        "sha256": "7f6965657a0a13246bff45f7cda762c71f8e400108115ed7084bbf273b83206b",
+        "bytes": 12701
+      },
+      "tests/source_particles.rs": {
+        "sha256": "5e1b760c098ccf89c8c0f4bc82bb819ad78f7a927968c2d52c6da0765261db9a",
+        "bytes": 7970
+      },
+      "tests/spacing.rs": {
+        "sha256": "38cb93186c6cede6a457e4ce3288a028ba975bc9ccc3d1b71192e0935589d55e",
+        "bytes": 17544
+      },
+      "tests/ssik.rs": {
+        "sha256": "824b7c67928c844d8eab142fc37355ccc7509d2ebcbc1f443f21f2c16578c62b",
+        "bytes": 6733
+      },
+      "tests/ssik_adverb.rs": {
+        "sha256": "309bcbf739d623aec5d9b17faa41b7555f400ab2ca3fd408cc44c22cf350f8d0",
+        "bytes": 8750
+      },
+      "tests/stative_reports.rs": {
+        "sha256": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
+        "bytes": 2270
+      },
+      "tests/stress.rs": {
+        "sha256": "c38cc0f335be46a6423ab1f920c716bcee95e23ff6a72a3f0ab81ecf348486c6",
+        "bytes": 11689
+      },
+      "tests/support/complex_bieup_history.rs": {
+        "sha256": "fe86cb2bc19b1c5c4add040b3e3ba7ead34aa4e4b28dde80c10a8dcd7d3391ba",
+        "bytes": 1613
+      },
+      "tests/support/literary_ri_prefinal_history.rs": {
+        "sha256": "d5a9fada57fe3f688f3f03ba49f621e805d60dc7e3b825f25fe0334f184da969",
+        "bytes": 2854
+      },
+      "tests/support/written_vowel_history.rs": {
+        "sha256": "979f61c0923635d410d0e6fbed35d79a4632220c014a2131a497115975ac784b",
+        "bytes": 1084
+      },
+      "tests/text.rs": {
+        "sha256": "281e6820f1160519d9a22ef2e9a249c4cce98cd8c488ace34cbec3833f628e78",
+        "bytes": 4960
+      },
+      "tests/transition_aux.rs": {
+        "sha256": "ff9107b2542d6fb10ed2070c5f13a8761fcd6d6ff0d4e66bc5925484d6e704a3",
+        "bytes": 13142
+      },
+      "tests/uncertainty.rs": {
+        "sha256": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
+        "bytes": 5327
+      },
+      "tests/validity.rs": {
+        "sha256": "24633f7cfe9cbad8cb76dba96eb4f687452fd464f514eee3fa2737e77362544f",
+        "bytes": 4004
+      },
+      "tests/vocative.rs": {
+        "sha256": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
+        "bytes": 5376
+      },
+      "tests/well_doeda.rs": {
+        "sha256": "7eb9f93a5e3662df5f2eb2582fd564497783259884338e3e53ecceef64659096",
+        "bytes": 9961
+      },
+      "tests/written_vowel.rs": {
+        "sha256": "81562a1725dd126b8290a8b040eb472d73fedada4306f14557cd3a1461edef03",
+        "bytes": 11455
+      },
+      "tests/written_vowel_compat.rs": {
+        "sha256": "dbb6f68c6fb36b19831d8d451a4db0fc26e334070ace92ee355ef66834b12573",
+        "bytes": 16482
+      },
+      "tools/adjectival_allomorph.rs": {
+        "sha256": "e501aa062c23e82195a51b512263bf496876716a0eac6903bdf00aa39916a158",
+        "bytes": 2394
+      },
+      "tools/corpus.rs": {
+        "sha256": "ef0932a55f375ba79547af8b855a24a1a519528b6800b04f36331d3d5d8831ab",
+        "bytes": 20906
+      },
+      "tools/hada_nominal_preservation.rs": {
+        "sha256": "85e92cbf65c996bac5eb34df924ed5148353b807b793bf374f60ecb2268c208e",
+        "bytes": 8361
+      },
+      "tools/validity.rs": {
+        "sha256": "8ee2d87e71985d14126ed1516b7b02983603fe299fb6217cbe6e93cca2d81450",
+        "bytes": 8142
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "188c16617a470c4bf5720bd90ae4eadb8c23f6a5e8fd3323f026532983026aa9",
+        "bytes": 185439
+      },
+      "web/index.html": {
+        "sha256": "32012d8da789f8a94a7d55eecd067b4d8511928f9871594f22ddc3345069d984",
+        "bytes": 573
+      },
+      "web/package-lock.json": {
+        "sha256": "0b562aedd8917cf9a1ce64e6e65155b0545a3029a5c19eb09a7efacf7e117d8d",
+        "bytes": 67368
+      },
+      "web/package.json": {
+        "sha256": "bd408f4a67e2b02a9f9960df439920cda8e364383b1c48066b2db646189b4b8c",
+        "bytes": 535
+      },
+      "web/public/DM-Sans-LICENSE.txt": {
+        "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7",
+        "bytes": 4502
+      },
+      "web/public/Grammar-labels-LICENSE.txt": {
+        "sha256": "93c1cafb5c5b45074fc4013917d17afd55d0852269c36e509a8d70eb93fb00fa",
+        "bytes": 3435
+      },
+      "web/public/Newsreader-LICENSE.txt": {
+        "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7",
+        "bytes": 4520
+      },
+      "web/public/favicon.svg": {
+        "sha256": "162b5321db4ffc29d04c698d32c4a8704cca0e2b886f38fcfee85a8e82b7b235",
+        "bytes": 230
+      },
+      "web/src/App.tsx": {
+        "sha256": "8d50c37cf434555ff9272fcff4c15d32a6978885c5149a9b3636b53ecf6e0e00",
+        "bytes": 28104
+      },
+      "web/src/SentenceBreakdown.tsx": {
+        "sha256": "f47f7a08b0c2c80329ecbef3019b082a3c5dc83766c7bd8b6268cc392b6b91ad",
+        "bytes": 9683
+      },
+      "web/src/SpacingSuggestions.tsx": {
+        "sha256": "0395cadc2475bcdce3c0d8064a840e5593237a45702b112e8c7b7c1a2424fcba",
+        "bytes": 1966
+      },
+      "web/src/breakdown.ts": {
+        "sha256": "38d197faa54beae6b21497c5da8948f30ec0ee485e76ae1807640ab1fc2aeabf",
+        "bytes": 14052
+      },
+      "web/src/hada-sources.json": {
+        "sha256": "8711dc630206511574421536c64c4bf982775d1d58ee6e757beded5694a57938",
+        "bytes": 2538
+      },
+      "web/src/index.tsx": {
+        "sha256": "4af9cc098d423152f6d35ddadf0b79302c1df49b94b7b739e655ec475c3669b2",
+        "bytes": 224
+      },
+      "web/src/model.ts": {
+        "sha256": "025dc69d9d892ad7c8e642aff1bf54f1f0923a1b00aee5342c52fbbfba0a4d3c",
+        "bytes": 8135
+      },
+      "web/src/style.css": {
+        "sha256": "abde83ce3c178167208d2e6d94079917fab7bef266ce167daa2267d87ac983a2",
+        "bytes": 19958
+      },
+      "web/tsconfig.json": {
+        "sha256": "5eee2e83b0b17c85f21784ffecfc9e26495b78284cb82518dc760c8dad4a6eac",
+        "bytes": 437
+      },
+      "web/vite.config.ts": {
+        "sha256": "b550b97f20a776763a137cab6237b27ca257999d44ffc93a4622650b5f71fa1a",
+        "bytes": 378
+      }
+    }
+  },
+  "scope": "Actual Rust release tests and SolidJS build against immutable source profiles. Only runtime source/test/asset inputs are frozen; Python audits and documentary evidence may progress independently. Complete inventory gate remains separate.",
+  "exit_code": 0,
+  "finished_at": "2026-10-07T17:55:12.070567+00:00",
+  "log_sha256": "0fb613a9a60273a2af0ef6695ba360a4ce3310cfa53047d02d79796d706fb6b4",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/zvmmzj49c1igbwf4lvi8lg9bwj2mcr53-klem-0.1.0",
+    "/nix/store/cccqm05ky11h8i8iw88qywdj6hpq70yq-klem-web-assets-0.1.0"
+  ]
+}

@@ -4,6 +4,8 @@
 mod deoniman_parent;
 #[path = "reported_dana_support/parent.rs"]
 mod reported_dana_parent;
+#[path = "support/literary_ri_prefinal_history.rs"]
+mod ri_history;
 use klem::breakdown::Component;
 use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
@@ -198,6 +200,10 @@ fn complete_original_source_words_preserve_order_and_attribute_each_addition() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "prefinal.conjectural_ni") {
+                ri_history::assert_addition("tests/copula-expectation-full-source.json", word, a);
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.reported_dana") {
                 reported_dana_parent::assert_report_parent("copula", word, a);
                 continue;

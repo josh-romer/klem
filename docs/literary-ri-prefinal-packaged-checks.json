@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "package_receipt": "docs/literary-ri-prefinal-package-nix.json",
+  "runtime_audit_session": 3818,
+  "runtime_controls_session": 26986,
+  "source_controls": 10,
+  "preservation_controls": 12,
+  "runtime_controls": 16,
+  "total_integrity_controls": 38,
+  "cli_session": 44052,
+  "cli_receipt": "docs/literary-ri-prefinal-packaged-cli-replay.json.gz",
+  "counts": {
+    "source_streams": 6,
+    "source_frames_per_stream": 275,
+    "word_probes": 168,
+    "broad_streams": 8,
+    "broad_records": 1128312,
+    "corpus_words": 32096,
+    "diagrams": 394,
+    "nested_hada_diagrams": 6,
+    "exports": 24,
+    "native_endpoint_checks": 526,
+    "ri_native_entries": 182
+  },
+  "browser_sessions": {
+    "ri": 30190,
+    "past": 37630,
+    "double_past": 18372,
+    "legacy": 55343,
+    "nested_hada": 3137
+  },
+  "screenshots_inspected": [
+    "docs/literary-ri-prefinal-packaged-desktop.png",
+    "docs/literary-ri-prefinal-packaged-mobile.png"
+  ],
+  "launcher": {
+    "session_id": 66789,
+    "receipt": "docs/literary-ri-prefinal-web-launcher.json",
+    "exit_code": 0,
+    "help_exit_code": 0
+  },
+  "owned_server_stopped": {
+    "session_id": 70702,
+    "signal": "SIGINT",
+    "terminal_exit": 1,
+    "scope": "Intentional shutdown after all browser jobs passed; startup and API checks succeeded."
+  },
+  "previous_terminal_attempts": [
+    {
+      "session_id": 30615,
+      "exit_code": 1,
+      "cause": "Exact comparison included legitimate debug/release elapsed_ms differences. All actual candidate/source/UI fields matched.",
+      "log": "docs/literary-ri-prefinal-first-runtime-audit.log.gz",
+      "log_sha256": "b6ec56e41c179ce7384e46b67591a5fe602359cace8ea643422b13cfe1756ddc"
+    },
+    {
+      "session_id": 99422,
+      "exit_code": 1,
+      "cause": "Nested auxiliary API responses also include elapsed_ms; all diagram/source data matched.",
+      "log": "docs/literary-ri-prefinal-second-runtime-audit.log.gz",
+      "log_sha256": "bddc0388fd9d6beb19e447d04f316d50871f8712b3df0c6a5e4ada878db3ff50"
+    },
+    {
+      "session_id": 41079,
+      "exit_code": 1,
+      "cause": "Two failures: nested elapsed_ms comparison and a test retaining a mutable comparison view. Exact semantic comparisons and independent expected test data corrected; retry26986 passed16 controls.",
+      "log": "docs/literary-ri-prefinal-first-package-controls.log.gz",
+      "log_sha256": "cd5116192aac11d2d4760d51fda19ae67269bb0e118c1f882a49fd2a37655494"
+    },
+    {
+      "exit_code": 1,
+      "cause": "First packaged server startup used unsupported --listen. No server started; retry70702 used the documented --port and all browser checks passed."
+    }
+  ],
+  "scope": "Actual independent Nix Rust/assets outputs; every ordered diagram, export, Native endpoint and full CLI stream matches main/prototype semantic captures. Only finite nonnegative current-call elapsed_ms is excluded from cross-build API equality; all candidate, component, label and source data remains exact. No timing or contextual precision claim.",
+  "files_sha256": {
+    "docs/literary-ri-prefinal-packaged-browser.json": "c5110ef918ad89e1734f240642cb9bdf7eac3b29a2fa9d5e03d111a0fddf280f",
+    "docs/literary-ri-prefinal-packaged-browser.log.gz": "16b8aa8ebf5470ee37f3e430acb8a40a6b45a3ff257ac16e7c52978d049a2f42",
+    "docs/literary-ri-prefinal-packaged-cli-replay.json.gz": "8748678565abb93d4051c969cd14d6db18ba9f9ceeb1398a52ece1f671ca4bd4",
+    "docs/literary-ri-prefinal-packaged-cli-replay.log.gz": "63eddc408e4114758c25bae0fc364d3d1b2adfc3419f36c54ee89831b90d52b8",
+    "docs/literary-ri-prefinal-packaged-desktop.png": "3a406cd83a42cf3825d146c0d7f33a8b7450feeadbb48ab701778af094481460",
+    "docs/literary-ri-prefinal-packaged-double-past-browser.json": "952bc1f84f3633a934aca1a324a77f1cd304e4227c690a56089d93445904ba97",
+    "docs/literary-ri-prefinal-packaged-double-past-browser.log.gz": "82ff3542fe30d3b0744a4bb2fcdd056b9d8695d9cd66d885988992807442f22b",
+    "docs/literary-ri-prefinal-packaged-double-past-desktop.png": "506a3c187b3e4e102691aa9ea3d5d7084bc7d520a7e12be75b7491d0550c1d15",
+    "docs/literary-ri-prefinal-packaged-double-past-mobile.png": "68ab3eebb573f4ed4bd1abdf96db2ac8f2e2c61251941ad496283fe7eb788d73",
+    "docs/literary-ri-prefinal-packaged-hada-scoped-browser.json": "d761f1f169b93f87e4c15a84cd516fb2f0b5f5b9c07d36146e8cffd37b685b53",
+    "docs/literary-ri-prefinal-packaged-hada-scoped-browser.log.gz": "29f116d71f71b142d31b44a294ff0b9c27b55553d9a2a7bf92889fdbe6da135a",
+    "docs/literary-ri-prefinal-packaged-legacy-browser.json": "dfd46551afb28778acdd7c5d36042cd39e3153cf8708aa63b3cf8dafbc5f0c55",
+    "docs/literary-ri-prefinal-packaged-legacy-browser.log.gz": "47a25b6aacd5e5d7248e29c2606ad803818e34c9b27d2776e1cdf52c2db094f2",
+    "docs/literary-ri-prefinal-packaged-legacy-desktop.png": "8c4fde6eff1c45736c472dca275d4afcd0b376b3ddd37bd32f5be214fec88348",
+    "docs/literary-ri-prefinal-packaged-legacy-mobile.png": "6f1651fc29553af02dce27faa10e3c73fdcb1a30b909ed3b8b65efe1581740e1",
+    "docs/literary-ri-prefinal-packaged-mobile.png": "509dc91f2680167769fe46d40e59896541fb7b9a5265ea3d55b3b2520c0237bc",
+    "docs/literary-ri-prefinal-packaged-past-browser.json": "8c563378fd39a120e560fd2ba241a54785833f835576d9dc79c4e73a5e429aed",
+    "docs/literary-ri-prefinal-packaged-past-browser.log.gz": "2f15386d9c34eabccabfd2b5caa655dc4de36e6a9b13a9054673d765ba3d7c52",
+    "docs/literary-ri-prefinal-packaged-past-desktop.png": "add4a4dc3beb15d7b17435c82402f6bb8ce692d2220df24514c926a94ddbd158",
+    "docs/literary-ri-prefinal-packaged-past-mobile.png": "f0d3b957a006412c87aa52bfc73a1ea0b909d5a98a8afe0d702a00d67d4000ca",
+    "docs/literary-ri-prefinal-packaged-runtime-audit.log.gz": "4bf58c6ac2ba68ff67371bad864ca5226cad900f7fa1b5bdc7e9f872530724da",
+    "docs/literary-ri-prefinal-packaged-runtime-controls.log.gz": "3b0a55470fff7ad1ea5d6e38d778760495c0345ee32b53a08ca4926317975cdc"
+  }
+}

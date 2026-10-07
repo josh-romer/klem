@@ -2018,6 +2018,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
         }
+        "prefinal.conjectural_ni" => {
+            "Recover source-attested literary (으)리 before 니 or 니라, preserving written allomorphs and earlier honorific/past/modal ownership without selecting a contextual sense."
+        }
         "prefinal.conjectural_ra" => {
             "Recover conjectural (으)리 before a reviewed factual 라-family ending; retain existing bundled forms separately."
         }
@@ -2297,12 +2300,35 @@ mod label_tests {
             forms.keys().collect::<Vec<_>>(),
             labels
                 .iter()
-                .filter(|(_, label)| label.get("components").is_none())
+                .filter(|(_, label)| label.get("components").is_none()
+                    && label.get("context").is_none())
                 .map(|(key, _)| key)
                 .collect::<Vec<_>>()
         );
         for (key, label) in &labels {
-            if let Some(components) = label.get("components") {
+            if let Some(context) = label.get("context") {
+                // Contextual hints reference ordered canonical atoms of different
+                // kinds; the hint is not an additional emitted grammar form.
+                let context = context.as_array().unwrap();
+                assert!(context.len() >= 2, "{key}: context needs multiple atoms");
+                for component in context {
+                    let form = component["form"].as_str().unwrap();
+                    let kind: crate::MorphemeKind =
+                        serde_json::from_value(component["kind"].clone()).unwrap();
+                    let atom = match kind {
+                        Prefinal => format!("-{form}-"),
+                        crate::MorphemeKind::Particle => form.to_owned(),
+                        crate::MorphemeKind::Prefix => format!("{form}-"),
+                        _ => format!("-{form}"),
+                    };
+                    assert_eq!(forms.get(&atom), Some(&kind), "{key}: {atom}");
+                }
+                assert_eq!(label["kind"], context.last().unwrap()["kind"], "{key}");
+                assert!(
+                    label.get("components").is_none(),
+                    "{key}: one context schema"
+                );
+            } else if let Some(components) = label.get("components") {
                 // A viewer context references existing atoms; it does not add
                 // a synthetic morpheme to the engine's complete form inventory.
                 assert_eq!(

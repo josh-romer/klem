@@ -1,0 +1,654 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-017cg"
+  ],
+  "state": "passed",
+  "pid": 632556,
+  "started_at": "2026-10-07T18:50:04.450778+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "snapshot": {
+    "head": "0cf088457fb0b5fd74186112a7f772023a91331f",
+    "staged_diff_sha256": "83fff43ff3c3de6a6483bbc97998faae1d0049d93343161b29e0835ef80fb8fc",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "2572994fd1c33a7c853c79b51182ffa378e55d0e2c95b81829a872efc53bd353",
+        "bytes": 518552
+      },
+      "docs/declarative-contrast-boundary-owner-preparation.json.gz": {
+        "sha256": "563672d5b2af994a492e3c80be1d1bf680d2bf2251cd30f3ee6a816e3b89686a",
+        "bytes": 1071340
+      },
+      "docs/declarative-contrast-owner-preparation.json.gz": {
+        "sha256": "7d4f0ce5f6d3fb2ad1c187dbd235822f0717febb4df2e941a43f5f440a876708",
+        "bytes": 728272
+      },
+      "docs/declarative-contrast-owner-preparation.log.gz": {
+        "sha256": "1fbada487da9deac904bc2f8104c9c1e3296bcddcd8317c9115bb97c07ad9bf7",
+        "bytes": 115
+      },
+      "docs/declarative-contrast-prototype-boundaries.json.gz": {
+        "sha256": "0f569f41d95161b98f7b3c6376ae2338d72f84e140963bdd3871acf147d1702a",
+        "bytes": 55683
+      },
+      "docs/declarative-contrast-prototype-boundaries.log.gz": {
+        "sha256": "f25639b80dd2e73c4d749c6d9e302e982872c5768e06f325dd0dee2a01e20ae7",
+        "bytes": 546
+      },
+      "docs/declarative-contrast-source-discovery.json.gz": {
+        "sha256": "69ca60e49269c8ac585946bf3972a91bf0319cbbfc12490239967324bbbfe5b2",
+        "bytes": 232132
+      },
+      "docs/declarative-contrast-source-discovery.log.gz": {
+        "sha256": "5b4202fff28e9486cee4c1f1125d9663818cbf4b6697f12ed2e22b7ee4a23f78",
+        "bytes": 132
+      },
+      "docs/declarative-contrast-target-observations.json": {
+        "sha256": "5e9a1320ef1190c142fca51c1860103d3c739aa76249d36e87cdc75412d1eb89",
+        "bytes": 144562
+      },
+      "docs/inventory-audit.md": {
+        "sha256": "3fe7fd97af1614db66982dbf431e254c4c88ed63ed24ff6cbe25ce638608019e",
+        "bytes": 68224
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "97ab75add5b571330b51e00e7f5cb0b77e3b8ef17413d36e4c33f898f0a074f1",
+        "bytes": 3498448
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "32dd5cf6f1ea9a340d5194d44aa2df97a197fe542b89743c9d32251fb08755ce",
+        "bytes": 1334946
+      },
+      "docs/literary-ri-prefinal-broad-owner-preparation.json.gz": {
+        "sha256": "27fe81b61d6b37754d3f291dbbb605311795fbdf5ecfa15fe3278fa9dee05fbc",
+        "bytes": 1916260
+      },
+      "docs/literary-ri-prefinal-broad-owner-rust.json": {
+        "sha256": "500cfcd9e3920580b248d53dc8723f15a56e0092b857c86732d8e61bd07b6ed4",
+        "bytes": 811
+      },
+      "docs/literary-ri-prefinal-broad-owner-rust.log.gz": {
+        "sha256": "69ad493fffe5331d9dc8f6d0e01b602766960ea6ad2662e0378515e1ed230882",
+        "bytes": 758
+      },
+      "docs/literary-ri-prefinal-evaluation.json": {
+        "sha256": "4342eadd78bc8a3aefd7627322701d4d4fd73ee782027422759dccd5fecb9ac4",
+        "bytes": 15008
+      },
+      "docs/literary-ri-prefinal-first-combined-nix.json": {
+        "sha256": "6bc3b7f8c173c1ac83b92a16e65da78931e482b51708129f816c79eb166f4556",
+        "bytes": 26422
+      },
+      "docs/literary-ri-prefinal-first-combined-nix.log.gz": {
+        "sha256": "67963e69c7abef99168b9953d9b87b0494faeb9a57484468cf4dae43d681e273",
+        "bytes": 8821
+      },
+      "docs/literary-ri-prefinal-first-package-controls.log.gz": {
+        "sha256": "cd5116192aac11d2d4760d51fda19ae67269bb0e118c1f882a49fd2a37655494",
+        "bytes": 290031
+      },
+      "docs/literary-ri-prefinal-first-runtime-audit.log.gz": {
+        "sha256": "b6ec56e41c179ce7384e46b67591a5fe602359cace8ea643422b13cfe1756ddc",
+        "bytes": 334
+      },
+      "docs/literary-ri-prefinal-inventory-input-preflight.json": {
+        "sha256": "35ffc2f9fbf586a75dec10e6df21b5d9fdf2999ac8ac32497b394add303ebce1",
+        "bytes": 946
+      },
+      "docs/literary-ri-prefinal-inventory-input-runtime-audit.log.gz": {
+        "sha256": "4bf58c6ac2ba68ff67371bad864ca5226cad900f7fa1b5bdc7e9f872530724da",
+        "bytes": 174
+      },
+      "docs/literary-ri-prefinal-inventory-input-runtime-controls.log.gz": {
+        "sha256": "712b17b6afae6d420e5ad50cc9209b7b5c25e02956c12985f33598c05701b2ae",
+        "bytes": 56
+      },
+      "docs/literary-ri-prefinal-legacy-history.json": {
+        "sha256": "91c674c01a99e9f499963db45fbf753d61dfbd14de9523894ddbc2e420577812",
+        "bytes": 113468
+      },
+      "docs/literary-ri-prefinal-legacy-history.log.gz": {
+        "sha256": "21743014600b989b850fdc3b62423bb05f712bfb429ca4ca5c8dabb6eda50995",
+        "bytes": 171
+      },
+      "docs/literary-ri-prefinal-main-adapter-build.log.gz": {
+        "sha256": "7d2e19f65828846a791f468bdfa0adb56eadbb1139e11dff0f7bb43d784c88f1",
+        "bytes": 91
+      },
+      "docs/literary-ri-prefinal-main-adapter-replay.json.gz": {
+        "sha256": "5bae26fb2b4dd565f4b400c789d5ee9f572a9e6f0b8f9c87f008a05564b87be2",
+        "bytes": 2359
+      },
+      "docs/literary-ri-prefinal-main-adapter-replay.log.gz": {
+        "sha256": "9b51f13bfaea366378a8145dbe8b1f0784466ca2a35b9227f802d89027d177b9",
+        "bytes": 88
+      },
+      "docs/literary-ri-prefinal-main-browser-checks.json": {
+        "sha256": "56ee371bc812cb0cc88963c75aa717b1981f506f4076f161523fa70faade0c3c",
+        "bytes": 2571
+      },
+      "docs/literary-ri-prefinal-main-browser.json": {
+        "sha256": "7bd0b43d3b74e4c4327f826ab45951d6a8e0200801b7d7414c5de5156a947672",
+        "bytes": 13492727
+      },
+      "docs/literary-ri-prefinal-main-browser.log.gz": {
+        "sha256": "16b8aa8ebf5470ee37f3e430acb8a40a6b45a3ff257ac16e7c52978d049a2f42",
+        "bytes": 136
+      },
+      "docs/literary-ri-prefinal-main-cli-replay.json.gz": {
+        "sha256": "2b87a7e78b9e68d1e1ae6f450de0c43f21ddcf80abc9f2eda7b7cb6b0b09b8d1",
+        "bytes": 12816
+      },
+      "docs/literary-ri-prefinal-main-cli-replay.log.gz": {
+        "sha256": "63eddc408e4114758c25bae0fc364d3d1b2adfc3419f36c54ee89831b90d52b8",
+        "bytes": 256
+      },
+      "docs/literary-ri-prefinal-main-clippy.json": {
+        "sha256": "0afef10fc6c6f06491ff83aefe0ddd2e98bb43208fe98c92534ee87ab1cc4f99",
+        "bytes": 478
+      },
+      "docs/literary-ri-prefinal-main-clippy.log.gz": {
+        "sha256": "d580957c776b91663248326cc8d846130c623582f898c82a109e66a4d579e262",
+        "bytes": 130
+      },
+      "docs/literary-ri-prefinal-main-desktop.png": {
+        "sha256": "3a406cd83a42cf3825d146c0d7f33a8b7450feeadbb48ab701778af094481460",
+        "bytes": 88278
+      },
+      "docs/literary-ri-prefinal-main-double-past-browser.json": {
+        "sha256": "2609ef55a54cb898d6c944654c4b8d7a6a8ebd83552f33928a9e3d401b218f24",
+        "bytes": 3526587
+      },
+      "docs/literary-ri-prefinal-main-double-past-browser.log.gz": {
+        "sha256": "82ff3542fe30d3b0744a4bb2fcdd056b9d8695d9cd66d885988992807442f22b",
+        "bytes": 138
+      },
+      "docs/literary-ri-prefinal-main-double-past-desktop.png": {
+        "sha256": "d043ea4d42da339f9956f990907e6f4ab39b9339fc72e33c73752325135d00a7",
+        "bytes": 97828
+      },
+      "docs/literary-ri-prefinal-main-double-past-mobile.png": {
+        "sha256": "68ab3eebb573f4ed4bd1abdf96db2ac8f2e2c61251941ad496283fe7eb788d73",
+        "bytes": 34019
+      },
+      "docs/literary-ri-prefinal-main-focused-rust.json": {
+        "sha256": "603ede636ad7f6eef29e4da64a2b92f63dd3d0be315c7b87c8ba25d928802e9f",
+        "bytes": 536
+      },
+      "docs/literary-ri-prefinal-main-focused-rust.log.gz": {
+        "sha256": "4c9fc4dfb29d6b8b1a6a4ebe996f8410e73e681a281ed32970fc97c62554865e",
+        "bytes": 509
+      },
+      "docs/literary-ri-prefinal-main-formatting.json": {
+        "sha256": "ba1211fb03bef556c0f7229d99295de93526e46236cd89014d87b7873242844d",
+        "bytes": 4245
+      },
+      "docs/literary-ri-prefinal-main-frontend.log.gz": {
+        "sha256": "a4e5f2b35c32864170277a7e07fe7f6996845d424a9b309c1f48701c02cc6113",
+        "bytes": 406
+      },
+      "docs/literary-ri-prefinal-main-full-rust.json": {
+        "sha256": "84edb1f4eb0f837201a46800921f7fb238a03de1e3aeef01bc3e91b5235ee1a4",
+        "bytes": 147919
+      },
+      "docs/literary-ri-prefinal-main-full-rust.log.gz": {
+        "sha256": "d6da0d54bce5610572a91b21b941bcb71bec10f7c9e7e10694d48cd474adc3e4",
+        "bytes": 23974
+      },
+      "docs/literary-ri-prefinal-main-hada-scoped-browser.json": {
+        "sha256": "cddc21ab315e1e02c82b8031ad6a9ba295f936f67bca0d834ce62b0709176b49",
+        "bytes": 2090474
+      },
+      "docs/literary-ri-prefinal-main-hada-scoped-browser.log.gz": {
+        "sha256": "29f116d71f71b142d31b44a294ff0b9c27b55553d9a2a7bf92889fdbe6da135a",
+        "bytes": 110
+      },
+      "docs/literary-ri-prefinal-main-labels-rust.log.gz": {
+        "sha256": "82aab8ff26a7db3b90e33ed9a18493304988b5453819cc997fffdb7b05a1ce01",
+        "bytes": 495
+      },
+      "docs/literary-ri-prefinal-main-legacy-browser.json": {
+        "sha256": "b8923aa44ee8679803bf13ded2e3fa26da5e28d778e8f8fd54c6b049e795f1ea",
+        "bytes": 20302278
+      },
+      "docs/literary-ri-prefinal-main-legacy-browser.log.gz": {
+        "sha256": "47a25b6aacd5e5d7248e29c2606ad803818e34c9b27d2776e1cdf52c2db094f2",
+        "bytes": 126
+      },
+      "docs/literary-ri-prefinal-main-legacy-desktop.png": {
+        "sha256": "8c4fde6eff1c45736c472dca275d4afcd0b376b3ddd37bd32f5be214fec88348",
+        "bytes": 103958
+      },
+      "docs/literary-ri-prefinal-main-legacy-mobile.png": {
+        "sha256": "6f1651fc29553af02dce27faa10e3c73fdcb1a30b909ed3b8b65efe1581740e1",
+        "bytes": 33063
+      },
+      "docs/literary-ri-prefinal-main-library-rust.log.gz": {
+        "sha256": "d96fb37f5f5f4788826f40c635d93776f7e3e0369d4df14fcd2509ef45e520c0",
+        "bytes": 480
+      },
+      "docs/literary-ri-prefinal-main-mobile.png": {
+        "sha256": "509dc91f2680167769fe46d40e59896541fb7b9a5265ea3d55b3b2520c0237bc",
+        "bytes": 38607
+      },
+      "docs/literary-ri-prefinal-main-past-browser.json": {
+        "sha256": "83d20ec9847d88abeeeafab9b75d9993ab34c15d5e85f0479b349b13f53ece10",
+        "bytes": 10951689
+      },
+      "docs/literary-ri-prefinal-main-past-browser.log.gz": {
+        "sha256": "2f15386d9c34eabccabfd2b5caa655dc4de36e6a9b13a9054673d765ba3d7c52",
+        "bytes": 133
+      },
+      "docs/literary-ri-prefinal-main-past-desktop.png": {
+        "sha256": "add4a4dc3beb15d7b17435c82402f6bb8ce692d2220df24514c926a94ddbd158",
+        "bytes": 110677
+      },
+      "docs/literary-ri-prefinal-main-past-mobile.png": {
+        "sha256": "f0d3b957a006412c87aa52bfc73a1ea0b909d5a98a8afe0d702a00d67d4000ca",
+        "bytes": 12003
+      },
+      "docs/literary-ri-prefinal-main-past-sandbox-failure.log.gz": {
+        "sha256": "246992e6055d2385991231ab75eeb38fa73033ad8df76f9996682d5b718341ca",
+        "bytes": 1437
+      },
+      "docs/literary-ri-prefinal-main-runtime-audit.log.gz": {
+        "sha256": "56e68692ffcd5406b0e758b6382847295814437c4a74ab74ff8e3478a058d2bd",
+        "bytes": 129
+      },
+      "docs/literary-ri-prefinal-main-validity-rust.log.gz": {
+        "sha256": "2fd7a5f5a4dbd8b29cc5565a2c18e0fb99cae59d814229c3944dd9b3de9ebef3",
+        "bytes": 422
+      },
+      "docs/literary-ri-prefinal-mode-scope-review.json": {
+        "sha256": "68050cd15c7f72d58c19b47231dcc08b576978aaded2cf852e5e2c8689ad05d1",
+        "bytes": 7178
+      },
+      "docs/literary-ri-prefinal-native-preparation.json.gz": {
+        "sha256": "b3ff98ca4d3a8c6906307f46b3e7612f82d5b53657da3a81883bdedb32f84dcc",
+        "bytes": 7715
+      },
+      "docs/literary-ri-prefinal-owner-preparation-v2.json.gz": {
+        "sha256": "373e9ff8b10a6828c18bfdfc7ed137b996eb479218b7581a911a8565708352fa",
+        "bytes": 612696
+      },
+      "docs/literary-ri-prefinal-package-nix.json": {
+        "sha256": "204e7e20005810192924975872de80dda909073bd7611cf01e77bd61e9cc7009",
+        "bytes": 150924
+      },
+      "docs/literary-ri-prefinal-package-nix.log.gz": {
+        "sha256": "f6274a2cd2b26ea0c45c09773d692dc7554fbc84d6a7c5f2751dbd1f35a7484c",
+        "bytes": 26838
+      },
+      "docs/literary-ri-prefinal-packaged-browser.json": {
+        "sha256": "c5110ef918ad89e1734f240642cb9bdf7eac3b29a2fa9d5e03d111a0fddf280f",
+        "bytes": 13492710
+      },
+      "docs/literary-ri-prefinal-packaged-browser.log.gz": {
+        "sha256": "16b8aa8ebf5470ee37f3e430acb8a40a6b45a3ff257ac16e7c52978d049a2f42",
+        "bytes": 136
+      },
+      "docs/literary-ri-prefinal-packaged-checks.json": {
+        "sha256": "baac360420990e66f120134ae98dbdd075ef634903ca60ceaa76e6362baa0909",
+        "bytes": 5964
+      },
+      "docs/literary-ri-prefinal-packaged-cli-replay.json.gz": {
+        "sha256": "8748678565abb93d4051c969cd14d6db18ba9f9ceeb1398a52ece1f671ca4bd4",
+        "bytes": 12821
+      },
+      "docs/literary-ri-prefinal-packaged-cli-replay.log.gz": {
+        "sha256": "63eddc408e4114758c25bae0fc364d3d1b2adfc3419f36c54ee89831b90d52b8",
+        "bytes": 256
+      },
+      "docs/literary-ri-prefinal-packaged-desktop.png": {
+        "sha256": "3a406cd83a42cf3825d146c0d7f33a8b7450feeadbb48ab701778af094481460",
+        "bytes": 88278
+      },
+      "docs/literary-ri-prefinal-packaged-double-past-browser.json": {
+        "sha256": "952bc1f84f3633a934aca1a324a77f1cd304e4227c690a56089d93445904ba97",
+        "bytes": 3526596
+      },
+      "docs/literary-ri-prefinal-packaged-double-past-browser.log.gz": {
+        "sha256": "82ff3542fe30d3b0744a4bb2fcdd056b9d8695d9cd66d885988992807442f22b",
+        "bytes": 138
+      },
+      "docs/literary-ri-prefinal-packaged-double-past-desktop.png": {
+        "sha256": "506a3c187b3e4e102691aa9ea3d5d7084bc7d520a7e12be75b7491d0550c1d15",
+        "bytes": 97824
+      },
+      "docs/literary-ri-prefinal-packaged-double-past-mobile.png": {
+        "sha256": "68ab3eebb573f4ed4bd1abdf96db2ac8f2e2c61251941ad496283fe7eb788d73",
+        "bytes": 34019
+      },
+      "docs/literary-ri-prefinal-packaged-hada-scoped-browser.json": {
+        "sha256": "d761f1f169b93f87e4c15a84cd516fb2f0b5f5b9c07d36146e8cffd37b685b53",
+        "bytes": 2090464
+      },
+      "docs/literary-ri-prefinal-packaged-hada-scoped-browser.log.gz": {
+        "sha256": "29f116d71f71b142d31b44a294ff0b9c27b55553d9a2a7bf92889fdbe6da135a",
+        "bytes": 110
+      },
+      "docs/literary-ri-prefinal-packaged-legacy-browser.json": {
+        "sha256": "dfd46551afb28778acdd7c5d36042cd39e3153cf8708aa63b3cf8dafbc5f0c55",
+        "bytes": 20302268
+      },
+      "docs/literary-ri-prefinal-packaged-legacy-browser.log.gz": {
+        "sha256": "47a25b6aacd5e5d7248e29c2606ad803818e34c9b27d2776e1cdf52c2db094f2",
+        "bytes": 126
+      },
+      "docs/literary-ri-prefinal-packaged-legacy-desktop.png": {
+        "sha256": "8c4fde6eff1c45736c472dca275d4afcd0b376b3ddd37bd32f5be214fec88348",
+        "bytes": 103958
+      },
+      "docs/literary-ri-prefinal-packaged-legacy-mobile.png": {
+        "sha256": "6f1651fc29553af02dce27faa10e3c73fdcb1a30b909ed3b8b65efe1581740e1",
+        "bytes": 33063
+      },
+      "docs/literary-ri-prefinal-packaged-mobile.png": {
+        "sha256": "509dc91f2680167769fe46d40e59896541fb7b9a5265ea3d55b3b2520c0237bc",
+        "bytes": 38607
+      },
+      "docs/literary-ri-prefinal-packaged-past-browser.json": {
+        "sha256": "8c563378fd39a120e560fd2ba241a54785833f835576d9dc79c4e73a5e429aed",
+        "bytes": 10951696
+      },
+      "docs/literary-ri-prefinal-packaged-past-browser.log.gz": {
+        "sha256": "2f15386d9c34eabccabfd2b5caa655dc4de36e6a9b13a9054673d765ba3d7c52",
+        "bytes": 133
+      },
+      "docs/literary-ri-prefinal-packaged-past-desktop.png": {
+        "sha256": "add4a4dc3beb15d7b17435c82402f6bb8ce692d2220df24514c926a94ddbd158",
+        "bytes": 110677
+      },
+      "docs/literary-ri-prefinal-packaged-past-mobile.png": {
+        "sha256": "f0d3b957a006412c87aa52bfc73a1ea0b909d5a98a8afe0d702a00d67d4000ca",
+        "bytes": 12003
+      },
+      "docs/literary-ri-prefinal-packaged-runtime-audit.log.gz": {
+        "sha256": "4bf58c6ac2ba68ff67371bad864ca5226cad900f7fa1b5bdc7e9f872530724da",
+        "bytes": 174
+      },
+      "docs/literary-ri-prefinal-packaged-runtime-controls.log.gz": {
+        "sha256": "3b0a55470fff7ad1ea5d6e38d778760495c0345ee32b53a08ca4926317975cdc",
+        "bytes": 56
+      },
+      "docs/literary-ri-prefinal-preparation-history.json.gz": {
+        "sha256": "726c16594d1f8517f24d2bccddcb4f5be9defb3edb5dd716bcbbc09fb2f35609",
+        "bytes": 377975
+      },
+      "docs/literary-ri-prefinal-preservation-audit.json": {
+        "sha256": "6533aa28763be161a1643f6948b4d89912f4f776c7141db71dcab61b50d083ca",
+        "bytes": 480
+      },
+      "docs/literary-ri-prefinal-preservation-audit.log.gz": {
+        "sha256": "d9a4ce7441a32fc9641a7981ec098da4826989cfd3a2b7e1a6fd977748dba9e2",
+        "bytes": 296
+      },
+      "docs/literary-ri-prefinal-preservation-controls.log.gz": {
+        "sha256": "d4dc0fc5c85073db7c8ac8fe2bc240fc90393386e5bcaa8a0fc7d7ede66258d6",
+        "bytes": 55
+      },
+      "docs/literary-ri-prefinal-primary-reference.json": {
+        "sha256": "3b5d6fa65b5d0b0b0b79f58e717aea0a00e024ddf9c23bf7b6db66b3ca2000f9",
+        "bytes": 1185
+      },
+      "docs/literary-ri-prefinal-prototype-adapter.json.gz": {
+        "sha256": "7ab9d0b32d01e65658e32c1f5f335aadda88093ba6111d86f563cf75cbefc50d",
+        "bytes": 1552560
+      },
+      "docs/literary-ri-prefinal-prototype-adapter.log.gz": {
+        "sha256": "0b96c1fbac73f36bd81e72f3c4bb4f719765de6daa9f7da745f160432bf3ca5b",
+        "bytes": 147
+      },
+      "docs/literary-ri-prefinal-prototype-broad.json.gz": {
+        "sha256": "1bd11d0aec7615770574549284da996bb317bd513dc0b07b4a3e3102794f53fd",
+        "bytes": 217316
+      },
+      "docs/literary-ri-prefinal-prototype-broad.log.gz": {
+        "sha256": "39082977d0f57ddf156744cbc340f41e5aa8163d25aa3b91bc0521b21e076ab6",
+        "bytes": 223
+      },
+      "docs/literary-ri-prefinal-prototype-browser-final-browser.json": {
+        "sha256": "e19b59ee4de634ca012697c61ab2aecba3cf47e67ecb32ee3216e3e2675386da",
+        "bytes": 10789707
+      },
+      "docs/literary-ri-prefinal-prototype-browser-final-desktop.png": {
+        "sha256": "b8daea6da12e3715fdc7e0031a5760207909fe0826d6b6aa61641d0afaaf905c",
+        "bytes": 88303
+      },
+      "docs/literary-ri-prefinal-prototype-browser-final-mobile.png": {
+        "sha256": "509dc91f2680167769fe46d40e59896541fb7b9a5265ea3d55b3b2520c0237bc",
+        "bytes": 38607
+      },
+      "docs/literary-ri-prefinal-prototype-browser-final.log.gz": {
+        "sha256": "6b8efbafb13e9903a04cd00d0528cb33027d6deb59f6200cb77a88ff8805dce9",
+        "bytes": 134
+      },
+      "docs/literary-ri-prefinal-prototype-cli.json.gz": {
+        "sha256": "4e9566e406970dd6f03a16cb78663a24f4c7055f0d1bab6229cea2cdf792355f",
+        "bytes": 145908
+      },
+      "docs/literary-ri-prefinal-prototype-corpora.json.gz": {
+        "sha256": "1db6cddd1fae9919878e0a4001cc279ab23af6bb7963598e05edb4fd55a0cb02",
+        "bytes": 8615116
+      },
+      "docs/literary-ri-prefinal-prototype-corpora.log.gz": {
+        "sha256": "19115cf8b7e48bf41e38120f687c0bbe407e5adce3208cc6d85dc72f10f81860",
+        "bytes": 234
+      },
+      "docs/literary-ri-prefinal-prototype-final-frontend.log.gz": {
+        "sha256": "1d17e37185c21eee27bd9ed0376583bf91bfd4c3f2caaa75e5dd368dfc969b4e",
+        "bytes": 406
+      },
+      "docs/literary-ri-prefinal-prototype-full-rust-retry5.json": {
+        "sha256": "7defacc3f0e921d276ac5e6657e91dbf6052c1b1f08c2d1843f93ac7e1842bd0",
+        "bytes": 99539
+      },
+      "docs/literary-ri-prefinal-prototype-full-rust-retry5.log.gz": {
+        "sha256": "009dd15c3db6dc554ecbefdec61d0782e1a0cd0afd650a55fee8c0bbec66ab0f",
+        "bytes": 24147
+      },
+      "docs/literary-ri-prefinal-prototype-history-rust.json": {
+        "sha256": "874e4135979ab5be075e0e5cd8be3260e965ef76e9c71ffcc1558f789683787e",
+        "bytes": 537
+      },
+      "docs/literary-ri-prefinal-runtime-controls.log.gz": {
+        "sha256": "85792ae4c0cbb2e9e81b4257d8934497c6c930bf7d7ec0a15cc459434d39ad45",
+        "bytes": 54
+      },
+      "docs/literary-ri-prefinal-second-runtime-audit.log.gz": {
+        "sha256": "bddc0388fd9d6beb19e447d04f316d50871f8712b3df0c6a5e4ada878db3ff50",
+        "bytes": 341
+      },
+      "docs/literary-ri-prefinal-source-discovery.json.gz": {
+        "sha256": "fe991f45a6980f8c2f76e1532d414ca891d2ca2b6dbd3f04bdd01d5df9b91a7b",
+        "bytes": 124490
+      },
+      "docs/literary-ri-prefinal-source-findings.json.gz": {
+        "sha256": "004c232b8f5af9f71da119a15d099ef3787c711a8251e8ebc7ca9d574eed0863",
+        "bytes": 5272
+      },
+      "docs/literary-ri-prefinal-supplemental-b.json": {
+        "sha256": "dec889907a0102789ba87415da5237ddc57b8d69de7d3eb21f7cb5c666b4bfb5",
+        "bytes": 57604
+      },
+      "docs/literary-ri-prefinal-target-proposals.json": {
+        "sha256": "b56094b0c6708d9cca90cd68d19d74206135a1de75c5b7968b1b5ed06c1128f7",
+        "bytes": 45792
+      },
+      "docs/literary-ri-prefinal-web-launcher-help.log.gz": {
+        "sha256": "609423277a3bb2e85821d78bcca94cfed4529ea7eeab14ba07268740499a7be1",
+        "bytes": 317
+      },
+      "docs/literary-ri-prefinal-web-launcher.json": {
+        "sha256": "a416567e4fbef51d35b3393faae7a399aa9317072a4c5924b041275859e2a114",
+        "bytes": 812
+      },
+      "docs/literary-ri-prefinal-web-launcher.log.gz": {
+        "sha256": "97a315f373dd56ab9a484080f02890495b7cf0037de708da1dfe64e93866e0d8",
+        "bytes": 236
+      },
+      "docs/rules.md": {
+        "sha256": "79e54757b1d83256ad81128b63a3b4b72ae9b0897b2ef65f60517bfa83e18f99",
+        "bytes": 329483
+      },
+      "flake.nix": {
+        "sha256": "7c5ee1ba570c68b94bbb36376982137f240b07eb74fb6aee90486e3e9334efb4",
+        "bytes": 44119
+      },
+      "src/bin/klem-web.rs": {
+        "sha256": "75916eab50e878b013c134cbff3a9a0df6084466071734b773aeceaacff20432",
+        "bytes": 20619
+      },
+      "src/bin/klem-web/grammar_labels.rs": {
+        "sha256": "6a35c3459abd2cb863706d26de9a16001df8339dc0057374d211e1a334ecb2d2",
+        "bytes": 14173
+      },
+      "src/engine.rs": {
+        "sha256": "739f74c90f554d43448e8ed8b97067f2bce89c404f7777897b91a8acd7046c9f",
+        "bytes": 220725
+      },
+      "src/grammar.rs": {
+        "sha256": "bc48d4c16ad094e4e7e10c4ca3d291c609eb2c0e70248a1025a6662f2ba46eaf",
+        "bytes": 109196
+      },
+      "tests/copula_expectation.rs": {
+        "sha256": "45a655f7b1497cdca7d453c0c0067c4a98e6eb1bdb974d602e4db556cb11690a",
+        "bytes": 12085
+      },
+      "tests/degree_rimankeum.rs": {
+        "sha256": "06b626423e28f8c945ebb2db78edcabb9e7cf2d58e538f71ad4c1ce2b54f8c22",
+        "bytes": 11414
+      },
+      "tests/deoniman.rs": {
+        "sha256": "791979b004cc2cd5b0b011c868299998cdf1a53ec3221bda6d863de1cebe704f",
+        "bytes": 17327
+      },
+      "tests/fixtures/krdict-literary-ri-prefinal-broad-english.json": {
+        "sha256": "0cb4fdb5166455f71eef4c12ccdf1e61245635a13d897c3d1b96a6e40717161c",
+        "bytes": 4586637
+      },
+      "tests/fixtures/krdict-literary-ri-prefinal-english.json": {
+        "sha256": "5d79ce59424cbee1dcbd2ce85d416942bb97e1f00f2979f7bbb7d2200b6dcc18",
+        "bytes": 1475859
+      },
+      "tests/fixtures/literary-ri-prefinal-broad-native.json": {
+        "sha256": "35ad3e6419cb3766aa560b6abef439d043c7857d7e62099d5eaec122733180e7",
+        "bytes": 3317578
+      },
+      "tests/fixtures/literary-ri-prefinal-history.json": {
+        "sha256": "91c674c01a99e9f499963db45fbf753d61dfbd14de9523894ddbc2e420577812",
+        "bytes": 113468
+      },
+      "tests/fixtures/literary-ri-prefinal-native.json": {
+        "sha256": "c348d7cc8aa83f827e7476df29176abf379972ea40118931d76a35c96d28069c",
+        "bytes": 1106950
+      },
+      "tests/fixtures/literary-ri-prefinal-policy-validity.json": {
+        "sha256": "a9dcfa9ecb7527db99d53ff64cbcf94be61b5962d83399c6e1b219c39e7c4a01",
+        "bytes": 35700
+      },
+      "tests/fixtures/literary-ri-prefinal-validity.json": {
+        "sha256": "ab6d861357a2a650f4732063f00f71580adcc856710c585af7d563fe951d3320",
+        "bytes": 30828
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "563f4233c913319ac052eac2dcd74fc04888cbee60eeb87add9df9705d91bb4f",
+        "bytes": 31624708
+      },
+      "tests/friendly_command.rs": {
+        "sha256": "dccfba5d475c1c8722dde033a70e1332e346977e978761c2642a8e66b36ced0c",
+        "bytes": 10282
+      },
+      "tests/literary_ri_prefinal.rs": {
+        "sha256": "162b891deb4953ab00bc36357d702808a83a1e7797af0cbd8e1ab80e45815c84",
+        "bytes": 6331
+      },
+      "tests/literary_ri_prefinal_broad_owners.rs": {
+        "sha256": "908a572025be36b9da241216f278f4776544fec32c90472651150cfcc774f247",
+        "bytes": 2031
+      },
+      "tests/support/literary_ri_prefinal_history.rs": {
+        "sha256": "d5a9fada57fe3f688f3f03ba49f621e805d60dc7e3b825f25fe0334f184da969",
+        "bytes": 2854
+      },
+      "tests/validity.rs": {
+        "sha256": "24633f7cfe9cbad8cb76dba96eb4f687452fd464f514eee3fa2737e77362544f",
+        "bytes": 4004
+      },
+      "tools/literary_ri_prefinal_adapter_replay.py": {
+        "sha256": "90841f1981c85f70577bb4256c0a82719853a0855007a2e9935bd8a945fa2155",
+        "bytes": 2980
+      },
+      "tools/literary_ri_prefinal_audit.py": {
+        "sha256": "4eec5a2d28789107be3a8b59e0ddfd3b90daee12c590f4f6304d323e41f584d7",
+        "bytes": 8325
+      },
+      "tools/literary_ri_prefinal_preservation.py": {
+        "sha256": "096bd29b8bcaa44c9cb907d12fb39608cf72af82f27fcfbd6c241bde8bbaad90",
+        "bytes": 13116
+      },
+      "tools/literary_ri_prefinal_replay.py": {
+        "sha256": "f4c0c5daf9d20915c60a8d723241de03e86df3657fd5ce92580941789e9184d9",
+        "bytes": 7780
+      },
+      "tools/literary_ri_prefinal_runtime.py": {
+        "sha256": "710d41b691a4f73e5a6a574df8502bdd0e6af7202290afd5fd9617c96b63a4f2",
+        "bytes": 7639
+      },
+      "tools/test_literary_ri_prefinal_audit.py": {
+        "sha256": "745c6187743bc69484ed8940e8df745f3a66811352c876aa4e3a649cb9623152",
+        "bytes": 2358
+      },
+      "tools/test_literary_ri_prefinal_preservation.py": {
+        "sha256": "2e380e973d4871df03026b0811fa5c438d2e9295e658463f1f5fe145d93947b2",
+        "bytes": 4294
+      },
+      "tools/test_literary_ri_prefinal_runtime.py": {
+        "sha256": "48c27b5d4a86f841a1c7af42afaa27a63e3bc95ddf7da19ac90c9e6a0ce5bb66",
+        "bytes": 5048
+      },
+      "web/src/grammar-labels.json": {
+        "sha256": "188c16617a470c4bf5720bd90ae4eadb8c23f6a5e8fd3323f026532983026aa9",
+        "bytes": 185439
+      },
+      "web/src/model.ts": {
+        "sha256": "025dc69d9d892ad7c8e642aff1bf54f1f0923a1b00aee5342c52fbbfba0a4d3c",
+        "bytes": 8135
+      },
+      "web/tests/literary-ri-prefinal-model.mjs": {
+        "sha256": "282d2af285697033597c4d3ba66be3ebe6cdadfbd1a46ba7c9996030ab5a0b9b",
+        "bytes": 1089
+      },
+      "web/tests/literary-ri-prefinal.mjs": {
+        "sha256": "b051149fb1ecd9b902012213bb28acb111792b464a8ba01586007745f800f6bc",
+        "bytes": 10305
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-07T19:41:40.268624+00:00",
+  "log_sha256": "55dd6aa187187b92e49d8c2aa7689ed7ba2158a95899b0ab53caf80ccdef7615",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/zvmmzj49c1igbwf4lvi8lg9bwj2mcr53-klem-0.1.0",
+    "/nix/store/cccqm05ky11h8i8iw88qywdj6hpq70yq-klem-web-assets-0.1.0",
+    "/nix/store/2sy37srb4x10ww4x1rp193cfgci653fs-klem-inventory-review"
+  ]
+}

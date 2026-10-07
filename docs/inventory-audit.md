@@ -1088,3 +1088,10 @@ preview/release gates pass. [Evaluation](mada-case-evaluation.json) retains
 changes; one original corpus recovery improves and every earlier recovery
 remains. Original semantic/register distribution and independent review remain. The queue now has 387 scoped, 328 unreviewed and zero gap entries,
 without implying completed linguistic review or complete-entry coverage.
+
+COV-017cg records two additional scoped RI dispositions with all original
+four senses/eighteen groups and mode-specific spelling constraints retained.
+Main focused/source gates pass; full main and packaged verification remain
+pending. The inventory now has459 scoped and256 unreviewed entries;182 finite
+broader matched owners retain original Native/LMF data without candidate or
+contextual certification.

@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {grammarContextHeadword} from '../src/model.ts';
+const a={lemmas:[{text:'가다',kind:'predicate'}],morphemes:[{form:'으리',kind:'prefinal'},{form:'으니라',kind:'ending'}],rules:[],unchanged:false};
+const order=[{lemma:0},{morpheme:0},{morpheme:1}];
+assert.equal(grammarContextHeadword(a,0,order),'-으리-');
+assert.equal(grammarContextHeadword(a,1,order),'-으리니라');
+for(const separated of [null,[{lemma:0},{morpheme:1}],[{lemma:0},{morpheme:0},{lemma:1},{morpheme:1}],[{lemma:0},{morpheme:1},{morpheme:0}]])assert.equal(grammarContextHeadword(a,1,separated),'-으니라');
+a.morphemes[0].kind='ending';assert.equal(grammarContextHeadword(a,1,order),'-으니라');
+a.morphemes[0]={form:'었',kind:'prefinal'};assert.equal(grammarContextHeadword(a,1,order),'-으니라');
+a.morphemes[0]={form:'으리',kind:'prefinal'};a.morphemes[1]={form:'니',kind:'ending'};assert.equal(grammarContextHeadword(a,1,order),'-니');
+console.log('Verified ordered RI + NIra context; atomic RI, NI and bare/stative NIra labels remain separate.');

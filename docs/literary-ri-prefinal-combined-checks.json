@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "session_id": 33199,
+  "outputs": [
+    "/nix/store/zvmmzj49c1igbwf4lvi8lg9bwj2mcr53-klem-0.1.0",
+    "/nix/store/cccqm05ky11h8i8iw88qywdj6hpq70yq-klem-web-assets-0.1.0",
+    "/nix/store/2sy37srb4x10ww4x1rp193cfgci653fs-klem-inventory-review"
+  ],
+  "staged_files": 153,
+  "staged_diff_sha256": "83fff43ff3c3de6a6483bbc97998faae1d0049d93343161b29e0835ef80fb8fc",
+  "frozen_staged_snapshot_unchanged": true,
+  "runtime_source_files": 901,
+  "runtime_outputs_equal_independent_verified_packages": true,
+  "release_tests": {
+    "passed": 1022,
+    "ignored": 1,
+    "batches": 217
+  },
+  "integrity_controls": 38,
+  "packaged_counts": {
+    "source_streams": 6,
+    "source_frames_per_stream": 275,
+    "word_probes": 168,
+    "broad_streams": 8,
+    "broad_records": 1128312,
+    "corpus_words": 32096,
+    "diagrams": 394,
+    "nested_hada_diagrams": 6,
+    "exports": 24,
+    "native_endpoint_checks": 526,
+    "ri_native_entries": 182
+  },
+  "launcher_and_help_passed": true,
+  "scope": "Complete terminal Rust/assets/inventory gate with exact frozen staged inputs. The runtime outputs are the independently verified actual packages. Subsequent tracker/queue closure is documentary and must be verified separately. Broad additions, contextual/register meanings and independent review remain open."
+}

@@ -2295,11 +2295,37 @@ mod label_tests {
             serde_json::from_str(include_str!("../web/src/grammar-labels.json")).unwrap();
         assert_eq!(
             forms.keys().collect::<Vec<_>>(),
-            labels.keys().collect::<Vec<_>>()
+            labels
+                .iter()
+                .filter(|(_, label)| label.get("components").is_none())
+                .map(|(key, _)| key)
+                .collect::<Vec<_>>()
         );
-        for (key, kind) in forms {
-            let label = &labels[&key];
-            assert_eq!(label["kind"], serde_json::to_value(kind).unwrap(), "{key}");
+        for (key, label) in &labels {
+            if let Some(components) = label.get("components") {
+                // A viewer context references existing atoms; it does not add
+                // a synthetic morpheme to the engine's complete form inventory.
+                assert_eq!(
+                    label["kind"],
+                    serde_json::to_value(Prefinal).unwrap(),
+                    "{key}"
+                );
+                let components = components.as_array().unwrap();
+                assert!(components.len() >= 2, "{key}: context needs multiple atoms");
+                let mut combined = String::new();
+                for component in components {
+                    let form = component.as_str().unwrap();
+                    assert_eq!(forms.get(&format!("-{form}-")), Some(&Prefinal), "{key}");
+                    combined.push_str(form);
+                }
+                assert_eq!(*key, format!("-{combined}-"), "{key}");
+            } else {
+                assert_eq!(
+                    label["kind"],
+                    serde_json::to_value(forms[key]).unwrap(),
+                    "{key}"
+                );
+            }
             assert!(!label["label"].as_str().unwrap().trim().is_empty(), "{key}");
             let sources = label["sources"].as_array().unwrap();
             let references = label["references"].as_array();

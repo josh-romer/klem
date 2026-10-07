@@ -88,6 +88,20 @@ export const grammarHeadword = (m: { form: string; kind: string }) =>
   m.kind === "prefix" ? `${m.form}-` : m.kind === "particle"
     ? m.form
     : `-${m.form}${m.kind === "prefinal" ? "-" : ""}`;
+// Source hints for a pair preserve canonical atoms and require reading adjacency.
+export function grammarContextHeadword(analysis: Analysis, index: number, order?: Component[] | null): string {
+  const current = analysis.morphemes[index];
+  const base = grammarHeadword(current);
+  if (current.kind !== "prefinal" || current.form !== "었" || !order) return base;
+  const position = order.findIndex(c => "morpheme" in c && c.morpheme === index);
+  if (position < 0) return base;
+  const past = (c?: Component) => c && "morpheme" in c &&
+    analysis.morphemes[c.morpheme]?.kind === "prefinal" && analysis.morphemes[c.morpheme]?.form === "었";
+  let left = position, right = position;
+  while (past(order[left - 1])) left--;
+  while (past(order[right + 1])) right++;
+  return right - left === 1 ? "-었었-" : base;
+}
 export interface Status {
   dictionary: {
     metadata: {

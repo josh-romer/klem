@@ -1,0 +1,27 @@
+{
+  "state": "passed",
+  "pid": 163151,
+  "started_at": "2026-10-07T16:00:42.608165+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#web"
+  ],
+  "rust_package": "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0",
+  "assets_package": "/nix/store/h0skwdqyykgqbqd9k2pfih7375sfinyg-klem-web-assets-0.1.0",
+  "exit_code": 0,
+  "help_exit_code": 0,
+  "help_log_sha256": "b35ceac8587ba9212b4f1090e6f2f2370ac78fc781a08755896ab778313695b2",
+  "finished_at": "2026-10-07T16:00:48.027315+00:00",
+  "log_sha256": "c6aabbf1c2ac11b6723ba339771d177cc9c5ace3b288947aa9000f4cf72b3f2d",
+  "outputs": [
+    "/nix/store/48b55f6xng32dsd43vln6z4w30643rs4-klem-web"
+  ]
+}

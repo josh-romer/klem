@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "session_id": 23212,
+  "outputs": [
+    "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0",
+    "/nix/store/h0skwdqyykgqbqd9k2pfih7375sfinyg-klem-web-assets-0.1.0",
+    "/nix/store/m9w9ch1dzca30k69m19jnc0svrsldg39-klem-inventory-review"
+  ],
+  "staged_files": 101,
+  "staged_diff_sha256": "c212b670bf4aa877b9e3961a4a4a2b1bd97870fb3bda10662745384f838dff98",
+  "frozen_staged_snapshot_unchanged": true,
+  "runtime_source_files": 891,
+  "runtime_outputs_equal_independent_verified_packages": true,
+  "release_tests": {
+    "passed": 1016,
+    "ignored": 1,
+    "batches": 215,
+    "receipt": "docs/double-past-prefinal-package-nix.json"
+  },
+  "packaged_metrics": {
+    "nested_suffix_diagrams": 6,
+    "state": "packaged-source-and-browser-preservation-passed",
+    "release_rust_passed": 1016,
+    "ignored": 1,
+    "batches": 215,
+    "source_streams": 6,
+    "frames_per_stream": 181,
+    "word_probes": 68,
+    "diagrams": 24,
+    "simple_past_diagrams": 90,
+    "legacy_diagrams": 220,
+    "exports": 18,
+    "native_entries": 37,
+    "simple_past_native_entries": 99,
+    "legacy_native_entries": 208,
+    "opened_double_past_sources": 3,
+    "all_main_candidate_native_ordered_and_export_evidence_exact": true
+  },
+  "historical_nested_suffix_controls": 14,
+  "source_controls": 12,
+  "launcher_and_help_passed": true,
+  "scope": "Complete terminal combined Rust/assets/inventory check with exact frozen staged inputs, same independently verified runtime outputs, complete main/package CLI/API/browser parity and actual launcher. Subsequent closure/queue edits are documentation; broader contextual and candidate precision remain open."
+}

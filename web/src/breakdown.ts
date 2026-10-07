@@ -2,7 +2,7 @@ import {
   analyses,
   matches,
   readingMatches,
-  grammarHeadword,
+  grammarContextHeadword,
   type Result,
   type Token,
 } from "./model";
@@ -13,6 +13,7 @@ import hadaSources from "./hada-sources.json";
 interface GrammarLabel {
   kind: string;
   label: string;
+  components?: string[];
   sources: { id: number; headword: string; pos: string }[];
   references?: { title: string; url: string }[];
   note?: string;
@@ -113,7 +114,7 @@ export function parts(
       };
     }
     const m = a.morphemes[component.morpheme];
-    const key = grammarHeadword(m);
+    const key = grammarContextHeadword(a, component.morpheme, order);
     const previous = order[position - 1];
     const concessiveMan =
       m.kind === "particle" && m.form === "만" &&

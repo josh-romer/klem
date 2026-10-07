@@ -11,7 +11,7 @@ import {
   analyses,
   api,
   filteredResult,
-  grammarHeadword,
+  grammarContextHeadword,
   matches,
   readingConditions,
   readingMatches,
@@ -101,7 +101,7 @@ export default function App() {
     const entries = candidates().flatMap((a) => [
       ...a.lemmas.flatMap((l) => matches(current, l)),
       ...a.morphemes.flatMap(
-        (m) => result()?.grammar[grammarHeadword(m)] ?? [],
+        (m, index) => result()?.grammar[grammarContextHeadword(a, index, result()?.breakdowns[selected()]?.[current.analysis!.analyses.indexOf(a)])] ?? [],
       ),
     ]);
     return [...new Map(entries.map((e) => [e.id, e])).values()];

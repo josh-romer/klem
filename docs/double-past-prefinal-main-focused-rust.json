@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "session_id": 33625,
+  "tests_passed": 16,
+  "command": "CARGO_INCREMENTAL=0 CARGO_TARGET_DIR=web/test-results/degree-expectation-main-cargo cargo test --locked --offline --features web -j4 --bin klem-web --test double_past_prefinal --test past_prefinal --test validity",
+  "log_sha256": "407b829fcf9354ba4610c0c5e073a4a6102df1bb24ef4189e9042c0905cd0edf",
+  "scope": "Integrated main double-past and prior simple-past source regressions, catalog/web controls and global ledger. Full main/browser/Nix/package checks remain separate."
+}

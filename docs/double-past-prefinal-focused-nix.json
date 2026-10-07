@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--impure",
+    "--file",
+    "/tmp/klem-double-past-prefinal-focused-check.nix",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L"
+  ],
+  "started_at": "2026-10-07T14:28:26.252445+00:00",
+  "pid": 4122188,
+  "exit_code": 0,
+  "finished_at": "2026-10-07T14:28:32.623463+00:00",
+  "source_controls_passed": 12,
+  "log_sha256": "55782a228e93256419d0d27b4d7fee40a6f38f34acbc63895bdec8a20383c935",
+  "outputs": [
+    "/nix/store/ks0j104pna35y9s51wdygqhsy2yhy8a7-klem-double-past-prefinal-source-audit"
+  ],
+  "scope": "Sandboxed current inventory consistency, complete double-past source/captured main browser audit and twelve corruption controls. Full release gates remain separate."
+}

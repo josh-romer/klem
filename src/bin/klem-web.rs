@@ -114,6 +114,15 @@ impl RenderMetadata {
                         );
                     }
                 }
+                if a.breakdown()
+                    .is_some_and(|order| grammar_labels::has_double_past(&a.morphemes, &order))
+                    && !self.grammar.contains_key("-었었-")
+                {
+                    self.grammar.insert(
+                        "-었었-".to_owned(),
+                        grammar_labels::lookup(lookups, MorphemeKind::Prefinal, "-었었-")?,
+                    );
+                }
             }
             for rule in &a.rules {
                 self.rules.insert(

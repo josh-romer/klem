@@ -4723,3 +4723,44 @@ all 310 checked new/legacy diagrams. All three primary past entries can be
 opened from the viewer. The actual Nix launcher builds and its help invocation
 succeeds. These finite structural/source checks do not select contextual
 meanings or certify every speculative candidate.
+
+## Original double-past sources and pair hints (COV-017cf)
+
+Complete KRDict entries 68836/68838/68840 provide eleven original groups.
+The engine retains two ordered canonical 었 components for their written
+았었/었었/였었 forms. Both polite analyses in 두었었는데요 remain. Five
+source-note spelling boundaries target exact lemma/component paths; the sixth
+boundary tests the existing engine limit of two past components and is not an
+explicit source prohibition. Dictionary senses describe a past situation
+differing from the present or no longer continuing; the viewer does not choose
+a contextual temporal interpretation.
+
+The viewer adds a -었었- context lookup when exactly two prefinal components
+are adjacent in reading order. Their separate forms remain visible, including
+the existing 하 + 여 display. Another lemma, a single marker, a wrong-kind
+marker or a triple prevents pair-source selection. All three original entries
+remain available with their complete Native fields. This source hint does not
+license new morphology or certify broader lexical/copular/composition classes.
+Composite labels declare their canonical component forms, and the catalog
+coverage test checks those references separately while preserving complete
+coverage of emitted atoms.
+
+The preserved Native entries and English projections derive from the September
+2026 KRDict export, National Institute of Korean Language, under
+[CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Original [68836](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68836),
+[68838](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68838), and
+[68840](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68840) entries,
+all source fields, dialogue replies, pinned export hashes and preparation history
+are preserved. Authored structural proposals remain distinct from contextual
+and independent Korean review. Main and release gates remain in progress.
+
+Final COV-017cf validation passes the complete Nix Rust/assets/inventory gate
+with all 101 staged files and their staged diff unchanged. The runtime outputs
+are exactly those independently verified by 1,016 release Rust tests (one
+ignored), six complete 181-frame source streams, 68 word probes, 334 ordered
+new/simple-past/legacy diagrams, eighteen exports and 344 complete Native
+endpoint comparisons. Six historical nested-suffix diagrams and fourteen
+controls bind the audit repair to the actual new package without rewriting
+historical captures. The Nix launcher and help invocation pass. Broader
+lexical/compositional, contextual and independent Korean review remain open.

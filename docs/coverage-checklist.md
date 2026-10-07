@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 454 scoped
-  dispositions; 261 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 457 scoped
+  dispositions; 258 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2477,6 +2477,54 @@ review remains open under the completion review below.
   cache fetched ShellCheck and completed the launcher. No production grammar
   changes or new novel timing claims are made. Closure/queue documentation
   follows terminal verification; broader COV-013 and contextual review stay open.
+
+- [x] **COV-017cf — Original double-past -았었-/-었었-/-였었- sources and viewer links.**
+  **Implemented for the bounded original-source structures and viewer links.** The complete original entries 68836/68838/68840 retain all
+  three senses and eleven example groups, including every dialogue reply.
+  Twelve required structural paths retain two ordered canonical 었 components
+  and both 두었었는데요 polite decompositions. Five exact spelling boundaries
+  preserve identity and other lexical alternatives; a sixth regression checks
+  the engine's existing two-past limit without attributing a universal triple-past
+  prohibition to the dictionary. All 37 finite named Native/LMF owners and
+  English projections retain original fields. Six complete streams retain 181
+  frames each; 68 raw/compatible NFC/NFD word probes preserve exact judgments.
+  The actual before API recovers every original word and complete primary entry,
+  but lacks the pair-specific source links. The viewer now exposes the three
+  double-past entries only for exactly two adjacent components in reading order.
+  Single past, different owners, wrong kinds and triples retain ordinary lookup;
+  canonical atoms, 하/여 allomorph display and all core analyses remain unchanged.
+  Composite labels explicitly declare their existing canonical components;
+  the library coverage test validates those references and retains complete
+  coverage of every emitted atomic form. The first full main attempt caught
+  the former atomic-only catalog assumption; its failure is preserved.
+  An isolated prototype passes 24 new and 220 legacy diagrams, twelve exact
+  exports, all 37 new and 208 legacy Native endpoints, and three clicked sources.
+  Stable desktop/mobile captures were inspected. Main focused/library Rust tests and the frontend build pass. Actual main
+  browser checks pass 24 new, 90 simple-past and 220 legacy diagrams, eighteen
+  exact exports and all 37/99/208 complete Native endpoints. Twelve offline
+  controls also reject missing aliases, changed component order and lost Native
+  senses. The full main Rust suite passes 1,016 tests with one ignored across
+  215 batches, and Clippy/formatting pass. The focused Nix source gate also
+  passes. The actual independent Nix runtime build passes the same 1,016 tests
+  with all 891 source/test/asset inputs unchanged. [Packaged parity checks](double-past-prefinal-packaged-checks.json)
+  preserve all six source streams, 68 word outputs, 334 new/simple-past/legacy
+  diagrams, eighteen exports and 344 complete Native entries. Six additional
+  nested-suffix diagrams bind the repaired historical fingerprint guard to the
+  actual new package; all fourteen controls pass without rewriting historical
+  captures. The Nix web launcher and its help invocation pass. The initial
+  combined inventory failure and stale-queue retry are preserved. The
+  [complete corrected Nix gate](double-past-prefinal-combined-checks.json)
+  passes with all 101 staged files and the staged diff unchanged, using the
+  exact independently verified runtime outputs. Subsequent closure/queue
+  edits are documentation. No new novel timing claims are made.
+  Evidence: [source regressions](../tests/double_past_prefinal.rs),
+  [portable source/condition audit](../tools/double_past_prefinal_audit.py),
+  [twelve integrity controls](../tools/test_double_past_prefinal_audit.py), and
+  [actual before API finding](double-past-prefinal-before-api-finding.json),
+  [actual main browser checks](double-past-prefinal-main-browser-checks.json), and
+  [evaluation](double-past-prefinal-evaluation.json).
+  Broader lexical/copular/composition, speculative-candidate, contextual and
+  independent Korean review limits remain open in the three COV-013 dispositions.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

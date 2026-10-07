@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {grammarContextHeadword} from '../src/model.ts';
+const a={lemmas:[{text:'먹다',kind:'predicate'}],morphemes:[{form:'었',kind:'prefinal'},{form:'었',kind:'prefinal'},{form:'다',kind:'ending'}],rules:[],unchanged:false};
+const pair=[{lemma:0},{morpheme:0},{morpheme:1},{morpheme:2}];
+for(const i of [0,1])assert.equal(grammarContextHeadword(a,i,pair),'-었었-');
+assert.equal(grammarContextHeadword(a,2,pair),'-다');
+for(const i of [0,1])assert.equal(grammarContextHeadword(a,i,[{lemma:0},{morpheme:0},{lemma:1},{morpheme:1},{morpheme:2}]),'-었-');
+assert.equal(grammarContextHeadword(a,0,[{lemma:0},{morpheme:0},{morpheme:2}]),'-었-');
+a.morphemes.push({form:'었',kind:'prefinal'});
+for(const i of [0,1,3])assert.equal(grammarContextHeadword(a,i,[{lemma:0},{morpheme:0},{morpheme:1},{morpheme:3},{morpheme:2}]),'-었-');
+a.morphemes[1].kind='ending';assert.equal(grammarContextHeadword(a,0,pair),'-었-');
+assert.equal(grammarContextHeadword(a,0,null),'-었-');
+console.log('Verified actual frontend pair selection, atomic forms, separate owners, single/triple markers, wrong kind and absent order.');

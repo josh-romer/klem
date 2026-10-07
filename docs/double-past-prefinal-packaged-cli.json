@@ -1,0 +1,1173 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "package": "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0",
+  "package_receipt_sha256": "a5056d2a3b1b42762c07ac61bd1e841bc3422b6990638c3583965f328f787ea6",
+  "source_capture_sha256": "7416162dc76474681e36c837630aea0c4c4f2d85e0b6f8b80338d37e05eca24a",
+  "judgments_sha256": "4db9e9c655346b8ec724f40b895607c495056125e6bb281050c4f12f9f9023b0",
+  "cli_bytes_identical_to_original": true,
+  "frozen_inputs": {
+    "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd",
+    "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+    "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd"
+  },
+  "inputs_unchanged": true,
+  "runs": [
+    {
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "records": 181,
+      "sha256": "8bc88621553da94a39d51011dc09ffdbce84ef36ac48728fa3bc72ef01cda8a9",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "records": 181,
+      "sha256": "2357db473b43fd00ac4926b226a95f87862f877c6184905174ba4790499c34c8",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "records": 181,
+      "sha256": "4f88cc40787e4ba86521a556627cb750cb92e5e26e7846155e96d5cc74cbdf66",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "records": 181,
+      "sha256": "e47720dad8badbd26d84ef86a3502ee5a5ec3f9fcff38c174384e5ef47addf59",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "records": 181,
+      "sha256": "006a6b43db130be1b961659b7ffafb3a256080dc444c0e98697e427d3657f6ad",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "records": 181,
+      "sha256": "5bd97fd7226e7f7ef35623db6862ed7c97655375429a2a1875b4e2e15430102f",
+      "exact_archived_output": true
+    }
+  ],
+  "probes": [
+    {
+      "case": "double-past-prefinal-68836-1-0-0-15",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "작았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "2ff2e1e052a3699f5f4c3c890816651ea2c4e8fa81887f009ad1657557730a32",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-1-0-16",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "살았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e9efcfc52aa288ed772d2d1dd343621c919f536fa522d70139ccca6d49f7446a",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-2-0-21",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "갔었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "c1b361400da3e0767fc646f3df5f3f699d8fd9fbb9ff3135bde58bcdc7466137",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-3-1-15",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "알아봤었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "df8e4a33a98472065b8114d03d702696f26ed14220a1af1ac5d6307e1e8b7192",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-0-0-14",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "컸었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "dca74870fe1003aca83951bff292438ce0d08322fb87e5fa904c5ae91ac98045",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-1-0-16",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "예뻤었어",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "f12a526d9dc9878a59b33dcf36d982c12ffb2d6a9cc88e9f96f88e74e1e75672",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-2-0-17",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "적었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "ce824418dc52a15e6c1daff253c84ec43728fe4bd6cdbd659ad6d485864e32ca",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-3-1-12",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "두었었는데요",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "7eb073195c4971adabe7d20a525abc25cfbd39af3ce591642eb7ea4ceff0401d",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-0-0-16",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "잘했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "35a35e36868dfe31e88b570f982c2265a1c8579a6a46d8fc2c51e609e49adbee",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-1-0-20",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "117da24be82ae1b2d725f36c7d6bb2ae1b8585c8ff30c390b3b6571952969a13",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-2-1-22",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "노력했었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e4af2eb81d52e2c8bdf005b8cc5ae0a2674630490a18a3a2d525bd5872f0b7e6",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-0",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "가었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e78dad2a1715ad92ef3ccb2faecd9c13286e89e2673bf419662e5095244a17d0",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-1",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "3801b737168dc4c0deb9d19b1e3f143c660f3392b057a184521b699abb541a7c",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-2",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "633d9e6f8a2645599f702effc7212f0ddcc070a503040e4dd6d6deb78af8cafb",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-3",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "220574bdec2257d2f13f0b20df40e9743bd878ace5d2b1a769d0e83fd3566ff2",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-4",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "좋었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "942c760267f3a766be7b1af3d93710ca66ca836fff890a0d1c85a324b020cbca",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-5",
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹었었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e6b9cf17b2014345994fbb23175f763d1dd56d382b5933f6b5fe727ca6e30f1c",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-0-0-15",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "작았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "c17fe911a8be33c9f34f9caa4f5e834e808d0d52025ecca939d5311d0bc763e3",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-1-0-16",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "살았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "6b16c6ed27615a27551a742977d2d1848913eccba2a2f3a6fd2ee778ee57f70f",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-2-0-21",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "갔었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "308ff594b653fdd4a3e96e755f581a94b9151ef8d969b731e5c5355bc6ffa595",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-3-1-15",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "알아봤었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "464f172a6b4542e4e83cfcce0504374ff5324abff02a93d92c7ac3047f68427b",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-0-0-14",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "컸었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "14bdf784744862109aec0bc40af525926e71d5d624b5461633b31dd2a9fcfde7",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-1-0-16",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "예뻤었어",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "7713c29dc7961cc2ad2e975b4adc03e9394698e9dc3c0bec15c76e99d4ed71f8",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-2-0-17",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "적었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "8d735fc2e8652eb3262a987925fb3b3292e9080e6b2f36859825ca699b5f6e65",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-3-1-12",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "두었었는데요",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "aaddc446f5d47f82e0dd7f0f1389fae30ef725b9d1ddfbd86f007f7417da8eae",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-0-0-16",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "잘했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "44eee454de50fa865f8d585ea8b0d338682603d5831fd06e715fdd1b18887e2f",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-1-0-20",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "ba050e63add8ccec2a184ffdc6a73edbe9ee75845400f164f0c4da72439fbb39",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-2-1-22",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "노력했었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "a7da106eeaf7e24f9c8b9845870e7478b70db3f50a0d3040312406c2384ab334",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-0",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "가었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "2724527739bb08fca975ba8fc02182e15c1cd4d180fdebe85878603bbbaad82f",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-1",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "3c4a9294ea4374453fc39cfe12ccbb80243034632767ab346458f66322b3e06e",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-2",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "86da37c3103ba4bdc3f9afae5be77c8db51c7e8600a0f7a0352b3d9ce41b5e74",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-3",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "0c97cef2387b2822bff5f3524989cc18cecdd7df432f5948479e4fca27b77a67",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-4",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "좋었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "de54bcf127dcb089b194da3436dbdbb5fa5e997ec7f66c0a65485b1ecc90d7c9",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-5",
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹었었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "eff913760192bde6d50e3f4c9d8b27c43bbc5effc6c21d7c61e3c75945fca833",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-0-0-15",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "작았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "2ff2e1e052a3699f5f4c3c890816651ea2c4e8fa81887f009ad1657557730a32",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-1-0-16",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "살았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e9efcfc52aa288ed772d2d1dd343621c919f536fa522d70139ccca6d49f7446a",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-2-0-21",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "갔었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "c1b361400da3e0767fc646f3df5f3f699d8fd9fbb9ff3135bde58bcdc7466137",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-3-1-15",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "알아봤었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "df8e4a33a98472065b8114d03d702696f26ed14220a1af1ac5d6307e1e8b7192",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-0-0-14",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "컸었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "dca74870fe1003aca83951bff292438ce0d08322fb87e5fa904c5ae91ac98045",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-1-0-16",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "예뻤었어",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "f12a526d9dc9878a59b33dcf36d982c12ffb2d6a9cc88e9f96f88e74e1e75672",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-2-0-17",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "적었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "ce824418dc52a15e6c1daff253c84ec43728fe4bd6cdbd659ad6d485864e32ca",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-3-1-12",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "두었었는데요",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "7eb073195c4971adabe7d20a525abc25cfbd39af3ce591642eb7ea4ceff0401d",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-0-0-16",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "잘했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "35a35e36868dfe31e88b570f982c2265a1c8579a6a46d8fc2c51e609e49adbee",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-1-0-20",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "117da24be82ae1b2d725f36c7d6bb2ae1b8585c8ff30c390b3b6571952969a13",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-2-1-22",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "노력했었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e4af2eb81d52e2c8bdf005b8cc5ae0a2674630490a18a3a2d525bd5872f0b7e6",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-0",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "가었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e78dad2a1715ad92ef3ccb2faecd9c13286e89e2673bf419662e5095244a17d0",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-1",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "3801b737168dc4c0deb9d19b1e3f143c660f3392b057a184521b699abb541a7c",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-2",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "633d9e6f8a2645599f702effc7212f0ddcc070a503040e4dd6d6deb78af8cafb",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-3",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "220574bdec2257d2f13f0b20df40e9743bd878ace5d2b1a769d0e83fd3566ff2",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-4",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "좋었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "942c760267f3a766be7b1af3d93710ca66ca836fff890a0d1c85a324b020cbca",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-5",
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹었었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "sha256": "e6b9cf17b2014345994fbb23175f763d1dd56d382b5933f6b5fe727ca6e30f1c",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-0-0-15",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "작았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "c17fe911a8be33c9f34f9caa4f5e834e808d0d52025ecca939d5311d0bc763e3",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-1-0-16",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "살았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "6b16c6ed27615a27551a742977d2d1848913eccba2a2f3a6fd2ee778ee57f70f",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-2-0-21",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "갔었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "308ff594b653fdd4a3e96e755f581a94b9151ef8d969b731e5c5355bc6ffa595",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68836-1-3-1-15",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "알아봤었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "464f172a6b4542e4e83cfcce0504374ff5324abff02a93d92c7ac3047f68427b",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-0-0-14",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "컸었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "14bdf784744862109aec0bc40af525926e71d5d624b5461633b31dd2a9fcfde7",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-1-0-16",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "예뻤었어",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "7713c29dc7961cc2ad2e975b4adc03e9394698e9dc3c0bec15c76e99d4ed71f8",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-2-0-17",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "적었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "8d735fc2e8652eb3262a987925fb3b3292e9080e6b2f36859825ca699b5f6e65",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68838-1-3-1-12",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "두었었는데요",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "aaddc446f5d47f82e0dd7f0f1389fae30ef725b9d1ddfbd86f007f7417da8eae",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-0-0-16",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "잘했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "44eee454de50fa865f8d585ea8b0d338682603d5831fd06e715fdd1b18887e2f",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-1-0-20",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "했었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "ba050e63add8ccec2a184ffdc6a73edbe9ee75845400f164f0c4da72439fbb39",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-68840-1-2-1-22",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "노력했었는데",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "a7da106eeaf7e24f9c8b9845870e7478b70db3f50a0d3040312406c2384ab334",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-0",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "가었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "2724527739bb08fca975ba8fc02182e15c1cd4d180fdebe85878603bbbaad82f",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-1",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "3c4a9294ea4374453fc39cfe12ccbb80243034632767ab346458f66322b3e06e",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-2",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하았었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "86da37c3103ba4bdc3f9afae5be77c8db51c7e8600a0f7a0352b3d9ce41b5e74",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-3",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "하었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "0c97cef2387b2822bff5f3524989cc18cecdd7df432f5948479e4fca27b77a67",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-4",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "좋었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "de54bcf127dcb089b194da3436dbdbb5fa5e997ec7f66c0a65485b1ecc90d7c9",
+      "exact_archived_output": true
+    },
+    {
+      "case": "double-past-prefinal-boundary-5",
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/n60v3qjsfnn7ib8gxwn7idsbjb3crxmb-klem-0.1.0/bin/klem",
+        "word",
+        "먹었었었다",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "sha256": "eff913760192bde6d50e3f4c9d8b27c43bbc5effc6c21d7c61e3c75945fca833",
+      "exact_archived_output": true
+    }
+  ],
+  "producer": {
+    "text": "\"\"\"Replay all archived full-source and named word outputs with the actual Nix CLI.\"\"\"\nimport gzip,hashlib,json,subprocess,unicodedata\nfrom pathlib import Path\nroot=Path('/home/josh/projects/klem');output=Path('/tmp/klem-double-past-prefinal-packaged-cli.json')\nassert not output.exists()\ngate=json.loads(Path('/tmp/klem-double-past-prefinal-package-nix.json').read_text())\nassert gate['state']=='passed' and gate['exit_code']==0 and gate['snapshot_unchanged']\nassert all(hashlib.sha256((root/name).read_bytes()).hexdigest()==v['sha256'] for name,v in gate['snapshot']['files'].items())\npackage=next(p for p in gate['outputs'] if p.endswith('-klem-0.1.0'));cli=Path(package)/'bin/klem'\nsource_path=root/'docs/double-past-prefinal-source-discovery.json.gz';draft_path=root/'docs/double-past-prefinal-judgments.json'\nsource=json.loads(gzip.decompress(source_path.read_bytes()));draft=json.loads(draft_path.read_text())\ndef sha(p):\n h=hashlib.sha256()\n with Path(p).open('rb') as f:\n  for c in iter(lambda:f.read(1048576),b''):h.update(c)\n return h.hexdigest()\nfrozen={str(cli):sha(cli),**{p:sha(p) for p in source['frozen_inputs']}}\nassert all(frozen[p]==h for p,h in source['frozen_inputs'].items())\nold=next(p for p in source['frozen_inputs'] if p.endswith('/bin/klem'))\nruns=[]\nfor run in source['runs']:\n command=[str(cli),*run['command'][1:]]\n result=subprocess.run(command,cwd=root,input=unicodedata.normalize(run['encoding'],source['input']).encode(),capture_output=True,check=True)\n assert result.stdout.decode()==run['jsonl'] and len(result.stdout.splitlines())==181\n runs.append({'encoding':run['encoding'],'mode':run['mode'],'command':command,'exit_code':0,'records':181,'sha256':hashlib.sha256(result.stdout).hexdigest(),'exact_archived_output':True})\nprobes=[]\nfor run in draft['probes']:\n command=[str(cli),*run['command'][1:]];result=subprocess.run(command,cwd=root,capture_output=True,check=True)\n assert result.stdout.decode()==run['json']\n probes.append({'case':run['case'],'encoding':run['encoding'],'mode':run['mode'],'command':command,'exit_code':0,'sha256':hashlib.sha256(result.stdout).hexdigest(),'exact_archived_output':True})\nassert len(runs)==6 and len(probes)==68 and all(sha(p)==h for p,h in frozen.items())\nreport={'schema_version':1,'state':'passed','exit_code':0,'package':package,'package_receipt_sha256':sha('/tmp/klem-double-past-prefinal-package-nix.json'),'source_capture_sha256':sha(source_path),'judgments_sha256':sha(draft_path),'cli_bytes_identical_to_original':frozen[str(cli)]==frozen[old],'frozen_inputs':frozen,'inputs_unchanged':True,'runs':runs,'probes':probes,'producer':{'text':Path(__file__).read_text(),'sha256':sha(__file__)},'scope':'Six actual packaged181-frame source streams and68 exact raw/compatible NFC/NFD word probes preserve original outputs. Named implementation cap remains separate from dictionary-certified spelling boundaries.'}\noutput.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n');print('Actual packaged CLI:6x181 exact source frames;68 exact word outputs;binary equality:',report['cli_bytes_identical_to_original'],flush=True)\n",
+    "sha256": "86c1a10612557a1f1867ef8f3591e2cb51de4320951f197b38ff780513d55066"
+  },
+  "scope": "Six actual packaged181-frame source streams and68 exact raw/compatible NFC/NFD word probes preserve original outputs. Named implementation cap remains separate from dictionary-certified spelling boundaries."
+}

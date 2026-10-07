@@ -7,6 +7,8 @@ from hada_remaining_audit import ROOT, REPORT as DIAGNOSTICS, read, sha
 
 REPORT = ROOT / 'docs/hada-remaining-scoped-runtime.json'
 REFRESH = ROOT / 'docs/friendly-command-hada-scoped-browser.json'
+PAIR_REFRESH = ROOT / 'docs/double-past-prefinal-hada-scoped-browser.json'
+PAIR_PACKAGE = ROOT / 'docs/double-past-prefinal-packaged-cli.json'
 CASES = {
     '먹는양하는양하다': ['Auxiliary verb formation', 'Auxiliary verb / adjective formation'],
     '먹는양하는듯하다': ['Auxiliary verb formation', 'Auxiliary adjective formation'],
@@ -14,8 +16,25 @@ CASES = {
 }
 
 
+def context_parent_text(text):
+    """Invert the three exact pair-context edits; keep every suffix-label change."""
+    if 'grammarContextHeadword' not in text:
+        return text
+    edits = [
+        ('  grammarContextHeadword,', '  grammarHeadword,'),
+        ('  components?: string[];\n', ''),
+        ('    const key = grammarContextHeadword(a, component.morpheme, order);',
+         '    const key = grammarHeadword(m);'),
+    ]
+    for current, previous in edits:
+        assert text.count(current) == 1
+        text = text.replace(current, previous, 1)
+    return text
+
+
 def frontend_parent_sha(text):
-    """Invert only the audited friendly-command source-selection change."""
+    """Invert only the audited command and pair-source selection changes."""
+    text = context_parent_text(text)
     if 'ending.friendly_command.n' not in text:
         return hashlib.sha256(text.encode()).hexdigest()
     new_label = '''    const attachedN = m.kind === "ending" && m.form === "ㄴ";
@@ -81,7 +100,8 @@ def inspect(report):
         # replay every original scoped diagram using the current Nix package.
         fresh = read(REFRESH)
         assert fresh['producer_sha256'] == producer
-        assert fresh['frontend_sha256'] == sha(frontend)
+        # Keep this historical capture tied to its actual historical source.
+        assert fresh['frontend_sha256'] == hashlib.sha256(context_parent_text(text).encode()).hexdigest()
         package = read(ROOT / 'docs/friendly-command-packaged-checks.json.gz')
         assert fresh['cli_sha256'] == package['cli_sha256']
         assert inspect_cases(fresh) == count
@@ -90,6 +110,22 @@ def inspect(report):
                 assert before[key] == after[key], key
             for key in ['records', 'breakdowns']:
                 assert before['response'][key] == after['response'][key], key
+        if 'grammarContextHeadword' in text:
+            # The exact inverse alone is insufficient: replay all six scoped
+            # diagrams with the new actual Nix CLI and current frontend too.
+            paired = read(PAIR_REFRESH)
+            assert paired['producer_sha256'] == producer
+            assert paired['frontend_sha256'] == sha(frontend)
+            package = read(PAIR_PACKAGE)
+            assert package['state'] == 'passed' and package['exit_code'] == 0
+            assert package['inputs_unchanged']
+            assert paired['cli_sha256'] == package['frozen_inputs'][package['package'] + '/bin/klem']
+            assert inspect_cases(paired) == count
+            for before, after in zip(fresh['checks'], paired['checks'], strict=True):
+                for key in ['request', 'encoding', 'surface', 'selected', 'labels', 'cli_records']:
+                    assert before[key] == after[key], key
+                for key in ['records', 'breakdowns']:
+                    assert before['response'][key] == after['response'][key], key
     return count
 
 

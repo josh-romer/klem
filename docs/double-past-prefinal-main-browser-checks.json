@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "state": "main-browser-passed",
+  "exit_code": 0,
+  "sessions": {
+    "double_past": 81599,
+    "simple_past": 71375,
+    "legacy": 82766
+  },
+  "scope": "Main debug binaries and built assets; packaged release remains separate. The legacy producer retains its historical prototype flag; this invocation used actual main binaries.",
+  "counts": {
+    "diagrams": 24,
+    "exports": 6,
+    "native_entries": 37,
+    "opened_sources": 3,
+    "source_frames_per_encoding": 181,
+    "simple_past_diagrams": 90,
+    "simple_past_exports": 6,
+    "simple_past_native_entries": 99,
+    "legacy_diagrams": 220,
+    "legacy_exports": 6,
+    "legacy_native_entries": 208
+  },
+  "screenshots_inspected": [
+    "docs/double-past-prefinal-main-desktop.png",
+    "docs/double-past-prefinal-main-mobile.png"
+  ],
+  "mobile_scope": "390x844 viewport; selected 갔었다 card completely visible; surrounding cards may extend outside the viewport.",
+  "owned_server_stopped": {
+    "session_id": 38658,
+    "terminal_exit": 130
+  },
+  "files_sha256": {
+    "docs/double-past-prefinal-main-browser.json.gz": "616e2aac6056ce0b907d2cb860ee939cf72cca31f35ab9f0ed89de164b4e13fb",
+    "docs/double-past-prefinal-main-browser.log.gz": "82ff3542fe30d3b0744a4bb2fcdd056b9d8695d9cd66d885988992807442f22b",
+    "docs/double-past-prefinal-main-desktop.png": "348cf15c2023921b5083f7be6d9f1e1e542136db5d49637d3bdd78407c6b41ed",
+    "docs/double-past-prefinal-main-mobile.png": "68ab3eebb573f4ed4bd1abdf96db2ac8f2e2c61251941ad496283fe7eb788d73",
+    "docs/double-past-prefinal-main-past-browser.json.gz": "e27afba275c06550f974e58763e0e54395ee535ea4791d7dddc26f5d91d09760",
+    "docs/double-past-prefinal-main-past-browser.log.gz": "2f15386d9c34eabccabfd2b5caa655dc4de36e6a9b13a9054673d765ba3d7c52",
+    "docs/double-past-prefinal-main-past-desktop.png": "add4a4dc3beb15d7b17435c82402f6bb8ce692d2220df24514c926a94ddbd158",
+    "docs/double-past-prefinal-main-past-mobile.png": "f0d3b957a006412c87aa52bfc73a1ea0b909d5a98a8afe0d702a00d67d4000ca",
+    "docs/double-past-prefinal-main-legacy-browser.json.gz": "f92f1dc11dd5e9b4045158d98c531fce2fe7fb36c552282bffe8c8ca764c36b4",
+    "docs/double-past-prefinal-main-legacy-browser.log.gz": "47a25b6aacd5e5d7248e29c2606ad803818e34c9b27d2776e1cdf52c2db094f2",
+    "docs/double-past-prefinal-main-legacy-desktop.png": "8c4fde6eff1c45736c472dca275d4afcd0b376b3ddd37bd32f5be214fec88348",
+    "docs/double-past-prefinal-main-legacy-mobile.png": "6f1651fc29553af02dce27faa10e3c73fdcb1a30b909ed3b8b65efe1581740e1",
+    "docs/double-past-prefinal-main-source-audit.log.gz": "abbca6731b84120920f04122c265624e5ce4015a486c31c98c4b3eb7149b9f6b",
+    "docs/double-past-prefinal-main-source-controls.log.gz": "6ad93052b1e5ee61e803b2aa9d7ff220e15b351f2361b7d235c393be9de9af2b",
+    "web/tests/double-past-prefinal.mjs": "2db96d0b3c40278aba0042e195817e3568a9c4907451088678c14d2fff0acaea"
+  },
+  "producer": {
+    "text": "\"\"\"Preserve actual completed main browser captures without rewriting their scope.\"\"\"\nimport gzip, hashlib, json, shutil\nfrom pathlib import Path\n\nROOT = Path('/home/josh/projects/klem')\ndef sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()\ndef archive(path, name):\n    target = ROOT / 'docs' / name\n    data = Path(path).read_bytes()\n    target.write_bytes(gzip.compress(data, mtime=0) if name.endswith('.gz') else data)\n    return str(target.relative_to(ROOT))\n\nfiles = []\nfor suffix, diagrams, native, producer in [('',24,37,'double-past-prefinal'),('-past',90,99,'past-prefinal'),('-legacy',220,208,'reported-dana')]:\n    prefix = '/tmp/klem-double-past-prefinal-main' + suffix\n    report = json.loads(Path(prefix+'-browser.json').read_text())\n    assert len(report['diagrams']) == diagrams and len(report['native']) == native and report['errors'] == []\n    assert len(report.get('exports', report.get('records'))) == 6\n    assert report['producer_sha256'] == sha(ROOT/'web/tests'/f'{producer}.mjs')\n    for ext in ['-browser.json','-browser.log','-desktop.png','-mobile.png']:\n        files.append(archive(prefix+ext,'double-past-prefinal-main'+suffix+ext+('.gz' if not ext.endswith('.png') else '')))\n\nbefore = json.loads(gzip.decompress((ROOT/'docs/double-past-prefinal-before-api.json.gz').read_bytes()))\nactual = json.loads(Path('/tmp/klem-double-past-prefinal-main-browser.json').read_text())\nfor run in actual['responses']:\n    previous = next(r for r in before['runs'] if r['encoding'] == run['encoding'])\n    assert previous['request'] == run['request']\n    assert len(run['response']['records']) == 181\n    for key in ['records','rules','breakdowns','glosses']:\n        assert run['response'][key] == previous['response'][key]\n    other = dict(run['response']['grammar']); family = other.pop('-었었-')\n    assert other == previous['response']['grammar']\n    assert [e['id'] for e in family] == ['krdict:68838','krdict:68836','krdict:68840']\nowners = json.loads(gzip.decompress((ROOT/'docs/double-past-prefinal-owner-preparation.json.gz').read_bytes()))['complete_native_entries']\nassert {r['id']:r['response']['entry'] for r in actual['native']} == owners\nfor kind in ['source-audit','source-controls']:\n    files.append(archive('/tmp/klem-double-past-prefinal-main-'+kind+'.log','double-past-prefinal-main-'+kind+'.log.gz'))\nfiles.append('web/tests/double-past-prefinal.mjs')\nreport = {'schema_version':1,'state':'main-browser-passed','exit_code':0,\n          'sessions':{'double_past':81599,'simple_past':71375,'legacy':82766},\n          'scope':'Main debug binaries and built assets; packaged release remains separate. The legacy producer retains its historical prototype flag; this invocation used actual main binaries.',\n          'counts':{'diagrams':24,'exports':6,'native_entries':37,'opened_sources':3,'source_frames_per_encoding':181,\n                    'simple_past_diagrams':90,'simple_past_exports':6,'simple_past_native_entries':99,\n                    'legacy_diagrams':220,'legacy_exports':6,'legacy_native_entries':208},\n          'screenshots_inspected':['docs/double-past-prefinal-main-desktop.png','docs/double-past-prefinal-main-mobile.png'],\n          'mobile_scope':'390x844 viewport; selected 갔었다 card completely visible; surrounding cards may extend outside the viewport.',\n          'owned_server_stopped':{'session_id':38658,'terminal_exit':130},\n          'files_sha256':{name:sha(ROOT/name) for name in files},\n          'producer':{'text':Path(__file__).read_text(),'sha256':sha(__file__)}}\n(ROOT/'docs/double-past-prefinal-main-browser-checks.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\nhandoff = Path('/tmp/klem-coverage-current-handoff-20261007.json')\ndata = json.loads(handoff.read_text()); main = data['double_past_prefinal_preparation']['main_integration']\nfor browser in main['main_browsers']: browser.update(state='passed',exit_code=0)\nmain['owned_main_server'].update(state='stopped',terminal_exit=130)\nmain['main_browser_checks']='docs/double-past-prefinal-main-browser-checks.json'\nhandoff.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\\n')\nprint('Archived actual24/90/220 diagrams,18 exports,37/99/208 Native endpoints; pair-only API metadata verified.')\n",
+    "sha256": "6e8fe52ce6500d06f46ba103f4f2a7b982466c8320df95775fd076a5c7ab3880"
+  }
+}

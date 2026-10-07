@@ -80,9 +80,65 @@ pub(super) fn lookup<D: Dictionary + ?Sized>(
     Ok(entries)
 }
 
+/// A pair belongs to this construction only when consecutive in reading order.
+pub(super) fn has_double_past(
+    morphemes: &[klem::Morpheme],
+    order: &[klem::breakdown::Component],
+) -> bool {
+    let past = |component: Option<&klem::breakdown::Component>| {
+        let Some(klem::breakdown::Component::Morpheme(index)) = component else {
+            return false;
+        };
+        morphemes
+            .get(*index)
+            .is_some_and(|m| m.kind == MorphemeKind::Prefinal && m.form == "었")
+    };
+    order.windows(2).enumerate().any(|(position, pair)| {
+        past(pair.first())
+            && past(pair.get(1))
+            && !past(position.checked_sub(1).and_then(|i| order.get(i)))
+            && !past(order.get(position + 2))
+    })
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn double_past_sources_require_exactly_two_adjacent_reading_components() {
+        use klem::breakdown::Component::{Lemma, Morpheme};
+        let mut morphs = klem::Lemmatizer::new()
+            .analyze_word("먹었었다")
+            .unwrap()
+            .analyses
+            .into_iter()
+            .find(|a| a.lemmas[0].text == "먹다" && a.morphemes.len() == 3)
+            .unwrap()
+            .morphemes;
+        assert!(has_double_past(
+            &morphs,
+            &[Lemma(0), Morpheme(0), Morpheme(1), Morpheme(2)]
+        ));
+        assert!(!has_double_past(
+            &morphs,
+            &[Lemma(0), Morpheme(0), Lemma(1), Morpheme(1), Morpheme(2)]
+        ));
+        assert!(!has_double_past(
+            &morphs,
+            &[Lemma(0), Morpheme(0), Morpheme(2)]
+        ));
+        morphs.push(morphs[0].clone());
+        assert!(!has_double_past(
+            &morphs,
+            &[Lemma(0), Morpheme(0), Morpheme(1), Morpheme(3), Morpheme(2)]
+        ));
+        morphs[1].kind = MorphemeKind::Ending;
+        assert!(!has_double_past(
+            &morphs,
+            &[Lemma(0), Morpheme(0), Morpheme(1), Morpheme(2)]
+        ));
+    }
+
     use klem::dictionary::{SqliteDictionary, import_krdict};
     use std::{fs, path::PathBuf};
 
@@ -153,6 +209,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-reported-command-deoni-english.json"),
                 PathBuf::from("tests/fixtures/krdict-reported-dana-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

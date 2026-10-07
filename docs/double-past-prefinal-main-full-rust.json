@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "session_id": 28843,
+  "passed": 1016,
+  "ignored": 1,
+  "batches": 215,
+  "command": "CARGO_INCREMENTAL=0 CARGO_TARGET_DIR=web/test-results/degree-expectation-main-cargo cargo test --locked --offline --features web -j4",
+  "log_sha256": "30bd067515771c292217b13af39991f39dc302844e0e59f1a07c03c3fdd93185",
+  "scope": "Full main project after double-past source hints and explicit composite label validation. First failed atomic-only catalog run remains preserved; this is the terminal successful retry. Nix/package checks remain separate."
+}

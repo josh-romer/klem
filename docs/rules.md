@@ -4656,3 +4656,34 @@ required and six forbidden judgments, also included in the global ledger.
 Other generated candidates, contextual senses and independent Korean review
 remain unjudged. Source, corpus, browser and release evidence is tracked under
 COV-017cc in [the coverage checklist](coverage-checklist.md).
+
+## Original present-prefinal examples (COV-017cd)
+
+The complete -ㄴ-/-는- entries (KRDict 66461/85852) provide ten structural
+examples across nine original groups. Existing canonical whole endings retain
+their present allomorphs, including the dialogue reply 나간다던데. No separate
+-ㄴ-/-는- segment is fabricated. Incidental 다니는 is an adnominal and remains
+original context rather than a present-prefinal target.
+
+Whole-ending licenses take precedence over an overly broad inference from a
+prefinal note: -ㄴ다 allows open/ㄹ verb stems and honorific -으시-, whereas
+-는다 requires a consonant other than ㄹ. Honorific -는군/-는구나 paths retain
+their own source license. Five exact negative structures cover 하는다, 살는다,
+하시는다, 먹으시는다 and 하는다나. Lexical POS remains dictionary evidence:
+좋는다 → 좋다 + 는다 stays a raw hypothesis and is rejected only by compatible
+filtering against the preserved adjective owner.
+
+The [tests](../tests/present_prefinal.rs) verify NFC/NFD, Native/English import
+identity and dictionary filtering. The [source audit](../tools/present_prefinal_audit.py)
+preserves every original group and target span. Contextual meanings, register
+and independent Korean review remain pending.
+
+The preserved Native entries and English adapters in `present-prefinal-native.json`
+and `krdict-present-prefinal-english.json` derive from the September 2026
+한국어기초사전 export by the National Institute of Korean Language (국립국어원).
+Dictionary text retains [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/)
+under the [source policy](https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo),
+separately from the code license. The English adapter retains only English
+translations; the Native model preserves all original senses, examples, notes
+and forms. Original LMF fields and full-export hashes remain in the archived
+source preparation; no multimedia is redistributed.

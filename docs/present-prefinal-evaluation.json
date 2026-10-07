@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "state": "bounded-structural-scope-validated",
+  "scope": "Bounded original-source structural regression integration; no production grammar or browser change. Contextual and independent review remain pending.",
+  "counts": {
+    "primary_entries": 2,
+    "original_groups": 9,
+    "source_occurrences": 10,
+    "native_named_owners": 45,
+    "raw_required": 10,
+    "raw_forbidden": 5,
+    "dictionary_forbidden": 6,
+    "archived_streams": 12,
+    "frames_per_stream": 134
+  },
+  "main_focused_rust": {
+    "exit_code": 0,
+    "tests_passed": 7,
+    "command": "CARGO_INCREMENTAL=0 CARGO_TARGET_DIR=web/test-results/degree-expectation-main-cargo cargo test --locked --offline --features web -j4 --test present_prefinal --test validity"
+  },
+  "offline_controls": {
+    "exit_code": 0,
+    "tests_passed": 8
+  },
+  "files_sha256": {
+    "tests/present_prefinal.rs": "af410bc39ea6e902a91bb1fba318d036be399ed59914968ef5d916ae601a1cf3",
+    "tests/fixtures/present-prefinal-validity.json": "cc02ed14cafc944dfb489ffdf19b8b9a156681e1940818e9cfe9fff960e808f5",
+    "tests/fixtures/present-prefinal-policy.json": "fdb9ede8ab190a9621ddf1c7c105e6d9267ed86071bb593c084d1f786a5a5719",
+    "tests/fixtures/present-prefinal-native.json": "3554623deca0a75cd0786a19d3b49f61965fce5741b1f808047e3aab4f4b5041",
+    "tests/fixtures/krdict-present-prefinal-english.json": "7814eee51915f258f6d20fcf6af01b444f7b32a3266ab59c1817ec406a3376d9",
+    "docs/present-prefinal-source-discovery.json.gz": "f0ca098abf66fe95e6fa9512a8911d33439d86451c3e7d246ff7704b3a4843b3",
+    "docs/present-prefinal-owner-preparation.json.gz": "a3c9bb9cc8a06b1fb3748d46e229e9030e275e55b95bec542660a9cfc7700eba",
+    "docs/present-prefinal-judgment-draft.json": "bfe00e49ec484d1f0cfdbe70a88162f3a4645d3ee94b6582a2cf012f2f1442a5",
+    "docs/present-prefinal-preparation-history.json.gz": "1251916bde8853a0509c9b2084f0c6e5d9b097f8cb58380cd0c0d8a1fdf1ddd3",
+    "tools/present_prefinal_audit.py": "f3d5546017f5d41f03ba196d66c3c4adb4411d4959b112076249b6a164bfbc3d",
+    "tools/test_present_prefinal_audit.py": "02810e3d49357cad402a4fcacf07ebadb83aaab84f3bd2461e3fdda612d5b822",
+    "docs/present-prefinal-main-rust.log.gz": "7a4adbe12067fcd99a43819b8374cdb368dfad85569aaa4c5343d4a54875bb8c",
+    "docs/present-prefinal-main-controls.log.gz": "cfe790cffde71140a6b5dd0bd6c1ae1cf4ec4f20eef07a3505dec43adfe54e2b",
+    "docs/present-prefinal-final-nix.json": "2f5d92ae87be2b13bcfd11e31bb9bce99298899418f3460dbc2bdd9d98f7d279",
+    "docs/present-prefinal-final-nix.log.gz": "2305dec137a491b2e9a60c6b8815341128d724411c0516734dffc6573df78f62",
+    "docs/present-prefinal-full-rust.json": "7593fa437b6b5c9e2c6cae7989182878c4a68216138ff3c0a5875862d21b4045",
+    "docs/present-prefinal-full-rust.log.gz": "82b06a479a259ae4d051f118e064d2bea06f2091fb44f499e9e0725ebe9554a5",
+    "docs/present-prefinal-focused-nix.json": "f67048a53eedec7219414b63a53b902590b29c17fea89204875fee27c67532b9",
+    "docs/present-prefinal-packaged-cli.json": "91d36f593edd6882438a4834f3da26c3ae65cc05c05a166739f60b4402a219b3",
+    "docs/present-prefinal-packaged-cli.log.gz": "954ef7069a6b8919a17011b9c731b66b771310dc45d7b8be6b198602b940b6a6"
+  },
+  "pending": [
+    "Contextual/register and independent Korean review",
+    "Broader paradigms and speculative-candidate precision; 264 inventory entries still await dispositions"
+  ],
+  "full_main_rust": {
+    "receipt": "docs/present-prefinal-full-rust.json",
+    "passed": 1008,
+    "ignored": 1,
+    "batches": 213,
+    "exit_code": 0
+  },
+  "full_nix": {
+    "receipt": "docs/present-prefinal-final-nix.json",
+    "exit_code": 0,
+    "outputs": [
+      "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0",
+      "/nix/store/4f3xqpp17qvapfdnb74jn6zil8w72kgv-klem-web-assets-0.1.0",
+      "/nix/store/dvx5yhmcf5g40mbncfnk68xcxd93l47b-klem-inventory-review"
+    ],
+    "snapshot_unchanged": true,
+    "release_tests_passed": 1008,
+    "release_tests_ignored": 1,
+    "scope": "Complete package/assets/inventory gate against the frozen provisional inputs. Closure/attribution/queue documentation follows terminal verification."
+  },
+  "packaged_cli": {
+    "receipt": "docs/present-prefinal-packaged-cli.json",
+    "exit_code": 0,
+    "source_streams": 6,
+    "frames_per_stream": 134,
+    "cli_bytes_unchanged": true
+  }
+}

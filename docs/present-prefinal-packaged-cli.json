@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "source_capture_sha256": "f0ca098abf66fe95e6fa9512a8911d33439d86451c3e7d246ff7704b3a4843b3",
+  "new_package": "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0",
+  "frozen_inputs": {
+    "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd",
+    "/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem": "99901032c7fa770ed68f65b77a5d1ce8e122f4c62a1c266c2b66b27b8bdcbcdd",
+    "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5"
+  },
+  "inputs_unchanged": true,
+  "new_cli_identical_to_original_tested_cli": true,
+  "runs": [
+    {
+      "encoding": "NFC",
+      "mode": "raw",
+      "command": [
+        "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "records": 134,
+      "sha256": "a612c8cb1dfccca35da2d82f1b44e80e16d8ee13b0cd8fc7b0c893701d549735",
+      "input_sha256": "b675adbe50c175af99ee07e9a0a7bccc559843ccf9f4c01222602533b1000673",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFC",
+      "mode": "headword",
+      "command": [
+        "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "records": 134,
+      "sha256": "8003c6f2ca45b6a46799ead9228a2283720af831b1528b0f2bc788daa11d18df",
+      "input_sha256": "b675adbe50c175af99ee07e9a0a7bccc559843ccf9f4c01222602533b1000673",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFC",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "records": 134,
+      "sha256": "4b81f05086360af4861e69a55e82fce76a284efa4a6a09853cd27950bc911c89",
+      "input_sha256": "b675adbe50c175af99ee07e9a0a7bccc559843ccf9f4c01222602533b1000673",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "raw",
+      "command": [
+        "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db"
+      ],
+      "exit_code": 0,
+      "records": 134,
+      "sha256": "09bff3aa345172c2505c5df056fcc5e1cada8c0fd03e228485cd6da026898728",
+      "input_sha256": "52f12bf05f1c892dcb7d8e74549319589261fb57c47eb2837ffe0bd439bfbf61",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "headword",
+      "command": [
+        "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-only"
+      ],
+      "exit_code": 0,
+      "records": 134,
+      "sha256": "ea5d6cda57bccae2db7745d5d2b9a337833ac6b59dfa5d2a7a32ca65db57aab4",
+      "input_sha256": "52f12bf05f1c892dcb7d8e74549319589261fb57c47eb2837ffe0bd439bfbf61",
+      "exact_archived_output": true
+    },
+    {
+      "encoding": "NFD",
+      "mode": "compatible",
+      "command": [
+        "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem",
+        "text",
+        "-",
+        "--dictionary",
+        "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+        "--dict-compatible"
+      ],
+      "exit_code": 0,
+      "records": 134,
+      "sha256": "070c7df599ef8a41bd81052b0a93b5053c4bfbffb45cdf475cff5e790c33860c",
+      "input_sha256": "52f12bf05f1c892dcb7d8e74549319589261fb57c47eb2837ffe0bd439bfbf61",
+      "exact_archived_output": true
+    }
+  ],
+  "producer": {
+    "text": "\"\"\"Verify the new actual Nix CLI against all six complete original source outputs.\"\"\"\nimport gzip,hashlib,json,subprocess,unicodedata\nfrom pathlib import Path\nroot=Path('/home/josh/projects/klem')\nsource=root/'docs/present-prefinal-source-discovery.json.gz'\noutput=Path('/tmp/klem-present-prefinal-packaged-cli.json')\nassert not output.exists()\ncapture=json.loads(gzip.decompress(source.read_bytes()))\ncli=Path('/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0/bin/klem')\nold=Path('/nix/store/6byl3ach42phlrbg2s943lmb11fjkrdv-klem-0.1.0/bin/klem')\ndb=root/'data/dictionaries/krdict/krdict.db'\ndef sha(path):\n    h=hashlib.sha256()\n    with Path(path).open('rb') as stream:\n        for chunk in iter(lambda:stream.read(1048576),b''):h.update(chunk)\n    return h.hexdigest()\nfrozen={str(p):sha(p) for p in [cli,old,db]}\nassert frozen[str(old)]==capture['frozen_inputs'][str(old)]\nassert frozen[str(db)]==capture['frozen_inputs'][str(db)]\nassert frozen[str(cli)]==frozen[str(old)]\nruns=[]\nfor run in capture['runs']:\n    text=unicodedata.normalize(run['encoding'],capture['input'])\n    assert hashlib.sha256(text.encode()).hexdigest()==run['input_sha256']\n    command=[str(cli),*run['stages']['after']['command'][1:]]\n    result=subprocess.run(command,cwd=root,input=text.encode(),capture_output=True,check=True)\n    assert result.stdout.decode()==run['stages']['after']['jsonl']\n    frames=[json.loads(line) for line in result.stdout.splitlines()]\n    assert len(frames)==134\n    runs.append({'encoding':run['encoding'],'mode':run['mode'],'command':command,'exit_code':result.returncode,'records':len(frames),'sha256':hashlib.sha256(result.stdout).hexdigest(),'input_sha256':run['input_sha256'],'exact_archived_output':True})\nassert all(sha(p)==h for p,h in frozen.items())\nproducer=Path(__file__)\nreport={'schema_version':1,'state':'passed','exit_code':0,'source_capture_sha256':sha(source),'new_package':str(cli.parent.parent),'frozen_inputs':frozen,'inputs_unchanged':True,'new_cli_identical_to_original_tested_cli':True,'runs':runs,'producer':{'text':producer.read_text(),'sha256':sha(producer)},'scope':'Six actual packaged source streams, NFC/NFD and raw/headword/compatible, exactly reproduce the full archived outputs. The new packaged CLI bytes equal the original tested CLI. This verifies finite source/runtime parity, not contextual certification or all-candidate precision.'}\noutput.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\nprint('Actual new Nix CLI: six exact 134-frame source streams; byte-identical to the original tested CLI.',flush=True)\n",
+    "sha256": "db7900f25633a6c9fa904420cc78a7779cd339d8db8a14c6530c06e335177729"
+  },
+  "scope": "Six actual packaged source streams, NFC/NFD and raw/headword/compatible, exactly reproduce the full archived outputs. The new packaged CLI bytes equal the original tested CLI. This verifies finite source/runtime parity, not contextual certification or all-candidate precision."
+}

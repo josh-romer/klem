@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "scope": "Actual Nix sandbox: inventory queue, new finite source audit and eight corruption controls. This is not the full inventory or Rust package gate.",
+  "output": "/nix/store/2h4p1glc35m6c2xk8qkk9asa5dfrim6m-klem-present-prefinal-source-audit",
+  "snapshot": {
+    "head": "0ce9dfc1c0e99f15514010c06162cd3b6af73316",
+    "files_sha256": {
+      "docs/coverage-checklist.md": "4217168e9a982b786415c2e723c5bce0f03670582570fd3310d787f350bc595f",
+      "docs/inventory-audit.md": "313b92bb2d2dbc18a1b0b8360a0c8d7cabb7049f37d5db26f9fa2b16b7208fed",
+      "docs/inventory-review-queue.json": "5179e981632306d95cfec680ba4d4ce5b0c7498481e4d51eb2b1406e53951cf7",
+      "docs/inventory-reviews.json": "4e76fc080addc1e1c4e6267c9a23cdbe19a106b42cf3d0edac742e24af051ee4",
+      "docs/present-prefinal-evaluation.json": "97d142069fde1b5a8dc0e07ad22af62c2830f766a3da16bd33e8b7bb93efaaab",
+      "docs/present-prefinal-judgment-draft.json": "bfe00e49ec484d1f0cfdbe70a88162f3a4645d3ee94b6582a2cf012f2f1442a5",
+      "docs/present-prefinal-main-controls.log.gz": "cfe790cffde71140a6b5dd0bd6c1ae1cf4ec4f20eef07a3505dec43adfe54e2b",
+      "docs/present-prefinal-main-rust.log.gz": "7a4adbe12067fcd99a43819b8374cdb368dfad85569aaa4c5343d4a54875bb8c",
+      "docs/present-prefinal-owner-preparation.json.gz": "a3c9bb9cc8a06b1fb3748d46e229e9030e275e55b95bec542660a9cfc7700eba",
+      "docs/present-prefinal-preparation-history.json.gz": "1251916bde8853a0509c9b2084f0c6e5d9b097f8cb58380cd0c0d8a1fdf1ddd3",
+      "docs/present-prefinal-source-discovery.json.gz": "f0ca098abf66fe95e6fa9512a8911d33439d86451c3e7d246ff7704b3a4843b3",
+      "docs/rules.md": "3f8f4b05550b756931797b1177522211267939c2ab2ea3e9dcfa5a4d6c1a675b",
+      "flake.nix": "051daa053a3812ecc1eba498a38406125c90581d6eea0ba441979435b0e54514",
+      "tests/fixtures/krdict-present-prefinal-english.json": "7814eee51915f258f6d20fcf6af01b444f7b32a3266ab59c1817ec406a3376d9",
+      "tests/fixtures/present-prefinal-native.json": "3554623deca0a75cd0786a19d3b49f61965fce5741b1f808047e3aab4f4b5041",
+      "tests/fixtures/present-prefinal-policy.json": "fdb9ede8ab190a9621ddf1c7c105e6d9267ed86071bb593c084d1f786a5a5719",
+      "tests/fixtures/present-prefinal-validity.json": "cc02ed14cafc944dfb489ffdf19b8b9a156681e1940818e9cfe9fff960e808f5",
+      "tests/fixtures/validity.json": "eb5766ed9b4242ced9783b409a0fb4a3abe66dc30c3c332aa3261ee00111c11c",
+      "tests/present_prefinal.rs": "af410bc39ea6e902a91bb1fba318d036be399ed59914968ef5d916ae601a1cf3",
+      "tests/validity.rs": "bc0925dfb0a96dbbb3cf6d698608854081139604c93660f97ef15f979b842f21",
+      "tools/present_prefinal_audit.py": "f3d5546017f5d41f03ba196d66c3c4adb4411d4959b112076249b6a164bfbc3d",
+      "tools/test_present_prefinal_audit.py": "02810e3d49357cad402a4fcacf07ebadb83aaab84f3bd2461e3fdda612d5b822"
+    },
+    "staged_diff_sha256": "cde8accd269d1f0cf992181fec68a61a6bab8a28a789f8d5fb9b1d2988b8feb8"
+  },
+  "snapshot_unchanged": true,
+  "snapshot_timing": "Captured after launch, with no intervening edits; all staged source files verified unchanged at terminal success.",
+  "log_sha256": "27acb6a2f2a2764697c87782208165992f364e3fdb4743aa461181a9e82041cb",
+  "expression_sha256": "faf18f38fb02e7113f97d05e2064e4881da411284edc539640f460565295438f"
+}

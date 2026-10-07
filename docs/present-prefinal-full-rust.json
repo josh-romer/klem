@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "terminal_session_id": 78465,
+  "command": "CARGO_INCREMENTAL=0 CARGO_TARGET_DIR=web/test-results/degree-expectation-main-cargo cargo test --locked --offline --features web -j4",
+  "passed": 1008,
+  "failed": 0,
+  "ignored": 1,
+  "batches": 213,
+  "log_sha256": "805c82416bc21b11425676af21d968edf5006c27747c541248fe10ddc6dc263c",
+  "library_source_hashes": {
+    "Cargo.lock": "c11caa3e24060175d0555d6fc322d37e6c1d48b05bf3dcee9ea5476ec5de2ba2",
+    "Cargo.toml": "28742313bee712f5f14385dfa63a372921750429e1838173360cb2873ec0bb1b",
+    "src/bin/klem-web/grammar_labels.rs": "597b619f816593c09100f2d795fbdf5d0e7a3f33ccf4fa8fb060447a9fed6cd6",
+    "src/bin/klem-web.rs": "4dd0208d3fede7c2b1fe2145281f2e6928ae233bdbc9d6af2465c1c43036b303",
+    "src/breakdown.rs": "cb528237a9fe4123ea3b8d1a30629a33d8887e29140fe15900af0058a1aa6578",
+    "src/dictionary/attachment.rs": "f4a678fb2a182f0bbf6ad0f67ac4bec6d7b64f97f55ea776db8028db791c6262",
+    "src/dictionary/import.rs": "f877ad28736093de1a53365a3335678fd53daaad57888f67a2a67dd05345b05b",
+    "src/dictionary/pos.rs": "4d7f7073df0197d590a117647379286a5c862a25d55f51d2f82d27595cbcc868",
+    "src/dictionary.rs": "5b6181243407f1270874eea5e10eb02526ea95fbd70494b6cd7395b40250ad06",
+    "src/dictionary_cli.rs": "2a9351e21d7fe06125a68240f6bcd8e0aba18107d17f18458c8ee928eb135c68",
+    "src/doeda_identity.rs": "dc8edacdc1818559cba82cd5ca88b76726018f5f4a2513055a2218cfc0e3c3c2",
+    "src/doeda_native_forms.rs": "d6100f03307aca47e699fc82ce407d049a8ee8dadaa38005c7f915e46f77b65e",
+    "src/doeda_originless_forms.rs": "a3bb92e2b20a1d6273bfd89e4a6b2b90ec6cfe090cc892b05c10008b7aa03e6a",
+    "src/doeda_suffix.rs": "e1eeedd4dc3c5c443081ddabbcf7d6480a646281db9751809fd735738f0baff5",
+    "src/engine.rs": "755ede919ef12a2593f544aa6248fe4ecc2eed0c687614c156c271a5b7cc9788",
+    "src/grammar.rs": "5afcbb33652da00398857d9d3d61ad1a4a7ea62325b64f23a1b10589ec08cf5f",
+    "src/hada_remaining.rs": "515a4035e985a0899f3e6c4e910ffce75d1d6edd999a2d9bcb7f6ee5acd4a7f4",
+    "src/hada_suffix.rs": "e472bb275e990ef45dfe1dcefff15a85b7f792b35d852748d91a81592db7e4f7",
+    "src/hangul.rs": "615c24455744054bc6b2bf42dc28f8c0f7bcde0e252e0b3821423fe962e1f84d",
+    "src/lib.rs": "9ad53859e9ca7fb4b9ad96f26f7ea48a3fd403cf20ef42e606f088f0a421239f",
+    "src/main.rs": "bb849ac17d169c80a0f2298f6c04edc5f983cd6c95473fa123d6801020829bb7",
+    "src/nominal_hwa.rs": "d8171d2c22639b0f6284437dcfe9e2209e99eac0e551bd04b5e70f9a4b56a1a9",
+    "src/nominal_si.rs": "4a30b3006574cce3abac427e3a0de6bd03d8d341f5573a09b2ec104e38cce686",
+    "src/predicate_compound.rs": "f01613089c5a045d7ddbcd179ccd37db1f95cd0a5351815bd7e87a44f58a25b9",
+    "src/pronunciation.rs": "c3133e56881c4e9d02f741e36ef5966166d04e8f1d624238a00c085b36c7ce0b",
+    "src/spacing.rs": "2898ad924fd1e16e130dfca6ef8df7a4de8cd7a23645dee43adfcdbb3f7d88fe",
+    "src/text.rs": "5ef733732a66f033e791826595c9ec50e46b67435e5c002b4594adff1e34d073"
+  },
+  "frozen_integration_files": {
+    "docs/coverage-checklist.md": {
+      "sha256": "4217168e9a982b786415c2e723c5bce0f03670582570fd3310d787f350bc595f",
+      "bytes": 503368
+    },
+    "docs/inventory-audit.md": {
+      "sha256": "313b92bb2d2dbc18a1b0b8360a0c8d7cabb7049f37d5db26f9fa2b16b7208fed",
+      "bytes": 67817
+    },
+    "docs/inventory-review-queue.json": {
+      "sha256": "5179e981632306d95cfec680ba4d4ce5b0c7498481e4d51eb2b1406e53951cf7",
+      "bytes": 3444273
+    },
+    "docs/inventory-reviews.json": {
+      "sha256": "4e76fc080addc1e1c4e6267c9a23cdbe19a106b42cf3d0edac742e24af051ee4",
+      "bytes": 1302861
+    },
+    "docs/present-prefinal-evaluation.json": {
+      "sha256": "97d142069fde1b5a8dc0e07ad22af62c2830f766a3da16bd33e8b7bb93efaaab",
+      "bytes": 2526
+    },
+    "docs/present-prefinal-focused-check.nix.txt": {
+      "sha256": "faf18f38fb02e7113f97d05e2064e4881da411284edc539640f460565295438f",
+      "bytes": 447
+    },
+    "docs/present-prefinal-focused-nix.json": {
+      "sha256": "f67048a53eedec7219414b63a53b902590b29c17fea89204875fee27c67532b9",
+      "bytes": 3324
+    },
+    "docs/present-prefinal-focused-nix.log.gz": {
+      "sha256": "d5db00791ecc5181159ea5a4ad00a1e4fb0e88cc332e2284fde48e6848fa4877",
+      "bytes": 562
+    },
+    "docs/present-prefinal-inventory-controls.log.gz": {
+      "sha256": "9c20130f75f1d637033f25b1074276871ccf3b1fc898e7c242ae680b081604e9",
+      "bytes": 54
+    },
+    "docs/present-prefinal-inventory-verify.log.gz": {
+      "sha256": "62e195d7bbab0d371991d4d0708fccf52a677067788641d0d1f69ee41768ecbf",
+      "bytes": 178
+    },
+    "docs/present-prefinal-judgment-draft.json": {
+      "sha256": "bfe00e49ec484d1f0cfdbe70a88162f3a4645d3ee94b6582a2cf012f2f1442a5",
+      "bytes": 22304
+    },
+    "docs/present-prefinal-main-controls.log.gz": {
+      "sha256": "cfe790cffde71140a6b5dd0bd6c1ae1cf4ec4f20eef07a3505dec43adfe54e2b",
+      "bytes": 54
+    },
+    "docs/present-prefinal-main-rust.log.gz": {
+      "sha256": "7a4adbe12067fcd99a43819b8374cdb368dfad85569aaa4c5343d4a54875bb8c",
+      "bytes": 577
+    },
+    "docs/present-prefinal-owner-preparation.json.gz": {
+      "sha256": "a3c9bb9cc8a06b1fb3748d46e229e9030e275e55b95bec542660a9cfc7700eba",
+      "bytes": 437100
+    },
+    "docs/present-prefinal-preparation-history.json.gz": {
+      "sha256": "1251916bde8853a0509c9b2084f0c6e5d9b097f8cb58380cd0c0d8a1fdf1ddd3",
+      "bytes": 21911
+    },
+    "docs/present-prefinal-source-discovery.json.gz": {
+      "sha256": "f0ca098abf66fe95e6fa9512a8911d33439d86451c3e7d246ff7704b3a4843b3",
+      "bytes": 99003
+    },
+    "docs/rules.md": {
+      "sha256": "3f8f4b05550b756931797b1177522211267939c2ab2ea3e9dcfa5a4d6c1a675b",
+      "bytes": 322880
+    },
+    "flake.nix": {
+      "sha256": "051daa053a3812ecc1eba498a38406125c90581d6eea0ba441979435b0e54514",
+      "bytes": 41868
+    },
+    "tests/fixtures/krdict-present-prefinal-english.json": {
+      "sha256": "7814eee51915f258f6d20fcf6af01b444f7b32a3266ab59c1817ec406a3376d9",
+      "bytes": 1014726
+    },
+    "tests/fixtures/present-prefinal-native.json": {
+      "sha256": "3554623deca0a75cd0786a19d3b49f61965fce5741b1f808047e3aab4f4b5041",
+      "bytes": 806344
+    },
+    "tests/fixtures/present-prefinal-policy.json": {
+      "sha256": "fdb9ede8ab190a9621ddf1c7c105e6d9267ed86071bb593c084d1f786a5a5719",
+      "bytes": 15196
+    },
+    "tests/fixtures/present-prefinal-validity.json": {
+      "sha256": "cc02ed14cafc944dfb489ffdf19b8b9a156681e1940818e9cfe9fff960e808f5",
+      "bytes": 14443
+    },
+    "tests/fixtures/validity.json": {
+      "sha256": "eb5766ed9b4242ced9783b409a0fb4a3abe66dc30c3c332aa3261ee00111c11c",
+      "bytes": 31533814
+    },
+    "tests/present_prefinal.rs": {
+      "sha256": "af410bc39ea6e902a91bb1fba318d036be399ed59914968ef5d916ae601a1cf3",
+      "bytes": 4016
+    },
+    "tests/validity.rs": {
+      "sha256": "bc0925dfb0a96dbbb3cf6d698608854081139604c93660f97ef15f979b842f21",
+      "bytes": 4004
+    },
+    "tools/present_prefinal_audit.py": {
+      "sha256": "f3d5546017f5d41f03ba196d66c3c4adb4411d4959b112076249b6a164bfbc3d",
+      "bytes": 10153
+    },
+    "tools/test_present_prefinal_audit.py": {
+      "sha256": "02810e3d49357cad402a4fcacf07ebadb83aaab84f3bd2461e3fdda612d5b822",
+      "bytes": 4157
+    }
+  },
+  "inputs_unchanged": true,
+  "scope": "Full main-project Rust test run, including the new source regressions and expanded global ledger. Original production sources remain exact; Nix package/inventory gates are separate."
+}

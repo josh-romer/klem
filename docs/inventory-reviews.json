@@ -38077,6 +38077,118 @@
           "judgment": "reported-dana-authored-40-structure"
         }
       ]
+    },
+    {
+      "id": "krdict:66461",
+      "source_sha256": "59bf368fdcdcacc617aa740fb8ab854d4d53aa6cd61af462dfa72dc517ff383e",
+      "status": "scoped",
+      "scope": "All source-owned present-prefinal occurrences in the complete original entry are structurally recovered in NFC/NFD using canonical whole endings. All dialogue replies remain. Whole-ending attachment notes refine the general prefinal note; honorific exclamations retain their own license. The source supplies no new standalone prefinal segmentation rule.",
+      "remaining": "Contextual sense/register, independent Korean review, broader paradigms, and speculative-candidate precision remain open. The incidental adnominal 다니는 in 85852 is preserved as original context and excluded from this prefinal judgment cohort. The 45 named owners do not certify closure of every speculative candidate.",
+      "checklist": [
+        "COV-013",
+        "COV-017cd"
+      ],
+      "evidence": [
+        {
+          "path": "tests/present_prefinal.rs",
+          "test": "original_prefinal_occurrences_and_specific_allomorph_boundaries"
+        },
+        {
+          "path": "tests/present_prefinal.rs",
+          "test": "all_primary_ending_and_lexical_sources_survive_import"
+        },
+        {
+          "path": "tests/present_prefinal.rs",
+          "test": "dictionary_filter_preserves_sources_and_rejects_the_known_adjective_owner"
+        },
+        {
+          "path": "tools/present_prefinal_audit.py"
+        },
+        {
+          "path": "tools/test_present_prefinal_audit.py"
+        },
+        {
+          "path": "docs/present-prefinal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-prefinal-66461-1-0-0-16",
+          "judgment": "present-prefinal-66461-1-0-0-16-structure"
+        },
+        {
+          "case": "present-prefinal-66461-1-1-0-15",
+          "judgment": "present-prefinal-66461-1-1-0-15-structure"
+        },
+        {
+          "case": "present-prefinal-66461-1-2-0-15",
+          "judgment": "present-prefinal-66461-1-2-0-15-structure"
+        },
+        {
+          "case": "present-prefinal-66461-1-3-0-7",
+          "judgment": "present-prefinal-66461-1-3-0-7-structure"
+        },
+        {
+          "case": "present-prefinal-66461-1-3-1-11",
+          "judgment": "present-prefinal-66461-1-3-1-11-structure"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85852",
+      "source_sha256": "a447a9aff86ca2dcf96a4091b0dcee8c55480bdcb407846b88383fedbc02e8f1",
+      "status": "scoped",
+      "scope": "All source-owned present-prefinal occurrences in the complete original entry are structurally recovered in NFC/NFD using canonical whole endings. All dialogue replies remain. Whole-ending attachment notes refine the general prefinal note; honorific exclamations retain their own license. The source supplies no new standalone prefinal segmentation rule.",
+      "remaining": "Contextual sense/register, independent Korean review, broader paradigms, and speculative-candidate precision remain open. The incidental adnominal 다니는 in 85852 is preserved as original context and excluded from this prefinal judgment cohort. The 45 named owners do not certify closure of every speculative candidate.",
+      "checklist": [
+        "COV-013",
+        "COV-017cd"
+      ],
+      "evidence": [
+        {
+          "path": "tests/present_prefinal.rs",
+          "test": "original_prefinal_occurrences_and_specific_allomorph_boundaries"
+        },
+        {
+          "path": "tests/present_prefinal.rs",
+          "test": "all_primary_ending_and_lexical_sources_survive_import"
+        },
+        {
+          "path": "tests/present_prefinal.rs",
+          "test": "dictionary_filter_preserves_sources_and_rejects_the_known_adjective_owner"
+        },
+        {
+          "path": "tools/present_prefinal_audit.py"
+        },
+        {
+          "path": "tools/test_present_prefinal_audit.py"
+        },
+        {
+          "path": "docs/present-prefinal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-prefinal-85852-1-0-0-10",
+          "judgment": "present-prefinal-85852-1-0-0-10-structure"
+        },
+        {
+          "case": "present-prefinal-85852-1-1-0-24",
+          "judgment": "present-prefinal-85852-1-1-0-24-structure"
+        },
+        {
+          "case": "present-prefinal-85852-1-2-0-18",
+          "judgment": "present-prefinal-85852-1-2-0-18-structure"
+        },
+        {
+          "case": "present-prefinal-85852-1-3-0-19",
+          "judgment": "present-prefinal-85852-1-3-0-19-structure"
+        },
+        {
+          "case": "present-prefinal-85852-1-4-1-15",
+          "judgment": "present-prefinal-85852-1-4-1-15-structure"
+        }
+      ]
     }
   ]
 }

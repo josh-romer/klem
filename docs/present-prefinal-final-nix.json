@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-017cd"
+  ],
+  "state": "passed",
+  "pid": 3520734,
+  "started_at": "2026-10-07T11:19:18.100154+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets",
+    ".#checks.x86_64-linux.inventory-review"
+  ],
+  "snapshot": {
+    "head": "0ce9dfc1c0e99f15514010c06162cd3b6af73316",
+    "staged_diff_sha256": "f1a562401f5a4c3f8ee683b1b0342f05dc5fd2ded579fa5ba4babd8bb4d78d7c",
+    "files": {
+      "docs/coverage-checklist.md": {
+        "sha256": "4217168e9a982b786415c2e723c5bce0f03670582570fd3310d787f350bc595f",
+        "bytes": 503368
+      },
+      "docs/inventory-audit.md": {
+        "sha256": "313b92bb2d2dbc18a1b0b8360a0c8d7cabb7049f37d5db26f9fa2b16b7208fed",
+        "bytes": 67817
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "5179e981632306d95cfec680ba4d4ce5b0c7498481e4d51eb2b1406e53951cf7",
+        "bytes": 3444273
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "4e76fc080addc1e1c4e6267c9a23cdbe19a106b42cf3d0edac742e24af051ee4",
+        "bytes": 1302861
+      },
+      "docs/present-prefinal-evaluation.json": {
+        "sha256": "97d142069fde1b5a8dc0e07ad22af62c2830f766a3da16bd33e8b7bb93efaaab",
+        "bytes": 2526
+      },
+      "docs/present-prefinal-focused-check.nix.txt": {
+        "sha256": "faf18f38fb02e7113f97d05e2064e4881da411284edc539640f460565295438f",
+        "bytes": 447
+      },
+      "docs/present-prefinal-focused-nix.json": {
+        "sha256": "f67048a53eedec7219414b63a53b902590b29c17fea89204875fee27c67532b9",
+        "bytes": 3324
+      },
+      "docs/present-prefinal-focused-nix.log.gz": {
+        "sha256": "d5db00791ecc5181159ea5a4ad00a1e4fb0e88cc332e2284fde48e6848fa4877",
+        "bytes": 562
+      },
+      "docs/present-prefinal-inventory-controls.log.gz": {
+        "sha256": "9c20130f75f1d637033f25b1074276871ccf3b1fc898e7c242ae680b081604e9",
+        "bytes": 54
+      },
+      "docs/present-prefinal-inventory-verify.log.gz": {
+        "sha256": "62e195d7bbab0d371991d4d0708fccf52a677067788641d0d1f69ee41768ecbf",
+        "bytes": 178
+      },
+      "docs/present-prefinal-judgment-draft.json": {
+        "sha256": "bfe00e49ec484d1f0cfdbe70a88162f3a4645d3ee94b6582a2cf012f2f1442a5",
+        "bytes": 22304
+      },
+      "docs/present-prefinal-main-controls.log.gz": {
+        "sha256": "cfe790cffde71140a6b5dd0bd6c1ae1cf4ec4f20eef07a3505dec43adfe54e2b",
+        "bytes": 54
+      },
+      "docs/present-prefinal-main-rust.log.gz": {
+        "sha256": "7a4adbe12067fcd99a43819b8374cdb368dfad85569aaa4c5343d4a54875bb8c",
+        "bytes": 577
+      },
+      "docs/present-prefinal-owner-preparation.json.gz": {
+        "sha256": "a3c9bb9cc8a06b1fb3748d46e229e9030e275e55b95bec542660a9cfc7700eba",
+        "bytes": 437100
+      },
+      "docs/present-prefinal-preparation-history.json.gz": {
+        "sha256": "1251916bde8853a0509c9b2084f0c6e5d9b097f8cb58380cd0c0d8a1fdf1ddd3",
+        "bytes": 21911
+      },
+      "docs/present-prefinal-source-discovery.json.gz": {
+        "sha256": "f0ca098abf66fe95e6fa9512a8911d33439d86451c3e7d246ff7704b3a4843b3",
+        "bytes": 99003
+      },
+      "docs/rules.md": {
+        "sha256": "3f8f4b05550b756931797b1177522211267939c2ab2ea3e9dcfa5a4d6c1a675b",
+        "bytes": 322880
+      },
+      "flake.nix": {
+        "sha256": "051daa053a3812ecc1eba498a38406125c90581d6eea0ba441979435b0e54514",
+        "bytes": 41868
+      },
+      "tests/fixtures/krdict-present-prefinal-english.json": {
+        "sha256": "7814eee51915f258f6d20fcf6af01b444f7b32a3266ab59c1817ec406a3376d9",
+        "bytes": 1014726
+      },
+      "tests/fixtures/present-prefinal-native.json": {
+        "sha256": "3554623deca0a75cd0786a19d3b49f61965fce5741b1f808047e3aab4f4b5041",
+        "bytes": 806344
+      },
+      "tests/fixtures/present-prefinal-policy.json": {
+        "sha256": "fdb9ede8ab190a9621ddf1c7c105e6d9267ed86071bb593c084d1f786a5a5719",
+        "bytes": 15196
+      },
+      "tests/fixtures/present-prefinal-validity.json": {
+        "sha256": "cc02ed14cafc944dfb489ffdf19b8b9a156681e1940818e9cfe9fff960e808f5",
+        "bytes": 14443
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "eb5766ed9b4242ced9783b409a0fb4a3abe66dc30c3c332aa3261ee00111c11c",
+        "bytes": 31533814
+      },
+      "tests/present_prefinal.rs": {
+        "sha256": "af410bc39ea6e902a91bb1fba318d036be399ed59914968ef5d916ae601a1cf3",
+        "bytes": 4016
+      },
+      "tests/validity.rs": {
+        "sha256": "bc0925dfb0a96dbbb3cf6d698608854081139604c93660f97ef15f979b842f21",
+        "bytes": 4004
+      },
+      "tools/present_prefinal_audit.py": {
+        "sha256": "f3d5546017f5d41f03ba196d66c3c4adb4411d4959b112076249b6a164bfbc3d",
+        "bytes": 10153
+      },
+      "tools/test_present_prefinal_audit.py": {
+        "sha256": "02810e3d49357cad402a4fcacf07ebadb83aaab84f3bd2461e3fdda612d5b822",
+        "bytes": 4157
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-07T12:10:04.388585+00:00",
+  "log_sha256": "56836ba80ee9221f4d473c4afdb335746f263b9c6a01205d397c95b21c4c9d77",
+  "snapshot_unchanged": true,
+  "outputs": [
+    "/nix/store/wkgaf7karm45jphbjx5bjy9i3jk941wh-klem-0.1.0",
+    "/nix/store/4f3xqpp17qvapfdnb74jn6zil8w72kgv-klem-web-assets-0.1.0",
+    "/nix/store/dvx5yhmcf5g40mbncfnk68xcxd93l47b-klem-inventory-review"
+  ]
+}

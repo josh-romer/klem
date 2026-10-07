@@ -372,6 +372,8 @@
                 ./tools/test_reported_deoni_complete_sources.py
                 ./tools/reported_dana_parent.py
                 ./tools/reported_dana_inputs.py
+                ./tools/present_prefinal_audit.py
+                ./tools/test_present_prefinal_audit.py
                 ./tools/test_reported_dana_inputs.py
                 ./tools/reported_dana_audit.py
                 ./tools/reported_dana_native.py
@@ -725,6 +727,8 @@
             python -m unittest discover -s tools -p 'test_reported_deoni_release.py'
             python -m unittest discover -s tools -p 'test_reported_deoni_complete_sources.py'
             python tools/reported_dana_audit.py
+            python tools/present_prefinal_audit.py
+            python -m unittest discover -s tools -p 'test_present_prefinal_audit.py'
             python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'
             python tools/reported_dana_native.py
             python tools/reported_dana_corpora.py

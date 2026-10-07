@@ -1,0 +1,13 @@
+let
+  flake = builtins.getFlake "git+file:///home/josh/projects/klem";
+in flake.checks.x86_64-linux.inventory-review.overrideAttrs (_: {
+  name = "klem-present-prefinal-source-audit";
+  buildCommand = ''
+    cd "$src"
+    export PYTHONDONTWRITEBYTECODE=1
+    python tools/review_inventory.py --verify
+    python tools/present_prefinal_audit.py
+    python -m unittest discover -s tools -p 'test_present_prefinal_audit.py'
+    touch "$out"
+  '';
+})

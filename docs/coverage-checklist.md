@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 449 scoped
-  dispositions; 266 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 451 scoped
+  dispositions; 264 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2397,6 +2397,39 @@ review remains open under the completion review below.
   the unchanged 123-file staged snapshot, including the complete source,
   release and performance audits and their corruption controls.
   Contextual senses, speculative heads and independent Korean review remain open.
+
+- [x] **COV-017cd — Original present-prefinal -ㄴ-/-는- source audit.**
+  **Implemented for the bounded source-owned occurrences and exact structural boundaries.** Complete
+  original entries 66461/85852 retain all nine example groups and ten owned
+  occurrences, including the 나간다던데 dialogue reply. Incidental 다니는
+  remains an adnominal in its original group and is outside this prefinal
+  cohort. Canonical whole endings carry the present forms; no separate
+  standalone prefinal or contextual-sense choice is introduced. The whole
+  -ㄴ다/-는다/-는다나 notes govern their exact allomorph boundaries, while
+  -는군/-는구나 retain their honorific license. Five exact raw prohibitions
+  coexist with ten required paths. A sixth prohibition applies only under
+  compatible dictionary filtering: 좋는다 retains the raw 좋다 hypothesis,
+  but the captured adjective owner conflicts with the verb-only -는다 note.
+  All 45 finite named Native/LMF owners and their English import projections
+  remain complete; this does not certify ownership of every speculative
+  analysis. Twelve archived old/new CLI streams preserve 134 frames each
+  and every old candidate/reading; only 찾는다나 changes after COV-017cc.
+  Evidence: [three regression tests](../tests/present_prefinal.rs),
+  [offline source audit](../tools/present_prefinal_audit.py),
+  [eight integrity controls](../tools/test_present_prefinal_audit.py), and
+  [evaluation](present-prefinal-evaluation.json). Original preparation,
+  schema-failure logs and effective-draft binding remain archived. Two
+  scoped COV-013 dispositions retain contextual/register, broader paradigm
+  and independent Korean review as pending; they do not close COV-013.
+  The [full main Rust run](present-prefinal-full-rust.json) passes 1,008 tests
+  with one ignored across 213 batches. [Complete flake checks](present-prefinal-final-nix.json)
+  build the Rust package and SolidJS assets and pass every inventory audit;
+  release Rust tests likewise pass 1,008 with one ignored. All 27 staged inputs
+  and the staged diff remain exact through terminal success. Checklist closure,
+  attribution notes and the regenerated queue are subsequent documentation edits.
+  [Actual packaged CLI replay](present-prefinal-packaged-cli.json) verifies six
+  exact 134-frame source streams, with raw/headword/compatible NFC/NFD parity.
+  The new packaged CLI is byte-identical to the previously tested CLI.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

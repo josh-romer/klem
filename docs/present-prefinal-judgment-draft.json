@@ -1,0 +1,563 @@
+{
+  "schema_version": 1,
+  "preparation_only": true,
+  "review_status": "Authored structure proposals checked against captured raw paths only; Rust/library tests, dictionary owner closure, source targeting audit and individual dictionary judgments remain to be implemented. Contextual and independent review pending.",
+  "sources": {
+    "present-prefinal-66461": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66461",
+    "present-prefinal-85852": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85852",
+    "present-prefinal-ending-85033": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85033",
+    "present-prefinal-ending-85037": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85037",
+    "present-prefinal-ending-74697": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74697"
+  },
+  "source_capture_sha256": "0a42a1d8d907bbe66c19222a3e77aa5525f07563eeadb89357a8a92e9bc43dc6",
+  "supersedes": {
+    "path": "/tmp/klem-present-prefinal-judgment-draft-v4.json",
+    "sha256": "7c8fe0cb23494ed29a4d569641fd7ad946d3fac917acbc46067d0084a4eef457",
+    "reason": "Record an explicit producer for omitting unused trace constraints; v4 retained its prior producer metadata after an inline transformation. No structural shape, source, or verdict changes."
+  },
+  "cases": [
+    {
+      "id": "present-prefinal-66461-1-0-0-16",
+      "surface": "하신다",
+      "source_occurrence": {
+        "source": "krdict:66461",
+        "sense": "1",
+        "index": 0,
+        "original": [
+          "아버지는 아침에 항상 운동을 하신다."
+        ],
+        "text_index": 0,
+        "character_span": [
+          16,
+          19
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-66461-1-0-0-16-structure",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "prefinal.honorific"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-66461",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-66461-1-1-0-15",
+      "surface": "만든다고",
+      "source_occurrence": {
+        "source": "krdict:66461",
+        "sense": "1",
+        "index": 1,
+        "original": [
+          "지수는 요즘 취미로 비누를 만든다고 했다."
+        ],
+        "text_index": 0,
+        "character_span": [
+          15,
+          19
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-66461-1-1-0-15-structure",
+          "lemmas": [
+            "만들다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "deletion.rieul"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-66461",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-66461-1-2-0-15",
+      "surface": "다닌다는",
+      "source_occurrence": {
+        "source": "krdict:66461",
+        "sense": "1",
+        "index": 2,
+        "original": [
+          "나는 친구가 외국어 학원에 다닌다는 이야기를 들었다."
+        ],
+        "text_index": 0,
+        "character_span": [
+          15,
+          19
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-66461-1-2-0-15-structure",
+          "lemmas": [
+            "다니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-66461",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-66461-1-3-0-7",
+      "surface": "온대요",
+      "source_occurrence": {
+        "source": "krdict:66461",
+        "sense": "1",
+        "index": 3,
+        "original": [
+          "언니는 언제 온대요?",
+          "아까 친구를 만나러 나간다던데 잘 모르겠어."
+        ],
+        "text_index": 0,
+        "character_span": [
+          7,
+          10
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-66461-1-3-0-7-structure",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는대",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "ending.reporting_short"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-66461",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-66461-1-3-1-11",
+      "surface": "나간다던데",
+      "source_occurrence": {
+        "source": "krdict:66461",
+        "sense": "1",
+        "index": 3,
+        "original": [
+          "언니는 언제 온대요?",
+          "아까 친구를 만나러 나간다던데 잘 모르겠어."
+        ],
+        "text_index": 1,
+        "character_span": [
+          11,
+          16
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-66461-1-3-1-11-structure",
+          "lemmas": [
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다던데"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.reporting_retrospective"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-66461",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-85852-1-0-0-10",
+      "surface": "먹는군",
+      "source_occurrence": {
+        "source": "krdict:85852",
+        "sense": "1",
+        "index": 0,
+        "original": [
+          "아이가 고기를 잘 먹는군."
+        ],
+        "text_index": 0,
+        "character_span": [
+          10,
+          13
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-85852-1-0-0-10-structure",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.exclamation"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-85852",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-85852-1-1-0-24",
+      "surface": "입는다니",
+      "source_occurrence": {
+        "source": "krdict:85852",
+        "sense": "1",
+        "index": 1,
+        "original": [
+          "이렇게 날씨가 추운데 왜 그렇게 얇은 옷을 입는다니."
+        ],
+        "text_index": 0,
+        "character_span": [
+          24,
+          28
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-85852-1-1-0-24-structure",
+          "lemmas": [
+            "입다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.reporting_ni"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-85852",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-85852-1-2-0-18",
+      "surface": "찾는다나",
+      "source_occurrence": {
+        "source": "krdict:85852",
+        "sense": "1",
+        "index": 2,
+        "original": [
+          "유민이가 요즘 아르바이트 자리를 찾는다나 봐."
+        ],
+        "text_index": 0,
+        "character_span": [
+          18,
+          22
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-85852-1-2-0-18-structure",
+          "lemmas": [
+            "찾다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.reported_dana"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-85852",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-85852-1-3-0-19",
+      "surface": "읽는다고",
+      "source_occurrence": {
+        "source": "krdict:85852",
+        "sense": "1",
+        "index": 3,
+        "original": [
+          "젊은이들은 신문 기사를 인터넷으로 읽는다고 한다."
+        ],
+        "text_index": 0,
+        "character_span": [
+          19,
+          23
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-85852-1-3-0-19-structure",
+          "lemmas": [
+            "읽다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-85852",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-85852-1-4-1-15",
+      "surface": "근무하시는구나",
+      "source_occurrence": {
+        "source": "krdict:85852",
+        "sense": "1",
+        "index": 4,
+        "original": [
+          "여기가 우리 엄마가 다니는 회사야.",
+          "아, 너희 어머니가 여기서 근무하시는구나."
+        ],
+        "text_index": 1,
+        "character_span": [
+          15,
+          22
+        ]
+      },
+      "judgments": [
+        {
+          "id": "present-prefinal-85852-1-4-1-15-structure",
+          "lemmas": [
+            "근무하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "prefinal.honorific"
+          ],
+          "verdict": "required",
+          "source": "present-prefinal-85852",
+          "reason": "Authored structural reading of the preserved original expression. Present allomorphs remain embedded in canonical whole endings; no standalone n/neun morpheme, contextual sense, unique-lemma selection or independent Korean certification is claimed."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-open-boundary-0",
+      "surface": "하는다",
+      "judgments": [
+        {
+          "id": "present-prefinal-open-boundary-0-boundary",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "present-prefinal-ending-85037",
+          "reason": "The specific whole-ending owner requires a verb stem with a non-rieul consonant coda. The named open/rieul or honorific-si path violates this final-family condition. The broad prefinal note alone is not used to forbid every neun follower; honorific-si remains allowed before exclamatory neun-guna/neun-gun families. Other analyses remain available; contextual and independent review remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-open-boundary-1",
+      "surface": "살는다",
+      "judgments": [
+        {
+          "id": "present-prefinal-open-boundary-1-boundary",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "present-prefinal-ending-85037",
+          "reason": "The specific whole-ending owner requires a verb stem with a non-rieul consonant coda. The named open/rieul or honorific-si path violates this final-family condition. The broad prefinal note alone is not used to forbid every neun follower; honorific-si remains allowed before exclamatory neun-guna/neun-gun families. Other analyses remain available; contextual and independent review remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-open-boundary-2",
+      "surface": "하시는다",
+      "judgments": [
+        {
+          "id": "present-prefinal-open-boundary-2-boundary",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "present-prefinal-ending-85037",
+          "reason": "The specific whole-ending owner requires a verb stem with a non-rieul consonant coda. The named open/rieul or honorific-si path violates this final-family condition. The broad prefinal note alone is not used to forbid every neun follower; honorific-si remains allowed before exclamatory neun-guna/neun-gun families. Other analyses remain available; contextual and independent review remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-open-boundary-3",
+      "surface": "먹으시는다",
+      "judgments": [
+        {
+          "id": "present-prefinal-open-boundary-3-boundary",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "present-prefinal-ending-85037",
+          "reason": "The specific whole-ending owner requires a verb stem with a non-rieul consonant coda. The named open/rieul or honorific-si path violates this final-family condition. The broad prefinal note alone is not used to forbid every neun follower; honorific-si remains allowed before exclamatory neun-guna/neun-gun families. Other analyses remain available; contextual and independent review remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "present-prefinal-open-boundary-4",
+      "surface": "하는다나",
+      "judgments": [
+        {
+          "id": "present-prefinal-open-boundary-4-boundary",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "present-prefinal-ending-74697",
+          "reason": "The specific whole-ending owner requires a verb stem with a non-rieul consonant coda. The named open/rieul or honorific-si path violates this final-family condition. The broad prefinal note alone is not used to forbid every neun follower; honorific-si remains allowed before exclamatory neun-guna/neun-gun families. Other analyses remain available; contextual and independent review remain unjudged."
+        }
+      ]
+    }
+  ],
+  "policy_followup": {
+    "surface": "좋는다",
+    "queried_predicate": "좋다",
+    "ending": "는다",
+    "raw": "Retain the speculative path; grammar rules do not choose lexical POS.",
+    "compatible": "Forbidden for the captured adjective owner under the verb-only primary attachment note; add an explicit dictionary-policy judgment and complete lexical source before asserting.",
+    "source": "present-prefinal-ending-85037",
+    "complete_adjective_owner": "krdict:79033"
+  },
+  "incidental_source_followup": "다니는 in the final -는- example group is an adnominal; source ownership belongs to 근무하시는구나. Preserve the full original group and make this distinction explicit.",
+  "producer": {
+    "text": "\"\"\"Record the effective draft generator and its binding to tested fixtures.\"\"\"\nimport copy\nimport hashlib\nimport json\nfrom pathlib import Path\n\nprevious=Path('/tmp/klem-present-prefinal-judgment-draft-v3.json')\ninline=Path('/tmp/klem-present-prefinal-judgment-draft-v4.json')\noutput=Path('/tmp/klem-present-prefinal-judgment-draft-v5.json')\nbinding_path=Path('/tmp/klem-present-prefinal-review-source-binding.json')\nassert not output.exists() and not binding_path.exists()\nreport=copy.deepcopy(json.loads(previous.read_text()))\nfor case in report['cases']:\n    for judgment in case['judgments']:\n        if judgment.get('required_rules')==[]:\n            judgment.pop('required_rules')\nreport['supersedes']={'path':str(inline),'sha256':hashlib.sha256(inline.read_bytes()).hexdigest(),'reason':'Record an explicit producer for omitting unused trace constraints; v4 retained its prior producer metadata after an inline transformation. No structural shape, source, or verdict changes.'}\nproducer=Path(__file__)\nreport['producer']={'text':producer.read_text(),'sha256':hashlib.sha256(producer.read_bytes()).hexdigest()}\neffective={key:report[key] for key in ['schema_version','review_status','sources']}\neffective['cases']=[{key:case[key] for key in ['id','surface','judgments']} for case in report['cases']]\nroot=Path('/tmp/klem-present-prefinal-review')\nraw_path=root/'tests/fixtures/present-prefinal-validity.json'\nassert json.loads(raw_path.read_text())==effective\npolicy_path=root/'tests/fixtures/present-prefinal-policy.json'\npolicy=json.loads(policy_path.read_text())\nassert policy['cases'][:-1]==effective['cases']\nassert all(policy[key]==effective[key] for key in ['schema_version','review_status','sources'])\nextra=policy['cases'][-1]\nassert extra['surface']==report['policy_followup']['surface']=='좋는다'\nassert extra['judgments'][0]['lemmas']==[report['policy_followup']['queried_predicate']]\nassert extra['judgments'][0]['verdict']=='forbidden'\noutput.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\\n')\nsha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()\nbinding_path.write_text(json.dumps({'schema_version':1,'state':'passed','effective_draft_sha256':sha(output),'isolated_rust_receipt_sha256':sha('/tmp/klem-present-prefinal-review-rust.json'),'raw_fixture_sha256':sha(raw_path),'policy_fixture_sha256':sha(policy_path),'scope':'Exact binding of the authored source/whole-ending draft to the fixtures used in the passing isolated tests. This records the omission of unused trace constraints with an explicit producer; does not claim main integration or contextual certification.','producer':report['producer']},indent=2)+'\\n')\nprint('Bound explicit effective-draft producer to the already tested raw/policy fixtures.',flush=True)\n",
+    "sha256": "148db6a065a19be96094c5cc6a0312640fd17670273e0eb50478bec6edd9e3df"
+  },
+  "owner_preparation_sha256": "a3c9bb9cc8a06b1fb3748d46e229e9030e275e55b95bec542660a9cfc7700eba",
+  "prefinal_scope_notes": "The general neun-prefinal entry explicitly allows honorific-eusi, as illustrated by geunmuhasineunguna. This is compatible with the whole declarative neunda entry excluding open stems; each following ending must retain its own license. Present prefinals are embedded in canonical endings in the current public analysis model."
+}

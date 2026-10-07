@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "preparation_only": true,
+  "state": "passed",
+  "observed_exit_code": 0,
+  "tool_session_id": 13348,
+  "rust_passed": 983,
+  "rust_ignored": 1,
+  "result_batches": 209,
+  "log_sha256": "851edffc6c1f75d75475841263d66bfb004079409e12d1e1fb2bf3c693aa6098",
+  "inputs": {
+    "src/grammar.rs": {
+      "sha256": "ed469a539a6637e1ec9fb230d2fa44e1b62774ba9cb321d81a496229737df5ed",
+      "bytes": 104579
+    },
+    "tests/degree_rimankeum.rs": {
+      "sha256": "09e4e858bbda06fe56d2cb5b37cffd1ba8942718140c945925ab1f892a06430b",
+      "bytes": 10221
+    },
+    "tests/counterfactual_ryeon.rs": {
+      "sha256": "5c92bbff24812f0ddf12ff5b004be51933e44d5e01dc6407257f4da9db700d3b",
+      "bytes": 11022
+    },
+    "tests/copula_expectation.rs": {
+      "sha256": "3a85477b5b1b46334fadab7aa8531202356894f1308ed2c48896bf5cbac0e75a",
+      "bytes": 11231
+    },
+    "tests/copula_expectation_support/parent.rs": {
+      "sha256": "6e426ebb7fc8a1942087b2c56ae831e7f0a6ae6ab13df9d555dcce45dcc67da9",
+      "bytes": 1398
+    },
+    "tests/copula-expectation-before.json": {
+      "sha256": "4ef2b15b9d5cc1caf0560b58e13db5bf8198a920bc9b4cdb73d4d720e11a5c35",
+      "bytes": 120171
+    },
+    "tests/copula-expectation-full-source.json": {
+      "sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+      "bytes": 22458370
+    },
+    "tests/copula-expectation-validity.json": {
+      "sha256": "f2743e819aa3521c5039dde026b1303dceaf67de84a4cbb9f34e4b450799f854",
+      "bytes": 25802
+    }
+  },
+  "inputs_unchanged": true,
+  "command": [
+    "cargo",
+    "test",
+    "--manifest-path",
+    "/tmp/klem-copula-expectation-prototype/Cargo.toml",
+    "--locked",
+    "--offline",
+    "--features",
+    "web",
+    "-j",
+    "4"
+  ],
+  "environment": {
+    "CARGO_INCREMENTAL": "0",
+    "CARGO_PROFILE_DEV_DEBUG": "0",
+    "CARGO_PROFILE_TEST_DEBUG": "0",
+    "CARGO_TARGET_DIR": "/home/josh/projects/klem/web/test-results/copula-expectation-prototype-cargo"
+  },
+  "terminal_observed_at": "2026-10-07T02:01:45.172805+00:00",
+  "scope": "Full isolated Rust suite against the frozen prototype and inherited original fixtures. One downloaded-corpus test remains ignored in this command; authored boundary, full source/corpus/API/browser/broad captures are separately preserved. This does not claim production or Nix validation of the supplement."
+}

@@ -36577,10 +36577,11 @@
       "source_sha256": "0355ec4c78858f8a8fe2e17e02db063fc8515d5ea72466b6e50f9d6b092c3408",
       "status": "scoped",
       "checklist": [
-        "COV-017by"
+        "COV-017by",
+        "COV-020s"
       ],
-      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged.",
-      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. Shortened nominal/copula hypotheses require the separately tracked COV-020s source audit; unlisted represented markers/owners/followers preserve uncertainty.",
+      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged. Vowel-final copula omission is inferred from the preserved NIKL guidance and these ending notes; degree copulas retain Unknown and consonant/past-contraction boundaries remain separate. Authored cases are not direct source attestations or contextual gold.",
+      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. COV-020s adds source-inferred vowel-final copula omission, 30 stable authored boundary cases, exact explicit-parent provenance, 983 production tests and complete production source/corpus/novel/API/browser/Native parity. The actual Nix Rust/assets package passes with 983 tests, complete packaged source/broad/word-analysis/browser/Native parity, all cache-budget streams and 80 paired novel timings. Immutable Nix sources match all 38 archived application/test texts. The final combined Rust/assets/inventory gate for that supplement passes against 69 unchanged staged inputs; its prior stale-hash failure and successful retry are preserved. Contextual sense and independent Korean review remain open; unlisted represented markers/owners/followers preserve uncertainty.",
       "evidence": [
         {
           "path": "tests/degree_rimankeum.rs"
@@ -36626,6 +36627,48 @@
         },
         {
           "path": "docs/degree-expectation-final-nix.json"
+        },
+        {
+          "path": "tests/copula_expectation.rs"
+        },
+        {
+          "path": "tests/copula-expectation-validity.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-production.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-rust.json"
+        },
+        {
+          "path": "tools/copula_expectation_audit.py"
+        },
+        {
+          "path": "tools/copula_expectation_release.py"
+        },
+        {
+          "path": "tools/test_copula_expectation_release.py"
+        },
+        {
+          "path": "tools/copula_expectation_performance.py"
+        },
+        {
+          "path": "docs/copula-expectation-package-nix.json"
+        },
+        {
+          "path": "docs/copula-expectation-package-sources.json"
+        },
+        {
+          "path": "docs/copula-expectation-packaged-checks.json"
+        },
+        {
+          "path": "docs/copula-expectation-performance.json"
+        },
+        {
+          "path": "docs/copula-expectation-cache-parity.json"
+        },
+        {
+          "path": "docs/copula-expectation-final-nix.json"
         }
       ],
       "judgments": [
@@ -36664,10 +36707,11 @@
       "source_sha256": "b5451312eac95aada9dedaee284c2e142cd0ef886587ba66446e5a459fdfd208",
       "status": "scoped",
       "checklist": [
-        "COV-017by"
+        "COV-017by",
+        "COV-020s"
       ],
-      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged.",
-      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. Shortened nominal/copula hypotheses require the separately tracked COV-020s source audit; unlisted represented markers/owners/followers preserve uncertainty.",
+      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged. Vowel-final copula omission is inferred from the preserved NIKL guidance and these ending notes; degree copulas retain Unknown and consonant/past-contraction boundaries remain separate. Authored cases are not direct source attestations or contextual gold.",
+      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. COV-020s adds source-inferred vowel-final copula omission, 30 stable authored boundary cases, exact explicit-parent provenance, 983 production tests and complete production source/corpus/novel/API/browser/Native parity. The actual Nix Rust/assets package passes with 983 tests, complete packaged source/broad/word-analysis/browser/Native parity, all cache-budget streams and 80 paired novel timings. Immutable Nix sources match all 38 archived application/test texts. The final combined Rust/assets/inventory gate for that supplement passes against 69 unchanged staged inputs; its prior stale-hash failure and successful retry are preserved. Contextual sense and independent Korean review remain open; unlisted represented markers/owners/followers preserve uncertainty.",
       "evidence": [
         {
           "path": "tests/degree_rimankeum.rs"
@@ -36713,6 +36757,48 @@
         },
         {
           "path": "docs/degree-expectation-final-nix.json"
+        },
+        {
+          "path": "tests/copula_expectation.rs"
+        },
+        {
+          "path": "tests/copula-expectation-validity.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-production.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-rust.json"
+        },
+        {
+          "path": "tools/copula_expectation_audit.py"
+        },
+        {
+          "path": "tools/copula_expectation_release.py"
+        },
+        {
+          "path": "tools/test_copula_expectation_release.py"
+        },
+        {
+          "path": "tools/copula_expectation_performance.py"
+        },
+        {
+          "path": "docs/copula-expectation-package-nix.json"
+        },
+        {
+          "path": "docs/copula-expectation-package-sources.json"
+        },
+        {
+          "path": "docs/copula-expectation-packaged-checks.json"
+        },
+        {
+          "path": "docs/copula-expectation-performance.json"
+        },
+        {
+          "path": "docs/copula-expectation-cache-parity.json"
+        },
+        {
+          "path": "docs/copula-expectation-final-nix.json"
         }
       ],
       "judgments": [
@@ -36743,10 +36829,11 @@
       "source_sha256": "c8dff032470b25ae8b2fb53767355df821fe13e1ff5de9796997218139c34d69",
       "status": "scoped",
       "checklist": [
-        "COV-017bz"
+        "COV-017bz",
+        "COV-020s"
       ],
-      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged.",
-      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. Shortened nominal/copula hypotheses require the separately tracked COV-020s source audit; unlisted represented markers/owners/followers preserve uncertainty.",
+      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged. Vowel-final copula omission is inferred from the preserved NIKL guidance and these ending notes; degree copulas retain Unknown and consonant/past-contraction boundaries remain separate. Authored cases are not direct source attestations or contextual gold.",
+      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. COV-020s adds source-inferred vowel-final copula omission, 30 stable authored boundary cases, exact explicit-parent provenance, 983 production tests and complete production source/corpus/novel/API/browser/Native parity. The actual Nix Rust/assets package passes with 983 tests, complete packaged source/broad/word-analysis/browser/Native parity, all cache-budget streams and 80 paired novel timings. Immutable Nix sources match all 38 archived application/test texts. The final combined Rust/assets/inventory gate for that supplement passes against 69 unchanged staged inputs; its prior stale-hash failure and successful retry are preserved. Contextual sense and independent Korean review remain open; unlisted represented markers/owners/followers preserve uncertainty.",
       "evidence": [
         {
           "path": "tests/counterfactual_ryeon.rs"
@@ -36792,6 +36879,48 @@
         },
         {
           "path": "docs/degree-expectation-final-nix.json"
+        },
+        {
+          "path": "tests/copula_expectation.rs"
+        },
+        {
+          "path": "tests/copula-expectation-validity.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-production.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-rust.json"
+        },
+        {
+          "path": "tools/copula_expectation_audit.py"
+        },
+        {
+          "path": "tools/copula_expectation_release.py"
+        },
+        {
+          "path": "tools/test_copula_expectation_release.py"
+        },
+        {
+          "path": "tools/copula_expectation_performance.py"
+        },
+        {
+          "path": "docs/copula-expectation-package-nix.json"
+        },
+        {
+          "path": "docs/copula-expectation-package-sources.json"
+        },
+        {
+          "path": "docs/copula-expectation-packaged-checks.json"
+        },
+        {
+          "path": "docs/copula-expectation-performance.json"
+        },
+        {
+          "path": "docs/copula-expectation-cache-parity.json"
+        },
+        {
+          "path": "docs/copula-expectation-final-nix.json"
         }
       ],
       "judgments": [
@@ -36826,10 +36955,11 @@
       "source_sha256": "f539782d63f75fc96e98d03a4f107e2371907ac231d845c12028518e00fb329a",
       "status": "scoped",
       "checklist": [
-        "COV-017bz"
+        "COV-017bz",
+        "COV-020s"
       ],
-      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged.",
-      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. Shortened nominal/copula hypotheses require the separately tracked COV-020s source audit; unlisted represented markers/owners/followers preserve uncertainty.",
+      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged. Vowel-final copula omission is inferred from the preserved NIKL guidance and these ending notes; degree copulas retain Unknown and consonant/past-contraction boundaries remain separate. Authored cases are not direct source attestations or contextual gold.",
+      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. COV-020s adds source-inferred vowel-final copula omission, 30 stable authored boundary cases, exact explicit-parent provenance, 983 production tests and complete production source/corpus/novel/API/browser/Native parity. The actual Nix Rust/assets package passes with 983 tests, complete packaged source/broad/word-analysis/browser/Native parity, all cache-budget streams and 80 paired novel timings. Immutable Nix sources match all 38 archived application/test texts. The final combined Rust/assets/inventory gate for that supplement passes against 69 unchanged staged inputs; its prior stale-hash failure and successful retry are preserved. Contextual sense and independent Korean review remain open; unlisted represented markers/owners/followers preserve uncertainty.",
       "evidence": [
         {
           "path": "tests/counterfactual_ryeon.rs"
@@ -36875,6 +37005,48 @@
         },
         {
           "path": "docs/degree-expectation-final-nix.json"
+        },
+        {
+          "path": "tests/copula_expectation.rs"
+        },
+        {
+          "path": "tests/copula-expectation-validity.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-production.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-rust.json"
+        },
+        {
+          "path": "tools/copula_expectation_audit.py"
+        },
+        {
+          "path": "tools/copula_expectation_release.py"
+        },
+        {
+          "path": "tools/test_copula_expectation_release.py"
+        },
+        {
+          "path": "tools/copula_expectation_performance.py"
+        },
+        {
+          "path": "docs/copula-expectation-package-nix.json"
+        },
+        {
+          "path": "docs/copula-expectation-package-sources.json"
+        },
+        {
+          "path": "docs/copula-expectation-packaged-checks.json"
+        },
+        {
+          "path": "docs/copula-expectation-performance.json"
+        },
+        {
+          "path": "docs/copula-expectation-cache-parity.json"
+        },
+        {
+          "path": "docs/copula-expectation-final-nix.json"
         }
       ],
       "judgments": [
@@ -36913,10 +37085,11 @@
       "source_sha256": "74e053e10628c3e205d0d148156075acba063c3a01fab81b61ecc1971884a8fd",
       "status": "scoped",
       "checklist": [
-        "COV-017bz"
+        "COV-017bz",
+        "COV-020s"
       ],
-      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged.",
-      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. Shortened nominal/copula hypotheses require the separately tracked COV-020s source audit; unlisted represented markers/owners/followers preserve uncertainty.",
+      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged. Vowel-final copula omission is inferred from the preserved NIKL guidance and these ending notes; degree copulas retain Unknown and consonant/past-contraction boundaries remain separate. Authored cases are not direct source attestations or contextual gold.",
+      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. COV-020s adds source-inferred vowel-final copula omission, 30 stable authored boundary cases, exact explicit-parent provenance, 983 production tests and complete production source/corpus/novel/API/browser/Native parity. The actual Nix Rust/assets package passes with 983 tests, complete packaged source/broad/word-analysis/browser/Native parity, all cache-budget streams and 80 paired novel timings. Immutable Nix sources match all 38 archived application/test texts. The final combined Rust/assets/inventory gate for that supplement passes against 69 unchanged staged inputs; its prior stale-hash failure and successful retry are preserved. Contextual sense and independent Korean review remain open; unlisted represented markers/owners/followers preserve uncertainty.",
       "evidence": [
         {
           "path": "tests/counterfactual_ryeon.rs"
@@ -36962,6 +37135,48 @@
         },
         {
           "path": "docs/degree-expectation-final-nix.json"
+        },
+        {
+          "path": "tests/copula_expectation.rs"
+        },
+        {
+          "path": "tests/copula-expectation-validity.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-production.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-rust.json"
+        },
+        {
+          "path": "tools/copula_expectation_audit.py"
+        },
+        {
+          "path": "tools/copula_expectation_release.py"
+        },
+        {
+          "path": "tools/test_copula_expectation_release.py"
+        },
+        {
+          "path": "tools/copula_expectation_performance.py"
+        },
+        {
+          "path": "docs/copula-expectation-package-nix.json"
+        },
+        {
+          "path": "docs/copula-expectation-package-sources.json"
+        },
+        {
+          "path": "docs/copula-expectation-packaged-checks.json"
+        },
+        {
+          "path": "docs/copula-expectation-performance.json"
+        },
+        {
+          "path": "docs/copula-expectation-cache-parity.json"
+        },
+        {
+          "path": "docs/copula-expectation-final-nix.json"
         }
       ],
       "judgments": [
@@ -36996,10 +37211,11 @@
       "source_sha256": "5dcf731b1e1b88dc7a541d6214d452716aaaa7aa508d5623a6c32cc8138ceacd",
       "status": "scoped",
       "checklist": [
-        "COV-017bz"
+        "COV-017bz",
+        "COV-020s"
       ],
-      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged.",
-      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. Shortened nominal/copula hypotheses require the separately tracked COV-020s source audit; unlisted represented markers/owners/followers preserve uncertainty.",
+      "scope": "Source-owned canonical ending/allomorph hypotheses with all original examples, exact captured existing 으리라 companion paths, stable structural judgments and complete native/LMF imports. NFC/NFD and source-cohort candidate/assessment preservation are covered. Contextual sense and independent linguistic review remain unjudged. Vowel-final copula omission is inferred from the preserved NIKL guidance and these ending notes; degree copulas retain Unknown and consonant/past-contraction boundaries remain separate. Authored cases are not direct source attestations or contextual gold.",
+      "remaining": "Main and packaged CLI/API/browser, complete broad/corpus parity, 976 Nix release tests, the downloaded corpus regression, all cache budgets and eighty paired timing samples pass. The final Rust/assets/offline-inventory Nix gate passes with an unchanged 73-file input snapshot. Contextual sense and independent Korean review remain open. COV-020s adds source-inferred vowel-final copula omission, 30 stable authored boundary cases, exact explicit-parent provenance, 983 production tests and complete production source/corpus/novel/API/browser/Native parity. The actual Nix Rust/assets package passes with 983 tests, complete packaged source/broad/word-analysis/browser/Native parity, all cache-budget streams and 80 paired novel timings. Immutable Nix sources match all 38 archived application/test texts. The final combined Rust/assets/inventory gate for that supplement passes against 69 unchanged staged inputs; its prior stale-hash failure and successful retry are preserved. Contextual sense and independent Korean review remain open; unlisted represented markers/owners/followers preserve uncertainty.",
       "evidence": [
         {
           "path": "tests/counterfactual_ryeon.rs"
@@ -37045,6 +37261,48 @@
         },
         {
           "path": "docs/degree-expectation-final-nix.json"
+        },
+        {
+          "path": "tests/copula_expectation.rs"
+        },
+        {
+          "path": "tests/copula-expectation-validity.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-production.json"
+        },
+        {
+          "path": "docs/copula-expectation-main-rust.json"
+        },
+        {
+          "path": "tools/copula_expectation_audit.py"
+        },
+        {
+          "path": "tools/copula_expectation_release.py"
+        },
+        {
+          "path": "tools/test_copula_expectation_release.py"
+        },
+        {
+          "path": "tools/copula_expectation_performance.py"
+        },
+        {
+          "path": "docs/copula-expectation-package-nix.json"
+        },
+        {
+          "path": "docs/copula-expectation-package-sources.json"
+        },
+        {
+          "path": "docs/copula-expectation-packaged-checks.json"
+        },
+        {
+          "path": "docs/copula-expectation-performance.json"
+        },
+        {
+          "path": "docs/copula-expectation-cache-parity.json"
+        },
+        {
+          "path": "docs/copula-expectation-final-nix.json"
         }
       ],
       "judgments": [

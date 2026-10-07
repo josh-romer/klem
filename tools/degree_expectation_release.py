@@ -21,15 +21,27 @@ def semantic(response):
     return {k: v for k, v in response.items() if k != 'elapsed_ms'}
 
 
+def verify_release_sources(snapshot, package, sources):
+    assert sources['schema_version'] == 1
+    assert sources['package'] == package
+    paths = ['src/engine.rs', 'src/grammar.rs', 'src/dictionary/attachment.rs',
+             'tests/degree_rimankeum.rs', 'tests/counterfactual_ryeon.rs',
+             'tests/fixtures/validity.json', 'tests/validity.rs', 'web/src/grammar-labels.json']
+    assert set(sources['files']) == set(paths)
+    for path in paths:
+        source = sources['files'][path]
+        assert hashlib.sha256(source['text'].encode()).hexdigest() == source['sha256']
+        assert snapshot[path] == source['sha256'], path
+
+
 def inspect(report):
     assert report['schema_version'] == 1
     assert report['checklist'] == ['COV-017by', 'COV-017bz']
     receipt = report['nix_receipt']
     assert receipt['state'] == 'passed' and receipt['exit_code'] == 0 and receipt['snapshot_unchanged']
-    for path in ['src/engine.rs', 'src/grammar.rs', 'src/dictionary/attachment.rs',
-                 'tests/degree_rimankeum.rs', 'tests/counterfactual_ryeon.rs',
-                 'tests/fixtures/validity.json', 'tests/validity.rs', 'web/src/grammar-labels.json']:
-        assert receipt['snapshot'][path] == sha(path), path
+    # The historical package keeps its exact source texts as later rules evolve.
+    verify_release_sources(receipt['snapshot'], report['nix_outputs']['klem'],
+                           read('docs/degree-expectation-release-sources.json.gz'))
     log = report['nix_log']
     assert hashlib.sha256(log.encode()).hexdigest() == receipt['log_sha256']
     assert 'FAILED' not in log and 'error:' not in log

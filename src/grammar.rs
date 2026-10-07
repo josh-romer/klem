@@ -1040,6 +1040,11 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더군", "더군", 0),
             ("더군요", "더군요", 0),
             ("더니", "더니", 0),
+            // Reviewed vowel-final copula omission; unlisted owner classes
+            // keep their existing dictionary uncertainty.
+            ("리만큼", "으리만큼", 0),
+            ("련만", "으련만", 0),
+            ("련마는", "으련마는", 0),
             ("더라도", "더라도", 0),
             ("던데", "던데", 0),
             ("던데요", "던데요", 0),

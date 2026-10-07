@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "package": "/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0",
+  "derivation": "/nix/store/3r3yzsj1rpgq3w0q8wsi1kgl1jhrbs7r-klem-0.1.0.drv",
+  "source": "/nix/store/585x4pkp0gn4mkvqywzcqi2zp8p4hkv3-source",
+  "derivation_json": {
+    "/nix/store/3r3yzsj1rpgq3w0q8wsi1kgl1jhrbs7r-klem-0.1.0.drv": {
+      "args": [
+        "-e",
+        "/nix/store/l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh",
+        "/nix/store/shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh"
+      ],
+      "builder": "/nix/store/svx59425zxp552p2b8gm11qj5r09b56i-bash-5.3p15/bin/bash",
+      "env": {
+        "NIX_MAIN_PROGRAM": "klem",
+        "PKG_CONFIG_ALLOW_CROSS": "0",
+        "RUST_LOG": "",
+        "__structuredAttrs": "",
+        "buildFeatures": "web",
+        "buildInputs": "",
+        "builder": "/nix/store/svx59425zxp552p2b8gm11qj5r09b56i-bash-5.3p15/bin/bash",
+        "cargoBuildFeatures": "web",
+        "cargoBuildNoDefaultFeatures": "",
+        "cargoBuildType": "release",
+        "cargoCheckFeatures": "web",
+        "cargoCheckNoDefaultFeatures": "",
+        "cargoCheckType": "release",
+        "cargoDeps": "/nix/store/7w8h00x3av9rjqjjbbljllgjijz3vgi9-cargo-vendor-dir",
+        "checkFeatures": "web",
+        "cmakeFlags": "",
+        "configureFlags": "",
+        "configurePhase": "runHook preConfigure\nrunHook postConfigure\n",
+        "depsBuildBuild": "",
+        "depsBuildBuildPropagated": "",
+        "depsBuildTarget": "",
+        "depsBuildTargetPropagated": "",
+        "depsHostHost": "",
+        "depsHostHostPropagated": "",
+        "depsTargetTarget": "",
+        "depsTargetTargetPropagated": "",
+        "doCheck": "1",
+        "doInstallCheck": "",
+        "mesonFlags": "",
+        "name": "klem-0.1.0",
+        "nativeBuildInputs": "/nix/store/w67xik79np3dkv1ri282a4y5lbah8y7a-auditable-cargo-1.98.1 /nix/store/qwq74532hkhk4l66xk979a0wfx59q2v9-cargo-build-hook.sh /nix/store/w3ri7fb2rgz36vhc5jj2dpchncgdmin8-cargo-check-hook.sh /nix/store/pnfrgicrm6j6yl4v4dcacgnb2h4v23za-cargo-install-hook.sh /nix/store/qcq42dx8njk2svnavnb2kdvnh7sawg0p-cargo-setup-hook.sh /nix/store/vy0xilifxb02fwal0wihsrwc8s69rlyk-rustc-wrapper-1.98.1 /nix/store/w20n3pmhhd1av9llykxa3gd21c9jsm8l-cargo-1.98.1",
+        "out": "/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0",
+        "outputs": "out",
+        "patches": "",
+        "pname": "klem",
+        "propagatedBuildInputs": "",
+        "propagatedNativeBuildInputs": "",
+        "src": "/nix/store/585x4pkp0gn4mkvqywzcqi2zp8p4hkv3-source",
+        "stdenv": "/nix/store/dp0zdsysxsli2xncj4prvhsik08qn697-stdenv-linux",
+        "strictDeps": "1",
+        "system": "x86_64-linux",
+        "version": "0.1.0"
+      },
+      "inputDrvs": {
+        "/nix/store/3y8fr9214cb6n32m7v13hj6dkr51yqh6-cargo-1.98.1.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/97z32pvl1kd56l142zdjkxzw38bids4r-cargo-check-hook.sh.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/9f6ax144s65vc17xp47mv6d02cd6h716-rustc-wrapper-1.98.1.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/abkccj4p025ps51a96jy512vmicwph6m-auditable-cargo-1.98.1.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/cqnd7mvw9cs9r9il8x1idmylvzs7cchc-cargo-vendor-dir.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/r5ssr70bc8l2hmjn56mnpbpgr9dizn40-stdenv-linux.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/s3s5s80y5sq8fvxivxxz3bqfpyhx8cb4-bash-5.3p15.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/v1xnamcdhmsffiph0l5yxqvcghfkb8w6-cargo-install-hook.sh.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/xp0dyxx77w5zgwyn51xl0ssqqissfw7g-cargo-build-hook.sh.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        },
+        "/nix/store/y6flm1j6l9a2j46w0fglf2fhgxp1z9a4-cargo-setup-hook.sh.drv": {
+          "dynamicOutputs": {},
+          "outputs": [
+            "out"
+          ]
+        }
+      },
+      "inputSrcs": [
+        "/nix/store/585x4pkp0gn4mkvqywzcqi2zp8p4hkv3-source",
+        "/nix/store/l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh",
+        "/nix/store/shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh"
+      ],
+      "name": "klem-0.1.0",
+      "outputs": {
+        "out": {
+          "path": "/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0"
+        }
+      },
+      "system": "x86_64-linux"
+    }
+  },
+  "derivation_json_sha256": "e4baa1428f85ca79ebda94512498dffa1bef806af899a0c69a5d61c99545b64c",
+  "files": {
+    "src/spacing.rs": {
+      "sha256": "2898ad924fd1e16e130dfca6ef8df7a4de8cd7a23645dee43adfcdbb3f7d88fe",
+      "bytes": 22515
+    },
+    "src/nominal_hwa.rs": {
+      "sha256": "d8171d2c22639b0f6284437dcfe9e2209e99eac0e551bd04b5e70f9a4b56a1a9",
+      "bytes": 13321
+    },
+    "src/text.rs": {
+      "sha256": "5ef733732a66f033e791826595c9ec50e46b67435e5c002b4594adff1e34d073",
+      "bytes": 5689
+    },
+    "src/nominal_si.rs": {
+      "sha256": "4a30b3006574cce3abac427e3a0de6bd03d8d341f5573a09b2ec104e38cce686",
+      "bytes": 3070
+    },
+    "src/pronunciation.rs": {
+      "sha256": "c3133e56881c4e9d02f741e36ef5966166d04e8f1d624238a00c085b36c7ce0b",
+      "bytes": 1344
+    },
+    "src/dictionary.rs": {
+      "sha256": "5b6181243407f1270874eea5e10eb02526ea95fbd70494b6cd7395b40250ad06",
+      "bytes": 31392
+    },
+    "src/doeda_native_forms.rs": {
+      "sha256": "d6100f03307aca47e699fc82ce407d049a8ee8dadaa38005c7f915e46f77b65e",
+      "bytes": 51518
+    },
+    "src/predicate_compound.rs": {
+      "sha256": "f01613089c5a045d7ddbcd179ccd37db1f95cd0a5351815bd7e87a44f58a25b9",
+      "bytes": 916
+    },
+    "src/doeda_suffix.rs": {
+      "sha256": "e1eeedd4dc3c5c443081ddabbcf7d6480a646281db9751809fd735738f0baff5",
+      "bytes": 15023
+    },
+    "src/doeda_identity.rs": {
+      "sha256": "dc8edacdc1818559cba82cd5ca88b76726018f5f4a2513055a2218cfc0e3c3c2",
+      "bytes": 34668
+    },
+    "src/hangul.rs": {
+      "sha256": "615c24455744054bc6b2bf42dc28f8c0f7bcde0e252e0b3821423fe962e1f84d",
+      "bytes": 1376
+    },
+    "src/grammar.rs": {
+      "sha256": "ed469a539a6637e1ec9fb230d2fa44e1b62774ba9cb321d81a496229737df5ed",
+      "bytes": 104579
+    },
+    "src/hada_suffix.rs": {
+      "sha256": "e472bb275e990ef45dfe1dcefff15a85b7f792b35d852748d91a81592db7e4f7",
+      "bytes": 18302
+    },
+    "src/main.rs": {
+      "sha256": "bb849ac17d169c80a0f2298f6c04edc5f983cd6c95473fa123d6801020829bb7",
+      "bytes": 11984
+    },
+    "src/breakdown.rs": {
+      "sha256": "cb528237a9fe4123ea3b8d1a30629a33d8887e29140fe15900af0058a1aa6578",
+      "bytes": 22169
+    },
+    "src/hada_remaining.rs": {
+      "sha256": "515a4035e985a0899f3e6c4e910ffce75d1d6edd999a2d9bcb7f6ee5acd4a7f4",
+      "bytes": 10244
+    },
+    "src/engine.rs": {
+      "sha256": "8c351e73452e1c0a44a64db838bc15e0d1e9fdd2d1037cb47623887bbb86d12d",
+      "bytes": 217705
+    },
+    "src/lib.rs": {
+      "sha256": "9ad53859e9ca7fb4b9ad96f26f7ea48a3fd403cf20ef42e606f088f0a421239f",
+      "bytes": 8226
+    },
+    "src/dictionary_cli.rs": {
+      "sha256": "2a9351e21d7fe06125a68240f6bcd8e0aba18107d17f18458c8ee928eb135c68",
+      "bytes": 1957
+    },
+    "src/doeda_originless_forms.rs": {
+      "sha256": "a3bb92e2b20a1d6273bfd89e4a6b2b90ec6cfe090cc892b05c10008b7aa03e6a",
+      "bytes": 3521
+    },
+    "src/dictionary/pos.rs": {
+      "sha256": "4d7f7073df0197d590a117647379286a5c862a25d55f51d2f82d27595cbcc868",
+      "bytes": 3275
+    },
+    "src/dictionary/import.rs": {
+      "sha256": "f877ad28736093de1a53365a3335678fd53daaad57888f67a2a67dd05345b05b",
+      "bytes": 13212
+    },
+    "src/dictionary/attachment.rs": {
+      "sha256": "4fd90195824ac2e1a720d9d5ead633da24d2e05c6369217d419444c48edd2b62",
+      "bytes": 131687
+    },
+    "src/bin/klem-web.rs": {
+      "sha256": "4dd0208d3fede7c2b1fe2145281f2e6928ae233bdbc9d6af2465c1c43036b303",
+      "bytes": 19733
+    },
+    "src/bin/klem-web/grammar_labels.rs": {
+      "sha256": "6099db329d725127d2f892656c44aacdaef2df4184dc2a66ef1d51b8e655c70c",
+      "bytes": 8203
+    },
+    "Cargo.toml": {
+      "sha256": "28742313bee712f5f14385dfa63a372921750429e1838173360cb2873ec0bb1b",
+      "bytes": 677
+    },
+    "Cargo.lock": {
+      "sha256": "c11caa3e24060175d0555d6fc322d37e6c1d48b05bf3dcee9ea5476ec5de2ba2",
+      "bytes": 9659
+    },
+    "tests/degree_rimankeum.rs": {
+      "sha256": "09e4e858bbda06fe56d2cb5b37cffd1ba8942718140c945925ab1f892a06430b",
+      "bytes": 10221
+    },
+    "tests/counterfactual_ryeon.rs": {
+      "sha256": "5c92bbff24812f0ddf12ff5b004be51933e44d5e01dc6407257f4da9db700d3b",
+      "bytes": 11022
+    },
+    "tests/copula_expectation.rs": {
+      "sha256": "3a85477b5b1b46334fadab7aa8531202356894f1308ed2c48896bf5cbac0e75a",
+      "bytes": 11231
+    },
+    "tests/copula_expectation_support/parent.rs": {
+      "sha256": "6e426ebb7fc8a1942087b2c56ae831e7f0a6ae6ab13df9d555dcce45dcc67da9",
+      "bytes": 1398
+    },
+    "tests/copula-expectation-before.json": {
+      "sha256": "4ef2b15b9d5cc1caf0560b58e13db5bf8198a920bc9b4cdb73d4d720e11a5c35",
+      "bytes": 120171
+    },
+    "tests/copula-expectation-full-source.json": {
+      "sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+      "bytes": 22458370
+    },
+    "tests/copula-expectation-validity.json": {
+      "sha256": "f2743e819aa3521c5039dde026b1303dceaf67de84a4cbb9f34e4b450799f854",
+      "bytes": 25802
+    },
+    "tests/fixtures/validity.json": {
+      "sha256": "3902868700881699b27b220b6c7003ac81e60f53b401aee3e6b06ca2f6e4057c",
+      "bytes": 31405752
+    },
+    "tests/validity.rs": {
+      "sha256": "199d9d3e5db9c93147e544d2bcec3338a4c9d1e8721d574e30ddd6b360687e33",
+      "bytes": 4004
+    },
+    "web/src/grammar-labels.json": {
+      "sha256": "384dcc29fa1c15488a1227edd1e6b6efe2a342afe704e29d2a5b0a77485c3442",
+      "bytes": 180010
+    },
+    "examples/evaluate.rs": {
+      "sha256": "7f6cfc3c45d6dc14a382d0120db8b9c239ded51faf827b869863780a04a6eb70",
+      "bytes": 1131
+    }
+  },
+  "scope": "All 38 archived application and test source texts independently match the immutable source path of the actual successful package derivation. The original staged-only receipt is preserved unchanged.",
+  "derivation_json_text": "{\n  \"/nix/store/3r3yzsj1rpgq3w0q8wsi1kgl1jhrbs7r-klem-0.1.0.drv\": {\n    \"args\": [\n      \"-e\",\n      \"/nix/store/l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh\",\n      \"/nix/store/shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh\"\n    ],\n    \"builder\": \"/nix/store/svx59425zxp552p2b8gm11qj5r09b56i-bash-5.3p15/bin/bash\",\n    \"env\": {\n      \"NIX_MAIN_PROGRAM\": \"klem\",\n      \"PKG_CONFIG_ALLOW_CROSS\": \"0\",\n      \"RUST_LOG\": \"\",\n      \"__structuredAttrs\": \"\",\n      \"buildFeatures\": \"web\",\n      \"buildInputs\": \"\",\n      \"builder\": \"/nix/store/svx59425zxp552p2b8gm11qj5r09b56i-bash-5.3p15/bin/bash\",\n      \"cargoBuildFeatures\": \"web\",\n      \"cargoBuildNoDefaultFeatures\": \"\",\n      \"cargoBuildType\": \"release\",\n      \"cargoCheckFeatures\": \"web\",\n      \"cargoCheckNoDefaultFeatures\": \"\",\n      \"cargoCheckType\": \"release\",\n      \"cargoDeps\": \"/nix/store/7w8h00x3av9rjqjjbbljllgjijz3vgi9-cargo-vendor-dir\",\n      \"checkFeatures\": \"web\",\n      \"cmakeFlags\": \"\",\n      \"configureFlags\": \"\",\n      \"configurePhase\": \"runHook preConfigure\\nrunHook postConfigure\\n\",\n      \"depsBuildBuild\": \"\",\n      \"depsBuildBuildPropagated\": \"\",\n      \"depsBuildTarget\": \"\",\n      \"depsBuildTargetPropagated\": \"\",\n      \"depsHostHost\": \"\",\n      \"depsHostHostPropagated\": \"\",\n      \"depsTargetTarget\": \"\",\n      \"depsTargetTargetPropagated\": \"\",\n      \"doCheck\": \"1\",\n      \"doInstallCheck\": \"\",\n      \"mesonFlags\": \"\",\n      \"name\": \"klem-0.1.0\",\n      \"nativeBuildInputs\": \"/nix/store/w67xik79np3dkv1ri282a4y5lbah8y7a-auditable-cargo-1.98.1 /nix/store/qwq74532hkhk4l66xk979a0wfx59q2v9-cargo-build-hook.sh /nix/store/w3ri7fb2rgz36vhc5jj2dpchncgdmin8-cargo-check-hook.sh /nix/store/pnfrgicrm6j6yl4v4dcacgnb2h4v23za-cargo-install-hook.sh /nix/store/qcq42dx8njk2svnavnb2kdvnh7sawg0p-cargo-setup-hook.sh /nix/store/vy0xilifxb02fwal0wihsrwc8s69rlyk-rustc-wrapper-1.98.1 /nix/store/w20n3pmhhd1av9llykxa3gd21c9jsm8l-cargo-1.98.1\",\n      \"out\": \"/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0\",\n      \"outputs\": \"out\",\n      \"patches\": \"\",\n      \"pname\": \"klem\",\n      \"propagatedBuildInputs\": \"\",\n      \"propagatedNativeBuildInputs\": \"\",\n      \"src\": \"/nix/store/585x4pkp0gn4mkvqywzcqi2zp8p4hkv3-source\",\n      \"stdenv\": \"/nix/store/dp0zdsysxsli2xncj4prvhsik08qn697-stdenv-linux\",\n      \"strictDeps\": \"1\",\n      \"system\": \"x86_64-linux\",\n      \"version\": \"0.1.0\"\n    },\n    \"inputDrvs\": {\n      \"/nix/store/3y8fr9214cb6n32m7v13hj6dkr51yqh6-cargo-1.98.1.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/97z32pvl1kd56l142zdjkxzw38bids4r-cargo-check-hook.sh.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/9f6ax144s65vc17xp47mv6d02cd6h716-rustc-wrapper-1.98.1.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/abkccj4p025ps51a96jy512vmicwph6m-auditable-cargo-1.98.1.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/cqnd7mvw9cs9r9il8x1idmylvzs7cchc-cargo-vendor-dir.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/r5ssr70bc8l2hmjn56mnpbpgr9dizn40-stdenv-linux.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/s3s5s80y5sq8fvxivxxz3bqfpyhx8cb4-bash-5.3p15.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/v1xnamcdhmsffiph0l5yxqvcghfkb8w6-cargo-install-hook.sh.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/xp0dyxx77w5zgwyn51xl0ssqqissfw7g-cargo-build-hook.sh.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      },\n      \"/nix/store/y6flm1j6l9a2j46w0fglf2fhgxp1z9a4-cargo-setup-hook.sh.drv\": {\n        \"dynamicOutputs\": {},\n        \"outputs\": [\n          \"out\"\n        ]\n      }\n    },\n    \"inputSrcs\": [\n      \"/nix/store/585x4pkp0gn4mkvqywzcqi2zp8p4hkv3-source\",\n      \"/nix/store/l622p70vy8k5sh7y5wizi5f2mic6ynpg-source-stdenv.sh\",\n      \"/nix/store/shkw4qm9qcw5sc5n1k5jznc83ny02r39-default-builder.sh\"\n    ],\n    \"name\": \"klem-0.1.0\",\n    \"outputs\": {\n      \"out\": {\n        \"path\": \"/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0\"\n      }\n    },\n    \"system\": \"x86_64-linux\"\n  }\n}\n"
+}

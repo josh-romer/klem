@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "checks": {
+    "clippy": {
+      "state": "passed",
+      "observed_tool_exit_code": 0,
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--features",
+        "web",
+        "-j",
+        "4",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "log_sha256": "600b2f1b7b5e4104a7b80ee8bee56879584073497b92e442cc3152f675cf6437"
+    },
+    "pinned-corpus": {
+      "state": "passed",
+      "observed_tool_exit_code": 0,
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--features",
+        "web",
+        "-j",
+        "4",
+        "--test",
+        "corpus",
+        "pinned_full_corpus_regressions",
+        "--",
+        "--ignored"
+      ],
+      "log_sha256": "f48b068fbf348ec6c5a38de5e42a7eb535f9e8b38d6aef3b29cf04bf35e609bb"
+    },
+    "fmt": {
+      "state": "passed",
+      "observed_tool_exit_code": 0,
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_archive_sha256": "d8b9ccd9e24324a3ace038d5da4b3f49bdb145783a4accbc86ffbe6e8ee5e4fb",
+  "application_test_inputs_unchanged": true
+}

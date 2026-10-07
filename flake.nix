@@ -351,6 +351,15 @@
                 ./tools/degree_expectation_corpora.py
                 ./tools/degree_expectation_broad.py
                 ./tools/degree_expectation_release.py
+                ./tools/test_degree_expectation_release.py
+                ./tools/copula_expectation_production.py
+                ./tools/copula_expectation_browser.py
+                ./tools/copula_expectation_audit.py
+                ./tools/test_copula_expectation_audit.py
+                ./tools/copula_expectation_release.py
+                ./tools/test_copula_expectation_release.py
+                ./tools/copula_expectation_performance.py
+                ./web/tests/copula-expectation.mjs
                 ./src/dictionary/attachment.rs
                 ./tools/degree_expectation_performance.py
                 ./tools/degree_expectation_individual.py
@@ -434,6 +443,7 @@
           } ''
             cd "$src"
             export PYTHONDONTWRITEBYTECODE=1
+            python tools/review_inventory.py --verify
             python -m unittest discover -s tools -p 'test_review_inventory.py'
             python -m unittest discover -s tools -p 'test_native_lmf.py'
             python tools/excluded_paradigm_audit.py --verify
@@ -642,7 +652,6 @@
             python tools/future_question_additional.py --verify
             python tools/future_question_queue.py --verify
             python tools/caution_ending_queue.py --verify
-            python tools/review_inventory.py --verify
             python tools/ssik_audit.py
             python tools/ssik_comparison.py
             python tools/ssik_runtime.py
@@ -666,8 +675,14 @@
             python tools/degree_expectation_corpora.py
             python tools/degree_expectation_broad.py --verify
             python tools/degree_expectation_release.py --verify
+            python -m unittest discover -s tools -p 'test_degree_expectation_release.py'
             python tools/degree_expectation_performance.py --verify
             python tools/degree_expectation_individual.py
+            python tools/copula_expectation_audit.py
+            python -m unittest discover -s tools -p 'test_copula_expectation_audit.py'
+            python tools/copula_expectation_release.py --verify
+            python -m unittest discover -s tools -p 'test_copula_expectation_release.py'
+            python tools/copula_expectation_performance.py --verify
             python tools/friendly_command_runtime.py
             python tools/friendly_command_corpora.py --verify
             python tools/friendly_command_broad.py --verify

@@ -2170,6 +2170,10 @@ review remains open under the completion review below.
   passes for Rust, SolidJS assets and the full offline inventory audit. Its
   [unaltered log](degree-expectation-final-nix.log.gz) and receipt preserve the
   command, all three store outputs and the unchanged 73-file staged snapshot.
+  The [eight original release source texts](degree-expectation-release-sources.json.gz)
+  each match the original package and independent final-gate fingerprints.
+  They preserve this historical package evidence as later rules and ledger
+  cases evolve; corruption and incomplete-source controls run in the flake.
   These checked items cover the bounded source-owned implementation; contextual
   and independent Korean review remain open under the parent inventory.
 
@@ -4185,8 +4189,8 @@ review remains open under the completion review below.
   through another explicit overlay; the immutable pending row remains visible. The 57 construction boundaries, 4,587
   discoveries outside this cohort and all contextual/independent review remain open.
 
-- [ ] **COV-020s — Shortened copulas before degree/expectation endings.**
-  **Audit needed.** The [preserved boundary discovery](degree-expectation-copula-discovery.json)
+- [x] **COV-020s — Shortened copulas before degree/expectation endings.**
+  **Implemented and validated for this finite source scope.** The [preserved boundary discovery](degree-expectation-copula-discovery.json)
   records six actual authored NFC/NFD probes against the validated package.
   Explicit 친구이련만 and 학교였으련만 have represented copular readings;
   친구련만, 친구련마는 and 친구리만큼 lack the proposed 친구 + 이다 path.
@@ -4203,6 +4207,69 @@ review remains open under the completion review below.
   additions, add stable judgments and exact component/offset, dictionary,
   CLI/export/browser and broader regression checks. COV-017by/bz's currently
   verified explicit-copula paths do not silently close this omission audit.
+
+  The [source preparation](copula-expectation-source-preparation.json.gz)
+  records NIKL's vowel-final copula omission guidance and its separate
+  contraction exceptions. Applying that general rule to these connective
+  endings is an inference; these authored cases are not direct dictionary
+  examples or annotated corpus gold. The three new omission rules preserve
+  consonant-final nominal boundaries, explicit copulas and past contractions.
+  Degree copulas retain Unknown because their ending notes do not list that
+  class. The global ledger now includes 30 stable cases: 21 required and nine
+  forbidden paths. Production focused regressions and the global validity suite
+  pass. The isolated prototype's full Rust suite passed 983 tests, with one
+  ignored; its [receipt](copula-expectation-prototype-full-rust.json) preserves
+  the frozen inputs and exact result.
+
+  The preserved prototype captures cover all 7,071 source words, twelve
+  NFC/NFD and dictionary-mode streams, 66,570 original annotated rows and
+  1,128,312 broad frames. All prior source paths and assessments are retained;
+  all annotated outcomes are unchanged. Thirty-six novel additions retain
+  stable individual IDs, exact old explicit-copula companions where available,
+  and complete Native/LMF owners. The [individual audit](copula-expectation-individual.json.gz)
+  leaves contextual judgments open. Prototype API/browser/export captures also
+  pass. The [production Rust suite](copula-expectation-main-rust.json) passes
+  983 tests with one ignored and an unchanged application/test snapshot. The
+  [production CLI/evaluator replay](copula-expectation-main-production.json)
+  exactly matches every preserved source, corpus and broad frame, plus all
+  32,096 corpus word analyses. The [production browser capture](copula-expectation-main-browser.json.gz)
+  matches all 42 diagrams, six exports and both complete authored API responses;
+  desktop/mobile screenshots were inspected. The [full entry API closure](copula-expectation-main-native-closure.json.gz)
+  independently verifies all 17 complete original Native/LMF owners. Both owned
+  previews were stopped. [Production Clippy, formatting and the downloaded
+  pinned-corpus regression](copula-expectation-main-checks.json) also pass,
+  with unchanged application/test inputs. The [Nix package receipt](copula-expectation-package-nix.json)
+  records 983 passing Rust tests, one ignored, and successful SolidJS assets.
+  All 38 application/test texts independently match the actual immutable
+  [Nix derivation source](copula-expectation-package-sources.json).
+  [Packaged release verification](../tools/copula_expectation_release.py) checks
+  all source and broad streams, 32,096 original corpus word analyses, 42 browser
+  diagrams, six exports, both authored API responses and all 17 Native owners.
+  The package ships no evaluator: preserved annotated results are tied to exact
+  equality of their complete WordAnalysis inputs, rather than a claimed packaged
+  evaluator run. Packaged desktop/mobile screenshots were inspected and owned
+  previews stopped. Six controls reject altered source/build evidence, missing
+  or duplicate streams, changed commands/hashes and false evaluator claims.
+
+  The [performance capture](copula-expectation-performance.json) preserves 80
+  fresh-process timings: five interleaved pairs for each of eight whole-novel
+  workloads on the same allowed CPU. Median changes range from -0.4% to +1.2%;
+  these measurements do not establish statistical equivalence or constant
+  clocks. [Cache parity](copula-expectation-cache-parity.json) verifies all
+  179,112 novel frames in raw, headword and compatible dictionary modes with
+  zero and 8 MiB budgets against the packaged expected stream hashes.
+  [The offline verifier](../tools/copula_expectation_performance.py) checks every
+  command, sample, summary and cache stream. The six scoped source reviews and
+  Nix inventory wiring include this evidence. The [combined Rust/assets/inventory
+  gate](copula-expectation-final-nix.json) passes all three checks against 69
+  unchanged staged inputs. Contextual sense and independent linguistic review
+  remain open beyond this finite implementation scope.
+  The [first combined-gate receipt](copula-expectation-final-nix-failed.json)
+  preserves a stale inventory hash for the release verifier, which changed
+  after queue generation. The immutable Nix source rebuild agrees exactly with
+  the current workspace queue rebuild. The queue was regenerated after that
+  verifier fix; Nix now checks inventory consistency before its lengthy evidence
+  audits. The successful retry and the original failure are both preserved.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

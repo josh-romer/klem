@@ -1,3 +1,5 @@
+#[path = "copula_expectation_support/parent.rs"]
+mod copula_expectation_parent;
 use klem::{Analysis, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use unicode_normalization::UnicodeNormalization;
@@ -55,6 +57,10 @@ fn original_counterfactual_examples_recover_heads_and_preserve_every_old_candida
         let parent: WordAnalysis =
             serde_json::from_value(source["companion_analyses"][&companion].clone()).unwrap();
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "copula.omitted_ending") {
+                copula_expectation_parent::assert_omission_parent(word, a);
+                continue;
+            }
             assert!(counterfactual(a), "unattributed {word}: {a:?}");
             assert!(a.breakdown().is_some(), "{word}: {a:?}");
             assert!(a.rules.iter().all(|r| klem::rule_explanation(r).is_some()));
@@ -261,6 +267,10 @@ fn full_source_cohort_retains_candidate_order_and_attributes_new_paths() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "copula.omitted_ending") {
+                copula_expectation_parent::assert_omission_parent(word, a);
+                continue;
+            }
             assert!(counterfactual(a), "unattributed {word}: {a:?}");
             assert!(a.breakdown().is_some(), "{word}: {a:?}");
             let companion = if let Some(stem) = word.strip_suffix("련마는") {

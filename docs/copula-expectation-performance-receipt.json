@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020s",
+  "state": "passed",
+  "verified_at": "2026-10-07T03:47:48.613331+00:00",
+  "package_sha256": "eae679be84876a4d89cf2fefa7475b02944dbffd87bbe63453c6c1efd83f3e05",
+  "timing_samples": 80,
+  "cache_frames_per_mode": 179112,
+  "cache_modes": [
+    "raw",
+    "headword",
+    "compatible"
+  ],
+  "cache_budgets": [
+    0,
+    8388608
+  ],
+  "capture_sha256": {
+    "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
+    "docs/copula-expectation-cache-parity.json": "6c84435203c9e684dceb1d4469d57e1800beff1ae6843fcf81d3910dd2c4801b"
+  },
+  "log_sha256": {
+    "performance-timing": "3dfdfbe5ec1b525e509b59b57b7ac4ba7476a5c4b8307ed2bb29f287a74d659a",
+    "cache-parity": "ce4b0c5abd96d25e8a6579ccc1de1073871780b78bc98630e4e25fa4b68cf36f",
+    "performance-audit": "b11c172d8ddaa92719f8c4f9877aa31a9633901b6bc574b55afaae6e5db9bfa2"
+  },
+  "scope": "Archived actual paired measurements and byte-identical cache-budget streams verified offline. Timing session 45576 completed with exit 0; cache producer completed all six streams. No statistical-equivalence or constant-clock claim."
+}

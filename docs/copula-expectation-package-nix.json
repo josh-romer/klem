@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020s",
+  "state": "passed",
+  "pid": 2241101,
+  "started_at": "2026-10-07T03:10:21.520084+00:00",
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#checks.x86_64-linux.klem",
+    ".#checks.x86_64-linux.web-assets"
+  ],
+  "snapshot": {
+    "head": "364854755c826376a62a29e7fcd691dc087076c2",
+    "staged_diff_sha256": "4be2cc6c6954486ca07cf9274dd1ad839a4224fda919a2e348328570c8649bd7",
+    "files": {
+      "docs/copula-expectation-broad.json.gz": {
+        "sha256": "e5dc5a77635571aeff6238a0df5724e285613876a07c41e97bb3cc624724f54f",
+        "bytes": 20699
+      },
+      "docs/copula-expectation-corpora.json.gz": {
+        "sha256": "fccc554b75f14a5ceba4d04f1c0cde27702d98f41fcd9cb02250f3e25d473e1a",
+        "bytes": 3817184
+      },
+      "docs/copula-expectation-full-source.json.gz": {
+        "sha256": "cca9e6146da9531ba37880cbe59955a5248df8b13230b468794b970405f8c77a",
+        "bytes": 1041430
+      },
+      "docs/copula-expectation-individual.json.gz": {
+        "sha256": "08c137e85bced2ad0c7e869fe5416ee199f153b401ed0b13d718e77bea69f17e",
+        "bytes": 50657
+      },
+      "docs/copula-expectation-main-browser.json.gz": {
+        "sha256": "3d2b1930a4af41472801ef849df696eeb91b69ae0cab992714ca017f1d301cb0",
+        "bytes": 211240
+      },
+      "docs/copula-expectation-main-browser.log.gz": {
+        "sha256": "3d05e30a92dbc71a771aa0fa2c746feacae353b4f37a97f58cf897bf56c336b9",
+        "bytes": 188
+      },
+      "docs/copula-expectation-main-checks.json": {
+        "sha256": "9ba94148a3f958dbb7e26fa00b35d3774cb57eaed3539ee1c24de6329c6048ae",
+        "bytes": 1349
+      },
+      "docs/copula-expectation-main-clippy.log.gz": {
+        "sha256": "3114feef7c14b27532c78e36674d7d72361108d984c4f05bdf232abe0b816c34",
+        "bytes": 467
+      },
+      "docs/copula-expectation-main-fmt.log.gz": {
+        "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+        "bytes": 20
+      },
+      "docs/copula-expectation-main-native-closure.json.gz": {
+        "sha256": "6f62ca38a8e947a83b6176832f678d99d2bfa617ac4c6671719e79a66b7f6529",
+        "bytes": 25155
+      },
+      "docs/copula-expectation-main-pinned-corpus.log.gz": {
+        "sha256": "0d080d88c2cc1e5899161c3d854b0f3bdccc536e79e6db8624ea435c026d185f",
+        "bytes": 251
+      },
+      "docs/copula-expectation-main-production.json": {
+        "sha256": "70e0c11880362be88c080309d3b30ed929c32c0f970a3cac557d578f3d2d63ad",
+        "bytes": 23994
+      },
+      "docs/copula-expectation-main-production.log.gz": {
+        "sha256": "f17d1cff23bd5c80ece11c2cb65b8280d579062593aa61f41c6f519f96e3ecbd",
+        "bytes": 339
+      },
+      "docs/copula-expectation-main-rust.json": {
+        "sha256": "ee50160f4d69b378dae3eefeaf33fd9b1d7f30025f6bc9be759501e788ad39a9",
+        "bytes": 4013
+      },
+      "docs/copula-expectation-main-rust.log.gz": {
+        "sha256": "1309e73b071514dabe5f47ea5b97532cb282ab846e24d7c91734f876f63873ab",
+        "bytes": 23039
+      },
+      "docs/copula-expectation-main-sources.json.gz": {
+        "sha256": "d8b9ccd9e24324a3ace038d5da4b3f49bdb145783a4accbc86ffbe6e8ee5e4fb",
+        "bytes": 1593179
+      },
+      "docs/copula-expectation-native-closure.json.gz": {
+        "sha256": "05b28a5dbcfc8d33adcfb6ce428839777df6527f0c26b960e69569f96369c720",
+        "bytes": 52226
+      },
+      "docs/copula-expectation-prototype-full-rust.json": {
+        "sha256": "72b094c7eb23a9f24c495a1849e164eccf2035d0b1930425127a1bc985cfa992",
+        "bytes": 2377
+      },
+      "docs/copula-expectation-prototype-full-rust.log.gz": {
+        "sha256": "57419f47a06a284faa4ebee0623b347b171cff2ae3712795664418832525164c",
+        "bytes": 22965
+      },
+      "docs/copula-expectation-prototype-runtime.json.gz": {
+        "sha256": "6050ac307042a0dcad8f73d3fac5d9224163897884afc7ea71f94afd1303b208",
+        "bytes": 330629
+      },
+      "docs/copula-expectation-source-preparation.json.gz": {
+        "sha256": "f54e347444e129e9070ab484087eab9c4c668c65e0485758897c8bb206536e9b",
+        "bytes": 9475
+      },
+      "docs/copula-expectation-source-streams.json.gz": {
+        "sha256": "24df5190b46b0f4a10de4e3535132145b31e802cde994e9f682ade1667d7048c",
+        "bytes": 33265324
+      },
+      "docs/coverage-checklist.md": {
+        "sha256": "5ce6c9b0eda0e215d02a8670053221ee1c3e7859706930b5bf36fa708578377b",
+        "bytes": 483275
+      },
+      "docs/degree-expectation-release-sources.json.gz": {
+        "sha256": "f367526d729337ab01c7df457d63faa7501b9149cc7b388818dbf0d7098a049c",
+        "bytes": 970545
+      },
+      "docs/inventory-review-queue.json": {
+        "sha256": "707dd4999c1908b6c3e2d8ad35569b606b2b417dcef3bc167d6075569539a022",
+        "bytes": 3382879
+      },
+      "docs/inventory-reviews.json": {
+        "sha256": "bad5e64815cb03ccce1136813ca6e5ab37750708b9f11ce868d184edb3bb034b",
+        "bytes": 1264383
+      },
+      "flake.nix": {
+        "sha256": "c5718139abd909bf1b39ad985a30eb98974392c8b06ef01d35da65e5fd15e070",
+        "bytes": 38206
+      },
+      "src/grammar.rs": {
+        "sha256": "ed469a539a6637e1ec9fb230d2fa44e1b62774ba9cb321d81a496229737df5ed",
+        "bytes": 104579
+      },
+      "tests/copula-expectation-before.json": {
+        "sha256": "4ef2b15b9d5cc1caf0560b58e13db5bf8198a920bc9b4cdb73d4d720e11a5c35",
+        "bytes": 120171
+      },
+      "tests/copula-expectation-full-source.json": {
+        "sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+        "bytes": 22458370
+      },
+      "tests/copula-expectation-validity.json": {
+        "sha256": "f2743e819aa3521c5039dde026b1303dceaf67de84a4cbb9f34e4b450799f854",
+        "bytes": 25802
+      },
+      "tests/copula_expectation.rs": {
+        "sha256": "3a85477b5b1b46334fadab7aa8531202356894f1308ed2c48896bf5cbac0e75a",
+        "bytes": 11231
+      },
+      "tests/copula_expectation_support/parent.rs": {
+        "sha256": "6e426ebb7fc8a1942087b2c56ae831e7f0a6ae6ab13df9d555dcce45dcc67da9",
+        "bytes": 1398
+      },
+      "tests/counterfactual_ryeon.rs": {
+        "sha256": "5c92bbff24812f0ddf12ff5b004be51933e44d5e01dc6407257f4da9db700d3b",
+        "bytes": 11022
+      },
+      "tests/degree_rimankeum.rs": {
+        "sha256": "09e4e858bbda06fe56d2cb5b37cffd1ba8942718140c945925ab1f892a06430b",
+        "bytes": 10221
+      },
+      "tests/fixtures/validity.json": {
+        "sha256": "3902868700881699b27b220b6c7003ac81e60f53b401aee3e6b06ca2f6e4057c",
+        "bytes": 31405752
+      },
+      "tests/validity.rs": {
+        "sha256": "199d9d3e5db9c93147e544d2bcec3338a4c9d1e8721d574e30ddd6b360687e33",
+        "bytes": 4004
+      },
+      "tools/copula_expectation_audit.py": {
+        "sha256": "a05dd42f7da84d290d50c38cef05dcf0ca73e38291fdacdb6d60bea92fd8d5c8",
+        "bytes": 13374
+      },
+      "tools/copula_expectation_browser.py": {
+        "sha256": "5aabc927f47ba16969d7b06a6a9077cad5786beb60e285ef570a190c9abc8d8b",
+        "bytes": 6616
+      },
+      "tools/copula_expectation_production.py": {
+        "sha256": "a7c7e6646ab17f80a94f305a0c323dc3ac1d08ece0eacafcefd00ecb60f3b71a",
+        "bytes": 5623
+      },
+      "tools/degree_expectation_release.py": {
+        "sha256": "02089a9eb35870f06413a1c3bd719493ad49b4744e1bb0cd87fb83d1405accd4",
+        "bytes": 9864
+      },
+      "tools/test_copula_expectation_audit.py": {
+        "sha256": "5bf58e767f5e800b5410981797ddd8d96129fb7ee746b703ed604af38dfd59e7",
+        "bytes": 1695
+      },
+      "tools/test_degree_expectation_release.py": {
+        "sha256": "b24f3218dacc753528a7a22ed357bb06c479059d9cd6f1c38202ce87eb0c3b9c",
+        "bytes": 1795
+      },
+      "web/tests/copula-expectation.mjs": {
+        "sha256": "5ec724708dbb72371da78dbbe9cf8c98b1e996ec0b82f28b404920f052a0fb04",
+        "bytes": 6339
+      }
+    }
+  },
+  "exit_code": 0,
+  "finished_at": "2026-10-07T03:33:57.159229+00:00",
+  "snapshot_unchanged": true,
+  "log_sha256": "9d6d4a6c274e40205ed3149087cd9f197aebf8e9b7d0f11c9dc17571cd5710f1",
+  "outputs": [
+    "/nix/store/al7vdmyi8h0gsjbnz59qab3vvskkrj0l-klem-0.1.0",
+    "/nix/store/i160q25abpzbiqfigz3rp49n377hyksy-klem-web-assets-0.1.0"
+  ]
+}

@@ -13,4 +13,6 @@ class Controls(unittest.TestCase):
  def test_label_borrows_suffix(self):self.reject(lambda v:v[5]['-담']['sources'][0].update(id=88906),'source identities')
  def test_tension_owner_reclassified(self):self.reject(lambda v:v[1]['entries']['krdict:63516'].update(pos='형용사'),'Native projection')
  def test_duplicated_native_identity(self):self.reject(lambda v:v[2]['LexicalResource']['Lexicon']['LexicalEntry'].append(copy.deepcopy(v[2]['LexicalResource']['Lexicon']['LexicalEntry'][0])),'identity collision')
+ def test_missing_label_fixture_entry(self):self.reject(lambda v:v[6]['LexicalResource']['Lexicon']['LexicalEntry'].pop(),'label fixture source identities')
+ def test_label_fixture_source_loss(self):self.reject(lambda v:v[6]['LexicalResource']['Lexicon']['LexicalEntry'][0].pop('feat'),'complete label fixture Native entries')
 if __name__=='__main__':unittest.main()

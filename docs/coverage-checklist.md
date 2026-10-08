@@ -3313,6 +3313,9 @@ review remains open under the completion review below.
   All eight broad streams preserve 1,128,312 frames and prior paths/order;
   37 new hypotheses have stable IDs and complete contexts, with no new spacing
   option. Annotated matches are unchanged; ambiguity means increase slightly.
+  The viewer attribution regression passes after importing all four complete
+  Native ending entries; eight source-audit controls pass. Full Rust and
+  candidate-cohort retries are running after retained capture/build failures.
   Candidate cohorts, normal Nix/installed validation, quiet performance,
   wider distributions, contextual senses and independent review remain open.
 

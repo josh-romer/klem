@@ -2254,3 +2254,9 @@ POS tension remains unknown; original source entries are not reclassified.
 The optional name lexicon at `src/dictionary/proper_names.json` separately
 retains five complete KAIST training contexts, original PROPN/nq tags and
 CC BY-SA 4.0 corpus attribution. It does not reuse the unrelated KRDict IDs.
+
+`krdict-self-question-labels.json` contains the four complete, unmodified Native
+ending entries 73881, 73882, 73883 and 73891 from `self-question-native.json`.
+The viewer label-source test imports this subset alongside its existing fixtures
+to avoid duplicating unrelated vocabulary IDs. Multilingual translations, senses,
+examples and the NIKL/CC BY-SA 2.0 KR attribution remain intact.

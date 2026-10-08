@@ -5,7 +5,7 @@ from native_lmf import entry
 ROOT=Path(__file__).resolve().parents[1]
 def read(path):
  p=Path(path);return json.loads(gzip.decompress(p.read_bytes()) if p.suffix=='.gz' else p.read_bytes())
-def inspect(prepared,closure,native,proposals,suite,labels):
+def inspect(prepared,closure,native,proposals,suite,labels,label_fixture):
  original=prepared['complete_imported_entries'];endings=['krdict:73881','krdict:73882','krdict:73883','krdict:73891']
  assert set(original)==set(endings)|{'krdict:91482','krdict:88906'},'separate ending/suffix identities'
  assert all(original[i]['pos']=='어미' for i in endings),'ending roles'
@@ -15,6 +15,9 @@ def inspect(prepared,closure,native,proposals,suite,labels):
   value=entry(raw);assert value['id'] not in projected,'Native identity collision';projected[value['id']]=value
  assert projected==closure['entries'] and len(projected)==51,'complete Native projection'
  assert all(projected[i]==e for i,e in original.items()),'original source entries'
+ label_entries=label_fixture['LexicalResource']['Lexicon']['LexicalEntry']
+ assert len(label_entries)==4 and {entry(e)['id'] for e in label_entries}==set(endings),'label fixture source identities'
+ assert all(e==next(raw for raw in native['LexicalResource']['Lexicon']['LexicalEntry'] if raw['val']==e['val']) for e in label_entries),'complete label fixture Native entries'
  groups=[];text=''
  for ident in endings:
   for sense in original[ident]['senses']:
@@ -40,5 +43,5 @@ def inspect(prepared,closure,native,proposals,suite,labels):
  assert any('웃기담' in line for s in original['krdict:73883']['senses'] for g in s['examples'] for line in g),'independent tension attestation'
  return {'complete_groups':21,'native_entries':51,'required':25,'forbidden':4,'independent_contextual_review_complete':False}
 def inputs():
- return [read(ROOT/p) for p in ['docs/self-question-source-preparation-retry1.json.gz','docs/self-question-native-closure-retry2.json.gz','tests/fixtures/self-question-native.json','tests/fixtures/self-question-proposals.json','tests/fixtures/self-question-validity.json','web/src/grammar-labels.json']]
+ return [read(ROOT/p) for p in ['docs/self-question-source-preparation-retry1.json.gz','docs/self-question-native-closure-retry2.json.gz','tests/fixtures/self-question-native.json','tests/fixtures/self-question-proposals.json','tests/fixtures/self-question-validity.json','web/src/grammar-labels.json','tests/fixtures/krdict-self-question-labels.json']]
 if __name__=='__main__':print(inspect(*inputs()))

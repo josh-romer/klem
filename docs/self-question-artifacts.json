@@ -274,8 +274,52 @@
     "docs/integration-validity-retry1.log.gz": {
       "bytes": 421,
       "sha256": "93ab540668e51eba38a84558169b46b8773d4c196c84f38b4e6843810251de24"
+    },
+    "docs/integration-full-tests.log.gz": {
+      "bytes": 1057,
+      "sha256": "6c8fd9f7f9000f510aa2c4364a1859d4015b4d9b452db811e199a4758fb54e45"
+    },
+    "docs/integration-full-tests-retry1.log.gz": {
+      "bytes": 4606,
+      "sha256": "a2e429b965882fb3dce192c2ebc0e4d6ecce2a737b468cafa59161ce59674f62"
+    },
+    "docs/integration-label-fixture-retry1.log.gz": {
+      "bytes": 777,
+      "sha256": "aa43682e9aee4c2599c5ff0f27bac2b4b19ed406cd4ba50e553cd0ac29c0f1cb"
+    },
+    "docs/integration-self-question-source-retry1.log.gz": {
+      "bytes": 125,
+      "sha256": "f15d01bdbc4b4260bc67c3af882cd136f4b9ea6638e21bdcf6005d77ca97d52b"
+    },
+    "docs/integration-self-question-controls-retry1.log.gz": {
+      "bytes": 54,
+      "sha256": "2f52bb04a6df98bac268856656f8733cf941a43d44e6990c72c693fb8f6c6602"
+    },
+    "docs/self-question-cohorts.log.gz": {
+      "bytes": 344,
+      "sha256": "65bceeb748117d4b22aaebbca5f85c885e7a664df5db365687ad2f0a3c145dbe"
+    },
+    "docs/self-question-cohorts-failed-witnesses.py.gz": {
+      "bytes": 2666,
+      "sha256": "6819f900c68ef880f7981d8bd532bb6ed8a038a645ce7dd2bd68639a4e176e7e"
     }
   },
   "full_coverage_complete": false,
-  "scope": "Four updates/four new production or regression files against the frozen named-title snapshot. Authored native-source analyses and exact dictionary witnesses, not annotated gold; source tensions retained."
+  "scope": "Four updates/four new production or regression files against the frozen named-title snapshot. Authored native-source analyses and exact dictionary witnesses, not annotated gold; source tensions retained.",
+  "integration_label_fixture_fix": {
+    "state": "focused-test-and-eight-source-controls-passed",
+    "source_fixture": "tests/fixtures/krdict-self-question-labels.json",
+    "complete_unmodified_native_ids": [
+      73881,
+      73882,
+      73883,
+      73891
+    ],
+    "failure_logs": [
+      "docs/integration-full-tests.log.gz",
+      "docs/integration-full-tests-retry1.log.gz"
+    ],
+    "full_suite_retry": "running; not yet a passed claim",
+    "failed_cohort_witness_capture": "retained; corrected retry running"
+  }
 }

@@ -58,3 +58,20 @@ pass, including coordinated self-question fixture/ledger changes. Six portable
 source controls pass; the source audit independently reconstructs all 51 Native
 entries and every complete example group. Both new audit tools and controls
 are included in the Nix inventory source and commands.
+
+The first full integration Rust run failed because the viewer's combined offline
+grammar-label fixture did not yet import the new four ending IDs. The fix adds
+a subset containing all four complete, unmodified multilingual Native entries;
+the affected attribution test passes. The source audit also verifies exact
+subset identities and full entries, with eight controls passing. The first
+full retry exhausted disk space during compilation. Its generated build cache
+was removed; the failure log remains, and a retry using debug=0 and no
+incremental compilation is running. A full-suite pass is not yet claimed.
+
+The initial complete candidate-cohort replay preserved every earlier path and
+dictionary assessment, with ten changed corpus surfaces and one changed
+historical surface. Report capture then failed when it assumed every historical
+surface belonged to the shared judgment ledger. The preserved historical
+provenance identifies 상담 in the unchanged -씩 adverb fixture instead. The
+corrected retry resolves the original fixture and pointer, checks its hash, and
+retains the original record. Neither failure changes prior sources or judgments.

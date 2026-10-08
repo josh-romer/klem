@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "state": "integrated-main-validation-passed-package-running",
+  "state": "integrated-main-and-nix-release-tests-passed-install-retry-running",
   "main_compile_frontend_inputs": 957,
   "full_main_rust": {
     "passed": 1059,
@@ -56,14 +56,14 @@
   },
   "broader_added_paths_unjudged": 44,
   "remaining": [
-    "Actual current-source Nix package execution (running)",
+    "Actual current-source Nix package retry (running after install ENOSPC)",
     "Packaged CLI/adapter/browser/launcher and historical source reconstruction",
     "Quiet paired release performance and complete current combined inventory gate",
     "Broader owner/class/marker/composition and general predicate/auxiliary spacing",
     "Contextual review of44broad additions, sense choice, precision and independent Korean-language review"
   ],
   "full_goal_complete": false,
-  "scope": "Complete current-main validation proves the integrated finite structural scope, retained previous candidates, all original annotated outcomes and actual browser/CLI/dictionary behavior. Source-scoped reviews and tests do not establish complete Korean morphology, sense selection or linguistic precision. Nix package execution is independently running on the same frozen957inputs.",
+  "scope": "Complete current-main validation proves the integrated finite structural scope, retained previous candidates, all original annotated outcomes and actual browser/CLI/dictionary behavior. Source-scoped reviews and tests do not establish complete Korean morphology, sense selection or linguistic precision. The first actual Nix release suite passed1059tests on the same frozen957inputs but installation failed from disk exhaustion. The failed attempt is retained; identical packages are being retried after safe cache relocation.",
   "proof_hashes": {
     "literary-question-geona-main-pinned-corpus.log.gz": "85c74ec141a28c90b4b6b772473eb0fdf58e5174aa0ccd304452512235c8f975",
     "literary-question-geona-main-runtime-controls.log.gz": "454e50178c4dab7bae74e461863143d164441459c96d3ffca510a46f8856f217",
@@ -98,6 +98,30 @@
     "literary-question-geona-main-browser-runtime.json.gz": "b3513b5a17313445d47ab7ca78df46ebc9cfd988881c23d3a2389e2d9d23c142",
     "literary-question-geona-main-adapter-replay.py.gz": "fce424f009387e3f33b890c9f59d6c4b0ad4325fba79b8ab430b7ace12574fac",
     "literary-question-geona-main-mobile.png": "01232672ab1147b8ad524e75766d0728e4369299c33c0543dfaa868831c6136c",
-    "literary-question-geona-main-adapter-build.json.gz": "352a8b3431499516f1e630e1b3e133b82d50cc557e10fbe9d9b16eb5440ea6b3"
+    "literary-question-geona-main-adapter-build.json.gz": "352a8b3431499516f1e630e1b3e133b82d50cc557e10fbe9d9b16eb5440ea6b3",
+    "literary-question-geona-package-first.nix.gz": "95f886e2b877d60c8962ce1ebf6615c3f3ae51ab5e7f698822309614d34bd7fc",
+    "literary-question-geona-package-first.log.gz": "1bcee7d97562d2553bd0a1b404c81683ccb8cbdc65a71b862f256de9154079d5",
+    "literary-question-geona-package-first.json.gz": "93a48c7cafe0594ac852e36054c4ed626d7e6727eaa61f8c3e32dbd748b60b93",
+    "literary-question-geona-package-first.supervisor.log.gz": "3e13e7d41ffad9fc9f9c9f8ee27134cd3a346536f73eb7d3c66b64876c1f0aaf",
+    "literary-question-geona-package-first.py.gz": "5b7333f2847a7f3ef9689dce1e545841f874b50de6cc7d50a43d02ade0c89231"
+  },
+  "nix_first_attempt": {
+    "state": "failed-at-install",
+    "exit_code": 1,
+    "release_tests": {
+      "passed": 1059,
+      "failed": 0,
+      "ignored": 1,
+      "batches": 227
+    },
+    "all957inputs_unchanged": true,
+    "reason": "Root filesystem full during copy of the CLI/server to the Nix store; release build/check phases finished successfully. Failed receipt/log/producer/expression retained.",
+    "receipt": "docs/literary-question-geona-package-first.json.gz",
+    "log": "docs/literary-question-geona-package-first.log.gz"
+  },
+  "nix_retry": {
+    "state": "running",
+    "same957inputs_frozen": true,
+    "storage_recovery": "All49962122bytes of the ignored annotated corpus cache retained via checked relocation; original paths and hashes unchanged. SQLite cache was also retained through its original path, but an existing unowned server retains the old inode, so no physical266MBsaving is claimed and that server was not stopped."
   }
 }

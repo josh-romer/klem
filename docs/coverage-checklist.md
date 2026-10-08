@@ -3105,6 +3105,12 @@ review remains open under the completion review below.
   corrected to test the actual kko capture positively before its mutations;
   all eight corrected checks pass. Previous gate evidence remains unchanged.
 
+  The [first actual Nix release suite](literary-question-geona-package-first.log.gz)
+  also passes all 1,059 tests with all 957 inputs unchanged. Installation then
+  fails from root-filesystem exhaustion. The failed receipt/log are retained;
+  identical packages are being retried after checked relocation of the ignored
+  downloaded corpus cache. This does not prove installed package success.
+
   Remaining: actual current-source Nix packages and their CLI/adapter/browser/
   launcher validation, source reconstruction, performance and combined inventory
   gates; broader class/marker/derivation/auxiliary/copula owner

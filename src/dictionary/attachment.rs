@@ -2258,6 +2258,36 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && let Some(i) = ending
+                        && analysis.morphemes[i].form == "을거나"
+                    {
+                        // Own marker/class facts only. Both source entries
+                        // restrict bare forms to verbs, but 80970 also gives
+                        // original 좋을거나. Retain that tension as Unknown.
+                        let prefinals: Vec<_> = morphs.iter().filter_map(|c| match c {
+                            Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Prefinal => Some(analysis.morphemes[*j].form.as_str()),
+                            _ => None,
+                        }).collect();
+                        let owner = if derived_adjective {
+                            Some(PredicateClass::Adjective)
+                        } else if unclassified_derivation {
+                            None
+                        } else if class.or(negative_lexical).is_some() {
+                            class.or(negative_lexical)
+                        } else if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {
+                            match pos {
+                                "형용사" | "보조 형용사" => Some(PredicateClass::Adjective),
+                                "동사" | "보조 동사" => Some(PredicateClass::Verb),
+                                _ => None,
+                            }
+                        } else { None };
+                        if analysis.rules.iter().any(|r| r == "copula.omitted_geona")
+                            || prefinals.iter().any(|p| !matches!(*p, "시" | "었" | "겠"))
+                            || (!matches!(owner, Some(PredicateClass::Verb))
+                                && !prefinals.iter().any(|p| matches!(*p, "었" | "겠")))
+                        { status = Compatibility::Unknown; }
+                    }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
                         && analysis.morphemes[i].form == "을꼬"
                         && (analysis.rules.iter().any(|r| r == "copula.omitted_kko")
                             || morphs.iter().any(|c| matches!(c,

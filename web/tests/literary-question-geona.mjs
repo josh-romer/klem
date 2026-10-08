@@ -1,0 +1,98 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {gunzipSync} from 'node:zlib';
+const root=process.env.KLEM_ROOT,proto=root;
+assert.ok(root);
+const url=process.env.KLEM_WEB_URL,cli=process.env.KLEM_BIN,prefix=process.env.KLEM_CAPTURE_PREFIX;
+assert.ok(url&&cli&&prefix);
+const json=async p=>JSON.parse(await readFile(p));
+const gz=async p=>JSON.parse(gunzipSync(await readFile(p)));
+const hash=async p=>createHash('sha256').update(await readFile(p)).digest('hex');
+const cases=await json(proto+'/tests/fixtures/literary-question-geona-original-cases.json');
+const boundaries=(await json(proto+'/tests/fixtures/literary-question-geona-authored-boundaries.json')).cases;
+const ownerCases=(await json(proto+'/tests/fixtures/literary-question-geona-owner-extension-cases.json')).cases;
+boundaries.push(...ownerCases);
+const source=await gz((process.env.KLEM_GEONA_SOURCE ?? root+'/docs/literary-question-geona-source-discovery.json.gz'));
+const replay=await gz((process.env.KLEM_GEONA_REPLAY ?? root+'/docs/literary-question-geona-prototype-source-replay.json.gz'));
+const owners=(await gz((process.env.KLEM_GEONA_OWNERS ?? root+'/docs/literary-question-geona-complete-owner-preparation.json.gz'))).complete_native_entries;
+const catalog=await json(proto+'/web/src/grammar-labels.json');
+const match=(a,c)=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(c.lemmas)
+ &&JSON.stringify(a.lemmas.map(l=>l.kind))===JSON.stringify(c.lemma_kinds)
+ &&JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(c.morphemes)
+ &&JSON.stringify(a.morphemes.map(m=>m.kind))===JSON.stringify(c.morpheme_kinds)
+ &&c.required_rules.every(r=>a.rules.includes(r));
+const {chromium}=createRequire((process.env.KLEM_DEPENDENCY_ROOT ?? root)+'/web/package.json')('playwright');
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,args:['--no-sandbox']});
+const errors=[],responses=[],exports=[],diagrams=[],native=[],opened=[],modeJudgments=[];
+try{
+ const page=await browser.newPage({viewport:{width:1440,height:1000},acceptDownloads:true});
+ page.on('pageerror',e=>errors.push(String(e)));await page.goto(url);
+ const analyze=async text=>{
+  await page.getByLabel('Your sentence',{exact:true}).fill(text);
+  const wait=page.waitForResponse(r=>r.url().endsWith('/api/analyze'));
+  await page.getByRole('button',{name:'Analyze sentence',exact:true}).click();
+  const response=await wait;assert.equal(response.status(),200);
+  const api=await response.json();await page.waitForFunction(t=>document.querySelector('.sentence')?.textContent===t,text);return api;
+ };
+ for(const encoding of ['NFC','NFD']){
+  const response=await page.request.post(url+'/api/analyze',{data:{text:source.input.normalize(encoding)}});
+  assert.equal(response.status(),200);const apiSource=await response.json();
+  const expected=replay.runs.find(r=>r.encoding===encoding&&r.mode==='raw').jsonl.trim().split('\n').map(JSON.parse);
+  assert.deepEqual(apiSource.records,expected);assert.equal(expected.length,116);
+  responses.push({encoding,response:apiSource});
+  const words=[...new Set([...cases,...boundaries].map(c=>c.surface))].join(' ').normalize(encoding);
+  const api=await analyze(words);
+  for(const [mode,flag] of [['raw',null],['headword','--dict-only'],['compatible','--dict-compatible']]){
+   if(flag){await page.getByLabel('Dictionary matches only').check();if(mode==='compatible')await page.getByLabel('Exclude known grammar conflicts').check();else await page.getByLabel('Exclude known grammar conflicts').uncheck();}else await page.getByLabel('Dictionary matches only').uncheck();
+   const records=execFileSync(cli,['text','-','--dictionary',(process.env.KLEM_DICTIONARY ?? root+'/data/dictionaries/krdict/krdict.db'),...(flag?[flag]:[])],{input:words,encoding:'utf8',maxBuffer:64*1024*1024}).trim().split('\n').map(JSON.parse);
+   const wait=page.waitForEvent('download');await page.getByRole('button',{name:'Export JSON',exact:true}).click();const download=await wait;
+   const exported=JSON.parse(await readFile(await download.path(),'utf8'));assert.deepEqual(exported.records,records);
+   exports.push({encoding,mode,request:{text:words},records});
+   for(const c of [...cases.map(c=>({...c,...c.expected,expected_presence:{raw:true,headword:true,compatible:true}})),...boundaries]){
+    const record=records.find(r=>r.analysis?.normalized===c.surface);assert.ok(record,c.id);
+    const present=record.analysis.analyses.some(a=>match(a,c));assert.equal(present,c.expected_presence[mode],c.id+' '+mode);
+    modeJudgments.push({encoding,mode,case_id:c.id,present,expected_present:c.expected_presence[mode]});
+   }
+  }
+  await page.getByLabel('Dictionary matches only').uncheck();
+  for(const c of cases){
+   const record=api.records.find(r=>r.analysis?.normalized===c.surface),index=record.analysis.analyses.findIndex(a=>match(a,c.expected));assert.ok(index>=0,c.id);
+   const card=page.getByRole('region',{name:'Sentence breakdown',exact:true}).locator('.breakdown-word').filter({has:page.locator('.breakdown-surface > span',{hasText:new RegExp('^'+c.surface.normalize(encoding)+'$')})});
+   await card.locator('select').selectOption(String(index));
+   const a=record.analysis.analyses[index],order=api.breakdowns[api.records.indexOf(record)][index];assert.ok(order);
+   const position=order.findIndex(v=>'morpheme' in v&&a.morphemes[v.morpheme].form==='을거나');assert.ok(position>=0);
+   const atom=card.locator('.breakdown-part').nth(position),label=await atom.locator('.part-gloss').textContent(),title=await atom.getAttribute('title');
+   assert.equal(label,'Self / opinion question');for(const entry of catalog['-을거나'].sources)assert.ok(title.includes(String(entry.id)));
+   diagrams.push({case_id:c.id,encoding,index,analysis:a,order,label,title});
+  }
+  if(encoding==='NFC'){
+   const last=cases.at(-1),card=page.getByRole('region',{name:'Sentence breakdown',exact:true}).locator('.breakdown-word').filter({has:page.locator('.breakdown-surface > span',{hasText:new RegExp('^'+last.surface+'$')})});
+   const atom=card.locator('.breakdown-part').filter({has:page.locator('.part-gloss',{hasText:'Self / opinion question'})});
+   for(const id of ['krdict:80970','krdict:80972']){
+    await atom.click();const head=owners[id].headword;
+    await page.locator('.entry-choices button').filter({has:page.locator('span',{hasText:new RegExp('^'+head+'(?:[0-9]+)?$')})}).click();
+    await page.waitForFunction(h=>document.querySelector('.entry-heading h2')?.textContent?.includes(h),head);
+    for(const sense of owners[id].senses)assert.ok((await page.locator('.entry-content').textContent()).includes(sense.definition));opened.push({id,head});
+   }
+   const scene=['삼을거나','좋을거나','어쩔거나','한잔할거나'],visual=await analyze(scene.join(' '));
+   for(const word of scene){
+    const c=cases.find(c=>c.surface===word),r=visual.records.find(r=>r.analysis?.normalized===word),at=r.analysis.analyses.findIndex(a=>match(a,c.expected));assert.ok(at>=0);
+    const card=page.getByRole('region',{name:'Sentence breakdown',exact:true}).locator('.breakdown-word').filter({has:page.locator('.breakdown-surface > span',{hasText:new RegExp('^'+word+'$')})});await card.locator('select').selectOption(String(at));
+    assert.ok((await card.locator('.part-gloss').allTextContents()).includes('Self / opinion question'));
+   }
+   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.evaluate(async()=>{await document.fonts.ready;});
+   await page.getByRole('region',{name:'Sentence breakdown',exact:true}).evaluate(el=>el.scrollIntoView({behavior:'instant',block:'start'}));await page.screenshot({path:prefix+'-desktop.png'});
+   await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+   await page.getByRole('region',{name:'Sentence breakdown',exact:true}).evaluate(el=>el.scrollIntoView({behavior:'instant',block:'start'}));await page.screenshot({path:prefix+'-mobile.png'});await page.setViewportSize({width:1440,height:1000});
+  }
+ }
+ for(const [id,expected] of Object.entries(owners)){
+  const r=await page.request.post(url+'/api/entry',{data:{id}});assert.equal(r.status(),200);const response=await r.json();assert.deepEqual(response.entry,expected,id);native.push({id,response});
+ }
+ assert.equal(diagrams.length,16);assert.equal(exports.length,6);assert.equal(native.length,241);assert.equal(modeJudgments.length,492);assert.equal(opened.length,2);assert.deepEqual(errors,[]);
+ await writeFile(prefix+'-browser.json',JSON.stringify({schema_version:1,scope:'Actual configured SolidJS browser:2complete source APIs,8original diagrams in both encodings,6exact CLI exports,47boundary and27typed owner cases with241complete Native endpoints. Conditional and Native-policy-only cases retain their individual filter expectations. Informal source register and adjective-note tension are preserved; context, main integration, package/performance and independent review remain separate',cli_sha256:await hash(cli),producer_sha256:await hash(new URL(import.meta.url)),catalog_sha256:await hash(proto+'/web/src/grammar-labels.json'),responses,exports,diagrams,native,opened,modeJudgments,errors},null,2)+'\n');
+ console.log('Passed16 original diagrams,6 exact exports,241 complete Native endpoints,492 finite mode checks and2x116 source API frames.');
+}finally{await browser.close();}

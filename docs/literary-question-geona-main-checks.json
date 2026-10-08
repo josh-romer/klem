@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "state": "integrated-main-validation-passed-package-running",
+  "main_compile_frontend_inputs": 957,
+  "full_main_rust": {
+    "passed": 1059,
+    "failed": 0,
+    "ignored": 1,
+    "batches": 227
+  },
+  "pinned_downloaded_corpus_test_passed": true,
+  "clippy_warnings_denied_passed": true,
+  "format_and_frontend_passed": true,
+  "global_ledger": {
+    "preserved_cases": 34920,
+    "new_cases": 61,
+    "required_additions": 50,
+    "forbidden_additions": 11,
+    "cases": 34981,
+    "required": 30858,
+    "forbidden": 4139,
+    "separate_conditional_native_cases": 21
+  },
+  "actual_main_cli": {
+    "finite_runs": 22,
+    "finite_frames": 1576,
+    "broad_streams": 8,
+    "broad_frames": 1128312,
+    "corpus_words": 32096,
+    "historical_words": 21406
+  },
+  "actual_main_adapter": {
+    "partitions": 4,
+    "original_gold_rows": 66570
+  },
+  "actual_main_browser": {
+    "source_diagrams": 16,
+    "exports": 6,
+    "finite_mode_checks": 492,
+    "complete_native_endpoints": 241,
+    "source_api_frames": 232,
+    "source_panes": 2,
+    "served_asset_bytes_compared": true,
+    "owned_server_stopped": true,
+    "desktop_mobile_inspected": true
+  },
+  "main_corruption_controls": {
+    "runtime_and_ledger": 17,
+    "adapter": 8,
+    "browser": 11
+  },
+  "prior_kko_adapter_controls_corrected": {
+    "actual_good_capture_now_tested": true,
+    "controls": 8,
+    "prior_weak_control_fixture": "The previous kko corruption tests loaded a historical go adapter capture, allowing rejection on producer identity before reaching the intended gold/count mutation. Current tests use the actual kko packaged capture and require its full positive audit to pass. The prior terminal combined-gate evidence is retained unchanged."
+  },
+  "broader_added_paths_unjudged": 44,
+  "remaining": [
+    "Actual current-source Nix package execution (running)",
+    "Packaged CLI/adapter/browser/launcher and historical source reconstruction",
+    "Quiet paired release performance and complete current combined inventory gate",
+    "Broader owner/class/marker/composition and general predicate/auxiliary spacing",
+    "Contextual review of44broad additions, sense choice, precision and independent Korean-language review"
+  ],
+  "full_goal_complete": false,
+  "scope": "Complete current-main validation proves the integrated finite structural scope, retained previous candidates, all original annotated outcomes and actual browser/CLI/dictionary behavior. Source-scoped reviews and tests do not establish complete Korean morphology, sense selection or linguistic precision. Nix package execution is independently running on the same frozen957inputs.",
+  "proof_hashes": {
+    "literary-question-geona-main-pinned-corpus.log.gz": "85c74ec141a28c90b4b6b772473eb0fdf58e5174aa0ccd304452512235c8f975",
+    "literary-question-geona-main-runtime-controls.log.gz": "454e50178c4dab7bae74e461863143d164441459c96d3ffca510a46f8856f217",
+    "literary-question-geona-main-frontend-build.json.gz": "e2729173afadbfdfb2e7ce9946c18a02d2b55fd67144f9b39fbdbddaa773d942",
+    "literary-question-geona-main-cli-replay.json.gz": "5cf8543ed65a835c83ec60bcad2988a412ceb9e23d40a9af054b2da4fb688710",
+    "literary-question-geona-main-catalog-format.json.gz": "e08e96052e872ea1e628a1a7ad4c2213f304081e1a6dc5ce503416711760f64a",
+    "literary-question-geona-main-adapter.json.gz": "f88a60986d111606b428ccbd94dd8a6d349a771d66a317a290c53a06095c16dc",
+    "literary-question-geona-main-runtime-audit.log.gz": "89e5ab4bdb307ee76e022f0a22d72a9db9d559f38e38fe1916c4942d0f272711",
+    "literary-question-geona-main-integration.py.gz": "58f8f446ffcc23697ddfbd67f4cbfe9537a83d9b1026dd9797cf10557fe06281",
+    "literary-question-geona-main-adapter-audit.log.gz": "49be0b59fadd07a219b5b29a353e37f2617cdc82fea6367cc2fb6218b33a1b33",
+    "literary-question-geona-main-browser.json.gz": "6d9342d1a027e1c02c3b0500636a77fa559dee0712dac684a06063b4c7482ce2",
+    "literary-question-geona-main-adapter-controls.log.gz": "392b8a9ca9033f649c64393d6532fd1fc8bb2ec936177b2995f166ec9f5e6819",
+    "literary-question-geona-main-adapter-build.log.gz": "07112b1786c1c3cfc1f8d0d689b1c1ee5410960d36443231fec367d0c982b7d5",
+    "literary-question-geona-main-browser-server.log.gz": "f5c45dc044fc3a5122ea94e8a36597ca971297e9e1063f539f59def2ebb673b7",
+    "literary-question-geona-main-cli-replay.log.gz": "84eeb04e9743521deb35d23e932dea161a072efde8256b80f6ff43f0a5e632f3",
+    "literary-question-geona-main-binaries.json.gz": "e6e4f074687062696ee730c81d6d6107e586c5b3f3702fe62ef92da2200fc3b7",
+    "literary-question-geona-main-full-rust.py.gz": "7dcb41c6594d87f5088ec5184b1ac33be2dfbb0f042a6248c225005100a1ec6f",
+    "literary-question-geona-main-adapter-build.py.gz": "97ba2a6daf093590d518b94786f4c13c436b3d189501e3b1f9d1d0c6c5654121",
+    "literary-question-geona-main-frontend.log.gz": "eb5647b8178394c8e738d1a3a0e9061ac4dc7c5eb713a224208bbff542480d64",
+    "literary-question-geona-main-browser.py.gz": "222545edaa3ffc4de55ce4cf8a63719f917ac5c631c7a0b264916bef24e30625",
+    "literary-question-geona-main-adapter.log.gz": "50ce235f0ca572c7d0162b3a89febbba01601e0ed71f4fa332dac33a3f019f84",
+    "literary-question-geona-main-full-rust.log.gz": "914e0adccb1bed8eeb2fc8611a83dcf244180b3c1c70ab0c09db4f90fa8c4b25",
+    "literary-question-geona-main-clippy.log.gz": "213bc280b7cac4c660d6fef7dec1746b0c556316c8afc7bfb61fc01af56e9b36",
+    "literary-question-geona-main-browser-driver.log.gz": "080fe7b0fd5e86f591f69595358dabef8032cadef4943c1371e23d09c31fc291",
+    "literary-question-geona-main-browser-audit.log.gz": "e91b91c695043b87c3c10387f2ebc87c43a2df1701d62f6192d6eb18c2456ae0",
+    "literary-question-geona-main-full-rust.json.gz": "508688c1d41c5d7611eb012444f821087a6e32987d7e53245db6b269b33f0d62",
+    "literary-question-geona-main-binaries.py.gz": "2ecde4d04d26d471e6c00f478a794ddbf067b20254ddb463f33b3b75044e3209",
+    "literary-question-geona-main-integration.json.gz": "09a1a82466232f63715dfd4e89089930b699cd7a9a15145f1ef90074a427732b",
+    "literary-question-geona-main-browser-supervisor.log.gz": "d2927d644883a2a6c770913e66f3cb9cfa63a6175b5d8ea1c56df551023f11f1",
+    "literary-question-geona-main-browser-controls.log.gz": "9c5f89ab41d382f372a97931ddd00952e1a45eda446164cfab5be81b15e57dca",
+    "literary-question-geona-main-desktop.png": "f5c817c30e08484b3970538a1adaaec2eb9ee3350fe1b71979455d26a1caedd4",
+    "literary-question-geona-main-browser-runtime.json.gz": "b3513b5a17313445d47ab7ca78df46ebc9cfd988881c23d3a2389e2d9d23c142",
+    "literary-question-geona-main-adapter-replay.py.gz": "fce424f009387e3f33b890c9f59d6c4b0ad4325fba79b8ab430b7ace12574fac",
+    "literary-question-geona-main-mobile.png": "01232672ab1147b8ad524e75766d0728e4369299c33c0543dfaa868831c6136c",
+    "literary-question-geona-main-adapter-build.json.gz": "352a8b3431499516f1e630e1b3e133b82d50cc557e10fbe9d9b16eb5440ea6b3"
+  }
+}

@@ -49,7 +49,7 @@
   "new_nix_source_audits": {
     "audits": 2,
     "corruption_controls": 31,
-    "full_nix_gate": false
+    "full_nix_gate": true
   },
   "proof_hashes": {
     "literary-future-kko-main-adapter-build.log.gz": "f7b06f103461b70da32d67a937489fa97e7c9350828e129c47528b125d6935c3",
@@ -85,14 +85,17 @@
     "literary-future-kko-packaged-desktop.png": "93abd69d6f9d987393e39801fbc0e4183eb852cfe36b2b453b64264a364f1bd8",
     "literary-future-kko-packaged-mobile.png": "8e0b1c42c50d28b50134a4135da97464ea726f6bd8a99a4e6ba0e1478dda5b57",
     "literary-future-kko-performance.json": "e26d7eff17f8372c6f58f86846783467a9666ec7c07637c935f03abf6593f9cb",
-    "literary-future-kko-historical-sources.json.gz": "d80e6d4fe6afb9f0432f61618cc6942a09672d95e8b74d972ec3401f68e456be"
+    "literary-future-kko-historical-sources.json.gz": "d80e6d4fe6afb9f0432f61618cc6942a09672d95e8b74d972ec3401f68e456be",
+    "literary-future-kko-combined-checks.nix.gz": "74b6f45398674821361809fd5e6b2a77bf8a14dc42c8de2b0c9fc14824edd2d3",
+    "literary-future-kko-combined-nix.json": "8b21503a3b63bbbc18b5e50f9af98fce8cce390907254d3e9b19e0a2a96c2c07",
+    "literary-future-kko-combined-nix.log.gz": "cff47ed2509e3c3a15abfd4fb7af6ade1ca5860632b414ac5fe6da4064c29768",
+    "literary-future-kko-combined-nix-producer.py.gz": "8a407544f356535b28f81c63c9de9612e4d3e8d12b9da6b63c8d8cb129b71ea2"
   },
   "full_goal_complete": false,
   "remaining": [
-    "Combined Nix inventory gate",
     "Broader spacing and owner distributions, precision, context/register/sense selection and independent Korean review"
   ],
-  "scope": "Finite integrated validation now includes the full main Rust suite, separately run pinned downloaded-corpus regression, actual Nix release tests, independently built packages and all preserved CLI/adapter/browser/launcher outputs. All947 compile/frontend inputs remain frozen. Eighty paired release samples and six exact novel cache streams are retained, with no statistical equivalence or causality claim. Combined inventory validation and broader owner/spacing/precision/context/register/sense/independent Korean review remain open.",
+  "scope": "Finite integrated validation now includes the full main Rust suite, separately run pinned downloaded-corpus regression, actual Nix release tests, independently built packages and all preserved CLI/adapter/browser/launcher outputs. All947 compile/frontend inputs remained frozen for this historical kko validation. Eighty paired release samples and six exact novel cache streams are retained, with no statistical equivalence or causality claim. Actual combined four-check Nix validation is terminal0 with all tracked Root inputs, HEAD and index unchanged. Broader owner/spacing/precision/context/register/sense/independent Korean review remain open.",
   "main_full_rust_tests": {
     "passed": 1055,
     "failed": 0,
@@ -120,5 +123,19 @@
     "source_updates": 15,
     "new_files": 8,
     "actual_derivation_and_nar_profiles": 3
+  },
+  "combined_nix": {
+    "state": "passed",
+    "exit_code": 0,
+    "finished_at": "2026-10-08T08:11:59.555070+00:00",
+    "inputs_unchanged": true,
+    "head_unchanged": true,
+    "index_unchanged": true,
+    "outputs": [
+      "/nix/store/jmk0c772h8z0frp6f0x14v6siz0w8zhl-klem-0.1.0",
+      "/nix/store/rd9qzmcxsv2sblfdi77q9lsbm9s6hi1w-klem-web-assets-0.1.0",
+      "/nix/store/njbj662fmwrcmja64xkg7rp7i438xid4-klem-corpus-adapter-0.1.0",
+      "/nix/store/g3xij3yzj7mng8mlidk14jjbcd2s55d1-klem-inventory-review"
+    ]
   }
 }

@@ -3035,26 +3035,83 @@ review remains open under the completion review below.
   or causality. Portable runtime, adapter, browser, source, timing and package
   audits are wired into the flake inventory check.
 
-  Remaining: complete combined Nix inventory validation;
-  broader derivation, owner distribution and predicate/auxiliary spacing.
+  [Complete combined Nix validation](literary-future-kko-combined-nix.json)
+  now passes all four actual checks: CLI/server, assets, corpus adapter and the
+  full inventory derivation. All tracked inputs, HEAD and index remained
+  unchanged throughout the run. This is the historical 947-input kko gate;
+  subsequent grammar changes need their own current-source validation.
+
+  Remaining: broader derivation, owner distribution and predicate/auxiliary spacing.
   Context, register, sense selection, precision and independent Korean review
   remain open; finite prototype success does not close this item.
 
-- [ ] **COV-017cl — Literary -ㄹ거나/-을거나 questions.**
-  **Source preparation only; implementation remains pending.**
+- [ ] **COV-017cl — Self/opinion -ㄹ거나/-을거나 questions.**
+  **Partial: source-backed rule, Native policy, label and finite regressions
+  pass complete current-main validation; actual Nix packages are running.**
   [Both complete original entries](literary-question-geona-source-discovery.json.gz)
   (80970/80972) retain two senses and all eight original groups, including
-  dialogue replies and the restrictive verb note alongside 좋을거나. Actual
-  current-main CLI output has no whole ending path across all 48 Unicode/filter
-  observations. [Eight individual structure proposals](literary-question-geona-original-preparation.json.gz)
-  retain eight exact earlier -(으)ㄹ까 paths and Native assessments; complete
-  original LMF/SQLite equality and English projection retain all 22 named-head
-  entries and homonyms. The spelling recovery for 지을거나/짓다 remains explicit.
-  Remaining: implementation, class/marker/derivation/auxiliary/copula/spacing
-  boundaries, conditional source-note policy, individual broader candidate
-  tracking, appended raw judgments and the full main/Nix/runtime/performance
-  gates. Source/sense/register/context and independent Korean review remain
-  open; preparation does not close this item.
+  dialogue replies and the restrictive verb note alongside 좋을거나. The
+  source describes informal addressee lowering; the viewer now uses
+  “Self / opinion question” without adding an unsupported literary label.
+  [Eight original structure proposals](literary-question-geona-original-preparation.json.gz)
+  retain exact earlier -(으)ㄹ까 paths and Native assessments. The canonical
+  을거나 component has full and attached-ㄹ allomorphs, with marker ownership
+  and omitted-copula provenance preserved. The original adjective example
+  remains available with Unknown attachment status; class restrictions and
+  dictionary homonyms are kept separate from raw structural candidates.
+
+  [Complete isolated Rust execution](literary-question-geona-full-rust.json.gz)
+  passes 1,059 tests, zero failures, one default-ignored downloaded-corpus
+  test, and 227 result batches with all 956 inputs unchanged. Focused tests
+  cover all eight original cases, 47 authored boundary cases and 27 typed
+  owner cases in both Unicode forms and all three dictionary modes.
+  [Complete Native owner closure](literary-question-geona-complete-owner-preparation.json.gz)
+  retains 216 actually matched owner IDs and 241 complete same-head entries,
+  original LMF/SQLite equality and the English importer projection. It preserves
+  the previous 97-entry closure exactly, including lexical versus auxiliary
+  되다 and the two 크다 classes. Source, full-output preservation, owner/spacing
+  and proposed-ledger audits pass 52 corruption controls; initial producer,
+  policy-draft and verifier-control failures remain archived explicitly.
+
+  [Eight complete broad comparisons](literary-question-geona-prototype-broad.json.gz)
+  retain all 1,128,312 original frames and individually track 44 new paths,
+  including 말거나 and its composites. Existing -거나 choice readings remain;
+  the novel-context alternatives are unjudged. All 32,096 corpus surfaces and
+  66,570 original annotated rows are unchanged. Fifty-eight historical fixtures
+  retain all 21,406 surfaces. Four spacing cases retain the old candidates,
+  Native assessments, breakdowns and original byte spans; general predicate
+  plus auxiliary spacing remains absent and is an implementation gap.
+
+  [Actual isolated SolidJS browser](literary-question-geona-current-browser-runtime.json.gz)
+  passes 16 original diagrams, six exact CLI exports, 492 filter checks,
+  241 complete Native endpoints, two source panes and two complete 116-frame
+  source APIs. Served JS/CSS bytes match the built assets; the owned server
+  stops. [Desktop](literary-question-geona-current-desktop.png) and
+  [mobile](literary-question-geona-current-mobile.png) captures were inspected.
+  [Main integration](literary-question-geona-main-integration.json.gz)
+  appends 61 exact raw judgments (50 required, 11 forbidden), preserving all
+  34,920 prior cases and source links. Fifteen conditional and six Native-only
+  cases remain in separate fixtures. A format-only catalog correction preserves
+  every decoded prototype label while keeping the previous JSON layout.
+
+  [Complete current-main validation](literary-question-geona-main-checks.json)
+  passes all 1,059 Rust tests on 957 inputs, the separately run downloaded-corpus
+  test, formatting, Clippy with warnings denied and the SolidJS build. Actual
+  main CLI repeats all 22 finite modes, eight full broad streams and every corpus
+  and historical WordAnalysis. Its Rust adapter verifies all 66,570 original
+  gold rows; its browser repeats every source/label/filter/entry/export check.
+  Main runtime, adapter and browser audits pass 17, eight and eleven corruption
+  controls respectively. A weak historical kko adapter-control fixture was
+  corrected to test the actual kko capture positively before its mutations;
+  all eight corrected checks pass. Previous gate evidence remains unchanged.
+
+  Remaining: actual current-source Nix packages and their CLI/adapter/browser/
+  launcher validation, source reconstruction, performance and combined inventory
+  gates; broader class/marker/derivation/auxiliary/copula owner
+  distributions and general predicate/auxiliary spacing; individual contextual
+  review of the 44 broader additions. Sense selection, precision and independent
+  Korean review remain open. Neither isolated success nor finite raw judgments
+  close this item.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

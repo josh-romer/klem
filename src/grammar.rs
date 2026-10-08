@@ -1035,6 +1035,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("까요", "을까요", 8),
             // KRDict 81026/81032 list copular literary questions.
             ("꼬", "을꼬", 8),
+            // KRDict 80970/80972: retain unreviewed omitted-copula hypotheses.
+            ("거나", "을거나", 8),
             ("지", "을지", 8),
             ("니다", "습니다", 17),
             ("니까", "습니까", 17),
@@ -1312,6 +1314,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을까요", "까요", "을까요", 8),
             // KRDict 81026/81032: literary conjecture/intention questions.
             ("을꼬", "꼬", "을꼬", 8),
+            // KRDict 80970/80972: final self/opinion questions, separate from -거나.
+            ("을거나", "거나", "을거나", 8),
             ("을게", "게", "을게", 8),
             ("을게요", "게요", "을게요", 8),
             ("을래", "래", "을래", 8),
@@ -2037,6 +2041,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
         }
+        "ending.literary_question_geona" => {
+            "Recover source-listed informal -(으)ㄹ거나 self/opinion questions while preserving stem and marker ownership; retain the restrictive verb note alongside its original adjective example without selecting a contextual sense."
+        }
         "ending.literary_future_question_kko" => {
             "Recover source-listed literary -(으)ㄹ꼬 questions with preserved stem, honorific and past boundaries; contextual conjecture/intention and register remain unselected."
         }
@@ -2087,6 +2094,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
         "copula.omitted_ending" => {
             "Restore omitted copular 이 after a vowel-final nominal before a reviewed ending; the nominal is not a conjugated verb stem."
+        }
+        "copula.omitted_geona" => {
+            "Retain a vowel-final omitted-copula literary -(으)ㄹ거나 hypothesis with Unknown dictionary attachment; its boundary is not an attested copular source example."
         }
         "copula.omitted_kko" => {
             "Retain a vowel-final omitted-copula literary -(으)ㄹ꼬 hypothesis; this generalized boundary has Unknown dictionary attachment pending its own source review."

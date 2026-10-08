@@ -1,7 +1,8 @@
 import copy,importlib.util,unittest
 import literary_future_kko_adapter_audit as a
-R=a.read(a.ROOT/'docs/literary-question-go-main-adapter.json.gz');C=a.read(a.ROOT/'docs/literary-future-kko-prototype-corpora.json.gz')
+R=a.read(a.ROOT/'docs/literary-future-kko-packaged-adapter.json.gz');C=a.read(a.ROOT/'docs/literary-future-kko-prototype-corpora.json.gz')
 class Controls(unittest.TestCase):
+ def test_actual_complete_adapter_capture_passes(self):self.assertEqual(a.inspect(R,C)['actual_rust_adapter_original_rows'],66570)
  def reject(self,fn):
   r=copy.deepcopy(R);fn(r)
   with self.assertRaises((AssertionError,KeyError,ValueError,TypeError,StopIteration)):a.inspect(r,C)

@@ -274,6 +274,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-literary-question-go-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-literary-future-kko-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-literary-question-geona-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-additive-ppundeoreo-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

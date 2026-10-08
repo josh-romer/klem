@@ -1,0 +1,83 @@
+{
+  "state": "integrated-main-validation-passed-packages-and-broader-review-pending",
+  "baseline_commit": "d3d7056",
+  "changes": {
+    "src/grammar.rs": {
+      "before_sha256": "191625ddc336194cd759eacd1f98be5140998481951cd0d3efbe52e1cc71f9d2",
+      "after_sha256": "e735636e9bf724711f001b7d7e3a2f1510e25eef6eefd9e6481de76635abedd2"
+    },
+    "src/engine.rs": {
+      "before_sha256": "3532207ff1d6b52dee30a6e535ff4aa485b2e49c13eac94673a3e7ec92f8e839",
+      "after_sha256": "80220be159d80abd5bf1565e39eec08c30fe640260eda62e87083f2d09c134b7"
+    },
+    "src/dictionary/attachment.rs": {
+      "before_sha256": "c52c89180050bc48e569a916ac2c583a3c4408f307d5e8455165a1abd74d1786",
+      "after_sha256": "974b513c128dbd816563523382353ab8c9efc26e6a173874cdbe21e04fb6eaa5"
+    },
+    "src/bin/klem-web/grammar_labels.rs": {
+      "before_sha256": "a72c6d6f699ec85e8d6fd0a64db9736b4711dee9cefffbb7a29284818a568cdb",
+      "after_sha256": "496b768dbf723f8e7838b7505c5d93759e3e52713952ca7f8255fefcde329ef2"
+    },
+    "web/src/grammar-labels.json": {
+      "before_sha256": "0da52bd2f52fd47ae22574537ad98e912b43a481dea4d8799ff756a56304a2dc",
+      "after_sha256": "b407f6cc7197af0a1287b0344870d32f5c084fc975f5500f0f3b038c36a91d84"
+    },
+    "tests/additive_ppundeoreo_native.rs": {
+      "before_sha256": null,
+      "after_sha256": "5fdd27a195922a1685c2624a9ef71828f0d0f935277472fa7fc26ced270787a3"
+    },
+    "tests/additive_ppundeoreo_boundaries.rs": {
+      "before_sha256": null,
+      "after_sha256": "d37cc624852b075bec460f68628345588bb36e7845ddb222b91a64bbe3d36f95"
+    },
+    "tests/fixtures/krdict-additive-ppundeoreo-labels.json": {
+      "before_sha256": null,
+      "after_sha256": "13a7755ef96656e6a2b60944f4248f86597b3861a2f6492fe901e1e9e17f3c88"
+    },
+    "tests/fixtures/additive-ppundeoreo-original-cases.json": {
+      "before_sha256": null,
+      "after_sha256": "cb4c8f64c355c41e45714f656ab85ba4bf272c99abd04b8724b8c3dbd51ee63d"
+    },
+    "tests/fixtures/additive-ppundeoreo-authored-boundaries.json": {
+      "before_sha256": null,
+      "after_sha256": "a352ccf937ae579480c9a6fedc26d3d7a798aedce2b6501cbaabdda96a18a61a"
+    },
+    "tests/fixtures/additive-ppundeoreo-english.json": {
+      "before_sha256": null,
+      "after_sha256": "744097ee96c4c3ed45f264a18401cf80da458a84800a4e4fd0e9acac47ce61f3"
+    },
+    "tests/fixtures/additive-ppundeoreo-native.json": {
+      "before_sha256": null,
+      "after_sha256": "8d4171635a9aedc4cb802f884fb9d8214a2e19650bc52af54152a4d562df7e94"
+    },
+    "tests/fixtures/validity.json": {
+      "before_sha256": "12b692d573c1cbcf8f7759829ef7be08fc62c73a54171374772987a839ed80dc",
+      "after_sha256": "485e8e4bae204a4bbda7cb31a862a41dd9fb282bb979e63388e3fe549523b4d8"
+    },
+    "web/tests/additive-ppundeoreo.mjs": {
+      "before_sha256": null,
+      "after_sha256": "44ba5e24a97c112c4ada50e1d416943a9e1cdb1e6c814b5d8eb74abe78946e44"
+    },
+    "tests/validity.rs": {
+      "before_sha256": "f95bb7ee45e718554dc33110e73935db277be1c2ce7150980c1c810bc6fd2113",
+      "after_sha256": "f885eed19c9674eb7f4f69cadf455919284494be337e981a67d4ce7ebb2a5c8c"
+    }
+  },
+  "preserved_cases": 34981,
+  "new_cases": 33,
+  "required": 27,
+  "forbidden": 6,
+  "separate_conditionals": 13,
+  "source_entries": [
+    "krdict:74341",
+    "krdict:74021"
+  ],
+  "extra_change": "Remove unsupported literary description from previous omitted-geona explanation; candidate behavior is unchanged.",
+  "remaining": [
+    "Dedicated owner/member/conflict and spacing review beyond36finite authored cases",
+    "Actual installed current-source Nix packages, packaged CLI/adapter/browser/launcher and source reconstruction",
+    "Quiet novel performance/cache checks and complete combined Nix inventory gate",
+    "Broader composition, contextual sense selection, precision and independent Korean-language review"
+  ],
+  "ledger_total_correction": "Full isolated retry2 passes every linguistic judgment but fails stale aggregate30858/4139 assertions. Update only the expected totals by the independently checked27required/6forbidden additions; all old cases and validation logic are retained."
+}

@@ -2288,6 +2288,20 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && let Some(i) = ending
+                        && analysis.morphemes[i].form == "을뿐더러"
+                        && (analysis.rules.iter().any(|r| r == "copula.omitted_ppundeoreo")
+                            || morphs.iter().any(|c| matches!(c,
+                                Component::Morpheme(j)
+                                    if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                        && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었"))))
+                    {
+                        // Both native allomorph notes license predicates, explicit
+                        // copula, honorific and past. Omission and other own markers
+                        // need separate evidence; source absence is not prohibition.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
                         && analysis.morphemes[i].form == "을꼬"
                         && (analysis.rules.iter().any(|r| r == "copula.omitted_kko")
                             || morphs.iter().any(|c| matches!(c,

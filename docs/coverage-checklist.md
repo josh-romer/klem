@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-07.
+Last reviewed: 2026-10-08.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -3149,6 +3149,75 @@ review remains open under the completion review below.
   review of the 44 broader additions. Sense selection, precision and independent
   Korean review remain open. Neither isolated success nor finite raw judgments
   close this item.
+
+- [ ] **COV-017cm — Additive -(으)ㄹ뿐더러 connective.**
+  **Partial: rule, Native attachment policy, viewer label and individual
+  regressions pass complete current-main validation; installed packages remain pending.**
+  [Both complete original entries](additive-ppundeoreo-source-discovery.json.gz)
+  (74341/74021) retain their notes and all ten example groups, including dialogue.
+  The prior CLI lacks the whole-ending reading in all 60 original observations.
+  Canonical 을뿐더러 now recovers vowel/ㄹ and consonant allomorphs without
+  replacing earlier candidates: 예쁠뿐더러 → 예쁘다 + 을뿐더러,
+  구했을뿐더러 → 구하다 + 었 + 을뿐더러, and
+  반일뿐더러 → 반 + 이다 + 을뿐더러. The label “Addition / also” links both
+  original entries. Predicate, auxiliary and copular component order is retained.
+
+  [Source and authored-case audits](../tools/additive_ppundeoreo_audit.py)
+  verify all 60 original and 216 authored Unicode/filter observations. The 36
+  authored cases distinguish irregular spelling, wrong allomorphs, immediate
+  owners and prefinals. Thirteen conditional cases remain outside the global
+  raw-judgment ledger. Unlisted own markers and omitted copulas remain Unknown;
+  existing class, role and spelling conflicts retain precedence.
+  [Complete Native closure](additive-ppundeoreo-owner-closure.json.gz) retains
+  60 actually matched IDs and 62 same-head entries, with all original LMF fields
+  compared against SQLite and the production English importer projection.
+
+  [Actual isolated SolidJS execution](additive-ppundeoreo-current-browser-runtime.json.gz)
+  passes 20 original diagrams, six exact CLI exports, 276 filter checks,
+  62 complete Native endpoints, two source panes and two 229-frame source APIs.
+  Served JS/CSS bytes match the built assets; the owned server stops.
+  [Desktop](additive-ppundeoreo-current-desktop.png) and
+  [mobile](additive-ppundeoreo-current-mobile.png) captures were inspected.
+  [Full output comparisons](additive-ppundeoreo-prototype-broad.json.gz)
+  preserve all eight streams and 1,128,312 frames exactly, with no new broader
+  paths or spacing suggestions. Every 32,096 corpus and 21,406 historical word
+  analysis is unchanged. The [actual Rust adapter](additive-ppundeoreo-adapter.json.gz)
+  binds all 66,570 original annotated rows and candidate-count summaries.
+  These checks establish finite structural behavior, not contextual accuracy.
+
+  [Main integration](additive-ppundeoreo-main-integration.json) preserves all
+  34,981 old cases and source links, appending 27 required and six forbidden
+  judgments under distinct ending-additive-… IDs. The initial full Rust compile
+  failed from temporary-storage exhaustion; the next run exposed a collision
+  with an older particle test's additive- prefix. After namespacing, the
+  [full retry](additive-ppundeoreo-full-rust-retry2.json.gz) passes all candidate
+  judgments but fails an old aggregate-count assertion (1,043 passed, one failed,
+  one ignored, 224 result batches). The expected totals are updated by the exact
+  27/6 additions; validation logic and every prior judgment are retained.
+  Failed attempts, corrections and [isolated evidence](additive-ppundeoreo-isolated-archive.json)
+  remain available. [Complete current-main validation](additive-ppundeoreo-main-checks.json)
+  passes 1,061 all-targets Rust tests, zero failures and one default-ignored test
+  in 234 result batches, with all 964 inputs unchanged. The separate documentation
+  test and downloaded-corpus regression pass; downloaded inputs remain unchanged.
+  Formatting, Clippy with warnings denied and the actual SolidJS build pass.
+  Main CLI repeats every source/boundary mode, all eight broad streams and both
+  complete word cohorts. Its standalone Rust adapter repeats all original gold
+  rows. The actual main browser repeats all diagrams, filters, exports, Native
+  endpoints and source panes, compares served assets and stops its owned server.
+  [Desktop](additive-ppundeoreo-main-desktop.png) and
+  [mobile](additive-ppundeoreo-main-mobile.png) captures were inspected.
+  Main finite/adapter/browser/preservation audits pass six/eight/fifteen/thirteen
+  controls respectively. Explicit phase binding prevents isolated evidence
+  substituting for actual-main captures. The first ignored-switch audit and
+  missing standalone-adapter invocation are retained with their corrected runs.
+  Offline source, adapter, browser and preservation audits for both captured
+  phases are wired into Nix; flake syntax parses successfully.
+
+  Remaining: dedicated owner/member/conflict and spacing review beyond the
+  36 finite cases; actual
+  installed Nix package/runtime/performance and combined inventory gates.
+  Broader composition, contextual sense choice, precision and independent
+  Korean-language review remain open. This item is not closed by finite tests.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

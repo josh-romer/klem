@@ -4939,3 +4939,31 @@ isolated regression run, its label-fixture correction, integrated validation
 and remaining package/adapter/browser/cache/performance gates. General
 predicate/auxiliary missing-space splits, contextual correctness, precision
 and independent Korean review remain open.
+
+
+## Additive connective -(으)ㄹ뿐더러 (COV-017cm)
+
+The canonical component `을뿐더러` represents source-listed -ㄹ뿐더러 and
+-을뿐더러. It uses the existing vowel/ㄹ and consonant spelling recovery while
+keeping the immediate predicate, auxiliary or explicit copula visible. Examples
+include `예쁠뿐더러 → 예쁘다 + 을뿐더러`,
+`구했을뿐더러 → 구하다 + 었 + 을뿐더러`, and
+`반일뿐더러 → 반 + 이다 + 을뿐더러`. The rule is
+`ending.additive_ppundeoreo`; the separately retained omitted-copula hypothesis
+uses `copula.omitted_ppundeoreo`.
+
+The two original dictionary entries (74341/74021) supply all ten example groups.
+Their Native notes list verbs/adjectives, explicit 이다, honorific -으시- and past
+-었-. Unlisted own markers and omitted copulas remain Unknown. Existing class,
+role and spelling conflicts still take precedence. These assessments accompany
+raw candidates; dictionary filtering preserves its existing policy. The browser
+label “Addition / also” links both original entries.
+
+[Individual original cases](../tests/fixtures/additive-ppundeoreo-original-cases.json)
+and [36 authored boundaries](../tests/fixtures/additive-ppundeoreo-authored-boundaries.json)
+retain exact shapes and dictionary status independently. Twenty-seven required
+and six forbidden cases are appended to the global ledger; thirteen conditional
+cases remain separate. The [coverage tracker](coverage-checklist.md) records
+actual isolated browser/corpus/adapter evidence, full-suite corrections and
+pending main/package, owner/spacing and independent review. This does not
+select a sentence meaning or certify every broader composition.

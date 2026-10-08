@@ -482,6 +482,17 @@
                 ./tools/test_literary_question_geona_runtime.py
                 ./tools/test_literary_question_geona_sources.py
                 ./web/tests/literary-question-geona.mjs
+                ./tools/additive_ppundeoreo_audit.py
+                ./tools/additive_ppundeoreo_main.py
+                ./tools/test_additive_ppundeoreo_main.py
+                ./tools/additive_ppundeoreo_adapter_audit.py
+                ./tools/additive_ppundeoreo_browser_audit.py
+                ./tools/additive_ppundeoreo_preservation_audit.py
+                ./tools/test_additive_ppundeoreo_audit.py
+                ./tools/test_additive_ppundeoreo_adapter_audit.py
+                ./tools/test_additive_ppundeoreo_browser_audit.py
+                ./tools/test_additive_ppundeoreo_preservation.py
+                ./web/tests/additive-ppundeoreo.mjs
                 ./tools/literary_question_go_runtime.py
                 ./tools/test_literary_question_go_runtime.py
                 ./tools/literary_question_go_replay.py
@@ -935,6 +946,18 @@
             python -m unittest discover -s tools -p 'test_literary_question_geona_package.py'
             python tools/literary_question_geona_performance.py --verify
             python -m unittest discover -s tools -p 'test_literary_question_geona_performance.py'
+            python tools/additive_ppundeoreo_audit.py
+            python tools/additive_ppundeoreo_adapter_audit.py --report docs/additive-ppundeoreo-adapter.json.gz
+            python tools/additive_ppundeoreo_adapter_audit.py --phase main --report docs/additive-ppundeoreo-main-adapter.json.gz
+            python tools/additive_ppundeoreo_browser_audit.py
+            python tools/additive_ppundeoreo_browser_audit.py --phase main
+            python tools/additive_ppundeoreo_main.py --verify
+            python tools/additive_ppundeoreo_preservation_audit.py
+            python tools/additive_ppundeoreo_preservation_audit.py --phase main
+            python -m unittest discover -s tools -p 'test_additive_ppundeoreo_*.py'
+            KLEM_PPUN_PHASE=main python -m unittest discover -s tools -p 'test_additive_ppundeoreo_browser_audit.py'
+            KLEM_PPUN_PHASE=main python -m unittest discover -s tools -p 'test_additive_ppundeoreo_adapter_audit.py'
+            KLEM_PPUN_PHASE=main python -m unittest discover -s tools -p 'test_additive_ppundeoreo_preservation.py'
             python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
             python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz

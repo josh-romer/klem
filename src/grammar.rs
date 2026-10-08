@@ -1037,6 +1037,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("꼬", "을꼬", 8),
             // KRDict 80970/80972: retain unreviewed omitted-copula hypotheses.
             ("거나", "을거나", 8),
+            // KRDict 74341/74021: additive connective, separate from bound noun 뿐.
+            ("뿐더러", "을뿐더러", 8),
             ("지", "을지", 8),
             ("니다", "습니다", 17),
             ("니까", "습니까", 17),
@@ -1316,6 +1318,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을꼬", "꼬", "을꼬", 8),
             // KRDict 80970/80972: final self/opinion questions, separate from -거나.
             ("을거나", "거나", "을거나", 8),
+            // KRDict 74341/74021: source-listed -(으)ㄹ뿐더러 allomorphs.
+            ("을뿐더러", "뿐더러", "을뿐더러", 8),
             ("을게", "게", "을게", 8),
             ("을게요", "게요", "을게요", 8),
             ("을래", "래", "을래", 8),
@@ -2041,6 +2045,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
         }
+        "ending.additive_ppundeoreo" => {
+            "Recover source-listed -(으)ㄹ뿐더러 additive connective endings, retaining explicit predicate/copula and marker ownership without choosing a contextual reading."
+        }
         "ending.literary_question_geona" => {
             "Recover source-listed informal -(으)ㄹ거나 self/opinion questions while preserving stem and marker ownership; retain the restrictive verb note alongside its original adjective example without selecting a contextual sense."
         }
@@ -2095,8 +2102,11 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.omitted_ending" => {
             "Restore omitted copular 이 after a vowel-final nominal before a reviewed ending; the nominal is not a conjugated verb stem."
         }
+        "copula.omitted_ppundeoreo" => {
+            "Retain a vowel-final omitted-copula additive-ending hypothesis with Unknown dictionary attachment; the source lists explicit copula forms and does not settle this omission."
+        }
         "copula.omitted_geona" => {
-            "Retain a vowel-final omitted-copula literary -(으)ㄹ거나 hypothesis with Unknown dictionary attachment; its boundary is not an attested copular source example."
+            "Retain a vowel-final omitted-copula -(으)ㄹ거나 self/opinion-question hypothesis with Unknown dictionary attachment; its boundary is not an attested copular source example."
         }
         "copula.omitted_kko" => {
             "Retain a vowel-final omitted-copula literary -(으)ㄹ꼬 hypothesis; this generalized boundary has Unknown dictionary attachment pending its own source review."

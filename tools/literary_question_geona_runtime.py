@@ -19,7 +19,12 @@ def inspect(report):
  assert report['cli_sha256']==report['frozen_inputs'][report['cli']],'actual executable'
  sources=read(ROOT/'docs/literary-question-geona-main-binaries.json.gz')
  assert report['snapshot_files']==sources['snapshot_files'] and len(report['snapshot_files'])==957,'complete current source scope'
- assert report['cli_sha256']==sources['binaries']['cli']['sha256'],'actual compiled main executable'
+ if 'package_sha256' in report:
+  from literary_question_geona_package_binding import package_paths
+  assert report['cli']==package_paths(report)['klem']+'/bin/klem','actual installed CLI'
+  assert report['producer']['text']==(ROOT/'tools/literary_question_geona_replay.py').read_text(),'packaged replay producer'
+ else:
+  assert report['cli_sha256']==sources['binaries']['cli']['sha256'],'actual compiled main executable'
  assert all(len(v['sha256'])==64 and v['bytes']>0 for v in report['snapshot_files'].values()),'source SHA/bytes'
  db=report['finite_runs'][0]['command'];dictionary=db[db.index('--dictionary')+1];original_root=Path(dictionary).parents[3];expected=[]
  for family,name in [('source','prototype-source-replay'),('boundary','boundary-corrected'),('owner','owner-extension-typed'),('spacing','spacing-preflight')]:

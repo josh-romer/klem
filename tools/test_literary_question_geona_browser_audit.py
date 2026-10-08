@@ -1,9 +1,10 @@
 """Verify semantic corruption rejection after deliberately rebinding mutated capture bytes."""
-import copy,json,tempfile,unittest
+import copy,json,os,tempfile,unittest
 from pathlib import Path
+from unittest.mock import patch
 import literary_question_geona_browser_audit as a
-R=a.read(a.ROOT/'docs/literary-question-geona-main-browser-runtime.json.gz')
-B=a.read(a.ROOT/'docs/literary-question-geona-main-browser.json.gz')
+R=a.read(os.environ.get('KLEM_GEONA_BROWSER_RUNTIME',a.ROOT/'docs/literary-question-geona-main-browser-runtime.json.gz'))
+B=a.read(os.environ.get('KLEM_GEONA_BROWSER',a.ROOT/'docs/literary-question-geona-main-browser.json.gz'))
 P=a.read(a.ROOT/'docs/literary-question-geona-complete-owner-preparation.json.gz')
 
 def replace_at(value,path,fn):
@@ -20,6 +21,13 @@ class Controls(unittest.TestCase):
         with self.assertRaises((AssertionError,KeyError,ValueError,TypeError,StopIteration)):
             self.inspect_mutated(R,replace_at(B,path,fn))
     def test_actual_complete_capture(self):self.assertEqual(self.inspect_mutated(R,B)['complete_native_entries'],241)
+    def test_audit_root_can_move_without_rewriting_frozen_producer_paths(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            for name in ['docs','tools','tests','web']:
+                (root/name).symlink_to(a.ROOT/name,target_is_directory=True)
+            with patch.object(a,'ROOT',root):
+                self.assertEqual(self.inspect_mutated(R,B)['complete_native_entries'],241)
     def test_source_api_record_is_exact(self):self.reject_browser(['responses',0,'response','records',0,'surface'],lambda _: 'invented')
     def test_raw_dictionary_policy_is_not_forbidden(self):self.reject_browser(['modeJudgments',0,'present'],lambda _:False)
     def test_original_utf8_offsets(self):self.reject_browser(['exports',0,'records',0,'span','start'],lambda n:n+1)

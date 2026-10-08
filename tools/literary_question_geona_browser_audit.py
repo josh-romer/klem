@@ -8,8 +8,19 @@ from native_lmf import entry,verify_native_lmf
 def inspect(runtime,browser,prepared,*,browser_path):
     assert runtime['state']=='passed' and runtime['exit_code']==0 and runtime['inputs_unchanged'] is True
     assert runtime['server_stopped'] is True and runtime['server_exit_code'] in [-2,130]
-    producer=gzip.decompress((ROOT/'docs/literary-question-geona-main-browser.py.gz').read_bytes())
-    producer_path=next(p for p in runtime['frozen_inputs'] if p.endswith('/klem-literary-question-geona-main-browser.py'))
+    if 'package_sha256' in runtime:
+        from literary_question_geona_package_binding import package_paths
+        paths=package_paths(runtime)
+        assert runtime['cli']==paths['klem']+'/bin/klem'
+        assert runtime['server']==paths['klem']+'/bin/klem-web'
+        assert runtime['assets']==paths['web-assets']+'/share/klem-web'
+        producer_path=next(p for p in runtime['frozen_inputs'] if p.endswith('/tools/capture_literary_question_geona_web.py'))
+        producer=(ROOT/'tools/capture_literary_question_geona_web.py').read_bytes()
+        assert runtime['producer']['text'].encode()==producer
+        assert runtime['producer']['sha256']==sha(producer)
+    else:
+        producer=gzip.decompress((ROOT/'docs/literary-question-geona-main-browser.py.gz').read_bytes())
+        producer_path=next(p for p in runtime['frozen_inputs'] if p.endswith('/klem-literary-question-geona-main-browser.py'))
     assert sha(producer)==runtime['frozen_inputs'][producer_path]
     raw=Path(browser_path).read_bytes();raw=gzip.decompress(raw) if str(browser_path).endswith('.gz') else raw
     assert runtime['browser_sha256']==sha(raw)

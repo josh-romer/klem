@@ -1,6 +1,6 @@
-import copy,importlib.util,unittest
+import copy,importlib.util,os,unittest
 import literary_question_geona_adapter_audit as a
-R=a.read(a.ROOT/'docs/literary-question-geona-main-adapter.json.gz');C=a.read(a.ROOT/'docs/literary-question-geona-prototype-corpora.json.gz')
+R=a.read(os.environ.get('KLEM_GEONA_ADAPTER',a.ROOT/'docs/literary-question-geona-main-adapter.json.gz'));C=a.read(a.ROOT/'docs/literary-question-geona-prototype-corpora.json.gz')
 class Controls(unittest.TestCase):
  def test_actual_complete_adapter_capture_passes(self):self.assertEqual(a.inspect(R,C)['actual_rust_adapter_original_rows'],66570)
  def reject(self,fn):

@@ -9,8 +9,12 @@ def read(p):
 sha=lambda raw:hashlib.sha256(raw).hexdigest()
 
 def main():
- parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--cli',type=Path,required=True);parser.add_argument('--snapshot',type=Path,required=True);parser.add_argument('--output',type=Path,required=True);args=parser.parse_args();CLI=args.cli.resolve();DB=ROOT/'data/dictionaries/krdict/krdict.db';OUT=args.output;assert not OUT.exists();snapshot=read(args.snapshot)['snapshot_files'];assert len(snapshot)==957;assert all(sha((ROOT/n).read_bytes())==v['sha256'] for n,v in snapshot.items())
+ parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--cli',type=Path,required=True);parser.add_argument('--snapshot',type=Path,required=True);parser.add_argument('--output',type=Path,required=True);parser.add_argument('--package',type=Path);args=parser.parse_args();CLI=args.cli.resolve();DB=ROOT/'data/dictionaries/krdict/krdict.db';OUT=args.output;assert not OUT.exists();snapshot=read(args.snapshot)['snapshot_files'];assert len(snapshot)==957;assert all(sha((ROOT/n).read_bytes())==v['sha256'] for n,v in snapshot.items())
  frozen={str(p):sha(p.read_bytes()) for p in [CLI,DB,Path(__file__),args.snapshot]};results=[];broad=[];words=[];r={'schema_version':1,'state':'running','started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'cli':str(CLI),'cli_sha256':frozen[str(CLI)],'snapshot_files':snapshot,'finite_runs':results,'broad':broad,'words':words,'frozen_inputs':frozen,'producer':{'text':Path(__file__).read_text(),'sha256':frozen[str(Path(__file__))]},'scope':'Actual configured957-input CLI repeats every preserved finite source/boundary/typed-owner/spacing mode,8complete broad streams,32096corpus words and21406historical words. Complete archived output bytes are retained and must match exactly; no changes to gold, precision or unjudged alternatives are inferred. Full Rust, adapter, browser, packages and performance are separate.'}
+ if args.package:
+  from literary_question_geona_package_binding import package_paths
+  frozen[str(args.package)]=sha(args.package.read_bytes());r['package_sha256']=frozen[str(args.package)]
+  assert str(CLI)==package_paths(r)['klem']+'/bin/klem','actual installed CLI'
  def save():OUT.write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
  save()
  for family,name in [('source','prototype-source-replay'),('boundary','boundary-corrected'),('owner','owner-extension-typed'),('spacing','spacing-preflight')]:

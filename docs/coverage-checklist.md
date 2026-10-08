@@ -3047,7 +3047,7 @@ review remains open under the completion review below.
 
 - [ ] **COV-017cl — Self/opinion -ㄹ거나/-을거나 questions.**
   **Partial: source-backed rule, Native policy, label and finite regressions
-  pass complete current-main validation; actual Nix packages are running.**
+  pass main, installed Nix package and performance validation; combined gate is pending.**
   [Both complete original entries](literary-question-geona-source-discovery.json.gz)
   (80970/80972) retain two senses and all eight original groups, including
   dialogue replies and the restrictive verb note alongside 좋을거나. The
@@ -3108,12 +3108,38 @@ review remains open under the completion review below.
   The [first actual Nix release suite](literary-question-geona-package-first.log.gz)
   also passes all 1,059 tests with all 957 inputs unchanged. Installation then
   fails from root-filesystem exhaustion. The failed receipt/log are retained;
-  identical packages are being retried after checked relocation of the ignored
-  downloaded corpus cache. This does not prove installed package success.
+  identical packages were retried after checked cache relocation and recovery
+  of unused Nix source caches. The [successful retry](literary-question-geona-package-nix.json)
+  installs all three actual packages, passes all 1,059 release tests in 227 batches,
+  and preserves all 957 inputs. The [installed CLI](literary-question-geona-packaged-cli-replay.json)
+  matches all 22 finite modes, eight full broad streams and both complete word
+  cohorts; the [installed adapter](literary-question-geona-packaged-adapter.json.gz)
+  binds every original annotated row. The [packaged browser and launcher](literary-question-geona-packaged-browser-runtime.json)
+  repeat all diagrams, filters, Native endpoints, source panes and exact CLI exports,
+  compare served JS/CSS bytes, pass launcher help and stop their owned server.
+  [Desktop](literary-question-geona-packaged-desktop.png) and
+  [mobile](literary-question-geona-packaged-mobile.png) captures were inspected.
+  [Exact historical sources](literary-question-geona-historical-sources.json.gz)
+  reconstruct all 957 inputs from the previous 947 with seven updates and ten new
+  files, independently matching all three actual derivations and source NARs.
+  Source, runtime, adapter, browser and package audits pass 12, 17, eight, eleven
+  and twelve controls respectively. The browser audit now additionally passes a
+  relocated-root regression (twelve current controls), preserving the original
+  frozen producer paths when the audit runs inside Nix. The first package audit was attempted before
+  the browser runtime had been archived under its expected name; that missing-file
+  failure is retained and the correctly archived complete audit passes.
 
-  Remaining: actual current-source Nix packages and their CLI/adapter/browser/
-  launcher validation, source reconstruction, performance and combined inventory
-  gates; broader class/marker/derivation/auxiliary/copula owner
+  [Actual paired release timings](literary-question-geona-performance.json)
+  retain 80 interleaved samples across eight full-novel workloads on one allowed
+  CPU, plus six complete cache-parity streams of 179,112 frames each. All twenty
+  timing and cache-binding controls pass. Cached dictionary raw median time is
+  1.961 seconds versus 1.936 for the previous release; compatible filtering with
+  spacing is 2.650 versus 2.620. These five-pair observations include process
+  startup and serialization, retain host load/frequency context and do not prove
+  statistical equivalence or isolate causality.
+
+  Remaining: the current combined inventory gate;
+  broader class/marker/derivation/auxiliary/copula owner
   distributions and general predicate/auxiliary spacing; individual contextual
   review of the 44 broader additions. Sense selection, precision and independent
   Korean review remain open. Neither isolated success nor finite raw judgments

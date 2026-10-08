@@ -463,6 +463,25 @@
                 ./tools/test_literary_future_kko_sources.py
                 ./tools/literary_future_kko_package.py
                 ./tools/test_literary_future_kko_package.py
+                ./tools/capture_literary_question_geona_performance.py
+                ./tools/capture_literary_question_geona_sources.py
+                ./tools/capture_literary_question_geona_web.py
+                ./tools/literary_question_geona_adapter_audit.py
+                ./tools/literary_question_geona_adapter_replay.py
+                ./tools/literary_question_geona_browser_audit.py
+                ./tools/literary_question_geona_package.py
+                ./tools/literary_question_geona_package_binding.py
+                ./tools/literary_question_geona_performance.py
+                ./tools/literary_question_geona_replay.py
+                ./tools/literary_question_geona_runtime.py
+                ./tools/literary_question_geona_sources.py
+                ./tools/test_literary_question_geona_adapter_audit.py
+                ./tools/test_literary_question_geona_browser_audit.py
+                ./tools/test_literary_question_geona_package.py
+                ./tools/test_literary_question_geona_performance.py
+                ./tools/test_literary_question_geona_runtime.py
+                ./tools/test_literary_question_geona_sources.py
+                ./web/tests/literary-question-geona.mjs
                 ./tools/literary_question_go_runtime.py
                 ./tools/test_literary_question_go_runtime.py
                 ./tools/literary_question_go_replay.py
@@ -901,6 +920,21 @@
             python -m unittest discover -s tools -p 'test_literary_future_kko_performance.py'
             python tools/literary_future_kko_package.py
             python -m unittest discover -s tools -p 'test_literary_future_kko_package.py'
+            python tools/literary_question_geona_runtime.py --report docs/literary-question-geona-packaged-cli-replay.json
+            python -m unittest discover -s tools -p 'test_literary_question_geona_runtime.py'
+            KLEM_GEONA_RUNTIME=docs/literary-question-geona-packaged-cli-replay.json python -m unittest discover -s tools -p 'test_literary_question_geona_runtime.py'
+            python tools/literary_question_geona_adapter_audit.py --report docs/literary-question-geona-packaged-adapter.json.gz
+            python -m unittest discover -s tools -p 'test_literary_question_geona_adapter_audit.py'
+            KLEM_GEONA_ADAPTER=docs/literary-question-geona-packaged-adapter.json.gz python -m unittest discover -s tools -p 'test_literary_question_geona_adapter_audit.py'
+            python tools/literary_question_geona_browser_audit.py --runtime docs/literary-question-geona-packaged-browser-runtime.json --browser docs/literary-question-geona-packaged-browser.json.gz
+            python -m unittest discover -s tools -p 'test_literary_question_geona_browser_audit.py'
+            KLEM_GEONA_BROWSER_RUNTIME=docs/literary-question-geona-packaged-browser-runtime.json KLEM_GEONA_BROWSER=docs/literary-question-geona-packaged-browser.json.gz python -m unittest discover -s tools -p 'test_literary_question_geona_browser_audit.py'
+            python tools/literary_question_geona_sources.py --proof docs/literary-question-geona-historical-sources.json.gz
+            python -m unittest discover -s tools -p 'test_literary_question_geona_sources.py'
+            python tools/literary_question_geona_package.py
+            python -m unittest discover -s tools -p 'test_literary_question_geona_package.py'
+            python tools/literary_question_geona_performance.py --verify
+            python -m unittest discover -s tools -p 'test_literary_question_geona_performance.py'
             python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
             python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz

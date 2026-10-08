@@ -10,6 +10,10 @@ def inspect(report,corpus):
  assert sha(report['producer']['text'].encode())==report['producer']['sha256']
  assert report['producer']['text'] in [(ROOT/'tools/literary_question_geona_adapter_replay.py').read_text(),gzip.decompress((ROOT/'docs/literary-question-geona-main-adapter-replay.py.gz').read_bytes()).decode()]
  assert report['adapter_sha256']==report['frozen_inputs'][report['adapter']]
+ if 'package_sha256' in report:
+  from literary_question_geona_package_binding import package_paths
+  assert report['adapter']==package_paths(report)['corpus-adapter']+'/bin/klem-corpus-adapter','actual installed adapter'
+  assert report['producer']['text']==(ROOT/'tools/literary_question_geona_adapter_replay.py').read_text(),'packaged adapter producer'
  assert report['corpus_sha256']==sha((ROOT/'docs/literary-question-geona-prototype-corpora.json.gz').read_bytes())
  assert len(report['runs'])==len(corpus['corpora'])==4
  total=0

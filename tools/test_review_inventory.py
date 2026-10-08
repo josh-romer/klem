@@ -1,5 +1,6 @@
 """Integrity failures that must never silently become reviewed coverage."""
 import copy
+import gzip
 import json
 from pathlib import Path
 import sqlite3
@@ -119,6 +120,21 @@ class ReviewQueueTests(unittest.TestCase):
     def test_duplicate_source_and_ledger_ids_fail(self):
         self.entries.append(self.entry)
         with self.assertRaisesRegex(ValueError, 'duplicate source'):
+            self.build()
+
+    def test_compressed_evidence_keeps_checksums_and_test_identity(self):
+        path = 'tests/ending.rs.gz'
+        target = self.root / path
+        target.write_bytes(gzip.compress(b'#[test]\nfn boundary() {}\n', mtime=0))
+        self.review['evidence'] = [dict(path=path, test='boundary')]
+        self.write(inventory.REVIEWS, self.reviews)
+        queue = self.build()
+        inventory.verify_queue(self.root, queue)
+        target.write_bytes(gzip.compress(b'#[test]\nfn boundary() { changed(); }\n', mtime=0))
+        with self.assertRaisesRegex(ValueError, 'stale queue'):
+            inventory.verify_queue(self.root, queue)
+        target.write_bytes(gzip.compress(b'#[test]\nfn removed() {}\n', mtime=0))
+        with self.assertRaisesRegex(ValueError, 'unknown Rust test'):
             self.build()
         self.entries.pop()
         self.ledger['cases'].append(self.ledger['cases'][0])

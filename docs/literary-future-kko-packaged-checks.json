@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "finished_at": "2026-10-08T06:54:43.926835+00:00",
+  "summary": {
+    "release_tests": {
+      "passed": 1055,
+      "failed": 0,
+      "ignored": 1,
+      "batches": 224
+    },
+    "compile_and_frontend_inputs": 947,
+    "cli": {
+      "finite_mode_runs": 22,
+      "finite_frames": 2338,
+      "broad_frames": 1128312,
+      "corpus_surfaces": 32096,
+      "historical_surfaces": 21388,
+      "all_preserved_outputs_bound": true,
+      "precision_context_and_independent_review": "pending"
+    },
+    "adapter": {
+      "actual_rust_adapter_original_rows": 66570,
+      "partitions": 4,
+      "all_original_gold_outcomes_and_current_candidate_summaries_bound": true,
+      "precision_context_and_independent_review": "pending"
+    },
+    "browser": {
+      "source_api_frames": 506,
+      "source_diagrams": 38,
+      "mode_checks": 504,
+      "exports": 6,
+      "complete_native_entries": 153,
+      "owned_server_stopped": true,
+      "precision_context_and_independent_review": "pending"
+    },
+    "launcher_assets": 2,
+    "owned_server_stopped": true,
+    "precision_context_and_independent_review": "pending"
+  },
+  "package_corruption_controls": 12,
+  "proof_sha256": {
+    "docs/literary-future-kko-package-nix.json": "507136071282b64c2f323eb9e6ef4562ff9ee6647349e819929c215ca610a3d2",
+    "docs/literary-future-kko-package-nix.log.gz": "0b5226090ff4f6be00f7d8c89d91140ea23f0ba7e8d1ff421e2da2a45c0026ad",
+    "docs/literary-future-kko-packaged-cli-replay.json": "0fbb5f6df994c74525b4cdf0c1818d5110a50e37a42c792b2141722898942771",
+    "docs/literary-future-kko-packaged-adapter.json.gz": "1f773af2e9f20d5165c0a944d4ea0d9f98fbe911fa0b8b25ccdd82d96447cfbc",
+    "docs/literary-future-kko-packaged-browser-runtime.json": "dc290f4053f4c4a596908a6c25f991fcc559a7bb4e6503fb81032bea64e55f36",
+    "docs/literary-future-kko-packaged-browser.json.gz": "8e48202302fbb8adfe4ed4d0d153ce01f47c172223c66fcf0f5a654eaff24c23",
+    "docs/literary-future-kko-performance.json": "e26d7eff17f8372c6f58f86846783467a9666ec7c07637c935f03abf6593f9cb",
+    "docs/literary-future-kko-historical-sources.json.gz": "d80e6d4fe6afb9f0432f61618cc6942a09672d95e8b74d972ec3401f68e456be",
+    "docs/literary-future-kko-package-audit.log.gz": "07ffe4346182e7a66e69ae74e22304df63277dca9fa3b27647fa376a1639f43d",
+    "docs/literary-future-kko-package-controls.log.gz": "0f3e7aff9cb70f64eda117bd3c4a461dea8b1df0a74d99619a995b51de286ab9",
+    "tools/literary_future_kko_package.py": "03c3d6b8f971657f6e027143fcb4f63df56513e55de60a2bb545ee74d24c2e81",
+    "tools/test_literary_future_kko_package.py": "3c0ba56a7d530b791f4538f99f4a477e35416864ce9bbb5810af9cbaaf79784d"
+  },
+  "scope": "Actual independent Nix release, configured packaged runtime and exact Native/source/launcher asset bindings; twelve package corruption controls pass. Combined inventory gate, broader owner/spacing coverage and linguistic precision/context/register/sense/independent review remain open.",
+  "full_goal_complete": false
+}

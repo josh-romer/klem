@@ -445,6 +445,24 @@
                 ./tools/test_literary_future_kko_audit.py
                 ./tools/literary_future_kko_preservation.py
                 ./tools/test_literary_future_kko_preservation.py
+                ./tools/literary_future_kko_runtime.py
+                ./tools/test_literary_future_kko_runtime.py
+                ./tools/literary_future_kko_replay.py
+                ./tools/literary_future_kko_adapter_replay.py
+                ./tools/literary_future_kko_adapter_audit.py
+                ./tools/test_literary_future_kko_adapter_audit.py
+                ./tools/literary_future_kko_browser_audit.py
+                ./tools/test_literary_future_kko_browser_audit.py
+                ./tools/capture_literary_future_kko_web.py
+                ./web/tests/literary-future-kko.mjs
+                ./tools/capture_literary_future_kko_performance.py
+                ./tools/literary_future_kko_performance.py
+                ./tools/test_literary_future_kko_performance.py
+                ./tools/capture_literary_future_kko_sources.py
+                ./tools/literary_future_kko_sources.py
+                ./tools/test_literary_future_kko_sources.py
+                ./tools/literary_future_kko_package.py
+                ./tools/test_literary_future_kko_package.py
                 ./tools/literary_question_go_runtime.py
                 ./tools/test_literary_question_go_runtime.py
                 ./tools/literary_question_go_replay.py
@@ -871,6 +889,18 @@
             python -m unittest discover -s tools -p 'test_literary_future_kko_audit.py'
             python tools/literary_future_kko_preservation.py
             python -m unittest discover -s tools -p 'test_literary_future_kko_preservation.py'
+            python tools/literary_future_kko_runtime.py --report docs/literary-future-kko-packaged-cli-replay.json
+            python -m unittest discover -s tools -p 'test_literary_future_kko_runtime.py'
+            python tools/literary_future_kko_adapter_audit.py --report docs/literary-future-kko-packaged-adapter.json.gz
+            python -m unittest discover -s tools -p 'test_literary_future_kko_adapter_audit.py'
+            python tools/literary_future_kko_browser_audit.py --runtime docs/literary-future-kko-packaged-browser-runtime.json --browser docs/literary-future-kko-packaged-browser.json.gz
+            python -m unittest discover -s tools -p 'test_literary_future_kko_browser_audit.py'
+            python tools/literary_future_kko_sources.py --proof docs/literary-future-kko-historical-sources.json.gz
+            python -m unittest discover -s tools -p 'test_literary_future_kko_sources.py'
+            python tools/literary_future_kko_performance.py --verify
+            python -m unittest discover -s tools -p 'test_literary_future_kko_performance.py'
+            python tools/literary_future_kko_package.py
+            python -m unittest discover -s tools -p 'test_literary_future_kko_package.py'
             python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
             python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz

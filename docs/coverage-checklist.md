@@ -2990,7 +2990,8 @@ review remains open under the completion review below.
 
   [The complete isolated Rust run](literary-future-kko-prototype-full-rust-first.json.gz)
   discovers every target: 1,054 tests pass, one label-source import test fails,
-  and one stress test remains ignored. All 945 inputs stay unchanged. The
+  and the explicitly downloaded-corpus test remains ignored by default. All
+  945 inputs stay unchanged. The
   failure is preserved; both complete ending entries now supplement the label
   importer. [Guarded main integration](literary-future-kko-main-integration.json.gz)
   retains 947 inputs and applies 77 append-only structures (66 required,
@@ -3008,12 +3009,52 @@ review remains open under the completion review below.
   Both new offline audits and all 31 controls pass from the actual evaluated
   Nix inventory source; this does not claim a complete inventory derivation.
   The two entries now have explicitly scoped dispositions with release gaps.
+  [Complete main Rust execution](literary-future-kko-main-full-rust.json.gz)
+  subsequently passes all 1,055 tests with all 947 inputs and HEAD unchanged.
+  The default-ignored downloaded-corpus test passes separately. Nineteen
+  CLI/append-only corruption controls, seven original-gold adapter controls
+  and eleven browser corruption controls also pass offline. Old test-only cache executables were removed with hashes;
+  eleven inactive Cargo caches retain every byte and old path through checked
+  relocation, freeing space for the actual Nix builds.
 
-  Remaining: full integrated Rust/release validation; Nix/package
-  CLI/adapter/browser/launcher/cache/performance/combined-inventory gates;
+  [Actual Nix release validation](literary-future-kko-package-nix.json) passes
+  all 1,055 tests and builds the CLI/server, SolidJS assets and corpus adapter.
+  The packaged CLI repeats all finite, broad, corpus and historical outputs
+  exactly; its adapter repeats all 66,570 annotated rows. The actual Nix web
+  launcher passes the complete browser suite, independent served JS/CSS byte
+  comparisons and help forwarding. Its owned server stops; packaged
+  [desktop](literary-future-kko-packaged-desktop.png) and
+  [mobile](literary-future-kko-packaged-mobile.png) captures were inspected.
+  [Exact historical source reconstruction](literary-future-kko-historical-sources.json.gz)
+  binds all 947 inputs, fifteen updates and three actual derivation/source NAR
+  profiles; twelve corruption controls pass.
+  [Release performance measurements](literary-future-kko-performance.json)
+  retain 80 paired fresh-process timing samples and six exact complete-novel
+  cache streams, with 179,112 frames each. Twenty controls pass; the observed
+  median ratios span 0.991–1.005 and do not establish statistical equivalence
+  or causality. Portable runtime, adapter, browser, source, timing and package
+  audits are wired into the flake inventory check.
+
+  Remaining: complete combined Nix inventory validation;
   broader derivation, owner distribution and predicate/auxiliary spacing.
   Context, register, sense selection, precision and independent Korean review
   remain open; finite prototype success does not close this item.
+
+- [ ] **COV-017cl — Literary -ㄹ거나/-을거나 questions.**
+  **Source preparation only; implementation remains pending.**
+  [Both complete original entries](literary-question-geona-source-discovery.json.gz)
+  (80970/80972) retain two senses and all eight original groups, including
+  dialogue replies and the restrictive verb note alongside 좋을거나. Actual
+  current-main CLI output has no whole ending path across all 48 Unicode/filter
+  observations. [Eight individual structure proposals](literary-question-geona-original-preparation.json.gz)
+  retain eight exact earlier -(으)ㄹ까 paths and Native assessments; complete
+  original LMF/SQLite equality and English projection retain all 22 named-head
+  entries and homonyms. The spelling recovery for 지을거나/짓다 remains explicit.
+  Remaining: implementation, class/marker/derivation/auxiliary/copula/spacing
+  boundaries, conditional source-note policy, individual broader candidate
+  tracking, appended raw judgments and the full main/Nix/runtime/performance
+  gates. Source/sense/register/context and independent Korean review remain
+  open; preparation does not close this item.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -72,14 +72,53 @@
     "literary-future-kko-main-frontend.log.gz": "7cf0cc00c0ccb292df286d1d6e27c2c15c060eb411ea512d8802bd94f3b20626",
     "literary-future-kko-main-integration-producer.py.gz": "7802cd0b366ae89c8a762204f58d2f738df40d32840bc2749aa4c50e0fc0d861",
     "literary-future-kko-main-integration.json.gz": "3e7853ee333d0f3f629f3d4166193f0ab8c7fb8985716fc861b439283ba7cac8",
-    "literary-future-kko-main-mobile.png": "8e0b1c42c50d28b50134a4135da97464ea726f6bd8a99a4e6ba0e1478dda5b57"
+    "literary-future-kko-main-mobile.png": "8e0b1c42c50d28b50134a4135da97464ea726f6bd8a99a4e6ba0e1478dda5b57",
+    "literary-future-kko-main-full-rust.json.gz": "796d8d3251fd8918f99d8f18e6eabe78bda7d4cb11d14d54bd7dda1e7b9d3cac",
+    "literary-future-kko-main-full-rust.log.gz": "8643100e411e9c7e7908befe2f81ba4772e3f2cb8152ecd9f7221088b8c7e235",
+    "literary-future-kko-main-pinned-corpus.log.gz": "8ba3e81d376c0a27d4851ddd5e95dacb602d3df9d1e4a061cab1d7d3cec04a9a",
+    "literary-future-kko-package-nix.json": "507136071282b64c2f323eb9e6ef4562ff9ee6647349e819929c215ca610a3d2",
+    "literary-future-kko-package-nix.log.gz": "0b5226090ff4f6be00f7d8c89d91140ea23f0ba7e8d1ff421e2da2a45c0026ad",
+    "literary-future-kko-packaged-cli-replay.json": "0fbb5f6df994c74525b4cdf0c1818d5110a50e37a42c792b2141722898942771",
+    "literary-future-kko-packaged-adapter.json.gz": "1f773af2e9f20d5165c0a944d4ea0d9f98fbe911fa0b8b25ccdd82d96447cfbc",
+    "literary-future-kko-packaged-browser-runtime.json": "dc290f4053f4c4a596908a6c25f991fcc559a7bb4e6503fb81032bea64e55f36",
+    "literary-future-kko-packaged-browser.json.gz": "8e48202302fbb8adfe4ed4d0d153ce01f47c172223c66fcf0f5a654eaff24c23",
+    "literary-future-kko-packaged-desktop.png": "93abd69d6f9d987393e39801fbc0e4183eb852cfe36b2b453b64264a364f1bd8",
+    "literary-future-kko-packaged-mobile.png": "8e0b1c42c50d28b50134a4135da97464ea726f6bd8a99a4e6ba0e1478dda5b57",
+    "literary-future-kko-performance.json": "e26d7eff17f8372c6f58f86846783467a9666ec7c07637c935f03abf6593f9cb",
+    "literary-future-kko-historical-sources.json.gz": "d80e6d4fe6afb9f0432f61618cc6942a09672d95e8b74d972ec3401f68e456be"
   },
   "full_goal_complete": false,
   "remaining": [
-    "Complete full integrated Rust/release checks",
-    "Nix/package CLI/adapter/browser/launcher and combined inventory gate",
-    "Quiet release performance and cache streaming checks",
+    "Combined Nix inventory gate",
     "Broader spacing and owner distributions, precision, context/register/sense selection and independent Korean review"
   ],
-  "scope": "Finite integrated structural validation and scoped source review only. The preceding complete945input suite had1054passes and one source-import-fixture failure; the actual corrected main label target and three source/boundary/global targets now pass14tests. This does not substitute targeted main tests for a full main/release suite."
+  "scope": "Finite integrated validation now includes the full main Rust suite, separately run pinned downloaded-corpus regression, actual Nix release tests, independently built packages and all preserved CLI/adapter/browser/launcher outputs. All947 compile/frontend inputs remain frozen. Eighty paired release samples and six exact novel cache streams are retained, with no statistical equivalence or causality claim. Combined inventory validation and broader owner/spacing/precision/context/register/sense/independent Korean review remain open.",
+  "main_full_rust_tests": {
+    "passed": 1055,
+    "failed": 0,
+    "ignored": 1,
+    "batches": 224
+  },
+  "main_full_rust_commit_unchanged": true,
+  "main_full_rust_inputs_unchanged": true,
+  "pinned_downloaded_corpus_test_passed": true,
+  "nix_release_tests": {
+    "passed": 1055,
+    "failed": 0,
+    "ignored": 1,
+    "batches": 224
+  },
+  "packaged_cli_adapter_browser_launcher_passed": true,
+  "release_performance": {
+    "paired_samples": 80,
+    "exact_novel_cache_streams": 6,
+    "frames_per_cache_stream": 179112,
+    "statistical_equivalence_or_causality_claim": false
+  },
+  "historical_package_sources": {
+    "compile_frontend_inputs": 947,
+    "source_updates": 15,
+    "new_files": 8,
+    "actual_derivation_and_nar_profiles": 3
+  }
 }

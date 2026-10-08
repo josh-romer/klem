@@ -7,6 +7,7 @@ without a dictionary checks stored source integrity, not the upstream snapshot.
 """
 import argparse
 from collections import Counter, defaultdict
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -134,7 +135,8 @@ def build_queue(root, metadata, entries):
                 raise ValueError(f'unknown checklist item: {item}')
         evidence_paths.add('docs/coverage-checklist.md')
         for ref in review['evidence']:
-            content = evidence_file(root, ref['path']).decode()
+            raw = evidence_file(root, ref['path'])
+            content = (gzip.decompress(raw) if ref['path'].endswith('.gz') else raw).decode()
             evidence_paths.add(ref['path'])
             if 'test' in ref and not re.search(
                 r'\bfn\s+' + re.escape(ref['test']) + r'\s*\(', content

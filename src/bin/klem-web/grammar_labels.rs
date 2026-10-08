@@ -271,6 +271,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-ostensible-reason-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-literary-question-go-labels.json"),
             ],
             &path,
             "grammar-label-source-test",

@@ -7,6 +7,7 @@ import re
 import unicodedata
 
 from ostensible_reason_audit import ROOT, matches, producer, read, sha
+from ostensible_reason_sources import package_source_texts
 
 
 def conditional_observations(runs, matrix):
@@ -156,7 +157,8 @@ def without_elapsed(response):
 def verify_browser(report,cli):
     assert report['cli_sha256']==cli['cli_sha256']
     assert report['producer_sha256']==sha((ROOT/'web/tests/ostensible-reason.mjs').read_bytes())
-    assert report['catalog_sha256']==sha((ROOT/'web/src/grammar-labels.json').read_bytes())
+    sources=package_source_texts(read(ROOT/'docs/ostensible-reason-package-nix.json'))
+    assert report['catalog_sha256']==sha(sources['web/src/grammar-labels.json'].encode())
     assert report['errors']==[]
     assert len(report['diagrams'])==42 and report['particleDiagrams']==[]
     assert len(report['exports'])==6 and len(report['modeJudgments'])==156
@@ -225,8 +227,10 @@ def verify_package(package,cli,adapter,browser,launcher):
     assert set(package['source_profiles'])=={'klem','web-assets','corpus-adapter'}
     assert all(re.fullmatch(r'/nix/store/[a-z0-9]{32}-source',p) for p in package['source_profiles'].values())
     assert len(package['snapshot']['files'])==924
+    sources=package_source_texts(package)
+    assert set(sources)==set(package['snapshot']['files'])
     for path,record in package['snapshot']['files'].items():
-        raw=(ROOT/path).read_bytes()
+        raw=sources[path].encode()
         assert len(raw)==record['bytes'] and sha(raw)==record['sha256'],path
     assert len(package['outputs'])==3 and len(set(package['outputs']))==3
     output=next(p for p in package['outputs'] if p.endswith('-klem-0.1.0'))

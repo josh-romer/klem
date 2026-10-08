@@ -1,0 +1,3821 @@
+{
+  "state": "complete-legacy-candidate-preservation-passed",
+  "source_files_sha256": {
+    "tests/copula-expectation-full-source.json": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+    "tests/fixtures/native-pos-sources.json": "d00f171a7f8a674322325c93390c52f0e8c6d964721f89b2633e34360825b784",
+    "tests/fixtures/source-head-sources.json": "46ad07956769f7175936d201a297707e7b9529526727a73c6684f04a991fe8af",
+    "tests/fixtures/well-doeda-sources.json": "eb02f9b0a80bfeb60fd4b6e2c19693b7926176d4b10b973cbf3ee177527488a8",
+    "tests/fixtures/gam-question-sources.json": "2cd8ab46f043f4bc6c2c95872864c505e81f7c026702899d42327c7ea74b5394",
+    "tests/fixtures/continuation-left-written-vowel-judgments.json": "d67154f7bc381ac058023817df7bf3a8d6b32d70d10cc62ffdf9692a99d534b4",
+    "tests/fixtures/counterfactual-ryeon-sources.json": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+    "tests/fixtures/direct-command-review-sources.json": "70e14f788e8b3f366c8722d3a1e77ffe48bbed204dd7f0268f489435c1ac0422",
+    "tests/fixtures/rya-copula-regressions.json": "8dad7a88583f79718487f04b2b0b921e359098fd4f43039ec2b250d531a9cacb",
+    "tests/fixtures/continuation-left-sources.json": "bb222026c1a3503a7155113907cd2c72efd439c9def05f5706c2f24e312ce032",
+    "tests/fixtures/friendly-command-sources.json": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+    "tests/fixtures/ssik-sources.json": "4c1f72c73f61e1a29e3e670cae48b0fe92480a7e37dc4277ed531b68051c21a6",
+    "tests/fixtures/question-additive-sources.json": "713e2535645c1b2f948477bfb1071bb48481606dc4b1d387054ea398c8dd2f6c",
+    "tests/fixtures/continuation-inflection-additional.json": "aa50e0ce8c8d75a80ecc74ecccbf97750984320e3793b42a65e654c909b89f1b",
+    "tests/fixtures/phonetic-paradigm-sources.json": "36f24d31036eb0a9e672d132d0923a0e253491928a21e559e099071b8d484142",
+    "tests/fixtures/nominal-si-sources.json": "65a109c4223c2b72300a2079d7aa5235cfb757ddbafc9f7977cce919f6a02e9c",
+    "tests/fixtures/native-pos-boundaries.json": "ab993b8e1b76c84d110ca59414e21b51ff5bbb0975ed1aff262be1c0c553c262",
+    "tests/fixtures/reported-retrospective-corrections.json": "0a8944b82420f91f5d0f027df530783f186679f7043ea2890c69282970f3c99d",
+    "tests/fixtures/lexical-nada-listed-priority.json": "f33d50bb38a07cc329d3f4f74d6487dba95ed4249dd2a8f3ac5ff048bac6677b",
+    "tests/fixtures/future-question-sources.json": "a8e4f4e0f62a56bce8c77045e01e08e7ffed3d160e8bedec672515eca7712c04",
+    "tests/fixtures/bare-noun-spacing-additional-pairs.json": "5fd69f4e20a56715b873eca87b3f33162a612d710df99ac0645b0de70af93b01",
+    "tests/fixtures/reported-retrospective-sources.json": "55df84c5c0ef2bd053155109249ab58c98f15c3f764cf43106f3d66229a31e29",
+    "tests/fixtures/bare-noun-spacing-sources.json": "a9fa1a11f626a23c044d5d73f67bc50f20616e135d21cbbfefb358176906accb",
+    "tests/fixtures/deoniman-sources.json": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+    "tests/fixtures/future-question-corpus-supplement.json": "f2bea48d85ff30ad5ba50918d77332b89ddd2856933d8fd2f3b0678aabe62d42",
+    "tests/fixtures/gera-nera-sources.json": "4708e4e5694c69a46b8248bb17abb3831c153c75390501d55fadc01ba1998e19",
+    "tests/fixtures/ssik-adverb-sources.json": "7ec19c5fd0293168f25aa8210b0565da698a907ce184a7e607f15c65d588252f",
+    "tests/fixtures/excluded-paradigm-sources.json": "0cde6ac61fd799bf76860b889ddef2417d14839bf25e3df06999d5b2e2c2874f",
+    "tests/fixtures/question-topic-sources.json": "7e09d51e5156fa7e0a65bd6964dde0b7dab660c8d35548324278b63db9bcc189",
+    "tests/fixtures/doeda-originless-before.json": "145fec31913abeac5f071bf610f89d4dfe47eb0d12f9b068cd792b2b7d089257",
+    "tests/fixtures/written-vowel-compat-sources.json": "072b22762bb2e0a3ec8ea7083a887d2148dbd1cf06ebe7b5e0c7cd7b4efb05b0",
+    "tests/fixtures/continuation-inflection-sources.json": "cb682b1bee17458d9ca6438ce490c07588265058b79c09009457ee5bad4b2740",
+    "tests/fixtures/hada-remaining-sources.json": "374565668a66d053cc86d7f1389e84b47e773eafae9a7fb10e382297805fc42d",
+    "tests/fixtures/emphatic-ending-sources.json": "a63a758431dd4424f94ba3c75d379d9d47c9b8a307670307766e16890a8cb635",
+    "tests/fixtures/adjectival-allomorph-preflight.json": "fc05f40ed9d58e8e10c63b8782353c7f407b63911513474f4d4c1515b5fadb01",
+    "tests/fixtures/degree-rimankeum-sources.json": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+    "tests/fixtures/nominal-si-hada-sources.json": "4b43d7643158fe4aabf5e7da85580080acd6d36117f258943e7a043b2320c05c",
+    "tests/fixtures/doeda-partial-origin-sources.json": "f9f9bbc2f2ac316b7710cccaf9bd9529e56a183319e22f660f9eeae59468eba2",
+    "tests/fixtures/rya-boundary-regressions.json": "f98bd12219f08efff5ea36422afb9263b71706ba4ac7c6efc7f4bee27886c466",
+    "tests/fixtures/continuation-left-vowel-compat-judgments.json": "25a5ee46667b6f43c38e9f31227c326fd0c821bfba2ce4586b9d8dd7348f0cbd",
+    "tests/fixtures/nominal-hwa-hada-sources.json": "6d6be3f92836cdd157eb0a1ef316ee6576c15043352128a45328389f217ae183",
+    "tests/fixtures/caution-ending-sources.json": "ddd5f19db17973045af69e317b264857b54ce494f0452f90e8c41e0079cf1114",
+    "tests/fixtures/nominal-hwa-sources.json": "16e11c1c3cb140373cfbd3ace58b36b9efe820305cb8656b9fb3cd14b8733107",
+    "tests/fixtures/lexical-nada-dependencies.json": "6ea54d7cfd23b06eb6ae84361284266dcf91c72d2be32ed1a4098b5418caf9c6",
+    "tests/fixtures/hada-nominal-sources.json": "dd7820f2e97e016457ad637a24fd37c64c5374b6938e94dad6666d584fba4019",
+    "tests/fixtures/complex-bieup-sources.json": "776295f3b9ac713cfbb983d5f651a70c43092926b8cbb5a7b03dd1a4d6f0482a",
+    "tests/fixtures/finite-vowel-sources.json": "fd883f797f66aacf1849c018d89a55bf5bbe482e5d261030b6a191176edbeaa1",
+    "tests/fixtures/declarative-contrast-original-cases.json": "46b43117ec0018a35453e1f68ff636be3d7cf3a0bc21d167c0a72b978404e469",
+    "tests/fixtures/declarative-contrast-boundary-before.json": "86772047c970df70155c8bd8d79be7ad263e1b00662dc6cd87ad44a34e7c94e2",
+    "tests/fixtures/ostensible-reason-original-cases.json": "4fcf2ccc306b59b4d8c31500083782161b9d569f4a281ee3564e9ac3468e3a44",
+    "tests/fixtures/ostensible-reason-mode-scope.json": "35222aae50c2d3fc649a6d233f6cf876abcd93d41441cdf26fa7f4927bdbe6fd"
+  },
+  "before_cli_sha256": "a95e562ab6efd4bda6f1c25c18bb5d5c8cd7b3c364170db311cb819ea998520d",
+  "cli_sha256": "ae1a593555c94973bd7abdc44152c739559f11eabd25b93cb362e590844a1d21",
+  "changes": {
+    "부둥켜안고": {
+      "before": {
+        "normalized": "부둥켜안고",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜안고",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜안다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "부둥켜안고",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜아",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜아다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜안고",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜안다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜알다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "부둥켜앟다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.literary_question_go",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/deoniman-sources.json",
+          "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+          "pointer": "/source_before_analyses/부둥켜안고"
+        }
+      ],
+      "additions": [
+        {
+          "id": "literary-question-go-legacy-2fa098a4e6a078aa2cd8e4fd",
+          "surface": "부둥켜안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "부둥켜아",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/deoniman-sources.json",
+              "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+              "pointer": "/source_before_analyses/부둥켜안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "explicit_question_parent": {
+            "surface": "부둥켜아인고",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "부둥켜아",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은고",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "ending",
+                "ending.literary_question_go"
+              ],
+              "unchanged": false
+            }
+          },
+          "parent_relation": "Restore overt copula 이 and attached ㄴ boundary; change the question ending to earlier adnominal 은. This proves derivation parity, not contextual or lexical licensing.",
+          "earlier_parent": {
+            "surface": "부둥켜아인",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "부둥켜아",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-39444d8dfddf10cac517dd11",
+          "surface": "부둥켜안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "부둥켜아다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/deoniman-sources.json",
+              "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+              "pointer": "/source_before_analyses/부둥켜안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "부둥켜안",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "부둥켜아다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-cb770d34a0982f421c72ec54",
+          "surface": "부둥켜안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "부둥켜알다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/deoniman-sources.json",
+              "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+              "pointer": "/source_before_analyses/부둥켜안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "부둥켜안",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "부둥켜알다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-5762701753db8cdfed2f0cba",
+          "surface": "부둥켜안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "부둥켜앟다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.literary_question_go",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/deoniman-sources.json",
+              "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+              "pointer": "/source_before_analyses/부둥켜안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "부둥켜안",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "부둥켜앟다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        }
+      ]
+    },
+    "안고": {
+      "before": {
+        "normalized": "안고",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "안고",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "안다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "안고",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "아",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "안고",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "안다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "앟다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.literary_question_go",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "origins": [
+        {
+          "source": "tests/copula-expectation-full-source.json",
+          "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+          "pointer": "/before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+          "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+          "pointer": "/source_cohort_before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/degree-rimankeum-sources.json",
+          "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+          "pointer": "/source_cohort_before_analyses/안고"
+        }
+      ],
+      "additions": [
+        {
+          "id": "literary-question-go-legacy-bce0703923b02b6a4e2cb829",
+          "surface": "안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "아",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/copula-expectation-full-source.json",
+              "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+              "pointer": "/before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+              "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+              "pointer": "/source_cohort_before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/degree-rimankeum-sources.json",
+              "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+              "pointer": "/source_cohort_before_analyses/안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "explicit_question_parent": {
+            "surface": "아인고",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "아",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은고",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "ending",
+                "ending.literary_question_go"
+              ],
+              "unchanged": false
+            }
+          },
+          "parent_relation": "Restore overt copula 이 and attached ㄴ boundary; change the question ending to earlier adnominal 은. This proves derivation parity, not contextual or lexical licensing.",
+          "earlier_parent": {
+            "surface": "아인",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "아",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-76b0dadc3880ae2f11c21306",
+          "surface": "안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "아다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/copula-expectation-full-source.json",
+              "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+              "pointer": "/before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+              "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+              "pointer": "/source_cohort_before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/degree-rimankeum-sources.json",
+              "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+              "pointer": "/source_cohort_before_analyses/안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "안",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "아다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-deaf783d0fabdf52545da6ae",
+          "surface": "안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "알다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/copula-expectation-full-source.json",
+              "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+              "pointer": "/before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+              "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+              "pointer": "/source_cohort_before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/degree-rimankeum-sources.json",
+              "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+              "pointer": "/source_cohort_before_analyses/안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "안",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "알다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-a0a5ff1b2ccb87bd2dfe9bac",
+          "surface": "안고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "앟다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.literary_question_go",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          "origins": [
+            {
+              "source": "tests/copula-expectation-full-source.json",
+              "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+              "pointer": "/before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+              "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+              "pointer": "/source_cohort_before_analyses/안고"
+            },
+            {
+              "source": "tests/fixtures/degree-rimankeum-sources.json",
+              "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+              "pointer": "/source_cohort_before_analyses/안고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "안",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "앟다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        }
+      ]
+    },
+    "원고": {
+      "before": {
+        "normalized": "원고",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "원고",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "원다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "원고",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "워",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "워다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "원고",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "원다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "월다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "웧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.literary_question_go",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/friendly-command-sources.json",
+          "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+          "pointer": "/before_analyses/원고"
+        }
+      ],
+      "additions": [
+        {
+          "id": "literary-question-go-legacy-dbb6dadd267d9211435eee10",
+          "surface": "원고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "워",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/friendly-command-sources.json",
+              "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+              "pointer": "/before_analyses/원고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "explicit_question_parent": {
+            "surface": "워인고",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "워",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은고",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "ending",
+                "ending.literary_question_go"
+              ],
+              "unchanged": false
+            }
+          },
+          "parent_relation": "Restore overt copula 이 and attached ㄴ boundary; change the question ending to earlier adnominal 은. This proves derivation parity, not contextual or lexical licensing.",
+          "earlier_parent": {
+            "surface": "워인",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "워",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "copula",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-459a4c2633ecdd065f4788c7",
+          "surface": "원고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "워다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/friendly-command-sources.json",
+              "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+              "pointer": "/before_analyses/원고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "원",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "워다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-ac4a4fe73578d5c4a40dca5f",
+          "surface": "원고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "월다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.literary_question_go"
+            ],
+            "unchanged": false
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/friendly-command-sources.json",
+              "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+              "pointer": "/before_analyses/원고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "원",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "월다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        },
+        {
+          "id": "literary-question-go-legacy-b969253ad85caa990061f514",
+          "surface": "원고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "웧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.literary_question_go",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          "origins": [
+            {
+              "source": "tests/fixtures/friendly-command-sources.json",
+              "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+              "pointer": "/before_analyses/원고"
+            }
+          ],
+          "structural_verdict": "unjudged broader composition",
+          "contextual_verdict": "unjudged",
+          "independent_review": "pending",
+          "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+          "earlier_parent": {
+            "surface": "원",
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "웧다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          },
+          "source_entries": [
+            "krdict:73889",
+            "krdict:73901"
+          ]
+        }
+      ]
+    }
+  },
+  "individual_additions": [
+    {
+      "id": "literary-question-go-legacy-2fa098a4e6a078aa2cd8e4fd",
+      "surface": "부둥켜안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "부둥켜아",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.omitted_ending",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/deoniman-sources.json",
+          "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+          "pointer": "/source_before_analyses/부둥켜안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "explicit_question_parent": {
+        "surface": "부둥켜아인고",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "부둥켜아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        }
+      },
+      "parent_relation": "Restore overt copula 이 and attached ㄴ boundary; change the question ending to earlier adnominal 은. This proves derivation parity, not contextual or lexical licensing.",
+      "earlier_parent": {
+        "surface": "부둥켜아인",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "부둥켜아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-39444d8dfddf10cac517dd11",
+      "surface": "부둥켜안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "부둥켜아다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/deoniman-sources.json",
+          "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+          "pointer": "/source_before_analyses/부둥켜안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "부둥켜안",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "부둥켜아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-cb770d34a0982f421c72ec54",
+      "surface": "부둥켜안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "부둥켜알다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/deoniman-sources.json",
+          "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+          "pointer": "/source_before_analyses/부둥켜안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "부둥켜안",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "부둥켜알다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-5762701753db8cdfed2f0cba",
+      "surface": "부둥켜안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "부둥켜앟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "ending.literary_question_go",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/deoniman-sources.json",
+          "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+          "pointer": "/source_before_analyses/부둥켜안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "부둥켜안",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "부둥켜앟다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-bce0703923b02b6a4e2cb829",
+      "surface": "안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "아",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.omitted_ending",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/copula-expectation-full-source.json",
+          "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+          "pointer": "/before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+          "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+          "pointer": "/source_cohort_before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/degree-rimankeum-sources.json",
+          "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+          "pointer": "/source_cohort_before_analyses/안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "explicit_question_parent": {
+        "surface": "아인고",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        }
+      },
+      "parent_relation": "Restore overt copula 이 and attached ㄴ boundary; change the question ending to earlier adnominal 은. This proves derivation parity, not contextual or lexical licensing.",
+      "earlier_parent": {
+        "surface": "아인",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-76b0dadc3880ae2f11c21306",
+      "surface": "안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "아다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/copula-expectation-full-source.json",
+          "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+          "pointer": "/before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+          "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+          "pointer": "/source_cohort_before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/degree-rimankeum-sources.json",
+          "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+          "pointer": "/source_cohort_before_analyses/안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "안",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-deaf783d0fabdf52545da6ae",
+      "surface": "안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/copula-expectation-full-source.json",
+          "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+          "pointer": "/before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+          "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+          "pointer": "/source_cohort_before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/degree-rimankeum-sources.json",
+          "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+          "pointer": "/source_cohort_before_analyses/안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "안",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "알다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-a0a5ff1b2ccb87bd2dfe9bac",
+      "surface": "안고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "앟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "ending.literary_question_go",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "origins": [
+        {
+          "source": "tests/copula-expectation-full-source.json",
+          "source_sha256": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+          "pointer": "/before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+          "source_sha256": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+          "pointer": "/source_cohort_before_analyses/안고"
+        },
+        {
+          "source": "tests/fixtures/degree-rimankeum-sources.json",
+          "source_sha256": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+          "pointer": "/source_cohort_before_analyses/안고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "안",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "앟다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-dbb6dadd267d9211435eee10",
+      "surface": "원고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "워",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.omitted_ending",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/friendly-command-sources.json",
+          "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+          "pointer": "/before_analyses/원고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "explicit_question_parent": {
+        "surface": "워인고",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "워",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        }
+      },
+      "parent_relation": "Restore overt copula 이 and attached ㄴ boundary; change the question ending to earlier adnominal 은. This proves derivation parity, not contextual or lexical licensing.",
+      "earlier_parent": {
+        "surface": "워인",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "워",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-459a4c2633ecdd065f4788c7",
+      "surface": "원고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "워다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/friendly-command-sources.json",
+          "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+          "pointer": "/before_analyses/원고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "원",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "워다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-ac4a4fe73578d5c4a40dca5f",
+      "surface": "원고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "월다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.literary_question_go"
+        ],
+        "unchanged": false
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/friendly-command-sources.json",
+          "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+          "pointer": "/before_analyses/원고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "원",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "월다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    },
+    {
+      "id": "literary-question-go-legacy-b969253ad85caa990061f514",
+      "surface": "원고",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "웧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "ending.literary_question_go",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "origins": [
+        {
+          "source": "tests/fixtures/friendly-command-sources.json",
+          "source_sha256": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+          "pointer": "/before_analyses/원고"
+        }
+      ],
+      "structural_verdict": "unjudged broader composition",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "parent_relation": "Remove 고 and whole-question marker; restore earlier 은 ending with identical lemma, spelling path and boundary.",
+      "earlier_parent": {
+        "surface": "원",
+        "analysis": {
+          "lemmas": [
+            {
+              "text": "웧다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73901"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "full_history_sha256": "e08c5525643ec32c9f2efd3506a97326f53ffe0da8ab74df6308e8da24ccab7f",
+  "earlier_parents": {
+    "부둥켜아인": {
+      "normalized": "부둥켜아인",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아이",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아인",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "부둥켜안": {
+      "normalized": "부둥켜안",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜안",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜알다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜앟다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "아인": {
+      "normalized": "아인",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아인",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "안": {
+      "normalized": "안",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "아",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "안",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "알다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "앟다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "워인": {
+      "normalized": "워인",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "워",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워이",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워인",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "원": {
+      "normalized": "원",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "원",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "월다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "웧다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "explicit_question_parents": {
+    "부둥켜아인고": {
+      "normalized": "부둥켜아인고",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아인고",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아인다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "부둥켜아잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.literary_question_go",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "아인고": {
+      "normalized": "아인고",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "아",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아인고",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아인다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.literary_question_go",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "워인고": {
+      "normalized": "워인고",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "워",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워인고",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워인다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.literary_question_go"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "워잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.literary_question_go",
+            "irregular.hieut"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "structural_verdict": "unjudged broader composition",
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

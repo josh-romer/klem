@@ -895,6 +895,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "는가",
             "는가요",
             "는감",
+            "는고",
             "는데도",
             "는데다가",
             "느냐",
@@ -952,6 +953,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "던데요",
             "던가",
             "던감",
+            "던고",
             "던지",
             "던들",
             "나",
@@ -1026,6 +1028,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("데", "은데", 4),
             ("지", "은지", 4),
             ("가", "은가", 4),
+            // Original KRDict 73889 건고 preserves the contracted copula.
+            ("고", "은고", 4),
             ("가요", "은가요", 4),
             ("까", "을까", 8),
             ("까요", "을까요", 8),
@@ -1293,6 +1297,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("은가", "가", "은가", 4),
             // KRDict 73878/73888: refuting questions, preserving ㄴ/은 spelling.
             ("은감", "감", "은감", 4),
+            // KRDict 73889/73901: literary ㄴ고/은고 question allomorphs.
+            ("은고", "고", "은고", 4),
             ("은가요", "가요", "은가요", 4),
             ("은데도", "데도", "은데도", 4),
             ("은데다가", "데다가", "은데다가", 4),
@@ -2026,6 +2032,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.retrospective" => "Recover retrospective 더 after other prefinal markers.",
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
+        }
+        "ending.literary_question_go" => {
+            "Recover the original literary -(으)ㄴ고, -는고 and -던고 question endings while preserving their stem boundaries; contextual register and sense remain unselected."
         }
         "ending.ostensible_reason" => {
             "Recover the source-owned -답시고 and present -(느)ㄴ답시고 connective endings without choosing a contextual speaker attitude."

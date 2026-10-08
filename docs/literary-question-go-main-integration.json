@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "state": "integrated-main-validated",
+  "proposal": "docs/literary-question-go-current-integration-proposal.json.gz",
+  "proposal_sha256": "46ed5a8e7505e64d2e7c1e7326075c51bd0d83bcbec92defb42dc21c7a174939",
+  "guarded_files": 25,
+  "all_before_hashes_matched": true,
+  "all_after_texts_exact": true,
+  "ledger_proposal": "docs/literary-question-go-append-only-ledger-proposal.json.gz",
+  "historical_case_prefix_exact": true,
+  "historical_source_mappings_exact": true,
+  "historical_cases": 34781,
+  "added_cases": 62,
+  "total_cases": 34843,
+  "judgments": {
+    "required": 30742,
+    "forbidden": 4117
+  },
+  "updated_global_counter_assertions": true,
+  "scope": "Guarded production integration with append-only62-case ledger, completed full1052-test main Rust and CLI/browser/adapter replay. Earlier34781 cases/source mappings preserved. Nix release/runtime, performance and complete inventory gate remain pending; broader observations and contextual/register/precision judgments remain unreviewed.",
+  "main_checks": "docs/literary-question-go-main-checks.json"
+}

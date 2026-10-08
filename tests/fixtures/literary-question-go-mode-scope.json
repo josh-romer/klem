@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "scope": "Sixteen individual Native owner/mode assertions; unlisted/negative/retrospective paths and raw hypotheses are separately tracked from required structural source cases. Contextual and independent review remain open.",
+  "cases": [
+    {
+      "id": "literary-question-go-mode-bare-verb-conflict",
+      "surface": "먹은고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "먹다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:15983",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 0,
+          "id": "krdict:58272",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": false
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-adjective-homonym",
+      "surface": "먼고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "멀다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:26833",
+          "status": "compatible"
+        },
+        {
+          "lemma": 0,
+          "id": "krdict:54855",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-verb-homonym",
+      "surface": "머는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "멀다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:26833",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 0,
+          "id": "krdict:54855",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-adjective-present-conflict",
+      "surface": "좋는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "좋다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:79033",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": false
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-past-adjective-present",
+      "surface": "좋았는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "좋다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "었",
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "prefinal",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:79033",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-unlisted-past-adjectival",
+      "surface": "좋았은고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "좋다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "었",
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "prefinal",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:79033",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-honorific-verbal",
+      "surface": "가신고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "가다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "시",
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "prefinal",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:27500",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-irregular-verb-class",
+      "surface": "도운고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "돕다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:17203",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": false
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-verbal-auxiliary-owner",
+      "surface": "좋게하는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "게",
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62888",
+          "status": "compatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:62899",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:73277",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-adjectival-auxiliary-owner",
+      "surface": "먹기는한고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "먹다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "기",
+          "는",
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "particle",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62888",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:62899",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-copular-past",
+      "surface": "학생이었는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "학생",
+          "이다"
+        ],
+        "lemma_kinds": [
+          "nominal",
+          "copula"
+        ],
+        "morphemes": [
+          "었",
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "prefinal",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:86232",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-copular-retrospective",
+      "surface": "학생이던고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "학생",
+          "이다"
+        ],
+        "lemma_kinds": [
+          "nominal",
+          "copula"
+        ],
+        "morphemes": [
+          "던고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:86232",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-negative-adjectival",
+      "surface": "좋지는않는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "않다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "지",
+          "는",
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "particle",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:71583",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-negative-verbal",
+      "surface": "먹지는않는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "먹다",
+          "않다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "지",
+          "는",
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "particle",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:71581",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-bare-stative-auxiliary",
+      "surface": "먹고있는고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "먹다",
+          "있다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "고",
+          "는고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62595",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    },
+    {
+      "id": "literary-question-go-mode-left-adjective-cannot-lend-class",
+      "surface": "좋게한고",
+      "judgment_id": "native-owner-and-mode-presence",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "게",
+          "은고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.literary_question_go"
+        ]
+      },
+      "expected_entry_statuses": [],
+      "expected_presence": {
+        "raw": false,
+        "headword": false,
+        "compatible": false
+      },
+      "source_entries": [
+        "krdict:73889",
+        "krdict:73892",
+        "krdict:73898",
+        "krdict:73901"
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending",
+      "scope": "Conditional finite attachment/mode assertion; presence or Unknown eligibility does not establish contextual grammar or sense."
+    }
+  ]
+}

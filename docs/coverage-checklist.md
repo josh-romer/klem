@@ -2798,7 +2798,7 @@ review remains open under the completion review below.
   attitude and independent Korean review remain open.
 
 - [ ] **COV-017cj — Original literary -고 question family.**
-  **Prototype validated; production integration and release gates pending.**
+  **Production integration and main validation complete; release gates pending.**
   [Four complete original entries](literary-question-go-source-discovery.json.gz)
   (73889, 73892, 73898, 73901) preserve all eight senses, 39 original groups,
   dialogue replies and usage notes. The unchanged baseline has six 535-frame
@@ -2812,7 +2812,13 @@ review remains open under the completion review below.
   Unknown. No context, register or dictionary sense is selected.
 
   [The current guarded proposal](literary-question-go-current-integration-proposal.json.gz)
-  contains 25 changed/new files. [Actual complete Rust validation](literary-question-go-prototype-full-rust-retry2.json)
+  contains 25 changed/new files, now applied only after every earlier file hash
+  matched. The [main integration receipt](literary-question-go-main-integration.json)
+  preserves the full earlier ledger prefix and appends all 62 proposed cases.
+  [Portable source and ledger auditing](../tools/literary_question_go_audit.py)
+  passes seventeen corruption controls. Earlier package sources remain independently
+  reconstructible through their immutable 924-input historical proof.
+  [Actual complete prototype Rust validation](literary-question-go-prototype-full-rust-retry2.json)
   passes 1,052 tests across 222 batches, zero failures, one ignored, with all
   922 inputs unchanged. Nine focused source/Native/boundary/spacing tests pass;
   Clippy with denied warnings and formatting pass. The initial six full-suite
@@ -2857,12 +2863,31 @@ review remains open under the completion review below.
   complete 535-frame original APIs. Eleven runtime controls pass; desktop and
   mobile images were inspected, and the owned server was stopped.
 
+  [Actual main validation](literary-question-go-main-checks.json) now passes the
+  full 1,052-test Rust suite (zero failures, one ignored, 222 batches), with
+  all 922 Rust inputs unchanged. The main/Nix compile and frontend union has
+  939 identical inputs. The downloaded-corpus regression, Clippy with denied
+  warnings, formatting and SolidJS/TypeScript build pass. Actual main CLI
+  output matches every 3,210 source and 270 boundary frames, all 372 finite
+  judgments and 96 conditional assertions, all 1,128,312 broad frames and all
+  32,096 held-out word analyses. The main Rust adapter independently reproduces
+  all 66,570 original gold rows and candidate summaries. The main browser
+  repeats 116 source/boundary and thirty conditional diagrams, twelve exact
+  exports, 136 Native endpoints, four primary panes, 468 mode assertions and
+  both complete 535-frame source APIs. Desktop/mobile images were inspected;
+  the owned server was stopped. Portable controls pass: seventeen source/ledger,
+  ten CLI, seven adapter, eleven browser and fourteen broad/corpus checks.
+  [Exact broad input bytes](literary-question-go-broad-inputs.json.gz) are retained
+  so original contexts and spans can be verified offline. Earlier ostensible
+  package source/runtime verification and all 41 runtime controls still pass
+  after the current integration.
+
   [The append-only ledger proposal](literary-question-go-append-only-ledger-proposal.json.gz)
-  retains all earlier 34,781 cases and prepares 62 additions (58 required/four
-  forbidden). The original 39 occurrences and authored 23 boundaries remain
-  separate from conditional/broader unjudged alternatives. Remaining: guarded
-  production integration, global ledger/counter updates, current main CLI and
-  browser/adapter replay, Nix packaging/performance gates, broader composition,
+  retains all earlier 34,781 cases; its 62 additions (58 required/four
+  forbidden) are now in the global ledger, with updated counter assertions. The original 39 occurrences and authored 23 boundaries remain
+  separate from conditional/broader unjudged alternatives. Remaining: Nix
+  release/package CLI, adapter and browser validation, novel performance and
+  the full inventory gate, broader composition,
   precision and independent contextual/register review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

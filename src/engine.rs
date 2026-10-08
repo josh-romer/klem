@@ -1805,6 +1805,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if matches!(ending.form, "다마는" | "다만" | "는다마는" | "는다만") {
                     p.rules.push("ending.declarative_contrast".into());
                 }
+                if matches!(ending.form, "은고" | "는고" | "던고") {
+                    p.rules.push("ending.literary_question_go".into());
+                }
                 if matches!(ending.form, "답시고" | "는답시고") {
                     p.rules.push("ending.ostensible_reason".into());
                 }
@@ -2942,8 +2945,9 @@ fn auxiliary_inflections_allowed_for(
             // Negative paradigms need their own evidence, not inherited POS.
             if bare
                 && !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
-                && ((m.form == "은감" && matches!(class, Some(PredicateClass::Verb)))
-                    || (m.form == "는감"
+                && ((matches!(m.form.as_str(), "은감" | "은고")
+                    && matches!(class, Some(PredicateClass::Verb)))
+                    || (matches!(m.form.as_str(), "는감" | "는고")
                         && (matches!(class, Some(PredicateClass::Copula))
                             || (matches!(class, Some(PredicateClass::Adjective))
                                 && !matches!(lemma.text.as_str(), "있다" | "없다" | "계시다")))))
@@ -3243,7 +3247,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
             || copular_exclamation(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감")
+            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감" | "는고")
     }) {
         return false;
     }
@@ -3601,7 +3605,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         literary_na_ending(&m.form)
             || neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감")
+            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감" | "는고")
     }) {
         return;
     }

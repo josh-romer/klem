@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "review_status": "Authored finite primary-note/spelling/prefinal structures; not corpus gold or independent/contextual review.",
+  "sources": {
+    "73889": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73889",
+    "73892": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73892",
+    "73898": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73898",
+    "73901": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73901"
+  },
+  "cases": [
+    {
+      "id": "literary-question-go-boundary-bare-vowel",
+      "surface": "바쁜고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "바쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Attach ㄴ고 to a vowel-final descriptive stem."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-bare-rieul",
+      "surface": "먼고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Drop stem ㄹ before attached ㄴ고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-bieup-descriptive",
+      "surface": "고운고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "곱다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Keep the existing ㅂ-to-우 spelling recovery before attached ㄴ고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-bieup-cold",
+      "surface": "추운고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Keep the existing descriptive ㅂ spelling path."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-hieut-demonstrative",
+      "surface": "그런고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "그렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Keep the existing descriptive ㅎ spelling path."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-hieut-color",
+      "surface": "하얀고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "하얗다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Keep the existing descriptive ㅎ spelling path."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-si-vowel",
+      "surface": "예쁘신고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "The source explicitly licenses ㄴ고 after 으시."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-si-coda",
+      "surface": "좋으신고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Retain consonant-stem 으시 and its attached ㄴ고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-si-rieul",
+      "surface": "머신고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Retain the existing ㄹ deletion before 시."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-si-verb",
+      "surface": "가신고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "required",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "The explicit 으시 note licenses this verbal owner after its own prefinal."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-past-descriptive",
+      "surface": "좋았는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "The source explicitly licenses 는고 after 었."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-modal-descriptive",
+      "surface": "좋겠는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "The source explicitly licenses 는고 after 겠."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-si-past-vowel",
+      "surface": "가셨는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "었",
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Own SI/past prefinals remain ordered before source-licensed 는고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-si-past-coda",
+      "surface": "먹으셨는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "었",
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Retain the full consonant-stem honorific and subsequent past contraction."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-existential",
+      "surface": "계시는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "계시다 is named by the source note."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-negative-existential-modal",
+      "surface": "없겠는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Own modal prefinal is explicitly source-listed."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-present-coda-verb",
+      "surface": "먹는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Literal 는고 attaches to the complete consonant-final verbal stem."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-present-rieul-verb",
+      "surface": "사는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "required",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Retain existing ㄹ deletion before 는고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-bare-retrospective-descriptive",
+      "surface": "좋던고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73892",
+          "verdict": "required",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Finite consonant-final descriptive use follows the original note; contextual and general Native attachment remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-wrong-vowel-full",
+      "surface": "예쁘은고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "forbidden",
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "A vowel-final bare stem requires attached ㄴ고 rather than a separate full 은고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-wrong-rieul-full",
+      "surface": "멀은고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "forbidden",
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "A ㄹ-final descriptive stem takes the short ㄴ고 allomorph."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-wrong-si-full",
+      "surface": "예쁘시은고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73889",
+          "verdict": "forbidden",
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "Vowel-final 시 takes attached ㄴ고 rather than full 은고."
+        }
+      ]
+    },
+    {
+      "id": "literary-question-go-boundary-wrong-present-bieup-restoration",
+      "surface": "도우는고",
+      "judgments": [
+        {
+          "id": "exact-boundary-path",
+          "source": "73898",
+          "verdict": "forbidden",
+          "lemmas": [
+            "돕다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.literary_question_go"
+          ],
+          "reason": "The consonant-initial 는고 retains 돕; its path must not borrow a vowel-ending ㅂ restoration."
+        }
+      ]
+    }
+  ]
+}

@@ -426,12 +426,28 @@
                 ./tools/declarative_contrast_performance.py
                 ./tools/capture_declarative_contrast_performance.py
                 ./tools/test_declarative_contrast_performance.py
+                ./tools/literary_question_go_browser_audit.py
+                ./tools/test_literary_question_go_browser_audit.py
+                ./tools/literary_question_go_preservation.py
+                ./tools/test_literary_question_go_preservation.py
+                ./tools/literary_question_go_runtime.py
+                ./tools/test_literary_question_go_runtime.py
+                ./tools/literary_question_go_replay.py
+                ./tools/literary_question_go_adapter_replay.py
+                ./tools/literary_question_go_adapter_audit.py
+                ./tools/test_literary_question_go_adapter_audit.py
+                ./tools/capture_literary_question_go_web.py
+                ./web/tests/literary-question-go.mjs
+                ./tools/literary_question_go_audit.py
+                ./tools/test_literary_question_go_audit.py
                 ./tools/ostensible_reason_audit.py
                 ./tools/test_ostensible_reason_audit.py
                 ./tools/ostensible_reason_preservation.py
                 ./tools/test_ostensible_reason_preservation.py
                 ./tools/ostensible_reason_replay.py
                 ./tools/ostensible_reason_adapter_replay.py
+                ./tools/ostensible_reason_sources.py
+                ./tools/test_ostensible_reason_sources.py
                 ./tools/ostensible_reason_runtime.py
                 ./tools/test_ostensible_reason_runtime.py
                 ./tools/capture_ostensible_reason_modes.py
@@ -826,10 +842,22 @@
             python -m unittest discover -s tools -p 'test_declarative_contrast_runtime.py'
             python -m unittest discover -s tools -p 'test_declarative_contrast_performance.py'
             python tools/declarative_contrast_performance.py --verify
+            python tools/literary_question_go_browser_audit.py
+            python -m unittest discover -s tools -p 'test_literary_question_go_browser_audit.py'
+            python tools/literary_question_go_preservation.py
+            python -m unittest discover -s tools -p 'test_literary_question_go_preservation.py'
+            python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
+            python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
+            python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz
+            python -m unittest discover -s tools -p 'test_literary_question_go_adapter_audit.py'
+            python tools/literary_question_go_audit.py --output "$TMPDIR/literary-question-go-source-audit.json.gz"
+            python -m unittest discover -s tools -p 'test_literary_question_go_audit.py'
             python tools/ostensible_reason_audit.py --preparation docs/ostensible-reason-source-owner-preparation.json.gz --replay docs/ostensible-reason-prototype-source-replay.json.gz --output "$TMPDIR/ostensible-source-audit.json.gz"
             python -m unittest discover -s tools -p 'test_ostensible_reason_audit.py'
             python tools/ostensible_reason_preservation.py --output "$TMPDIR/ostensible-preservation-audit.json"
             python -m unittest discover -s tools -p 'test_ostensible_reason_preservation.py'
+            python tools/ostensible_reason_sources.py --proof docs/ostensible-reason-historical-sources.json.gz
+            python -m unittest discover -s tools -p 'test_ostensible_reason_sources.py'
             python tools/ostensible_reason_runtime.py --package
             python -m unittest discover -s tools -p 'test_ostensible_reason_runtime.py'
             python -m unittest discover -s tools -p 'test_ostensible_reason_performance.py'

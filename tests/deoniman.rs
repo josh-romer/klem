@@ -1,5 +1,7 @@
 #[path = "copula_expectation_support/parent.rs"]
 mod copula_expectation_parent;
+#[path = "support/literary_question_go_history.rs"]
+mod question_go_history;
 #[path = "reported_dana_support/parent.rs"]
 mod reported_dana_parent;
 #[path = "support/literary_ri_prefinal_history.rs"]
@@ -82,6 +84,14 @@ fn every_original_source_word_retains_all_previous_candidates_in_order() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.literary_question_go") {
+                question_go_history::assert_addition(
+                    "tests/fixtures/deoniman-sources.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "prefinal.conjectural_ni") {
                 ri_history::assert_addition("tests/fixtures/deoniman-sources.json", word, a);
                 continue;

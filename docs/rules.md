@@ -4867,3 +4867,37 @@ The [complete four-check Nix gate](ostensible-reason-combined-nix.json) passes
 with unchanged tracked inputs, HEAD and staged diff. Broader composition,
 precision, contextual/register accuracy and independent Korean review remain
 open.
+
+
+## Literary question endings (COV-017cj)
+
+The canonical endings `은고`, `는고` and `던고` retain whole question readings
+from four complete original dictionary entries. `은고` represents both written
+-ㄴ고 and -은고: vowel/ㄹ and other consonant boundaries stay separate. Existing
+predicate, copula, auxiliary and prefinal owners keep their own component order.
+The contracted source `건고` uses the existing contracted nominal/copular path.
+The viewer labels the construction “Literary question” and links its original
+sources; contextual register and dictionary sense remain unselected.
+
+Native compatibility checks each immediate owner and each homonym. Bare `은고`
+on verbs and bare `는고` on nonexistential adjectives/copulas have specific
+attachment conflicts; raw and headword hypotheses remain available. General
+`던고` stays Unknown because the source's restrictive adjective note conflicts
+with its own verbal and copular examples. Negative/compound existential and
+other unreviewed extensions remain Unknown and filter eligible.
+
+[The original source cases](../tests/fixtures/literary-question-go-validity.json)
+and [23 authored boundaries](../tests/fixtures/literary-question-go-boundaries.json)
+append 58 required and four path-specific forbidden judgments to the global
+ledger. [Sixteen conditional mode cases](../tests/fixtures/literary-question-go-mode-scope.json)
+track owner-specific status separately. The global ledger preserves all earlier
+34,781 cases and source mappings. All broad additions and six new spacing
+alternatives retain stable provenance and unjudged status. Source/Native parity
+and annotated gold recovery do not establish candidate precision. [Actual main validation](literary-question-go-main-checks.json) passes all 1,052
+Rust tests, the downloaded-corpus regression, Clippy/format/frontend checks,
+every source/boundary/conditional and broad CLI frame, every held-out word and
+all original Rust adapter rows. The main browser repeats all 146 diagrams and
+136 Native entries, with exact exports and a stopped server. Independent Nix
+release/package runtime, novel performance and final inventory gates remain
+pending. Broader composition, contextual/register interpretation and independent
+Korean review remain open under the coverage checklist.

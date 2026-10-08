@@ -1,0 +1,392 @@
+{
+  "scope": "Reproducible ignored integration-test ELF executables after actual main1052-test and pinned-corpus jobs completed and all main CLI/adapter/browser jobs stopped. Each executable matches a current integration-test name and Rust .d provenance. Active Nix uses its own store source/build directories. Normal CLI/server/adapter executables, Rust libraries, source and captures preserved. Reuse may require relinking these tests.",
+  "completed_main_rust": "docs/literary-question-go-main-full-rust.json",
+  "main_and_nix_source_snapshots_unchanged": true,
+  "removed": [
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/emphatic_endings-222fd0d8878dca58",
+      "bytes": 79108448,
+      "allocated_bytes": 79114240,
+      "sha256": "fd7f306159861c1b59b9d16c4e17abe4d60e863c32430d1802619ad816361c62"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/exclamation-85d691a53fc3d1f3",
+      "bytes": 65356808,
+      "allocated_bytes": 65363968,
+      "sha256": "b9b3bddaf33435ea0464e25fb9621da0c94b25f0ddf6df3b7083ec3976a2d809"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/quoted_neuni-3f272a899d2fd4fb",
+      "bytes": 64942208,
+      "allocated_bytes": 64950272,
+      "sha256": "88f50c4c0e23fb6b45fb13bfb791999170af90eb2f4029fced95712dfed82297"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/geol-a43b79334933fdf5",
+      "bytes": 64472144,
+      "allocated_bytes": 64479232,
+      "sha256": "71e01d604f08c4c17751286997f03e9043303807ffeca9a3f3defe33ca93c0a4"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/gam_questions-d13f366f6f89d0c7",
+      "bytes": 64157576,
+      "allocated_bytes": 64163840,
+      "sha256": "f811a4538bb827a8919c56fe06f81f5ed009fe1188d96d8c7c8f9d15664a196e"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/quoted_exclamation-7bb42cc28bba7ef3",
+      "bytes": 63935408,
+      "allocated_bytes": 63942656,
+      "sha256": "e4e5e4aefac565da771372d5bdbd5cab9bfd93c74458b6c200616d4f2579dfd6"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/neuni-d760d66af21a011d",
+      "bytes": 63861496,
+      "allocated_bytes": 63868928,
+      "sha256": "ad229121da9bad12b8678dfbe4f09e1bb1efc5e1333f70af200e7f86d354ee49"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/eumse-41be33ffe86279f4",
+      "bytes": 63777456,
+      "allocated_bytes": 63782912,
+      "sha256": "3e1fba8dd341a244d0591283ec308f7c7283194c3eff85a2daaf9b306683f262"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/copular_command_exclamation-37855fff9372c41a",
+      "bytes": 63685448,
+      "allocated_bytes": 63692800,
+      "sha256": "8fa3ee49c434b38447ae97938932e973912ff9e30511c13a671b41875171d685"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/background_ba-fa6f3b1130928429",
+      "bytes": 63561816,
+      "allocated_bytes": 63569920,
+      "sha256": "de4ba0c3859318a31203c578a61dc625a64fca60deb642f130c86f00b9300972"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/question_exclamation-5310a9f7e47b998c",
+      "bytes": 63165184,
+      "allocated_bytes": 63172608,
+      "sha256": "960eca96bc2d7fa4b086ef6ccb46a118fd9da44c66123c80425c798b4926cbb8"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/bieup-e3c631dd2be84f14",
+      "bytes": 62879168,
+      "allocated_bytes": 62885888,
+      "sha256": "c6831794792a435bbbd7c4ba750572173af7649c8fb477b0360d7d3b5c1b6c47"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/conditional_question-ad362571697656fd",
+      "bytes": 62817336,
+      "allocated_bytes": 62824448,
+      "sha256": "f4726062525d2f8ce8db51cc90c0266355db21baf4f7bd8d5008e5e85c3174e0"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/proposal_exclamation-709d065cb121bcef",
+      "bytes": 62634784,
+      "allocated_bytes": 62640128,
+      "sha256": "78dccae0216e76391a9a35d89942e8df70b2eea9f557f64ad4865bdba746035e"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/neuni_comparison-6528939e47dc643c",
+      "bytes": 62522616,
+      "allocated_bytes": 62529536,
+      "sha256": "ecd8434e2f6dc289f0df4e890d944df556732cbd0b6346503dea36f4e66c9db8"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/hada_nominal-aa8251f289298568",
+      "bytes": 62495176,
+      "allocated_bytes": 62500864,
+      "sha256": "48d3849baa8d7299295c96550238363a6c4bd2c4ffcc2c49e629ce19c2815f41"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/proposal_review-2bad40252ed4a2e4",
+      "bytes": 62084208,
+      "allocated_bytes": 62091264,
+      "sha256": "fb48bd34dbe438243d3dd2ecca1f99b84457e891810e7c37bf13082fef664864"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/nominal_hwa-983b59a97f5fbada",
+      "bytes": 61971368,
+      "allocated_bytes": 61976576,
+      "sha256": "cb6309ab62ed63417d0f92559c1adc3bc19e84092c545d6d676e04e45f81caa7"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/nominal_hwa_hada-8acd33713c539726",
+      "bytes": 61866712,
+      "allocated_bytes": 61874176,
+      "sha256": "8e789579205ac1e5ffb25a25e64dceb1bf430c44c204686b993b6c380d6eab02"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/deoniman-41374d7aeafd2d33",
+      "bytes": 61139784,
+      "allocated_bytes": 61145088,
+      "sha256": "6de081202fff537ca4f267d0b66cf7e3bc1339b65d9b1bb0b65e6ec12c990f87"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/quote_followers-7b097b6b4370d7c4",
+      "bytes": 60983728,
+      "allocated_bytes": 60989440,
+      "sha256": "ac0afc3329b6bdbeb47c901bf9344cf29ddbc5610a07cd220ae0da4c6d824aee"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/nominal_si_hada-84d04edb293d75eb",
+      "bytes": 58122376,
+      "allocated_bytes": 58130432,
+      "sha256": "efca9ee43184c8dbbf6b89a31088d8dbced899669ed7a20a3333bf665ebe2961"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/nominal_si-ae6ff1846cefca4b",
+      "bytes": 57056600,
+      "allocated_bytes": 57061376,
+      "sha256": "887b54ffac11b77fa8ba795a364bc51f8f4d2002dc63e4d00cf0a7d1fdeea3b0"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/dictionary_attachments-1b1de3262be7c442",
+      "bytes": 56822488,
+      "allocated_bytes": 56827904,
+      "sha256": "4808d50d2432e6f770a6e1649f2d13d9831b186080718c5b0f7a74e1dd4f1de5"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/continuation_left-0ae9f0524912927e",
+      "bytes": 53637792,
+      "allocated_bytes": 53645312,
+      "sha256": "8bf6d09def1cb276f77211fa9cd64ce60717644fb2fd0075931d71f0bc3bf76b"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/question_topic-3b5f98a5181dcb48",
+      "bytes": 51756672,
+      "allocated_bytes": 51761152,
+      "sha256": "5b59fa5cb400dc44c39e8d55008895484a65dbec503560c61a48b544a5255e6c"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/counterfactual_ryeon-8bb3298b46b2d7a8",
+      "bytes": 50294008,
+      "allocated_bytes": 50298880,
+      "sha256": "5cbdab46ed7850a0fc7f1fd1287132333fe83f2e1a38c4da512fd13e45cbb481"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/degree_rimankeum-596664c6111d042f",
+      "bytes": 48565496,
+      "allocated_bytes": 48570368,
+      "sha256": "65d399e336ad9acb550e915f17fd107bd50437769016139a8a13c15091f38400"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/adjectival_allomorphs-0a0604e717eebf0b",
+      "bytes": 47492016,
+      "allocated_bytes": 47497216,
+      "sha256": "467526bd77529fcceab6e2d327f2ce6541f6b38d70037f2656e4e1b92bd6a21d"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/native_pos-5c9e64d94550092e",
+      "bytes": 47360856,
+      "allocated_bytes": 47366144,
+      "sha256": "68d31eea1750f601619f16755f13dc5c877a603819c0a3e905d1c596c1f5edb1"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/caution_endings-f8420dc24411231a",
+      "bytes": 47341824,
+      "allocated_bytes": 47349760,
+      "sha256": "e39dddee4377ef22303b1c5240ba6a91783403fe335053bb59746fb3b17bdb19"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/continuation_inflection-c22b5b4c655cdf3e",
+      "bytes": 46615216,
+      "allocated_bytes": 46620672,
+      "sha256": "8f3cb264792fe5baf11dff8c5b0dd967c1935d771284c0838b2bf79ab3f976cd"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/written_vowel-d4bce2fe99fdf571",
+      "bytes": 46407080,
+      "allocated_bytes": 46407680,
+      "sha256": "b6ab4dac425e02d9b84989f44a25e739025c2c3580c1899b2a078cedac8fe13c"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/dictionary-72462a04f50e4c22",
+      "bytes": 45251056,
+      "allocated_bytes": 45256704,
+      "sha256": "947a6fe546d714b3cd109eeb0c558e2abb9969f868bfff9f9372773ed47b6f12"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/excluded_paradigms-3d73632e98048d5f",
+      "bytes": 44521728,
+      "allocated_bytes": 44523520,
+      "sha256": "74154a2877d6d72cbfdbbc451c002f7f400ca834ab2795adfa5519a25e734d00"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/transition_aux-b39c597f629ea12e",
+      "bytes": 44270656,
+      "allocated_bytes": 44277760,
+      "sha256": "fe6ab3219b703e1993bbcc4d0b54ec9b8ffb56acf52068a7627812cf16c8b93f"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/rikka-dc6be333219e693f",
+      "bytes": 42894800,
+      "allocated_bytes": 42901504,
+      "sha256": "75d43627480788ba2ac421e1770298454f7f905e0dff8eee0ed7a26d88ef7a86"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/malda_inflection-cf9c49187984fdae",
+      "bytes": 42808824,
+      "allocated_bytes": 42811392,
+      "sha256": "29239ed5d60594c9d900c4717fe9bf1207a357cc25af8328a271947e34efdd8b"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/naikka-7cd5facb43cea959",
+      "bytes": 42718392,
+      "allocated_bytes": 42725376,
+      "sha256": "e82f775bbec5d0fada43550a743b12d43375421c7cea0d1cf0dd9db9ab78f4c4"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/jaop-78ee56c69d7fde4d",
+      "bytes": 42701184,
+      "allocated_bytes": 42708992,
+      "sha256": "6e83c56e40c3f6d163977c8038542ffa7e85cbb9162706b529504262dae6168a"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/optsi-e58750945e8f01a6",
+      "bytes": 42339640,
+      "allocated_bytes": 42344448,
+      "sha256": "423b87824d5046afc3a58a9cfb44dd43caa296d12ec0b2d7e88657c62e63e0ac"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/finite_vowel-9f7139041246d684",
+      "bytes": 42221968,
+      "allocated_bytes": 42229760,
+      "sha256": "14ce7176580c69f41e6ca55a92f73bd42268e4b61daefde5d2d755d6ad623ac7"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/gera_nera-f5dbfbe3269fd9c9",
+      "bytes": 42217664,
+      "allocated_bytes": 42225664,
+      "sha256": "412e97b314001a755d898151b14d37e453862c254cc8c78b2bdbb7b4e3e0bb1e"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/deictic_vowel-a628ea7dcc7f9045",
+      "bytes": 42140400,
+      "allocated_bytes": 42147840,
+      "sha256": "8a511eb59a7499dc8e0c0580e9fc87b54b9a664d907852e68420682a9ae58c0f"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/humble-0da306525243313e",
+      "bytes": 41950360,
+      "allocated_bytes": 41955328,
+      "sha256": "19892711e3cd1358a831cc50420bce50425ea16e8e2c86c5d64bdc28ea42527e"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_fan-47535f5122311f04",
+      "bytes": 41662144,
+      "allocated_bytes": 41668608,
+      "sha256": "504db24bd180156047e1eaed808bcec71edb5d5f81244b522e7652a91d96bc02"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/nominal_i-ba62a62fcf6f55b7",
+      "bytes": 41648304,
+      "allocated_bytes": 41652224,
+      "sha256": "094a1878843e41bf3bf279c8e9bc38541d622864dff0bf5a026a6f8dc60347e5"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/question_additive-4937dc666339924c",
+      "bytes": 41582624,
+      "allocated_bytes": 41586688,
+      "sha256": "3629f8fc4207c3bd37ba009d58488d983b185bdf0890ba0eed119a872b0b5500"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_compound-68a390f9c4419f05",
+      "bytes": 41552560,
+      "allocated_bytes": 41553920,
+      "sha256": "91e39e82b2d96eb369692fbb363e1ffc549bf6760708c78a665bd9197e3c58cf"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/direct_command_review-d6ab68178048445f",
+      "bytes": 41454152,
+      "allocated_bytes": 41455616,
+      "sha256": "b385c44b3c3924a76328956c0498b2db00e085eb6e196431306af13750f7d961"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/intensive_aux-0c55461a4c04231a",
+      "bytes": 41436648,
+      "allocated_bytes": 41443328,
+      "sha256": "17dd8f1dc2332ec3bc0b4a84cf43a26bc279a3707b40ea740c4cdcfb14e3c372"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/hada_aux-121a736c17657f99",
+      "bytes": 41368960,
+      "allocated_bytes": 41373696,
+      "sha256": "66a33a34fd57b34db2079e340285bbc175e6475ef50c164769b8452451b22fb9"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_internal-a48c73158e9f277c",
+      "bytes": 41337088,
+      "allocated_bytes": 41340928,
+      "sha256": "bdeb3791869565de413bc42b0a4f6b7eabd28b15bf169de7f6d77865d0adc1cc"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_root-c46f04a83bc842cd",
+      "bytes": 41302752,
+      "allocated_bytes": 41308160,
+      "sha256": "87a896f430f24284359b57622c87f48b0b4a110f9c2ad86ff502af3319bbb36f"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/mada_case-d8f7820b32d3b4ce",
+      "bytes": 41298960,
+      "allocated_bytes": 41304064,
+      "sha256": "5acaa7e53383104d9b8ebe549588b1407a886fd4de5a494d9a3844c104758dfb"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/lexical_malda-214f8f5aaa81ad1e",
+      "bytes": 41252272,
+      "allocated_bytes": 41254912,
+      "sha256": "edb201884c7b5101aeb2b79414747c9ee46fd26150dfa973dd5315414c46cbbd"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_sound-a057cd056af6a607",
+      "bytes": 41238016,
+      "allocated_bytes": 41238528,
+      "sha256": "6123bfbb05429c61f678db8560c798470daa7db7582e4f815fd1c9adfa2e95df"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_adnominal-5717f0d6fee5ee84",
+      "bytes": 41219616,
+      "allocated_bytes": 41222144,
+      "sha256": "b16ce8ff9f82f503de11c9f9e38138df37e124f2f053adf3786fdb34df21e83d"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_formation-1f3558e45a61000f",
+      "bytes": 41196824,
+      "allocated_bytes": 41197568,
+      "sha256": "87d4a4c50138dbe69073fabb128cdf4fe12898eeed04549d57cfff3f750f43cf"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/source_heads-4bdded038d5c0c4c",
+      "bytes": 41184712,
+      "allocated_bytes": 41189376,
+      "sha256": "a5a39d78670cf0bfe3c53ee75faa530d18e68a7c287ffd5911c83f3a459dd824"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_base-3491ce4b68815efa",
+      "bytes": 41172368,
+      "allocated_bytes": 41177088,
+      "sha256": "afaae21515e6bc4ae0cba1b37fce94ea7a2a3cec2cd68496edba042792cae1ac"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/potential_aux-17b4f5be39408a6c",
+      "bytes": 41123360,
+      "allocated_bytes": 41123840,
+      "sha256": "a7cfa558df3224e3489f370e0ad17aefba8ca43401e82e075a5c555c029c9e79"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/native_conditionals-4b39a2816474ff0e",
+      "bytes": 41067392,
+      "allocated_bytes": 41074688,
+      "sha256": "e1d61c07b865548a9b39e64809bace8c72db892fa4a8c1f4e0d3d37fbe9213b9"
+    },
+    {
+      "path": "web/test-results/literary-question-go-prototype-cargo/debug/deps/noun_predicate-7a07dde7665ac7af",
+      "bytes": 41066888,
+      "allocated_bytes": 41074688,
+      "sha256": "fb29c6d369db8be74130403700eae97e7e838459cc6173583766d517154c38be"
+    }
+  ],
+  "allocated_bytes": 3254444032
+}

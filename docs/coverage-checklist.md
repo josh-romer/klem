@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 474 scoped
-  dispositions; 241 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 478 scoped
+  dispositions; 237 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -5337,6 +5337,86 @@ review remains open under the completion review below.
   verifier fix; Nix now checks inventory consistency before its lengthy evidence
   audits. The successful retry and the original failure are both preserved.
 
+- [ ] **COV-020t — Predicate/auxiliary spacing and owner preservation.**
+  **Partial: integrated rule, CLI/API and SolidJS viewer; current-main full
+  Rust, broad preservation, browser, installed Nix and performance checks pass.
+  The combined inventory gate remains pending.**
+  Recover missing-space hypotheses from actual
+  joined auxiliary chains, including copular and predicate-forming suffix owners.
+  Retain each segment's independently analyzed readings and complete joined
+  witnesses with original UTF-8 spans. Equal spaces with different witness spans
+  must preserve both contexts, and every earlier spacing option keeps priority.
+  [Regressions](../tests/predicate_auxiliary_spacing.rs) cover 20 predeclared
+  forms in NFC/NFD, all shared limits, unknown/lexical-only providers, marker
+  ownership, and ambiguous full-word versus suffix witnesses. The initial
+  isolated full suite passed 1,065 tests before the context-merge correction;
+  affected tests, Clippy and frontend build pass after correction.
+  [The complete isolated replay](predicate-auxiliary-spacing-broad-retry2.json.gz)
+  checks all 1,128,312 frames, preserves word candidates/dictionary assessments
+  and all earlier spacing options, and independently replays 2,073 words.
+  All 6,942 added spacing options retain their complete original source line.
+  The failed raw/compatible comparisons exposed an actual context-span merge
+  defect on 달아나왔습니다; distinct-span witnesses and a separate regression
+  now prevent it. These are structural observations, not contextual gold.
+  [Actual isolated browser execution](predicate-auxiliary-spacing-browser-retry1-browser-runtime.json.gz)
+  passes 102 joined-context diagrams, six exact CLI exports and 102 complete
+  Native endpoints. Served assets match; its owned server stops. Desktop/mobile
+  captures were inspected. A first selector also matched the preserved nominal
+  option; the corrected check explicitly retains that separate alternative.
+  [Owner requirements](predicate-auxiliary-spacing-owner-replay.json.gz) preserve
+  ten original proposals: nine pass all 54 Unicode/filter observations, including
+  학생인가 싶어요, 학생다웠나 싶어요 and 학생답게 해 줄뿐더러. A complete
+  105-entry Native/LMF closure preserves all previous 102 entries. The tenth
+  requirement, 먹어준것은, has no current joined adnominal/bound-noun reading;
+  its six unmet observations remain visible rather than becoming forbidden
+  judgments. The [actual main evidence](predicate-auxiliary-spacing-main-evidence.json)
+  binds 969 compiled/frontend inputs. The full main all-targets suite passes
+  1,068 tests, zero failures and one ignored test in 235 batches. Its complete
+  eight-stream comparison preserves 1,128,312 frames and all earlier options,
+  retaining 6,974 individual new hypotheses and replaying 2,095 independent
+  words through the previous Compatible CLI. These updated counts include the
+  broader owners; the earlier isolated counts above remain historical evidence.
+  The actual main SolidJS run passes 156 diagrams, six exact CLI exports and
+  105 complete Native endpoints. Served JS/CSS bytes match the captured build,
+  desktop/mobile captures were inspected, and the owned server stops.
+  The [portable CLI/API runner](../tools/predicate_auxiliary_spacing_runtime.py)
+  checks all 30 unchanged proposals in 540 individual Unicode/filter/cache
+  observations and 105 complete Native endpoints. Eighteen integrity controls
+  reject hidden or relabeled requirements, invented segment readings, missing
+  Native annotations and merged/moved context spans. `--require-complete`
+  correctly exits unsuccessfully while the original bound-noun requirement is
+  unmet; a successful evidence audit does not close this item.
+  All three actual Nix packages pass 1,069 release tests, zero failures and one
+  ignored test in 230 batches. [Source reconstruction](predicate-auxiliary-spacing-historical-sources.json.gz)
+  verifies all 952 Rust/18 frontend inputs, with one overlap, from actual
+  derivations and source NARs: six updates and five new files relative to the
+  previous 964-input package. Installed CLI output exactly matches all eight
+  complete main streams and both 32,096/21,406-word cohorts. The actual adapter
+  preserves every 66,570 original annotated row and candidate summary.
+  Installed CLI/API/cache/Native checks and 156 browser diagrams pass both for
+  the direct server and for the actual flake web launcher; each owned server
+  stops and served assets match. The [offline package audit](../tools/predicate_auxiliary_spacing_package.py)
+  checks these captured outcomes separately from broader coverage completion.
+  [Bound-noun preparation](predicate-auxiliary-spacing-bound-noun-preflight.json.gz)
+  retains complete Native entry 62835 and six actual component-word calls.
+  The existing engine recovers 먹어준 and 것은, but no Compatible reading for
+  준것은. The original two-word proposal is not silently rewritten or promoted
+  to gold; correctly separated bound-noun alternatives need their own review.
+  [Paired novel measurements](predicate-auxiliary-spacing-performance.json)
+  retain 80 interleaved samples across eight workloads on one allowed CPU and
+  ten complete cache streams of 179,112 records, including spacing with zero
+  and 8 MiB caches. Twenty-two measurement/stream controls pass. Candidate-only
+  medians are approximately unchanged; headword/Compatible spacing medians rise
+  from 2.65/2.64 seconds to 4.01/4.00 seconds while adding the new hypotheses.
+  This approximately 51% cost is recorded rather than described as equivalence;
+  timings concern the retained novel/machine, not all reading workloads.
+  CLI/API, source, package, runtime and timing audits are wired into the offline
+  Nix inventory check. Its complete execution remains a separate pending gate.
+  Remaining: that bound-noun joining/spacing requirement,
+  the complete
+  combined inventory gate, broader distributions and independent contextual
+  Korean review. This item remains open.
+
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
   COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
@@ -7486,6 +7566,9 @@ python3 tools/review_inventory.py --verify
 python3 tools/continuation_residual_audit.py --verify
 python3 tools/lexical_nada_audit.py --verify
 python3 tools/lexical_nada_review.py --verify
+python3 tools/predicate_auxiliary_spacing_runtime.py --verify docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz
+python3 -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_runtime.py'
+python3 tools/predicate_auxiliary_spacing_package.py
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

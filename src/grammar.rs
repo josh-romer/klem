@@ -1842,6 +1842,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "spacing.bare_noun_lexical_verb" => {
             "Offer a separate spacing hypothesis for source-attested 신경질/용기/짜증 before lexical 내다 and 기분 before 내키다, including independently analyzed inflections of each exact verb. Require actual noun and main-verb dictionary entries; preserve raw identity roles, auxiliary homonyms, whole-word alternatives and original byte spans. Other noun/verb pairs and contextual meaning are not inferred."
         }
+        "spacing.predicate_auxiliary" => {
+            "Offer bounded missing-space hypotheses witnessed by a recovered, dictionary-backed predicate/auxiliary chain. Preserve independently analyzed segments, joined context, original byte spans and prior options; contextual sense and intended spacing are not inferred."
+        }
         "spacing.bare_noun_main_nada" => {
             "Offer separate spacing hypotheses for 39 source-reviewed bare nouns before lexical 나다, including 사고/교통사고, 실감, 신명, 집, 사람, 돈 and literal 피. Require the exact native noun identity and main 나다 62210/homonym 1 with known noun/verb POS and no known conflict; auxiliary 나다 cannot supply that proof. Preserve raw roles, whole-word readings, original UTF-8 spans and prior spacing search priority. Context, sense and intended spacing are not inferred."
         }

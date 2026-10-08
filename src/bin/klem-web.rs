@@ -203,7 +203,11 @@ fn analyze_with_spacing(
                         klem::rule_explanation(rule).expect("spacing alternative explanation"),
                     );
                 }
-                for segment in &alternative.records {
+                for segment in alternative
+                    .records
+                    .iter()
+                    .chain(alternative.joined_contexts.iter())
+                {
                     metadata.add(
                         segment
                             .record
@@ -550,5 +554,46 @@ mod tests {
         }
         assert!(validate_text(&"가".repeat(64)).is_ok());
         assert!(validate_text("안녕하세요.").is_ok());
+    }
+    #[test]
+    fn auxiliary_spacing_witnesses_supply_metadata_without_a_whole_word_reading() {
+        struct Cleanup(std::path::PathBuf);
+        impl Drop for Cleanup {
+            fn drop(&mut self) {
+                let _ = std::fs::remove_file(&self.0);
+            }
+        }
+        let path =
+            std::env::temp_dir().join(format!("klem-web-aux-spacing-{}.db", std::process::id()));
+        assert!(!path.exists());
+        let _cleanup = Cleanup(path.clone());
+        klem::dictionary::import_krdict(
+            &[std::path::PathBuf::from(
+                "tests/fixtures/predicate-auxiliary-spacing-native.json",
+            )],
+            &path,
+            "aux-spacing-metadata",
+        )
+        .unwrap();
+        let dictionary = SqliteDictionary::open(&path).unwrap();
+        let result = analyze_with_spacing("밥을먹어줄뿐더러", Some(&dictionary), true).unwrap();
+        let alternative = result["records"][0]["spacing"]["alternatives"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|a| a["rule"] == "spacing.predicate_auxiliary")
+            .unwrap();
+        assert_eq!(alternative["spaced"], "밥을 먹어 줄뿐더러");
+        assert_eq!(alternative["joined_contexts"][0]["surface"], "먹어줄뿐더러");
+        assert_eq!(alternative["joined_contexts"][0]["span"]["start"], 6);
+        assert!(result["rules"]["auxiliary"].as_str().is_some());
+        assert!(result["glosses"]["krdict:77245"].as_str().is_some());
+        assert!(
+            result["grammar"]["-을뿐더러"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .any(|e| e["id"] == "krdict:74341")
+        );
     }
 }

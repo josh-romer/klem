@@ -4967,3 +4967,25 @@ cases remain separate. The [coverage tracker](coverage-checklist.md) records
 actual isolated browser/corpus/adapter evidence, full-suite corrections and
 pending main/package, owner/spacing and independent review. This does not
 select a sentence meaning or certify every broader composition.
+
+
+### Predicate/auxiliary spacing (COV-020t)
+
+`spacing.predicate_auxiliary` adds bounded spacing hypotheses witnessed by
+existing, dictionary-backed joined auxiliary analyses. It runs after the three
+existing spacing passes and shares their work/output budgets. No word candidate
+or prior spacing option is replaced. The rule includes copular and derived
+owners, not only analyses whose first lemma is a predicate.
+
+Each independent segment retains actual compatible-filtered engine analyses;
+its lemma role is never rewritten to auxiliary. `joined_contexts` retain the
+complete readings that establish the relationship, including their original
+UTF-8 spans and Native assessments. Equal proposed spaces can have different
+joined witness spans, so those contexts are retained separately. This avoids
+assigning a suffix reading to the full original word. Known role/spelling
+conflicts are excluded; unknown attachment policies remain unknown. NFD cuts
+cannot split a composed Hangul syllable. Literal bound-noun joining such as
+먹어준것은 remains an unmet requirement; the original proposal is retained.
+These structural witnesses do not determine contextual senses or standard
+spacing. See [regressions](../tests/predicate_auxiliary_spacing.rs) and
+[owner requirements](../tests/fixtures/predicate-auxiliary-spacing-owner-cases.json).

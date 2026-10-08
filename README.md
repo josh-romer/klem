@@ -129,6 +129,16 @@ The library exposes `spacing::suggest` with reusable `Session`/`DictionarySessio
 caches and `SpacingLimits`. This optional search has its own word cache budget.
 The browser offers the same behavior through **Suggest missing spaces**.
 
+Recovered auxiliary chains also produce `spacing.predicate_auxiliary` options:
+`먹어줄뿐더러` → `먹어 줄뿐더러`, and `학생인가싶어요` → `학생인가 싶어요`.
+A longer chain can have multiple splits, such as `먹어 줘 볼뿐더러`.
+Each option keeps independently analyzed words and `joined_contexts` containing
+its supporting joined readings. Different witness spans remain separate.
+The browser exposes these under **Auxiliary relationship**. Copulas,
+predicate-forming suffixes and nominalized auxiliary endings retain their owners;
+this does not infer arbitrary compounds or the intended whitespace.
+
+
 Source-attested bare pairs also produce separate hypotheses: **짜증낼 → 짜증
 낼**, **용기내서 → 용기 내서**, **신경질내며 → 신경질 내며**, and
 **기분내키는 → 기분 내키는**. Each word keeps its independent analyses;

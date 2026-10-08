@@ -28,6 +28,17 @@ export default function SpacingSuggestions(props: {
                 <SentenceBreakdown result={preview(alternative)} only={true} compatible={true}
                   selected={-1} onWord={() => props.onWord(index())} onEntry={props.onEntry}
                   label={`Spacing breakdown for ${alternative.spaced}`} />
+                <For each={alternative.joined_contexts}>
+                  {(context) => <details class="auxiliary-spacing-context">
+                    <summary>Auxiliary relationship</summary>
+                    <p class="panel-caption">This combined reading supports the split above. The separate words can have other dictionary meanings.</p>
+                    <SentenceBreakdown
+                      result={{ ...props.result, records: [context], breakdowns: [context.breakdowns] }}
+                      only={true} compatible={true} selected={-1}
+                      onWord={() => props.onWord(index())} onEntry={props.onEntry}
+                      label={`Auxiliary relationship for ${alternative.spaced}`} />
+                  </details>}
+                </For>
               </article>}
             </For>
             <Show when={!spacing().complete}>

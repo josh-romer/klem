@@ -58,6 +58,7 @@ export interface SpacingHypothesis {
   spaced: string;
   inserted_at: number[];
   records: SpacingSegment[];
+  joined_contexts?: SpacingSegment[];
 }
 export interface SpacingSuggestions {
   rule: string;

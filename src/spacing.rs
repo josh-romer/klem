@@ -1,6 +1,8 @@
 //! Explicit, dictionary-backed missing-space hypotheses. Word candidates are immutable.
 //! This searches nominal case phrases followed by a lexical predicate and
-//! independently attested bare-noun pairs. It does not validate sentence grammar.
+//! independently attested bare-noun pairs and recovered auxiliary chains.
+//! Auxiliary witnesses include copular and derived owners; sentence grammar and
+//! intended spacing are not validated.
 use crate::dictionary::{
     Annotation, Compatibility, Dictionary, DictionaryFilter, DictionarySession, Result,
 };
@@ -11,6 +13,8 @@ use std::{
     sync::Arc,
 };
 use unicode_normalization::UnicodeNormalization;
+
+mod auxiliary;
 
 /// Per-word work/output bounds. A reached bound is reported, never silent.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -53,6 +57,10 @@ pub struct SpacingHypothesis {
     pub inserted_at: Vec<usize>,
     /// Each word has independent alternatives and dictionary assessments.
     pub records: Vec<SpacingSegment>,
+    /// Recovered joined readings which license these auxiliary relationships.
+    /// Segment readings remain independently analyzed; no role is rewritten.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub joined_contexts: Vec<SpacingSegment>,
 }
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct SpacingSuggestions {
@@ -68,6 +76,8 @@ pub struct SpacingSuggestions {
 enum Role {
     Case,
     Predicate,
+    AuxiliaryChain,
+    AuxiliaryPiece,
     BareNoun,
     ListedVerb(&'static str),
     NadaNoun(&'static str, &'static str),
@@ -316,6 +326,11 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 .filter(|a| match role {
                     Role::Case => nominal_case(a),
                     Role::Predicate => predicate(a),
+                    Role::AuxiliaryChain => {
+                        a.breakdown().is_some()
+                            && a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary)
+                    }
+                    Role::AuxiliaryPiece => a.breakdown().is_some(),
                     Role::BareNoun => bare_noun(a),
                     Role::ListedVerb(head) => predicate(a) && a.lemmas[0].text == head,
                     Role::NadaNoun(_, _) => unchanged_noun(a),
@@ -408,6 +423,7 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 .map(|s| s.record.span.start)
                 .collect(),
             records,
+            joined_contexts: Vec::new(),
         });
     }
 
@@ -593,6 +609,10 @@ pub fn suggest<D: Dictionary + ?Sized>(
             BareFamily::MainNada,
             BareFamily::MainNada.max_prefix_chars(),
         )?;
+    }
+    if search.result.complete {
+        search.dead_starts.clear();
+        search.walk_auxiliary(0, &mut Vec::new())?;
     }
     search.result.alternatives.sort_by(|a, b| {
         a.inserted_at

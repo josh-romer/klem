@@ -51,7 +51,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "0242d1f1fd861241e12f432d71c6a0e237e3b8202daa366e89514e6f04bb017d",
+    "docs/coverage-checklist.md": "e8c7205d581762c6e4684d410c90548a904f00e34cdaec09c82dc681de118f92",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -99,7 +99,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "3fe7fd97af1614db66982dbf431e254c4c88ed63ed24ff6cbe25ce638608019e",
-    "docs/inventory-reviews.json": "51f5acdda79c48a51f946a08c63a3d22aed197fe55af2fa7d95fc6dbeb327751",
+    "docs/inventory-reviews.json": "f3a1911d2b6659c701f5f32b0792d0d9cc486274808921569a5d9a436543b650",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -165,6 +165,10 @@
     "docs/polite-source-audit.json": "7f0ca9f54a8645a87ff9518269d1d53c072d81dc0a1bcc708ef77d4000d55fca",
     "docs/potential-aux-evaluation.json": "97315d0a70f1de1cd8fc2af135231c33648ccc6693b012ba0c766ed8b8843498",
     "docs/potential-aux-source-preflight.json": "3e297716e7480cef187c49511393e70a44fb53244415f90ef85900c56e27c421",
+    "docs/predicate-auxiliary-spacing-historical-sources.json.gz": "dafbb5bdb79afcd347f2b2388817b4078a67e6458a49e38992c7cd9ee293dd3c",
+    "docs/predicate-auxiliary-spacing-main-evidence.json": "5b7499469958107393860bdbf754be65834a258a477c71dba7db91d227075096",
+    "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz": "755a0197f43ecd002ca19e8f43d621766aa6c0b13f2b596c8e767a12f6f2070c",
+    "docs/predicate-auxiliary-spacing-performance.json": "2964c7887c6998e03d4f94ccf623f371677d3d80ff803df5ff140a694896abb7",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
     "docs/present-adnominal-source-preflight.json": "8d7a59c90a156e9cdeaefd0a74fa60b2c45425d1936a638681a46a54ebf818da",
     "docs/present-license-evaluation.json": "4d98eb7ed44a3c774a11c2ea47292fc6fe7944fba57ba0cc333a6be20ecde308",
@@ -220,7 +224,7 @@
     "docs/retrospective-license-evaluation.json": "f1e83ed48f3f50a70f8ebe65ae8781144b85ca2eb2b5a30a0aa3764139ca4e21",
     "docs/rikka-evaluation.json": "32d37a0ba4eed40c07d02953c7c0932aae2271a75660ebb493938c0b2d45b899",
     "docs/rikka-source-audit.json": "ae6b75801e237b544eb2107a1123b0448c8f28fbb531e77f421746b0e2b51f46",
-    "docs/rules.md": "2a95e631d91ca49fac16b58199bd6ca5f31bea36ff11d609b3e6bf079f23717b",
+    "docs/rules.md": "d727b778333e38be1015d0be5252ca9c7f0a91a01a524196648072d1eb0a5939",
     "docs/ryeo-expressions-evaluation.json": "785e83c119cd09e1600ee7eddaf2dce04c2c751f77c4849095bd7d6a0d9bd943",
     "docs/ryeogo-expansion-source-audit.json": "af2acb5eaf14584b8e28c6b8cb40447c283b0f7d8fed1cc4615b4984081e6255",
     "docs/ryeogo-expansions-evaluation.json": "28fb1c205a57d76191e6f02e8734e505cdb2b87e1a0bf39d7c29c523b7f59851",
@@ -406,6 +410,7 @@
     "tests/polite.rs": "77ea4a81b4e706437d3769e7c0ff0df80b2987c45b0d48c8fe08cf09c1a8fbf3",
     "tests/polite_copulas.rs": "4eb74066eebfde648de9c25d40e6c8745ade678f600b9b520d659e9bdc7349d3",
     "tests/potential_aux.rs": "552abaf065f906630d69a2742290fa0886fe864e67b86dce4bc2c88121ded09b",
+    "tests/predicate_auxiliary_spacing.rs": "59590cafaf6b7428fe032563379f8b64cc177b2f0115773878fb83a1550c48c3",
     "tests/prefinal_copulas.rs": "2898476eead2aec9180ac1775bc0742ad86fcfa65ea690c865a687e63113d003",
     "tests/prefinal_licenses.rs": "700471bed14d600ccd8678a05fa59d6fa3620b135a60c3149a7b32c4c5f5bdb8",
     "tests/present_licenses.rs": "eaff7b990aa9fab07bb1978c5dbc99709cf9955e722dcd875a69d5b3981302d9",
@@ -485,6 +490,9 @@
     "tools/ostensible_reason_preservation.py": "1a2ff07e694dc568bf4b14b0ced8e607c67618182750379877cc6b7dacbf2e9d",
     "tools/ostensible_reason_runtime.py": "ab8bde2134b3d8419bb3dfef215818aa43325da751dc140e0686ab29bbe70553",
     "tools/past_prefinal_audit.py": "b8bd214ae3824dd474ff4ede036e1dac05a5dcb28ba8f04970877687df7943a3",
+    "tools/predicate_auxiliary_spacing_package.py": "e0f31b6e5621e9b354f9485284af7770b421cb79fd1859dc9001759515f118a2",
+    "tools/predicate_auxiliary_spacing_performance.py": "0a5f61f8c93024ec701128499cdf8cc0cc13e4b8768966305379b9a5ef340f80",
+    "tools/predicate_auxiliary_spacing_runtime.py": "4bec8a9cfec3d6651361efb62e1a54688118d97f10d06a5a15bfd1c45cd0554c",
     "tools/present_prefinal_audit.py": "f3d5546017f5d41f03ba196d66c3c4adb4411d4959b112076249b6a164bfbc3d",
     "tools/reported_dana_audit.py": "7954f7419a7a7cd2ae17092e4311d0b8f85e28d7552cfaf75befc10f708cb9b3",
     "tools/reported_dana_broad.py": "3ac75650bb57af244757f3ba9d5a6555f602e49cf3cdd2a1b40e8236f863a517",
@@ -506,6 +514,7 @@
     "tools/test_double_past_prefinal_audit.py": "75bb706e64572992484a141aa14fcf24f9b2d0098946b227cedd8adfba7e1b0b",
     "tools/test_literary_ri_prefinal_audit.py": "745c6187743bc69484ed8940e8df745f3a66811352c876aa4e3a649cb9623152",
     "tools/test_past_prefinal_audit.py": "11d1249049a413907ffa48e08f0589798defc90c539dcbdf478ddbf2f677193c",
+    "tools/test_predicate_auxiliary_spacing_runtime.py": "805c6fee37d035fc543c849a6359def35874a7586ed0ad60b53851d240a52500",
     "tools/test_present_prefinal_audit.py": "02810e3d49357cad402a4fcacf07ebadb83aaab84f3bd2461e3fdda612d5b822",
     "tools/test_reported_dana_inputs.py": "cfecaefd175846492fa966f75ba4dc49be9a5f3e93cc83c7a95f6eeaaecf7ea7",
     "tools/test_reported_dana_performance.py": "8b1be11989c9919e6371b17bc9b575faac9ca2ee239b0cb6d0448b5ef5c19342",
@@ -721,10 +730,11 @@
         "source_sha256": "178c758b7288c056ae8de1b5ea35605b09790ce1c0671beabbe0865cbd04c853",
         "status": "scoped",
         "checklist": [
-          "COV-019p"
+          "COV-019p",
+          "COV-020t"
         ],
-        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/continuation_aux.rs",
@@ -748,6 +758,34 @@
           },
           {
             "path": "docs/continuation-aux-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -6008,10 +6046,11 @@
         "status": "scoped",
         "checklist": [
           "COV-019j",
-          "COV-019m"
+          "COV-019m",
+          "COV-020t"
         ],
-        "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
-        "remaining": "Other connector senses, right prefinal/ending classes, contextual senses and Korean review remain open.",
+        "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Other connector senses, right prefinal/ending classes, contextual senses and Korean review remain open. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/intention_connectives.rs",
@@ -6037,6 +6076,34 @@
           },
           {
             "path": "docs/auxiliary-dictionary-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -6965,10 +7032,11 @@
         "status": "scoped",
         "checklist": [
           "COV-013",
-          "COV-019u"
+          "COV-019u",
+          "COV-020t"
         ],
-        "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
-        "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+        "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/negative_classes.rs",
@@ -6998,6 +7066,34 @@
           },
           {
             "path": "docs/negative-class-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -8369,10 +8465,11 @@
           "COV-019f",
           "COV-019g",
           "COV-019i",
-          "COV-019h"
+          "COV-019h",
+          "COV-020t"
         ],
-        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks. COV-019h now preserves source-attested auxiliary honorification and honorific questions, plus a possible progressive bare past adnominal before elapsed-time 지. Fused spellings are structural continuations and do not establish contextual sense selection.",
-        "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
+        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks. COV-019h now preserves source-attested auxiliary honorification and honorific questions, plus a possible progressive bare past adnominal before elapsed-time 지. Fused spellings are structural continuations and do not establish contextual sense selection. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/continuative_class.rs",
@@ -8428,6 +8525,34 @@
           },
           {
             "path": "tests/fixtures/existential-paradigm-sources.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -9713,10 +9838,11 @@
         "source_sha256": "e53b2e6819717f8ad06c7cd0eb0adc354964bbd77f2993948f25664158fdd023",
         "status": "scoped",
         "checklist": [
-          "COV-019k"
+          "COV-019k",
+          "COV-020t"
         ],
-        "scope": "Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate.",
-        "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+        "scope": "Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/result_connectives.rs",
@@ -9732,6 +9858,34 @@
           },
           {
             "path": "docs/result-connectives-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -10149,10 +10303,11 @@
         "status": "scoped",
         "checklist": [
           "COV-013",
-          "COV-019ab"
+          "COV-019ab",
+          "COV-020t"
         ],
-        "scope": "Complete native entry, every sense/note/written form and every example group retained; native paths remain available with exact dictionary homonyms and ending owners. No additional contextual left-POS, command-only, negative-circumstance or passive spelling ban is inferred.",
-        "remaining": "Broader left-subset, ending/prefinal/internal-particle, sense/register, independent Korean review and COV-019ac lexical 말다 remain required. Complete native-source retention does not certify every productive combination.",
+        "scope": "Complete native entry, every sense/note/written form and every example group retained; native paths remain available with exact dictionary homonyms and ending owners. No additional contextual left-POS, command-only, negative-circumstance or passive spelling ban is inferred. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Broader left-subset, ending/prefinal/internal-particle, sense/register, independent Korean review and COV-019ac lexical 말다 remain required. Complete native-source retention does not certify every productive combination. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/transition_aux.rs"
@@ -10177,6 +10332,34 @@
           },
           {
             "path": "docs/transition-aux-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -11460,10 +11643,11 @@
           "COV-019d",
           "COV-019m",
           "COV-019o",
-          "COV-019z"
+          "COV-019z",
+          "COV-020t"
         ],
-        "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense. Lexical verbs before 어 하다, including 지 negatives, are explicitly unknown under dictionary assessment: NIKL licenses some verbs, so adjective-only sense 9 does not justify blanket pruning. COV-019z retains all nine complete native senses/37 groups and observes every POS homonym independently of the adjective entry's immediate right-inflection conflict. No new raw or left-class filter is added.",
-        "remaining": "The earlier expressive boundary and this complete native-source/right-entry retention audit do not certify all nine senses. Broader connector, left-class and lexical-subset, ending/prefinal/particle, contextual/register and independent Korean review remain open, including 자다+어+를+하다 in 잘해서.",
+        "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense. Lexical verbs before 어 하다, including 지 negatives, are explicitly unknown under dictionary assessment: NIKL licenses some verbs, so adjective-only sense 9 does not justify blanket pruning. COV-019z retains all nine complete native senses/37 groups and observes every POS homonym independently of the adjective entry's immediate right-inflection conflict. No new raw or left-class filter is added. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "The earlier expressive boundary and this complete native-source/right-entry retention audit do not certify all nine senses. Broader connector, left-class and lexical-subset, ending/prefinal/particle, contextual/register and independent Korean review remain open, including 자다+어+를+하다 in 잘해서. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/auxiliary_left_class.rs",
@@ -11527,6 +11711,34 @@
           },
           {
             "path": "docs/hada-aux-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -13654,10 +13866,11 @@
         "source_sha256": "c3db58e63b35b40b4f003c888a2673e4ce11ae1e9ad269426159a4fd7707b2ca",
         "status": "scoped",
         "checklist": [
-          "COV-019e"
+          "COV-019e",
+          "COV-020t"
         ],
-        "scope": "Desire 고 plus one contrastive 는 retains adjective auxiliary 싶다, its prefinals and existing later chains. Other senses and left-class restrictions are not certified.",
-        "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+        "scope": "Desire 고 plus one contrastive 는 retains adjective auxiliary 싶다, its prefinals and existing later chains. Other senses and left-class restrictions are not certified. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/desire_topic.rs",
@@ -13673,6 +13886,34 @@
           },
           {
             "path": "docs/desire-topic-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -14068,10 +14309,11 @@
         "status": "scoped",
         "checklist": [
           "COV-013",
-          "COV-019u"
+          "COV-019u",
+          "COV-020t"
         ],
-        "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
-        "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+        "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/negative_classes.rs",
@@ -14101,6 +14343,34 @@
           },
           {
             "path": "docs/negative-class-evaluation.json"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -24899,10 +25169,11 @@
         "source_sha256": "d16febcc4e774374c3da8dacee3dd9416a2809a3d0180bfdfd1a93b5e7f518a3",
         "status": "scoped",
         "checklist": [
-          "COV-017cm"
+          "COV-017cm",
+          "COV-020t"
         ],
-        "scope": "Both complete original entries and all10groups/60observations plus36authored boundaries/216observations are retained. The integrated whole-ending rule preserves earlier candidates and separates raw structural recovery from Native class/role/spelling conflicts; unlisted own markers and omitted copulas remain Unknown.62complete same-head Native entries match originalLMF/SQLite and production English import. Actual isolated SolidJS execution passes20diagrams/276modechecks/6exactexports/62Nativeendpoints and stoppedserver/asset parity.8complete streams/1128312frames,32096corpus words and21406historical words are exactly unchanged; actualRustadapter66570originalrows agrees.27required/6forbidden newrawjudgments are appended while13conditionals remain separate. Actual current-main964-input all-targets suite passes1061tests,0failures,1ignored/234batches; separately run1doc/1downloaded-corpus checks, Clippy/format/frontend and complete main CLI/broad/cohort/66570-row adapter/browser checks pass. Main finite/adapter/browser/preservation controls6/8/15/13pass. Isolated/main phases are explicitly bound. Failed ENOSPC, namespace, total, ignored-switch and missing-adapter attempts remain retained. Actual three installed Nix packages pass1062release tests/229batches, all964source inputs reconstructed from actual derivations/NARs with14exact deltas. Installed CLI repeats12finite modes/8broad streams/complete cohorts; adapter66570rows and actual launcher/browser20diagrams/6exports/276checks/62Nativeendpoints/458APIframes pass, assets match and ownedserver stops. Source/package controls12/15pass. Quiet paired novel measurements80samples/8workloads and6cache streams of179112frames pass20controls; timings are observations only. Combined inventory gate remains pending. The complete combined gate failed only at a stale historical geona ledger equality; every tracked input/HEAD/index remained unchanged. Exact historical-prefix and complete reviewed33-case append validation now pass25controls, including coordinated corruption; actual main/installed geona audits pass. Complete combined retry remains pending.",
-        "remaining": "Dedicated owner/member/conflict and general predicate/auxiliary spacing beyond finite36cases; combined Nix inventory gate. Broader composition, contextual sense selection, precision and independent Korean-language review remain open.",
+        "scope": "Both complete original entries and all10groups/60observations plus36authored boundaries/216observations are retained. The integrated whole-ending rule preserves earlier candidates and separates raw structural recovery from Native class/role/spelling conflicts; unlisted own markers and omitted copulas remain Unknown.62complete same-head Native entries match originalLMF/SQLite and production English import. Actual isolated SolidJS execution passes20diagrams/276modechecks/6exactexports/62Nativeendpoints and stoppedserver/asset parity.8complete streams/1128312frames,32096corpus words and21406historical words are exactly unchanged; actualRustadapter66570originalrows agrees.27required/6forbidden newrawjudgments are appended while13conditionals remain separate. Actual current-main964-input all-targets suite passes1061tests,0failures,1ignored/234batches; separately run1doc/1downloaded-corpus checks, Clippy/format/frontend and complete main CLI/broad/cohort/66570-row adapter/browser checks pass. Main finite/adapter/browser/preservation controls6/8/15/13pass. Isolated/main phases are explicitly bound. Failed ENOSPC, namespace, total, ignored-switch and missing-adapter attempts remain retained. Actual three installed Nix packages pass1062release tests/229batches, all964source inputs reconstructed from actual derivations/NARs with14exact deltas. Installed CLI repeats12finite modes/8broad streams/complete cohorts; adapter66570rows and actual launcher/browser20diagrams/6exports/276checks/62Nativeendpoints/458APIframes pass, assets match and ownedserver stops. Source/package controls12/15pass. Quiet paired novel measurements80samples/8workloads and6cache streams of179112frames pass20controls; timings are observations only. Combined inventory gate remains pending. The complete combined gate failed only at a stale historical geona ledger equality; every tracked input/HEAD/index remained unchanged. Exact historical-prefix and complete reviewed33-case append validation now pass25controls, including coordinated corruption; actual main/installed geona audits pass. Complete combined retry remains pending. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Dedicated owner/member/conflict and general predicate/auxiliary spacing beyond finite36cases; combined Nix inventory gate. Broader composition, contextual sense selection, precision and independent Korean-language review remain open. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/additive_ppundeoreo_native.rs",
@@ -24945,6 +25216,34 @@
           },
           {
             "path": "docs/additive-ppundeoreo-combined-nix.json.gz"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [
@@ -86194,10 +86493,11 @@
         "source_sha256": "be43ab148a9e3b5222c2fc4c134420db125f48499f051097736aca0b01118085",
         "status": "scoped",
         "checklist": [
-          "COV-017cm"
+          "COV-017cm",
+          "COV-020t"
         ],
-        "scope": "Both complete original entries and all10groups/60observations plus36authored boundaries/216observations are retained. The integrated whole-ending rule preserves earlier candidates and separates raw structural recovery from Native class/role/spelling conflicts; unlisted own markers and omitted copulas remain Unknown.62complete same-head Native entries match originalLMF/SQLite and production English import. Actual isolated SolidJS execution passes20diagrams/276modechecks/6exactexports/62Nativeendpoints and stoppedserver/asset parity.8complete streams/1128312frames,32096corpus words and21406historical words are exactly unchanged; actualRustadapter66570originalrows agrees.27required/6forbidden newrawjudgments are appended while13conditionals remain separate. Actual current-main964-input all-targets suite passes1061tests,0failures,1ignored/234batches; separately run1doc/1downloaded-corpus checks, Clippy/format/frontend and complete main CLI/broad/cohort/66570-row adapter/browser checks pass. Main finite/adapter/browser/preservation controls6/8/15/13pass. Isolated/main phases are explicitly bound. Failed ENOSPC, namespace, total, ignored-switch and missing-adapter attempts remain retained. Actual three installed Nix packages pass1062release tests/229batches, all964source inputs reconstructed from actual derivations/NARs with14exact deltas. Installed CLI repeats12finite modes/8broad streams/complete cohorts; adapter66570rows and actual launcher/browser20diagrams/6exports/276checks/62Nativeendpoints/458APIframes pass, assets match and ownedserver stops. Source/package controls12/15pass. Quiet paired novel measurements80samples/8workloads and6cache streams of179112frames pass20controls; timings are observations only. Combined inventory gate remains pending. The complete combined gate failed only at a stale historical geona ledger equality; every tracked input/HEAD/index remained unchanged. Exact historical-prefix and complete reviewed33-case append validation now pass25controls, including coordinated corruption; actual main/installed geona audits pass. Complete combined retry remains pending.",
-        "remaining": "Dedicated owner/member/conflict and general predicate/auxiliary spacing beyond finite36cases; combined Nix inventory gate. Broader composition, contextual sense selection, precision and independent Korean-language review remain open.",
+        "scope": "Both complete original entries and all10groups/60observations plus36authored boundaries/216observations are retained. The integrated whole-ending rule preserves earlier candidates and separates raw structural recovery from Native class/role/spelling conflicts; unlisted own markers and omitted copulas remain Unknown.62complete same-head Native entries match originalLMF/SQLite and production English import. Actual isolated SolidJS execution passes20diagrams/276modechecks/6exactexports/62Nativeendpoints and stoppedserver/asset parity.8complete streams/1128312frames,32096corpus words and21406historical words are exactly unchanged; actualRustadapter66570originalrows agrees.27required/6forbidden newrawjudgments are appended while13conditionals remain separate. Actual current-main964-input all-targets suite passes1061tests,0failures,1ignored/234batches; separately run1doc/1downloaded-corpus checks, Clippy/format/frontend and complete main CLI/broad/cohort/66570-row adapter/browser checks pass. Main finite/adapter/browser/preservation controls6/8/15/13pass. Isolated/main phases are explicitly bound. Failed ENOSPC, namespace, total, ignored-switch and missing-adapter attempts remain retained. Actual three installed Nix packages pass1062release tests/229batches, all964source inputs reconstructed from actual derivations/NARs with14exact deltas. Installed CLI repeats12finite modes/8broad streams/complete cohorts; adapter66570rows and actual launcher/browser20diagrams/6exports/276checks/62Nativeendpoints/458APIframes pass, assets match and ownedserver stops. Source/package controls12/15pass. Quiet paired novel measurements80samples/8workloads and6cache streams of179112frames pass20controls; timings are observations only. Combined inventory gate remains pending. The complete combined gate failed only at a stale historical geona ledger equality; every tracked input/HEAD/index remained unchanged. Exact historical-prefix and complete reviewed33-case append validation now pass25controls, including coordinated corruption; actual main/installed geona audits pass. Complete combined retry remains pending. COV-020t adds a finite missing-space contract for existing dictionary-backed auxiliary readings. Thirty unchanged proposals include twenty base cases and ten owner requirements; nine owner requirements pass and one bound-noun requirement remains unmet. Actual main1068tests, complete1128312-frame preservation and156browser diagrams pass. Portable CLI/API replay verifies540Unicode/filter/cache observations and105complete Native endpoints; coverage completion is explicitly false. No new raw-candidate judgment or contextual sense claim is implied. Installed969-source Nix packages now pass1069release tests; source reconstruction checks actual952/18profiles and11exact deltas. Installed full1128312-frame CLI, complete32096/21406-word cohorts, all66570adapter gold rows,540runtime observations and156actual flake-launcher browser diagrams pass.80paired novel samples and10complete cache streams pass22controls. New spacing costs approximately51percent more on the retained novel while candidate-only processing is approximately unchanged. Full combined inventory gate remains pending.",
+        "remaining": "Dedicated owner/member/conflict and general predicate/auxiliary spacing beyond finite36cases; combined Nix inventory gate. Broader composition, contextual sense selection, precision and independent Korean-language review remain open. COV-020t: 먹어준것은 bound-noun joining/spacing, combined Nix gate; broader spacing distributions and independent contextual review remain open.",
         "evidence": [
           {
             "path": "tests/additive_ppundeoreo_native.rs",
@@ -86240,6 +86540,34 @@
           },
           {
             "path": "docs/additive-ppundeoreo-combined-nix.json.gz"
+          },
+          {
+            "path": "tests/predicate_auxiliary_spacing.rs",
+            "test": "licensed_splits_keep_independent_readings_context_and_original_unicode_spans"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-evidence.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "tools/test_predicate_auxiliary_spacing_runtime.py"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-performance.json"
+          },
+          {
+            "path": "docs/predicate-auxiliary-spacing-historical-sources.json.gz"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_package.py"
+          },
+          {
+            "path": "tools/predicate_auxiliary_spacing_performance.py"
           }
         ],
         "judgments": [

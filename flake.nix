@@ -506,6 +506,12 @@
                 ./tools/capture_predicate_auxiliary_spacing_performance.py
                 ./tools/predicate_auxiliary_spacing_performance.py
                 ./tools/test_predicate_auxiliary_spacing_performance.py
+                ./tools/bound_noun_spacing_runtime.py
+                ./tools/test_bound_noun_spacing_runtime.py
+                ./tools/bound_noun_spacing_package_audit.py
+                ./tools/test_bound_noun_spacing_package.py
+                ./tools/bound_noun_spacing_performance.py
+                ./tools/test_bound_noun_spacing_performance.py
                 ./web/tests/predicate-auxiliary-spacing.mjs
                 ./tools/test_additive_ppundeoreo_audit.py
                 ./tools/test_additive_ppundeoreo_adapter_audit.py
@@ -987,6 +993,10 @@
             python tools/predicate_auxiliary_spacing_package.py
             python tools/predicate_auxiliary_spacing_performance.py --verify
             python -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_performance.py'
+            python tools/bound_noun_spacing_runtime.py --fixture tests/fixtures/bound-noun-spacing-cases.json --closure docs/bound-noun-spacing-native-closure.json.gz --verify docs/bound-noun-spacing-installed-runtime.json.gz
+            python tools/bound_noun_spacing_package_audit.py --package docs/bound-noun-spacing-nix.json.gz --sources docs/bound-noun-spacing-installed-sources.json.gz --adapter docs/bound-noun-spacing-installed-adapter.json.gz
+            python tools/bound_noun_spacing_performance.py
+            python -m unittest discover -s tools -p 'test_bound_noun_spacing_*.py'
             python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
             python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz

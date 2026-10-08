@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "state": "current-main-exact-package-source-runtime-browser-adapter-launcher-performance-passed-new-combined-gate-pending",
+  "current_main_binding": "bound-noun-spacing-main-binding.json.gz",
+  "normal_flake_build": "bound-noun-spacing-current-flake-build.log.gz",
+  "implementation": "../src/spacing/bound_noun.rs",
+  "regressions": "../tests/bound_noun_spacing.rs",
+  "source_profiles": {
+    "combined_inputs": 973,
+    "rust": 956,
+    "frontend": 18,
+    "shared": 1,
+    "updates_from_previous": 7,
+    "new_files": 4
+  },
+  "tests": {
+    "isolated_full_rust": 1073,
+    "installed_release": 1074,
+    "failed": 0,
+    "ignored": 1,
+    "clippy_and_format": "passed"
+  },
+  "finite_runtime": {
+    "cases": 50,
+    "runs": 18,
+    "observations": 900,
+    "complete_native_entries": 135
+  },
+  "broad": {
+    "frames": 1128312,
+    "new_hypotheses": 516,
+    "independent_old_compatible_words": 130,
+    "earlier_words_dictionary_and_spacing_options_conserved": true,
+    "intended_spacing": "unjudged"
+  },
+  "installed_raw_cohorts": {
+    "corpus": 32096,
+    "history": 21406
+  },
+  "actual_annotated_adapter_rows": 66570,
+  "browser": {
+    "spacing_diagrams": 276,
+    "auxiliary_context_diagrams": 48,
+    "exports": 6,
+    "complete_native_entries": 135,
+    "desktop_mobile_inspected": true,
+    "owned_server_stopped": true,
+    "served_assets_exact": true
+  },
+  "controls": {
+    "runtime": 18,
+    "package_and_sources": 19,
+    "main_combined_controls_before_compression_regression": 36
+  },
+  "original_proposal": {
+    "surface": "먹어준것은",
+    "required_space": "먹어 준것은",
+    "status": "Unmet original literal target retained unchanged; separately source-supported corrected targets are 먹어준 것은 and 먹어 준 것은. This is not a global forbidden judgment."
+  },
+  "previous_combined_gate": "predicate-auxiliary-spacing-combined-nix.json.gz",
+  "new_combined_gate": "pending",
+  "performance": {
+    "state": "passed",
+    "capture": "bound-noun-spacing-performance-retry1.json.gz",
+    "paired_samples": 80,
+    "cache_streams": 10,
+    "frames_per_stream": 179112,
+    "headword_spacing_seconds": [
+      3.9774,
+      4.0252
+    ],
+    "compatible_spacing_seconds": [
+      3.9704,
+      4.0524
+    ],
+    "integrity_controls": 10,
+    "scope": "Observed medians on one retained novel/machine; no statistical equivalence, causal or contextual claim. Startup-overlap first run retained separately."
+  },
+  "full_goal_complete": false,
+  "remaining": [
+    "New combined inventory gate",
+    "Possessive/bare nominal modifiers and unlisted noun identities/forms",
+    "Contextual sense/intended-spacing and independent Korean review",
+    "237unreviewed grammar entries and other open coverage-checklist requirements"
+  ],
+  "launcher": {
+    "state": "passed",
+    "receipt": "bound-noun-spacing-main-launcher.json.gz",
+    "browser_runtime": "bound-noun-spacing-main-launcher-browser-runtime.json.gz",
+    "diagrams": 276,
+    "auxiliary_context_diagrams": 48,
+    "exports": 6,
+    "complete_native_entries": 135,
+    "owned_server_stopped": true,
+    "served_assets_exact": true
+  }
+}

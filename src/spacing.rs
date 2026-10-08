@@ -15,6 +15,7 @@ use std::{
 use unicode_normalization::UnicodeNormalization;
 
 mod auxiliary;
+mod bound_noun;
 
 /// Per-word work/output bounds. A reached bound is reported, never silent.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -78,6 +79,8 @@ enum Role {
     Predicate,
     AuxiliaryChain,
     AuxiliaryPiece,
+    Modifier,
+    BoundNoun,
     BareNoun,
     ListedVerb(&'static str),
     NadaNoun(&'static str, &'static str),
@@ -331,6 +334,8 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                             && a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary)
                     }
                     Role::AuxiliaryPiece => a.breakdown().is_some(),
+                    Role::Modifier => bound_noun::modifier(a),
+                    Role::BoundNoun => bound_noun::bound_noun(a),
                     Role::BareNoun => bare_noun(a),
                     Role::ListedVerb(head) => predicate(a) && a.lemmas[0].text == head,
                     Role::NadaNoun(_, _) => unchanged_noun(a),
@@ -613,6 +618,10 @@ pub fn suggest<D: Dictionary + ?Sized>(
     if search.result.complete {
         search.dead_starts.clear();
         search.walk_auxiliary(0, &mut Vec::new())?;
+    }
+    if search.result.complete && bound_noun::maybe_bound_noun(word) {
+        search.dead_starts.clear();
+        search.walk_bound_noun(0, &mut Vec::new())?;
     }
     search.result.alternatives.sort_by(|a, b| {
         a.inserted_at

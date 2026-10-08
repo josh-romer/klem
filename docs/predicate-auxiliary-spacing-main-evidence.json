@@ -1,5 +1,5 @@
 {
-  "state": "main-installed-package-source-runtime-browser-and-performance-passed-combined-gate-pending",
+  "state": "historical-main-installed-package-source-runtime-browser-performance-and-combined-gate-passed",
   "artifacts": {
     "docs/predicate-auxiliary-spacing-all-rust-retry1.log.gz": {
       "sha256": "b8811f4f93a2f822b67597c13a35a230a14863a53599d14730c7490ebde6e758",
@@ -488,11 +488,25 @@
     "installed_runtime": 18,
     "performance": 22
   },
-  "combined_gate": "pending",
+  "combined_gate": {
+    "state": "passed",
+    "receipt": "docs/predicate-auxiliary-spacing-combined-nix.json.gz",
+    "receipt_sha256": "2547aa14dc1cfbb677df3b9bcd423fec985c37d029fb5599aa9e9c7bb3eec850",
+    "head": "feef46db4b7b965fefd25c19de2bd72ae6a8ada2",
+    "tracked_snapshot_files": 3721,
+    "inventory_source_files": 3682,
+    "all_tracked_source_head_index_unchanged": true,
+    "outputs": [
+      "/nix/store/wn6rf1zlzakbyfnzqjjjdg8qjsx939i2-klem-0.1.0",
+      "/nix/store/pzcmhjvgc3z8qj0qj62ka0k1pdpyzfp3-klem-web-assets-0.1.0",
+      "/nix/store/d4k6khcq7xmgm35lama8a5n3w71qqniw-klem-corpus-adapter-0.1.0",
+      "/nix/store/cmbpshyp58mjpndcas9g2r9yv0yfnakp-klem-inventory-review"
+    ],
+    "scope": "Complete four-check gate for the prior969-input implementation before the bound-noun extension. New973-input extension gate is separate."
+  },
   "full_goal_complete": false,
   "remaining": [
     "Original bound-noun requirement and correct separated bound-noun alternatives",
-    "Complete combined Nix inventory gate",
     "Broader spacing distributions, context and independent Korean review",
     "237 unreviewed inventory entries and other open coverage-checklist items"
   ]

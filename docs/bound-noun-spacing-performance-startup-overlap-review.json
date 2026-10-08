@@ -1,0 +1,6 @@
+{
+  "state": "retained-but-not-final-timing-evidence",
+  "reason": "The normal cached-flake build was launched after the timing producer started. Preserve all actual observations, but rerun after build/audit/browser jobs stop rather than claim a clean run.",
+  "capture": "bound-noun-spacing-performance-startup-overlap.json.gz",
+  "scope": "Timing measurements only; exact-output cache checks passed. This does not invalidate the completed source/CLI/adapter/browser checks."
+}

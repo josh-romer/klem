@@ -39,7 +39,7 @@ struct Witness<'a> {
 }
 
 impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
-    fn only_paths(
+    pub(super) fn only_paths(
         &mut self,
         segment: &SpacingSegment,
         analyses: Vec<Analysis>,
@@ -58,10 +58,11 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
         })
     }
 
-    fn emit_auxiliary(
+    pub(super) fn emit_joined(
         &mut self,
         records: Vec<SpacingSegment>,
-        context: SpacingSegment,
+        context: Option<SpacingSegment>,
+        rule: &'static str,
     ) -> Result<()> {
         let inserted: Vec<_> = records
             .iter()
@@ -72,7 +73,7 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
             .result
             .alternatives
             .iter()
-            .position(|h| h.rule == Some(RULE) && h.inserted_at == inserted)
+            .position(|h| h.rule == Some(rule) && h.inserted_at == inserted)
         {
             // Equal spaces are one option with all witnessed analyses. A complete
             // joined reading remains available, so independent alternatives do
@@ -87,31 +88,33 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 merged.push(self.only_paths(left, analyses)?);
             }
             let mut contexts = old.joined_contexts;
-            if let Some(index) = contexts
-                .iter()
-                .position(|old| old.record.span == context.record.span)
-            {
-                let mut analyses = contexts[index]
-                    .record
-                    .analysis
-                    .as_ref()
-                    .unwrap()
-                    .analyses
-                    .clone();
-                analyses.extend(context.record.analysis.as_ref().unwrap().analyses.clone());
-                analyses.sort();
-                analyses.dedup();
-                contexts[index] = self.only_paths(&contexts[index], analyses)?;
-            } else {
-                contexts.push(context);
+            if let Some(context) = context {
+                if let Some(index) = contexts
+                    .iter()
+                    .position(|old| old.record.span == context.record.span)
+                {
+                    let mut analyses = contexts[index]
+                        .record
+                        .analysis
+                        .as_ref()
+                        .unwrap()
+                        .analyses
+                        .clone();
+                    analyses.extend(context.record.analysis.as_ref().unwrap().analyses.clone());
+                    analyses.sort();
+                    analyses.dedup();
+                    contexts[index] = self.only_paths(&contexts[index], analyses)?;
+                } else {
+                    contexts.push(context);
+                }
             }
             self.result.alternatives[index].records = merged;
             self.result.alternatives[index].joined_contexts = contexts;
         } else {
             let count = self.result.alternatives.len();
-            self.emit(records, Some(RULE));
+            self.emit(records, Some(rule));
             if self.result.alternatives.len() > count {
-                self.result.alternatives[count].joined_contexts = vec![context];
+                self.result.alternatives[count].joined_contexts = context.into_iter().collect();
             }
         }
         Ok(())
@@ -168,7 +171,7 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                         let segment = self.only_paths(&segment, analyses)?;
                         path.push(segment);
                         if final_piece && path.len() > witness.prefix_len + 1 {
-                            self.emit_auxiliary(path.clone(), witness.context.clone())?;
+                            self.emit_joined(path.clone(), Some(witness.context.clone()), RULE)?;
                         } else if !final_piece {
                             self.auxiliary_partitions(end, next, witness, path)?;
                         }

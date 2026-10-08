@@ -5340,7 +5340,8 @@ review remains open under the completion review below.
 - [ ] **COV-020t — Predicate/auxiliary spacing and owner preservation.**
   **Partial: integrated rule, CLI/API and SolidJS viewer; current-main full
   Rust, broad preservation, browser, installed Nix and performance checks pass.
-  The combined inventory gate remains pending.**
+  The complete four-check inventory gate passed for this prior scope. The
+  bound-noun extension and its current gate are tracked separately below.**
   Recover missing-space hypotheses from actual
   joined auxiliary chains, including copular and predicate-forming suffix owners.
   Retain each segment's independently analyzed readings and complete joined
@@ -5411,11 +5412,65 @@ review remains open under the completion review below.
   This approximately 51% cost is recorded rather than described as equivalence;
   timings concern the retained novel/machine, not all reading workloads.
   CLI/API, source, package, runtime and timing audits are wired into the offline
-  Nix inventory check. Its complete execution remains a separate pending gate.
-  Remaining: that bound-noun joining/spacing requirement,
-  the complete
-  combined inventory gate, broader distributions and independent contextual
-  Korean review. This item remains open.
+  Nix inventory check. [Its complete four-check execution](predicate-auxiliary-spacing-combined-nix.json.gz)
+  passes with all 3,721 tracked files, HEAD and index unchanged; all 3,682
+  inventory-source files are preserved. This is the prior 969-input scope,
+  before the separately tracked bound-noun extension.
+
+  The separately tested bound-noun extension retains the original tenth proposal
+  unchanged: its literal `먹어 준것은` target remains unmatched. The complete
+  source review records the proper alternatives `먹어준 것은` and `먹어 준 것은`
+  as an explicit correction, rather than silently replacing the proposal or
+  introducing a global forbidden judgment. Twelve exact Native bound-noun
+  identities license finite modifier/nominalizer boundaries; fifteen complete
+  same-head ending/suffix entries retain the competing final -던 and suffix -기
+  identities separately. All inferred combinations are authored structural tests,
+  rather than dictionary quotations or contextual gold.
+  The isolated suite passes 1,073 tests, zero failures and one ignored test in
+  236 batches, plus Clippy and formatting. Fifty cases cover all twelve profiles,
+  copular/derived owners, nominalization, plural/particle/copula tails, auxiliary
+  partitions and case prefixes. Provider controls reject unknown/ordinary nouns
+  and other same-head bound-noun identities; shared work/output budgets remain
+  bounded. All 1,128,312 paired frames preserve prior word analyses, dictionary
+  assessments and spacing options. Every one of 516 new hypotheses retains its
+  complete original line and independently verified pieces/witnesses; intended
+  spacing and contextual senses stay unjudged. All 6,128 metadata changes retain
+  complete searches, with at most 29 probes. Eighteen CLI/API Unicode/filter/cache
+  runs pass 900 individual observations and 135 complete Native endpoints;
+  eighteen integrity controls reject altered evidence. Actual SolidJS execution
+  passes 276 spacing diagrams, 48 joined-context diagrams and six exact exports;
+  all prior/new options retain rendered order, including equal-space alternatives.
+  Served assets match, desktop/mobile captures were inspected and owned servers
+  stop. Ten complete novel cache streams reproduce 179,112 records each at
+  zero/8MiB caches. Installed source/adapter/package checks and current-main
+  integration are tracked separately; these isolated checks do not close this
+  item or the wider coverage goal. Possessive/bare nominal modifiers, additional
+  identities/forms, contextual distributions and independent review remain open.
+
+  The extension is now integrated. [Exact current-main binding](bound-noun-spacing-main-binding.json.gz)
+  verifies all 973 compiled/frontend inputs against actual tested source NARs
+  and proves that the unchanged current flake returns the same three installed
+  package identities. The normal Git-backed flake build confirms those outputs;
+  its release suite passes 1,074 tests, zero failures and one ignored test in
+  231 batches. [Complete package source/adapter audit](bound-noun-spacing-installed-package-audit.log.gz)
+  verifies all 66,570 original annotated rows. The installed CLI preserves all
+  eight stream captures and both 32,096/21,406-word cohorts; installed CLI/API
+  and browser captures match the finite requirements and complete Native entries.
+  Remaining: the original literal proposal/correction distinction, a new combined
+  inventory gate after this extension, broader distributions
+  and independent contextual Korean review. This item remains open.
+  [The final paired timing capture](bound-noun-spacing-performance-retry1.json.gz)
+  passes 80 interleaved samples and ten complete 179,112-frame cache streams.
+  The [actual current flake launcher](bound-noun-spacing-main-launcher-browser-runtime.json.gz)
+  also passes all 276 diagrams, 48 joined-context diagrams, six exact exports
+  and 135 Native endpoints; its exec path and served assets match the tested
+  packages and its owned server stops.
+  Spacing medians rise from 3.98/3.97 to 4.03/4.05 seconds for headword/Compatible
+  modes; candidate-only medians remain approximately unchanged. Ten integrity
+  controls pass. These are observations for this novel/machine, not statistical
+  equivalence or causal/contextual claims. A first run overlapped the short cached
+  flake build; all observations are retained separately and the final capture runs
+  after the owned build/audit/browser jobs stop.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

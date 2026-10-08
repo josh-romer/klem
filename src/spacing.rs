@@ -16,6 +16,7 @@ use unicode_normalization::UnicodeNormalization;
 
 mod auxiliary;
 mod bound_noun;
+mod nominal_bound_noun;
 
 /// Per-word work/output bounds. A reached bound is reported, never silent.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -81,6 +82,7 @@ enum Role {
     AuxiliaryPiece,
     Modifier,
     BoundNoun,
+    NominalOwner,
     BareNoun,
     ListedVerb(&'static str),
     NadaNoun(&'static str, &'static str),
@@ -336,6 +338,7 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                     Role::AuxiliaryPiece => a.breakdown().is_some(),
                     Role::Modifier => bound_noun::modifier(a),
                     Role::BoundNoun => bound_noun::bound_noun(a),
+                    Role::NominalOwner => nominal_bound_noun::owner(a),
                     Role::BareNoun => bare_noun(a),
                     Role::ListedVerb(head) => predicate(a) && a.lemmas[0].text == head,
                     Role::NadaNoun(_, _) => unchanged_noun(a),
@@ -394,6 +397,12 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
             analysis.analyses = supported;
             // Re-annotate the retained independent paths; do not relabel a raw
             // identity as nominal or borrow an auxiliary's dictionary entry.
+            dictionary = self.dictionary.annotate(&analysis)?;
+        }
+        if role == Role::NominalOwner {
+            analysis
+                .analyses
+                .retain(|a| nominal_bound_noun::known_owner(&dictionary, a));
             dictionary = self.dictionary.annotate(&analysis)?;
         }
         let value = (!analysis.analyses.is_empty()).then(|| SpacingSegment {
@@ -622,6 +631,10 @@ pub fn suggest<D: Dictionary + ?Sized>(
     if search.result.complete && bound_noun::maybe_bound_noun(word) {
         search.dead_starts.clear();
         search.walk_bound_noun(0, &mut Vec::new())?;
+    }
+    if search.result.complete && nominal_bound_noun::maybe_nominal_bound_noun(word) {
+        search.dead_starts.clear();
+        search.walk_nominal_bound_noun(0, &mut Vec::new())?;
     }
     search.result.alternatives.sort_by(|a, b| {
         a.inserted_at

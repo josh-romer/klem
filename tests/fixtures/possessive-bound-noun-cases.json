@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "rule": "spacing.nominal_bound_noun",
+  "scope": "Authored whitespace removals and inflection/owner extensions are distinct from unabridged native example groups; structural hypotheses are not contextual gold labels.",
+  "cases": [
+    {
+      "id": "contracted-na-topic",
+      "surface": "내것은",
+      "required_spaces": [
+        "내 것은"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "contracted-neo",
+      "surface": "네것",
+      "required_spaces": [
+        "네 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "contracted-jeo",
+      "surface": "제것",
+      "required_spaces": [
+        "제 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "bare-wuri",
+      "surface": "우리것",
+      "required_spaces": [
+        "우리 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "bare-nugu",
+      "surface": "누구것",
+      "required_spaces": [
+        "누구 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "bare-eonni",
+      "surface": "언니것",
+      "required_spaces": [
+        "언니 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "bare-chingu",
+      "surface": "친구것",
+      "required_spaces": [
+        "친구 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "bare-dongsaeng-copula",
+      "surface": "동생것이다",
+      "required_spaces": [
+        "동생 것이다"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "bare-grandmother-from",
+      "surface": "할머니것부터",
+      "required_spaces": [
+        "할머니 것부터"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "surname-teacher",
+      "surface": "박선생님것",
+      "required_spaces": [
+        "박 선생님 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending",
+      "known_unmet": true,
+      "unmet_reason": "KRDict has no surname 박 entry. The unrelated gourd/night entries cannot establish the source example's proper-name owner. Complete source proposal is retained; proper-name data and independent contextual review remain pending."
+    },
+    {
+      "id": "explicit-na",
+      "surface": "나의것",
+      "required_spaces": [
+        "나의 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "explicit-neo",
+      "surface": "너의것",
+      "required_spaces": [
+        "너의 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "explicit-jeo",
+      "surface": "저의것",
+      "required_spaces": [
+        "저의 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "explicit-noun",
+      "surface": "친구의것은",
+      "required_spaces": [
+        "친구의 것은"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "plural-owner",
+      "surface": "친구들것",
+      "required_spaces": [
+        "친구들 것"
+      ],
+      "source_entry": "krdict:62835",
+      "source_sense": "3",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "health-cause",
+      "surface": "건강때문에",
+      "required_spaces": [
+        "건강 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "pronoun-cause",
+      "surface": "너때문에",
+      "required_spaces": [
+        "너 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "weather-copula",
+      "surface": "날씨때문이다",
+      "required_spaces": [
+        "날씨 때문이다"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "father-health",
+      "surface": "아버지건강때문에",
+      "required_spaces": [
+        "아버지 건강 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "child-school",
+      "surface": "아이학교때문에",
+      "required_spaces": [
+        "아이 학교 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "family-cause",
+      "surface": "가족때문에",
+      "required_spaces": [
+        "가족 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "genitive-cause-phrase",
+      "surface": "아버지의건강때문에",
+      "required_spaces": [
+        "아버지의 건강 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "plural-cause",
+      "surface": "학생들때문에",
+      "required_spaces": [
+        "학생들 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "pronoun-cause-wuri",
+      "surface": "우리때문에",
+      "required_spaces": [
+        "우리 때문에"
+      ],
+      "source_entry": "krdict:64555",
+      "source_sense": "1",
+      "contextual_review": "pending"
+    },
+    {
+      "id": "outside-0",
+      "surface": "이것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-1",
+      "surface": "그것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-2",
+      "surface": "저것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-3",
+      "surface": "나것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-4",
+      "surface": "너것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-5",
+      "surface": "저것은",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-6",
+      "surface": "이것은",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-7",
+      "surface": "그것은",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-8",
+      "surface": "가족것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-9",
+      "surface": "학교것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-10",
+      "surface": "건강것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-11",
+      "surface": "바쁘기때문에",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-12",
+      "surface": "피곤하기때문이다",
+      "required_spaces": [],
+      "scope": "The unsplit nominalized predicate belongs to the prior modifier rule. Independent noun homonyms 피곤 / 하 / 기 can create a distinct nominal phrase; do not prohibit them without contextual evidence.",
+      "allow_other_spacing_hypotheses": true,
+      "forbidden_spaces": [
+        "피곤하기 때문이다"
+      ]
+    },
+    {
+      "id": "outside-13",
+      "surface": "먹는것은",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-14",
+      "surface": "미등록어것",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-15",
+      "surface": "미등록어때문에",
+      "required_spaces": [],
+      "scope": "The whole unknown owner 미등록어 cannot license a cause boundary; separate known noun sequences 미등록 / 어 and 미 / 등록 / 어 remain possible structural alternatives. Contextual validity is unjudged.",
+      "allow_other_spacing_hypotheses": true,
+      "forbidden_spaces": [
+        "미등록어 때문에"
+      ]
+    },
+    {
+      "id": "outside-16",
+      "surface": "내수는",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    },
+    {
+      "id": "outside-17",
+      "surface": "너줄은",
+      "required_spaces": [],
+      "scope": "No nominal-bound-noun hypothesis; existing other templates and whole-word readings remain allowed."
+    }
+  ]
+}

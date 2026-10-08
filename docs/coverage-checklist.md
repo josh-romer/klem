@@ -189,6 +189,20 @@ review remains open under the completion review below.
   COV-016 fixes the reviewed -듯/-듯이 family; 19 additional development cases
   match, leaving 378 KAIST and 242 GSD development misses. COV-017..022 split
   the remaining morphology work. Every-entry linguistic review is still open.
+  [Complete preparation for all unreviewed entries](unreviewed-inventory-preparation.md)
+  retains 306 same-head Native/original LMF entries, 1,621 complete source groups
+  and six current-installed CLI streams of 27,548 frames each. All 1,631 direct
+  tail/infix observations remain discovery leads: an absent canonical source-label
+  trace does not prove a missing lemma. Eight integrity controls pass. The next
+  -다오 batch preserves all six ending/expression identities and 26 original
+  groups with 26 authored proposed lemmas and three-filter baseline records.
+  A [separate -다오 draft](declarative-dao-draft.md) passes six focused Rust
+  tests, Clippy and eleven integrity controls. Thirty-four individual cases and
+  six complete 417-frame CLI streams preserve prior candidates and dictionary
+  assessments. Wider regression, corpus, installed Nix and integration checks
+  remain pending. No manual dispositions or corpus baselines changed.
+  General polite prefinals remain separate.
+
   Compare the implemented tables with dictionary grammar
   entries and cluster saved corpus misses by rule family. Previously recorded
   examples include 보듯이, 있습니다만, 어디까지나, and 번져나갔다; re-probe them
@@ -5340,8 +5354,8 @@ review remains open under the completion review below.
 - [ ] **COV-020t — Predicate/auxiliary spacing and owner preservation.**
   **Partial: integrated rule, CLI/API and SolidJS viewer; current-main full
   Rust, broad preservation, browser, installed Nix and performance checks pass.
-  The complete four-check inventory gate passed for this prior scope. The
-  bound-noun extension and its current gate are tracked separately below.**
+  The complete four-check inventory gate also passes after the bound-noun
+  extension; wider constructions and contextual review remain open.**
   Recover missing-space hypotheses from actual
   joined auxiliary chains, including copular and predicate-forming suffix owners.
   Retain each segment's independently analyzed readings and complete joined
@@ -5456,8 +5470,11 @@ review remains open under the completion review below.
   verifies all 66,570 original annotated rows. The installed CLI preserves all
   eight stream captures and both 32,096/21,406-word cohorts; installed CLI/API
   and browser captures match the finite requirements and complete Native entries.
-  Remaining: the original literal proposal/correction distinction, a new combined
-  inventory gate after this extension, broader distributions
+  [The complete four-check gate after this extension](bound-noun-spacing-combined-nix.json.gz)
+  passes with all 3,862 tracked files and 3,823 selected inventory inputs frozen,
+  and unchanged HEAD/index. Its four actual outputs include the CLI/server,
+  frontend, adapter and complete inventory audit. Remaining: the original literal
+  proposal/correction distinction, broader distributions
   and independent contextual Korean review. This item remains open.
   [The final paired timing capture](bound-noun-spacing-performance-retry1.json.gz)
   passes 80 interleaved samples and ten complete 179,112-frame cache streams.
@@ -5471,6 +5488,51 @@ review remains open under the completion review below.
   equivalence or causal/contextual claims. A first run overlapped the short cached
   flake build; all observations are retained separately and the final capture runs
   after the owned build/audit/browser jobs stop.
+
+- [ ] **COV-020u — Possessive and nominal-cause spacing.** **Partial:
+  finite structural template tested in isolated and installed packages.**
+  `spacing.nominal_bound_noun` preserves every independent word reading and prior
+  spacing option. Explicit genitives, contracted 내/네/제 and exact source-listed
+  bare owners 우리/누구/언니/친구/동생/할머니/선생님 license possession before
+  Native 것 62835. Known noun/pronoun cause phrases before Native 때문 64555
+  retain multiword examples such as 아버지 건강 때문에 and 아이 학교 때문에.
+  Every right noun needs the exact bound-noun identity/POS. All passes share and
+  report existing work/output bounds. [Supported scope and limits](possessive-bound-noun-spacing.md)
+  leave wider formations, constructions and contextual sense selection open.
+  [Forty-two stable cases](../tests/fixtures/possessive-bound-noun-cases.json)
+  produce 756 Unicode/filter/cache observations, with original 박 선생님 것
+  explicitly unmet. Gourd/night 박 homonyms cannot establish the surname;
+  proper-name data and a bounded source-backed name/noun phrase license remain
+  necessary. The earlier gourd branch/captures remain superseded evidence.
+  Broad 피곤하기때문이다 and 미등록어때문에 negative expectations were corrected
+  from actual dictionary homonyms, preserving original failures and explicitly
+  denying only direct unsupported nominal-owner readings. Other structural
+  alternatives remain contextually unjudged.
+  Isolated and actual Nix packages pass 1,077 Rust tests, zero failures and one
+  ignored test in 232 batches, plus formatting and Clippy. All 1,128,312 paired
+  frames preserve word/dictionary results and prior spacing options/order.
+  These corpora contain no new spacing options and 506 metadata-only changes.
+  Installed CLI output reproduces those streams and both 32,096/21,406-word
+  cohorts. All 66,570 annotated adapter rows and candidate summaries are intact.
+  Installed SolidJS verifies 210 diagrams, six exact exports, 218 complete Native
+  entries, served assets and desktop/mobile geometry; owned servers stop.
+  [Source reconstruction](possessive-bound-noun-installed-sources.json.gz)
+  binds 977 Rust/frontend inputs with six deltas: two updated files and four new.
+  Thirty portable runtime/package/performance integrity controls pass. Source closure retains
+  complete original possession/cause groups and all 135 previous entries unchanged.
+  [Paired installed timing](possessive-bound-noun-performance.json.gz) verifies
+  all 80 samples and ten complete 179,112-frame cache streams. Observed spacing
+  medians are 12.17 → 12.16 seconds for headword and 12.09 → 11.82 seconds for
+  Compatible modes. These measurements describe this novel/machine; they do not
+  establish statistical equivalence or causality. [Current-main binding](possessive-bound-noun-main-binding.json.gz)
+  verifies all 977 inputs and the exact same three tested package/source/derivation
+  identities from the actual Git-backed flake. Its normal build passes, including
+  the web launcher. All thirty controls also pass using repository-default paths.
+  [The actual launcher](possessive-bound-noun-main-launcher-browser-runtime.json.gz)
+  executes the tested server, serves the tested assets and passes all 210 diagrams,
+  six exact exports and 218 complete Native endpoints; its owned server stops.
+  Desktop/mobile screenshots were inspected. A new complete combined gate, wider
+  formations and contextual review remain open. This item and the full goal remain open.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

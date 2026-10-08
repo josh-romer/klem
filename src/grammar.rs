@@ -1842,6 +1842,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "spacing.bare_noun_lexical_verb" => {
             "Offer a separate spacing hypothesis for source-attested 신경질/용기/짜증 before lexical 내다 and 기분 before 내키다, including independently analyzed inflections of each exact verb. Require actual noun and main-verb dictionary entries; preserve raw identity roles, auxiliary homonyms, whole-word alternatives and original byte spans. Other noun/verb pairs and contextual meaning are not inferred."
         }
+        "spacing.nominal_bound_noun" => {
+            "Offer bounded missing-space hypotheses for dictionary-backed possessors before 것 and nominal causes before 때문. Require exact bound-noun source identities, preserve independent word readings and original byte spans, and retain whole-word alternatives. Bare possession uses source-listed owners; explicit genitives and nominal cause phrases remain structural hypotheses without contextual sense judgments."
+        }
         "spacing.modifier_bound_noun" => {
             "Offer bounded missing-space hypotheses for twelve source-reviewed modifier/nominalizer and bound-noun profiles. Keep every segment independently dictionary-backed, preserve prior whole-word readings and spacing options, and retain any auxiliary witness with its original prefix span. Unlisted constructions, contextual senses and intended spacing are not inferred."
         }

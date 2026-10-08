@@ -506,6 +506,12 @@
                 ./tools/capture_predicate_auxiliary_spacing_performance.py
                 ./tools/predicate_auxiliary_spacing_performance.py
                 ./tools/test_predicate_auxiliary_spacing_performance.py
+                ./tools/possessive_bound_noun_runtime.py
+                ./tools/test_possessive_bound_noun_runtime.py
+                ./tools/possessive_bound_noun_package_audit.py
+                ./tools/test_possessive_bound_noun_package_audit.py
+                ./tools/possessive_bound_noun_performance.py
+                ./tools/test_possessive_bound_noun_performance.py
                 ./tools/bound_noun_spacing_runtime.py
                 ./tools/test_bound_noun_spacing_runtime.py
                 ./tools/bound_noun_spacing_package_audit.py
@@ -993,6 +999,10 @@
             python tools/predicate_auxiliary_spacing_package.py
             python tools/predicate_auxiliary_spacing_performance.py --verify
             python -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_performance.py'
+            python tools/possessive_bound_noun_runtime.py --fixture tests/fixtures/possessive-bound-noun-cases.json --closure docs/possessive-bound-noun-native-closure.json.gz --verify docs/possessive-bound-noun-installed-runtime.json.gz
+            python tools/possessive_bound_noun_package_audit.py --package docs/possessive-bound-noun-nix.json.gz --sources docs/possessive-bound-noun-installed-sources.json.gz --adapter docs/possessive-bound-noun-installed-adapter.json.gz
+            python tools/possessive_bound_noun_performance.py
+            python -m unittest discover -s tools -p 'test_possessive_bound_noun_*.py'
             python tools/bound_noun_spacing_runtime.py --fixture tests/fixtures/bound-noun-spacing-cases.json --closure docs/bound-noun-spacing-native-closure.json.gz --verify docs/bound-noun-spacing-installed-runtime.json.gz
             python tools/bound_noun_spacing_package_audit.py --package docs/bound-noun-spacing-nix.json.gz --sources docs/bound-noun-spacing-installed-sources.json.gz --adapter docs/bound-noun-spacing-installed-adapter.json.gz
             python tools/bound_noun_spacing_performance.py

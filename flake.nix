@@ -512,6 +512,11 @@
                 ./tools/test_possessive_bound_noun_package_audit.py
                 ./tools/possessive_bound_noun_performance.py
                 ./tools/test_possessive_bound_noun_performance.py
+                ./tools/declarative_dao_audit.py
+                ./tools/test_declarative_dao_audit.py
+                ./tools/declarative_dao_preservation.py
+                ./tools/test_declarative_dao_preservation.py
+                ./tools/declarative_dao_performance.py
                 ./tools/bound_noun_spacing_runtime.py
                 ./tools/test_bound_noun_spacing_runtime.py
                 ./tools/bound_noun_spacing_package_audit.py

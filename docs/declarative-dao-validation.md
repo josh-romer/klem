@@ -62,3 +62,10 @@ remain open; these tests do not establish overall precision or complete Korean
 coverage. The original `박선생님것` surname requirement remains open. Five
 complete existing training examples now provide separately attributed proper-name
 evidence; it must not be assigned to the unrelated same-head KRDict entries.
+
+The first combined gate failed because the inventory source fileset omitted the
+five new DAO audit/control tools. The immutable commit and input hashes remained
+unchanged. The failed receipt, producer and complete log are retained as
+`declarative-dao-combined-nix-missing-tools.*.gz`; the flake fileset now includes
+those tools. This packaging correction leaves the tested Rust/frontend inputs
+unchanged. A complete retry is required.

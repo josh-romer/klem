@@ -3047,7 +3047,7 @@ review remains open under the completion review below.
 
 - [ ] **COV-017cl — Self/opinion -ㄹ거나/-을거나 questions.**
   **Partial: source-backed rule, Native policy, label and finite regressions
-  pass main, installed Nix package and performance validation; combined gate is pending.**
+  pass main, installed Nix package, performance and combined Nix validation.**
   [Both complete original entries](literary-question-geona-source-discovery.json.gz)
   (80970/80972) retain two senses and all eight original groups, including
   dialogue replies and the restrictive verb note alongside 좋을거나. The
@@ -3138,8 +3138,13 @@ review remains open under the completion review below.
   startup and serialization, retain host load/frequency context and do not prove
   statistical equivalence or isolate causality.
 
-  Remaining: the current combined inventory gate;
-  broader class/marker/derivation/auxiliary/copula owner
+  The [actual combined Nix gate](literary-question-geona-combined-nix.json)
+  passes the CLI/server, web-assets, corpus-adapter and complete inventory checks.
+  All 3,376 tracked files, 3,337 selected inventory inputs, HEAD and index remain
+  unchanged during the run. Its [complete log](literary-question-geona-combined-nix.log.gz)
+  and producer are retained. This closes the finite build gate only.
+
+  Remaining: broader class/marker/derivation/auxiliary/copula owner
   distributions and general predicate/auxiliary spacing; individual contextual
   review of the 44 broader additions. Sense selection, precision and independent
   Korean review remain open. Neither isolated success nor finite raw judgments

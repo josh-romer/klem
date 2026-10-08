@@ -3152,7 +3152,7 @@ review remains open under the completion review below.
 
 - [ ] **COV-017cm — Additive -(으)ㄹ뿐더러 connective.**
   **Partial: rule, Native attachment policy, viewer label and individual
-  regressions pass complete current-main validation; installed packages remain pending.**
+  regressions pass complete current-main and installed-package validation.**
   [Both complete original entries](additive-ppundeoreo-source-discovery.json.gz)
   (74341/74021) retain their notes and all ten example groups, including dialogue.
   The prior CLI lacks the whole-ending reading in all 60 original observations.
@@ -3213,9 +3213,25 @@ review remains open under the completion review below.
   Offline source, adapter, browser and preservation audits for both captured
   phases are wired into Nix; flake syntax parses successfully.
 
+  [Actual installed Nix packages](additive-ppundeoreo-package-nix.json) pass
+  1,062 release tests, zero failures and one ignored test in 229 batches.
+  [Source reconstruction](additive-ppundeoreo-historical-sources.json.gz) verifies
+  all 964 inputs against actual derivations and source NARs; seven updates and
+  seven additions extend the previous 957-input snapshot. The installed CLI
+  repeats 12 finite modes, all eight broad streams and both complete word cohorts;
+  the adapter repeats every 66,570 annotated row. The actual launcher/browser
+  repeats 20 diagrams, six exact exports, 276 filter checks, 62 complete Native
+  endpoints, two source panes and 458 API frames. Launcher help and served assets
+  match, the owned server stops, and desktop/mobile captures were inspected.
+  Source and package audits pass 12 and 15 controls.
+  [Novel timing and cache parity](additive-ppundeoreo-performance.json) retain
+  80 interleaved samples across eight workloads on one allowed CPU, with host
+  load/frequency recorded. Six cache streams each preserve all 179,112 frames;
+  20 performance controls pass. Timings are observations, not proof of statistical
+  equivalence. These source/package/performance audits are wired into Nix.
+
   Remaining: dedicated owner/member/conflict and spacing review beyond the
-  36 finite cases; actual
-  installed Nix package/runtime/performance and combined inventory gates.
+  36 finite cases; the complete combined Nix inventory gate.
   Broader composition, contextual sense choice, precision and independent
   Korean-language review remain open. This item is not closed by finite tests.
 

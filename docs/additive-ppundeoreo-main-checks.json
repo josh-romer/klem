@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "state": "integrated-main-rust-corpus-clippy-frontend-and-complete-runtime-passed-packages-pending",
+  "state": "integrated-main-and-installed-packages-runtime-source-performance-passed-combined-pending",
   "main_source_inputs": 964,
   "main_rust": {
     "passed": 1061,
@@ -77,16 +77,16 @@
   "nix": {
     "flake_parse_passed": true,
     "new_audits_and_both_actual_runtime_phases_wired": true,
-    "installed_current_packages_and_combined_gate": "pending"
+    "installed_current_packages_and_combined_gate": "installed-packages-passed-combined-pending",
+    "new_package_source_performance_audits_wired": true
   },
   "remaining": [
-    "Dedicated owner/member/conflict and spacing review beyond36finite authored cases",
-    "Actual installed current-source Nix packages, packaged CLI/adapter/browser/launcher and source reconstruction",
-    "Quiet novel performance/cache checks and complete combined Nix inventory gate",
+    "Dedicated owner/member/conflict and general predicate/auxiliary spacing review beyond36finite authored cases",
+    "Complete combined four-check Nix inventory gate",
     "Broader composition, contextual sense selection, precision and independent Korean-language review"
   ],
   "full_goal_complete": false,
-  "scope": "Actual964-input main all-targets Rust1061tests plus1doc and1separately ignored corpus test pass. Every old ledger case/source link and corpus/novel output is retained, including exact main CLI/adapter/browser behavior and finite Native assessments. No installed-package, broad owner/spacing, context or precision completion claim. Prior geona combined gate is separately complete and retained.",
+  "scope": "Actual964-input main and installed package sources are verified, including1062release tests and complete installed CLI/adapter/browser/launcher outcomes. Source reconstruction, paired novel timing and cache parity pass. Broader owner/spacing, composition, context and precision remain open; the current combined inventory gate is pending.",
   "proof_sha256": {
     "additive-ppundeoreo-adapter-audit.log.gz": "49be0b59fadd07a219b5b29a353e37f2617cdc82fea6367cc2fb6218b33a1b33",
     "additive-ppundeoreo-adapter-audit.py.gz": "4afa55c22f28d64fd6d316a81841d5d2bdab992e31ccaa36c298fa753e41b45b",
@@ -231,7 +231,90 @@
     "additive-ppundeoreo-source-replay.json.gz": "f30dad2c22a53e1e0f8725c6cf85805c69862183eb2e42fbba965c93c9babaf5",
     "additive-ppundeoreo-source-replay.log.gz": "ea1789c0f19ad7e302e37a2b3f267b1f6b5f76a07a9591a08c15bc2c33254ee9",
     "additive-ppundeoreo-source-replay.py.gz": "7fd3a99d1058ae6bafc8a5814a2589ee1a3fe525e38d17292510c60f777fcacc",
-    "additive-ppundeoreo-repository-controls-current.log.gz": "f0e617c83ab41b53a83b6f4e7b7fe7937404a11294a16d4b0c38de44e31c799d"
+    "additive-ppundeoreo-repository-controls-current.log.gz": "f0e617c83ab41b53a83b6f4e7b7fe7937404a11294a16d4b0c38de44e31c799d",
+    "additive-ppundeoreo-capture-sources.py.gz": "424bde6037de6a8176d031d9046580b089348ba3bbf5efe7e8d69f7d77ce71ab",
+    "additive-ppundeoreo-historical-sources.json.gz": "41d68ae7e02cc0124b3e06b6b4c0011e8bac930e64fd1f3553c62264986d229e",
+    "additive-ppundeoreo-historical-sources.log.gz": "ee3a4fad152bea73fbd9c3c42909eaf09ec4f8f011e9233557b55d193b62ab71",
+    "additive-ppundeoreo-launcher.log.gz": "dd1b461bdef7271b2b6cc30c71bd8604898bf7bda3f3757f5664534f71f9c4c6",
+    "additive-ppundeoreo-launcher.nix.gz": "9e053f177545d2b3b805731f18cda5582c82b8c52767aeee5e9526b0065e2a56",
+    "additive-ppundeoreo-package-audit-current.log.gz": "e85432257b479bffd1e450ca6950dd968ad24e2c24e07c6503c8209e5776e656",
+    "additive-ppundeoreo-package-audit.log.gz": "e85432257b479bffd1e450ca6950dd968ad24e2c24e07c6503c8209e5776e656",
+    "additive-ppundeoreo-package-checks.nix.gz": "95f886e2b877d60c8962ce1ebf6615c3f3ae51ab5e7f698822309614d34bd7fc",
+    "additive-ppundeoreo-package-controls-current.log.gz": "0996821e13d4c3918e6f90278fa046da2ea4a7436dd5f3db422b394857043c73",
+    "additive-ppundeoreo-package-controls.log.gz": "d6251d322024c9c9c179bd51899b890c0749fdc8722c26d50b813cfdb45290db",
+    "additive-ppundeoreo-package-nix-supervisor.log.gz": "b5cef44590f9d804a7bca9f5d637a0146dae66fae579e2b476aa31b37cbda801",
+    "additive-ppundeoreo-package-nix.json": "53e6acc63fc4eae81b764baca10509b9b360b29c71d723a77997edc4d44c7c4b",
+    "additive-ppundeoreo-package-nix.log.gz": "29b748045afaa19084ab94fef7b828a5cc8320a5e5aa9b1504251926eff13470",
+    "additive-ppundeoreo-package-nix.py.gz": "1cdc092b2b9c64fd75019b2b3aea45f050f440eb7641a73b3e84a1893bf39254",
+    "additive-ppundeoreo-packaged-adapter.json.gz": "2b7881cdc63ccebec1c55a86f4870e05ca09a547b44a07186eac150d8e95fe33",
+    "additive-ppundeoreo-packaged-adapter.log.gz": "50ce235f0ca572c7d0162b3a89febbba01601e0ed71f4fa332dac33a3f019f84",
+    "additive-ppundeoreo-packaged-browser.json": "d874b6d189deda2f42fe7fc70704a13646c7b6e40e0e644c9f10ab71a4d95184",
+    "additive-ppundeoreo-packaged-cli.json": "309155dcbb0befac5f639bf82c2d2595fdac202c2875f7428bc6f0a3bc4a1cf1",
+    "additive-ppundeoreo-packaged-cli.log.gz": "e54558d2d9e5dfee1b41db6b3d199b4696246ad3784105274207a55315c3fa2d",
+    "additive-ppundeoreo-packaged-cli.py.gz": "ad2a104bda90e1b540c0fd9b5a26b25de5de5c3889eae323137a8fdda47e3c91",
+    "additive-ppundeoreo-packaged-desktop.png": "9568acb4cb145bcba808d463b0d1d63ffd0e3eb1df6b97eccf65bdd839a1042a",
+    "additive-ppundeoreo-packaged-mobile.png": "6599dae62def5b143efbcf3043e63f71302d713ad5e8687a6ad525aa376d72ae",
+    "additive-ppundeoreo-packaged-runtime.json": "b86ef15d04daaa8d2520249c18a43815f7f5cc44e8db9ccffe4e51f82e3c1712",
+    "additive-ppundeoreo-packaged-server.log.gz": "14933c27967880da2e6065673d58ef9d9df8e966470209918ab85d57f574013f",
+    "additive-ppundeoreo-packaged-web.log.gz": "0af5de9ffe03c1c7841c9544f113ec10964a6886d8620613acb6f5c0159d9961",
+    "additive-ppundeoreo-packaged-web.py.gz": "beac8f375ecf05ee0212fd3977e7e80eaf35d30c28ab2e4d0f296497aadc23d8",
+    "additive-ppundeoreo-performance-audit.log.gz": "4e6f3ad2eb46035ad80331a904076d92da8c67be922db741eea20ac2762fe83a",
+    "additive-ppundeoreo-performance-controls.log.gz": "ec814c2ed4dc3864870fb036a19af9f29546679d71217a3760a917e335d5c9a7",
+    "additive-ppundeoreo-performance.json": "c6fc35ae88f8cbaaedabc605b0daf7f0eae12245a4e7cb58c955598936d10b94",
+    "additive-ppundeoreo-performance.log.gz": "15a233ddcc03c4a22847183045c381b3050cefab793d189bad315609af00b418",
+    "additive-ppundeoreo-release-flake-parse.log.gz": "fc2e36b7e32df706f3c32ed059e2b890d097de2e396091ebaa6a944c92323e55",
+    "additive-ppundeoreo-sources-audit.log.gz": "c022567a55768315f473839504bc7ac5f0ba61df9b7536cfd8e298e23f2f77bf",
+    "additive-ppundeoreo-sources-audit.py.gz": "244eab6d61d555cef1ae2a4905260cc00abfb1df0ee1eee560e5ca198706fd8b",
+    "additive-ppundeoreo-sources-controls.log.gz": "2e45089d7538dc56a8d165f181d6ac32a2c206441f8fec08a0431231b797ca3f"
   },
-  "offline_current_controls": 56
+  "offline_current_controls": 103,
+  "installed_nix_packages": {
+    "receipt": "docs/additive-ppundeoreo-package-nix.json",
+    "outputs": [
+      "/nix/store/inhm9xhj0ld880m2rjlycvz71q8gsanf-klem-0.1.0",
+      "/nix/store/lizfmdh1j10jb83gbmm3z60hv8xhgd5y-klem-web-assets-0.1.0",
+      "/nix/store/hja0rsfx3h6nk92cyq8lff5lg70fhkn3-klem-corpus-adapter-0.1.0"
+    ],
+    "source_inputs": 964,
+    "release_tests": {
+      "passed": 1062,
+      "failed": 0,
+      "ignored": 1,
+      "batches": 229
+    },
+    "reconstructed_source_delta": {
+      "previous_inputs": 957,
+      "updated": 7,
+      "new": 7,
+      "current_inputs": 964
+    },
+    "source_controls": 12,
+    "package_controls": 15
+  },
+  "installed_runtime": {
+    "finite_cli_modes": 12,
+    "broad_streams": 8,
+    "broad_frames": 1128312,
+    "corpus_words": 32096,
+    "historical_words": 21406,
+    "adapter_rows": 66570,
+    "source_diagrams": 20,
+    "exact_exports": 6,
+    "filter_checks": 276,
+    "native_endpoints": 62,
+    "source_panes": 2,
+    "source_api_frames": 458,
+    "launcher_help_and_assets_passed": true,
+    "owned_server_stopped": true,
+    "desktop_mobile_inspected": true
+  },
+  "performance": {
+    "report": "docs/additive-ppundeoreo-performance.json",
+    "paired_samples": 80,
+    "workloads": 8,
+    "cache_streams": 6,
+    "frames_per_cache_stream": 179112,
+    "controls": 20,
+    "scope": "Interleaved single-CPU observations with host load/frequency retained; no statistical equivalence or causal performance claim."
+  }
 }

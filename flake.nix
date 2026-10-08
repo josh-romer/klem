@@ -484,6 +484,13 @@
                 ./web/tests/literary-question-geona.mjs
                 ./tools/additive_ppundeoreo_audit.py
                 ./tools/additive_ppundeoreo_main.py
+                ./tools/additive_ppundeoreo_sources.py
+                ./tools/additive_ppundeoreo_package.py
+                ./tools/additive_ppundeoreo_performance.py
+                ./tools/capture_additive_ppundeoreo_performance.py
+                ./tools/test_additive_ppundeoreo_sources.py
+                ./tools/test_additive_ppundeoreo_package.py
+                ./tools/test_additive_ppundeoreo_performance.py
                 ./tools/test_additive_ppundeoreo_main.py
                 ./tools/additive_ppundeoreo_adapter_audit.py
                 ./tools/additive_ppundeoreo_browser_audit.py
@@ -952,6 +959,9 @@
             python tools/additive_ppundeoreo_browser_audit.py
             python tools/additive_ppundeoreo_browser_audit.py --phase main
             python tools/additive_ppundeoreo_main.py --verify
+            python tools/additive_ppundeoreo_sources.py --proof docs/additive-ppundeoreo-historical-sources.json.gz
+            python tools/additive_ppundeoreo_package.py
+            python tools/additive_ppundeoreo_performance.py --verify
             python tools/additive_ppundeoreo_preservation_audit.py
             python tools/additive_ppundeoreo_preservation_audit.py --phase main
             python -m unittest discover -s tools -p 'test_additive_ppundeoreo_*.py'

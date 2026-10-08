@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "package": "docs/ostensible-reason-package-nix.json",
+  "source_files": 924,
+  "runtime": {
+    "cli": {
+      "source_frames": 1398,
+      "individual_mode_judgments": 156,
+      "conditional_mode_judgments": 72,
+      "broad_frames": 1128312,
+      "corpus_words": 32096
+    },
+    "adapter_rows": 66570,
+    "browser": {
+      "source_api_frames": 466,
+      "source_diagrams": 42,
+      "conditional_diagrams": 22,
+      "exports": 12,
+      "native_entries": 91,
+      "individual_mode_judgments": 228
+    },
+    "launcher": {
+      "source_api_frames": 466,
+      "packaged_assets": 2,
+      "owned_server_stopped": true
+    },
+    "release_tests": {
+      "passed": 1043,
+      "failed": 0,
+      "ignored": 1,
+      "batches": 219
+    }
+  },
+  "main_and_package_runtime_controls": 41,
+  "desktop_mobile_images_inspected": true,
+  "owned_server_stopped": true,
+  "evidence_sha256": {
+    "docs/ostensible-reason-package-nix.json": "ba42058a9d427610017de1d4a84bfa7b9e0fbf2251ca6e3014f5cd3c9ea78b3c",
+    "docs/ostensible-reason-package-nix.log.gz": "689f10b91b4b36a35888d23c2984d38a6df461812ebe58d494ddb44830ff09f1",
+    "docs/ostensible-reason-packaged-cli-replay.json": "0e17bc29943f9a55c621161319cd7a3ed84b776a75d827d984f2e42fe7ee4d32",
+    "docs/ostensible-reason-packaged-adapter-replay.json.gz": "3af1d6754ca7a5f51a4141d025d2466a4ade7740d57a3271a9dcd61904dd9ee1",
+    "docs/ostensible-reason-packaged-browser.json": "6ca89edd95b87992339e0eb282c2600148e8b29fa272e971f52730a7efbb420d",
+    "docs/ostensible-reason-packaged-web-launcher.json": "348367332d64f6ee108656e81cf4f650af426bb4969a7a3c01fc54be05ad72ac",
+    "docs/ostensible-reason-packaged-desktop.png": "fb48f6c876563b75f88183c3590477a1c11cb7b18a0da43910273ff9112a6b17",
+    "docs/ostensible-reason-packaged-mobile.png": "570f0132488a0b16a5d0c50f15bf846d7545540602a88ae591b1508dcba6f820",
+    "docs/ostensible-reason-packaged-runtime-audit.log.gz": "84376320349270f655fa0aa0c549af921c5e7a8dcaee8804cadb1696b372a88a",
+    "docs/ostensible-reason-packaged-runtime-controls.log.gz": "cf9f05c9bc10ac4f41d4be326b9a834f720ed79b1e12f265c184c5925d20d41b",
+    "tools/ostensible_reason_runtime.py": "5a2215c99acc4fab1ec564adfb50fcf92047d23081f7e08e5a76520e73c96eb9",
+    "tools/test_ostensible_reason_runtime.py": "896913381d5a0bbd1b1faeae5cfc404efbff8d96b6377426a5303a0bfef1f0dd",
+    "tools/capture_ostensible_reason_packages.py": "48ea1be5d0c703dd59c5c7c11dad817b441addc318ca2140ad49b84c92842553",
+    "tools/capture_ostensible_reason_web.py": "da7b026f98540e7630b729b7d6c932b6095d36e794406529b4d266b76286243c"
+  },
+  "scope": "Actual independent Nix CLI/server/assets/adapter validation. Complete source/conditional/broad/corpus parity, browser/Native/UI checks, served asset bytes, release test log and41 corruption controls pass. Contextual/register/sense judgments, independent Korean review and candidate precision remain open; novel timing and final inventory gate still pending."
+}

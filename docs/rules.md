@@ -4836,3 +4836,34 @@ The optional Nix corpus evaluator is available with
 (after obtaining the pinned corpus data). It builds the existing `evaluate`
 example from the same source as the main package; the main Nix check runs the
 library and CLI tests, while actual adapter replay verifies every annotated row.
+
+
+## Ostensible-reason endings (COV-017ci)
+
+The canonical endings `답시고` and `는답시고` retain whole connective readings
+for source-listed plain adjective/prefinal and present verbal allomorphs.
+Vowel/ㄹ verbal stems use -ㄴ답시고; other consonants use -는답시고. Plain forms
+follow adjectives or the listed 시/past/modal markers. Present forms permit 시
+and exclude the specifically tested wrong past/modal and irregular ㅂ recoveries.
+Existing candidates remain available. Each Native entry and immediate auxiliary
+owner receives its own assessment; a left adjective cannot license its verbal
+auxiliary's bare ending. Unknown extensions remain eligible. A bare verbal raw
+hypothesis may remain a headword match while compatible mode rejects its
+source-backed attachment conflict.
+
+The viewer labels these endings “Claimed reason (disapproving)” and links all
+three complete primary sources. This gloss describes the construction's common
+use; the program chooses no contextual speaker attitude or dictionary sense.
+[Structural judgments](../tests/fixtures/ostensible-reason-validity.json),
+[conditional mode cases](../tests/fixtures/ostensible-reason-mode-scope.json),
+[complete original sources](ostensible-reason-source-discovery.json.gz),
+[91-entry Native preparation](ostensible-reason-boundary-owner-preparation.json.gz)
+and [current main checks](ostensible-reason-main-checks.json) define the tested
+scope. [Actual Nix and packaged runtime checks](ostensible-reason-packaged-checks.json)
+pass the complete Rust/CLI/server/assets/adapter and browser validation.
+[Paired novel measurements](ostensible-reason-performance.json) preserve
+80 samples across eight workloads and all six cached/uncached stream checks.
+The [complete four-check Nix gate](ostensible-reason-combined-nix.json) passes
+with unchanged tracked inputs, HEAD and staged diff. Broader composition,
+precision, contextual/register accuracy and independent Korean review remain
+open.

@@ -704,6 +704,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다나"
                             | "다마는"
                             | "다만"
+                            | "답시고"
                             | "다더니만"
                             | "다더니마는"
                             | "다던데"
@@ -982,6 +983,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "자마자",
             "다마는",
             "다만",
+            "답시고",
             "다마다",
             "거든",
             "거든요",
@@ -1344,6 +1346,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다", "다", "는다", 4),
             ("는다마는", "다마는", "는다마는", 4),
             ("는다만", "다만", "는다만", 4),
+            ("는답시고", "답시고", "는답시고", 4),
             ("는다고", "다고", "는다고", 4),
             ("는다는", "다는", "는다는", 4),
             ("는다면", "다면", "는다면", 4),
@@ -2023,6 +2026,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.retrospective" => "Recover retrospective 더 after other prefinal markers.",
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
+        }
+        "ending.ostensible_reason" => {
+            "Recover the source-owned -답시고 and present -(느)ㄴ답시고 connective endings without choosing a contextual speaker attitude."
         }
         "ending.declarative_contrast" => {
             "Recover the source-owned -다마는/-다만 and present -(느)ㄴ다마는/-(느)ㄴ다만 connective bundles; retain final-ending plus particle alternatives without selecting a contextual sense."

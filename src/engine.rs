@@ -949,6 +949,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
         "는다"
             | "는다마는"
             | "는다만"
+            | "는답시고"
             | "는다고"
             | "는다는"
             | "는다면"
@@ -1778,9 +1779,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
-                // Six Native contrast senses list si/past/modal for plain da,
-                // and present verbal forms use the honorific-only paradigm.
-                if matches!(ending.form, "다마는" | "다만")
+                // Contrast and ostensible-reason sources list si/past/modal
+                // for plain forms; present verbal forms permit honorific only.
+                if matches!(ending.form, "다마는" | "다만" | "답시고")
                     && p.morphs.iter().any(|m| {
                         !honorific_prefinal(&m.form)
                             && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
@@ -1803,6 +1804,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "다마는" | "다만" | "는다마는" | "는다만") {
                     p.rules.push("ending.declarative_contrast".into());
+                }
+                if matches!(ending.form, "답시고" | "는답시고") {
+                    p.rules.push("ending.ostensible_reason".into());
                 }
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
@@ -3050,7 +3054,7 @@ fn auxiliary_inflections_allowed_for(
                 return false;
             }
             if bare
-                && matches!(m.form.as_str(), "다마는" | "다만")
+                && matches!(m.form.as_str(), "다마는" | "다만" | "답시고")
                 && matches!(class, Some(PredicateClass::Verb))
                 && !report_stative
             {

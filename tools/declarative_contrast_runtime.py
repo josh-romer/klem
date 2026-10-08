@@ -4,6 +4,7 @@ import json
 import math
 
 from declarative_contrast_audit import ROOT, matches, producer, read, sha
+from declarative_contrast_sources import package_source_texts
 
 
 def verify_cli(report):
@@ -69,7 +70,8 @@ def browser_semantics(report):
 def verify_browser(report,cli):
     assert report['cli_sha256']==cli['cli_sha256']
     assert report['producer_sha256']==sha((ROOT/'web/tests/declarative-contrast.mjs').read_bytes())
-    assert report['catalog_sha256']==sha((ROOT/'web/src/grammar-labels.json').read_bytes())
+    sources=package_source_texts(read(ROOT/'docs/declarative-contrast-package-nix.json'))
+    assert report['catalog_sha256']==sha(sources['web/src/grammar-labels.json'].encode())
     assert report['errors']==[]
     assert len(report['diagrams'])==64 and len(report['particleDiagrams'])==48
     assert len(report['exports'])==6 and len(report['modeJudgments'])==252
@@ -127,8 +129,9 @@ def verify_launcher(package,auxiliary,browser,launcher):
 def verify_package(package,cli,adapter,browser,auxiliary,launcher):
     assert package['state']=='passed' and package['exit_code']==0 and package['snapshot_unchanged'] is True
     assert len(package['snapshot']['files'])==915
+    sources=package_source_texts(package)
     for path,record in package['snapshot']['files'].items():
-        assert sha((ROOT/path).read_bytes())==record['sha256'],path
+        assert sha(sources[path].encode())==record['sha256'],path
     output=next(p for p in package['outputs'] if p.endswith('-klem-0.1.0'))
     assert cli['cli']==output+'/bin/klem'
     producer(auxiliary)

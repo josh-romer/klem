@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "state": "passed",
+  "exit_code": 0,
+  "command": [
+    "nix",
+    "build",
+    "--offline",
+    "--option",
+    "build-dir",
+    "/var/tmp/klem-degree-expectation-nix-build",
+    "--cores",
+    "4",
+    "--max-jobs",
+    "2",
+    "--no-link",
+    "--print-out-paths",
+    "-L",
+    ".#packages.x86_64-linux.web"
+  ],
+  "package_sha256": "ba42058a9d427610017de1d4a84bfa7b9e0fbf2251ca6e3014f5cd3c9ea78b3c",
+  "outputs": [
+    "/nix/store/kp047y8p2fnjy9jrfbfyxi4c7xib3a4c-klem-web"
+  ],
+  "log_sha256": "50f206f11f13e75383bb7dea24fa59447bc81e18c74167f3f716724fbbd32a21",
+  "scope": "Actual web launcher derivation; runtime proof checks its exec line against the independent passed main/server and asset outputs."
+}

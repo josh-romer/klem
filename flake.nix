@@ -419,11 +419,28 @@
                 ./tools/test_declarative_contrast_preservation.py
                 ./tools/declarative_contrast_replay.py
                 ./tools/declarative_contrast_adapter_replay.py
+                ./tools/declarative_contrast_sources.py
+                ./tools/test_declarative_contrast_sources.py
                 ./tools/declarative_contrast_runtime.py
                 ./tools/test_declarative_contrast_runtime.py
                 ./tools/declarative_contrast_performance.py
                 ./tools/capture_declarative_contrast_performance.py
                 ./tools/test_declarative_contrast_performance.py
+                ./tools/ostensible_reason_audit.py
+                ./tools/test_ostensible_reason_audit.py
+                ./tools/ostensible_reason_preservation.py
+                ./tools/test_ostensible_reason_preservation.py
+                ./tools/ostensible_reason_replay.py
+                ./tools/ostensible_reason_adapter_replay.py
+                ./tools/ostensible_reason_runtime.py
+                ./tools/test_ostensible_reason_runtime.py
+                ./tools/capture_ostensible_reason_modes.py
+                ./tools/capture_ostensible_reason_packages.py
+                ./tools/capture_ostensible_reason_web.py
+                ./tools/capture_ostensible_reason_performance.py
+                ./tools/ostensible_reason_performance.py
+                ./tools/test_ostensible_reason_performance.py
+                ./web/tests/ostensible-reason.mjs
                 ./web/tests/declarative-contrast.mjs
                 ./web/tests/literary-ri-prefinal-model.mjs
                 ./web/tests/literary-ri-prefinal.mjs
@@ -803,10 +820,20 @@
             python -m unittest discover -s tools -p 'test_declarative_contrast_audit.py'
             python tools/declarative_contrast_preservation.py
             python -m unittest discover -s tools -p 'test_declarative_contrast_preservation.py'
+            python tools/declarative_contrast_sources.py --proof docs/declarative-contrast-historical-sources.json.gz
+            python -m unittest discover -s tools -p 'test_declarative_contrast_sources.py'
             python tools/declarative_contrast_runtime.py
             python -m unittest discover -s tools -p 'test_declarative_contrast_runtime.py'
             python -m unittest discover -s tools -p 'test_declarative_contrast_performance.py'
             python tools/declarative_contrast_performance.py --verify
+            python tools/ostensible_reason_audit.py --preparation docs/ostensible-reason-source-owner-preparation.json.gz --replay docs/ostensible-reason-prototype-source-replay.json.gz --output "$TMPDIR/ostensible-source-audit.json.gz"
+            python -m unittest discover -s tools -p 'test_ostensible_reason_audit.py'
+            python tools/ostensible_reason_preservation.py --output "$TMPDIR/ostensible-preservation-audit.json"
+            python -m unittest discover -s tools -p 'test_ostensible_reason_preservation.py'
+            python tools/ostensible_reason_runtime.py --package
+            python -m unittest discover -s tools -p 'test_ostensible_reason_runtime.py'
+            python -m unittest discover -s tools -p 'test_ostensible_reason_performance.py'
+            python tools/ostensible_reason_performance.py --verify
             python -m unittest discover -s tools -p 'test_reported_dana_inputs.py'
             python tools/reported_dana_native.py
             python tools/reported_dana_corpora.py

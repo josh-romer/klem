@@ -2711,26 +2711,159 @@ review remains open under the completion review below.
   and independent Korean review remain open under COV-013/COV-017 and the
   completion review; this finite source closure does not certify those tasks.
 
-- [ ] **COV-017ci — Original ostensible-reason -답시고 family.**
-  **Original-source gap verified; implementation pending.** Complete primary
-  entries 80316–80318 retain all three senses and twelve original groups,
-  including dialogue replies. The unchanged main CLI has no whole-ending
-  interpretation for any of the twelve original target occurrences in any
-  of six NFC/NFD raw, headword or compatible modes. The
-  [complete baseline capture](ostensible-reason-source-discovery.json.gz)
-  preserves all six 233-frame streams, seventy-two target/mode observations,
-  exact original spans, Native entries and source attachment notes. Existing
-  identity and other speculative paths are retained as baseline observations;
-  their existence does not cover the missing endings.
-  Implement adjective/prefinal -답시고 and the source-listed present verb
-  allomorphs -ㄴ답시고/-는답시고, preserving earlier candidates and immediate
-  predicate/auxiliary ownership. Add individual source and boundary judgments,
-  dictionary homonym assessments, and ordered viewer labels with complete
-  source links. Review all source groups, phonological/prefinal boundaries,
-  import and normalization/filtering modes, historical and held-out corpus
-  preservation, actual main/package CLI and browser outputs, and the flake
-  gate before closing this item. Contextual speaker attitude, candidate
-  precision and independent Korean review remain separate requirements.
+- [x] **COV-017ci — Original ostensible-reason -답시고 family.**
+  **Complete within the finite source, boundary and mode scope below.**
+  Complete primary entries 80316–80318 preserve all three senses and twelve
+  original groups, including every dialogue reply. The [unchanged baseline](ostensible-reason-source-discovery.json.gz)
+  records all six 233-frame streams and seventy-two target/mode observations
+  before any whole-ending interpretation existed. [Complete source replay](ostensible-reason-prototype-source-replay.json.gz)
+  now recovers all twelve occurrences in NFC/NFD raw, headword and compatible
+  modes while retaining every earlier candidate/order, assessment, entry and
+  UTF-8 span. Plain adjective/prefinal -답시고 and present verb -ㄴ답시고/-는답시고
+  have their own ordered connective readings and all three exact source links.
+  Present forms distinguish vowel/ㄹ and other consonant stems, retain 시,
+  and reject the tested wrong full/short, past/modal and ㅂ-restoration paths.
+  Adjectival and verbal Native homonyms are assessed independently; joined
+  auxiliaries keep their own connector and class without borrowing the left
+  owner's class. Bare stative/copular, negative and other unreviewed extensions
+  stay Unknown and filter eligible. The raw 먹답시고 → 먹다 hypothesis survives
+  raw/headword modes; compatible filtering rejects its source-backed verbal
+  attachment conflict. No global lemma ban or contextual attitude is selected.
+
+  [Ten Rust regressions](../tests/ostensible_reason.rs) cover all originals,
+  complete production imports, boundaries, Unicode, ordered diagrams and
+  per-entry/mode behavior. [Twenty-six individual cases](../tests/fixtures/ostensible-reason-validity.json)
+  append 21 required and five path-specific forbidden judgments to the shared
+  ledger without changing its older 34,755 cases. [Twelve conditional cases](../tests/fixtures/ostensible-reason-mode-scope.json)
+  separately track Native owner/mode presence and entry status; Unknown and
+  dictionary-free hypotheses are not certified as structural correctness.
+  [Portable source auditing](../tools/ostensible_reason_audit.py) derives
+  72 source-required observations and leaves 86 other original-source additions
+  unjudged. Nineteen source/ledger corruption controls pass. Complete original
+  LMF/Native fields and English projections are preserved for all
+  [91 finite owners](ostensible-reason-boundary-owner-preparation.json.gz),
+  including every same-head homonym and all 29 original/19 conditional matched
+  owners. Native projection and source parity select no dictionary sense.
+
+  [All eight broad streams](ostensible-reason-prototype-broad.json.gz) preserve
+  1,128,312 actual frames and spacing metadata byte for byte. [Held-out capture](ostensible-reason-prototype-corpora.json.gz)
+  preserves all 32,096 word analyses and every one of 66,570 original annotated
+  rows; no word or gold outcome changes. [Historical replay](ostensible-reason-prototype-legacy-history.json.gz)
+  preserves 21,341 surfaces from 49 immutable fixture cohorts, including the
+  new contrast cases. Eleven [preservation controls](../tools/test_ostensible_reason_preservation.py)
+  independently verify complete conservation. These unchanged cohorts establish
+  regression preservation rather than annotated precision for this new family.
+
+  [Actual main checks](ostensible-reason-main-checks.json) pass 1,043 Rust
+  tests across 219 batches, one ignored; the downloaded-corpus regression passes
+  separately. Clippy, formatting and SolidJS/TypeScript build pass. Actual main
+  CLI outputs match every source frame, all 1,128,312 broad frames and all
+  32,096 held-out words. All four current Rust adapters reproduce every original
+  gold row and summary against the actual earlier adapter capture, independently
+  bound to unchanged current word analyses. Browser checks pass 42 source and
+  22 conditional ordered diagrams, twelve exact exports, all 91 complete Native
+  endpoints, three source panes, 228 mode judgments and both full 233-frame
+  original API responses; desktop/mobile images were inspected. A separate
+  [actual before/after capture](ostensible-reason-main-mode-preservation.json.gz)
+  preserves all 138 conditional frames and gives stable per-path IDs to all
+  120 new unjudged observations. Twenty-six runtime corruption controls pass.
+  The owned browser server was stopped after verification. [Historical package source proof](declarative-contrast-historical-sources.json.gz)
+  independently preserves all 915 previously tested contrast package inputs
+  and all three actual source archives; the old package evidence remains intact.
+
+  [Actual Nix package checks](ostensible-reason-packaged-checks.json) pass
+  the independent Rust/CLI/server, assets, adapter and web launcher. The release
+  log preserves all 1,043 passing tests across 219 batches, one ignored, and
+  all 924 compile/frontend inputs remain unchanged. Packaged CLI and adapter
+  repeat the complete source/broad/corpus checks. The packaged browser repeats
+  all 64 diagrams, twelve exports, 91 Native endpoints and 228 mode judgments;
+  desktop/mobile images were inspected. The launcher serves the exact packaged
+  index, JS and CSS and repeats both original API responses; its owned server
+  was stopped. Forty-one main/package runtime corruption controls pass. The
+  initial no-space link failure and safe ignored-cache cleanup are retained
+  separately; the successful retry executes the full release tests.
+
+  [Release measurements](ostensible-reason-performance.json) preserve all 80
+  interleaved samples across eight novel workloads and all six complete
+  cached/uncached output comparisons (179,112 frames per stream). Median
+  changes range from about -0.3% to +2.1%; this finite run does not establish
+  statistical equivalence or causality. Twenty timing/cache controls pass.
+
+  The [complete Nix gate](ostensible-reason-combined-nix.json) passes all four
+  current Rust/assets/adapter/inventory checks with all 2,732 tracked inputs,
+  HEAD and staged diff unchanged. The earlier read-only audit-output failure
+  is retained separately; both audit destinations now use the writable build
+  temporary directory. Queue verification and nine corruption controls pass.
+  Broader attachment composition, candidate precision, contextual speaker
+  attitude and independent Korean review remain open.
+
+- [ ] **COV-017cj — Original literary -고 question family.**
+  **Prototype validated; production integration and release gates pending.**
+  [Four complete original entries](literary-question-go-source-discovery.json.gz)
+  (73889, 73892, 73898, 73901) preserve all eight senses, 39 original groups,
+  dialogue replies and usage notes. The unchanged baseline has six 535-frame
+  NFC/NFD raw/headword/compatible streams and 234 original target observations.
+  [Actual source replay](literary-question-go-prototype-source-replay.json.gz)
+  recovers every original target while preserving prior candidate order, Native
+  assessments, entries and UTF-8 spans. Canonical 은고 (ㄴ고/은고), 는고 and 던고
+  retain separate source links and the common “Literary question” label.
+  The -던고 entry's restrictive adjective note conflicts with its own verbal
+  and copular examples; both are preserved, and general Native attachment stays
+  Unknown. No context, register or dictionary sense is selected.
+
+  [The current guarded proposal](literary-question-go-current-integration-proposal.json.gz)
+  contains 25 changed/new files. [Actual complete Rust validation](literary-question-go-prototype-full-rust-retry2.json)
+  passes 1,052 tests across 222 batches, zero failures, one ignored, with all
+  922 inputs unchanged. Nine focused source/Native/boundary/spacing tests pass;
+  Clippy with denied warnings and formatting pass. The initial six full-suite
+  attribution failures remain recorded. Five privately copied historical tests
+  now route every new question path to its own source record and exact earlier
+  parent; old fixtures and judgments were retained.
+
+  [Historical replay](literary-question-go-prototype-legacy-history.json.gz)
+  preserves 21,353 surfaces from 51 immutable cohorts. Twelve additions across
+  three words have stable IDs and remain individually unjudged. Each has an
+  [exact earlier adnominal parent](literary-question-go-history-parents.json.gz);
+  all three omitted-copula paths also have actual explicit question parents.
+  Twelve corruption controls pass. [Complete novel/candidate replay](literary-question-go-prototype-broad.json.gz)
+  preserves every earlier word path and spacing alternative across 1,128,312
+  frames. It records 999 new word observations and six new spacing alternatives,
+  all unjudged with original lines and UTF-8 boundaries. The first exact-spacing
+  equality failure and its diagnostic are retained. [All original held-out rows](literary-question-go-prototype-corpora.json.gz)
+  retain gold recovery: 32,096 surfaces and 66,570 annotated rows. Three corpus
+  words gain twelve unjudged paths. An independent audit and fourteen mutation
+  controls verify broad/corpus conservation. These gains do not prove precision.
+
+  [Twenty-three authored boundary cases](literary-question-go-boundary-preflight.json.gz)
+  add nineteen required paths and four specific wrong-allomorph/spelling
+  exclusions. [Actual six-mode replay](literary-question-go-boundary-modes-retry2.json.gz)
+  preserves 270 frames, verifies 114 target presences and 24 exclusions, and
+  records 448 additional unjudged observations; eight corruption controls pass.
+  [Complete original LMF/Native preparation](literary-question-go-boundary-matched-owner-preparation.json.gz)
+  retains all 136 named/matched owners and every same-head homonym, including
+  all 42 boundary-matched owners. Earlier 115/128-entry preparations remain
+  exact. [The actual current CLI importer](literary-question-go-native136-cli.json.gz)
+  reproduces all 136 complete English-projected entries and all eighty head
+  lookups; an independent audit and eight mutation controls pass. Original
+  full-export hashes and every original example/annotation remain preserved.
+
+  [Current Rust adapter execution](literary-question-go-current-adapter.json.gz)
+  verifies all 66,570 original gold rows and independently derived candidate
+  summaries; seven corruption controls pass. [Current browser validation](literary-question-go-current-browser-runtime.json)
+  binds the completed 922-input Rust snapshot and serves the exact built assets.
+  It passes 116 source/boundary diagrams, thirty conditional diagrams, twelve
+  exact exports, all 136 complete Native endpoints, four source panes, 372
+  source/boundary filter observations, 96 conditional observations and both
+  complete 535-frame original APIs. Eleven runtime controls pass; desktop and
+  mobile images were inspected, and the owned server was stopped.
+
+  [The append-only ledger proposal](literary-question-go-append-only-ledger-proposal.json.gz)
+  retains all earlier 34,781 cases and prepares 62 additions (58 required/four
+  forbidden). The original 39 occurrences and authored 23 boundaries remain
+  separate from conditional/broader unjudged alternatives. Remaining: guarded
+  production integration, global ledger/counter updates, current main CLI and
+  browser/adapter replay, Nix packaging/performance gates, broader composition,
+  precision and independent contextual/register review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -6891,7 +7024,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 564 currently emitted canonical grammar forms.** The initial catalog
+  for all 566 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -63,6 +63,8 @@ pub enum AttachmentRule {
     BareAdjectivalReport,
     /// KRDict 80321/80322: plain bare -다마는/-다만 follows adjectives.
     BareAdjectivalContrast,
+    /// KRDict 80318: plain bare -답시고 follows adjectives.
+    BareAdjectivalOstensibleReason,
     BareVerbalQuestion,
     /// KRDict 73878/73888: bare adjectival/copular -ㄴ감/-은감.
     BareRefutingAdjective,
@@ -2271,13 +2273,13 @@ impl Annotation {
                     if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
                         && let Some(i) = ending
                         && matches!(analysis.morphemes[i].form.as_str(),
-                            "다마는" | "다만" | "는다마는" | "는다만")
+                            "다마는" | "다만" | "는다마는" | "는다만" | "답시고" | "는답시고")
                     {
                         // Assess each entry of the immediate owner separately.
                         // A verbal homonym cannot license an adjectival entry,
                         // and an earlier owner's prefinal cannot license this ending.
                         let form = analysis.morphemes[i].form.as_str();
-                        let present = matches!(form, "는다마는" | "는다만");
+                        let present = matches!(form, "는다마는" | "는다만" | "는답시고");
                         let owner = if derived_adjective {
                             Some(PredicateClass::Adjective)
                         } else if unclassified_derivation {
@@ -2300,14 +2302,15 @@ impl Annotation {
                         { Some(AttachmentRule::PresentDeclarativeVerb) }
                         else if !present && bare && matches!(owner, Some(PredicateClass::Verb))
                             && !matches!(lemma.text.as_str(), "있다" | "계시다") && !negative
-                        { Some(AttachmentRule::BareAdjectivalContrast) }
+                        { Some(if form == "답시고" { AttachmentRule::BareAdjectivalOstensibleReason } else { AttachmentRule::BareAdjectivalContrast }) }
                         else { None };
                         if let Some(rule) = conflict {
                             status = Compatibility::Incompatible;
                             conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
                         } else if status == Compatibility::Compatible {
-                            // The six sources explicitly list 시, past and modal
-                            // for plain -다; present -ㄴ다/-는다 permits 시 only.
+                            // Reviewed contrast and ostensible-reason sources list
+                            // 시, past and modal for plain forms; present verb
+                            // allomorphs permit 시 only.
                             // Copular, negative, bundled-marker and postfinal
                             // extensions still need their own source review.
                             let unlisted = morphs.iter().any(|c| matches!(c, Component::Morpheme(j)

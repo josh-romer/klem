@@ -1,0 +1,589 @@
+{
+  "schema_version": 1,
+  "scope": "Twelve individually tracked Native owner/mode attachment cases. Unknown extensions and raw hypotheses receive no global structural or contextual certification.",
+  "cases": [
+    {
+      "id": "ostensible-reason-mode-plain-adjective-homonym",
+      "judgment_id": "native-owner-license",
+      "surface": "멀답시고",
+      "expected": {
+        "lemmas": [
+          "멀다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:54855",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 0,
+          "id": "krdict:26833",
+          "status": "compatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "source-backed Native attachment",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-present-verb-homonym",
+      "judgment_id": "native-owner-license",
+      "surface": "먼답시고",
+      "expected": {
+        "lemmas": [
+          "멀다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "는답시고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:54855",
+          "status": "compatible"
+        },
+        {
+          "lemma": 0,
+          "id": "krdict:26833",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "source-backed Native attachment",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-verbal-auxiliary",
+      "judgment_id": "native-owner-license",
+      "surface": "좋게한답시고",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "게",
+          "는답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62888",
+          "status": "compatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:62899",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:73277",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "source-backed Native attachment",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-noun-particle-adjectival-auxiliary",
+      "judgment_id": "native-owner-license",
+      "surface": "먹기는하답시고",
+      "expected": {
+        "lemmas": [
+          "먹다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "기",
+          "는",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "particle",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62888",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:62899",
+          "status": "compatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:73277",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "source-backed Native attachment",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-adjectival-auxiliary",
+      "judgment_id": "native-owner-license",
+      "surface": "좋기는하답시고",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "기는",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62888",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:62899",
+          "status": "compatible"
+        },
+        {
+          "lemma": 1,
+          "id": "krdict:73277",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "source-backed Native attachment",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-stative-unknown",
+      "judgment_id": "native-owner-license",
+      "surface": "먹고있답시고",
+      "expected": {
+        "lemmas": [
+          "먹다",
+          "있다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "고",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:62595",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "Unreviewed extension stays Unknown and eligible; not structurally or contextually certified.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-negative-adjective-unknown",
+      "judgment_id": "native-owner-license",
+      "surface": "좋지는않답시고",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "않다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "지",
+          "는",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "particle",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:71583",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "Unreviewed extension stays Unknown and eligible; not structurally or contextually certified.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-negative-verb-unknown",
+      "judgment_id": "native-owner-license",
+      "surface": "먹지는않답시고",
+      "expected": {
+        "lemmas": [
+          "먹다",
+          "않다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "지",
+          "는",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "particle",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:71581",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "Unreviewed extension stays Unknown and eligible; not structurally or contextually certified.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-bare-copula-unknown",
+      "judgment_id": "native-owner-license",
+      "surface": "학생이답시고",
+      "expected": {
+        "lemmas": [
+          "학생",
+          "이다"
+        ],
+        "lemma_kinds": [
+          "nominal",
+          "copula"
+        ],
+        "morphemes": [
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:86232",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "Unreviewed extension stays Unknown and eligible; not structurally or contextually certified.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-past-copula-unknown",
+      "judgment_id": "native-owner-license",
+      "surface": "학생이었답시고",
+      "expected": {
+        "lemmas": [
+          "학생",
+          "이다"
+        ],
+        "lemma_kinds": [
+          "nominal",
+          "copula"
+        ],
+        "morphemes": [
+          "었",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "prefinal",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 1,
+          "id": "krdict:86232",
+          "status": "unknown"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": true
+      },
+      "scope": "Unreviewed extension stays Unknown and eligible; not structurally or contextually certified.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-bare-verb-conflict",
+      "judgment_id": "native-owner-license",
+      "surface": "먹답시고",
+      "expected": {
+        "lemmas": [
+          "먹다"
+        ],
+        "lemma_kinds": [
+          "predicate"
+        ],
+        "morphemes": [
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [
+        {
+          "lemma": 0,
+          "id": "krdict:15983",
+          "status": "incompatible"
+        },
+        {
+          "lemma": 0,
+          "id": "krdict:58272",
+          "status": "incompatible"
+        }
+      ],
+      "expected_presence": {
+        "raw": true,
+        "headword": true,
+        "compatible": false
+      },
+      "scope": "Raw/headword hypothesis remains unjudged; Native verbal entries conflict with the source-owned bare adjective license.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "ostensible-reason-mode-left-class-cannot-license-right-owner",
+      "judgment_id": "native-owner-license",
+      "surface": "좋게하답시고",
+      "expected": {
+        "lemmas": [
+          "좋다",
+          "하다"
+        ],
+        "lemma_kinds": [
+          "predicate",
+          "auxiliary"
+        ],
+        "morphemes": [
+          "게",
+          "답시고"
+        ],
+        "morpheme_kinds": [
+          "ending",
+          "ending"
+        ],
+        "required_rules": [
+          "ending.ostensible_reason"
+        ]
+      },
+      "source_entries": [
+        "krdict:80316",
+        "krdict:80317",
+        "krdict:80318"
+      ],
+      "expected_entry_statuses": [],
+      "expected_presence": {
+        "raw": false,
+        "headword": false,
+        "compatible": false
+      },
+      "scope": "Pure right-owner path boundary: left adjective cannot lend its class to a known verbal auxiliary.",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ]
+}

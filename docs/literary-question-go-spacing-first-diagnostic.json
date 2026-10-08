@@ -1,0 +1,583 @@
+{
+  "schema_version": 1,
+  "scope": "Partial diagnostic streams stopped after frame21949; not a full broad-stream pass.",
+  "record": 21949,
+  "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+  "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+  "commands": [
+    [
+      "/tmp/klem-ostensible-reason-main-klem",
+      "text",
+      "/home/josh/projects/klem/data/books/mujeong.txt",
+      "--dictionary",
+      "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+      "--dict-only",
+      "--suggest-spacing"
+    ],
+    [
+      "/tmp/klem-literary-question-go-prototype-cli",
+      "text",
+      "/home/josh/projects/klem/data/books/mujeong.txt",
+      "--dictionary",
+      "/home/josh/projects/klem/data/dictionaries/krdict/krdict.db",
+      "--dict-only",
+      "--suggest-spacing"
+    ]
+  ],
+  "controlled_stop_exit_codes": [
+    -15,
+    -15
+  ],
+  "before": {
+    "surface": "돌아갔는고",
+    "span": {
+      "start": 96441,
+      "end": 96456
+    },
+    "kind": "word",
+    "analysis": {
+      "normalized": "돌아갔는고",
+      "analyses": []
+    },
+    "dictionary": {
+      "source": "krdict",
+      "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+      "lemmas": [],
+      "readings": []
+    },
+    "spacing": {
+      "rule": "spacing.nominal_case_predicate",
+      "alternatives": [],
+      "complete": true,
+      "limited_by": [],
+      "segment_probes": 8,
+      "limits": {
+        "token_chars": 64,
+        "segment_probes": 256,
+        "alternatives": 16
+      }
+    }
+  },
+  "after": {
+    "surface": "돌아갔는고",
+    "span": {
+      "start": 96441,
+      "end": 96456
+    },
+    "kind": "word",
+    "analysis": {
+      "normalized": "돌아갔는고",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "돋다",
+              "kind": "predicate"
+            },
+            {
+              "text": "가다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.literary_question_go",
+            "irregular.digeut",
+            "prefinal.past"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "digeut_irregular"
+              }
+            ]
+          ]
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌다",
+              "kind": "predicate"
+            },
+            {
+              "text": "가다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.literary_question_go",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌아가다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.literary_question_go",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    "dictionary": {
+      "source": "krdict",
+      "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+      "lemmas": [
+        {
+          "lemma": {
+            "text": "가다",
+            "kind": "auxiliary"
+          },
+          "entries": [
+            {
+              "id": "krdict:27500",
+              "headword": "가다",
+              "homonym": "1",
+              "pos": "동사",
+              "pos_compatibility": "incompatible"
+            },
+            {
+              "id": "krdict:28764",
+              "headword": "가다",
+              "homonym": "2",
+              "pos": "보조 동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        },
+        {
+          "lemma": {
+            "text": "돋다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:48604",
+              "headword": "돋다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible",
+              "digeut": {
+                "regular": [
+                  "돋으니"
+                ],
+                "irregular": []
+              }
+            }
+          ]
+        },
+        {
+          "lemma": {
+            "text": "돌다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:75006",
+              "headword": "돌다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        },
+        {
+          "lemma": {
+            "text": "돌아가다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:74103",
+              "headword": "돌아가다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "readings": [
+        {
+          "status": "incompatible",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "incompatible",
+              "entries": [
+                {
+                  "id": "krdict:48604",
+                  "status": "incompatible",
+                  "conflicts": [
+                    {
+                      "rule": "lexical_spelling",
+                      "morpheme_index": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "lemma_index": 1,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:27500",
+                  "status": "incompatible",
+                  "conflicts": [
+                    {
+                      "rule": "lexical_role",
+                      "morpheme_index": null
+                    }
+                  ]
+                },
+                {
+                  "id": "krdict:28764",
+                  "status": "compatible",
+                  "conflicts": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "status": "compatible",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:75006",
+                  "status": "compatible",
+                  "conflicts": []
+                }
+              ]
+            },
+            {
+              "lemma_index": 1,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:27500",
+                  "status": "incompatible",
+                  "conflicts": [
+                    {
+                      "rule": "lexical_role",
+                      "morpheme_index": null
+                    }
+                  ]
+                },
+                {
+                  "id": "krdict:28764",
+                  "status": "compatible",
+                  "conflicts": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "status": "compatible",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:74103",
+                  "status": "compatible",
+                  "conflicts": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "spacing": {
+      "rule": "spacing.nominal_case_predicate",
+      "alternatives": [
+        {
+          "spaced": "돌아 갔는고",
+          "inserted_at": [
+            96447
+          ],
+          "records": [
+            {
+              "surface": "돌아",
+              "span": {
+                "start": 96441,
+                "end": 96447
+              },
+              "kind": "word",
+              "analysis": {
+                "normalized": "돌아",
+                "analyses": [
+                  {
+                    "lemmas": [
+                      {
+                        "text": "돌",
+                        "kind": "nominal"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "아",
+                        "kind": "particle"
+                      }
+                    ],
+                    "rules": [
+                      "particle"
+                    ],
+                    "unchanged": false
+                  }
+                ]
+              },
+              "dictionary": {
+                "source": "krdict",
+                "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+                "lemmas": [
+                  {
+                    "lemma": {
+                      "text": "돌",
+                      "kind": "nominal"
+                    },
+                    "entries": [
+                      {
+                        "id": "krdict:48615",
+                        "headword": "돌",
+                        "homonym": "1",
+                        "pos": "명사",
+                        "pos_compatibility": "compatible"
+                      },
+                      {
+                        "id": "krdict:48616",
+                        "headword": "돌",
+                        "homonym": "3",
+                        "pos": "의존 명사",
+                        "pos_compatibility": "compatible"
+                      },
+                      {
+                        "id": "krdict:62589",
+                        "headword": "돌",
+                        "homonym": "2",
+                        "pos": "명사",
+                        "pos_compatibility": "compatible"
+                      }
+                    ]
+                  }
+                ],
+                "readings": [
+                  {
+                    "status": "compatible",
+                    "lemmas": [
+                      {
+                        "lemma_index": 0,
+                        "status": "compatible",
+                        "entries": [
+                          {
+                            "id": "krdict:48615",
+                            "status": "compatible",
+                            "conflicts": []
+                          },
+                          {
+                            "id": "krdict:48616",
+                            "status": "compatible",
+                            "conflicts": []
+                          },
+                          {
+                            "id": "krdict:62589",
+                            "status": "compatible",
+                            "conflicts": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "breakdowns": [
+                [
+                  {
+                    "lemma": 0
+                  },
+                  {
+                    "morpheme": 0
+                  }
+                ]
+              ]
+            },
+            {
+              "surface": "갔는고",
+              "span": {
+                "start": 96447,
+                "end": 96456
+              },
+              "kind": "word",
+              "analysis": {
+                "normalized": "갔는고",
+                "analyses": [
+                  {
+                    "lemmas": [
+                      {
+                        "text": "가다",
+                        "kind": "predicate"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "었",
+                        "kind": "prefinal"
+                      },
+                      {
+                        "form": "는고",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "boundary.regular",
+                      "contraction.identical",
+                      "ending",
+                      "ending.literary_question_go",
+                      "prefinal.past"
+                    ],
+                    "unchanged": false
+                  }
+                ]
+              },
+              "dictionary": {
+                "source": "krdict",
+                "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+                "lemmas": [
+                  {
+                    "lemma": {
+                      "text": "가다",
+                      "kind": "predicate"
+                    },
+                    "entries": [
+                      {
+                        "id": "krdict:27500",
+                        "headword": "가다",
+                        "homonym": "1",
+                        "pos": "동사",
+                        "pos_compatibility": "compatible"
+                      },
+                      {
+                        "id": "krdict:28764",
+                        "headword": "가다",
+                        "homonym": "2",
+                        "pos": "보조 동사",
+                        "pos_compatibility": "incompatible"
+                      }
+                    ]
+                  }
+                ],
+                "readings": [
+                  {
+                    "status": "compatible",
+                    "lemmas": [
+                      {
+                        "lemma_index": 0,
+                        "status": "compatible",
+                        "entries": [
+                          {
+                            "id": "krdict:27500",
+                            "status": "compatible",
+                            "conflicts": []
+                          },
+                          {
+                            "id": "krdict:28764",
+                            "status": "unknown",
+                            "conflicts": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "breakdowns": [
+                [
+                  {
+                    "lemma": 0
+                  },
+                  {
+                    "morpheme": 0
+                  },
+                  {
+                    "morpheme": 1
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "complete": true,
+      "limited_by": [],
+      "segment_probes": 8,
+      "limits": {
+        "token_chars": 64,
+        "segment_probes": 256,
+        "alternatives": 16
+      }
+    }
+  }
+}

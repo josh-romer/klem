@@ -85,3 +85,10 @@ streams (1,128,312 frames), and complete corpus/history word cohorts. All 29
 controls pass, including exact older ledgers, reordered DAO cases, changed source
 links and coordinated fixture/ledger changes. These checks repair preservation
 validation; they do not change the lemmatizer's outputs.
+
+The next gate stopped at queue verification: the validation note was extended
+after its queue digest was generated. Exact rebuilding confirms the sole
+difference is `docs/declarative-dao-validation.md` in `evidence_sha256`. The
+actual receipt, producer and complete log are preserved as
+`declarative-dao-combined-nix-queue-failure.*.gz`; committed inputs, HEAD and
+index remained unchanged. The queue is regenerated after this evidence update.

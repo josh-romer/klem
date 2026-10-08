@@ -2256,6 +2256,20 @@ impl Annotation {
                                 else { !matches!(*p, "시" | "었" | "겠") })
                         { status = Compatibility::Unknown; }
                     }
+                    if status == Compatibility::Compatible
+                        && let Some(i) = ending
+                        && analysis.morphemes[i].form == "을꼬"
+                        && (analysis.rules.iter().any(|r| r == "copula.omitted_kko")
+                            || morphs.iter().any(|c| matches!(c,
+                                Component::Morpheme(j)
+                                    if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                        && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었"))))
+                    {
+                        // Both native senses are retained. Their union lists
+                        // predicates/copula and honorific/past markers; it does
+                        // not settle omission or other marker combinations.
+                        status = Compatibility::Unknown;
+                    }
                     if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
                         && let Some(i) = ending
                         && matches!(analysis.morphemes[i].form.as_str(), "은고" | "는고" | "던고")

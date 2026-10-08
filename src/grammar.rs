@@ -1033,6 +1033,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("가요", "은가요", 4),
             ("까", "을까", 8),
             ("까요", "을까요", 8),
+            // KRDict 81026/81032 list copular literary questions.
+            ("꼬", "을꼬", 8),
             ("지", "을지", 8),
             ("니다", "습니다", 17),
             ("니까", "습니까", 17),
@@ -1308,6 +1310,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을걸", "걸", "을걸", 8),
             ("을까", "까", "을까", 8),
             ("을까요", "까요", "을까요", 8),
+            // KRDict 81026/81032: literary conjecture/intention questions.
+            ("을꼬", "꼬", "을꼬", 8),
             ("을게", "게", "을게", 8),
             ("을게요", "게요", "을게요", 8),
             ("을래", "래", "을래", 8),
@@ -2033,6 +2037,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
         }
+        "ending.literary_future_question_kko" => {
+            "Recover source-listed literary -(으)ㄹ꼬 questions with preserved stem, honorific and past boundaries; contextual conjecture/intention and register remain unselected."
+        }
         "ending.literary_question_go" => {
             "Recover the original literary -(으)ㄴ고, -는고 and -던고 question endings while preserving their stem boundaries; contextual register and sense remain unselected."
         }
@@ -2080,6 +2087,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
         "copula.omitted_ending" => {
             "Restore omitted copular 이 after a vowel-final nominal before a reviewed ending; the nominal is not a conjugated verb stem."
+        }
+        "copula.omitted_kko" => {
+            "Retain a vowel-final omitted-copula literary -(으)ㄹ꼬 hypothesis; this generalized boundary has Unknown dictionary attachment pending its own source review."
         }
         "copula.omitted_rya" => {
             "Retain a vowel-final nominal plus omitted 이다 before -랴 as a hypothesis from the copula license and general omission rule; Rya-specific attachment and register remain unreviewed, with dictionary compatibility Unknown."

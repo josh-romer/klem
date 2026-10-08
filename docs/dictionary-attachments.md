@@ -1153,3 +1153,20 @@ uncertainty. These rules apply to the immediate owner and preserve earlier
 owners and known conflicts. Exact structural source regressions and complete
 native imports do not select a contextual sense or establish linguistic
 precision. Release validation remains tracked in the coverage checklist.
+
+### Literary future questions (COV-017ck)
+
+Whole canonical 을꼬 uses both complete original -ㄹ꼬/-을꼬 entries
+(81032/81026). Their retained sense notes/examples provide a predicate/copula
+and honorific/past union; the intention sense's narrower note and 좋을꼬
+example remain visible together. This union does not select a contextual sense.
+
+Only this ending's immediate owner and its own markers are assessed. Otherwise
+compatible omitted-copula paths or owners carrying unlisted markers such as
+겠/더 become Unknown. Existing incompatibilities win, and an auxiliary or
+lexical 되다 cannot borrow a different owner's POS or marker evidence.
+The exact 덥을꼬/덥다, 듣을꼬/듣다, 달을꼬/닫다 and 짓을꼬/짓다 spelling
+hypotheses remain raw/headword candidates; their Native spelling conflicts
+exclude them from compatible filtering. Absence of an example does not create
+a new conflict. Finite structural judgments and Native filter policies remain
+separate in the [coverage tracker](coverage-checklist.md).

@@ -4904,3 +4904,38 @@ retain all eighty samples and six complete cache streams; twenty controls pass.
 The [complete four-check Nix/inventory gate](literary-question-go-combined-nix.json)
 passes with all 2,950 tracked inputs, HEAD and staged diff unchanged. Broader composition,
 contextual/register interpretation and independent Korean review remain open.
+
+## Literary future question endings (COV-017ck)
+
+Canonical `을꼬` represents both -ㄹ꼬 and -을꼬. Vowel and ㄹ stems use
+attached ㄹ꼬; other consonants use full 을꼬, with the existing spelling
+recoveries retained. Predicate, explicit copula, compound and auxiliary
+owners preserve component order. Examples include `먹을꼬 → 먹다 + 을꼬`,
+`누구일꼬 → 누구 + 이다 + 을꼬`, and
+`돌아오셨을꼬 → 돌아오다 + 시 + 었 + 을꼬`.
+The rules are `ending.literary_future_question_kko` and, for the separately
+tracked omitted-copula hypothesis, `copula.omitted_kko`.
+
+The two original entries (81026 and 81032) retain all four senses and nineteen
+complete example groups. The intention sense's verb/past note accompanies
+좋을꼬; both remain visible. The source union supports the finite structural
+paths without choosing conjecture, intention, contextual register or a sense.
+The browser label “Literary future question” links both entries.
+
+Native assessment uses the ending's immediate owner. Honorific and past
+markers retain the source-listed policy; unlisted own modal/retrospective
+markers and omitted copulas remain Unknown. Existing role, class and spelling
+conflicts still take precedence. Four authored irregular-spelling paths remain
+in raw/headword output and are excluded only by compatible filtering. Five
+wrong structural allomorphs remain absent. Fixed ㅂ spelling on derived 답다
+and later auxiliary ownership are tracked separately.
+
+[Seventy-seven finite structures](../tests/fixtures/literary-future-kko-validity.json)
+append 66 required and eleven forbidden hypotheses to the global ledger;
+nine conditional/Native-only policies remain outside those raw judgments.
+Every broader addition retains its original sentence, stable ID and unjudged
+status. The [coverage tracker](coverage-checklist.md) distinguishes the complete
+isolated regression run, its label-fixture correction, integrated validation
+and remaining package/adapter/browser/cache/performance gates. General
+predicate/auxiliary missing-space splits, contextual correctness, precision
+and independent Korean review remain open.

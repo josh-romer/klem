@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "state": "integrated-finite-validation-passed",
+  "created_at": "2026-10-08T05:52:38.252422+00:00",
+  "main_compile_inputs": 947,
+  "prototype_full_rust_tests": {
+    "passed": 1054,
+    "failed": 1,
+    "ignored": 1,
+    "batches": 224
+  },
+  "prototype_label_fixture_failure_retained": true,
+  "main_focused_rust_tests": 14,
+  "main_rust_targets": [
+    "klem-web",
+    "literary_future_kko_native",
+    "literary_future_kko_boundaries",
+    "validity"
+  ],
+  "global_ledger": {
+    "preserved_cases": 34843,
+    "new_cases": 77,
+    "required_additions": 66,
+    "forbidden_additions": 11,
+    "cases": 34920,
+    "required": 30808,
+    "forbidden": 4128,
+    "conditional_or_native_only_cases_separate": 9
+  },
+  "main_cli": {
+    "finite_mode_runs": 22,
+    "finite_frames": 2338,
+    "broad_frames": 1128312,
+    "corpus_surfaces": 32096,
+    "historical_surfaces": 21388
+  },
+  "main_rust_adapter_rows": 66570,
+  "main_browser": {
+    "source_diagrams": 38,
+    "exports": 6,
+    "native_endpoints": 153,
+    "mode_checks": 504,
+    "source_api_frames": 506,
+    "source_panes": 2,
+    "desktop_mobile_inspected": true,
+    "server_stopped": true
+  },
+  "format_clippy_frontend_passed": true,
+  "new_nix_source_audits": {
+    "audits": 2,
+    "corruption_controls": 31,
+    "full_nix_gate": false
+  },
+  "proof_hashes": {
+    "literary-future-kko-main-adapter-build.log.gz": "f7b06f103461b70da32d67a937489fa97e7c9350828e129c47528b125d6935c3",
+    "literary-future-kko-main-adapter-producer.py.gz": "c9397d35ad748c00f2ae207d2c81f530c09f9eb76a0068667997a2642cf62a4e",
+    "literary-future-kko-main-adapter.json.gz": "007161879066c8fc045eefbefbb5c4fa8a823a5c4a8f6cd31391b2378b3297a8",
+    "literary-future-kko-main-adapter.log.gz": "50ce235f0ca572c7d0162b3a89febbba01601e0ed71f4fa332dac33a3f019f84",
+    "literary-future-kko-main-browser-producer.mjs.gz": "73f0a33d8a914bf06a8a3562b29d76f195c223dadb3a508ad336afa13ecf24a9",
+    "literary-future-kko-main-browser-runtime-producer.py.gz": "4c22a63b89caaae66a7b087e18d8a522e37c174ef0116792d011e7ab31896780",
+    "literary-future-kko-main-browser-runtime.json.gz": "52090024e98a5caab40cfcc14f0e4da9d2c78b0d5e51c461b5ecb900ce6b5f96",
+    "literary-future-kko-main-browser-server.log.gz": "b34c7eb8a7a5d12f1b966f106e70e5a113ea995acc2c41d181aba924d7d82894",
+    "literary-future-kko-main-browser.json.gz": "1f61a683e312f9e5317a54073225651986038d8ea8e99bd7ddaec11aacddaa94",
+    "literary-future-kko-main-browser.log.gz": "75f4035fd569dcc4da4f68831f9cb241d93050bf190cbecb6b36a2543cd63692",
+    "literary-future-kko-main-cli-replay-producer.py.gz": "9521f2a30ccaa4c1f59aeaa895ae4940f44c8b620a17631d859048dd976c58ea",
+    "literary-future-kko-main-cli-replay.json.gz": "4f235a5ca685850434e513565513717adab8f307d1e6f8fb03e67ec88d02910a",
+    "literary-future-kko-main-cli-replay.log.gz": "40ceb4609bf68fd08ed9801f6832ba7202a2eef992ffabedf36e89d8bb7d53a9",
+    "literary-future-kko-main-clippy.log.gz": "702d6a2fb2abeb2048c05d6d2824aba814526d20fe89bd7467fb4360543f179f",
+    "literary-future-kko-main-desktop.png": "93abd69d6f9d987393e39801fbc0e4183eb852cfe36b2b453b64264a364f1bd8",
+    "literary-future-kko-main-focused.log.gz": "4f0feabfbff2dec76a85ccbc037f319abfc17f67a0648755806bdf91abf3fb1e",
+    "literary-future-kko-main-format.log.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "literary-future-kko-main-frontend.log.gz": "7cf0cc00c0ccb292df286d1d6e27c2c15c060eb411ea512d8802bd94f3b20626",
+    "literary-future-kko-main-integration-producer.py.gz": "7802cd0b366ae89c8a762204f58d2f738df40d32840bc2749aa4c50e0fc0d861",
+    "literary-future-kko-main-integration.json.gz": "3e7853ee333d0f3f629f3d4166193f0ab8c7fb8985716fc861b439283ba7cac8",
+    "literary-future-kko-main-mobile.png": "8e0b1c42c50d28b50134a4135da97464ea726f6bd8a99a4e6ba0e1478dda5b57"
+  },
+  "full_goal_complete": false,
+  "remaining": [
+    "Complete full integrated Rust/release checks",
+    "Nix/package CLI/adapter/browser/launcher and combined inventory gate",
+    "Quiet release performance and cache streaming checks",
+    "Broader spacing and owner distributions, precision, context/register/sense selection and independent Korean review"
+  ],
+  "scope": "Finite integrated structural validation and scoped source review only. The preceding complete945input suite had1054passes and one source-import-fixture failure; the actual corrected main label target and three source/boundary/global targets now pass14tests. This does not substitute targeted main tests for a full main/release suite."
+}

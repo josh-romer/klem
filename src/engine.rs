@@ -1805,6 +1805,12 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if matches!(ending.form, "다마는" | "다만" | "는다마는" | "는다만") {
                     p.rules.push("ending.declarative_contrast".into());
                 }
+                if ending.form == "을꼬" {
+                    p.rules.push("ending.literary_future_question_kko".into());
+                    if matches!(ending.boundary, Boundary::OmittedCopula(_)) {
+                        p.rules.push("copula.omitted_kko".into());
+                    }
+                }
                 if matches!(ending.form, "은고" | "는고" | "던고") {
                     p.rules.push("ending.literary_question_go".into());
                 }
@@ -3367,6 +3373,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을"
                 | "을걸"
                 | "을까"
+                | "을꼬"
                 | "을까요"
                 | "을지"
                 | "을는지"

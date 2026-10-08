@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 472 scoped
-  dispositions; 243 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 474 scoped
+  dispositions; 241 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2915,6 +2915,105 @@ review remains open under the completion review below.
   forbidden) are now in the global ledger, with updated counter assertions. The original 39 occurrences and authored 23 boundaries remain
   separate from conditional/broader unjudged alternatives. Remaining: broader
   composition, precision and independent contextual/register review.
+
+- [ ] **COV-017ck — Literary future -ㄹ꼬/-을꼬 questions.**
+  **Partial: finite source review and production integration pass targeted main
+  validation; full release and package gates remain pending.**
+  [Both original entries](literary-future-kko-source-discovery.json.gz)
+  (81026, 81032) retain all four senses, nineteen original groups, dialogue
+  replies and attachment notes. The tested main package lacks every whole
+  ending path across 114 source observations in six NFC/NFD/filter modes,
+  each containing 253 complete frames. The intention sense's verb/past note
+  accompanies 좋을꼬; both that note and the descriptive example remain intact.
+  The candidate combines the source entries without selecting a contextual sense.
+
+  [Nineteen individual proposed structures](literary-future-kko-original-preparation.json.gz)
+  have eighteen exact earlier -(으)ㄹ까 parents and their actual Native
+  assessments. [Source replay](literary-future-kko-prototype-source-replay.json.gz)
+  recovers all 114 observations while preserving all earlier paths, ordering,
+  dictionary assessments, entries and UTF-8 spans across 1,518 frames.
+  Its 328 additions are individually retained; other hypotheses remain unjudged.
+  [Complete source ownership](literary-future-kko-source-owner-preparation.json.gz)
+  preserves all 65 matched Native owners and every named-head homonym in a
+  72-entry LMF/SQLite/English projection. The earlier 52-entry preparation
+  remains immutable. [Independent source auditing](../tools/literary_future_kko_audit.py)
+  and sixteen audit tests pass offline and are wired into the Nix inventory check.
+
+  [Forty-seven authored boundary proposals](literary-future-kko-boundary-preflight.json.gz)
+  retain all 282 mode observations. [Explicit draft corrections](literary-future-kko-boundary-mode-proposal.json.gz)
+  separate 38 required hypotheses, five structural allomorph exclusions and
+  four dictionary spelling policies. Those four paths remain in raw/headword
+  output and are rejected by the compatible filter; their sixteen initial
+  raw-prohibition mismatches remain recorded. Unreviewed modal/retrospective
+  and omitted-copula paths remain Unknown. [Boundary ownership](literary-future-kko-boundary-owner-preparation.json.gz)
+  extends the complete Native projection to 119 entries. Three isolated Rust
+  tests verify the source structures, all Native fields/homonyms, Unicode,
+  immediate-owner statuses and separate mode policies.
+
+  [The guarded ten-file candidate](literary-future-kko-current-integration-proposal.json.gz)
+  retains all 945 compile/frontend inputs. Denied-warning Clippy and the
+  SolidJS/TypeScript build pass. [Actual isolated browser execution](literary-future-kko-prototype-browser-runtime.json.gz)
+  preserves all inputs and stops its owned server; [its capture](literary-future-kko-prototype-browser.json.gz)
+  verifies 38 source diagrams, six exact CLI exports, 119 complete Native
+  endpoints, both source panes, 396 source/boundary mode checks and both
+  253-frame original APIs. Desktop/mobile images were inspected. A
+  [readable follow-up](literary-future-kko-readable-runtime.json.gz) repeats
+  the full browser suite; a separate [viewport-only capture](literary-future-kko-viewport-runtime.json.gz)
+  verifies both widths fit and shows four selected source readings. Its
+  [desktop](literary-future-kko-viewport-desktop.png) and
+  [mobile](literary-future-kko-viewport-mobile.png) images were inspected.
+  The viewer label is now integrated into the main application.
+
+  [Complete broad streams](literary-future-kko-prototype-broad.json.gz)
+  conserve all earlier ordered candidates, Native assessments and spacing
+  alternatives across 1,128,312 frames. Nine mode-specific additions for the
+  novel's 찾을꼬 retain original sentences and stable IDs; all remain unjudged.
+  [All four held-out partitions](literary-future-kko-prototype-corpora.json.gz)
+  preserve all 32,096 surfaces and 66,570 original gold rows, with unchanged
+  recovery and candidate summaries. [Historical replay](literary-future-kko-prototype-legacy-history-retry1.json.gz)
+  preserves 55 fixture sources and 21,388 surfaces; no historical addition was
+  found. The earlier failed preparation referenced nonexistent fixture names;
+  its producer and error log remain visible. Independent broad/corpus auditing
+  and fifteen corruption controls pass and are wired into the inventory check.
+  [Twenty authored owner-extension proposals](literary-future-kko-owner-extension-preflight.json.gz)
+  pass 120 mode observations for 답다/하다 derivations and nested auxiliary
+  owners. [Their complete Native closure](literary-future-kko-owner-extension-preparation.json.gz)
+  preserves all earlier 119 entries and expands to 146 entries. Modal extensions
+  remain Unknown, and the lexical 되다 reading retains its distinct Native
+  assessment from the incompatible auxiliary-role hypothesis.
+  [Four spacing-template cases](literary-future-kko-spacing-preflight-retry1.json.gz)
+  preserve complete earlier outputs and original byte offsets in sixteen
+  observations. 돌아 갈꼬 and 살아 갈꼬 have nominal-case hypotheses; the
+  current nominal-case template omits 먹어 줄꼬 and 읽어 볼꼬. Those absent
+  splits are a broader implementation gap, not linguistic prohibitions. The
+  initial mistaken expectation and terminal error remain preserved.
+
+  [The complete isolated Rust run](literary-future-kko-prototype-full-rust-first.json.gz)
+  discovers every target: 1,054 tests pass, one label-source import test fails,
+  and one stress test remains ignored. All 945 inputs stay unchanged. The
+  failure is preserved; both complete ending entries now supplement the label
+  importer. [Guarded main integration](literary-future-kko-main-integration.json.gz)
+  retains 947 inputs and applies 77 append-only structures (66 required,
+  eleven forbidden), preserving all earlier 34,843 cases. Nine conditional or
+  Native-only cases stay outside raw judgments.
+
+  [Integrated validation](literary-future-kko-main-checks.json) passes all
+  fourteen actual main label/source/boundary/global Rust tests, format,
+  denied-warning Clippy and SolidJS/TypeScript builds. The actual main CLI
+  repeats all 22 finite modes, all 1,128,312 broad frames and all corpus/history
+  surfaces exactly; its Rust adapter verifies all 66,570 original rows. The
+  actual main browser passes 38 diagrams, six exact exports, 504 mode checks,
+  153 complete Native endpoints and both original APIs/source panes. Its
+  owned server stops and readable desktop/mobile images were inspected.
+  Both new offline audits and all 31 controls pass from the actual evaluated
+  Nix inventory source; this does not claim a complete inventory derivation.
+  The two entries now have explicitly scoped dispositions with release gaps.
+
+  Remaining: full integrated Rust/release validation; Nix/package
+  CLI/adapter/browser/launcher/cache/performance/combined-inventory gates;
+  broader derivation, owner distribution and predicate/auxiliary spacing.
+  Context, register, sense selection, precision and independent Korean review
+  remain open; finite prototype success does not close this item.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

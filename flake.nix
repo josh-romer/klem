@@ -441,6 +441,10 @@
                 ./tools/test_literary_question_go_performance.py
                 ./tools/literary_question_go_sources.py
                 ./tools/test_literary_question_go_sources.py
+                ./tools/literary_future_kko_audit.py
+                ./tools/test_literary_future_kko_audit.py
+                ./tools/literary_future_kko_preservation.py
+                ./tools/test_literary_future_kko_preservation.py
                 ./tools/literary_question_go_runtime.py
                 ./tools/test_literary_question_go_runtime.py
                 ./tools/literary_question_go_replay.py
@@ -863,6 +867,10 @@
             python -m unittest discover -s tools -p 'test_literary_question_go_performance.py'
             python tools/literary_question_go_sources.py --proof docs/literary-question-go-historical-sources.json.gz
             python -m unittest discover -s tools -p 'test_literary_question_go_sources.py'
+            python tools/literary_future_kko_audit.py
+            python -m unittest discover -s tools -p 'test_literary_future_kko_audit.py'
+            python tools/literary_future_kko_preservation.py
+            python -m unittest discover -s tools -p 'test_literary_future_kko_preservation.py'
             python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
             python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz

@@ -69,3 +69,19 @@ unchanged. The failed receipt, producer and complete log are retained as
 `declarative-dao-combined-nix-missing-tools.*.gz`; the flake fileset now includes
 those tools. This packaging correction leaves the tested Rust/frontend inputs
 unchanged. A complete retry is required.
+
+The complete retry reached the older geona ledger audit and failed because that
+audit only recognized the exact preceding 35,014-case ledger. The current
+35,050-case ledger includes the reviewed 36-case DAO suite. The actual failed
+receipt, producer and log are retained as
+`declarative-dao-combined-nix-ledger-failure.*.gz`; Root inputs, HEAD and index
+remained unchanged. The audit now recognizes that exact appended suite, binding
+its fixture bytes, case order, judgments and separate source identities. It
+still rejects arbitrary tails and coordinated changes to historical evidence.
+A further complete gate is required before claiming the inventory check passed.
+
+The repaired audit passes the actual retained 22 finite runs, eight complete
+streams (1,128,312 frames), and complete corpus/history word cohorts. All 29
+controls pass, including exact older ledgers, reordered DAO cases, changed source
+links and coordinated fixture/ledger changes. These checks repair preservation
+validation; they do not change the lemmatizer's outputs.

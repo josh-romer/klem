@@ -1,5 +1,6 @@
 """Corrupt actual retained runtime or scoped ledger evidence, never synthetic success."""
-import copy,os,unittest
+import copy,os,tempfile,unittest
+from unittest.mock import patch
 from pathlib import Path
 import literary_question_geona_runtime as audit
 class Controls(unittest.TestCase):
@@ -54,6 +55,25 @@ class Controls(unittest.TestCase):
   with self.assertRaisesRegex(AssertionError,'later judgments'):audit.verify_ledger(self.current,self.proposal,later)
  def test_coordinated_old_conditional_promotion_cannot_pass(self):
   c=copy.deepcopy(self.current);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz');ident=self.proposal['excluded_conditional_native_cases'][0]['id']
-  c['cases'][-1]['id']=ident;later['proposed_ledger']['cases'][-1]['id']=ident;later['new_cases'][-1]['id']=ident
+  c['cases'][len(later['proposed_ledger']['cases'])-1]['id']=ident;later['proposed_ledger']['cases'][-1]['id']=ident;later['new_cases'][-1]['id']=ident
   with self.assertRaisesRegex(AssertionError,'historical conditional scope'):audit.verify_ledger(c,self.proposal,later)
+ def test_exact_pre_dao_ledger_still_passes(self):
+  earlier=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')['proposed_ledger']
+  self.assertEqual(audit.verify_ledger(earlier,self.proposal)['preserved_cases'],34920)
+ def test_dao_source_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['dao-77931']='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_dao_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][-1],c['cases'][-2]=c['cases'][-2],c['cases'][-1]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_dao_fixture_and_ledger_mutation_cannot_pass(self):
+  c=copy.deepcopy(self.current);dao=audit.read(audit.ROOT/'tests/fixtures/declarative-dao-validity.json')
+  later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
+  c['cases'][-1]['judgments'][0]['reason']='coordinated changed judgment'
+  dao['cases'][-1]=copy.deepcopy(c['cases'][-1])
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);fixture=root/'tests/fixtures/declarative-dao-validity.json';fixture.parent.mkdir(parents=True)
+   fixture.write_text(audit.json.dumps(dao))
+   with patch.object(audit,'ROOT',root):
+    with self.assertRaisesRegex(AssertionError,'reviewed DAO fixture bytes'):audit.verify_ledger(c,self.proposal,later)
 if __name__=='__main__':unittest.main()

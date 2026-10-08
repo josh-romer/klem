@@ -13,6 +13,18 @@ def verify_ledger(current,proposal,later_proposal=None):
   # merely because the older prefix has the expected length or case IDs.
   later=read(ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz') if later_proposal is None else later_proposal
   complete=later['proposed_ledger']
+  if current!=complete and len(current['cases'])>len(complete['cases']):
+   # Preserve the exact subsequently integrated DAO suite. No arbitrary
+   # appended tail, altered judgment, source replacement or ID is accepted.
+   path=ROOT/'tests/fixtures/declarative-dao-validity.json'
+   assert sha(path.read_bytes())=='f847dfe655657f54a0a10870251d6b831c2462d8b8ddf8b7c1bb30218efaa9b7','reviewed DAO fixture bytes'
+   dao=read(path)
+   assert len(dao['cases'])==36 and len(current['cases'])==len(complete['cases'])+36,'complete append-only ledger'
+   assert current['cases'][-36:]==dao['cases'],'complete append-only ledger'
+   assert all(current['sources'].get(k)==v for k,v in dao['sources'].items()),'complete append-only ledger'
+   assert not set(complete['sources'])&set(dao['sources']),'separate DAO source identities'
+   current={**current,'cases':current['cases'][:-36],
+    'sources':{k:v for k,v in current['sources'].items() if k not in dao['sources']}}
   assert current==complete,'complete append-only ledger'
   assert later['before_case_count']==len(expected['cases'])==34981,'historical ledger prefix'
   assert complete['cases'][:34981]==expected['cases'],'historical ledger prefix'

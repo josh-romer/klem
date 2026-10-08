@@ -430,6 +430,17 @@
                 ./tools/test_literary_question_go_browser_audit.py
                 ./tools/literary_question_go_preservation.py
                 ./tools/test_literary_question_go_preservation.py
+                ./tools/literary_question_go_package.py
+                ./tools/test_literary_question_go_package.py
+                ./tools/test_literary_question_go_package_runtime.py
+                ./tools/test_literary_question_go_package_adapter_audit.py
+                ./tools/test_literary_question_go_package_browser_audit.py
+                ./tools/capture_literary_question_go_launcher.py
+                ./tools/capture_literary_question_go_performance.py
+                ./tools/literary_question_go_performance.py
+                ./tools/test_literary_question_go_performance.py
+                ./tools/literary_question_go_sources.py
+                ./tools/test_literary_question_go_sources.py
                 ./tools/literary_question_go_runtime.py
                 ./tools/test_literary_question_go_runtime.py
                 ./tools/literary_question_go_replay.py
@@ -846,6 +857,12 @@
             python -m unittest discover -s tools -p 'test_literary_question_go_browser_audit.py'
             python tools/literary_question_go_preservation.py
             python -m unittest discover -s tools -p 'test_literary_question_go_preservation.py'
+            python tools/literary_question_go_package.py
+            python -m unittest discover -s tools -p 'test_literary_question_go_package*.py'
+            python tools/literary_question_go_performance.py --verify
+            python -m unittest discover -s tools -p 'test_literary_question_go_performance.py'
+            python tools/literary_question_go_sources.py --proof docs/literary-question-go-historical-sources.json.gz
+            python -m unittest discover -s tools -p 'test_literary_question_go_sources.py'
             python tools/literary_question_go_runtime.py --cli-report docs/literary-question-go-main-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_go_runtime.py'
             python tools/literary_question_go_adapter_audit.py --report docs/literary-question-go-main-adapter.json.gz

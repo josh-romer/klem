@@ -3,8 +3,9 @@ import argparse,copy,gzip,hashlib,json,math,pathlib,sys,unicodedata
 ROOT=pathlib.Path(__file__).resolve().parents[1];PROTO=ROOT;FRONT=ROOT/'web';sys.path.insert(0,str(ROOT/'tools'))
 from ostensible_reason_audit import read,sha,matches
 from native_lmf import entry,verify_native_lmf
+from literary_question_go_sources import package_source_texts
 
-def inspect(runtime,browser,prepared):
+def inspect(runtime,browser,prepared,*,browser_path=None):
  rust=read(ROOT/'docs/literary-question-go-main-full-rust.json')
  assert runtime['frozen_inputs'][runtime['rust_receipt']]==sha((ROOT/'docs/literary-question-go-main-full-rust.json').read_bytes())
  assert rust['state']=='passed' and rust['exit_code']==0 and rust['inputs_unchanged'] is True
@@ -15,9 +16,10 @@ def inspect(runtime,browser,prepared):
  assert sha(runtime['producer']['text'].encode())==runtime['producer']['sha256']
  assert runtime['producer']['text']==(ROOT/'tools/capture_literary_question_go_web.py').read_text()
  assert browser['producer_sha256']==sha((ROOT/'web/tests/literary-question-go.mjs').read_bytes())
- assert browser['catalog_sha256']==runtime['frontend_snapshot']['src/grammar-labels.json']==sha((FRONT/'src/grammar-labels.json').read_bytes())
+ historical=package_source_texts(read(ROOT/'docs/literary-question-go-package-nix.json'))
+ assert browser['catalog_sha256']==runtime['frontend_snapshot']['src/grammar-labels.json']==sha(historical['web/src/grammar-labels.json'].encode())
  assert browser['cli_sha256']==runtime['frozen_inputs'][runtime['cli']]
- assert runtime['browser_sha256']==sha((ROOT/'docs/literary-question-go-main-browser.json').read_bytes())
+ assert runtime['browser_sha256']==sha((browser_path or ROOT/'docs/literary-question-go-main-browser.json').read_bytes())
  assert len(runtime['asset_checks'])==2
  for r in runtime['asset_checks']:assert r['sha256']==runtime['asset_snapshot'][r['path'].lstrip('/')]
  assert browser['errors']==[] and browser['particleDiagrams']==[]
@@ -51,7 +53,7 @@ def inspect(runtime,browser,prepared):
    targets=[i for i,p in enumerate(rows[c['surface']]['analysis']['analyses']) if matches(p,c['expected'])];assert bool(targets)==c['expected_presence'][actual['mode']]
    conditional.append({'encoding':actual['encoding'],'mode':actual['mode'],'case_id':c['id'],'judgment_id':c['judgment_id'],'present':bool(targets),'expected_presence':c['expected_presence'][actual['mode']],'contextual_verdict':'unjudged'})
  assert conditional==browser['conditionalModeJudgments'] and len(conditional)==96
- catalog=read(FRONT/'src/grammar-labels.json')
+ catalog=json.loads(historical['web/src/grammar-labels.json'])
  for name,cases,expected_count in [('diagrams',normal,116),('conditionalDiagrams',special,30)]:
   diagrams=browser[name];assert len(diagrams)==expected_count
   assert len({(d['case_id'],d['judgment_id'],d['encoding']) for d in diagrams})==expected_count

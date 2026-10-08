@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 457 scoped
-  dispositions; 258 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 472 scoped
+  dispositions; 243 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2797,8 +2797,8 @@ review remains open under the completion review below.
   Broader attachment composition, candidate precision, contextual speaker
   attitude and independent Korean review remain open.
 
-- [ ] **COV-017cj — Original literary -고 question family.**
-  **Production integration and main validation complete; release gates pending.**
+- [x] **COV-017cj — Original literary -고 question family.**
+  **Implemented for the reviewed original family.**
   [Four complete original entries](literary-question-go-source-discovery.json.gz)
   (73889, 73892, 73898, 73901) preserve all eight senses, 39 original groups,
   dialogue replies and usage notes. The unchanged baseline has six 535-frame
@@ -2882,13 +2882,39 @@ review remains open under the completion review below.
   package source/runtime verification and all 41 runtime controls still pass
   after the current integration.
 
+  [Actual independent Nix and packaged checks](literary-question-go-packaged-checks.json)
+  pass the Rust/CLI/server, assets, separate adapter and web launcher. The
+  release log independently confirms 1,052 passing tests, one ignored, across
+  222 batches; all 939 compile/frontend inputs remain unchanged. Packaged CLI
+  output repeats every source/boundary/conditional, broad and held-out-word
+  comparison; the adapter reproduces all 66,570 original rows and summaries.
+  The packaged browser and actual launcher both repeat all 146 diagrams,
+  twelve exports, 136 Native endpoints, four source panes and both original
+  source APIs. Exact packaged index/JS/CSS bytes are served. Every owned server
+  was stopped and all desktop/mobile images inspected. Twenty-eight package
+  runtime controls and twelve cross-package binding controls pass. The first
+  launcher Git-fetch broken-pipe failure is retained; its offline retry passes.
+  [Historical package sources](literary-question-go-historical-sources.json.gz)
+  preserve all 939 tested inputs through the actual three derivations and
+  source NARs. Twelve corruption controls pass; browser auditing reads the
+  preserved catalog, and all forty package controls pass again.
+
+  [Actual release measurements](literary-question-go-performance.json) retain
+  80 alternating samples across eight workloads and six cached/uncached novel
+  stream comparisons (179,112 frames each). Median changes range from -1.54%
+  to +0.32%; this finite run does not establish statistical equivalence or
+  causality. Twenty timing/cache corruption controls pass. The
+  [complete four-check Nix gate](literary-question-go-combined-nix.json) passes
+  with all 2,950 tracked inputs, HEAD and staged diff unchanged through terminal
+  completion. Its three runtime outputs match the independently tested packages.
+  [Finite closure](literary-question-go-bounded-closure.json) retains all broader
+  composition, precision, context/register and independent-review limits.
+
   [The append-only ledger proposal](literary-question-go-append-only-ledger-proposal.json.gz)
   retains all earlier 34,781 cases; its 62 additions (58 required/four
   forbidden) are now in the global ledger, with updated counter assertions. The original 39 occurrences and authored 23 boundaries remain
-  separate from conditional/broader unjudged alternatives. Remaining: Nix
-  release/package CLI, adapter and browser validation, novel performance and
-  the full inventory gate, broader composition,
-  precision and independent contextual/register review.
+  separate from conditional/broader unjudged alternatives. Remaining: broader
+  composition, precision and independent contextual/register review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

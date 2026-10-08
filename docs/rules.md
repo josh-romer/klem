@@ -4897,7 +4897,10 @@ and annotated gold recovery do not establish candidate precision. [Actual main v
 Rust tests, the downloaded-corpus regression, Clippy/format/frontend checks,
 every source/boundary/conditional and broad CLI frame, every held-out word and
 all original Rust adapter rows. The main browser repeats all 146 diagrams and
-136 Native entries, with exact exports and a stopped server. Independent Nix
-release/package runtime, novel performance and final inventory gates remain
-pending. Broader composition, contextual/register interpretation and independent
-Korean review remain open under the coverage checklist.
+136 Native entries, with exact exports and a stopped server. [Independent Nix/package validation](literary-question-go-packaged-checks.json)
+repeats all release tests, CLI/adapter and browser/launcher outputs, with exact
+assets and stopped servers. [Release measurements](literary-question-go-performance.json)
+retain all eighty samples and six complete cache streams; twenty controls pass.
+The [complete four-check Nix/inventory gate](literary-question-go-combined-nix.json)
+passes with all 2,950 tracked inputs, HEAD and staged diff unchanged. Broader composition,
+contextual/register interpretation and independent Korean review remain open.

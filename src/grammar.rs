@@ -702,6 +702,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다던"
                             | "다더니"
                             | "다나"
+                            | "다오"
                             | "다마는"
                             | "다만"
                             | "답시고"
@@ -829,6 +830,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다던",
             "다더니",
             "다나",
+            "다오",
             "다더니만",
             "다더니마는",
             "다던데",
@@ -1375,6 +1377,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다더니", "다더니", "는다더니", 4),
             // KRDict 74691/74697: present reports keep the verb allomorph.
             ("는다나", "다나", "는다나", 4),
+            // KRDict 77931/79421: open/rieul versus other consonant verbs.
+            ("는다오", "다오", "는다오", 4),
             ("는다더니만", "다더니만", "는다더니만", 4),
             ("는다더니마는", "다더니마는", "는다더니마는", 4),
             ("는다던데", "다던데", "는다던데", 4),
@@ -2235,6 +2239,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.reported_command_deoni" => {
             "Recover source-listed -라더니 factual copular/negative and -(으)라더니 command reports with separate stem and honorific boundaries; preserve contextual alternatives without inserting an implicit reporting lemma."
+        }
+        "ending.declarative_dao" => {
+            "Recover source-listed -다오/-ㄴ다오/-는다오 with their own immediate stem and prefinal attachment; retain ending/expression senses without selecting the source of the statement."
         }
         "ending.reported_dana" => {
             "Recover the source-listed casual report -다나/-ㄴ다나/-는다나, preserving statement allomorphs and all lexical hypotheses; annoyance, uncertainty and the implicit speaker are not selected."

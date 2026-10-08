@@ -2,6 +2,8 @@
 //! These are not directly attested sentence judgments or corpus gold.
 #[path = "support/declarative_contrast_history.rs"]
 mod contrast_history;
+#[path = "support/declarative_dao_history.rs"]
+mod dao_history;
 #[path = "deoniman_support/parent.rs"]
 mod deoniman_parent;
 #[path = "support/literary_question_go_history.rs"]
@@ -230,6 +232,10 @@ fn complete_original_source_words_preserve_order_and_attribute_each_addition() {
             }
             if a.rules.iter().any(|r| r == "prefinal.conjectural_ni") {
                 ri_history::assert_addition("tests/copula-expectation-full-source.json", word, a);
+                continue;
+            }
+            if a.rules.iter().any(|r| r == "ending.declarative_dao") {
+                dao_history::assert_addition("tests/copula-expectation-full-source.json", word, a);
                 continue;
             }
             if a.rules.iter().any(|r| r == "ending.reported_dana") {

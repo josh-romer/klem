@@ -1,0 +1,311 @@
+{
+  "state": "complete-four-cohort-prior-preservation-and-parent-capture-passed",
+  "source_files_sha256": {
+    "tests/copula-expectation-full-source.json": "e00c0fb492dba2bc734f8ab3d06455d564cf09508c38bacd5506709f91a4d65e",
+    "tests/fixtures/counterfactual-ryeon-sources.json": "3963038323a711c1a3a854dfd6ef6efc7768548cd5d79eaf3f70ba3acdf865ce",
+    "tests/fixtures/degree-rimankeum-sources.json": "71816d4eaa57c3d1e8c1ba249ba3ebc3198110b838c6916d1ae0b9cf07fde9ec",
+    "tests/fixtures/deoniman-sources.json": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a"
+  },
+  "individual_additions": [
+    {
+      "id": "declarative-dao-history-71fec766f6b575420061",
+      "source": "tests/copula-expectation-full-source.json",
+      "surface": "자라다오",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다오",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.declarative_dao"
+        ],
+        "unchanged": false
+      },
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "자라다고",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "declarative-dao-history-71185d4da428eec254d3",
+      "source": "tests/fixtures/counterfactual-ryeon-sources.json",
+      "surface": "자라다오",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다오",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.declarative_dao"
+        ],
+        "unchanged": false
+      },
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "자라다고",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "declarative-dao-history-8646477013f3ac85ca8f",
+      "source": "tests/fixtures/degree-rimankeum-sources.json",
+      "surface": "자라다오",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다오",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.declarative_dao"
+        ],
+        "unchanged": false
+      },
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "자라다고",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "declarative-dao-history-30a625692cd6ca72deb5",
+      "source": "tests/fixtures/deoniman-sources.json",
+      "surface": "자라다오",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다오",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.declarative_dao"
+        ],
+        "unchanged": false
+      },
+      "exact_parent": {
+        "lemmas": [
+          {
+            "text": "자라다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "parent_surface": "자라다고",
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "actual_prior_companions": {
+    "자라다고": {
+      "normalized": "자라다고",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "자라",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "자라다",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "자라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "자라다고",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "자라다다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    }
+  }
+}

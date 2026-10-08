@@ -1,5 +1,7 @@
 #[path = "copula_expectation_support/parent.rs"]
 mod copula_expectation_parent;
+#[path = "support/declarative_dao_history.rs"]
+mod dao_history;
 #[path = "support/literary_question_go_history.rs"]
 mod question_go_history;
 #[path = "reported_dana_support/parent.rs"]
@@ -94,6 +96,10 @@ fn every_original_source_word_retains_all_previous_candidates_in_order() {
             }
             if a.rules.iter().any(|r| r == "prefinal.conjectural_ni") {
                 ri_history::assert_addition("tests/fixtures/deoniman-sources.json", word, a);
+                continue;
+            }
+            if a.rules.iter().any(|r| r == "ending.declarative_dao") {
+                dao_history::assert_addition("tests/fixtures/deoniman-sources.json", word, a);
                 continue;
             }
             if a.rules.iter().any(|r| r == "ending.reported_dana") {

@@ -1,0 +1,47 @@
+{
+  "state": "passed",
+  "source_inputs": 985,
+  "all_exact_tested_inputs_verified": true,
+  "git_backed_package_identity": {
+    "corpus-adapter": {
+      "derivation": "/nix/store/fl2dxp1rlsza079ifrh598w4r4pbbvmw-klem-corpus-adapter-0.1.0.drv",
+      "output": "/nix/store/j2s4p2ni6mbl16bp0g89jxvqgp9qp702-klem-corpus-adapter-0.1.0",
+      "source": "/nix/store/kavw8x4sxk0nlvpc6y8a06jj604jg134-source"
+    },
+    "klem": {
+      "derivation": "/nix/store/jf5cqnkp49j9lxsh1p0wchknafbicmvz-klem-0.1.0.drv",
+      "output": "/nix/store/j4in370si6hf8dv52x2vsxj95grmsnvi-klem-0.1.0",
+      "source": "/nix/store/kavw8x4sxk0nlvpc6y8a06jj604jg134-source"
+    },
+    "web-assets": {
+      "derivation": "/nix/store/v0h1w9fmzh76wc5b1yzlxgn6lqf2v1pf-klem-web-assets-0.1.0.drv",
+      "output": "/nix/store/1lwiqmc7571kk6q754dxwaj2p76izphi-klem-web-assets-0.1.0",
+      "source": "/nix/store/swqx7ih3s5zrbpjwgn0v2513xln34yrd-source"
+    }
+  },
+  "normal_build_outputs": [
+    "/nix/store/j4in370si6hf8dv52x2vsxj95grmsnvi-klem-0.1.0",
+    "/nix/store/1lwiqmc7571kk6q754dxwaj2p76izphi-klem-web-assets-0.1.0",
+    "/nix/store/j2s4p2ni6mbl16bp0g89jxvqgp9qp702-klem-corpus-adapter-0.1.0",
+    "/nix/store/hw7rd3vx6b07hb83jam9j12jzcvpkbij-klem-web"
+  ],
+  "installed_validation_reused_by_exact_identity": true,
+  "independent_fresh_main_runtime_claim": false,
+  "queue_counts": {
+    "entries": 715,
+    "by_pos": {
+      "\ubcf4\uc870 \ub3d9\uc0ac": 40,
+      "\ubcf4\uc870 \ud615\uc6a9\uc0ac": 14,
+      "\uc5b4\ubbf8": 504,
+      "\uc870\uc0ac": 157
+    },
+    "by_review": {
+      "scoped": 481,
+      "unreviewed": 234
+    },
+    "with_catalog_links": 485,
+    "with_judgment_citations": 510
+  },
+  "producer": "Explicit git+file flake evaluation and normal nix build; compared every current-main input byte and all package/source/derivation identities with the actual installed-source proof.",
+  "scope": "Integrated main code equals the tested installed985input package. The earlier complete combined inventory gate is for commit05cd6b3; the updated combined inventory derivation is not claimed passed. Wider coverage and contextual review remain open."
+}

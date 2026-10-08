@@ -22,7 +22,7 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **478 scoped
+The [manual ledger](inventory-reviews.json) currently contains **481 scoped
 reviews**, **zero gap dispositions**, and
 **237 entries
 unreviewed in this ledger**. This does not imply

@@ -51,7 +51,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "183d429424e9b1563e537141cde7e7510baf519174914c5c130b61379fc67d41",
+    "docs/coverage-checklist.md": "ac6e61049af28a042ef310647fc63917d4627686b938de1e6ae5edcf4a9a0579",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -59,6 +59,14 @@
     "docs/declarative-contrast-combined-nix.json": "f6d32f2df8e39ee4d5fb6106e7d6c808ba51c3c0507f691502b77793cf107249",
     "docs/declarative-contrast-main-checks.json": "bdc985117ac4ad8abcfe721e8394111ba4754e0bbb2e6c016965f710a497329d",
     "docs/declarative-contrast-packaged-checks.json": "c35161bf5269b285af0aad20b0589f96216eb2944edd7103469cd516929e94cd",
+    "docs/declarative-dao-broad-final.json.gz": "08f3bc5f44966056939011d4af105b5a523bacc9bd44dd08126aee36c5ad34b1",
+    "docs/declarative-dao-installed-adapter-retry1.json.gz": "413bccd3bfcc2c4fb25865c5f7bd54e7b2021d1524522060a7b1bd48eefec80f",
+    "docs/declarative-dao-installed-browser.json.gz": "70d10bf64fa7f9834d5af0df3f5bd11f70484d11f4a68bdd48eef0d73b5ecf75",
+    "docs/declarative-dao-installed-cli.json.gz": "2f2b3e3fddea4556c51febe5171728bf725ca2f03af11b2277008abcecb2877f",
+    "docs/declarative-dao-installed-sources.json.gz": "0bd62cd55ea546463530844cdaf932f77255035e23ee080207eb46602a2b07ca",
+    "docs/declarative-dao-main-binding.json": "a424886c6e0f065a3e7ddcc268efe8fcc9859add98fa473f8305e7c95d56f933",
+    "docs/declarative-dao-performance.json.gz": "36967e03ba3509fba1b3aaf6fca7df60bccc3ef739ec136938bf300b76d92c55",
+    "docs/declarative-dao-validation.md": "0a45f2d01b18afc3bbf27989cb9d11877c7e6dc9d77b77048574a168445d441c",
     "docs/degree-expectation-copula-discovery.json": "26f3400a555c12ad237b104e780da31d1c8f71a246635fa697891f348dd0632b",
     "docs/degree-expectation-final-nix.json": "4c4bbe6562009d534bca60e4a494a065da99707b2bc203ffd7952858548ec7ff",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
@@ -98,8 +106,8 @@
     "docs/intensive-aux-evaluation.json": "2bc5b02f0bb9752e785687c24564aacca3321223029cd2ed100386e403f2b234",
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "f19f460b45465aa8ceffeef663c039ddd84f13953486a5ee3f5d61f003c0f9c2",
-    "docs/inventory-reviews.json": "f3a1911d2b6659c701f5f32b0792d0d9cc486274808921569a5d9a436543b650",
+    "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
+    "docs/inventory-reviews.json": "5f69f88e62368913282bbc8be86e08f6fbb71b194db00d2ba953d151878511fe",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -242,7 +250,7 @@
     "docs/transition-aux-source-preflight.json": "cb8ace69bcaac108acb2393cd136eb603edb2b58ce68d6a37f6352b0d437f1f4",
     "docs/uncertainty-evaluation.json": "902cb50f1ffca1bbcec76821cf8530b2c624ffee2203df4828a3d0d11754ab17",
     "docs/vocative-evaluation.json": "d21badd5f8bca6e27a72946744619b55ae8e3329c6e3e8d21e3a33ead5525b46",
-    "src/bin/klem-web/grammar_labels.rs": "496b768dbf723f8e7838b7505c5d93759e3e52713952ca7f8255fefcde329ef2",
+    "src/bin/klem-web/grammar_labels.rs": "68fd8048f9a6bdc7ff50e899cdd622b5b4da6cb91d28f1ac4e2392a931d5ddf1",
     "tests/additive_particles.rs": "fa85e73922b937bf32d46715ad16c2b52a356dd7e92e130c9c9a0ce8befb1959",
     "tests/additive_ppundeoreo_boundaries.rs": "d37cc624852b075bec460f68628345588bb36e7845ddb222b91a64bbe3d36f95",
     "tests/additive_ppundeoreo_native.rs": "5fdd27a195922a1685c2624a9ef71828f0d0f935277472fa7fc26ced270787a3",
@@ -269,19 +277,20 @@
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula-expectation-validity.json": "f2743e819aa3521c5039dde026b1303dceaf67de84a4cbb9f34e4b450799f854",
-    "tests/copula_expectation.rs": "0e7c030a23608a87075c83bef3472ece087f25ab98db4711fb174a218ac0b35a",
+    "tests/copula_expectation.rs": "115379149d5a387f494eb40baa79dee35fe9d4cb5806f9dbe47acd642842c590",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
     "tests/corpus.rs": "7303682f8076fbb5bbb331781eb85a772c511555b3d8d38414f5a056831e642a",
-    "tests/counterfactual_ryeon.rs": "47e1e1c8f89ca41c6e290d7dddb9cc6c223a981bf265d532fb0e6a568eb9c888",
+    "tests/counterfactual_ryeon.rs": "28173804f707b6299ed5bb10f5700b803fe53a86e8424a34a73b2cec61de408e",
     "tests/daga.rs": "7251d8b98515301f36bb97c3f16e35b2344a823e9efdb6eecf5570e21dc8840b",
     "tests/daga_source.rs": "674fc3820034625550fd6f887fe72af9ac977fe66906c505e1e31a6abaf95691",
     "tests/daji.rs": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
     "tests/danda.rs": "c7676344ee45e26a302ccc148073210d46af0cc315d8f9994e284707106594ab",
     "tests/danikka.rs": "a2e0907e285e0df46a889fa4589be49347e1092a9947a3adb09eceebeb5d8ef8",
     "tests/declarative_contrast.rs": "2677850793eaeaca7b971987a7f3bf0ef2cef953464f30bbd8d7bb6e42389851",
-    "tests/degree_rimankeum.rs": "eea381759f0ca09fc2b8fccfa0424086beb47d9a8008e0c955c0e793baf1c899",
-    "tests/deoniman.rs": "d61a194419f0d880d2cb293dab62f67256db8409192fc1ca9e9ee7ac50316f93",
+    "tests/declarative_dao.rs": "a3e072f0297e6e16cff4f7dc309753206bd9df5250ecfeb48ec0dec6b10ab4b7",
+    "tests/degree_rimankeum.rs": "e817497000184e1c8372230f312da1547d5c24842dbaa5c525ffe6cbd135bfa2",
+    "tests/deoniman.rs": "5e4cb045ee797ea462dc3b7f1f6a1ccb7e6025e8e96c3dab219dcd4b589568c1",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
     "tests/deul_aux.rs": "e20650954008274fa5ea71fe86879a8e28e2e4eef3c8d69c60777db7fbc79a82",
@@ -367,7 +376,7 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "485e8e4bae204a4bbda7cb31a862a41dd9fb282bb979e63388e3fe549523b4d8",
+    "tests/fixtures/validity.json": "93dcb8cda43e1e7df15c3e3241b3d720b55f90460cca9dc3fc1f5a06af37e5ad",
     "tests/friendly_command.rs": "fbdaa0f19d1fdff21cc1ebf25c70e00d2767c7c3577f80e69555442cbcc9ddef",
     "tests/gam_questions.rs": "e84ee87884570646f4c3a13ba91ef2b4e7fc534a1c8c630636a8164e3940d268",
     "tests/geol.rs": "4615b2b5bbce7a8d749964b17b307eab383a1ae5e9c6d65f6c4be2ceacfd9cc7",
@@ -459,6 +468,8 @@
     "tools/declarative_contrast_audit.py": "1252bb576376c01bdab9fa29509edbca0c30fd9541ae38f14b7dadd315cace4f",
     "tools/declarative_contrast_preservation.py": "304a3b90f8505e57562b4ed9ed0fe718c0ebf09a1d8f8a49b36aa7f44777550d",
     "tools/declarative_contrast_runtime.py": "a589eeb908a8e5bac6233aba5e2a208e0e1ecd66974b6467a1f5d458d2be67df",
+    "tools/declarative_dao_audit.py": "3bd504ada49d092788f7a6c9bbcf751eb421a863e73467beec6284b34ffd2ce3",
+    "tools/declarative_dao_preservation.py": "237da7cfb7786d75d04f87bc3b1e0dfdb67f3d1c172b36c691939659e573c735",
     "tools/degree_expectation_audit.py": "0b23cbc508e9120a9d149de6080b8b6d368164c9870d77cc99a2790a9dac70ee",
     "tools/degree_expectation_broad.py": "97b74efc03b9403a5e87142a302f34f5811f961257d4a4b6ebd0a06c9a32bcd8",
     "tools/degree_expectation_corpora.py": "dec94b91a96ed940df667c753d95a0a0764c7dfd59784cc9ec1878f366f89ef7",
@@ -521,7 +532,7 @@
     "tools/test_reported_dana_release.py": "f69728b303ff406567c98d10aad425620898854bd2fa497ec4ed5a9f73dd5cc1",
     "tools/test_reported_dana_sources.py": "331e2df0f01ef7e9226eec36893164718c13ad0e4031f3a4688127f6152022a0",
     "tools/test_reported_deoni_release.py": "dbdd8158f4f48c1eebdf697ae51524adb9c6f43824f054f5bb90db761265e7ac",
-    "web/src/grammar-labels.json": "b407f6cc7197af0a1287b0344870d32f5c084fc975f5500f0f3b038c36a91d84",
+    "web/src/grammar-labels.json": "0b73492589740e58011ccda02128410790b4a7949663a82f3be58f10867466d8",
     "web/tests/adjectival-allomorph.mjs": "953c6080b3d52c25248b86e2efbe9d20d3a25fb8386b4d91028fd06cd6a065f7",
     "web/tests/browser.mjs": "e308d37afd41cd8ff91ec4c0073795f6c54097b9995c27dae5e9fe7a14dbfdac",
     "web/tests/caution-ending.mjs": "40f695825c5bceec04ed1b4eac0db1900390c80dc976ad86788aa624205a6607",
@@ -538,11 +549,11 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 478,
-      "unreviewed": 237
+      "scoped": 481,
+      "unreviewed": 234
     },
-    "with_catalog_links": 482,
-    "with_judgment_citations": 507
+    "with_catalog_links": 485,
+    "with_judgment_citations": 510
   },
   "entries": [
     {
@@ -19566,11 +19577,134 @@
         ]
       },
       "source_sha256": "74e7d498c9fd07f4cf9459985b8406b178a33356875c0d41574aa846913c3214",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는다오",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "declarative-dao-authored-2",
+          "judgment": "declarative-dao-authored-2-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-77931-1-1-41",
+          "judgment": "declarative-dao-source-77931-1-1-41-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-77931-1-2-44",
+          "judgment": "declarative-dao-source-77931-1-2-44-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-77931-1-3-48",
+          "judgment": "declarative-dao-source-77931-1-3-48-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-77931-1-4-73",
+          "judgment": "declarative-dao-source-77931-1-4-73-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-77931-1-5-69",
+          "judgment": "declarative-dao-source-77931-1-5-69-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-77931-1-6-52",
+          "judgment": "declarative-dao-source-77931-1-6-52-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:77931",
+        "source_sha256": "74e7d498c9fd07f4cf9459985b8406b178a33356875c0d41574aa846913c3214",
+        "status": "scoped",
+        "checklist": [
+          "COV-017cn",
+          "COV-017az"
+        ],
+        "scope": "All six original ending/expression identities and all26complete groups retained;26authored source lemma requirements and36individual cases/33required3forbidden paths recover reviewed allomorphs/immediate owners while preserving earlier hypotheses. Seven focused Rust tests and Clippy pass. Full debug1083tests and final affected11tests pass; actual Nix release1084tests/0fail/1ignored passes. Actual installed985source inputs/19deltas,6source streams,8broad streams/1128312frames,complete32096corpus/21406history words,66570original adapter rows,198browser diagrams/6exports/1spacing diagram/378Native endpoints and executed launcher/assets/stopped server pass.27broader path observations and2new spacing alternatives retain individual contexts/owners/prior reporting companions and remain contextually unjudged. Raw generation is separate from Native lexical compatibility. Existing sources, gold and baselines are preserved. The exact tested19file delta is integrated. Quiet80paired samples/8workloads and10full179112frame cache streams pass; observed medians remain close without statistical equivalence claims. Normal Git-backed main flake verifies all985current source inputs and all4exact tested package outputs; updatedqueue481scoped/234unreviewed verifies. The preceding combinedgate belongs to05cd6b3; updatedinventorygate remains pending.",
+        "remaining": "Updated combined inventory gate; Broader lexical/marker/auxiliary/copula/particle distributions, general polite prefinals COV-017az, contextual sense selection, precision and independent Korean review. No implicit reporting lemma or general polite 오 prefinal is inferred.",
+        "evidence": [
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "complete_source_proposals_gain_paths_and_preserve_prior_hypotheses"
+          },
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "source_lexical_profiles_survive_actual_dictionary_filtering"
+          },
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "shared_ledger_retains_every_source_and_boundary_judgment"
+          },
+          {
+            "path": "docs/declarative-dao-validation.md"
+          },
+          {
+            "path": "docs/declarative-dao-broad-final.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-sources.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-cli.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-adapter-retry1.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-browser.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-performance.json.gz"
+          },
+          {
+            "path": "tools/declarative_dao_audit.py"
+          },
+          {
+            "path": "tools/declarative_dao_preservation.py"
+          },
+          {
+            "path": "docs/declarative-dao-main-binding.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "declarative-dao-source-77931-1-1-41",
+            "judgment": "declarative-dao-source-77931-1-1-41-structure"
+          },
+          {
+            "case": "declarative-dao-source-77931-1-2-44",
+            "judgment": "declarative-dao-source-77931-1-2-44-structure"
+          },
+          {
+            "case": "declarative-dao-source-77931-1-3-48",
+            "judgment": "declarative-dao-source-77931-1-3-48-structure"
+          },
+          {
+            "case": "declarative-dao-source-77931-1-4-73",
+            "judgment": "declarative-dao-source-77931-1-4-73-structure"
+          },
+          {
+            "case": "declarative-dao-source-77931-1-5-69",
+            "judgment": "declarative-dao-source-77931-1-5-69-structure"
+          },
+          {
+            "case": "declarative-dao-source-77931-1-6-52",
+            "judgment": "declarative-dao-source-77931-1-6-52-structure"
+          },
+          {
+            "case": "declarative-dao-authored-2",
+            "judgment": "declarative-dao-authored-2-structure"
+          }
+        ]
       }
     },
     {
@@ -43343,11 +43477,134 @@
         ]
       },
       "source_sha256": "cfcee45c482a8f7a80875ab09cfcfd8b4891ed625905e363c3e960c3baeffa54",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는다오",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "declarative-dao-authored-1",
+          "judgment": "declarative-dao-authored-1-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-authored-6",
+          "judgment": "declarative-dao-authored-6-structure",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "declarative-dao-authored-7",
+          "judgment": "declarative-dao-authored-7-structure",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "declarative-dao-source-79421-1-1-52",
+          "judgment": "declarative-dao-source-79421-1-1-52-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-79421-1-2-54",
+          "judgment": "declarative-dao-source-79421-1-2-54-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-79421-1-3-70",
+          "judgment": "declarative-dao-source-79421-1-3-70-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-79421-1-4-58",
+          "judgment": "declarative-dao-source-79421-1-4-58-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79421",
+        "source_sha256": "cfcee45c482a8f7a80875ab09cfcfd8b4891ed625905e363c3e960c3baeffa54",
+        "status": "scoped",
+        "checklist": [
+          "COV-017cn",
+          "COV-017az"
+        ],
+        "scope": "All six original ending/expression identities and all26complete groups retained;26authored source lemma requirements and36individual cases/33required3forbidden paths recover reviewed allomorphs/immediate owners while preserving earlier hypotheses. Seven focused Rust tests and Clippy pass. Full debug1083tests and final affected11tests pass; actual Nix release1084tests/0fail/1ignored passes. Actual installed985source inputs/19deltas,6source streams,8broad streams/1128312frames,complete32096corpus/21406history words,66570original adapter rows,198browser diagrams/6exports/1spacing diagram/378Native endpoints and executed launcher/assets/stopped server pass.27broader path observations and2new spacing alternatives retain individual contexts/owners/prior reporting companions and remain contextually unjudged. Raw generation is separate from Native lexical compatibility. Existing sources, gold and baselines are preserved. The exact tested19file delta is integrated. Quiet80paired samples/8workloads and10full179112frame cache streams pass; observed medians remain close without statistical equivalence claims. Normal Git-backed main flake verifies all985current source inputs and all4exact tested package outputs; updatedqueue481scoped/234unreviewed verifies. The preceding combinedgate belongs to05cd6b3; updatedinventorygate remains pending.",
+        "remaining": "Updated combined inventory gate; Broader lexical/marker/auxiliary/copula/particle distributions, general polite prefinals COV-017az, contextual sense selection, precision and independent Korean review. No implicit reporting lemma or general polite 오 prefinal is inferred.",
+        "evidence": [
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "complete_source_proposals_gain_paths_and_preserve_prior_hypotheses"
+          },
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "source_lexical_profiles_survive_actual_dictionary_filtering"
+          },
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "shared_ledger_retains_every_source_and_boundary_judgment"
+          },
+          {
+            "path": "docs/declarative-dao-validation.md"
+          },
+          {
+            "path": "docs/declarative-dao-broad-final.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-sources.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-cli.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-adapter-retry1.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-browser.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-performance.json.gz"
+          },
+          {
+            "path": "tools/declarative_dao_audit.py"
+          },
+          {
+            "path": "tools/declarative_dao_preservation.py"
+          },
+          {
+            "path": "docs/declarative-dao-main-binding.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "declarative-dao-source-79421-1-1-52",
+            "judgment": "declarative-dao-source-79421-1-1-52-structure"
+          },
+          {
+            "case": "declarative-dao-source-79421-1-2-54",
+            "judgment": "declarative-dao-source-79421-1-2-54-structure"
+          },
+          {
+            "case": "declarative-dao-source-79421-1-3-70",
+            "judgment": "declarative-dao-source-79421-1-3-70-structure"
+          },
+          {
+            "case": "declarative-dao-source-79421-1-4-58",
+            "judgment": "declarative-dao-source-79421-1-4-58-structure"
+          },
+          {
+            "case": "declarative-dao-authored-1",
+            "judgment": "declarative-dao-authored-1-structure"
+          },
+          {
+            "case": "declarative-dao-authored-6",
+            "judgment": "declarative-dao-authored-6-structure"
+          },
+          {
+            "case": "declarative-dao-authored-7",
+            "judgment": "declarative-dao-authored-7-structure"
+          }
+        ]
       }
     },
     {
@@ -50330,11 +50587,143 @@
         ]
       },
       "source_sha256": "e611621f0011ce01449ad051d53d5511886ef5651d761b8fb229f9befad41953",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-다오",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "declarative-dao-authored-3",
+          "judgment": "declarative-dao-authored-3-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-authored-4",
+          "judgment": "declarative-dao-authored-4-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-authored-5",
+          "judgment": "declarative-dao-authored-5-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-authored-8",
+          "judgment": "declarative-dao-authored-8-structure",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "declarative-dao-source-79419-1-1-17",
+          "judgment": "declarative-dao-source-79419-1-1-17-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-79419-1-2-27",
+          "judgment": "declarative-dao-source-79419-1-2-27-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-79419-1-3-65",
+          "judgment": "declarative-dao-source-79419-1-3-65-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "declarative-dao-source-79419-1-4-111",
+          "judgment": "declarative-dao-source-79419-1-4-111-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79419",
+        "source_sha256": "e611621f0011ce01449ad051d53d5511886ef5651d761b8fb229f9befad41953",
+        "status": "scoped",
+        "checklist": [
+          "COV-017cn",
+          "COV-017az"
+        ],
+        "scope": "All six original ending/expression identities and all26complete groups retained;26authored source lemma requirements and36individual cases/33required3forbidden paths recover reviewed allomorphs/immediate owners while preserving earlier hypotheses. Seven focused Rust tests and Clippy pass. Full debug1083tests and final affected11tests pass; actual Nix release1084tests/0fail/1ignored passes. Actual installed985source inputs/19deltas,6source streams,8broad streams/1128312frames,complete32096corpus/21406history words,66570original adapter rows,198browser diagrams/6exports/1spacing diagram/378Native endpoints and executed launcher/assets/stopped server pass.27broader path observations and2new spacing alternatives retain individual contexts/owners/prior reporting companions and remain contextually unjudged. Raw generation is separate from Native lexical compatibility. Existing sources, gold and baselines are preserved. The exact tested19file delta is integrated. Quiet80paired samples/8workloads and10full179112frame cache streams pass; observed medians remain close without statistical equivalence claims. Normal Git-backed main flake verifies all985current source inputs and all4exact tested package outputs; updatedqueue481scoped/234unreviewed verifies. The preceding combinedgate belongs to05cd6b3; updatedinventorygate remains pending.",
+        "remaining": "Updated combined inventory gate; Broader lexical/marker/auxiliary/copula/particle distributions, general polite prefinals COV-017az, contextual sense selection, precision and independent Korean review. No implicit reporting lemma or general polite 오 prefinal is inferred.",
+        "evidence": [
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "complete_source_proposals_gain_paths_and_preserve_prior_hypotheses"
+          },
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "source_lexical_profiles_survive_actual_dictionary_filtering"
+          },
+          {
+            "path": "tests/declarative_dao.rs",
+            "test": "shared_ledger_retains_every_source_and_boundary_judgment"
+          },
+          {
+            "path": "docs/declarative-dao-validation.md"
+          },
+          {
+            "path": "docs/declarative-dao-broad-final.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-sources.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-cli.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-adapter-retry1.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-installed-browser.json.gz"
+          },
+          {
+            "path": "docs/declarative-dao-performance.json.gz"
+          },
+          {
+            "path": "tools/declarative_dao_audit.py"
+          },
+          {
+            "path": "tools/declarative_dao_preservation.py"
+          },
+          {
+            "path": "docs/declarative-dao-main-binding.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "declarative-dao-source-79419-1-1-17",
+            "judgment": "declarative-dao-source-79419-1-1-17-structure"
+          },
+          {
+            "case": "declarative-dao-source-79419-1-2-27",
+            "judgment": "declarative-dao-source-79419-1-2-27-structure"
+          },
+          {
+            "case": "declarative-dao-source-79419-1-3-65",
+            "judgment": "declarative-dao-source-79419-1-3-65-structure"
+          },
+          {
+            "case": "declarative-dao-source-79419-1-4-111",
+            "judgment": "declarative-dao-source-79419-1-4-111-structure"
+          },
+          {
+            "case": "declarative-dao-authored-3",
+            "judgment": "declarative-dao-authored-3-structure"
+          },
+          {
+            "case": "declarative-dao-authored-4",
+            "judgment": "declarative-dao-authored-4-structure"
+          },
+          {
+            "case": "declarative-dao-authored-5",
+            "judgment": "declarative-dao-authored-5-structure"
+          },
+          {
+            "case": "declarative-dao-authored-8",
+            "judgment": "declarative-dao-authored-8-structure"
+          }
+        ]
       }
     },
     {

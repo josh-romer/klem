@@ -45,7 +45,8 @@ observed spacing medians are 12.17 → 12.16 and 12.09 → 11.82 seconds. These
 measurements describe this novel/machine, without statistical equivalence or
 causality claims. Current-main source binding, normal Git-backed Nix build,
 repository-default audits and actual web launcher/browser checks pass. A new
-complete combined inventory gate and wider/contextual coverage remain open.
+complete combined inventory gate now passes all four checks with tracked inputs,
+HEAD and index unchanged. Wider/contextual coverage remains open.
 
 Dictionary fixtures and source groups are attributed to the National Institute
 of Korean Language, Korean Basic Dictionary, under CC BY-SA 2.0 KR. Full native

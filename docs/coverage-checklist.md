@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 478 scoped
-  dispositions; 237 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 481 scoped
+  dispositions; 234 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -196,11 +196,11 @@ review remains open under the completion review below.
   trace does not prove a missing lemma. Eight integrity controls pass. The next
   -다오 batch preserves all six ending/expression identities and 26 original
   groups with 26 authored proposed lemmas and three-filter baseline records.
-  A [separate -다오 draft](declarative-dao-draft.md) passes six focused Rust
-  tests, Clippy and eleven integrity controls. Thirty-four individual cases and
-  six complete 417-frame CLI streams preserve prior candidates and dictionary
-  assessments. Wider regression, corpus, installed Nix and integration checks
-  remain pending. No manual dispositions or corpus baselines changed.
+  COV-017cn integrates the [validated -다오 batch](declarative-dao-validation.md):
+  36 stable cases, seven focused Rust tests, 1,084 actual Nix release tests,
+  198 browser diagrams and all 66,570 original adapter rows pass. All earlier
+  candidates, Native identities and corpus baselines are retained. The original
+  [34-case draft](declarative-dao-draft.md) remains historical evidence.
   General polite prefinals remain separate.
 
   Compare the implemented tables with dictionary grammar
@@ -3257,6 +3257,45 @@ review remains open under the completion review below.
   Broader composition, contextual sense choice, precision and independent
   Korean-language review remain open. This item is not closed by finite tests.
 
+- [ ] **COV-017cn — Factual and reported -다오/-ㄴ다오/-는다오 finals.**
+  **Partial: the integrated rule, Native attachment policy, viewer labels and
+  individual regressions pass complete installed-package validation.**
+  All six original ending/expression identities (77931/79421/79419 and
+  88935/88936/88937) and 26 complete source groups remain distinct. Canonical
+  는다오 recovers vowel/ㄹ and consonant allomorphs; plain 다오 preserves the
+  separately reviewed immediate-owner and marker boundaries. The rule retains
+  earlier alternatives and inserts no implicit reporting lemma or general polite
+  오 prefinal. Known lexical conflicts are filtered separately; unlisted classes
+  and combinations remain Unknown.
+
+  [Detailed validation](declarative-dao-validation.md) retains 36 executable
+  cases, all 35,014 earlier shared-ledger cases, seven focused Rust tests and
+  complete source/Native fixtures. The full debug run passes 1,083 tests; final
+  affected tests and Clippy pass. Actual Nix packages pass 1,084 release tests,
+  zero failures and one ignored test. Installed reconstruction verifies all 985
+  source inputs and 19 exact deltas. [Main binding](declarative-dao-main-binding.json)
+  verifies all 985 current inputs and the exact same four normal Git-backed
+  flake outputs. The installed CLI repeats six complete
+  source streams, all 1,128,312 broad frames and both complete word cohorts.
+  The actual adapter repeats all 66,570 original gold rows without changing
+  annotations or baselines. Actual launcher/browser execution passes 198
+  diagrams, six exports, one new spacing diagram and 378 complete Native
+  endpoints; served assets match and the owned server stops.
+
+  All 27 broader path observations and two new 떠 난다오 spacing alternatives
+  retain individual IDs, original contexts, earlier reporting companions and
+  exact Native owners. Eleven portable source and eight preservation controls
+  pass. Eighty paired novel timings and ten complete cache streams pass;
+  observed medians remain close on this retained machine/novel, without a
+  statistical equivalence claim. Contextual judgments remain open. Native honorific-adjective reporting
+  scope includes a specifically documented inference from NIKL clarification,
+  without claiming that it settles every factual ending sense.
+
+  Remaining: the updated combined inventory gate; broader lexical, marker,
+  auxiliary/copula and particle distributions. General polite prefinals
+  remain COV-017az. Contextual sense choice, precision and independent Korean
+  review are not established by this finite batch.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -5531,8 +5570,12 @@ review remains open under the completion review below.
   [The actual launcher](possessive-bound-noun-main-launcher-browser-runtime.json.gz)
   executes the tested server, serves the tested assets and passes all 210 diagrams,
   six exact exports and 218 complete Native endpoints; its owned server stops.
-  Desktop/mobile screenshots were inspected. A new complete combined gate, wider
-  formations and contextual review remain open. This item and the full goal remain open.
+  Desktop/mobile screenshots were inspected. The [complete combined gate](possessive-bound-noun-combined-nix.json.gz)
+  passes all four checks with all 4,100 tracked and 4,061 inventory-source inputs,
+  HEAD and index unchanged. Five complete [training proper-name examples](surname-corpus-preparation.json.gz)
+  establish separately attributed evidence for 박; its lexical representation and
+  bounded surname/title template remain necessary. Wider formations and contextual
+  review remain open. This item and the full goal remain open.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

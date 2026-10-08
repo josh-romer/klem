@@ -1,3 +1,5 @@
+Historical checkpoint: this records the initial isolated draft. The later integrated implementation and completed checks are documented in [current validation](declarative-dao-validation.md).
+
 The separate `-다오/-ㄴ다오/-는다오` draft recovers the 26 authored lemma
 requirements from all 26 complete original dictionary example groups. The exact
 ending identities 77931/79421/79419 and reported-expression identities

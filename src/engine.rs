@@ -961,6 +961,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다던"
             | "는다더니"
             | "는다나"
+            | "는다오"
             | "는다더니만"
             | "는다더니마는"
             | "는다던데"
@@ -1275,7 +1276,7 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 // while 89662 requires a verb for canonical command 으라더니.
                 // KRDict 74698 lists honorific, past and modal markers.
                 // Present forms use the shared honorific-only restriction.
-                if ending.form == "다나"
+                if matches!(ending.form, "다나" | "다오")
                     && p.morphs.iter().any(|m| {
                         !honorific_prefinal(&m.form)
                             && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
@@ -1877,6 +1878,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "라더니" | "으라더니") {
                     p.rules.push("ending.reported_command_deoni".into());
+                }
+                if matches!(ending.form, "다오" | "는다오") {
+                    p.rules.push("ending.declarative_dao".into());
                 }
                 if matches!(ending.form, "다나" | "는다나") {
                     p.rules.push("ending.reported_dana".into());
@@ -3463,6 +3467,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "다던"
                 | "다더니"
                 | "다나"
+                | "다오"
                 | "다더니만"
                 | "다더니마는"
                 | "다던데"

@@ -2243,3 +2243,14 @@ Attribution: National Institute of Korean Language (국립국어원), 한국어�
 [KRDict 73877](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73877).
 The original dictionary fields retain the existing CC-BY-SA-2.0-KR attribution
 and [license policy](https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo).
+
+`self-question-native.json` retains 51 complete original Korean Basic Dictionary
+entries, including all four self-question endings and two unrelated noun suffixes.
+These extracts retain NIKL attribution and CC BY-SA 2.0 KR licensing.
+`self-question-proposals.json` preserves 21 complete source groups and authored
+lemma proposals with baseline observations. `self-question-validity.json` records
+29 authored structural cases, not annotated corpus gold. The exact 웃기담/웃기다
+POS tension remains unknown; original source entries are not reclassified.
+The optional name lexicon at `src/dictionary/proper_names.json` separately
+retains five complete KAIST training contexts, original PROPN/nq tags and
+CC BY-SA 4.0 corpus attribution. It does not reuse the unrelated KRDict IDs.

@@ -703,6 +703,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다더니"
                             | "다나"
                             | "다오"
+                            | "담"
                             | "다마는"
                             | "다만"
                             | "답시고"
@@ -831,6 +832,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다더니",
             "다나",
             "다오",
+            // KRDict 73883/73891: separate self-question finals.
+            "담",
+            "남",
             "다더니만",
             "다더니마는",
             "다던데",
@@ -1379,6 +1383,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다나", "다나", "는다나", 4),
             // KRDict 77931/79421: open/rieul versus other consonant verbs.
             ("는다오", "다오", "는다오", 4),
+            // KRDict 73881/73882: present verb -ㄴ담/-는담.
+            ("는담", "담", "는담", 4),
             ("는다더니만", "다더니만", "는다더니만", 4),
             ("는다더니마는", "다더니마는", "는다더니마는", 4),
             ("는다던데", "다던데", "는다던데", 4),
@@ -1846,6 +1852,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "spacing.bare_noun_lexical_verb" => {
             "Offer a separate spacing hypothesis for source-attested 신경질/용기/짜증 before lexical 내다 and 기분 before 내키다, including independently analyzed inflections of each exact verb. Require actual noun and main-verb dictionary entries; preserve raw identity roles, auxiliary homonyms, whole-word alternatives and original byte spans. Other noun/verb pairs and contextual meaning are not inferred."
         }
+        "spacing.proper_name_title" => {
+            "A separately attested surname plus the exact honorific title 선생님, optionally followed by independent nominal particles. Other word/spacing and dictionary senses remain alternatives."
+        }
+        "spacing.proper_name_title_possession" => {
+            "Separately attested proper name plus the exact title 선생님 before possessive 것; dictionary senses and intended spacing remain alternatives."
+        }
         "spacing.nominal_bound_noun" => {
             "Offer bounded missing-space hypotheses for dictionary-backed possessors before 것 and nominal causes before 때문. Require exact bound-noun source identities, preserve independent word readings and original byte spans, and retain whole-word alternatives. Bare possession uses source-listed owners; explicit genitives and nominal cause phrases remain structural hypotheses without contextual sense judgments."
         }
@@ -2239,6 +2251,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.reported_command_deoni" => {
             "Recover source-listed -라더니 factual copular/negative and -(으)라더니 command reports with separate stem and honorific boundaries; preserve contextual alternatives without inserting an implicit reporting lemma."
+        }
+        "ending.self_question" => {
+            "Recover source-listed -ㄴ담/-는담/-담/-남 self-question endings with their own immediate stem and prefinal boundaries; preserve lexical alternatives without choosing complaint, register or contextual meaning."
         }
         "ending.declarative_dao" => {
             "Recover source-listed -다오/-ㄴ다오/-는다오 with their own immediate stem and prefinal attachment; retain ending/expression senses without selecting the source of the statement."

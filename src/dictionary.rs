@@ -6,11 +6,13 @@ mod import;
 pub use import::import_krdict;
 mod attachment;
 mod pos;
+mod proper_names;
 pub use attachment::{
     AttachmentConflict, AttachmentRule, DerivationalIdentity, DictionaryFilter, EntryAssessment,
     LemmaAssessment, OriginRelation, ReadingAssessment,
 };
 pub use pos::IndependentPosEvidence;
+pub use proper_names::ProperNameDictionary;
 
 use crate::{Lemma, LemmaKind, WordAnalysis};
 use rusqlite::{Connection, OpenFlags, OptionalExtension};
@@ -44,6 +46,23 @@ pub struct DictionaryMetadata {
     pub attribution: String,
     pub entries: usize,
     pub files: Vec<InputFile>,
+    /// Independently licensed lexical supplements; absent in original snapshots.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub supplements: Vec<LexicalSource>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct LexicalSource {
+    pub source: String,
+    pub source_url: String,
+    pub license: String,
+    pub license_url: String,
+    pub attribution: String,
+    pub sha256: String,
+    /// Canonical complete entries, so a changed projection invalidates caches.
+    #[serde(default, skip_serializing_if = "String::is_empty")]
+    pub projection_sha256: String,
+    pub entries: usize,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -52,7 +71,7 @@ pub struct EntrySummary {
     pub id: String,
     pub headword: String,
     pub homonym: String,
-    /// Original Korean POS label; missing/unknown labels are never guessed.
+    /// Original source POS label (Korean KRDict or corpus UPOS); unknown labels are never guessed.
     pub pos: String,
 }
 
@@ -204,11 +223,12 @@ pub fn pos_compatibility(lemma: &Lemma, entry: &EntrySummary) -> Compatibility {
             | "감탄사"
             | "접사"
             | "어미"
+            | "PROPN"
     ) {
         return Unknown;
     }
     let accepted = match lemma.kind {
-        LemmaKind::Nominal => matches!(pos, "명사" | "대명사" | "수사" | "의존 명사"),
+        LemmaKind::Nominal => matches!(pos, "명사" | "대명사" | "수사" | "의존 명사" | "PROPN"),
         LemmaKind::Predicate => matches!(pos, "동사" | "형용사"),
         LemmaKind::Auxiliary => matches!(pos, "보조 동사" | "보조 형용사"),
         LemmaKind::Adverbial => pos == "부사",
@@ -458,6 +478,9 @@ pub struct EntryMatch {
 impl EntryMatch {
     /// Class for attachment checks; `entry.pos` always remains native.
     pub fn effective_pos(&self) -> &str {
+        if self.entry.pos == "PROPN" {
+            return "명사";
+        }
         self.independent_pos
             .as_ref()
             .filter(|e| e.applies_to(&self.entry))

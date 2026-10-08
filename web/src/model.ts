@@ -75,6 +75,7 @@ export interface Token {
   analysis: { normalized: string; analyses: Analysis[] } | null;
   dictionary: Annotation | null;
   spacing?: SpacingSuggestions;
+  entry_witnesses?: string[];
 }
 export interface Result {
   records: Token[];
@@ -117,6 +118,7 @@ export interface Status {
       license_url: string;
       snapshot: string;
       entries: number;
+      supplements?: { source: string; source_url: string; license: string; license_url: string; attribution: string; sha256: string; projection_sha256?: string; entries: number }[];
     };
     fingerprint: string;
   } | null;

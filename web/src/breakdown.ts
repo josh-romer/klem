@@ -76,6 +76,7 @@ export function parts(
       const assessment = token.dictionary?.readings?.[candidate]?.lemmas
         .find((l) => l.lemma_index === component.lemma);
       let entry =
+        entries.find((e) => token.entry_witnesses?.includes(e.id)) ??
         copulaEntry ??
         entries.find((e) => sourceAssessment?.entries.some(
           (a) => a.id === e.id && a.status !== "incompatible" &&
@@ -106,11 +107,11 @@ export function parts(
         form: derivedRoot ? lemma.text.replace(/(?:하다|거리다)$/, "") : stem ? lemma.text.replace(/다$/, "") : lemma.text,
         label:
           (entry && result.glosses[entry.id]) ||
-          (entry ? "No English gloss" : allEntries.some((e) => differentOrigin(e.id)) ? "No matching source gloss" : fanRoot ? "Fan (bound root)" : lemma.kind === "root" ? "Root" : "No dictionary gloss"),
+          (entry ? (entry.pos === "PROPN" ? "Proper name" : "No English gloss") : allEntries.some((e) => differentOrigin(e.id)) ? "No matching source gloss" : fanRoot ? "Fan (bound root)" : lemma.kind === "root" ? "Root" : "No dictionary gloss"),
         grammar: false,
         entry: entry?.id,
         references: fanRoot ? [{ title: "KBS: 허풍선이 formation", url: "https://world.kbs.co.kr/service/contents_view.htm?board_seq=229261&id=&lang=k&menu_cate=learnkorean" }] : undefined,
-        hint: !entry && allEntries.some((e) => differentOrigin(e.id)) ? `${lemma.text} · Dictionary entries for this spelling have a different recorded origin from the whole word. Other derivations and senses remain possible; inspect the dictionary for details.` : fanRoot ? "선 (扇) · Source-listed bound root meaning fan. Recorded origins of other 선 homonyms do not supply this root; all entries remain available for inspection." : entry ? `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.` : `${lemma.text} · ${lemma.kind}. ${allEntries.length ? "No dictionary gloss for this reading." : "No dictionary entry for this lemma in the offline snapshot."}`,
+        hint: !entry && allEntries.some((e) => differentOrigin(e.id)) ? `${lemma.text} · Dictionary entries for this spelling have a different recorded origin from the whole word. Other derivations and senses remain possible; inspect the dictionary for details.` : fanRoot ? "선 (扇) · Source-listed bound root meaning fan. Recorded origins of other 선 homonyms do not supply this root; all entries remain available for inspection." : entry?.pos === "PROPN" ? `${lemma.text} · Corpus proper-name evidence; click for the original training contexts. Other meanings remain available.` : entry ? `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.` : `${lemma.text} · ${lemma.kind}. ${allEntries.length ? "No dictionary gloss for this reading." : "No dictionary entry for this lemma in the offline snapshot."}`,
       };
     }
     const m = a.morphemes[component.morpheme];

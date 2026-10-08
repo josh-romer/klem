@@ -43,7 +43,7 @@ pub fn import_krdict(
         license: "CC-BY-SA-2.0-KR".into(),
         license_url: "https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo".into(),
         attribution: "National Institute of Korean Language (국립국어원), Korean Basic Dictionary (한국어기초사전). Extracted text fields and NFC lookup keys; multimedia omitted.".into(),
-        entries: 0, files: Vec::new(),
+        entries: 0, files: Vec::new(), supplements: Vec::new(),
     };
     {
         let mut insert = transaction.prepare("INSERT INTO entries VALUES (?1,?2,?3,?4,?5,?6)")?;

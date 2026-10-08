@@ -49,6 +49,7 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
             analyses,
         };
         Ok(SpacingSegment {
+            entry_witnesses: segment.entry_witnesses.clone(),
             record: TokenAnalysis {
                 analysis: Some(Arc::new(analysis.clone())),
                 ..segment.record.clone()

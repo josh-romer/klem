@@ -311,3 +311,27 @@ Finite noun formations also preserve competing 못나다 + ㄴ + suffix 이 / bo
 
 
 Further finite COV-022l formations for 됨됨이/얼간이/쭉정이/허풍선이 are verified, including 얼- + 간 + 이. [Source evidence](docs/noun-formation-source-audit.json) retains independent noun/root roles. [Evaluation](docs/noun-formation-evaluation.json) records passing finite gates; finer original formation requirements remain open.
+
+Optional corpus proper names can supplement the connected dictionary:
+
+```sh
+klem word 박선생님것 --dictionary krdict.db --proper-names --suggest-spacing
+klem-web --dictionary krdict.db --proper-names
+```
+
+The library exposes `ProperNameDictionary<D>` for the same opt-in provider.
+Currently it contains one reviewed lexical name, 박, attested by five complete
+KAIST training contexts. It preserves the original `PROPN`/`nq` labels and uses
+its own `ud-ko-kaist:` identity; unrelated KRDict homonyms remain inspectable.
+The bundled corpus data in `src/dictionary/proper_names.json` is separately
+licensed CC BY-SA 4.0 with its original attribution and source hashes.
+This is a finite lexicon, not recognition of arbitrary names. The exact
+박 + 선생님 + 것 spacing template retains source witnesses without selecting
+a contextual sense. Exact 박 + 선생님 title forms, including 선생님께서,
+are also retained as separate spacing alternatives. See [scope and validation](docs/proper-name-spacing-draft.md).
+
+Self-question finals `-ㄴ담/-는담/-담/-남` now recover source-listed
+examples such as 간담 → 가다, 읽는담 → 읽다 and 천재였남 → 천재 + 이다.
+The dictionary's attested 웃기담/웃기다 POS tension is retained as unknown.
+These are authored structural hypotheses, with contextual and independent
+review pending; see [the supported scope and evidence](docs/self-question-draft.md).

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 481 scoped
-  dispositions; 234 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 485 scoped
+  dispositions; 230 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3296,6 +3296,26 @@ review remains open under the completion review below.
   remain COV-017az. Contextual sense choice, precision and independent Korean
   review are not established by this finite batch.
 
+- [ ] **COV-017co — Self-question and complaint -ㄴ담/-는담/-담/-남 finals.**
+  **Partial: finite source scope implemented on the integration branch.**
+  Canonical 는담 retains vowel/ㄹ -ㄴ담 and consonant -는담; plain 담 and 남
+  preserve their own immediate 시/었/겠 boundaries. All four ending identities,
+  21 complete source groups and unrelated noun suffix homonyms remain distinct.
+  [Twenty-nine stable cases](../tests/fixtures/self-question-validity.json) have
+  25 required and four forbidden paths. [Focused regressions](../tests/self_question.rs)
+  recover every authored source lemma in NFC/NFD, preserve old candidates,
+  enforce dictionary owner constraints and retain explicit 천재 + 이다.
+  Native 웃기담 conflicts with the dictionary's verbal 웃기다 63516; that exact
+  independently attested witness remains Unknown rather than being reclassified.
+  [Validation evidence](self-question-draft.md) retains twelve actual CLI source
+  streams, all 51 complete Native entries, 150 browser diagrams/six exports,
+  three stress tests, Clippy/formatting and all 66,570 original annotated rows.
+  All eight broad streams preserve 1,128,312 frames and prior paths/order;
+  37 new hypotheses have stable IDs and complete contexts, with no new spacing
+  option. Annotated matches are unchanged; ambiguity means increase slightly.
+  Candidate cohorts, normal Nix/installed validation, quiet performance,
+  wider distributions, contextual senses and independent review remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -5573,8 +5593,17 @@ review remains open under the completion review below.
   Desktop/mobile screenshots were inspected. The [complete combined gate](possessive-bound-noun-combined-nix.json.gz)
   passes all four checks with all 4,100 tracked and 4,061 inventory-source inputs,
   HEAD and index unchanged. Five complete [training proper-name examples](surname-corpus-preparation.json.gz)
-  establish separately attributed evidence for 박; its lexical representation and
-  bounded surname/title template remain necessary. Wider formations and contextual
+  establish separately attributed evidence for 박. The integration branch now adds
+  an optional corpus provider and CLI/web `--proper-names`, retaining both unrelated
+  KRDict homonyms and their identities. [Proper-name validation](proper-name-spacing-draft.md)
+  passes 1,088 Nix release tests, installed source/CLI/browser/adapter/broad/cohort
+  checks and the original 박 / 선생님 / 것 requirement. The separate
+  [named-title follow-up](named-title-spacing-draft.md) adds 박 / 선생님께서,
+  with nine focused tests, 108 runtime observations, 30 browser diagrams and
+  complete novel preservation; all four Nix packages pass with 1,090 release
+  tests, zero failures and one ignored test. Original
+  known-unmet historical captures remain intact. Final integration/package binding,
+  quiet performance, wider names/titles/formations and contextual/independent
   review remain open. This item and the full goal remain open.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮

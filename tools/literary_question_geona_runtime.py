@@ -14,17 +14,25 @@ def verify_ledger(current,proposal,later_proposal=None):
   later=read(ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz') if later_proposal is None else later_proposal
   complete=later['proposed_ledger']
   if current!=complete and len(current['cases'])>len(complete['cases']):
-   # Preserve the exact subsequently integrated DAO suite. No arbitrary
-   # appended tail, altered judgment, source replacement or ID is accepted.
-   path=ROOT/'tests/fixtures/declarative-dao-validity.json'
-   assert sha(path.read_bytes())=='f847dfe655657f54a0a10870251d6b831c2462d8b8ddf8b7c1bb30218efaa9b7','reviewed DAO fixture bytes'
-   dao=read(path)
-   assert len(dao['cases'])==36 and len(current['cases'])==len(complete['cases'])+36,'complete append-only ledger'
-   assert current['cases'][-36:]==dao['cases'],'complete append-only ledger'
-   assert all(current['sources'].get(k)==v for k,v in dao['sources'].items()),'complete append-only ledger'
-   assert not set(complete['sources'])&set(dao['sources']),'separate DAO source identities'
-   current={**current,'cases':current['cases'][:-36],
-    'sources':{k:v for k,v in current['sources'].items() if k not in dao['sources']}}
+   # Only exact reviewed suites, in integration order, may extend this
+   # historical ledger. Full fixture bytes, source identities, case order
+   # and every judgment are bound; arbitrary appended tails are rejected.
+   reviewed_appends=[
+    ('declarative-dao-validity.json',36,'f847dfe655657f54a0a10870251d6b831c2462d8b8ddf8b7c1bb30218efaa9b7','DAO'),
+    ('self-question-validity.json',29,'882d5671aa228e25ede6809e03da1d11ac097dd484315e59d1b2f6ce02fa566a','self-question'),
+   ]
+   accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
+   for filename,count,digest,label in reviewed_appends:
+    if len(current['cases'])==len(accepted['cases']):break
+    path=ROOT/'tests/fixtures'/filename
+    assert sha(path.read_bytes())==digest,f'reviewed {label} fixture bytes'
+    suite=read(path)
+    assert len(suite['cases'])==count,'complete append-only ledger'
+    assert not set(accepted['sources'])&set(suite['sources']),'separate reviewed source identities'
+    accepted['cases'].extend(suite['cases']);accepted['sources'].update(suite['sources'])
+   assert current==accepted,'complete append-only ledger'
+   assert len({c['id'] for c in accepted['cases']})==len(accepted['cases']),'complete case IDs'
+   current=complete
   assert current==complete,'complete append-only ledger'
   assert later['before_case_count']==len(expected['cases'])==34981,'historical ledger prefix'
   assert complete['cases'][:34981]==expected['cases'],'historical ledger prefix'

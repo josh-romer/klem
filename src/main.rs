@@ -1,4 +1,7 @@
-use klem::dictionary::{Annotation, DictionaryFilter, DictionarySession, SqliteDictionary};
+use klem::dictionary::{
+    Annotation, Dictionary, DictionaryFilter, DictionarySession, ProperNameDictionary,
+    SqliteDictionary,
+};
 use klem::{Lemmatizer, Session, TokenAnalysis};
 use serde::Serialize;
 mod dictionary_cli;
@@ -11,7 +14,7 @@ use std::{
 
 const HELP: &str = "klem — Korean lemma candidates\n\nUsage:\n  klem word <word> [--format jsonl|text]\n  klem text [file|-] [--format jsonl|text] [--cache-bytes N]\n  klem explain <rule-id>\n\nJSON Lines is the default. Text records include original UTF-8 byte offsets.\nText input defaults to stdin. Cache defaults to 8 MiB; use 0 to disable.\nAll candidates are grammatical hypotheses, not dictionary-verified words.\n";
 
-const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only | --dict-compatible]\n  klem text [file|-] --dictionary <db> [--dict-only | --dict-compatible]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n--dict-compatible additionally excludes known lexical-role/attachment conflicts.\nUnknown classes remain; the finite checks do not prove grammatical correctness.\n--suggest-spacing adds separate dictionary-backed case-phrase/predicate hypotheses.\nOriginal tokens and candidates stay intact; no sentence grammar is inferred.\nOptional bounds: --spacing-limit N (16), --spacing-probes N (256),\n--spacing-max-chars N (64 NFC characters). Reached bounds are reported.\n";
+const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only | --dict-compatible]\n  klem text [file|-] --dictionary <db> [--dict-only | --dict-compatible]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n--dict-compatible additionally excludes known lexical-role/attachment conflicts.\nUnknown classes remain; the finite checks do not prove grammatical correctness.\n--proper-names adds separately attributed training-corpus names (currently 박).\nIt requires --dictionary; the imported database and original homonyms stay intact.\n--suggest-spacing adds separate dictionary-backed case-phrase/predicate hypotheses.\nOriginal tokens and candidates stay intact; no sentence grammar is inferred.\nOptional bounds: --spacing-limit N (16), --spacing-probes N (256),\n--spacing-max-chars N (64 NFC characters). Reached bounds are reported.\n";
 
 #[derive(Serialize)]
 struct Annotated<T> {
@@ -43,6 +46,7 @@ fn run() -> klem::dictionary::Result<()> {
     let mut format = "jsonl".to_owned();
     let mut budget = 8 * 1024 * 1024;
     let mut dictionary_path = None;
+    let mut proper_names = false;
     let mut dict_only = false;
     let mut dict_compatible = false;
     let mut suggest_spacing = false;
@@ -68,6 +72,7 @@ fn run() -> klem::dictionary::Result<()> {
                     _ => spacing_limits.token_chars = value,
                 }
             }
+            "--proper-names" => proper_names = true,
             "--dict-only" => dict_only = true,
             "--dict-compatible" => dict_compatible = true,
             "--dictionary" => {
@@ -101,6 +106,9 @@ fn run() -> klem::dictionary::Result<()> {
     if spacing_options && !suggest_spacing {
         return Err("spacing limits require --suggest-spacing".into());
     }
+    if proper_names && dictionary_path.is_none() {
+        return Err("--proper-names requires --dictionary <db>".into());
+    }
     if suggest_spacing && dictionary_path.is_none() {
         return Err("--suggest-spacing requires --dictionary <db>".into());
     }
@@ -124,9 +132,18 @@ fn run() -> klem::dictionary::Result<()> {
     } else {
         None
     };
-    let dictionary = dictionary_path.map(SqliteDictionary::open).transpose()?;
+    let dictionary: Option<Box<dyn Dictionary>> = dictionary_path
+        .map(|path| {
+            let db = SqliteDictionary::open(path)?;
+            Ok::<Box<dyn Dictionary>, Box<dyn std::error::Error + Send + Sync>>(if proper_names {
+                Box::new(ProperNameDictionary::new(db))
+            } else {
+                Box::new(db)
+            })
+        })
+        .transpose()?;
     let mut dictionary_session = dictionary
-        .as_ref()
+        .as_deref()
         .map(|d| DictionarySession::new(d, 4 * 1024 * 1024));
     let engine = Arc::new(Lemmatizer::new());
     let mut out = BufWriter::new(io::stdout().lock());

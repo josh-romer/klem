@@ -17,6 +17,7 @@ use unicode_normalization::UnicodeNormalization;
 mod auxiliary;
 mod bound_noun;
 mod nominal_bound_noun;
+mod proper_name;
 
 /// Per-word work/output bounds. A reached bound is reported, never silent.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -47,6 +48,10 @@ pub struct SpacingSegment {
     pub record: TokenAnalysis,
     pub dictionary: Annotation,
     pub breakdowns: Vec<Option<Vec<crate::breakdown::Component>>>,
+    /// Exact lexical identities licensing this segment in a scoped template.
+    /// All other lookup entries remain inspectable in the annotation.
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub entry_witnesses: Vec<String>,
 }
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct SpacingHypothesis {
@@ -83,6 +88,9 @@ enum Role {
     Modifier,
     BoundNoun,
     NominalOwner,
+    ProperName,
+    Title,
+    InflectedTitle,
     BareNoun,
     ListedVerb(&'static str),
     NadaNoun(&'static str, &'static str),
@@ -339,6 +347,9 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                     Role::Modifier => bound_noun::modifier(a),
                     Role::BoundNoun => bound_noun::bound_noun(a),
                     Role::NominalOwner => nominal_bound_noun::owner(a),
+                    Role::ProperName => unchanged_noun(a),
+                    Role::Title => proper_name::title(a),
+                    Role::InflectedTitle => proper_name::inflected_title(a),
                     Role::BareNoun => bare_noun(a),
                     Role::ListedVerb(head) => predicate(a) && a.lemmas[0].text == head,
                     Role::NadaNoun(_, _) => unchanged_noun(a),
@@ -405,7 +416,19 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 .retain(|a| nominal_bound_noun::known_owner(&dictionary, a));
             dictionary = self.dictionary.annotate(&analysis)?;
         }
+        if matches!(role, Role::ProperName | Role::Title | Role::InflectedTitle) {
+            analysis
+                .analyses
+                .retain(|a| proper_name::backed(&dictionary, a, role));
+            dictionary = self.dictionary.annotate(&analysis)?;
+        }
+        let entry_witnesses = match role {
+            Role::ProperName => vec!["ud-ko-kaist:proper-name:park".into()],
+            Role::Title | Role::InflectedTitle => vec!["krdict:62818".into()],
+            _ => Vec::new(),
+        };
         let value = (!analysis.analyses.is_empty()).then(|| SpacingSegment {
+            entry_witnesses,
             breakdowns: analysis.analyses.iter().map(|a| a.breakdown()).collect(),
             record: TokenAnalysis {
                 surface: surface.into(),
@@ -635,6 +658,14 @@ pub fn suggest<D: Dictionary + ?Sized>(
     if search.result.complete && nominal_bound_noun::maybe_nominal_bound_noun(word) {
         search.dead_starts.clear();
         search.walk_nominal_bound_noun(0, &mut Vec::new())?;
+    }
+    if search.result.complete && proper_name::maybe(word) {
+        search.dead_starts.clear();
+        search.walk_proper_name(0, &mut Vec::new())?;
+    }
+    if search.result.complete && proper_name::maybe_title(word) {
+        search.dead_starts.clear();
+        search.walk_named_title(0, &mut Vec::new())?;
     }
     search.result.alternatives.sort_by(|a, b| {
         a.inserted_at

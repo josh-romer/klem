@@ -570,7 +570,7 @@ export default function App() {
                 <Book />
                 <span>Dictionary</span>
                 <Show when={status()?.dictionary}>
-                  <span class="source-tag">한국어기초사전</span>
+                  <span class="source-tag">{entry()?.id.startsWith("ud-ko-kaist:") ? "UD Korean Kaist" : "한국어기초사전"}</span>
                 </Show>
               </div>
               <Show when={token()?.dictionary && status()?.dictionary}>
@@ -637,6 +637,10 @@ export default function App() {
                         </For>
                       </div>
                     </div>
+                    <Show when={loaded().pos === "PROPN"}>
+                      <p class="panel-caption">Corpus proper-name evidence. The original training contexts are preserved below.</p>
+                      <For each={loaded().notes}>{(note) => <p class="panel-caption">{note}</p>}</For>
+                    </Show>
                     <Show when={entryPosEvidence()}>
                       {(evidence) => (
                         <p class="panel-caption">
@@ -717,7 +721,7 @@ export default function App() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Open original dictionary entry ↗
+                      {loaded().pos === "PROPN" ? "Open original corpus source ↗" : "Open original dictionary entry ↗"}
                     </a>
                   </div>
                 )}
@@ -743,6 +747,9 @@ export default function App() {
                 >
                   {dictionary().metadata.license}
                 </a>
+                <For each={dictionary().metadata.supplements}>{(source) => (
+                  <span> · {source.source} · <a href={source.license_url} target="_blank" rel="noreferrer">{source.license}</a></span>
+                )}</For>
               </span>
             )}
           </Show>

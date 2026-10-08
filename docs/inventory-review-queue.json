@@ -51,7 +51,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "ac6e61049af28a042ef310647fc63917d4627686b938de1e6ae5edcf4a9a0579",
+    "docs/coverage-checklist.md": "0fbbd3f90e57e9bf25cbf3efb45da7615e902bf05f72476203f9a28c3f6818b0",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -107,7 +107,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "5f69f88e62368913282bbc8be86e08f6fbb71b194db00d2ba953d151878511fe",
+    "docs/inventory-reviews.json": "73a0e2f4f0ffcbf8ce5dcab1e31da38594da69cd30056c10b0e261e7b993e151",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -239,6 +239,10 @@
     "docs/ryeogo-license-source-audit.json": "fb0f9a21380b5aa0516d9a08fbaa4debca78745450f2f5f9582340436d86e03f",
     "docs/ryeogo-licenses-evaluation.json": "44b545d4d561f93ae93242c81e87f17e84fb7a8f1645fe534331f7ed511d7550",
     "docs/ryeona-evaluation.json": "e43373b7ae74dd92b6da2273ec4f6cc126a1770af1e3b3948b9a8700bb97ce37",
+    "docs/self-question-broad-retry2.json.gz": "aaf1bdc1df36c0fa9006803ca372c96ca14f624e4b7928afea48c2c9768656fb",
+    "docs/self-question-browser.json.gz": "b18a4d302ec9707fb1426504c772bf12f2788f9ab0511ab5026b3dadfcee3dd4",
+    "docs/self-question-corpora.json.gz": "fb9541e8f76299924d13b5d21c724e748d9463f656352ea08917c736f9a05d96",
+    "docs/self-question-draft.md": "83c9a3684abb6361d8038a83fa93af5da57986163343db23ccc78528b08a3fbe",
     "docs/seo-connective-evaluation.json": "eb0b98f963e2685d24f2572f3b43619a8f2b636c4c007f1924fbaf0b0f056e07",
     "docs/short-clause-evaluation.json": "04024133e4c6fd13853333bf6ec41ff3286a492080d1039185b6f3702de9fab6",
     "docs/short-recipient-evaluation.json": "8867bf7160cfdc5487a73433c6747f252b70991bbfa5c01b5e0d296bd9253934",
@@ -376,7 +380,7 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "93dcb8cda43e1e7df15c3e3241b3d720b55f90460cca9dc3fc1f5a06af37e5ad",
+    "tests/fixtures/validity.json": "7351f17b7fbaa50ce2acf7c5c56187744df7805d9e2da49fd237d7922a4e3712",
     "tests/friendly_command.rs": "fbdaa0f19d1fdff21cc1ebf25c70e00d2767c7c3577f80e69555442cbcc9ddef",
     "tests/gam_questions.rs": "e84ee87884570646f4c3a13ba91ef2b4e7fc534a1c8c630636a8164e3940d268",
     "tests/geol.rs": "4615b2b5bbce7a8d749964b17b307eab383a1ae5e9c6d65f6c4be2ceacfd9cc7",
@@ -450,6 +454,7 @@
     "tests/ryeogo_expansions.rs": "59dda330f49584bf4087fb81997a134cfc558ab1f8208f9357cf119b47127bb6",
     "tests/ryeogo_licenses.rs": "e37561dfbde140cfa76548cd71848b9149fe4448a00dda206edd12a64d644844",
     "tests/ryeona.rs": "88491f4f048676ba04d18e5ccf6af00d6c9cee63782bde1c569f3c3df25397e0",
+    "tests/self_question.rs": "cd9ffad075e7a809948575929cd33f2a5728c379a3f09565b9d7483ee6924be9",
     "tests/seo_connectives.rs": "16fe785640f46da0d453bc2db93c70eb089dacf7d092f65b9dc8cb0d40851680",
     "tests/short_clauses.rs": "d3e1dbb93de840f53c3474ebf4e41e346dc57a0d1225c5d5738226d52ede46a3",
     "tests/short_recipient.rs": "b68799cfedf5fef3db46df1f11dcf641816570b0bbf27db1a2f2b9fb37018a84",
@@ -532,7 +537,7 @@
     "tools/test_reported_dana_release.py": "f69728b303ff406567c98d10aad425620898854bd2fa497ec4ed5a9f73dd5cc1",
     "tools/test_reported_dana_sources.py": "331e2df0f01ef7e9226eec36893164718c13ad0e4031f3a4688127f6152022a0",
     "tools/test_reported_deoni_release.py": "dbdd8158f4f48c1eebdf697ae51524adb9c6f43824f054f5bb90db761265e7ac",
-    "web/src/grammar-labels.json": "0b73492589740e58011ccda02128410790b4a7949663a82f3be58f10867466d8",
+    "web/src/grammar-labels.json": "634d0a5e6d36fde8afdedddc5efa443476492c538c5866a698e06dd36ab5f1c3",
     "web/tests/adjectival-allomorph.mjs": "953c6080b3d52c25248b86e2efbe9d20d3a25fb8386b4d91028fd06cd6a065f7",
     "web/tests/browser.mjs": "e308d37afd41cd8ff91ec4c0073795f6c54097b9995c27dae5e9fe7a14dbfdac",
     "web/tests/caution-ending.mjs": "40f695825c5bceec04ed1b4eac0db1900390c80dc976ad86788aa624205a6607",
@@ -549,11 +554,11 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 481,
-      "unreviewed": 234
+      "scoped": 485,
+      "unreviewed": 230
     },
-    "with_catalog_links": 485,
-    "with_judgment_citations": 510
+    "with_catalog_links": 489,
+    "with_judgment_citations": 514
   },
   "entries": [
     {
@@ -20281,11 +20286,102 @@
         ]
       },
       "source_sha256": "c8f6e0eee61d5cb0c027ba7693affb6134af6e21dff6383169b2a2cb944ac57b",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는담",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "self-question-prefinal-먹으신담",
+          "judgment": "self-question-prefinal-먹으신담-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73881-1-1-41",
+          "judgment": "self-question-source-73881-1-1-41-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73881-1-2-42",
+          "judgment": "self-question-source-73881-1-2-42-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73881-1-3-56",
+          "judgment": "self-question-source-73881-1-3-56-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73881-1-4-58",
+          "judgment": "self-question-source-73881-1-4-58-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73881-1-5-37",
+          "judgment": "self-question-source-73881-1-5-37-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73881",
+        "source_sha256": "c8f6e0eee61d5cb0c027ba7693affb6134af6e21dff6383169b2a2cb944ac57b",
+        "status": "scoped",
+        "checklist": [
+          "COV-017co"
+        ],
+        "scope": "Finite self-question ending source coverage implemented on the integration branch: complete original examples, immediate marker/allomorph constraints, exact dictionary witnesses,29stablecases,CLI/library/display/export and broad/annotated preservation. No contextual sense or precision claim.",
+        "remaining": "Normal Nix/installed/main binding, complete candidate cohorts, quiet timing, wider lexical/marker/auxiliary/particle distributions and independent/contextual review. The exact 웃기담/웃기다 source-POS tension remains Unknown.",
+        "evidence": [
+          {
+            "path": "tests/self_question.rs",
+            "test": "individual_source_and_boundary_cases_have_executable_stable_judgments"
+          },
+          {
+            "path": "tests/self_question.rs",
+            "test": "original_dictionary_owners_survive_filters_and_exact_source_tension_remains_unknown"
+          },
+          {
+            "path": "docs/self-question-draft.md"
+          },
+          {
+            "path": "docs/self-question-broad-retry2.json.gz"
+          },
+          {
+            "path": "docs/self-question-corpora.json.gz"
+          },
+          {
+            "path": "docs/self-question-browser.json.gz"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "self-question-source-73881-1-1-41",
+            "judgment": "self-question-source-73881-1-1-41-structure"
+          },
+          {
+            "case": "self-question-source-73881-1-2-42",
+            "judgment": "self-question-source-73881-1-2-42-structure"
+          },
+          {
+            "case": "self-question-source-73881-1-3-56",
+            "judgment": "self-question-source-73881-1-3-56-structure"
+          },
+          {
+            "case": "self-question-source-73881-1-4-58",
+            "judgment": "self-question-source-73881-1-4-58-structure"
+          },
+          {
+            "case": "self-question-source-73881-1-5-37",
+            "judgment": "self-question-source-73881-1-5-37-structure"
+          },
+          {
+            "case": "self-question-prefinal-먹으신담",
+            "judgment": "self-question-prefinal-먹으신담-structure"
+          }
+        ]
       }
     },
     {
@@ -33891,11 +33987,111 @@
         ]
       },
       "source_sha256": "ba5787dbbe4adf88720a405b661eddca717698dc03fcb5390e07bbfaca299dd9",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-남",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "self-question-boundary-먹더남",
+          "judgment": "self-question-boundary-먹더남-forbidden",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "self-question-prefinal-먹겠남",
+          "judgment": "self-question-prefinal-먹겠남-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73891-1-1-30",
+          "judgment": "self-question-source-73891-1-1-30-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73891-1-2-35",
+          "judgment": "self-question-source-73891-1-2-35-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73891-1-3-47",
+          "judgment": "self-question-source-73891-1-3-47-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73891-1-4-53",
+          "judgment": "self-question-source-73891-1-4-53-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73891-1-5-71",
+          "judgment": "self-question-source-73891-1-5-71-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73891",
+        "source_sha256": "ba5787dbbe4adf88720a405b661eddca717698dc03fcb5390e07bbfaca299dd9",
+        "status": "scoped",
+        "checklist": [
+          "COV-017co"
+        ],
+        "scope": "Finite self-question ending source coverage implemented on the integration branch: complete original examples, immediate marker/allomorph constraints, exact dictionary witnesses,29stablecases,CLI/library/display/export and broad/annotated preservation. No contextual sense or precision claim.",
+        "remaining": "Normal Nix/installed/main binding, complete candidate cohorts, quiet timing, wider lexical/marker/auxiliary/particle distributions and independent/contextual review. The exact 웃기담/웃기다 source-POS tension remains Unknown.",
+        "evidence": [
+          {
+            "path": "tests/self_question.rs",
+            "test": "individual_source_and_boundary_cases_have_executable_stable_judgments"
+          },
+          {
+            "path": "tests/self_question.rs",
+            "test": "original_dictionary_owners_survive_filters_and_exact_source_tension_remains_unknown"
+          },
+          {
+            "path": "docs/self-question-draft.md"
+          },
+          {
+            "path": "docs/self-question-broad-retry2.json.gz"
+          },
+          {
+            "path": "docs/self-question-corpora.json.gz"
+          },
+          {
+            "path": "docs/self-question-browser.json.gz"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "self-question-source-73891-1-1-30",
+            "judgment": "self-question-source-73891-1-1-30-structure"
+          },
+          {
+            "case": "self-question-source-73891-1-2-35",
+            "judgment": "self-question-source-73891-1-2-35-structure"
+          },
+          {
+            "case": "self-question-source-73891-1-3-47",
+            "judgment": "self-question-source-73891-1-3-47-structure"
+          },
+          {
+            "case": "self-question-source-73891-1-4-53",
+            "judgment": "self-question-source-73891-1-4-53-structure"
+          },
+          {
+            "case": "self-question-source-73891-1-5-71",
+            "judgment": "self-question-source-73891-1-5-71-structure"
+          },
+          {
+            "case": "self-question-prefinal-먹겠남",
+            "judgment": "self-question-prefinal-먹겠남-structure"
+          },
+          {
+            "case": "self-question-boundary-먹더남",
+            "judgment": "self-question-boundary-먹더남-forbidden"
+          }
+        ]
       }
     },
     {
@@ -44060,11 +44256,111 @@
         ]
       },
       "source_sha256": "637f4977df87ae9b485a72032d8e0870b61670ae16b5df7a3198344f226942f1",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는담",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "self-question-boundary-먹겠는담",
+          "judgment": "self-question-boundary-먹겠는담-forbidden",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "self-question-boundary-먹었는담",
+          "judgment": "self-question-boundary-먹었는담-forbidden",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "self-question-source-73882-1-1-31",
+          "judgment": "self-question-source-73882-1-1-31-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73882-1-2-38",
+          "judgment": "self-question-source-73882-1-2-38-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73882-1-3-41",
+          "judgment": "self-question-source-73882-1-3-41-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73882-1-4-51",
+          "judgment": "self-question-source-73882-1-4-51-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73882-1-5-133",
+          "judgment": "self-question-source-73882-1-5-133-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73882",
+        "source_sha256": "637f4977df87ae9b485a72032d8e0870b61670ae16b5df7a3198344f226942f1",
+        "status": "scoped",
+        "checklist": [
+          "COV-017co"
+        ],
+        "scope": "Finite self-question ending source coverage implemented on the integration branch: complete original examples, immediate marker/allomorph constraints, exact dictionary witnesses,29stablecases,CLI/library/display/export and broad/annotated preservation. No contextual sense or precision claim.",
+        "remaining": "Normal Nix/installed/main binding, complete candidate cohorts, quiet timing, wider lexical/marker/auxiliary/particle distributions and independent/contextual review. The exact 웃기담/웃기다 source-POS tension remains Unknown.",
+        "evidence": [
+          {
+            "path": "tests/self_question.rs",
+            "test": "individual_source_and_boundary_cases_have_executable_stable_judgments"
+          },
+          {
+            "path": "tests/self_question.rs",
+            "test": "original_dictionary_owners_survive_filters_and_exact_source_tension_remains_unknown"
+          },
+          {
+            "path": "docs/self-question-draft.md"
+          },
+          {
+            "path": "docs/self-question-broad-retry2.json.gz"
+          },
+          {
+            "path": "docs/self-question-corpora.json.gz"
+          },
+          {
+            "path": "docs/self-question-browser.json.gz"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "self-question-source-73882-1-1-31",
+            "judgment": "self-question-source-73882-1-1-31-structure"
+          },
+          {
+            "case": "self-question-source-73882-1-2-38",
+            "judgment": "self-question-source-73882-1-2-38-structure"
+          },
+          {
+            "case": "self-question-source-73882-1-3-41",
+            "judgment": "self-question-source-73882-1-3-41-structure"
+          },
+          {
+            "case": "self-question-source-73882-1-4-51",
+            "judgment": "self-question-source-73882-1-4-51-structure"
+          },
+          {
+            "case": "self-question-source-73882-1-5-133",
+            "judgment": "self-question-source-73882-1-5-133-structure"
+          },
+          {
+            "case": "self-question-boundary-먹었는담",
+            "judgment": "self-question-boundary-먹었는담-forbidden"
+          },
+          {
+            "case": "self-question-boundary-먹겠는담",
+            "judgment": "self-question-boundary-먹겠는담-forbidden"
+          }
+        ]
       }
     },
     {
@@ -51494,11 +51790,129 @@
         ]
       },
       "source_sha256": "5eb71da935589ef855da11d83cea92f06d2fe91661869e7a3dd0f8a161608fc6",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-담",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "self-question-boundary-먹더담",
+          "judgment": "self-question-boundary-먹더담-forbidden",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "self-question-prefinal-먹겠담",
+          "judgment": "self-question-prefinal-먹겠담-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-prefinal-먹으시담",
+          "judgment": "self-question-prefinal-먹으시담-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73883-1-1-27",
+          "judgment": "self-question-source-73883-1-1-27-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73883-1-2-27",
+          "judgment": "self-question-source-73883-1-2-27-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73883-1-3-30",
+          "judgment": "self-question-source-73883-1-3-30-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73883-1-4-50",
+          "judgment": "self-question-source-73883-1-4-50-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73883-1-5-47",
+          "judgment": "self-question-source-73883-1-5-47-structure",
+          "verdict": "required"
+        },
+        {
+          "case": "self-question-source-73883-1-6-57",
+          "judgment": "self-question-source-73883-1-6-57-structure",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73883",
+        "source_sha256": "5eb71da935589ef855da11d83cea92f06d2fe91661869e7a3dd0f8a161608fc6",
+        "status": "scoped",
+        "checklist": [
+          "COV-017co"
+        ],
+        "scope": "Finite self-question ending source coverage implemented on the integration branch: complete original examples, immediate marker/allomorph constraints, exact dictionary witnesses,29stablecases,CLI/library/display/export and broad/annotated preservation. No contextual sense or precision claim.",
+        "remaining": "Normal Nix/installed/main binding, complete candidate cohorts, quiet timing, wider lexical/marker/auxiliary/particle distributions and independent/contextual review. The exact 웃기담/웃기다 source-POS tension remains Unknown.",
+        "evidence": [
+          {
+            "path": "tests/self_question.rs",
+            "test": "individual_source_and_boundary_cases_have_executable_stable_judgments"
+          },
+          {
+            "path": "tests/self_question.rs",
+            "test": "original_dictionary_owners_survive_filters_and_exact_source_tension_remains_unknown"
+          },
+          {
+            "path": "docs/self-question-draft.md"
+          },
+          {
+            "path": "docs/self-question-broad-retry2.json.gz"
+          },
+          {
+            "path": "docs/self-question-corpora.json.gz"
+          },
+          {
+            "path": "docs/self-question-browser.json.gz"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "self-question-source-73883-1-1-27",
+            "judgment": "self-question-source-73883-1-1-27-structure"
+          },
+          {
+            "case": "self-question-source-73883-1-2-27",
+            "judgment": "self-question-source-73883-1-2-27-structure"
+          },
+          {
+            "case": "self-question-source-73883-1-3-30",
+            "judgment": "self-question-source-73883-1-3-30-structure"
+          },
+          {
+            "case": "self-question-source-73883-1-4-50",
+            "judgment": "self-question-source-73883-1-4-50-structure"
+          },
+          {
+            "case": "self-question-source-73883-1-5-47",
+            "judgment": "self-question-source-73883-1-5-47-structure"
+          },
+          {
+            "case": "self-question-source-73883-1-6-57",
+            "judgment": "self-question-source-73883-1-6-57-structure"
+          },
+          {
+            "case": "self-question-prefinal-먹으시담",
+            "judgment": "self-question-prefinal-먹으시담-structure"
+          },
+          {
+            "case": "self-question-prefinal-먹겠담",
+            "judgment": "self-question-prefinal-먹겠담-structure"
+          },
+          {
+            "case": "self-question-boundary-먹더담",
+            "judgment": "self-question-boundary-먹더담-forbidden"
+          }
+        ]
       }
     },
     {

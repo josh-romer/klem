@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "proper-name-park-teacher-original",
+      "surface": "박선생님것",
+      "verdict": "required",
+      "spaced": "박 선생님 것",
+      "source": "krdict:62835/sense:3 + ud-ko-kaist:proper-name:park",
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "proper-name-park-teacher-subject",
+      "surface": "박선생님것이",
+      "verdict": "required",
+      "spaced": "박 선생님 것이",
+      "source": "krdict:62835/sense:3 + ud-ko-kaist:proper-name:park",
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "proper-name-park-teacher-copula",
+      "surface": "박선생님것이다",
+      "verdict": "required",
+      "spaced": "박 선생님 것이다",
+      "source": "krdict:62835/sense:3 + ud-ko-kaist:proper-name:park",
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "proper-name-park-teacher-genitive",
+      "surface": "박선생님의것",
+      "verdict": "required",
+      "spaced": "박 선생님의 것",
+      "source": "krdict:62835/sense:3 + ud-ko-kaist:proper-name:park",
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "proper-name-boundary-unlisted-name",
+      "surface": "김선생님것",
+      "verdict": "forbidden",
+      "rule": "spacing.proper_name_title_possession",
+      "scope": "Only the new finite template is excluded; other spacing and word hypotheses remain open."
+    },
+    {
+      "id": "proper-name-boundary-unlisted-title-friend",
+      "surface": "박친구것",
+      "verdict": "forbidden",
+      "rule": "spacing.proper_name_title_possession",
+      "scope": "Only the new finite template is excluded; other spacing and word hypotheses remain open."
+    },
+    {
+      "id": "proper-name-boundary-unlisted-title-member",
+      "surface": "박의원것",
+      "verdict": "forbidden",
+      "rule": "spacing.proper_name_title_possession",
+      "scope": "Only the new finite template is excluded; other spacing and word hypotheses remain open."
+    },
+    {
+      "id": "proper-name-boundary-cause",
+      "surface": "박선생님때문에",
+      "verdict": "forbidden",
+      "rule": "spacing.proper_name_title_possession",
+      "scope": "Only the new finite template is excluded; other spacing and word hypotheses remain open."
+    },
+    {
+      "id": "proper-name-boundary-ordinary-noun",
+      "surface": "박선생님일",
+      "verdict": "forbidden",
+      "rule": "spacing.proper_name_title_possession",
+      "scope": "Only the new finite template is excluded; other spacing and word hypotheses remain open."
+    },
+    {
+      "id": "proper-name-boundary-unreviewed-plural",
+      "surface": "박선생님들것",
+      "verdict": "forbidden",
+      "rule": "spacing.proper_name_title_possession",
+      "scope": "Only the new finite template is excluded; other spacing and word hypotheses remain open."
+    }
+  ]
+}

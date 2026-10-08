@@ -1,6 +1,7 @@
 //! Local HTTP adapter for the SolidJS sentence explorer.
 use klem::dictionary::{
-    Compatibility, Dictionary, DictionarySession, EntrySummary, Result, SqliteDictionary,
+    Compatibility, Dictionary, DictionarySession, EntrySummary, ProperNameDictionary, Result,
+    SqliteDictionary,
 };
 use klem::{Lemmatizer, MorphemeKind, Session, TokenKind, Tokenizer, WordAnalysis};
 use serde::Deserialize;
@@ -20,7 +21,7 @@ const MAX_WORD_CHARS: usize = 64;
 const MAX_BODY_BYTES: u64 = 32_768;
 #[path = "klem-web/grammar_labels.rs"]
 mod grammar_labels;
-const HELP: &str = "klem-web — local Korean sentence explorer\n\nUsage: klem-web [--port 8080] [--assets web/dist] [--dictionary path.db]\n\nOpen http://127.0.0.1:8080 in your browser. Binds only to loopback.\nWithout --dictionary, the app shows rule candidates without dictionary matches.\nBuild assets first with cd web && npm ci && npm run build, or use nix run .#web.\n";
+const HELP: &str = "klem-web — local Korean sentence explorer\n\nUsage: klem-web [--port 8080] [--assets web/dist] [--dictionary path.db] [--proper-names]\n\nOpen http://127.0.0.1:8080 in your browser. Binds only to loopback.\n--proper-names adds separately attributed training-corpus names (currently 박).\nWithout --dictionary, the app shows rule candidates without dictionary matches.\nBuild assets first with cd web && npm ci && npm run build, or use nix run .#web.\n";
 
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -65,8 +66,8 @@ impl RenderMetadata {
         &mut self,
         analysis: &WordAnalysis,
         annotation: Option<&klem::dictionary::Annotation>,
-        database: Option<&SqliteDictionary>,
-        lookups: &mut Option<DictionarySession<'_, SqliteDictionary>>,
+        database: Option<&dyn Dictionary>,
+        lookups: &mut Option<DictionarySession<'_, dyn Dictionary + '_>>,
     ) -> Result<()> {
         // Short hints for compatible homonyms. Full senses remain available on demand;
         // neither dictionary order nor POS compatibility chooses a contextual sense.
@@ -144,12 +145,12 @@ impl RenderMetadata {
     }
 }
 #[cfg(test)]
-fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
+fn analyze(text: &str, dictionary: Option<&dyn Dictionary>) -> Result<Value> {
     analyze_with_spacing(text, dictionary, false)
 }
 fn analyze_with_spacing(
     text: &str,
-    dictionary: Option<&SqliteDictionary>,
+    dictionary: Option<&dyn Dictionary>,
     suggest_spacing: bool,
 ) -> Result<Value> {
     validate_text(text)?;
@@ -288,7 +289,7 @@ fn asset(root: &Path, url: &str) -> Option<(Vec<u8>, &'static str)> {
     Some((fs::read(path).ok()?, mime))
 }
 
-fn handle(mut request: Request, root: &Path, dictionary: Option<&SqliteDictionary>, port: u16) {
+fn handle(mut request: Request, root: &Path, dictionary: Option<&dyn Dictionary>, port: u16) {
     let allowed = [format!("127.0.0.1:{port}"), format!("localhost:{port}")];
     let host = request
         .headers()
@@ -424,12 +425,14 @@ fn run() -> Result<()> {
         .map(PathBuf::from)
         .unwrap_or_else(|| "web/dist".into());
     let mut dictionary_path = None;
+    let mut proper_names = false;
     while let Some(arg) = args.next() {
         match arg.as_str() {
             "--help" | "-h" => {
                 print!("{HELP}");
                 return Ok(());
             }
+            "--proper-names" => proper_names = true,
             "--port" => port = args.next().ok_or("--port needs a number")?.parse()?,
             "--assets" => assets = args.next().ok_or("--assets needs a directory")?.into(),
             "--dictionary" => {
@@ -438,13 +441,25 @@ fn run() -> Result<()> {
             _ => return Err(format!("unknown argument: {arg}\n{HELP}").into()),
         }
     }
+    if proper_names && dictionary_path.is_none() {
+        return Err("--proper-names requires --dictionary <db>".into());
+    }
     let assets = assets.canonicalize().map_err(|e| {
         format!("Cannot open frontend assets: {e}. Build web/ first or use nix run .#web.")
     })?;
     if !assets.join("index.html").is_file() {
         return Err("frontend index.html is missing; run npm run build in web/".into());
     }
-    let dictionary = dictionary_path.map(SqliteDictionary::open).transpose()?;
+    let dictionary: Option<Box<dyn Dictionary>> = dictionary_path
+        .map(|path| {
+            let db = SqliteDictionary::open(path)?;
+            Ok::<Box<dyn Dictionary>, Box<dyn std::error::Error + Send + Sync>>(if proper_names {
+                Box::new(ProperNameDictionary::new(db))
+            } else {
+                Box::new(db)
+            })
+        })
+        .transpose()?;
     let server = Server::http(("127.0.0.1", port))?;
     let actual_port = server
         .server_addr()
@@ -453,7 +468,7 @@ fn run() -> Result<()> {
         .port();
     eprintln!("klem-web: http://127.0.0.1:{actual_port}");
     for request in server.incoming_requests() {
-        handle(request, &assets, dictionary.as_ref(), actual_port);
+        handle(request, &assets, dictionary.as_deref(), actual_port);
     }
     Ok(())
 }

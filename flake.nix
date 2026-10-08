@@ -55,7 +55,7 @@
 
             meta = {
               description = manifest.package.description;
-              license = with pkgs.lib.licenses; [ mit asl20 ];
+              license = with pkgs.lib.licenses; [ mit asl20 cc-by-sa-40 ];
               mainProgram = "klem";
               platforms = systems;
             };
@@ -517,6 +517,10 @@
                 ./tools/declarative_dao_preservation.py
                 ./tools/test_declarative_dao_preservation.py
                 ./tools/declarative_dao_performance.py
+                ./tools/proper_name_source_audit.py
+                ./tools/test_proper_name_source_audit.py
+                ./tools/self_question_source_audit.py
+                ./tools/test_self_question_source_audit.py
                 ./tools/bound_noun_spacing_runtime.py
                 ./tools/test_bound_noun_spacing_runtime.py
                 ./tools/bound_noun_spacing_package_audit.py
@@ -1010,6 +1014,10 @@
             python tools/declarative_dao_audit.py
             python tools/declarative_dao_preservation.py
             python tools/declarative_dao_performance.py
+            python tools/proper_name_source_audit.py
+            python -m unittest discover -s tools -p 'test_proper_name_source_audit.py'
+            python tools/self_question_source_audit.py
+            python -m unittest discover -s tools -p 'test_self_question_source_audit.py'
             python -m unittest discover -s tools -p 'test_declarative_dao_*.py'
             python -m unittest discover -s tools -p 'test_possessive_bound_noun_*.py'
             python tools/bound_noun_spacing_runtime.py --fixture tests/fixtures/bound-noun-spacing-cases.json --closure docs/bound-noun-spacing-native-closure.json.gz --verify docs/bound-noun-spacing-installed-runtime.json.gz

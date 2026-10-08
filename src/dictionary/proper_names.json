@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "source": "UD Korean Kaist training proper-name evidence",
+  "source_url": "https://github.com/UniversalDependencies/UD_Korean-Kaist",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "attribution": "KAIST Treebank / Universal Dependencies Korean Kaist contributors; UPOS and XPOS converted from manual annotation.",
+  "partition": "train",
+  "source_files": {
+    "data/corpora/kaist/ko_kaist-ud-train.conllu": {
+      "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "bytes": 34505277
+    },
+    "data/corpora/kaist/README.md": {
+      "sha256": "0ac14fe7d8322135ef5add6cc6239d3690b8c5597db73e162882fbb32c90fc30",
+      "bytes": 1854
+    },
+    "data/corpora/kaist/LICENSE.txt": {
+      "sha256": "899b1804a12ebc090b96339614eede1b64b686721b650a71430b55b5235f7f79",
+      "bytes": 202
+    }
+  },
+  "names": [
+    {
+      "id": "ud-ko-kaist:proper-name:park",
+      "headword": "박",
+      "pos": "PROPN",
+      "xpos": "nq",
+      "observations": [
+        {
+          "id": "kaist-training-surname-park-MH2_0083-s6-1",
+          "sentence_id": "MH2_0083-s6",
+          "token_id": "1",
+          "original_row": [
+            "1",
+            "박",
+            "박",
+            "PROPN",
+            "nq",
+            "_",
+            "2",
+            "compound",
+            "_",
+            "Translit=.bag|LTranslit=.bag"
+          ],
+          "complete_original_sentence": "# sent_id = MH2_0083-s6\n# text = 박 보좌관은 역시 끈질긴 면이 있더구먼.\n# translit = .bag .bo.jwa.gwan.eun .yeog.si .ggeun.jil.gin .myeon.i .iss.deo.gu.meon.\n1\t박\t박\tPROPN\tnq\t_\t2\tcompound\t_\tTranslit=.bag|LTranslit=.bag\n2\t보좌관은\t보좌관+은\tNOUN\tncn+jxt\t_\t6\tdislocated\t_\tTranslit=.bo.jwa.gwan.eun|LTranslit=.bo.jwa.gwan+.eun\n3\t역시\t역시\tADV\tmag\t_\t4\tadvmod\t_\tTranslit=.yeog.si|LTranslit=.yeog.si\n4\t끈질긴\t끈질기+ㄴ\tADJ\tpaa+etm\t_\t5\tamod\t_\tTranslit=.ggeun.jil.gin|LTranslit=.ggeun.jil.gi+ㄴ\n5\t면이\t면+이\tNOUN\tncn+jcs\t_\t6\tnsubj\t_\tTranslit=.myeon.i|LTranslit=.myeon+.i\n6\t있더구먼\t있+더구먼\tADJ\tpaa+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.iss.deo.gu.meon|LTranslit=.iss+.deo.gu.meon\n7\t.\t.\tPUNCT\tsf\t_\t6\tpunct\t_\tTranslit=.|LTranslit=.",
+          "source_partition": "train",
+          "lexical_verdict": "The original training row marks standalone 박 as a proper noun; its following title is retained in the complete context. This does not establish every meaning of 박 or contextual correctness of arbitrary joined strings."
+        },
+        {
+          "id": "kaist-training-surname-park-MH2_0083-s7-15",
+          "sentence_id": "MH2_0083-s7",
+          "token_id": "15",
+          "original_row": [
+            "15",
+            "박",
+            "박",
+            "PROPN",
+            "nq",
+            "_",
+            "16",
+            "compound",
+            "_",
+            "Translit=.bag|LTranslit=.bag"
+          ],
+          "complete_original_sentence": "# sent_id = MH2_0083-s7\n# text = 그로스 공산당 서기장과의 면담이 이루어지지 않고 고생하는 것을 내가 이전의 친분을 통해 좀 도와주고 박 보좌관이 물고늘어져 성사될 수 있었지요.\n# translit = .geu.ro.seu .gong.san.dang .seo.gi.jang.gwa.yi .myeon.dam.i .i.ru.eo.ji.ji .anh.go .go.saeng.ha.neun .geos.eul .nae.ga .i.jeon.yi .chin.bun.eul .tong.hae .jom .do.wa.ju.go .bag .bo.jwa.gwan.i .mul.go.neul.eo.jyeo .seong.sa.doel .su .iss.eoss.ji.yo.\n1\t그로스\t그로스\tPROPN\tnq\t_\t3\tcompound\t_\tTranslit=.geu.ro.seu|LTranslit=.geu.ro.seu\n2\t공산당\t공산당\tNOUN\tncn\t_\t3\tcompound\t_\tTranslit=.gong.san.dang|LTranslit=.gong.san.dang\n3\t서기장과의\t서기장+과+의\tNOUN\tncn+jct+jcm\t_\t4\tnmod\t_\tTranslit=.seo.gi.jang.gwa.yi|LTranslit=.seo.gi.jang+.gwa+.yi\n4\t면담이\t면담+이\tNOUN\tncpa+jcs\t_\t5\tnsubj\t_\tTranslit=.myeon.dam.i|LTranslit=.myeon.dam+.i\n5\t이루어지지\t이루+어+지+지\tVERB\tpvg+ecx+px+ecx\t_\t8\tacl\t_\tTranslit=.i.ru.eo.ji.ji|LTranslit=.i.ru+.eo+.ji+.ji\n6\t않고\t않\tAUX\tpx+ecc\t_\t5\taux\t_\tOrigLemma=않+고|Translit=.anh.go|LTranslit=.anh\n7\t고생하는\t고생+하+는\tVERB\tncpa+xsv+etm\t_\t5\tconj\t_\tTranslit=.go.saeng.ha.neun|LTranslit=.go.saeng+.ha+.neun\n8\t것을\t것+을\tNOUN\tnbn+jco\t_\t18\tobj\t_\tTranslit=.geos.eul|LTranslit=.geos+.eul\n9\t내가\t내+가\tPRON\tnpp+jcs\t_\t14\tnsubj\t_\tTranslit=.nae.ga|LTranslit=.nae+.ga\n10\t이전의\t이전+의\tNOUN\tncn+jcm\t_\t11\tnmod\t_\tTranslit=.i.jeon.yi|LTranslit=.i.jeon+.yi\n11\t친분을\t친분+을\tNOUN\tncn+jco\t_\t12\tobj\t_\tTranslit=.chin.bun.eul|LTranslit=.chin.bun+.eul\n12\t통해\t통하+어\tSCONJ\tpvg+ecs\t_\t14\tccomp\t_\tTranslit=.tong.hae|LTranslit=.tong.ha+.eo\n13\t좀\t좀\tADV\tmag\t_\t14\tadvmod\t_\tTranslit=.jom|LTranslit=.jom\n14\t도와주고\t돕+아+주+고\tCCONJ\tpvg+ecx+px+ecc\t_\t18\tccomp\t_\tTranslit=.do.wa.ju.go|LTranslit=.dob+.a+.ju+.go\n15\t박\t박\tPROPN\tnq\t_\t16\tcompound\t_\tTranslit=.bag|LTranslit=.bag\n16\t보좌관이\t보좌관+이\tNOUN\tncn+jcs\t_\t17\tnsubj\t_\tTranslit=.bo.jwa.gwan.i|LTranslit=.bo.jwa.gwan+.i\n17\t물고늘어져\t물고늘어지+어\tSCONJ\tpvg+ecs\t_\t14\tconj\t_\tTranslit=.mul.go.neul.eo.jyeo|LTranslit=.mul.go.neul.eo.ji+.eo\n18\t성사될\t성사+되+ㄹ\tVERB\tncpa+xsv+etm\t_\t0\troot\t_\tTranslit=.seong.sa.doel|LTranslit=.seong.sa+.doe+ㄹ\n19\t수\t수\tNOUN\tnbn\t_\t18\tobl\t_\tOrigDeprel=aux|Translit=.su|LTranslit=.su\n20\t있었지요\t있+었+지요\tADJ\tpaa+ep+ef\t_\t19\tfixed\t_\tSpaceAfter=No|Translit=.iss.eoss.ji.yo|LTranslit=.iss+.eoss+.ji.yo\n21\t.\t.\tPUNCT\tsf\t_\t19\tpunct\t_\tTranslit=.|LTranslit=.",
+          "source_partition": "train",
+          "lexical_verdict": "The original training row marks standalone 박 as a proper noun; its following title is retained in the complete context. This does not establish every meaning of 박 or contextual correctness of arbitrary joined strings."
+        },
+        {
+          "id": "kaist-training-surname-park-MH2_0083-s157-4",
+          "sentence_id": "MH2_0083-s157",
+          "token_id": "4",
+          "original_row": [
+            "4",
+            "박",
+            "박",
+            "PROPN",
+            "nq",
+            "_",
+            "5",
+            "compound",
+            "_",
+            "Translit=.bag|LTranslit=.bag"
+          ],
+          "complete_original_sentence": "# sent_id = MH2_0083-s157\n# text = 그러나 이때 이미 박 보좌관은 정부 관리로서는 최초로 외무성을 방문, 노 대통령의 친서를 처음으로 고르바초프 대통령에게 전달하고 귀국을 앞두고 있었다.\n# translit = .geu.reo.na .i.ddae .i.mi .bag .bo.jwa.gwan.eun .jeong.bu .gwan.ri.ro.seo.neun .choe.cho.ro .oe.mu.seong.eul .bang.mun, .no .dae.tong.ryeong.yi .chin.seo.reul .cheo.eum.eu.ro .go.reu.ba.cho.peu .dae.tong.ryeong.e.ge .jeon.dal.ha.go .gwi.gug.eul .ap.du.go .iss.eoss.da.\n1\t그러나\t그러나\tCCONJ\tmaj\t_\t20\tcc\t_\tTranslit=.geu.reo.na|LTranslit=.geu.reo.na\n2\t이때\t이때\tNOUN\tncn\t_\t10\tcompound\t_\tTranslit=.i.ddae|LTranslit=.i.ddae\n3\t이미\t이미\tADV\tmag\t_\t10\tadvmod\t_\tTranslit=.i.mi|LTranslit=.i.mi\n4\t박\t박\tPROPN\tnq\t_\t5\tcompound\t_\tTranslit=.bag|LTranslit=.bag\n5\t보좌관은\t보좌관+은\tNOUN\tncn+jxt\t_\t10\tdislocated\t_\tTranslit=.bo.jwa.gwan.eun|LTranslit=.bo.jwa.gwan+.eun\n6\t정부\t정부\tNOUN\tncn\t_\t7\tcompound\t_\tTranslit=.jeong.bu|LTranslit=.jeong.bu\n7\t관리로서는\t관리+로서+는\tNOUN\tncn+jca+jxt\t_\t10\tdislocated\t_\tTranslit=.gwan.ri.ro.seo.neun|LTranslit=.gwan.ri+.ro.seo+.neun\n8\t최초로\t최초+로\tADV\tncn+jca\t_\t10\tadvcl\t_\tTranslit=.choe.cho.ro|LTranslit=.choe.cho+.ro\n9\t외무성을\t외무성+을\tNOUN\tncn+jco\t_\t10\tobj\t_\tTranslit=.oe.mu.seong.eul|LTranslit=.oe.mu.seong+.eul\n10\t방문\t방문\tNOUN\tncpa\t_\t20\tobl\t_\tSpaceAfter=No|Translit=.bang.mun|LTranslit=.bang.mun\n11\t,\t,\tPUNCT\tsp\t_\t10\tpunct\t_\tTranslit=,|LTranslit=,\n12\t노\t노\tPROPN\tnq\t_\t13\tcompound\t_\tTranslit=.no|LTranslit=.no\n13\t대통령의\t대통령+의\tNOUN\tncn+jcm\t_\t14\tnmod\t_\tTranslit=.dae.tong.ryeong.yi|LTranslit=.dae.tong.ryeong+.yi\n14\t친서를\t친서+를\tNOUN\tncn+jco\t_\t18\tobj\t_\tTranslit=.chin.seo.reul|LTranslit=.chin.seo+.reul\n15\t처음으로\t처음+으로\tADV\tncn+jca\t_\t18\tadvcl\t_\tTranslit=.cheo.eum.eu.ro|LTranslit=.cheo.eum+.eu.ro\n16\t고르바초프\t고르바초프\tPROPN\tnq\t_\t17\tcompound\t_\tTranslit=.go.reu.ba.cho.peu|LTranslit=.go.reu.ba.cho.peu\n17\t대통령에게\t대통령+에게\tADV\tncn+jca\t_\t18\tiobj\t_\tTranslit=.dae.tong.ryeong.e.ge|LTranslit=.dae.tong.ryeong+.e.ge\n18\t전달하고\t전달+하+고\tCCONJ\tncpa+xsv+ecc\t_\t0\troot\t_\tTranslit=.jeon.dal.ha.go|LTranslit=.jeon.dal+.ha+.go\n19\t귀국을\t귀국+을\tNOUN\tncpa+jco\t_\t20\tobj\t_\tTranslit=.gwi.gug.eul|LTranslit=.gwi.gug+.eul\n20\t앞두고\t앞두+고\tVERB\tpvg+ecx\t_\t18\tconj\t_\tTranslit=.ap.du.go|LTranslit=.ap.du+.go\n21\t있었다\t있\tAUX\tpx+ep+ef\t_\t20\taux\t_\tOrigLemma=있+었+다|SpaceAfter=No|Translit=.iss.eoss.da|LTranslit=.iss\n22\t.\t.\tPUNCT\tsf\t_\t21\tpunct\t_\tTranslit=.|LTranslit=.",
+          "source_partition": "train",
+          "lexical_verdict": "The original training row marks standalone 박 as a proper noun; its following title is retained in the complete context. This does not establish every meaning of 박 or contextual correctness of arbitrary joined strings."
+        },
+        {
+          "id": "kaist-training-surname-park-MH2_0083-s177-12",
+          "sentence_id": "MH2_0083-s177",
+          "token_id": "12",
+          "original_row": [
+            "12",
+            "박",
+            "박",
+            "PROPN",
+            "nq",
+            "_",
+            "13",
+            "compound",
+            "_",
+            "Translit=.bag|LTranslit=.bag"
+          ],
+          "complete_original_sentence": "# sent_id = MH2_0083-s177\n# text = 따라서 두나이예프와 박철언 의원과의 관계를 어느 정도 파악하고 있던 김종휘 보좌관이 박 의원에게 도움을 요청한 것이다.\n# translit = .dda.ra.seo .du.na.i.ye.peu.wa .bag.cheol.eon .yi.weon.gwa.yi .gwan.gye.reul .eo.neu .jeong.do .pa.ag.ha.go .iss.deon .gim.jong.hwi .bo.jwa.gwan.i .bag .yi.weon.e.ge .do.um.eul .yo.cheong.han .geos.i.da.\n1\t따라서\t따라서\tCCONJ\tmaj\t_\t15\tcc\t_\tTranslit=.dda.ra.seo|LTranslit=.dda.ra.seo\n2\t두나이예프와\t두나이예프+와\tCCONJ\tnq+jcj\t_\t5\tnmod\t_\tTranslit=.du.na.i.ye.peu.wa|LTranslit=.du.na.i.ye.peu+.wa\n3\t박철언\t박철언\tPROPN\tnq\t_\t4\tcompound\t_\tTranslit=.bag.cheol.eon|LTranslit=.bag.cheol.eon\n4\t의원과의\t의원+과+의\tNOUN\tncn+jct+jcm\t_\t2\tconj\t_\tTranslit=.yi.weon.gwa.yi|LTranslit=.yi.weon+.gwa+.yi\n5\t관계를\t관계+를\tNOUN\tncpa+jco\t_\t8\tobj\t_\tTranslit=.gwan.gye.reul|LTranslit=.gwan.gye+.reul\n6\t어느\t어느\tDET\tmmd\t_\t7\tdet\t_\tTranslit=.eo.neu|LTranslit=.eo.neu\n7\t정도\t정도\tNOUN\tncn\t_\t8\tcompound\t_\tTranslit=.jeong.do|LTranslit=.jeong.do\n8\t파악하고\t파악+하+고\tVERB\tncpa+xsv+ecx\t_\t11\tacl\t_\tTranslit=.pa.ag.ha.go|LTranslit=.pa.ag+.ha+.go\n9\t있던\t있\tAUX\tpx+etm\t_\t8\taux\t_\tOrigLemma=있+던|Translit=.iss.deon|LTranslit=.iss\n10\t김종휘\t김종휘\tPROPN\tnq\t_\t11\tcompound\t_\tTranslit=.gim.jong.hwi|LTranslit=.gim.jong.hwi\n11\t보좌관이\t보좌관+이\tNOUN\tncn+jcs\t_\t15\tnsubj\t_\tTranslit=.bo.jwa.gwan.i|LTranslit=.bo.jwa.gwan+.i\n12\t박\t박\tPROPN\tnq\t_\t13\tcompound\t_\tTranslit=.bag|LTranslit=.bag\n13\t의원에게\t의원+에게\tADV\tncn+jca\t_\t15\tiobj\t_\tTranslit=.yi.weon.e.ge|LTranslit=.yi.weon+.e.ge\n14\t도움을\t돕+ㅁ+을\tNOUN\tpvg+etn+jco\t_\t15\tobj\t_\tTranslit=.do.um.eul|LTranslit=.dob+ㅁ+.eul\n15\t요청한\t요청+하+ㄴ\tVERB\tncpa+xsv+etm\t_\t0\troot\t_\tTranslit=.yo.cheong.han|LTranslit=.yo.cheong+.ha+ㄴ\n16\t것이다\t것+이+다\tVERB\tnbn+jp+ef\t_\t15\tadvcl\t_\tSpaceAfter=No|Translit=.geos.i.da|LTranslit=.geos+.i+.da\n17\t.\t.\tPUNCT\tsf\t_\t16\tpunct\t_\tTranslit=.|LTranslit=.",
+          "source_partition": "train",
+          "lexical_verdict": "The original training row marks standalone 박 as a proper noun; its following title is retained in the complete context. This does not establish every meaning of 박 or contextual correctness of arbitrary joined strings."
+        },
+        {
+          "id": "kaist-training-surname-park-MH2_0083-s189-3",
+          "sentence_id": "MH2_0083-s189",
+          "token_id": "3",
+          "original_row": [
+            "3",
+            "박",
+            "박",
+            "PROPN",
+            "nq",
+            "_",
+            "4",
+            "compound",
+            "_",
+            "Translit=.bag|LTranslit=.bag"
+          ],
+          "complete_original_sentence": "# sent_id = MH2_0083-s189\n# text = 이렇게 해서 박 의원은 우리측 관계자 한 명을 두나이예프와 모스크바로 동행시켰고 며칠 후 두나이예프가 일본으로 돌아왔다.\n# translit = .i.reoh.ge .hae.seo .bag .yi.weon.eun .u.ri.cheug .gwan.gye.ja .han .myeong.eul .du.na.i.ye.peu.wa .mo.seu.keu.ba.ro .dong.haeng.si.kyeoss.go .myeo.chil .hu .du.na.i.ye.peu.ga .il.bon.eu.ro .dol.a.wass.da.\n1\t이렇게\t이렇게\tADV\tmad\t_\t2\tadvmod\t_\tTranslit=.i.reoh.ge|LTranslit=.i.reoh.ge\n2\t해서\t하+어서\tSCONJ\tpvg+ecs\t_\t11\tccomp\t_\tTranslit=.hae.seo|LTranslit=.ha+.eo.seo\n3\t박\t박\tPROPN\tnq\t_\t4\tcompound\t_\tTranslit=.bag|LTranslit=.bag\n4\t의원은\t의원+은\tNOUN\tncn+jxt\t_\t11\tdislocated\t_\tTranslit=.yi.weon.eun|LTranslit=.yi.weon+.eun\n5\t우리측\t우리+측\tNOUN\tnpp+xsn\t_\t6\tobl\t_\tTranslit=.u.ri.cheug|LTranslit=.u.ri+.cheug\n6\t관계자\t관계자\tNOUN\tncn\t_\t8\tcompound\t_\tTranslit=.gwan.gye.ja|LTranslit=.gwan.gye.ja\n7\t한\t한\tNUM\tnnc\t_\t8\tnummod\t_\tTranslit=.han|LTranslit=.han\n8\t명을\t명+을\tNOUN\tnbu+jco\t_\t11\tobj\t_\tTranslit=.myeong.eul|LTranslit=.myeong+.eul\n9\t두나이예프와\t두나이예프+와\tCCONJ\tnq+jct\t_\t0\troot\t_\tTranslit=.du.na.i.ye.peu.wa|LTranslit=.du.na.i.ye.peu+.wa\n10\t모스크바로\t모스크바+로\tADV\tnq+jca\t_\t11\tadvcl\t_\tTranslit=.mo.seu.keu.ba.ro|LTranslit=.mo.seu.keu.ba+.ro\n11\t동행시켰고\t동행+시키+었+고\tCCONJ\tncpa+xsv+ep+ecc\t_\t9\tconj\t_\tTranslit=.dong.haeng.si.kyeoss.go|LTranslit=.dong.haeng+.si.ki+.eoss+.go\n12\t며칠\t며칠\tNOUN\tncn\t_\t13\tcompound\t_\tTranslit=.myeo.chil|LTranslit=.myeo.chil\n13\t후\t후\tNOUN\tncn\t_\t16\tobl\t_\tTranslit=.hu|LTranslit=.hu\n14\t두나이예프가\t두나이예프+가\tPROPN\tnq+jcs\t_\t16\tnsubj\t_\tTranslit=.du.na.i.ye.peu.ga|LTranslit=.du.na.i.ye.peu+.ga\n15\t일본으로\t일본+으로\tADV\tnq+jca\t_\t16\tadvcl\t_\tTranslit=.il.bon.eu.ro|LTranslit=.il.bon+.eu.ro\n16\t돌아왔다\t돌+아+오+았+다\tVERB\tpvg+ecx+px+ep+ef\t_\t9\tconj\t_\tSpaceAfter=No|Translit=.dol.a.wass.da|LTranslit=.dol+.a+.o+.ass+.da\n17\t.\t.\tPUNCT\tsf\t_\t16\tpunct\t_\tTranslit=.|LTranslit=.",
+          "source_partition": "train",
+          "lexical_verdict": "The original training row marks standalone 박 as a proper noun; its following title is retained in the complete context. This does not establish every meaning of 박 or contextual correctness of arbitrary joined strings."
+        }
+      ]
+    }
+  ]
+}

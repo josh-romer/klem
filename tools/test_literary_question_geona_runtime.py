@@ -64,16 +64,32 @@ class Controls(unittest.TestCase):
   c=copy.deepcopy(self.current);c['sources']['dao-77931']='https://example.invalid/changed'
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
  def test_dao_case_order_change_cannot_pass(self):
-  c=copy.deepcopy(self.current);c['cases'][-1],c['cases'][-2]=c['cases'][-2],c['cases'][-1]
+  c=copy.deepcopy(self.current);c['cases'][35049],c['cases'][35048]=c['cases'][35048],c['cases'][35049]
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
  def test_coordinated_dao_fixture_and_ledger_mutation_cannot_pass(self):
   c=copy.deepcopy(self.current);dao=audit.read(audit.ROOT/'tests/fixtures/declarative-dao-validity.json')
   later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
-  c['cases'][-1]['judgments'][0]['reason']='coordinated changed judgment'
-  dao['cases'][-1]=copy.deepcopy(c['cases'][-1])
+  c['cases'][35049]['judgments'][0]['reason']='coordinated changed judgment'
+  dao['cases'][-1]=copy.deepcopy(c['cases'][35049])
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);fixture=root/'tests/fixtures/declarative-dao-validity.json';fixture.parent.mkdir(parents=True)
    fixture.write_text(audit.json.dumps(dao))
    with patch.object(audit,'ROOT',root):
     with self.assertRaisesRegex(AssertionError,'reviewed DAO fixture bytes'):audit.verify_ledger(c,self.proposal,later)
+ def test_exact_pre_self_question_ledger_still_passes(self):
+  c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures/self-question-validity.json');c['cases']=c['cases'][:-29]
+  for key in suite['sources']:c['sources'].pop(key)
+  self.assertEqual(audit.verify_ledger(c,self.proposal)['preserved_cases'],34920)
+ def test_self_question_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][-1],c['cases'][-2]=c['cases'][-2],c['cases'][-1]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_self_question_fixture_mutation_cannot_pass(self):
+  c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures/self-question-validity.json');later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
+  c['cases'][-1]['judgments'][0]['reason']='coordinated changed self-question judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][-1])
+  dao_bytes=(audit.ROOT/'tests/fixtures/declarative-dao-validity.json').read_bytes()
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
+   (fixtures/'declarative-dao-validity.json').write_bytes(dao_bytes);(fixtures/'self-question-validity.json').write_text(audit.json.dumps(suite))
+   with patch.object(audit,'ROOT',root):
+    with self.assertRaisesRegex(AssertionError,'reviewed self-question fixture bytes'):audit.verify_ledger(c,self.proposal,later)
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "id": "named-title-park-teacher-novel-subject",
+      "surface": "박선생님께서",
+      "required_spacing": "박 선생님께서",
+      "source": [
+        "krdict:62818/sense:2",
+        "ud-ko-kaist:proper-name:park"
+      ],
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "named-title-park-teacher-bare",
+      "surface": "박선생님",
+      "required_spacing": "박 선생님",
+      "source": [
+        "krdict:62818/sense:2",
+        "ud-ko-kaist:proper-name:park"
+      ],
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "named-title-park-teacher-honorific-recipient",
+      "surface": "박선생님께",
+      "required_spacing": "박 선생님께",
+      "source": [
+        "krdict:62818/sense:2",
+        "ud-ko-kaist:proper-name:park"
+      ],
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "named-title-park-teacher-genitive",
+      "surface": "박선생님의",
+      "required_spacing": "박 선생님의",
+      "source": [
+        "krdict:62818/sense:2",
+        "ud-ko-kaist:proper-name:park"
+      ],
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "named-title-park-teacher-object",
+      "surface": "박선생님을",
+      "required_spacing": "박 선생님을",
+      "source": [
+        "krdict:62818/sense:2",
+        "ud-ko-kaist:proper-name:park"
+      ],
+      "contextual_verdict": "unjudged"
+    },
+    {
+      "id": "named-title-boundary-unreviewed-name",
+      "surface": "김선생님께서",
+      "forbidden_rule": "spacing.proper_name_title",
+      "scope": "Only this finite name/title template; older and possession hypotheses remain available."
+    },
+    {
+      "id": "named-title-boundary-unlisted-title-friend",
+      "surface": "박친구께서",
+      "forbidden_rule": "spacing.proper_name_title",
+      "scope": "Only this finite name/title template; older and possession hypotheses remain available."
+    },
+    {
+      "id": "named-title-boundary-unlisted-title-member",
+      "surface": "박의원께서",
+      "forbidden_rule": "spacing.proper_name_title",
+      "scope": "Only this finite name/title template; older and possession hypotheses remain available."
+    },
+    {
+      "id": "named-title-boundary-possessive-family",
+      "surface": "박선생님것",
+      "forbidden_rule": "spacing.proper_name_title",
+      "scope": "Only this finite name/title template; older and possession hypotheses remain available."
+    }
+  ],
+  "rule": "spacing.proper_name_title",
+  "complete_coverage": false
+}

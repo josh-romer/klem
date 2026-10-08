@@ -2442,6 +2442,65 @@ impl Annotation {
                         }
                     }
                     if let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "담" | "는담" | "남")
+                    {
+                        // Native 73881/73882 keep the present verb allomorph;
+                        // 73883 lists adjectives or 시/었/겠; 73891 lists
+                        // verbs or those markers. The source's 웃기담 has a
+                        // verbal dictionary owner, so retain that exact Native
+                        // witness as Unknown rather than erase the attestation.
+                        let present = analysis.morphemes[i].form == "는담";
+                        let owner = if derived_adjective {
+                            Some(PredicateClass::Adjective)
+                        } else {
+                            class.or(negative_lexical).or({
+                                if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {
+                                    match pos {
+                                        "동사" | "보조 동사" => Some(PredicateClass::Verb),
+                                        "형용사" | "보조 형용사" => Some(PredicateClass::Adjective),
+                                        _ => None,
+                                    }
+                                } else {
+                                    None
+                                }
+                            })
+                        };
+                        let lexical_tension = analysis.morphemes[i].form == "담"
+                            && bare && matched.entry.id == "krdict:63516"
+                            && lemma.text == "웃기다";
+                        let conflict = if present
+                            && matches!(owner, Some(PredicateClass::Adjective | PredicateClass::Copula))
+                        {
+                            Some(AttachmentRule::PresentDeclarativeVerb)
+                        } else if analysis.morphemes[i].form == "담" && bare
+                            && !lexical_tension && matches!(owner, Some(PredicateClass::Verb)) {
+                            Some(AttachmentRule::BareAdjectivalReport)
+                        } else if analysis.morphemes[i].form == "남" && bare
+                            && matches!(owner, Some(PredicateClass::Adjective | PredicateClass::Copula)) {
+                            Some(AttachmentRule::BareVerbalQuestion)
+                        } else {
+                            None
+                        };
+                        if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                            && let Some(rule) = conflict
+                        {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        }
+                        if status == Compatibility::Compatible {
+                            let unlisted = morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if (analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && !crate::engine::honorific_prefinal(&analysis.morphemes[*j].form)
+                                    && (present || !matches!(analysis.morphemes[*j].form.as_str(), "었" | "겠")))
+                                    || analysis.morphemes[*j].kind == MorphemeKind::Particle));
+                            if lexical_tension || unlisted || owner.is_none()
+                                || (!present && bare && matches!(owner, Some(PredicateClass::Copula)))
+                            {
+                                status = Compatibility::Unknown;
+                            }
+                        }
+                    }
+                    if let Some(i) = ending
                         && matches!(analysis.morphemes[i].form.as_str(), "다오" | "는다오")
                     {
                         // Native 77931/79421 and expression 88935/88936 use

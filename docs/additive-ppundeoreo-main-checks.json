@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "state": "integrated-main-and-installed-packages-runtime-source-performance-passed-combined-pending",
+  "state": "main-and-installed-package-validation-passed-combined-failed-historical-ledger-repaired-retry-pending",
   "main_source_inputs": 964,
   "main_rust": {
     "passed": 1061,
@@ -77,7 +77,7 @@
   "nix": {
     "flake_parse_passed": true,
     "new_audits_and_both_actual_runtime_phases_wired": true,
-    "installed_current_packages_and_combined_gate": "installed-packages-passed-combined-pending",
+    "installed_current_packages_and_combined_gate": "installed-packages-passed-combined-failed-retained-historical-ledger-fix-25controls-passed-retry-pending",
     "new_package_source_performance_audits_wired": true
   },
   "remaining": [
@@ -265,7 +265,16 @@
     "additive-ppundeoreo-release-flake-parse.log.gz": "fc2e36b7e32df706f3c32ed059e2b890d097de2e396091ebaa6a944c92323e55",
     "additive-ppundeoreo-sources-audit.log.gz": "c022567a55768315f473839504bc7ac5f0ba61df9b7536cfd8e298e23f2f77bf",
     "additive-ppundeoreo-sources-audit.py.gz": "244eab6d61d555cef1ae2a4905260cc00abfb1df0ee1eee560e5ca198706fd8b",
-    "additive-ppundeoreo-sources-controls.log.gz": "2e45089d7538dc56a8d165f181d6ac32a2c206441f8fec08a0431231b797ca3f"
+    "additive-ppundeoreo-sources-controls.log.gz": "2e45089d7538dc56a8d165f181d6ac32a2c206441f8fec08a0431231b797ca3f",
+    "additive-ppundeoreo-combined-nix.py.gz": "28d42847a8d6a9cbc36aa61334b3910e10cd1e86d3a0e945b7eeb749e82d28ed",
+    "additive-ppundeoreo-historical-ledger-controls.log.gz": "408d8fdedf5b259566e0a0242038e07b1cf31f66e2ff67ff3cd548c5c2bb6e55",
+    "additive-ppundeoreo-historical-ledger-package-audit.log.gz": "89e5ab4bdb307ee76e022f0a22d72a9db9d559f38e38fe1916c4942d0f272711",
+    "additive-ppundeoreo-combined-nix.log.gz": "10e2c61001baea226a16a3e5ead3a10a4b166dcf0f2f5941ff03434a15fca0b3",
+    "additive-ppundeoreo-combined-checks.nix.gz": "413715d180b8493467a342a6a92dc3f5e8bcc4dbb42bd73180548e58b6822361",
+    "additive-ppundeoreo-historical-ledger-main-audit.log.gz": "89e5ab4bdb307ee76e022f0a22d72a9db9d559f38e38fe1916c4942d0f272711",
+    "additive-ppundeoreo-combined-supervisor.log.gz": "a806e1016ab7301602e6fc8a4b3b07b90f14edb9bb7916c7827b0a0b418c4953",
+    "additive-ppundeoreo-combined-nix.json.gz": "65ffc0f382ef042dc24529bffb7f50342575cf9e4a1650e9454a2e0278634785",
+    "additive-ppundeoreo-historical-ledger-controls-final.log.gz": "a038777f23049339e8db947ec2260a86a0c2557a71d2aedc5d3c52268d229e74"
   },
   "offline_current_controls": 103,
   "installed_nix_packages": {
@@ -316,5 +325,15 @@
     "frames_per_cache_stream": 179112,
     "controls": 20,
     "scope": "Interleaved single-CPU observations with host load/frequency retained; no statistical equivalence or causal performance claim."
+  },
+  "combined_gate_attempt": {
+    "receipt": "docs/additive-ppundeoreo-combined-nix.json.gz",
+    "exit_code": 1,
+    "head": "c764164",
+    "all_tracked_inputs_head_index_unchanged": true,
+    "failure": "Historical geona verifier required34981-case snapshot to equal current35014-case ledger; later33reviewed additive cases now validated exactly while every oldcase/source remains exact.",
+    "repair_controls": 25,
+    "actual_main_and_packaged_geona_runtime_audits": "passed",
+    "remaining": "Complete four-check Nix retry after spacing integration"
   }
 }

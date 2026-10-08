@@ -3224,6 +3224,14 @@ review remains open under the completion review below.
   endpoints, two source panes and 458 API frames. Launcher help and served assets
   match, the owned server stops, and desktop/mobile captures were inspected.
   Source and package audits pass 12 and 15 controls.
+  The [combined gate attempt](additive-ppundeoreo-combined-nix.json.gz) fails a
+  historical geona ledger-equality assertion, with every tracked input and
+  HEAD/index unchanged. The current ledger includes 33 reviewed additive cases
+  beyond that historical snapshot. The repaired verifier checks every historical
+  case/source exactly and binds the entire later append to its retained proposal;
+  arbitrary extra cases and coordinated old-source/judgment/conditional mutations
+  are rejected by 25 controls. Actual main and installed geona runtime audits pass.
+  The complete combined gate still requires a successful retry.
   [Novel timing and cache parity](additive-ppundeoreo-performance.json) retain
   80 interleaved samples across eight workloads on one allowed CPU, with host
   load/frequency recorded. Six cache streams each preserve all 179,112 frames;

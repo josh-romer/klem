@@ -30,4 +30,30 @@ class Controls(unittest.TestCase):
  def test_conditional_promoted(self):
   c=copy.deepcopy(self.current);c['cases'].append(copy.deepcopy(c['cases'][-1]));c['cases'][-1]['id']=self.proposal['excluded_conditional_native_cases'][0]['id']
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_exact_historical_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.proposal['proposed_ledger'],self.proposal)['new_required'],50)
+ def test_unreviewed_tail_cannot_pass(self):
+  c=copy.deepcopy(self.current);extra=copy.deepcopy(c['cases'][-1]);extra['id']='unreviewed-extra';c['cases'].append(extra)
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_later_judgment_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][-1]['judgments'][0]['verdict']='required' if c['cases'][-1]['judgments'][0]['verdict']=='forbidden' else 'forbidden'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_later_source_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['additive-ppundeoreo-74341']='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_historical_mutation_cannot_pass(self):
+  c=copy.deepcopy(self.current);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
+  for ledger in [c,later['proposed_ledger']]:ledger['cases'][0]['judgments'][0]['reason']='changed old rationale'
+  with self.assertRaisesRegex(AssertionError,'historical ledger prefix'):audit.verify_ledger(c,self.proposal,later)
+ def test_coordinated_source_mutation_cannot_pass(self):
+  c=copy.deepcopy(self.current);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz');key=next(iter(self.proposal['proposed_ledger']['sources']))
+  for ledger in [c,later['proposed_ledger']]:ledger['sources'][key]='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'historical source links'):audit.verify_ledger(c,self.proposal,later)
+ def test_coordinated_later_count_mutation_cannot_pass(self):
+  later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz');later['new_counts']['required']+=1
+  with self.assertRaisesRegex(AssertionError,'later judgments'):audit.verify_ledger(self.current,self.proposal,later)
+ def test_coordinated_old_conditional_promotion_cannot_pass(self):
+  c=copy.deepcopy(self.current);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz');ident=self.proposal['excluded_conditional_native_cases'][0]['id']
+  c['cases'][-1]['id']=ident;later['proposed_ledger']['cases'][-1]['id']=ident;later['new_cases'][-1]['id']=ident
+  with self.assertRaisesRegex(AssertionError,'historical conditional scope'):audit.verify_ledger(c,self.proposal,later)
 if __name__=='__main__':unittest.main()

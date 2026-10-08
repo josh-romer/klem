@@ -5,11 +5,31 @@ ROOT=Path(__file__).resolve().parents[1]
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def read(p):
  p=Path(p);return json.loads(gzip.decompress(p.read_bytes()) if p.suffix=='.gz' else p.read_bytes())
-def verify_ledger(current,proposal):
- expected=proposal['proposed_ledger'];assert current==expected,'complete append-only ledger'
- assert proposal['before_case_count']==34920 and len(proposal['new_cases'])==61 and len(current['cases'])==34981,'exact finite scope'
- assert current['cases'][34920:]==proposal['new_cases'],'appended case identity/order'
- assert len({c['id'] for c in current['cases']})==34981,'case IDs'
+def verify_ledger(current,proposal,later_proposal=None):
+ expected=proposal['proposed_ledger']
+ historical=current
+ if current!=expected:
+  # Bind the only reviewed later append exactly. Do not accept arbitrary tails
+  # merely because the older prefix has the expected length or case IDs.
+  later=read(ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz') if later_proposal is None else later_proposal
+  complete=later['proposed_ledger']
+  assert current==complete,'complete append-only ledger'
+  assert later['before_case_count']==len(expected['cases'])==34981,'historical ledger prefix'
+  assert complete['cases'][:34981]==expected['cases'],'historical ledger prefix'
+  assert {k:v for k,v in complete.items() if k not in ['cases','sources']}=={k:v for k,v in expected.items() if k not in ['cases','sources']},'historical ledger metadata'
+  assert all(complete['sources'].get(k)==v for k,v in expected['sources'].items()),'historical source links'
+  assert complete['cases'][34981:]==later['new_cases'] and len(later['new_cases'])==33,'reviewed later append'
+  counts={v:sum(j['verdict']==v for c in later['new_cases'] for j in c['judgments']) for v in ['required','forbidden']}
+  assert counts==later['new_counts']=={'required':27,'forbidden':6},'reviewed later judgments'
+  excluded={c['id'] for c in later['excluded_conditional_cases']}
+  assert len(excluded)==13 and not excluded&{c['id'] for c in complete['cases']},'later conditional scope'
+  assert not {c['id'] for c in proposal['excluded_conditional_native_cases']}&{c['id'] for c in complete['cases']},'historical conditional scope'
+  assert len({c['id'] for c in complete['cases']})==len(complete['cases'])==35014,'complete case IDs'
+  historical=expected
+ assert historical==expected,'complete append-only ledger'
+ assert proposal['before_case_count']==34920 and len(proposal['new_cases'])==61 and len(historical['cases'])==34981,'exact finite scope'
+ assert historical['cases'][34920:]==proposal['new_cases'],'appended case identity/order'
+ assert len({c['id'] for c in historical['cases']})==34981,'case IDs'
  counts={v:sum(j['verdict']==v for c in proposal['new_cases'] for j in c['judgments']) for v in ['required','forbidden']};assert counts==proposal['new_counts']=={'required':50,'forbidden':11},'finite raw counts'
  excluded={c['id'] for c in proposal['excluded_conditional_native_cases']};assert len(excluded)==21 and not excluded&{c['id'] for c in proposal['new_cases']},'conditional/Native scope'
  return {'preserved_cases':34920,'new_required':50,'new_forbidden':11,'excluded':21}

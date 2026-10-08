@@ -3314,9 +3314,12 @@ review remains open under the completion review below.
   37 new hypotheses have stable IDs and complete contexts, with no new spacing
   option. Annotated matches are unchanged; ambiguity means increase slightly.
   The viewer attribution regression passes after importing all four complete
-  Native ending entries; eight source-audit controls pass. Full Rust and
-  candidate-cohort retries are running after retained capture/build failures.
-  Candidate cohorts, normal Nix/installed validation, quiet performance,
+  Native ending entries; eight source-audit controls pass. All 32,096 corpus
+  and 21,406 historical surfaces preserve earlier paths and assessments. The
+  14 new paths on ten corpus surfaces and one historical surface are Unknown
+  with no dictionary headword matches and retain their complete original
+  witnesses; the portable cohort audit and five controls pass. Full Rust is
+  retrying after retained fixture/build failures. Normal Nix/installed validation, quiet performance,
   wider distributions, contextual senses and independent review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

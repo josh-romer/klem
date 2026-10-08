@@ -75,3 +75,17 @@ surface belonged to the shared judgment ledger. The preserved historical
 provenance identifies 상담 in the unchanged -씩 adverb fixture instead. The
 corrected retry resolves the original fixture and pointer, checks its hash, and
 retains the original record. Neither failure changes prior sources or judgments.
+
+The corrected full candidate-cohort replay passes all 32,096 original corpus
+and 21,406 historical surfaces. Ten corpus surfaces and one historical surface
+gain 14 individually identified paths; every prior ordered path and dictionary
+assessment remains. All 14 new paths have no matching dictionary headword and
+remain Unknown. They retain complete original corpus occurrences or exact
+historical fixture records; they are not contextual gold or judged positives.
+The portable audit reconstructs complete before/after captures and all original
+witnesses. Five controls pass, including removal of an old candidate from a
+rehashed capture, missing original context, changed historical fixture pointer,
+and an incorrectly reclassified dictionary assessment. The audit and controls
+are wired into the Nix inventory source and commands. Installed/integration
+package binding, the full Rust retry, quiet performance and contextual/
+independent review remain pending.

@@ -302,6 +302,26 @@
     "docs/self-question-cohorts-failed-witnesses.py.gz": {
       "bytes": 2666,
       "sha256": "6819f900c68ef880f7981d8bd532bb6ed8a038a645ce7dd2bd68639a4e176e7e"
+    },
+    "docs/self-question-cohorts-retry1.py.gz": {
+      "bytes": 2756,
+      "sha256": "e952b5868f9c88b02f7204524f8df56983220f364cfec44b78941943e0bee396"
+    },
+    "docs/self-question-cohorts-retry1.log.gz": {
+      "bytes": 226,
+      "sha256": "3a63beeb3951e2e49a26f15a2bf90a10918b80524804f5c3ab6f72d0bcbdbbfb"
+    },
+    "docs/integration-self-question-cohort-audit.log.gz": {
+      "bytes": 158,
+      "sha256": "59b3a61edbd4af43de9eb3947b56c5276aafea9bd5ce186deed8c83325d30191"
+    },
+    "docs/integration-self-question-cohort-controls.log.gz": {
+      "bytes": 55,
+      "sha256": "8a7e2785fc566b6a3ed474f3449bd389d7db0798c4ca4e2ce59772fb1364650a"
+    },
+    "docs/self-question-cohorts-retry1.json.gz": {
+      "bytes": 9677282,
+      "sha256": "1c9750a2ab882ebf25778502081c337e028205e2a2ea92db6b4c9a27bb0efec8"
     }
   },
   "full_coverage_complete": false,
@@ -320,6 +340,18 @@
       "docs/integration-full-tests-retry1.log.gz"
     ],
     "full_suite_retry": "running; not yet a passed claim",
-    "failed_cohort_witness_capture": "retained; corrected retry running"
+    "failed_cohort_witness_capture": "retained; corrected retry passed all53502surfaces and14individual additions"
+  },
+  "integration_cohort_validation": {
+    "state": "complete-replay-and-portable-audit-controls-passed",
+    "corpus_surfaces": 32096,
+    "historical_surfaces": 21406,
+    "changed_corpus_surfaces": 10,
+    "changed_historical_surfaces": 1,
+    "individual_unjudged_paths": 14,
+    "matched_dictionary_headwords": 0,
+    "source_contexts_and_prior_candidates_preserved": true,
+    "portable_controls": 5,
+    "package_binding": "pending"
   }
 }

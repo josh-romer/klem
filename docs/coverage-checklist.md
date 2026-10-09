@@ -3346,8 +3346,12 @@ review remains open under the completion review below.
   and the launcher. Installed finite replay passes 84 streams and 121 complete
   Native entries. Six original nested-suffix diagrams and 21 audit controls
   preserve historical frontend captures after the name-witness display change.
-  Combined inventory/main binding, broader installed/browser checks, quiet timing, wider distributions
-  and independent contextual review remain open.
+  The complete repaired four-check Nix gate passes at 82d8a9e with all tracked
+  inputs/HEAD/index unchanged. Installed full replay preserves 1,128,312 frames,
+  53,502 cohort words and 66,570 gold rows exactly. Four installed browser
+  families pass 540 diagrams and 24 exact CLI exports, with no errors and owned
+  servers stopped. Quiet timing, main integration, wider distributions and
+  independent contextual review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

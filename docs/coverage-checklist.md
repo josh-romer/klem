@@ -3421,8 +3421,10 @@ review remains open under the completion review below.
   Sixteen broad, five cohort, ten gold/candidate and 53 historical corruption
   controls pass. The shared ledger preserves its 35,250-case prefix and appends
   97 cases (35,347 total: 31,157 required, 4,206 forbidden); the two dictionary-
-  dependent cases stay outside raw gold. The complete Rust run is active.
-  Remaining: full Rust/Nix/installed/main integration, quiet
+  dependent cases stay outside raw gold. The complete private and Nix release suites pass 1,115 tests (one ignored),
+  with unchanged inputs. All four committed Git-backed Nix packages pass;
+  package profiles preserve all 1,015 Rust/adapter and 18 frontend source files.
+  Remaining: installed/main integration, complete inventory execution, quiet
   performance, wider distributions and contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

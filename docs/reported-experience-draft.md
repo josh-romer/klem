@@ -45,3 +45,13 @@ The complete Rust suite is running with all source/tests/tools/manifests frozen.
 Full Rust/Nix and
 installed-package/source/runtime/browser/adapter validation, quiet performance,
 wider distributions and contextual/independent Korean review remain pending.
+
+The complete private Rust suite passed 1,115 tests (one ignored), with all
+1,514 selected source/tool/test/example/manifest files unchanged. The committed
+Git-backed Nix build at 8d72402 passed all four packages and the same 1,115
+release tests. All package inputs, HEAD, index and worktree status stayed fixed.
+The 1,015 Rust/adapter and 18 frontend input profiles matched the prototype.
+The later reported-question evidence commit is integrated locally; its generated
+inventory queue was rebuilt to preserve all 499 scoped and 216 unreviewed entries.
+Installed source/runtime/browser/adapter, complete inventory execution, main
+integration, quiet performance and wider/contextual review remain pending.

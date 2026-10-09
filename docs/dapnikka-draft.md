@@ -1,7 +1,8 @@
 # Rhetorical and reported questions: -답니까 / -랍니까
 
-Status: implemented on `coverage/reported-questions`; integrated package,
-performance, contextual and independent review remain open.
+Status: implemented on `coverage/reported-questions`; complete four-check Nix
+gate and installed source/runtime/browser/full-corpus validation pass. Performance,
+main integration and wider/contextual/independent review remain open.
 
 Four ending identities (78782, 78786, 78797, 78803) and six separate reported
 expression identities (86563, 86566, 86628, 86630, 80909, 85833) retain complete
@@ -88,9 +89,20 @@ the exact launcher references. [Installed finite replay](reported-question-insta
 passes 84 streams: 24 original self/reported-question source streams, twelve
 complete original novel-sentence streams and 48 name/title Unicode/filter/cache
 and opt-in/out streams. All 121 distinct complete Native entries survive actual
-imports. Broader installed and browser coverage remains separate.
+imports. Installed full replay additionally preserves all 1,128,312 broad frames, 53,502
+corpus/history words and 66,570 gold rows exactly. Four current installed browser
+families pass 540 diagrams and 24 exact CLI exports: 336 reported-question,
+150 self-question, 24 proper-name and 30 named-title diagrams. All browser
+errors are empty, assets match the installed frontend and owned servers stop.
+The current reported-question capture includes 94 complete Native responses and
+the self-question capture includes 51, preserving homonyms and source fields.
 
-Remaining: integrated Nix, installed source/browser/export,
-broad/cohort/adapter binding, quiet novel timing, main integration, wider
+[The actual complete repaired four-check Nix gate](reported-question-combined-repair-nix.json.gz)
+passes at commit 82d8a9e with all selected source files, HEAD and index unchanged.
+It builds the actual CLI/server, frontend, adapter and complete inventory check.
+These preserved package sources still match every current Rust/frontend file
+after the documentation evidence update; no implementation changed.
+
+Remaining: quiet novel timing, main integration, wider
 lexical/marker/auxiliary/particle distributions and independent contextual
 review. Structural compatibility does not select the novel's intended 말다 sense.

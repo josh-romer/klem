@@ -1,0 +1,3768 @@
+{
+  "state": "complete-reported-experience-novel-path-preservation-passed",
+  "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+  "broad_sha256": "4cb8477df4211ab70414c23f54b4ecb84739acd73ba84a3617a83d235e0e2203",
+  "raw_changed_frames": [
+    {
+      "record": 143065,
+      "before": {
+        "surface": "번답디까",
+        "span": {
+          "start": 629128,
+          "end": 629140
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "번답디까",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "번다",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번다다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번달다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번답디까",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번답디까다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "번다",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번달다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번답디까",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번답디까다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "번답디까",
+        "span": {
+          "start": 629128,
+          "end": 629140
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "번답디까",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "버다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending",
+                "ending.reported_experience"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번다",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.reported_experience"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번다다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번달다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번답디까",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "번답디까다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "벌다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.reported_experience"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "벟다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "ending.reported_experience",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "버다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번다",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번달다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번답디까",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "번답디까다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "벌다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:59096",
+                  "headword": "벌다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "벟다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:59096",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "added_paths": 4,
+      "added_spacing_options": 0
+    },
+    {
+      "record": 170740,
+      "before": {
+        "surface": "들인답디까",
+        "span": {
+          "start": 749628,
+          "end": 749643
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "들인답디까",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "들인다",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인다다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인달다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인답디까",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인답디까다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "들인다",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인달다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인답디까",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인답디까다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "들인답디까",
+        "span": {
+          "start": 749628,
+          "end": 749643
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "들인답디까",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "들이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending",
+                "ending.reported_experience"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인다",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.reported_experience"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인다다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인달다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "습디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.formal_b"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인답디까",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들인답디까다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들일다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.reported_experience"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "들잏다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는답디까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "ending.reported_experience",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "들이다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:15078",
+                  "headword": "들이다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "들인다",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인달다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인답디까",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들인답디까다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들일다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들잏다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:15078",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "added_paths": 4,
+      "added_spacing_options": 0
+    }
+  ],
+  "individual_additions": [
+    {
+      "id": "reported-experience-broad-ee398f8211e75da000683b75",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "버다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "unknown",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "unknown",
+            "entries": []
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "버다",
+            "kind": "predicate"
+          },
+          "entries": []
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-bbe0e355b77c0da063ba0296",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "번다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "unknown",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "unknown",
+            "entries": []
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "번다",
+            "kind": "predicate"
+          },
+          "entries": []
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-6d4bce9880ff551ccbf2f07b",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "벌다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:59096",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "벌다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:59096",
+              "headword": "벌다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-21f7059abf957bb8be14531a",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "벟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "ending.reported_experience",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "dictionary_assessment": {
+        "status": "unknown",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "unknown",
+            "entries": []
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "벟다",
+            "kind": "predicate"
+          },
+          "entries": []
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-70957c54e736ee64e1dcec6d",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:15078",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:15078",
+              "headword": "들이다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-ca1db074cf45e48161946af1",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들인다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "unknown",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "unknown",
+            "entries": []
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들인다",
+            "kind": "predicate"
+          },
+          "entries": []
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-ba9c699c2dee3860cc52ff1f",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들일다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "unknown",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "unknown",
+            "entries": []
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들일다",
+            "kind": "predicate"
+          },
+          "entries": []
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-fa15a3de58a72537289aba6d",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-raw",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들잏다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "ending.reported_experience",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "dictionary_assessment": {
+        "status": "unknown",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "unknown",
+            "entries": []
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들잏다",
+            "kind": "predicate"
+          },
+          "entries": []
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-08f71a15fa2da958888049ec",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "벌다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:59096",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "벌다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:59096",
+              "headword": "벌다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-84fca387fd532dab155481a2",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:15078",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:15078",
+              "headword": "들이다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-899fb981a475c6a2ba92fd11",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "벌다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:59096",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "벌다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:59096",
+              "headword": "벌다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-5a2c5231e88f5c174401b71f",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:15078",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:15078",
+              "headword": "들이다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-30605a6a4fc9db3b05f4d7e2",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword-spacing",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "벌다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:59096",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "벌다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:59096",
+              "headword": "벌다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-993b509de261188fabe14125",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-headword-spacing",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:15078",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:15078",
+              "headword": "들이다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-ba442c01c2ce125df218efac",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible-spacing",
+      "record": 143065,
+      "complete_original_line": "“흥, 그것이 근심입니다그려. 내가 돈을 너무 써서. 그렇거든 그만둡시오. 나는 내 손으로 돈을 벌어서 공부하지요. 여자는 저 먹을 것도 못 번답디까.” 병국은 껄껄 웃으며,",
+      "location": "word",
+      "surface": "번답디까",
+      "span": {
+        "start": 629128,
+        "end": 629140
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "벌다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:59096",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "벌다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:59096",
+              "headword": "벌다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "reported-experience-broad-006f54a729083adac07b1c01",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "mode": "novel-compatible-spacing",
+      "record": 170740,
+      "complete_original_line": "“어느 집에를 가요. 누가 앓는 사람을 들인답디까?”",
+      "location": "word",
+      "surface": "들인답디까",
+      "span": {
+        "start": 749628,
+        "end": 749643
+      },
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는답디까",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.attached",
+          "ending",
+          "ending.reported_experience"
+        ],
+        "unchanged": false
+      },
+      "dictionary_assessment": {
+        "status": "compatible",
+        "lemmas": [
+          {
+            "lemma_index": 0,
+            "status": "compatible",
+            "entries": [
+              {
+                "id": "krdict:15078",
+                "status": "compatible",
+                "conflicts": []
+              }
+            ]
+          }
+        ]
+      },
+      "dictionary_owners": [
+        {
+          "lemma": {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:15078",
+              "headword": "들이다",
+              "homonym": "0",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            }
+          ]
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "individual_spacing_additions": [],
+  "complete_native_entries": {
+    "krdict:59096": {
+      "forms": [
+        {
+          "kind": "발음",
+          "pronunciations": [
+            "벌ː다"
+          ],
+          "written": ""
+        },
+        {
+          "kind": "활용",
+          "pronunciations": [
+            "버ː러"
+          ],
+          "written": "벌어"
+        },
+        {
+          "kind": "활용",
+          "pronunciations": [
+            "버ː니"
+          ],
+          "written": "버니"
+        },
+        {
+          "kind": "활용",
+          "pronunciations": [
+            "범ː니다"
+          ],
+          "written": "법니다"
+        }
+      ],
+      "headword": "벌다",
+      "homonym": "0",
+      "id": "krdict:59096",
+      "level": "초급",
+      "lexical_unit": "단어",
+      "notes": [],
+      "origins": [],
+      "pos": "동사",
+      "senses": [
+        {
+          "definition": "일을 하여 돈을 얻거나 모으다.",
+          "examples": [
+            [
+              "생활비를 벌다."
+            ],
+            [
+              "이백만 원을 벌다."
+            ],
+            [
+              "큰돈을 벌다."
+            ],
+            [
+              "학비를 벌다."
+            ],
+            [
+              "언니는 생활비가 부족해 퇴근 후 부업으로 돈을 벌었다."
+            ],
+            [
+              "나는 돈은 적게 벌어도 스트레스를 받지 않고 마음 편하게 할 수 있는 일을 찾고 있다."
+            ],
+            [
+              "갑자기 왜 아르바이트를 하겠다고 나섰어?",
+              "저도 이제 성인인데 용돈과 학비 정도는 스스로 벌어 써야죠."
+            ]
+          ],
+          "id": "1",
+          "notes": [],
+          "patterns": [
+            "1이 2를 벌다"
+          ],
+          "translations": [
+            {
+              "definition": "ажил хийж мөнгө олох буюу цуглуулах",
+              "language": "몽골어",
+              "lemma": "олох, цуглуулах"
+            },
+            {
+              "definition": "يحصل ويجمع أموال من خلال عمل ما",
+              "language": "아랍어",
+              "lemma": "يكتسب"
+            },
+            {
+              "definition": "通过工作获得或攒下钱财。",
+              "language": "중국어",
+              "lemma": "赚，挣"
+            },
+            {
+              "definition": "Làm việc và nhận lấy hoặc tích góp tiền bạc.",
+              "language": "베트남어",
+              "lemma": "kiếm"
+            },
+            {
+              "definition": "ได้รับหรือรวมเงินได้เพราะทำงาน",
+              "language": "타이어",
+              "lemma": "หาเงิน, ได้เงิน, ได้รับเงิน"
+            },
+            {
+              "definition": "mendapat atau mengumpulkan uang dengan bekerja",
+              "language": "인도네시아어",
+              "lemma": "mencari/mengumpulkan uang, mendapat uang"
+            },
+            {
+              "definition": "Получать деньги за работу или копить их.",
+              "language": "러시아어",
+              "lemma": "зарабатывать"
+            },
+            {
+              "definition": "To obtain or save money by doing some work.",
+              "language": "영어",
+              "lemma": "make; earn"
+            },
+            {
+              "definition": "仕事をして金を得たりためたりする。",
+              "language": "일본어",
+              "lemma": "かせぐ【稼ぐ】。もうける【儲ける】"
+            },
+            {
+              "definition": "Percevoir ou collecter de l'argent comme rémunération d'un travail.",
+              "language": "프랑스어",
+              "lemma": "gagner, toucher"
+            },
+            {
+              "definition": "Obtener o ahorrar dinero tras trabajar.",
+              "language": "스페인어",
+              "lemma": "ganar, ahorrar, obtener"
+            }
+          ]
+        },
+        {
+          "definition": "시간이나 돈을 아껴 쓰거나 안 써서 여유가 있게 되다.",
+          "examples": [
+            [
+              "시간을 벌다."
+            ],
+            [
+              "점심값을 벌다."
+            ],
+            [
+              "차비를 벌다."
+            ],
+            [
+              "나는 출퇴근 시간을 벌기 위해 회사 근처에 방을 하나 얻었다."
+            ],
+            [
+              "이 일은 보수는 적어도 숙식이 해결되어 숙식비를 버는 거나 다름없다."
+            ]
+          ],
+          "id": "2",
+          "notes": [],
+          "patterns": [
+            "1이 2를 벌다"
+          ],
+          "translations": [
+            {
+              "definition": "тодорхой цаг хугацаа зарцуулах болон мөнгө хэмнэхгүйгээр санхүүгийн бололцоотой болох",
+              "language": "몽골어",
+              "lemma": "олох, хожих"
+            },
+            {
+              "definition": "يشعر بالراحة لعدم إهدار الوقت أو المال أو توفيرهما",
+              "language": "아랍어",
+              "lemma": "يكسب"
+            },
+            {
+              "definition": "因节约或不使用时间或钱财而产生富余。",
+              "language": "중국어",
+              "lemma": "节省，省下，赢得"
+            },
+            {
+              "definition": "Dùng một cách tiết kiệm hoặc không dùng thời gian hay tiền bạc nên trở nên dư giả.",
+              "language": "베트남어",
+              "lemma": "tiết kiệm, thu được"
+            },
+            {
+              "definition": "ทำให้มีเหลือพอเพราะไม่ใช้หรือประหยัดเงินและเวลา",
+              "language": "타이어",
+              "lemma": "ประหยัด, ได้เพิ่ม"
+            },
+            {
+              "definition": "menggunakan waktu atau uang dengan hemat atau tidak memakainya sehingga menjadi lapang/keleluasaan",
+              "language": "인도네시아어",
+              "lemma": "menghemat"
+            },
+            {
+              "definition": "Иметь свободное время или деньги в результате экономии или сбережения.",
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)"
+            },
+            {
+              "definition": "To have free time or more money, as a result of one's choice to spare or not use time or money.",
+              "language": "영어",
+              "lemma": "save"
+            },
+            {
+              "definition": "時間や金を節約したり使わなかたりして、余裕があるようになる。",
+              "language": "일본어",
+              "lemma": "かせぐ【稼ぐ】"
+            },
+            {
+              "definition": "Avoir les moyens en économisant ou en ne pas dépensant d'argent ou de temps.",
+              "language": "프랑스어",
+              "lemma": "gagner"
+            },
+            {
+              "definition": "Escatimar el tiempo o el dinero, o tener suficiente por no usarlo.",
+              "language": "스페인어",
+              "lemma": "ganar, ahorrar, obtener"
+            }
+          ]
+        },
+        {
+          "definition": "벌을 받거나 욕먹을 일을 스스로 하다.",
+          "examples": [
+            [
+              "매를 벌다."
+            ],
+            [
+              "욕을 벌다."
+            ],
+            [
+              "동생은 엄마에게 말대꾸를 하다가 오히려 매를 벌었다."
+            ],
+            [
+              "자연스럽게 해결될 일을 괜히 내가 나서서 욕을 번 꼴이 되었다."
+            ]
+          ],
+          "id": "3",
+          "notes": [],
+          "patterns": [
+            "1이 2를 벌다"
+          ],
+          "translations": [
+            {
+              "definition": "шийтгүүлэх буюу муу үгээр хэлүүлэх ажлаа өөрөө хийх",
+              "language": "몽골어",
+              "lemma": "зодуулах, хараалгах"
+            },
+            {
+              "definition": "يجعل نفسه خاضعا لعقوبة أو شتيمة",
+              "language": "아랍어",
+              "lemma": "يكتسب"
+            },
+            {
+              "definition": "自己做会被处罚或挨骂的事情。",
+              "language": "중국어",
+              "lemma": "自找，自讨"
+            },
+            {
+              "definition": "Tự mình làm cho mình bị phạt hay bị chửi mắng.",
+              "language": "베트남어",
+              "lemma": "chuốc lấy"
+            },
+            {
+              "definition": "ทำให้ตนเองได้รับโทษหรือคำด่า",
+              "language": "타이어",
+              "lemma": "ได้รับ, วอน(โดน,หา)"
+            },
+            {
+              "definition": "mendapat hukuman atau disalahka karena bertindak salah",
+              "language": "인도네시아어",
+              "lemma": "mendapat hukuman"
+            },
+            {
+              "definition": "Совершать что-либо, за что положено наказание или ругательство.",
+              "language": "러시아어",
+              "lemma": "заслужить"
+            },
+            {
+              "definition": "To knowingly do something that deserves blame or complaint.",
+              "language": "영어",
+              "lemma": "bring on oneself; deserve"
+            },
+            {
+              "definition": "罰を受けたり悪口を言われたりする行動を自らする。",
+              "language": "일본어",
+              "lemma": "まねく【招く】"
+            },
+            {
+              "definition": "Faire quelque chose qui peut entraîner une punition ou une insulte.",
+              "language": "프랑스어",
+              "lemma": "accumuler, appeler, s'attirer"
+            },
+            {
+              "definition": "Hacer por sí mismo que se le inflija un castigo o reprensión.",
+              "language": "스페인어",
+              "lemma": "buscar, provocar"
+            }
+          ]
+        },
+        {
+          "definition": "다른 사람의 땅을 빌려 농사를 짓다.",
+          "examples": [
+            [
+              "논을 벌다."
+            ],
+            [
+              "밭을 벌다."
+            ],
+            [
+              "소작농이셨던 부모님께서 남의 논을 벌어 우리를 키우셨다."
+            ],
+            [
+              "지난 삼 년 동안 이웃집 땅에서 벼농사를 번 결과, 소 한 마리 살 수 있을 정도의 돈을 모았다."
+            ]
+          ],
+          "id": "4",
+          "notes": [],
+          "patterns": [
+            "1이 2를 벌다"
+          ],
+          "translations": [
+            {
+              "definition": "бусдын газрыг түрээсэлж, тариа тарих",
+              "language": "몽골어",
+              "lemma": "зээлэх"
+            },
+            {
+              "definition": "يزرع من خلال تأجير أراضي الغير",
+              "language": "아랍어",
+              "lemma": "يزرع من خلال تأجير الأرض"
+            },
+            {
+              "definition": "借别人的土地耕种。",
+              "language": "중국어",
+              "lemma": "租"
+            },
+            {
+              "definition": "Mượn đất của người khác để làm nông.",
+              "language": "베트남어",
+              "lemma": "mướn"
+            },
+            {
+              "definition": "ยืมที่ดินของผู้อื่นมาเพาะปลูก",
+              "language": "타이어",
+              "lemma": "ยืม, เช่า"
+            },
+            {
+              "definition": "meminjam tanah orang lain untuk bertani",
+              "language": "인도네시아어",
+              "lemma": "meminjam/menyewa ladang atau sawah"
+            },
+            {
+              "definition": "Заниматься земледелием на арендованной земле другого человека.",
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)"
+            },
+            {
+              "definition": "To borrow someone's land and cultivate it.",
+              "language": "영어",
+              "lemma": "rent and cultivate farmland"
+            },
+            {
+              "definition": "小作地を耕作する。",
+              "language": "일본어",
+              "lemma": "かりる【借りる】"
+            },
+            {
+              "definition": "Louer le terrain d'une autre personne et y cultiver quelque chose. ",
+              "language": "프랑스어",
+              "lemma": "affermer"
+            },
+            {
+              "definition": "Labrar la tierra tras arrendar el terreno de otra persona.",
+              "language": "스페인어",
+              "lemma": "alquilar, arrendar"
+            }
+          ]
+        }
+      ],
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=59096"
+    },
+    "krdict:15078": {
+      "forms": [
+        {
+          "kind": "발음",
+          "pronunciations": [
+            "드리다"
+          ],
+          "written": ""
+        },
+        {
+          "kind": "활용",
+          "pronunciations": [
+            "드리어",
+            "드리여"
+          ],
+          "written": "들이어"
+        },
+        {
+          "kind": "활용",
+          "pronunciations": [
+            "드리니"
+          ],
+          "written": "들이니"
+        }
+      ],
+      "headword": "들이다",
+      "homonym": "0",
+      "id": "krdict:15078",
+      "level": "중급",
+      "lexical_unit": "단어",
+      "notes": [],
+      "origins": [],
+      "pos": "동사",
+      "senses": [
+        {
+          "definition": "사람을 안으로 들어오게 하다.",
+          "examples": [
+            [
+              "손님을 들이다."
+            ],
+            [
+              "방에 들이다."
+            ],
+            [
+              "실내에 들이다."
+            ],
+            [
+              "집에 들이다."
+            ],
+            [
+              "방 안으로 들이다."
+            ],
+            [
+              "집 안으로 들이다."
+            ],
+            [
+              "아버지는 가출했던 형을 집에 들이지 못하게 하셨다."
+            ],
+            [
+              "사장은 비서에게 인사부의 박 부장을 불러 사장실 안으로 들이게 했다."
+            ],
+            [
+              "낯선 사람을 함부로 집 안에 들이면 위험해.",
+              "네. 알겠어요."
+            ]
+          ],
+          "id": "1",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "хэн нэгнийг дотогш оруулах.",
+              "language": "몽골어",
+              "lemma": "оруулах"
+            },
+            {
+              "definition": "يجعل شخصا يدخل إلى الداخل",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "让某人进到里面来。",
+              "language": "중국어",
+              "lemma": "让进"
+            },
+            {
+              "definition": "Cho người vào trong.",
+              "language": "베트남어",
+              "lemma": "cho vào"
+            },
+            {
+              "definition": "ทำให้คนเข้ามาข้างใน",
+              "language": "타이어",
+              "lemma": "ให้เข้ามา, อนุญาตให้เข้ามา"
+            },
+            {
+              "definition": "membawa masuk seseorang ke dalam",
+              "language": "인도네시아어",
+              "lemma": "memasukkan"
+            },
+            {
+              "definition": "Позволить или заставить человека войти во внутрь чего-либо. ",
+              "language": "러시아어",
+              "lemma": "впустить"
+            },
+            {
+              "definition": "To have someone come inside.",
+              "language": "영어",
+              "lemma": "let someone in; allow someone in"
+            },
+            {
+              "definition": "人を中に入らせる。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】"
+            },
+            {
+              "definition": "Faire entrer quelqu'un à l'intérieur.",
+              "language": "프랑스어",
+              "lemma": "laisser entrer, introduire"
+            },
+            {
+              "definition": "Permitir a alguien ingresar.  ",
+              "language": "스페인어",
+              "lemma": "dejar entrar"
+            }
+          ]
+        },
+        {
+          "definition": "볕이나 빛 등이 일정한 범위에 미치도록 하다.",
+          "examples": [
+            [
+              "불빛을 들이다"
+            ],
+            [
+              "볕을 들이다"
+            ],
+            [
+              "빛을 들이다"
+            ],
+            [
+              "방 안에 볕을 들이다."
+            ],
+            [
+              "안으로 들이다."
+            ],
+            [
+              "볕을 조금 더 안으로 들이려면 창의 크기를 크게 해야 한다."
+            ],
+            [
+              "이층 다락에 빛을 들이려고 큰 창을 냈다."
+            ],
+            [
+              "햇빛을 안으로 들이고 싶은데요.",
+              "커튼을 열까요?"
+            ]
+          ],
+          "id": "2",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "гэрэл гэгээ, нарны туяа зэргийг тодорхой орон зайд тусгах.",
+              "language": "몽골어",
+              "lemma": "оруулах, тусгах"
+            },
+            {
+              "definition": "يجعل  ضوء أو أشعة الشمس يدخل في مكان محدد",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "让阳光或光线射到一定范围内。",
+              "language": "중국어",
+              "lemma": "使照射进来"
+            },
+            {
+              "definition": "Làm cho ánh sáng hay tia sáng đạt đến phạm vi nhất định.",
+              "language": "베트남어",
+              "lemma": "rọi vào, chiếu vào, soi vào"
+            },
+            {
+              "definition": "ทำให้แสงแดดสาดส่อง ส่องแสง เป็นต้น  สาดส่องไปถึงขอบเขตที่กำหนดไว้",
+              "language": "타이어",
+              "lemma": "รับ(แสง)เข้ามา, ส่องแสง, สาดส่องเข้ามา"
+            },
+            {
+              "definition": "membiarkan cahaya atau sinar dsb masuk dalam tahapan tertentu",
+              "language": "인도네시아어",
+              "lemma": "(Tiada Penjelasan Arti)"
+            },
+            {
+              "definition": "Заставить или дать возможность свету пройти в определённую сферу. ",
+              "language": "러시아어",
+              "lemma": "пропустить "
+            },
+            {
+              "definition": "To have a star, light, etc., reach a certain range.",
+              "language": "영어",
+              "lemma": "let in"
+            },
+            {
+              "definition": "日差しや光などが一定の範囲に及ぶようにする。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】"
+            },
+            {
+              "definition": "Laisser pénétrer le soleil ou la lumière sur une zone déterminée.",
+              "language": "프랑스어",
+              "lemma": "faire entrer, laisser entrer, faire pénétrer"
+            },
+            {
+              "definition": "Entrar la luz en un espacio, por lo general la de los astros.  ",
+              "language": "스페인어",
+              "lemma": " colarse la luz"
+            }
+          ]
+        },
+        {
+          "definition": "식구가 아닌 사람을 집에서 지내게 하다.",
+          "examples": [
+            [
+              "객식구를 들이다."
+            ],
+            [
+              "사랑방에 들이다."
+            ],
+            [
+              "집에 들이다."
+            ],
+            [
+              "당분간 여행객을 들이다."
+            ],
+            [
+              "어머니는 대문 밖에 버려진 아이를 결국 집으로 들이기로 하셨다."
+            ],
+            [
+              "할아버지는 인정이 많으셔서 갈 곳 없는 지수 모녀를 사랑에 들이게 하셨다."
+            ],
+            [
+              "외국에서 온 학생들을 당분간 집에 들이기로 했으니 잘 지내 봐.",
+              "같이 지내기 불편하지 않도록 조심할게요."
+            ]
+          ],
+          "id": "3",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "гадны хүнийг гэртээ амьдруулах.",
+              "language": "몽골어",
+              "lemma": "суулгах, байлгах, амьдруулах"
+            },
+            {
+              "definition": "يسمح لشخص ليس من الأسرة بالبقاء في البيت",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "让家族以外的人在家里住。",
+              "language": "중국어",
+              "lemma": "让住进"
+            },
+            {
+              "definition": "Cho người không phải là thành viên gia đình vào nhà sống.",
+              "language": "베트남어",
+              "lemma": "rước vào, cho vào ở"
+            },
+            {
+              "definition": "ทำให้คนที่ไม่ใช่เป็นสมาชิกครอบครัวอาศัยอยู่ในบ้าน",
+              "language": "타이어",
+              "lemma": "พา(คน)เข้าบ้าน, นำ(คนนอก)เข้าบ้าน"
+            },
+            {
+              "definition": "membiarkan atau mengijinkan seseorang yang bukan anggota keluarga tinggal di dalam satu rumah",
+              "language": "인도네시아어",
+              "lemma": "(Tiada Penjelasan Arti)"
+            },
+            {
+              "definition": "Размещать на жительство постороннего человека.",
+              "language": "러시아어",
+              "lemma": "впускать; вселять; поселять"
+            },
+            {
+              "definition": "To allow someone who is not one's family member to stay at one's place.",
+              "language": "영어",
+              "lemma": "get; adopt"
+            },
+            {
+              "definition": "家族ではない人を我が家に住ませる。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】"
+            },
+            {
+              "definition": "Faire rester chez soi quelqu'un qui n'est pas un membre de sa famille.",
+              "language": "프랑스어",
+              "lemma": "faire demeurer à la maison"
+            },
+            {
+              "definition": "Dar alojamiento a una persona ajena. ",
+              "language": "스페인어",
+              "lemma": "hospedar"
+            }
+          ]
+        },
+        {
+          "definition": "모임이나 조직의 구성원이 되게 하다.",
+          "examples": [
+            [
+              "계에 들이다."
+            ],
+            [
+              "동아리에 들이다."
+            ],
+            [
+              "모임에 들이다."
+            ],
+            [
+              "정당에 들이다."
+            ],
+            [
+              "조직에 들이다."
+            ],
+            [
+              "교수님은 제자를 공부시키려고 학회의 회원으로 들이셨다."
+            ],
+            [
+              "선배는 마음에 드는 후배를 자신의 동아리에 신입 회원으로 들이고 싶어 했다."
+            ],
+            [
+              "기차 안에서 우연히 만난 사람인데 우리 모임에 들이는 거 어때?",
+              "돈 문제도 있는데 누군지도 모르는 사람을 들이는 건 좋지 않아요."
+            ]
+          ],
+          "id": "4",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "бүлгэм буюу нийгэмлэг холбоонд багтаах, элсүүлэх.",
+              "language": "몽골어",
+              "lemma": "оруулах, элсүүлэх"
+            },
+            {
+              "definition": "يجعله يصبح عضوا في منظمة أو مجموعة",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "使成为聚会或组织的成员。",
+              "language": "중국어",
+              "lemma": "接纳，迎进"
+            },
+            {
+              "definition": "Làm cho trở thành thành viên của tổ chức hay nhóm.",
+              "language": "베트남어",
+              "lemma": "cho vào, cho gia nhập"
+            },
+            {
+              "definition": "ทำให้เป็นสมาชิกขององค์กรหรือกลุ่ม",
+              "language": "타이어",
+              "lemma": "ชักชวนเข้ามา, ชวนให้เข้ามา, ชวนให้เข้าร่วม"
+            },
+            {
+              "definition": "memasukkan atau mengijinkan seseorang masuk ke dalam sebuah perkumpulan atau kepengurusan",
+              "language": "인도네시아어",
+              "lemma": "(Tiada Penjelasan Arti)"
+            },
+            {
+              "definition": "Позволить стать членом какого-либо общества, участником какого-либо собрания.",
+              "language": "러시아어",
+              "lemma": "вступить; входить"
+            },
+            {
+              "definition": "To allow someone to become a new member of a group or organization.",
+              "language": "영어",
+              "lemma": "send"
+            },
+            {
+              "definition": "集いや組職の構成員とする。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】"
+            },
+            {
+              "definition": "Faire devenir membre d'un groupe ou d'une organisation.",
+              "language": "프랑스어",
+              "lemma": "faire entrer, inscrire à, faire adhérer à"
+            },
+            {
+              "definition": "Hacer que alguien ingrese a una entidad u organización.",
+              "language": "스페인어",
+              "lemma": "colocar, poner"
+            }
+          ]
+        },
+        {
+          "definition": "물건을 안으로 가져다 놓다.",
+          "examples": [
+            [
+              "가전제품을 들이다."
+            ],
+            [
+              "소파를 들이다."
+            ],
+            [
+              "에어컨을 들이다."
+            ],
+            [
+              "장롱을 들이다."
+            ],
+            [
+              "침대를 들이다."
+            ],
+            [
+              "일이 점점 많아지자 김 교수는 집에서 갈 수가 없어 연구실에 침대용 소파를 들이기로 했다."
+            ],
+            [
+              "삼촌은 사업을 시작하기 위해 종로에 사무실을 얻고 컴퓨터를 들여다가 놓았다."
+            ],
+            [
+              "동생네 안 쓰는 책상이 있는데 우리 집으로 가져올까 봐.",
+              "집에 들일 자리도 없는데 나중에 이사 가거든 가져오는 게 어때?"
+            ]
+          ],
+          "id": "5",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "ямар нэг зүйлийг дотогш оруулж тавих.",
+              "language": "몽골어",
+              "lemma": "оруулж ирэх, тавих"
+            },
+            {
+              "definition": "يجعله يدخل إلى داخل",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "将物品拿到里面来。",
+              "language": "중국어",
+              "lemma": "拿进"
+            },
+            {
+              "definition": "Mang đồ vật đặt vào trong.",
+              "language": "베트남어",
+              "lemma": "đưa vào, mang vào"
+            },
+            {
+              "definition": "เอาสิ่งของมาไว้ที่ข้างใน",
+              "language": "타이어",
+              "lemma": "นำเข้ามา, จัดซื้อเข้ามา"
+            },
+            {
+              "definition": "membawa masuk sesuatu",
+              "language": "인도네시아어",
+              "lemma": "memasukkan"
+            },
+            {
+              "definition": "Приносить какой-либо предмет внутрь.",
+              "language": "러시아어",
+              "lemma": "вносить; заносить"
+            },
+            {
+              "definition": "To carry something inside from outside.",
+              "language": "영어",
+              "lemma": "bring in"
+            },
+            {
+              "definition": "物を中に入れておく。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】。かいいれる【買い入れる】"
+            },
+            {
+              "definition": "Apporter un objet à l'intérieur d'un lieu.",
+              "language": "프랑스어",
+              "lemma": "faire entrer, laisser entrer, mettre quelque chose dans, porter quelque chose dans, garder quelque chose dans"
+            },
+            {
+              "definition": "Llevar una cosa de fuera adentro. ",
+              "language": "스페인어",
+              "lemma": "traer"
+            }
+          ]
+        },
+        {
+          "definition": "어떤 사람을 새로운 식구로 맞이하다.",
+          "examples": [
+            [
+              "식구를 들이다."
+            ],
+            [
+              "새 식구를 들이다."
+            ],
+            [
+              "첩을 들이다."
+            ],
+            [
+              "며느리로 들이다."
+            ],
+            [
+              "사위로 들이다."
+            ],
+            [
+              "아버지는 자신의 친구 아들을 사위로 들이게 되었다."
+            ],
+            [
+              "어머니는 예쁘고 착한 아가씨를 며느리로 들인다고 좋아하셨다."
+            ],
+            [
+              "축하드려요. 그 댁 장남이 혼사를 치른다고요.",
+              "네. 감사합니다. 새 식구를 들이게 됐어요."
+            ]
+          ],
+          "id": "6",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "хэн нэгнийг шинээр гэр бүлийнхээ гишүүн болгон авах.",
+              "language": "몽골어",
+              "lemma": "болгох"
+            },
+            {
+              "definition": "يستقبل شخص جديد كأسرته جديدة ",
+              "language": "아랍어",
+              "lemma": "يستقبل"
+            },
+            {
+              "definition": "将某人作为新的家庭成员而接受。",
+              "language": "중국어",
+              "lemma": "娶，纳，招"
+            },
+            {
+              "definition": "Đón nhận người nào đó làm thành viên mới trong gia đình.",
+              "language": "베트남어",
+              "lemma": " tiếp nhận, đón nhận"
+            },
+            {
+              "definition": "ต้อนรับบางคนเป็นสมาชิกครอบครัวคนใหม่",
+              "language": "타이어",
+              "lemma": "เข้ามาเป็นส่วนหนึ่ง, เข้ามาเป็นสมาชิกใหม่ของครอบครัว"
+            },
+            {
+              "definition": "menyambut seseorang sebagai anggota keluarga yang baru",
+              "language": "인도네시아어",
+              "lemma": "(Tiada Penjelasan Arti)"
+            },
+            {
+              "definition": "Встречать кого-либо как нового члена семьи.",
+              "language": "러시아어",
+              "lemma": "принимать"
+            },
+            {
+              "definition": "To have someone as a new family member.",
+              "language": "영어",
+              "lemma": "get; adopt"
+            },
+            {
+              "definition": "ある人を新しい家族として迎える。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】"
+            },
+            {
+              "definition": "Accueillir quelqu'un en qualité de nouveau membre de la famille.",
+              "language": "프랑스어",
+              "lemma": "marier, accueillir (dans la famille)"
+            },
+            {
+              "definition": "Considerar a alguien como miembro de la familia mediante matrimonio, adoptación, etc. ",
+              "language": "스페인어",
+              "lemma": "acoger"
+            }
+          ]
+        },
+        {
+          "definition": "집 안의 일을 할 사람을 고용하다.",
+          "examples": [
+            [
+              "가정부를 들이다."
+            ],
+            [
+              "식모를 들이다."
+            ],
+            [
+              "운전사를 들이다."
+            ],
+            [
+              "유모를 들이다."
+            ],
+            [
+              "가게에 일꾼을 들이다."
+            ],
+            [
+              "농부인 할아버지는 밭을 일구기 위해 일꾼을 들이셨다."
+            ],
+            [
+              "어머니는 편하게 살고 싶다며 가정부를 들이자고 하셨다."
+            ],
+            [
+              "우리 식구만으로 집안 잔치를 치르기 힘들지 않겠어?",
+              "그래서 일꾼을 몇 사람 들이기로 했어요."
+            ]
+          ],
+          "id": "7",
+          "notes": [],
+          "patterns": [
+            "1이 2를 3에/으로 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "гэрийн ажил хийх хүнийг хөлсөлж ажиллуулах.",
+              "language": "몽골어",
+              "lemma": "ажиллуулах, ажилд авах, хөлслөх"
+            },
+            {
+              "definition": "يستعمل شخص لعمل منزلي",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "聘用帮助做家事的人。",
+              "language": "중국어",
+              "lemma": "雇佣，雇用"
+            },
+            {
+              "definition": "Thuê người làm việc nhà.",
+              "language": "베트남어",
+              "lemma": "thuê, mướn"
+            },
+            {
+              "definition": "จ้างคนที่จะทำงานในบ้าน",
+              "language": "타이어",
+              "lemma": "จ้างคนเข้ามาทำงานบ้าน"
+            },
+            {
+              "definition": "menyewa seseorang untuk mengerjakan pekerjaan rumah tangga",
+              "language": "인도네시아어",
+              "lemma": "mempekerjakan"
+            },
+            {
+              "definition": "Принять кого-либо для выполнения работы по дому. ",
+              "language": "러시아어",
+              "lemma": "нанимать"
+            },
+            {
+              "definition": "To hire someone to take care of one's household chores.",
+              "language": "영어",
+              "lemma": "hire"
+            },
+            {
+              "definition": "家庭内の仕事をする人を雇用する。",
+              "language": "일본어",
+              "lemma": "やとう【雇う】"
+            },
+            {
+              "definition": "Employer quelqu'un pour s'occuper du travail domestique.",
+              "language": "프랑스어",
+              "lemma": "engager, embaucher"
+            },
+            {
+              "definition": "Dar trabajo a una persona que se encargará a los quehaceres domésticos. ",
+              "language": "스페인어",
+              "lemma": "emplear en el servicio"
+            }
+          ]
+        },
+        {
+          "definition": "색감을 스며들게 하다.",
+          "examples": [
+            [
+              "물을 들이다."
+            ],
+            [
+              "물감을 들이다."
+            ],
+            [
+              "봉숭아 물을 들이다."
+            ],
+            [
+              "옷감에 색을 들이다."
+            ],
+            [
+              "천에 염료를 들이다."
+            ],
+            [
+              "내 여동생은 지난 여름에 꽃잎을 따다가 손톱에 물을 들였다."
+            ],
+            [
+              "이 옷은 천연 염료로 물을 들여서 아이들이 입에 넣고 빨아도 해롭지 않다."
+            ],
+            [
+              "이 옷 색깔이 변했네? 네가 물을 들인 거야?",
+              "응. 집에 있던 염료로 물을 들였지."
+            ]
+          ],
+          "id": "8",
+          "notes": [],
+          "patterns": [
+            "1이 2에 3을 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "будаг шингээж өнгөтэй болгох.",
+              "language": "몽골어",
+              "lemma": "будах, өнгө оруулах"
+            },
+            {
+              "definition": "يتسرّب لون",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "使颜料渗入。",
+              "language": "중국어",
+              "lemma": "染"
+            },
+            {
+              "definition": "Làm cho màu thấm vào.",
+              "language": "베트남어",
+              "lemma": "nhuộm màu"
+            },
+            {
+              "definition": "ทำให้สีซึมเข้าไป",
+              "language": "타이어",
+              "lemma": "ย้อม, ย้อมสี"
+            },
+            {
+              "definition": "memberi warna",
+              "language": "인도네시아어",
+              "lemma": "menyepuh, mewarnai"
+            },
+            {
+              "definition": "Придавать чему-либо какой-либо цвет.",
+              "language": "러시아어",
+              "lemma": "окрашивать"
+            },
+            {
+              "definition": "To dye something a specific color.",
+              "language": "영어",
+              "lemma": "dye; color"
+            },
+            {
+              "definition": "色を付ける。",
+              "language": "일본어",
+              "lemma": "そめる【染める】"
+            },
+            {
+              "definition": "Imprégner quelque chose d'une couleur.",
+              "language": "프랑스어",
+              "lemma": "teindre, colorer"
+            },
+            {
+              "definition": "Aplicar color a una cosa.",
+              "language": "스페인어",
+              "lemma": "infiltrar, colorear"
+            }
+          ]
+        },
+        {
+          "definition": "어떤 것을 이루기 위해 노력, 공, 시간, 돈 등을 투자하다.",
+          "examples": [
+            [
+              "공을 들이다."
+            ],
+            [
+              "노력을 들이다."
+            ],
+            [
+              "돈을 들이다."
+            ],
+            [
+              "비용을 들이다."
+            ],
+            [
+              "시간을 들이다."
+            ],
+            [
+              "예산을 들이다."
+            ],
+            [
+              "이 건물을 완성하기 위해서 엄청난 돈을 인건비에 들였다."
+            ],
+            [
+              "나는 꿈을 이루기 위해서 10년의 시간과 노력을 공부하는 데 들였다."
+            ],
+            [
+              "도심 속에 공원이 있으니까 참 좋다.",
+              "이 공원 만드는 데 예산을 엄청나게 들였다더라."
+            ]
+          ],
+          "id": "9",
+          "notes": [],
+          "patterns": [
+            "1이 2에/에게 3을 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "ямар нэг зүйлийг бүтээхийн тулд хүч хөдөлмөр, авьяас чадвар, цаг хугацаа, мөнгө төгрөгөө зарцуулах.",
+              "language": "몽골어",
+              "lemma": "зориулах, зарцуулах, оруулах"
+            },
+            {
+              "definition": "يستثمر جهودا أو أوقاتا أو مالا من أجل الحصول على هدف",
+              "language": "아랍어",
+              "lemma": "يستثمر"
+            },
+            {
+              "definition": "为做成某事而投入努力、精力、时间或钱财等。",
+              "language": "중국어",
+              "lemma": "花费，付出"
+            },
+            {
+              "definition": "Đầu tư tiền bạc, thời gian, công sức, sự nỗ lực... để đạt được điều gì đó.",
+              "language": "베트남어",
+              "lemma": "đầu tư"
+            },
+            {
+              "definition": "ลงทุนเวลา เงินทอง ความพากเพียร ความพยายาม เป็นต้น  เพื่อบรรลุสิ่งบางอย่าง",
+              "language": "타이어",
+              "lemma": "ลงทุน, ทุ่มเท, ใช้จ่าย"
+            },
+            {
+              "definition": "menginvestasikan usaha, jasa, uang, waktu, dsb untuk mencapai tujuan tertentu",
+              "language": "인도네시아어",
+              "lemma": "(Tiada Penjelasan Arti)"
+            },
+            {
+              "definition": "Жертвовать временем, деньгами, силами для осуществления чего-либо.",
+              "language": "러시아어",
+              "lemma": "вкладывать"
+            },
+            {
+              "definition": "To invest effort, labor, time, money, etc., to achieve something.",
+              "language": "영어",
+              "lemma": "invest; spend"
+            },
+            {
+              "definition": "何かを成すために努力、念、時間、金などを投資する。",
+              "language": "일본어",
+              "lemma": "いれる【入れる】。かける【掛ける】。つくす【尽くす】。とうにゅうする【投入する】"
+            },
+            {
+              "definition": "Investir l'effort, la peine, le temps, l'argent etc. pour accomplir quelque chose.",
+              "language": "프랑스어",
+              "lemma": "dépenser, faire des frais, s'efforcer de, faire des efforts, déployer ses efforts"
+            },
+            {
+              "definition": "Consumir dinero, tiempo, esfuerzos, etc. para conseguir algún fin. ",
+              "language": "스페인어",
+              "lemma": "gastarse"
+            }
+          ]
+        },
+        {
+          "definition": "재미나 정을 붙이다.",
+          "examples": [
+            [
+              "길을 들이다."
+            ],
+            [
+              "맛을 들이다."
+            ],
+            [
+              "버릇을 들이다."
+            ],
+            [
+              "습관을 들이다."
+            ],
+            [
+              "재미를 들이다."
+            ],
+            [
+              "취미를 들이다."
+            ],
+            [
+              "아버지는 요즘에 컴퓨터 게임에 재미를 들인 남동생을 걱정하신다."
+            ],
+            [
+              "공부를 잘하게 하려면 아이에게 어렸을 때부터 책 읽는 버릇을 들여 줘야 한다."
+            ],
+            [
+              "넌 어쩜 그렇게 운동만 해?",
+              "이게 한번 맛을 들이니까 그만두질 못하겠어."
+            ]
+          ],
+          "id": "10",
+          "notes": [],
+          "patterns": [
+            "1이 2에/에게 3을 들이다"
+          ],
+          "translations": [
+            {
+              "definition": "ямар нэгэн зүйлд дур сонирхолтой болгох.",
+              "language": "몽골어",
+              "lemma": "болгох, болох, сургах, зурших"
+            },
+            {
+              "definition": "لديه مصلحة أو عاطفة",
+              "language": "아랍어",
+              "lemma": "يُدخّل"
+            },
+            {
+              "definition": "产生兴趣或感情。",
+              "language": "중국어",
+              "lemma": "感兴趣"
+            },
+            {
+              "definition": "Đặt tình cảm hay sự đam mê vào.",
+              "language": "베트남어",
+              "lemma": "vui thú, đam mê"
+            },
+            {
+              "definition": "ทำให้ติดอยู่กับความรู้สึกเพราะสนุกสนาน",
+              "language": "타이어",
+              "lemma": "ติด, ทำให้เป็นนิสัย"
+            },
+            {
+              "definition": "membuat tertarik atau suka",
+              "language": "인도네시아어",
+              "lemma": "terhanyut, terbawa"
+            },
+            {
+              "definition": "Сделать интересным что-либо. ",
+              "language": "러시아어",
+              "lemma": "прививать, делать привычным"
+            },
+            {
+              "definition": "To start to have fun in something or become attached to someone.",
+              "language": "영어",
+              "lemma": "get interested in"
+            },
+            {
+              "definition": "面白みや親しみなどが感じられる。",
+              "language": "일본어",
+              "lemma": "おぼえる【覚える】。しめる【占める】"
+            },
+            {
+              "definition": "S'intéresser à ou aimer bien quelque chose.",
+              "language": "프랑스어",
+              "lemma": "prendre goût à quelque chose, avoir l'expérience de, goûter, connaître"
+            },
+            {
+              "definition": "Cautivar la atención o el interés.",
+              "language": "스페인어",
+              "lemma": "interesarse"
+            }
+          ]
+        }
+      ],
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=15078"
+    }
+  },
+  "independent_spacing_replay": {}
+}

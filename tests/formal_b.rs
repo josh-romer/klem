@@ -3,6 +3,8 @@ use serde_json::Value;
 use unicode_normalization::UnicodeNormalization;
 
 const RULE: &str = "ending.formal_b";
+#[path = "support/reported_experience_novel.rs"]
+mod reported_experience_novel;
 
 fn path(analysis: &klem::Analysis, lemmas: &[&str]) -> bool {
     analysis
@@ -249,7 +251,11 @@ fn original_novel_forms_preserve_all_prior_paths_and_unicode_equivalence() {
         let expected: WordAnalysis =
             serde_json::from_value(frame["after"]["analysis"].clone()).unwrap();
         let actual = engine.analyze_word(surface).unwrap();
-        assert_eq!(actual, expected, "{surface}");
+        assert_eq!(
+            reported_experience_novel::project(frame, &actual),
+            expected,
+            "{surface}"
+        );
         assert_eq!(
             actual,
             engine
@@ -265,7 +271,7 @@ fn original_novel_forms_preserve_all_prior_paths_and_unicode_equivalence() {
                 .collect::<Vec<_>>(),
             before.analyses
         );
-        for path in actual
+        for path in expected
             .analyses
             .iter()
             .filter(|a| !before.analyses.contains(a))

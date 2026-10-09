@@ -3395,6 +3395,32 @@ review remains open under the completion review below.
   Remaining: complete inventory gate/main merge, quiet novel performance,
   wider distributions, contextual and independent review.
 
+- [ ] **COV-017cr — Reported-experience statement and question expressions.**
+  **Partial: finite original source scope implemented on coverage/reported-experience.**
+  Ten source entries retain POS 품사 없음, outside the 715-entry inventory.
+  All 51 original groups and 92 complete Native source/lexical identities survive.
+  Present/plain reports and factual/command homonyms keep separate immediate
+  allomorph and marker boundaries. [Evidence](reported-experience-draft.md)
+  retains 97 raw cases (79 required, 18 forbidden), two separately enforced
+  dictionary-dependent cases, the initial failed scope judgments and the exact
+  original 했답디까 categorization tension. Five focused, eight guarded formal-novel and four viewer-label
+  tests, frontend build, Clippy and 12 source corruption controls pass.
+  All 12 complete source streams preserve 8,616 frames and previous paths/order/
+  Native assessments; 1,568 added path observations retain individual evidence.
+  Browser replay passes 474 diagrams/six exports/92 Native endpoints without
+  errors. All 53,502 corpus/history words and 66,570 annotated rows stay exact.
+  Novel readings 번답디까 → 벌다 and 들인답디까 → 들이다 are recovered; the
+  prior 들인 답디까 spacing hypothesis survives and remains contextually unjudged.
+  Complete broad replay preserves 1,128,312 frames, adds 16 tracked observations
+  on two novel tokens and introduces no new spacing. Exact regression guards
+  retain all eight raw additions and complete original contexts/Native owners.
+  Sixteen broad, five cohort, ten gold/candidate and 53 historical corruption
+  controls pass. The shared ledger preserves its 35,250-case prefix and appends
+  97 cases (35,347 total: 31,157 required, 4,206 forbidden); the two dictionary-
+  dependent cases stay outside raw gold. The complete Rust run is active.
+  Remaining: full Rust/Nix/installed/main integration, quiet
+  performance, wider distributions and contextual/independent review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

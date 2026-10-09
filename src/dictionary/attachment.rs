@@ -288,6 +288,8 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라는데"
             | "라더니"
             | "랍니까"
+            | "랍디까"
+            | "랍디다"
             | "라던"
             | "라던데"
             | "라며"
@@ -2526,12 +2528,12 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if let Some(i) = ending
-                        && matches!(analysis.morphemes[i].form.as_str(), "답니까" | "는답니까")
+                        && matches!(analysis.morphemes[i].form.as_str(), "답니까" | "는답니까" | "답디까" | "답디다" | "는답디까" | "는답디다")
                     {
                         // KRDict 78782/78786 and reported 86563/86566 select
                         // present verbs; 78797/86628 select adjectives or
                         // their immediate honorific/past/modal boundary.
-                        let present = analysis.morphemes[i].form == "는답니까";
+                        let present = matches!(analysis.morphemes[i].form.as_str(), "는답니까" | "는답디까" | "는답디다");
                         let owner = if derived_adjective {
                             Some(PredicateClass::Adjective)
                         } else {
@@ -2685,9 +2687,9 @@ impl Annotation {
                         }
                     }
                     if let Some(i) = ending
-                        && matches!(analysis.morphemes[i].form.as_str(), "랍니까" | "으랍니까")
+                        && matches!(analysis.morphemes[i].form.as_str(), "랍니까" | "으랍니까" | "랍디까" | "랍디다" | "으랍디까" | "으랍디다")
                     {
-                        let command = analysis.morphemes[i].form == "으랍니까";
+                        let command = matches!(analysis.morphemes[i].form.as_str(), "으랍니까" | "으랍디까" | "으랍디다");
                         let adjective = derived_adjective
                             || matches!(class, Some(PredicateClass::Adjective))
                             || matches!(pos, "형용사" | "보조 형용사");

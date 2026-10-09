@@ -963,6 +963,8 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다나"
             | "는다오"
             | "는답니까"
+            | "는답디까"
+            | "는답디다"
             | "는담"
             | "는다더니만"
             | "는다더니마는"
@@ -1295,19 +1297,26 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 // while 89662 requires a verb for canonical command 으라더니.
                 // KRDict 74698 lists honorific, past and modal markers.
                 // Present forms use the shared honorific-only restriction.
-                if matches!(ending.form, "다나" | "다오" | "답니까" | "담" | "남")
-                    && p.morphs.iter().any(|m| {
-                        !honorific_prefinal(&m.form)
-                            && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
-                    })
+                if matches!(
+                    ending.form,
+                    "다나" | "다오" | "답니까" | "답디까" | "답디다" | "담" | "남"
+                ) && p.morphs.iter().any(|m| {
+                    !honorific_prefinal(&m.form)
+                        && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+                }) {
+                    continue;
+                }
+                if matches!(
+                    ending.form,
+                    "으라더니" | "으랍니까" | "으랍디까" | "으랍디다"
+                ) && p.stem == "아니"
                 {
                     continue;
                 }
-                if matches!(ending.form, "으라더니" | "으랍니까") && p.stem == "아니" {
-                    continue;
-                }
-                if (matches!(ending.form, "으라던" | "으라던데" | "으라더니" | "으랍니까")
-                    && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
+                if (matches!(
+                    ending.form,
+                    "으라던" | "으라던데" | "으라더니" | "으랍니까" | "으랍디까" | "으랍디다"
+                ) && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
                     || (matches!(ending.form, "자던" | "자던데") && !p.morphs.is_empty())
                     || (plain_reporting_retrospective(ending.form)
                         && p.morphs.iter().any(|m| {
@@ -1755,6 +1764,8 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                                 | "라는데"
                                 | "라더니"
                                 | "랍니까"
+                                | "랍디까"
+                                | "랍디다"
                                 | "라던"
                                 | "라던데"
                                 | "라며"
@@ -1910,6 +1921,19 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "담" | "는담" | "남") {
                     p.rules.push("ending.self_question".into());
+                }
+                if matches!(
+                    ending.form,
+                    "답디까"
+                        | "답디다"
+                        | "는답디까"
+                        | "는답디다"
+                        | "랍디까"
+                        | "랍디다"
+                        | "으랍디까"
+                        | "으랍디다"
+                ) {
+                    p.rules.push("ending.reported_experience".into());
                 }
                 if matches!(ending.form, "답니까" | "는답니까" | "랍니까" | "으랍니까")
                 {
@@ -2131,6 +2155,8 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
         "랍니다",
         // Native 78803/86630 explicitly permit the immediate 으리 marker.
         "랍니까",
+        "랍디까",
+        "랍디다",
         "란다",
         "래",
         "라지",
@@ -2229,6 +2255,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                         }
                         if quoted_ra_exclamation(ending) {
                             p.rules.push("ending.quoted_ra_exclamation".into());
+                        }
+                        if matches!(ending, "랍디까" | "랍디다") {
+                            p.rules.push("ending.reported_experience".into());
                         }
                         if ending == "랍니까" {
                             p.rules.push("ending.question_dapnikka".into());
@@ -3186,6 +3215,8 @@ fn auxiliary_inflections_allowed_for(
                     m.form.as_str(),
                     "으라더니"
                         | "으랍니까"
+                        | "으랍디까"
+                        | "으랍디다"
                         | "으라던"
                         | "으라던데"
                         | "자던"
@@ -3338,6 +3369,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                     m.form.as_str(),
                     "으라더니"
                         | "으랍니까"
+                        | "으랍디까"
+                        | "으랍디다"
                         | "으라던"
                         | "으라던데"
                         | "자던"
@@ -3699,6 +3732,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                     m.form.as_str(),
                     "으라더니"
                         | "으랍니까"
+                        | "으랍디까"
+                        | "으랍디다"
                         | "으라던"
                         | "으라던데"
                         | "자던"
@@ -4779,6 +4814,8 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 | "으라는데"
                 | "으라더니"
                 | "으랍니까"
+                | "으랍디까"
+                | "으랍디다"
                 | "으라던"
                 | "으라던데"
                 | "으라며"

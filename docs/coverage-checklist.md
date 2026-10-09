@@ -3386,8 +3386,14 @@ review remains open under the completion review below.
   test across 239 batches; 991 private/integration Rust inputs match exactly.
   All four actual Nix packages pass with selected package inputs and Git state
   unchanged during the explicit path-flake build before local commit.
-  Remaining: committed/installed package binding, complete inventory gate/main merge,
-  quiet novel performance, wider distributions, contextual and independent review.
+  The committed installed source binding passes for all 1,003 Rust-package and
+  18 frontend files. Installed replay preserves all 1,128,312 broad frames,
+  53,502 cohort words and 66,570 original annotated rows exactly. Twenty-four
+  Unicode/filter/cache streams conserve 12,396 finite frames; the installed
+  browser passes 426 diagrams, six exact exports and 92 full Native responses.
+  Portable installed evidence auditing and all 11 corruption controls pass.
+  Remaining: complete inventory gate/main merge, quiet novel performance,
+  wider distributions, contextual and independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

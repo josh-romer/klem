@@ -53,9 +53,21 @@ failures and one ignored test across 239 batches. All 991 private Rust source,
 fixture and manifest files exactly match the local integration checkout.
 All four actual Nix packages (CLI/server, frontend, annotated adapter and web
 launcher) pass with package inputs, flake, HEAD/index/status unchanged throughout.
-This was an explicit path-flake build before local commit; committed package
-source parity and installed validation remain separate.
+The build used an explicit path flake before local commit. The committed Git-backed
+source binding subsequently passed: all 1,003 CLI/server and adapter source files,
+18 frontend files and the launcher match the actual installed derivations.
 
-Installed-package/runtime/browser/cohort/broad/adapter binding, the complete
-inventory gate, quiet novel timing, main merge, wider distributions and
-contextual/independent review remain open.
+The committed installed packages reproduce all 1,128,312 broad frames, all
+53,502 corpus/history WordAnalysis records and all 66,570 annotated rows exactly.
+Twenty-four finite streams replay all 46 complete original example groups and
+all 108 individual source/novel cases across NFC/NFD, three filters and two cache
+budgets; all 12,396 frames conserve the original UTF-8 bytes. The installed
+SolidJS browser passes 426 diagrams, six exact CLI exports and 92 full Native
+responses, with no errors; its owned server stops. Complete source-binding and
+actual producers, captures and logs are preserved in the formal-b installed
+evidence files. These checks establish the recorded finite package behavior;
+they do not select contextual novel senses. The portable installed audit and
+all 11 corruption controls pass.
+
+The complete inventory gate, quiet novel timing, main merge, wider distributions
+and contextual/independent review remain open.

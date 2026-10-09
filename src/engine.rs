@@ -1172,6 +1172,23 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                if ending.form == "습네"
+                    && matches!(ending.boundary, Boundary::Literal)
+                    && (word != "아름답네" || p.stem != "아름답" || !p.morphs.is_empty())
+                {
+                    continue;
+                }
+                // These formal source families list honorific, past and modal boundaries;
+                // do not borrow unrelated retrospective or conjectural licenses.
+                if matches!(
+                    ending.form,
+                    "습디다" | "습디까" | "습지요" | "습죠" | "습네"
+                ) && p.morphs.iter().any(|m| {
+                    !honorific_prefinal(&m.form)
+                        && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+                }) {
+                    continue;
+                }
                 // Retrospective 더 has its own following-ending licenses.
                 // These source-reviewed families do not take it, including
                 // bundles that already contain a retrospective component.
@@ -1881,6 +1898,15 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "라더니" | "으라더니") {
                     p.rules.push("ending.reported_command_deoni".into());
+                }
+                if matches!(
+                    ending.form,
+                    "습디다" | "습디까" | "습지요" | "습죠" | "습네"
+                ) {
+                    p.rules.push("ending.formal_b".into());
+                    if ending.form == "습네" && matches!(ending.boundary, Boundary::Literal) {
+                        p.rules.push("formal_b.attested_stem_b".into());
+                    }
                 }
                 if matches!(ending.form, "담" | "는담" | "남") {
                     p.rules.push("ending.self_question".into());

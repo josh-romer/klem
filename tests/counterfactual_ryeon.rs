@@ -6,6 +6,8 @@ mod copula_expectation_parent;
 mod dao_history;
 #[path = "deoniman_support/parent.rs"]
 mod deoniman_parent;
+#[path = "support/formal_b_history.rs"]
+mod formal_b_history;
 #[path = "support/literary_question_go_history.rs"]
 mod question_go_history;
 use klem::{Analysis, Lemmatizer, MorphemeKind, WordAnalysis};
@@ -65,6 +67,14 @@ fn original_counterfactual_examples_recover_heads_and_preserve_every_old_candida
         let parent: WordAnalysis =
             serde_json::from_value(source["companion_analyses"][&companion].clone()).unwrap();
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.formal_b") {
+                formal_b_history::assert_addition(
+                    "tests/fixtures/counterfactual-ryeon-sources.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.declarative_dao") {
                 dao_history::assert_addition(
                     "tests/fixtures/counterfactual-ryeon-sources.json",
@@ -298,6 +308,14 @@ fn full_source_cohort_retains_candidate_order_and_attributes_new_paths() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.formal_b") {
+                formal_b_history::assert_addition(
+                    "tests/fixtures/counterfactual-ryeon-sources.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.declarative_dao") {
                 dao_history::assert_addition(
                     "tests/fixtures/counterfactual-ryeon-sources.json",

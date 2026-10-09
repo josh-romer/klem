@@ -3349,6 +3349,46 @@ review remains open under the completion review below.
   Combined inventory/main binding, broader installed/browser checks, quiet timing, wider distributions
   and independent contextual review remain open.
 
+- [ ] **COV-017cq — Formal attached-ㅂ experience, assurance and quotation endings.**
+  **Partial: finite original source scope implemented in the private formal-ending prototype.**
+  Five canonical pairs cover -ㅂ디다/-습디다, -ㅂ디까/-습디까,
+  -ㅂ지요/-습지요, -ㅂ죠/-습죠 and -ㅂ네/-습네. Ten distinct
+  ending owners retain all 46 original example groups and 92 complete Native
+  identities. [Ninety-nine stable cases](../tests/fixtures/formal-b-validity.json)
+  add 71 required and 28 forbidden judgments to the shared ledger, preserving
+  all 35,142 earlier cases exactly. Full/attached allomorphs, explicit nominal
+  + 이다, immediate honorific/past/modal boundaries and retrospective rejection
+  remain separate. The exact source's 아름답네 formal alternative remains Unknown;
+  its ordinary 네 analysis remains Compatible. Unlisted immediate honorific
+  attachment before assurance endings remains Unknown.
+  [Evidence](formal-b-draft.md) retains five focused tests, eight viewer-label
+  tests, 426 browser diagrams/six exports and all 92 Native entry responses.
+  Full pre-append Rust passes 1,107 tests, with one ignored test; nine tests
+  validate the expanded shared ledger and formal cases. All 53,502 corpus/history
+  words preserve previous candidates, order and dictionary assessments. Eight
+  additions on two historical surfaces retain stable IDs, complete original
+  witnesses and seven complete Native owners; none is promoted to contextual gold.
+  All 66,570 annotated rows remain exact. Source/cohort controls pass 9/5;
+  47 historical-ledger controls reject coordinated fixture/ledger mutations.
+  All 44 affected historical tests and affected-target Clippy pass.
+  Complete broad replay preserves all 1,128,312 frames, old paths, assessments,
+  diagrams and spacing boundaries. All 91 added path observations and two added
+  spacing options have stable IDs and exact original context; 33 complete Native
+  owners remain unchanged. Eighteen corruption controls pass. Nine separate
+  [novel cases](../tests/fixtures/formal-b-novel-validity.json) add eight required
+  and one forbidden judgment, preserving the ordinary 아름답지요 reading and
+  preventing unlicensed borrowing of the exact 아름답네 exception. The shared
+  ledger now contains 35,250 cases (31,078 required, 4,188 forbidden). The spacing
+  hypothesis 들인 답디까 remains contextually unjudged. Intended 번답디까 and
+  들인답디까 expose a separate reported-experience expression gap: ten source
+  entries have POS 품사 없음 and are absent from the 715-entry inventory.
+  Complete post-append Rust passes 1,110 tests, zero failures and one ignored
+  test across 239 batches; 991 private/integration Rust inputs match exactly.
+  All four actual Nix packages pass with selected package inputs and Git state
+  unchanged during the explicit path-flake build before local commit.
+  Remaining: committed/installed package binding, complete inventory gate/main merge,
+  quiet novel performance, wider distributions, contextual and independent review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

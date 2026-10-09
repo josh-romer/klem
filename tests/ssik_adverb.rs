@@ -1,3 +1,5 @@
+#[path = "support/formal_b_history.rs"]
+mod formal_b_history;
 use klem::{LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use std::{path::PathBuf, sync::OnceLock};
@@ -111,6 +113,13 @@ fn frozen_nominal_package_candidates_are_preserved() {
         let old: WordAnalysis = serde_json::from_value(value.clone()).unwrap();
         assert_eq!(&old.normalized, word);
         let new = engine.analyze_word(&old.normalized).unwrap();
+        for a in new
+            .analyses
+            .iter()
+            .filter(|a| a.rules.iter().any(|r| r == "ending.formal_b"))
+        {
+            formal_b_history::assert_addition("tests/fixtures/ssik-adverb-sources.json", word, a);
+        }
         let retained: Vec<_> = new
             .analyses
             .into_iter()

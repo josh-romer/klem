@@ -2503,6 +2503,28 @@ impl Annotation {
                             }
                         }
                     }
+                    // Native 80544/80546 do not list an immediate honorific
+                    // boundary, unlike the attached experience/quotation
+                    // endings. Preserve that structurally possible path but
+                    // do not promote an unlisted license to compatible.
+                    if let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "습지요" | "습죠")
+                        && analysis.rules.iter().any(|r| r == "ending.formal_b")
+                        && status == Compatibility::Compatible
+                        && morphs.windows(2).any(|pair| matches!(pair,
+                            [Component::Morpheme(j), Component::Morpheme(k)]
+                                if *k == i
+                                    && analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && crate::engine::honorific_prefinal(&analysis.morphemes[*j].form)))
+                    {
+                        status = Compatibility::Unknown;
+                    }
+                    if lemma.text == "아름답다"
+                        && analysis.rules.iter().any(|r| r == "formal_b.attested_stem_b")
+                        && matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                    {
+                        status = Compatibility::Unknown;
+                    }
                     if let Some(i) = ending
                         && matches!(analysis.morphemes[i].form.as_str(), "답니까" | "는답니까")
                     {

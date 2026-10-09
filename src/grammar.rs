@@ -759,6 +759,14 @@ pub(crate) fn endings() -> &'static [Ending] {
     RULES.get_or_init(|| {
         use Boundary::*;
         let mut out = Vec::new();
+        // Native 86556's exact 아름답네 witness retains the lexical stem's ㅂ.
+        // The engine limits this source-owned alternative to that witness.
+        out.push(Ending {
+            suffix: "네",
+            form: "습네",
+            boundary: Literal,
+            connector: false,
+        });
         // KRDict 73877: colloquial friendly command after 오다 or an
         // 오다-final verb. The engine checks the recovered owner separately.
         out.push(Ending {
@@ -1050,6 +1058,11 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("지", "을지", 8),
             ("니다", "습니다", 17),
             ("니까", "습니까", 17),
+            ("디다", "습디다", 17),
+            ("디까", "습디까", 17),
+            ("지요", "습지요", 17),
+            ("죠", "습죠", 17),
+            ("네", "습네", 17),
             ("냐", "냐", 0),
             ("냐고", "냐고", 0),
             ("니", "니", 0),
@@ -1370,6 +1383,11 @@ pub(crate) fn endings() -> &'static [Ending] {
         for (full, short, form, t) in [
             ("습니다", "니다", "습니다", 17),
             ("습니까", "니까", "습니까", 17),
+            ("습디다", "디다", "습디다", 17),
+            ("습디까", "디까", "습디까", 17),
+            ("습지요", "지요", "습지요", 17),
+            ("습죠", "죠", "습죠", 17),
+            ("습네", "네", "습네", 17),
             ("는다", "다", "는다", 4),
             ("는다마는", "다마는", "는다마는", 4),
             ("는다만", "다만", "는다만", 4),
@@ -2259,6 +2277,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.self_question" => {
             "Recover source-listed -ㄴ담/-는담/-담/-남 self-question endings with their own immediate stem and prefinal boundaries; preserve lexical alternatives without choosing complaint, register or contextual meaning."
+        }
+        "ending.formal_b" => {
+            "Recover source-listed formal attached-ㅂ and 습 allomorphs for experience reports/questions, assured statements and disapproving quotation; retain lexical and contextual alternatives."
+        }
+        "formal_b.attested_stem_b" => {
+            "Retain the exact Native 아름답네 formal-quotation witness without removing its lexical stem-final ㅂ; preserve ordinary 네 and mark the formal attachment tension unknown."
         }
         "ending.question_dapnikka" => {
             "Recover source-listed rhetorical/reported -답니까/-ㄴ답니까/-는답니까 and factual/command -(으)랍니까 with their distinct immediate boundaries; preserve all native lexical and contextual alternatives."

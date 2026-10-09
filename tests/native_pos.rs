@@ -2,6 +2,8 @@
 //! component. Native fields, raw hypotheses and unknown boundaries survive.
 #[path = "../tools/adjectival_allomorph.rs"]
 mod allomorph;
+#[path = "support/formal_b_history.rs"]
+mod formal_b_history;
 #[path = "../tools/hada_nominal_preservation.rs"]
 mod hada_preservation;
 use klem::dictionary::{
@@ -378,6 +380,8 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
     }
     for (surface, frozen) in source["before_words"].as_object().unwrap() {
         let word = engine.analyze_word(surface).unwrap();
+        let historical =
+            formal_b_history::project("tests/fixtures/native-pos-sources.json", surface, &word);
         let mut expected: WordAnalysis = serde_json::from_value(frozen.clone()).unwrap();
         expected
             .analyses
@@ -394,7 +398,7 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
             assert_eq!(change["original"], *frozen);
             assert_eq!(serde_json::to_value(&expected).unwrap(), change["before"]);
             assert_eq!(
-                serde_json::to_value(hada_preservation::project_remaining(&word)).unwrap(),
+                serde_json::to_value(hada_preservation::project_remaining(&historical)).unwrap(),
                 change["after"]
             );
             let retained: Vec<_> = word
@@ -412,7 +416,7 @@ fn frozen_raw_paths_and_all_forty_six_class_controls_agree_without_rewriting_pos
             );
         } else {
             assert_eq!(
-                hada_preservation::project_remaining(&word),
+                hada_preservation::project_remaining(&historical),
                 expected,
                 "{surface}"
             );

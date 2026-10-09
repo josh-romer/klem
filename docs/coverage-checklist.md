@@ -3432,6 +3432,23 @@ review remains open under the completion review below.
   complete inventory execution, main integration, quiet performance, wider
   distributions and contextual/independent review.
 
+- [ ] **COV-017cs — Concessive -기로서 / -기로서니.**
+  **Partial: source-backed isolated private prototype.** Two original ending
+  entries retain all eight complete groups; complete added-path Native ownership
+  preserves 34 entries, including both 아름 noun homonyms. Four focused tests,
+  four labels, Clippy, 18 stream/Native, 12 source, five cohort, ten broad, ten
+  annotated recovery/statistics and 57 historical corruption controls pass. The shared ledger retains its 35,347
+  cases and appends 48 authored cases (34 required, 14 forbidden); all four
+  ledger tests pass. Twelve whole-source Unicode/filter/cache streams preserve
+  2,004 frames and individually track 132 additions. The complete browser passes
+  204 diagrams, six exports and 34 Native endpoints; no errors, server stopped.
+  All 53,502 corpus/history words, 66,570 annotated rows and 1,128,312 broad
+  frames remain exact; no new novel paths or spacing. [Scope](giroseo-draft.md)
+  preserves the initial 32-owner browser capture, original proposals, source
+  fields and pending contextual/independent review. The complete Rust suite passes 1,119 tests (one ignored), with all 1,540
+  frozen inputs unchanged. Remaining: Nix/installed/main
+  validation, quiet performance and wider/contextual review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

@@ -3338,8 +3338,15 @@ review remains open under the completion review below.
   endpoints, 1,128,312 broad frames, 53,502 saved words and 66,570 unchanged
   annotated rows. Five captures of one novel path preserve full context and
   four Native homonyms; contextual sense remains unjudged. Source/cohort/broad
-  controls pass 9/5/7 tests; historical ledger controls pass 38 tests. Full
-  integrated Rust, Nix/installed/main binding, quiet timing, wider distributions
+  controls pass 9/5/7 tests; historical ledger controls pass 38 tests.
+  [Full committed integrated Rust](dapnikka-committed-full-tests.json.gz) passes
+  1,102 tests with zero failures and one ignored test; all tracked inputs,
+  HEAD and index remain unchanged. Four rebuilt Nix packages pass the same
+  1,102 release tests; installed source binding verifies all 991/18/991 inputs
+  and the launcher. Installed finite replay passes 84 streams and 121 complete
+  Native entries. Six original nested-suffix diagrams and 21 audit controls
+  preserve historical frontend captures after the name-witness display change.
+  Combined inventory/main binding, broader installed/browser checks, quiet timing, wider distributions
   and independent contextual review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

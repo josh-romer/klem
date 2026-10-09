@@ -9,6 +9,8 @@ REPORT = ROOT / 'docs/hada-remaining-scoped-runtime.json'
 REFRESH = ROOT / 'docs/friendly-command-hada-scoped-browser.json'
 PAIR_REFRESH = ROOT / 'docs/double-past-prefinal-hada-scoped-browser.json'
 PAIR_PACKAGE = ROOT / 'docs/double-past-prefinal-packaged-cli.json'
+CURRENT_REFRESH = ROOT / 'docs/reported-question-hada-scoped-browser.json'
+CURRENT_PACKAGE = ROOT / 'docs/reported-question-hada-scoped-runtime.json'
 CASES = {
     '먹는양하는양하다': ['Auxiliary verb formation', 'Auxiliary verb / adjective formation'],
     '먹는양하는듯하다': ['Auxiliary verb formation', 'Auxiliary adjective formation'],
@@ -16,8 +18,25 @@ CASES = {
 }
 
 
+def proper_name_parent_text(text):
+    """Invert the exact name-witness selection and its two display hints."""
+    if 'token.entry_witnesses' not in text:
+        return text
+    edits = [
+        ('        entries.find((e) => token.entry_witnesses?.includes(e.id)) ??\n', ''),
+        ('(entry.pos === "PROPN" ? "Proper name" : "No English gloss")',
+         '"No English gloss"'),
+        ('entry?.pos === "PROPN" ? `${lemma.text} · Corpus proper-name evidence; click for the original training contexts. Other meanings remain available.` : ', ''),
+    ]
+    for current, previous in edits:
+        assert text.count(current) == 1, 'incomplete proper-name source inverse'
+        text = text.replace(current, previous, 1)
+    return text
+
+
 def context_parent_text(text):
     """Invert the three exact pair-context edits; keep every suffix-label change."""
+    text = proper_name_parent_text(text)
     if 'grammarContextHeadword' not in text:
         return text
     edits = [
@@ -115,7 +134,8 @@ def inspect(report):
             # diagrams with the new actual Nix CLI and current frontend too.
             paired = read(PAIR_REFRESH)
             assert paired['producer_sha256'] == producer
-            assert paired['frontend_sha256'] == sha(frontend)
+            parent = proper_name_parent_text(text)
+            assert paired['frontend_sha256'] == hashlib.sha256(parent.encode()).hexdigest()
             package = read(PAIR_PACKAGE)
             assert package['state'] == 'passed' and package['exit_code'] == 0
             assert package['inputs_unchanged']
@@ -126,6 +146,23 @@ def inspect(report):
                     assert before[key] == after[key], key
                 for key in ['records', 'breakdowns']:
                     assert before['response'][key] == after['response'][key], key
+            if parent != text:
+                current = read(CURRENT_REFRESH)
+                runtime = read(CURRENT_PACKAGE)
+                assert current['producer_sha256'] == producer
+                assert current['frontend_sha256'] == sha(frontend)
+                assert runtime['state'] == 'passed' and runtime['exit_code'] == 0
+                assert runtime['server_stopped'] and runtime['inputs_unchanged'] and runtime['sources_unchanged']
+                assert runtime['producer']['sha256'] == sha(ROOT / 'tools/replay_scoped_browser.py')
+                assert hashlib.sha256(runtime['producer']['text'].encode()).hexdigest() == runtime['producer']['sha256']
+                assert current['cli_sha256'] == runtime['frozen_inputs'][runtime['cli']]
+                assert runtime['source_files']['web/src/breakdown.ts'] == sha(frontend)
+                assert inspect_cases(current) == count
+                for before, after in zip(paired['checks'], current['checks'], strict=True):
+                    for key in ['request', 'encoding', 'surface', 'selected', 'labels', 'cli_records']:
+                        assert before[key] == after[key], key
+                    for key in ['records', 'breakdowns']:
+                        assert before['response'][key] == after['response'][key], key
     return count
 
 

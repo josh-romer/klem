@@ -55,6 +55,64 @@ class ScopedGuards(unittest.TestCase):
         self.assertEqual(hashlib.sha256(audit.context_parent_text(text).encode()).hexdigest(),
                          audit.read(audit.REFRESH)['frontend_sha256'])
 
+    def test_name_inverse_preserves_actual_pair_capture_fingerprint(self):
+        import hashlib
+        text = (audit.ROOT / 'web/src/breakdown.ts').read_text()
+        self.assertEqual(hashlib.sha256(audit.proper_name_parent_text(text).encode()).hexdigest(),
+                         audit.read(audit.PAIR_REFRESH)['frontend_sha256'])
+
+    def test_name_inverse_rejects_changed_witness_selection(self):
+        text = (audit.ROOT / 'web/src/breakdown.ts').read_text()
+        changed = text.replace('token.entry_witnesses?.includes(e.id)',
+                               'token.entry_witnesses?.includes(entries[0].id)', 1)
+        self.assertNotEqual(changed, text)
+        with self.assertRaises(AssertionError):
+            audit.frontend_parent_sha(changed)
+
+    def test_name_inverse_rejects_changed_source_hint(self):
+        text = (audit.ROOT / 'web/src/breakdown.ts').read_text()
+        changed = text.replace('Corpus proper-name evidence', 'Dictionary proper-name evidence', 1)
+        self.assertNotEqual(changed, text)
+        with self.assertRaises(AssertionError):
+            audit.frontend_parent_sha(changed)
+
+    def inspect_with_current_capture(self, capture=None, runtime=None):
+        original_read = audit.read
+
+        def read(path):
+            if path == audit.CURRENT_REFRESH and capture is not None:
+                return capture
+            if path == audit.CURRENT_PACKAGE and runtime is not None:
+                return runtime
+            return original_read(path)
+
+        with patch.object(audit, 'read', side_effect=read):
+            return audit.inspect(self.report)
+
+    def test_current_capture_requires_current_frontend(self):
+        capture = copy.deepcopy(audit.read(audit.CURRENT_REFRESH))
+        capture['frontend_sha256'] = audit.read(audit.PAIR_REFRESH)['frontend_sha256']
+        with self.assertRaises(AssertionError):
+            self.inspect_with_current_capture(capture=capture)
+
+    def test_current_capture_requires_actual_installed_cli(self):
+        capture = copy.deepcopy(audit.read(audit.CURRENT_REFRESH))
+        capture['cli_sha256'] = '0' * 64
+        with self.assertRaises(AssertionError):
+            self.inspect_with_current_capture(capture=capture)
+
+    def test_current_capture_cannot_change_original_diagram(self):
+        capture = copy.deepcopy(audit.read(audit.CURRENT_REFRESH))
+        capture['checks'][0]['labels'][0] = 'Auxiliary verb / adjective formation'
+        with self.assertRaises(AssertionError):
+            self.inspect_with_current_capture(capture=capture)
+
+    def test_current_capture_requires_unchanged_bound_source(self):
+        runtime = copy.deepcopy(audit.read(audit.CURRENT_PACKAGE))
+        runtime['source_files']['web/src/breakdown.ts'] = '0' * 64
+        with self.assertRaises(AssertionError):
+            self.inspect_with_current_capture(runtime=runtime)
+
     def test_pair_inverse_rejects_changed_reading_argument(self):
         text = (audit.ROOT / 'web/src/breakdown.ts').read_text()
         changed = text.replace('grammarContextHeadword(a, component.morpheme, order)',
@@ -79,7 +137,7 @@ class ScopedGuards(unittest.TestCase):
         with patch.object(audit, 'read', side_effect=read):
             return audit.inspect(self.report)
 
-    def test_pair_capture_requires_current_frontend(self):
+    def test_pair_capture_requires_its_historical_frontend(self):
         capture = copy.deepcopy(audit.read(audit.PAIR_REFRESH))
         capture['frontend_sha256'] = audit.read(audit.REFRESH)['frontend_sha256']
         with self.assertRaises(AssertionError):

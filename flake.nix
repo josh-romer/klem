@@ -355,6 +355,7 @@
                 ./web/src/breakdown.ts
                 ./tools/hada_remaining_scoped_runtime.py
                 ./tools/test_hada_remaining_scoped_runtime.py
+                ./tools/replay_scoped_browser.py
                 ./tools/hada_remaining_broad.py
                 ./tools/hada_remaining_corpora.py
                 ./tools/test_hada_remaining_release_audits.py

@@ -59,7 +59,9 @@ coordinated fixture/ledger mutation rejection. Clippy passes with warnings denie
 new source/boundary/novel cases and complete expanded shared ledger pass.
 [Full prototype Rust](dapnikka-full-tests-retry1.json.gz) passes 1,102 tests,
 with one ignored test across 238 batches including doctest. The expanded shared
-ledger is separately validated; full committed integrated replay remains pending. The initial integrated ledger run rejected the
+ledger is separately validated. [Full committed integrated Rust](dapnikka-committed-full-tests.json.gz)
+also passes 1,102 tests, zero failures and one ignored test across 238 batches;
+all tracked inputs, HEAD and index remained unchanged. The initial integrated ledger run rejected the
 novel's repository-path source string; the corrected fixture cites the pinned
 original Wikisource URL and its exact bytes remain bound by the historical audit.
 
@@ -68,7 +70,27 @@ passed with frozen source/HEAD/index. It covers the declarative-DAO baseline;
 new name/title/self-question and this ending family require their own subsequent
 package and installed validation.
 
-Remaining: full integrated Rust and Nix, installed source/browser/export,
+The combined Nix inventory check exposed a historical frontend source binding
+that did not account for the proper-name witness selection and display hints.
+The repair preserves all three original capture hashes with exact source
+inverses. [A new installed capture](reported-question-hada-scoped-browser.json)
+replays all six original nested-suffix diagrams without changing their CLI
+records or ordered components. Its [runtime receipt](reported-question-hada-scoped-runtime.json)
+binds the immutable Nix Rust/frontend sources, served assets and owned-server
+cleanup. All 21 audit controls pass, including changed witness selection,
+display hints, capture fingerprints, CLI identity and source-binding rejection.
+
+[Restored Nix packages](reported-question-restored-package-nix.json) pass all
+1,102 release tests, with zero failures and one ignored test across 238 batches.
+[Installed source binding](reported-question-installed-source-binding.json)
+verifies every file in the 991/18/991 CLI-server/frontend/adapter profiles and
+the exact launcher references. [Installed finite replay](reported-question-installed-finite.json.gz)
+passes 84 streams: 24 original self/reported-question source streams, twelve
+complete original novel-sentence streams and 48 name/title Unicode/filter/cache
+and opt-in/out streams. All 121 distinct complete Native entries survive actual
+imports. Broader installed and browser coverage remains separate.
+
+Remaining: integrated Nix, installed source/browser/export,
 broad/cohort/adapter binding, quiet novel timing, main integration, wider
 lexical/marker/auxiliary/particle distributions and independent contextual
 review. Structural compatibility does not select the novel's intended 말다 sense.

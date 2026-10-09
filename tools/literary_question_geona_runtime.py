@@ -20,6 +20,8 @@ def verify_ledger(current,proposal,later_proposal=None):
    reviewed_appends=[
     ('declarative-dao-validity.json',36,'f847dfe655657f54a0a10870251d6b831c2462d8b8ddf8b7c1bb30218efaa9b7','DAO'),
     ('self-question-validity.json',29,'882d5671aa228e25ede6809e03da1d11ac097dd484315e59d1b2f6ce02fa566a','self-question'),
+    ('dapnikka-validity.json',62,'ebba195627702a1ccbe768f559983143e51094f3dd671a7b20c05ac00f0487f0','dapnikka'),
+    ('dapnikka-novel-validity.json',1,'162bde7235fccb0091eacf4e1370cc2aad58c67a298303a2182483e176b4137f','dapnikka novel'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

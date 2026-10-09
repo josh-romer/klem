@@ -28,6 +28,8 @@ pub enum AttachmentRule {
     PresentDeclarativeVerb,
     BareAdjectivalQuestion,
     NegativeCopulaCommand,
+    /// Native 80909/86630 restrict quoted-command questions to verbs.
+    ReportedCommandVerb,
     IntentionVerb,
     ResultTransferVerb,
     RepetitiveVerb,
@@ -285,6 +287,7 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라네"
             | "라는데"
             | "라더니"
+            | "랍니까"
             | "라던"
             | "라던데"
             | "라며"
@@ -2501,6 +2504,56 @@ impl Annotation {
                         }
                     }
                     if let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "답니까" | "는답니까")
+                    {
+                        // KRDict 78782/78786 and reported 86563/86566 select
+                        // present verbs; 78797/86628 select adjectives or
+                        // their immediate honorific/past/modal boundary.
+                        let present = analysis.morphemes[i].form == "는답니까";
+                        let owner = if derived_adjective {
+                            Some(PredicateClass::Adjective)
+                        } else {
+                            class.or(negative_lexical).or({
+                                if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {
+                                    match pos {
+                                        "동사" | "보조 동사" => Some(PredicateClass::Verb),
+                                        "형용사" | "보조 형용사" => Some(PredicateClass::Adjective),
+                                        _ => None,
+                                    }
+                                } else {
+                                    None
+                                }
+                            })
+                        };
+                        let conflict = if present
+                            && matches!(owner, Some(PredicateClass::Adjective | PredicateClass::Copula))
+                        {
+                            Some(AttachmentRule::PresentDeclarativeVerb)
+                        } else if !present && bare && matches!(owner, Some(PredicateClass::Verb)) {
+                            Some(AttachmentRule::BareAdjectivalReport)
+                        } else {
+                            None
+                        };
+                        if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                            && let Some(rule) = conflict
+                        {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        }
+                        if status == Compatibility::Compatible {
+                            let unlisted = morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if (analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                    && !crate::engine::honorific_prefinal(&analysis.morphemes[*j].form)
+                                    && (present || !matches!(analysis.morphemes[*j].form.as_str(), "었" | "겠")))
+                                    || analysis.morphemes[*j].kind == MorphemeKind::Particle));
+                            if unlisted || owner.is_none()
+                                || (!present && bare && matches!(owner, Some(PredicateClass::Copula)))
+                            {
+                                status = Compatibility::Unknown;
+                            }
+                        }
+                    }
+                    if let Some(i) = ending
                         && matches!(analysis.morphemes[i].form.as_str(), "다오" | "는다오")
                     {
                         // Native 77931/79421 and expression 88935/88936 use
@@ -2607,6 +2660,41 @@ impl Annotation {
                             if unlisted || honorific_plain_verb
                                 || (plain_report && matches!(owner, Some(PredicateClass::Copula)))
                             { status = Compatibility::Unknown; }
+                        }
+                    }
+                    if let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "랍니까" | "으랍니까")
+                    {
+                        let command = analysis.morphemes[i].form == "으랍니까";
+                        let adjective = derived_adjective
+                            || matches!(class, Some(PredicateClass::Adjective))
+                            || matches!(pos, "형용사" | "보조 형용사");
+                        if command && (adjective || lemma.kind == LemmaKind::Copula)
+                            && matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict {
+                                rule: AttachmentRule::ReportedCommandVerb,
+                                morpheme_index: Some(i),
+                            });
+                        }
+                        if status == Compatibility::Compatible {
+                            let prefinals: Vec<_> = morphs.iter().filter_map(|c| match c {
+                                Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Prefinal => Some(analysis.morphemes[*j].form.as_str()),
+                                _ => None,
+                            }).collect();
+                            let retrospective = !command && prefinals.contains(&"더");
+                            let unlisted = prefinals.iter().any(|form| {
+                                !crate::engine::honorific_prefinal(form)
+                                    && !(if command { false }
+                                         else if retrospective { matches!(*form, "더" | "었" | "겠") }
+                                         else { matches!(*form, "으리") })
+                            });
+                            if unlisted || morphs.iter().any(|c| matches!(c, Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Particle))
+                                || (command && !matches!(pos, "동사" | "보조 동사"))
+                            {
+                                status = Compatibility::Unknown;
+                            }
                         }
                     }
                     if status == Compatibility::Compatible

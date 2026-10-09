@@ -1,0 +1,616 @@
+{
+  "id": "dapnikka-novel-malrapnikka",
+  "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+  "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+  "complete_original_line": "“글쎄 가보세요. 누가 가시지를 말랍니까.” 끝에 말은 없어도 좋은 말이다. 형식은 고개를 숙이고 우두커니 앉았더니 벌떡 일어서며,",
+  "before": {
+    "surface": "말랍니까",
+    "span": {
+      "start": 684891,
+      "end": 684903
+    },
+    "kind": "word",
+    "analysis": {
+      "normalized": "말랍니까",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "말라",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "습니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "습니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말랄다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "습니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말랍니까",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말랍니까다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    "dictionary": {
+      "source": "krdict",
+      "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+      "lemmas": [
+        {
+          "lemma": {
+            "text": "말라",
+            "kind": "nominal"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말라다",
+            "kind": "predicate"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말랄다",
+            "kind": "predicate"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말랍니까",
+            "kind": "unclassified"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말랍니까다",
+            "kind": "predicate"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "이다",
+            "kind": "copula"
+          },
+          "entries": [
+            {
+              "id": "krdict:86118",
+              "headword": "이다",
+              "homonym": "3",
+              "pos": "조사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:86232",
+              "headword": "이다",
+              "homonym": "2",
+              "pos": "조사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:92457",
+              "headword": "이다",
+              "homonym": "1",
+              "pos": "동사",
+              "pos_compatibility": "incompatible"
+            }
+          ]
+        }
+      ],
+      "readings": [
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            },
+            {
+              "lemma_index": 1,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:86232",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:92457",
+                  "status": "incompatible",
+                  "conflicts": [
+                    {
+                      "rule": "lexical_role",
+                      "morpheme_index": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "after": {
+    "surface": "말랍니까",
+    "span": {
+      "start": 684891,
+      "end": 684903
+    },
+    "kind": "word",
+    "analysis": {
+      "normalized": "말랍니까",
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "말다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으랍니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.question_dapnikka"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말라",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "습니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "습니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말랄다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "습니까",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말랍니까",
+              "kind": "unclassified"
+            }
+          ],
+          "morphemes": [],
+          "rules": [
+            "identity"
+          ],
+          "unchanged": true
+        },
+        {
+          "lemmas": [
+            {
+              "text": "말랍니까다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    "dictionary": {
+      "source": "krdict",
+      "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+      "lemmas": [
+        {
+          "lemma": {
+            "text": "말다",
+            "kind": "predicate"
+          },
+          "entries": [
+            {
+              "id": "krdict:14626",
+              "headword": "말다",
+              "homonym": "1",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:51701",
+              "headword": "말다",
+              "homonym": "2",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:69296",
+              "headword": "말다",
+              "homonym": "3",
+              "pos": "동사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:72580",
+              "headword": "말다",
+              "homonym": "4",
+              "pos": "보조 동사",
+              "pos_compatibility": "incompatible"
+            }
+          ]
+        },
+        {
+          "lemma": {
+            "text": "말라",
+            "kind": "nominal"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말라다",
+            "kind": "predicate"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말랄다",
+            "kind": "predicate"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말랍니까",
+            "kind": "unclassified"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "말랍니까다",
+            "kind": "predicate"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "이다",
+            "kind": "copula"
+          },
+          "entries": [
+            {
+              "id": "krdict:86118",
+              "headword": "이다",
+              "homonym": "3",
+              "pos": "조사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:86232",
+              "headword": "이다",
+              "homonym": "2",
+              "pos": "조사",
+              "pos_compatibility": "compatible"
+            },
+            {
+              "id": "krdict:92457",
+              "headword": "이다",
+              "homonym": "1",
+              "pos": "동사",
+              "pos_compatibility": "incompatible"
+            }
+          ]
+        }
+      ],
+      "readings": [
+        {
+          "status": "compatible",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:14626",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:51701",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:69296",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:72580",
+                  "status": "unknown",
+                  "conflicts": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            },
+            {
+              "lemma_index": 1,
+              "status": "compatible",
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:86232",
+                  "status": "compatible",
+                  "conflicts": []
+                },
+                {
+                  "id": "krdict:92457",
+                  "status": "incompatible",
+                  "conflicts": [
+                    {
+                      "rule": "lexical_role",
+                      "morpheme_index": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "source_exports": {
+    "4_5000_20260919.json": {
+      "sha256": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+      "ids": [
+        "krdict:14626",
+        "krdict:51701",
+        "krdict:69296",
+        "krdict:72580"
+      ]
+    }
+  },
+  "contextual_verdict": "unjudged",
+  "independent_review": "pending"
+}

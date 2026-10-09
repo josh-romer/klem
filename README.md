@@ -335,3 +335,10 @@ examples such as 간담 → 가다, 읽는담 → 읽다 and 천재였남 → �
 The dictionary's attested 웃기담/웃기다 POS tension is retained as unknown.
 These are authored structural hypotheses, with contextual and independent
 review pending; see [the supported scope and evidence](docs/self-question-draft.md).
+
+Rhetorical and reported questions such as `좋아한답니까`, `많답니까`,
+`모양이랍니까` and `읽으랍니까` retain separate present/plain, copular and
+command paths, dictionary homonyms and source entry labels. The original novel
+form `말랍니까` recovers `말다 + 으랍니까`. See the
+[finite scope and remaining validation](docs/dapnikka-draft.md); dictionary
+compatibility does not select the intended contextual sense.

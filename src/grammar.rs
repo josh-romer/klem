@@ -703,6 +703,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다더니"
                             | "다나"
                             | "다오"
+                            | "답니까"
                             | "담"
                             | "다마는"
                             | "다만"
@@ -832,6 +833,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다더니",
             "다나",
             "다오",
+            "답니까",
             // KRDict 73883/73891: separate self-question finals.
             "담",
             "남",
@@ -1231,6 +1233,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라는데", "라는데", "으라는데"),
             ("으라던", "라던", "으라던"),
             ("으라더니", "라더니", "으라더니"),
+            ("으랍니까", "랍니까", "으랍니까"),
             ("으라던데", "라던데", "으라던데"),
             ("으라며", "라며", "으라며"),
             ("으라면서", "라면서", "으라면서"),
@@ -1383,6 +1386,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다나", "다나", "는다나", 4),
             // KRDict 77931/79421: open/rieul versus other consonant verbs.
             ("는다오", "다오", "는다오", 4),
+            ("는답니까", "답니까", "는답니까", 4),
             // KRDict 73881/73882: present verb -ㄴ담/-는담.
             ("는담", "담", "는담", 4),
             ("는다더니만", "다더니만", "는다더니만", 4),
@@ -1485,6 +1489,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라네",
             "라는데",
             "라더니",
+            "랍니까",
             "라던",
             "라던데",
             "라며",
@@ -2254,6 +2259,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.self_question" => {
             "Recover source-listed -ㄴ담/-는담/-담/-남 self-question endings with their own immediate stem and prefinal boundaries; preserve lexical alternatives without choosing complaint, register or contextual meaning."
+        }
+        "ending.question_dapnikka" => {
+            "Recover source-listed rhetorical/reported -답니까/-ㄴ답니까/-는답니까 and factual/command -(으)랍니까 with their distinct immediate boundaries; preserve all native lexical and contextual alternatives."
         }
         "ending.declarative_dao" => {
             "Recover source-listed -다오/-ㄴ다오/-는다오 with their own immediate stem and prefinal attachment; retain ending/expression senses without selecting the source of the statement."

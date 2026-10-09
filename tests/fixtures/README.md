@@ -1,5 +1,22 @@
 # Annotated corpus excerpts
 
+`dapnikka-native.json`, `krdict-dapnikka-labels.json` and
+`dapnikka-novel-native.json` retain complete original Korean Basic Dictionary
+Native LMF entries from the September 2026 export: 90 source/control identities,
+nine ending/expression label identities and four distinct 말다 identities.
+Dictionary text is CC BY-SA 2.0 KR, attributed to the National Institute of
+Korean Language. The corresponding `*-entries.json` files are complete importer
+projections. Hashes and source-export provenance are retained in
+`docs/dapnikka-source-preparation.json.gz`, `docs/dapnikka-native-closure.json.gz`
+and `dapnikka-novel-case.json`. No homonyms or POS fields are merged.
+
+`dapnikka-proposals.json` retains all 46 complete original example groups and
+earlier records. `dapnikka-validity.json` contains 62 authored structural cases;
+`dapnikka-novel-validity.json` adds one original novel regression. These are
+source-backed structural requirements, not annotation gold or contextual sense
+labels. The original novel sentence, earlier ordered paths and all four Native
+owners are preserved; contextual and independent review remain pending.
+
 `krdict.json` is separately licensed **CC BY-SA 2.0 KR** dictionary text from the
 National Institute of Korean Language (국립국어원), Korean Basic Dictionary
 (한국어기초사전). It is an adapted slice of the September 2026 official LMF JSON

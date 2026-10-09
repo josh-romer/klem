@@ -77,19 +77,49 @@ class Controls(unittest.TestCase):
    with patch.object(audit,'ROOT',root):
     with self.assertRaisesRegex(AssertionError,'reviewed DAO fixture bytes'):audit.verify_ledger(c,self.proposal,later)
  def test_exact_pre_self_question_ledger_still_passes(self):
-  c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures/self-question-validity.json');c['cases']=c['cases'][:-29]
-  for key in suite['sources']:c['sources'].pop(key)
+  c=self.ledger_through(35050)
   self.assertEqual(audit.verify_ledger(c,self.proposal)['preserved_cases'],34920)
  def test_self_question_case_order_change_cannot_pass(self):
-  c=copy.deepcopy(self.current);c['cases'][-1],c['cases'][-2]=c['cases'][-2],c['cases'][-1]
+  c=copy.deepcopy(self.current);c['cases'][35078],c['cases'][35077]=c['cases'][35077],c['cases'][35078]
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
  def test_coordinated_self_question_fixture_mutation_cannot_pass(self):
   c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures/self-question-validity.json');later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
-  c['cases'][-1]['judgments'][0]['reason']='coordinated changed self-question judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][-1])
+  c['cases'][35078]['judgments'][0]['reason']='coordinated changed self-question judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][35078])
   dao_bytes=(audit.ROOT/'tests/fixtures/declarative-dao-validity.json').read_bytes()
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
    (fixtures/'declarative-dao-validity.json').write_bytes(dao_bytes);(fixtures/'self-question-validity.json').write_text(audit.json.dumps(suite))
    with patch.object(audit,'ROOT',root):
     with self.assertRaisesRegex(AssertionError,'reviewed self-question fixture bytes'):audit.verify_ledger(c,self.proposal,later)
+ def ledger_through(self,count):
+  c=copy.deepcopy(self.current);c['cases']=c['cases'][:count]
+  used={j['source'] for case in c['cases'] for j in case['judgments']}
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json']:
+   for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
+    if key not in used:c['sources'].pop(key,None)
+  return c
+ def test_exact_pre_dapnikka_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35079),self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_dapnikka_novel_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35141),self.proposal)['preserved_cases'],34920)
+ def test_dapnikka_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][35140],c['cases'][35139]=c['cases'][35139],c['cases'][35140]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_dapnikka_source_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['dapnikka-78782']='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def coordinated_append_mutation(self,filename,index,label):
+  c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures'/filename);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
+  c['cases'][index]['judgments'][0]['reason']='coordinated changed '+label+' judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][index])
+  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json']}
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
+   for name,raw in originals.items():(fixtures/name).write_bytes(raw)
+   (fixtures/filename).write_text(audit.json.dumps(suite))
+   with patch.object(audit,'ROOT',root):
+    with self.assertRaisesRegex(AssertionError,'reviewed '+label+' fixture bytes'):audit.verify_ledger(c,self.proposal,later)
+ def test_coordinated_dapnikka_fixture_mutation_cannot_pass(self):
+  self.coordinated_append_mutation('dapnikka-validity.json',35140,'dapnikka')
+ def test_coordinated_novel_fixture_mutation_cannot_pass(self):
+  self.coordinated_append_mutation('dapnikka-novel-validity.json',35141,'dapnikka novel')
 if __name__=='__main__':unittest.main()

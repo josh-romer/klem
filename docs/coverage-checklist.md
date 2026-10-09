@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 485 scoped
-  dispositions; 230 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 489 scoped
+  dispositions; 226 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3318,9 +3318,29 @@ review remains open under the completion review below.
   and 21,406 historical surfaces preserve earlier paths and assessments. The
   14 new paths on ten corpus surfaces and one historical surface are Unknown
   with no dictionary headword matches and retain their complete original
-  witnesses; the portable cohort audit and five controls pass. Full Rust is
-  retrying after retained fixture/build failures. Normal Nix/installed validation, quiet performance,
+  witnesses; the portable cohort audit and five controls pass. The preceding
+  [integration Rust run](integration-full-tests-retry2.json.gz) passed 1,094
+  tests with one ignored test; the combined run after COV-017cp is pending.
+  Normal Nix/installed validation, quiet performance,
   wider distributions, contextual senses and independent review remain open.
+
+- [ ] **COV-017cp — Rhetorical and reported -ㄴ답니까/-는답니까/-답니까/-랍니까 questions.**
+  **Partial: complete original source groups and finite ownership boundaries
+  implemented on the reported-question integration branch.** Four ending
+  identities 78782/78786/78797/78803 and six separate reported-expression
+  identities retain 46 complete groups and 90 complete Native entries.
+  `ending.question_dapnikka` preserves present/plain, factual/copular,
+  command -으랍니까, retrospective and conjectural boundaries, exact POS
+  homonyms and all old candidates. The 62 source/boundary cases and novel's
+  말랍니까 case are appended exactly to the shared ledger.
+  [Evidence](dapnikka-draft.md) retains twelve Unicode/cache/filter streams
+  verifying all 46 proposals, 330 browser diagrams/six exports, all 90 entry
+  endpoints, 1,128,312 broad frames, 53,502 saved words and 66,570 unchanged
+  annotated rows. Five captures of one novel path preserve full context and
+  four Native homonyms; contextual sense remains unjudged. Source/cohort/broad
+  controls pass 9/5/7 tests; historical ledger controls pass 38 tests. Full
+  integrated Rust, Nix/installed/main binding, quiet timing, wider distributions
+  and independent contextual review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

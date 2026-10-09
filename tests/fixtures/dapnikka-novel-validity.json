@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "review_status": "Authored structural source-backed case; contextual and independent review pending.",
+  "sources": {
+    "dapnikka-novel-mujeong": "https://ko.wikisource.org/wiki/무정"
+  },
+  "cases": [
+    {
+      "id": "dapnikka-novel-malrapnikka",
+      "surface": "말랍니까",
+      "judgments": [
+        {
+          "id": "reported-command",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으랍니까"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.question_dapnikka"
+          ],
+          "verdict": "required",
+          "source": "dapnikka-novel-mujeong",
+          "reason": "Authored structural analysis of one original novel form; full sentence and four Native homonyms preserved. Contextual sense and independent linguistic review remain unjudged."
+        }
+      ]
+    }
+  ]
+}

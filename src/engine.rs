@@ -962,6 +962,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다더니"
             | "는다나"
             | "는다오"
+            | "는답니까"
             | "는담"
             | "는다더니만"
             | "는다더니마는"
@@ -1277,7 +1278,7 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 // while 89662 requires a verb for canonical command 으라더니.
                 // KRDict 74698 lists honorific, past and modal markers.
                 // Present forms use the shared honorific-only restriction.
-                if matches!(ending.form, "다나" | "다오" | "담" | "남")
+                if matches!(ending.form, "다나" | "다오" | "답니까" | "담" | "남")
                     && p.morphs.iter().any(|m| {
                         !honorific_prefinal(&m.form)
                             && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
@@ -1285,10 +1286,10 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
-                if ending.form == "으라더니" && p.stem == "아니" {
+                if matches!(ending.form, "으라더니" | "으랍니까") && p.stem == "아니" {
                     continue;
                 }
-                if (matches!(ending.form, "으라던" | "으라던데" | "으라더니")
+                if (matches!(ending.form, "으라던" | "으라던데" | "으라더니" | "으랍니까")
                     && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
                     || (matches!(ending.form, "자던" | "자던데") && !p.morphs.is_empty())
                     || (plain_reporting_retrospective(ending.form)
@@ -1736,6 +1737,7 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                                 | "라네"
                                 | "라는데"
                                 | "라더니"
+                                | "랍니까"
                                 | "라던"
                                 | "라던데"
                                 | "라며"
@@ -1882,6 +1884,10 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "담" | "는담" | "남") {
                     p.rules.push("ending.self_question".into());
+                }
+                if matches!(ending.form, "답니까" | "는답니까" | "랍니까" | "으랍니까")
+                {
+                    p.rules.push("ending.question_dapnikka".into());
                 }
                 if matches!(ending.form, "다오" | "는다오") {
                     p.rules.push("ending.declarative_dao".into());
@@ -2097,6 +2103,8 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
         "라고",
         "라면",
         "랍니다",
+        // Native 78803/86630 explicitly permit the immediate 으리 marker.
+        "랍니까",
         "란다",
         "래",
         "라지",
@@ -2195,6 +2203,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                         }
                         if quoted_ra_exclamation(ending) {
                             p.rules.push("ending.quoted_ra_exclamation".into());
+                        }
+                        if ending == "랍니까" {
+                            p.rules.push("ending.question_dapnikka".into());
                         }
                         p.dap_suffix = dap_suffix_allowed(&p);
                         out.push(p);
@@ -3148,6 +3159,7 @@ fn auxiliary_inflections_allowed_for(
                 && matches!(
                     m.form.as_str(),
                     "으라더니"
+                        | "으랍니까"
                         | "으라던"
                         | "으라던데"
                         | "자던"
@@ -3299,6 +3311,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 || matches!(
                     m.form.as_str(),
                     "으라더니"
+                        | "으랍니까"
                         | "으라던"
                         | "으라던데"
                         | "자던"
@@ -3659,6 +3672,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 || matches!(
                     m.form.as_str(),
                     "으라더니"
+                        | "으랍니까"
                         | "으라던"
                         | "으라던데"
                         | "자던"
@@ -4738,6 +4752,7 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 | "으라네"
                 | "으라는데"
                 | "으라더니"
+                | "으랍니까"
                 | "으라던"
                 | "으라던데"
                 | "으라며"

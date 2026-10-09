@@ -3424,8 +3424,13 @@ review remains open under the completion review below.
   dependent cases stay outside raw gold. The complete private and Nix release suites pass 1,115 tests (one ignored),
   with unchanged inputs. All four committed Git-backed Nix packages pass;
   package profiles preserve all 1,015 Rust/adapter and 18 frontend source files.
-  Remaining: installed/main integration, complete inventory execution, quiet
-  performance, wider distributions and contextual/independent review.
+  Installed source/launcher binding passes 1,015 Rust/adapter and 18 frontend
+  files. Installed CLI preserves all 1,128,312 broad frames, 53,502 cohort words
+  and 24 finite streams/10,980 frames; installed adapter preserves 66,570 rows.
+  Browser passes 474 diagrams/six exports/92 Native endpoints, no errors, server
+  stopped. All 14 portable installed corruption controls pass. Remaining:
+  complete inventory execution, main integration, quiet performance, wider
+  distributions and contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

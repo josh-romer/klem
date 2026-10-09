@@ -55,3 +55,17 @@ The later reported-question evidence commit is integrated locally; its generated
 inventory queue was rebuilt to preserve all 499 scoped and 216 unreviewed entries.
 Installed source/runtime/browser/adapter, complete inventory execution, main
 integration, quiet performance and wider/contextual review remain pending.
+
+Installed validation at committed 45ff043 now passes all three exact source
+profiles (1,015 Rust/adapter, 18 frontend) and the launcher. The actual installed
+CLI reproduces all 1,128,312 broad frames, 53,502 corpus/history words and
+24 finite Unicode/filter/cache streams containing 10,980 complete frames.
+The installed adapter preserves all 66,570 original annotated rows and summary
+statistics. The installed browser passes 474 diagrams, six exact CLI exports
+and all 92 Native endpoints, without errors; its owned server is stopped.
+All producer-selected inputs stayed unchanged. The portable combined audit
+validates these actual captures; all 14 corruption controls pass.
+An initial regression caught stale summary counts copied from the formal audit;
+the corrected summary derives counts from the current captures. Both failed
+and corrected attempts are retained. Complete Nix inventory execution, quiet
+performance, main integration, wider/contextual and independent review remain.

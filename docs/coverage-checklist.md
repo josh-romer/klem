@@ -4258,9 +4258,67 @@ review remains open under the completion review below.
   The [runtime auditor](../tools/gentle_command_runtime_audit.py) checks the
   original archive bytes, current production closure, actual commands, complete
   policies, independent annotations and bounded review claims; its corruption
-  controls are wired into the Nix inventory check. Current-source installed
-  Nix/packages/browser proof, shared-case promotion, main integration, quiet
-  performance and wider contextual/independent review remain open.
+  controls are wired into the Nix inventory check.
+
+  The [installed Nix/browser archive](gentle-command-installed-proof-archive.json)
+  preserves all four actual packages at `c834444`, all 1,182 release Rust tests
+  in 253 batches, and complete source profiles of 1,123 Rust/adapter files and
+  eighteen frontend files. Every compiled production input, including the
+  proper-name JSON, matches the source-bound prototype. Actual installed CLI
+  captures repeat all 36 source/filter/cache streams and 47 complete Native
+  lookups; the installed adapter repeats all 66,570 original annotated rows.
+  All eight broad streams repeat all 1,128,312 frames with exact output hashes,
+  original bytes and unchanged individual novel contexts. The installed Nix
+  launcher and SolidJS assets pass all 23 private cases: 138 Unicode/filter
+  policy decisions, ninety independently ordered required decompositions, six
+  complete exports matching the CLI and 47 full Native endpoints. Both ending
+  owners remain distinct, all eight forbidden paths remain absent, every
+  offered alternative follows CLI policy, no browser errors occur and the
+  owned server stops explicitly with SIGINT. All source files, HEAD and index
+  remain unchanged during the captures. [Desktop](gentle-command-installed-browser-desktop.png)
+  and [mobile](gentle-command-installed-browser-mobile.png) renders were inspected.
+  The original private-home-directory build failure and public-`/tmp` ENOSPC
+  compilation failure are retained; the same-source public-`/var/tmp` build
+  passes without changing a judgment or baseline.
+  The [installed auditor](../tools/gentle_command_installed_audit.py) and 28
+  corruption controls pass, checking exact package sources, all original
+  commands/captures, independent component order and complete export/entry
+  fields. The actual flake-selected runtime audit also passes all 35 controls.
+  [Complete installed/source/runtime/history/inventory validation](gentle-command-installed-validation-proof-archive.json)
+  passes all 105 corruption controls with 6,550 captured source files, HEAD
+  and index unchanged. The 35,681 active cases and 515 review entries remain
+  unchanged throughout.
+
+  The [shared-ledger draft](gentle-command-ledger-draft-proof-archive.json)
+  preserves every original 35,681 case and 515 review byte and proposes only
+  the exact 23 preauthored structural judgments and two bounded ending-owner
+  reviews. All 25 draft corruption controls pass; the active ledger and reviews
+  are unchanged. Complete current inventory Nix, actual shared-case promotion,
+  main integration, quiet performance and wider contextual/independent review
+  remain open.
+
+- [ ] **COV-017da — Gentle command -려무나/-으려무나.**
+  The [original-source packet](gentle-command-long-source-proof-archive.json)
+  preserves both ending owners, 79266 and 79265, every complete original
+  example group, and all sixteen ending/lexical Native entries from the eleven
+  original exports. Eight independent typed targets were authored before any
+  candidate observation: 자려무나 → 자다, 나가려무나 → 나가다,
+  쓰려무나 → 쓰다, 지내려무나 → 지내다, 벗으려무나 → 벗다,
+  앉으려무나 → 앉다, 찾으려무나 → 찾다 and 있으려무나 → 있다.
+  Both original notes require verb stems: vowel/ㄹ short form versus other-coda
+  full form. Every 쓰다 and 있다 homonym is retained. The complete original
+  dialogue containing 기다리고 있으려무나 is preserved; the isolated-token
+  있다 target does not settle its cross-token auxiliary role or contextual
+  sense. The [actual prior installed baseline](gentle-command-long-baseline-proof-archive.json)
+  preserves all 24 NFC/NFD, raw/headword/compatible and zero/4,096-byte cache
+  policies, with 1,512 complete original output frames and unchanged inputs.
+  Each independently proposed lemma and decomposition is absent in every
+  policy. The original source targets precede these observations; neither
+  their fields nor a baseline is refreshed. No rule, label, active judgment
+  or scoped review is added yet. Remaining: regular/irregular/allomorph,
+  known class and auxiliary boundary judgments, rule/catalog/dictionary
+  implementation, complete corpus/history/broad impact, browser/Nix/main and
+  quiet performance, plus contextual/register and independent Korean review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

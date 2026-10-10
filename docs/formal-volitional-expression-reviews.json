@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "interpretation": "Two separately scoped original grammar-expression owners outside the715POS ending/particle/auxiliary inventory. Scoped records cover exact original example paths; they are not completeness or linguistic precision verdicts. No catalog alias or inventory POS reassignment.",
+  "entries": [
+    {
+      "id": "krdict:89455",
+      "status": "scoped",
+      "source_identity": {
+        "id": "krdict:89455",
+        "headword": "-렵니까",
+        "homonym": "2",
+        "pos": "품사 없음",
+        "lexical_unit": "문법‧표현",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89455"
+      },
+      "source_notes": [
+        "받침이 없거나 'ㄹ' 받침인 동사 또는 '-으시-' 뒤에 붙여 쓴다."
+      ],
+      "sense_notes": [
+        {
+          "id": "1",
+          "notes": [
+            "'-려고 합니까'가 줄어든 말이다."
+          ]
+        }
+      ],
+      "scope": "Exact four original example targets, preserving each original context even when the same surface repeats. The existing single ending representation recovers the lexical predicate and independently typed honorific prefinal where present. Dictionary presence, attachment assessment and sense selection remain distinct. This disposition does not claim all paraphrase-equivalent constructions or contextual precision. Actual original Source Unicode/filter/cache, complete corpus/history/annotated/broad distributions and browser/exports/Native fields are reproduced by the installed Nix packages;24corruptioncontrols pass.",
+      "judgments": [
+        {
+          "case": "formal-volitional-expression-89455-sense-1-group-1",
+          "judgment": "path"
+        },
+        {
+          "case": "formal-volitional-expression-89455-sense-1-group-2",
+          "judgment": "path"
+        },
+        {
+          "case": "formal-volitional-expression-89455-sense-1-group-3",
+          "judgment": "path"
+        },
+        {
+          "case": "formal-volitional-expression-89455-sense-1-group-4",
+          "judgment": "path"
+        }
+      ],
+      "constraints": {
+        "ending_rule": "ending.formal_volitional",
+        "canonical_ending": "으렵니까",
+        "automatic_lexical_hada_expansion": false,
+        "pos_unclassified_grammar_label_alias": false,
+        "part_of_715_pos_inventory": false
+      },
+      "remaining": [
+        "Independent Korean-language review and contextual selection of other candidate paths.",
+        "Broader contraction equivalence beyond these original targets; no lexical 하다 lemma is inferred from the source note.",
+        "Complete Nix inventory and main integration still pending; actual installed distributions and browser pass."
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal-volitional-expression-source-preparation.json.gz"
+        },
+        {
+          "path": "tests/fixtures/formal-volitional-expression-validity.json"
+        },
+        {
+          "path": "docs/formal-volitional-expression-library-ledger-browser-validation.json.gz"
+        },
+        {
+          "path": "docs/formal-volitional-expression-full-rust-validation.json.gz"
+        },
+        {
+          "path": "docs/formal-volitional-expression-installed-validation.json.gz"
+        }
+      ]
+    },
+    {
+      "id": "krdict:89456",
+      "status": "scoped",
+      "source_identity": {
+        "id": "krdict:89456",
+        "headword": "-으렵니까",
+        "homonym": "2",
+        "pos": "품사 없음",
+        "lexical_unit": "문법‧표현",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89456"
+      },
+      "source_notes": [
+        "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      ],
+      "sense_notes": [
+        {
+          "id": "1",
+          "notes": [
+            "'-으려고 합니까'가 줄어든 말이다."
+          ]
+        }
+      ],
+      "scope": "Exact four original example targets, preserving each original context even when the same surface repeats. The existing single ending representation recovers the lexical predicate and independently typed honorific prefinal where present. Dictionary presence, attachment assessment and sense selection remain distinct. This disposition does not claim all paraphrase-equivalent constructions or contextual precision. Actual original Source Unicode/filter/cache, complete corpus/history/annotated/broad distributions and browser/exports/Native fields are reproduced by the installed Nix packages;24corruptioncontrols pass.",
+      "judgments": [
+        {
+          "case": "formal-volitional-expression-89456-sense-1-group-1",
+          "judgment": "path"
+        },
+        {
+          "case": "formal-volitional-expression-89456-sense-1-group-2",
+          "judgment": "path"
+        },
+        {
+          "case": "formal-volitional-expression-89456-sense-1-group-3",
+          "judgment": "path"
+        },
+        {
+          "case": "formal-volitional-expression-89456-sense-1-group-4",
+          "judgment": "path"
+        }
+      ],
+      "constraints": {
+        "ending_rule": "ending.formal_volitional",
+        "canonical_ending": "으렵니까",
+        "automatic_lexical_hada_expansion": false,
+        "pos_unclassified_grammar_label_alias": false,
+        "part_of_715_pos_inventory": false
+      },
+      "remaining": [
+        "Independent Korean-language review and contextual selection of other candidate paths.",
+        "Broader contraction equivalence beyond these original targets; no lexical 하다 lemma is inferred from the source note.",
+        "Complete Nix inventory and main integration still pending; actual installed distributions and browser pass.",
+        "Original full-form attachment note and 모으렵니까 → 모으다 vowel-stem example remain an unresolved source tension."
+      ],
+      "evidence": [
+        {
+          "path": "docs/formal-volitional-expression-source-preparation.json.gz"
+        },
+        {
+          "path": "tests/fixtures/formal-volitional-expression-validity.json"
+        },
+        {
+          "path": "docs/formal-volitional-expression-library-ledger-browser-validation.json.gz"
+        },
+        {
+          "path": "docs/formal-volitional-expression-full-rust-validation.json.gz"
+        },
+        {
+          "path": "docs/formal-volitional-expression-installed-validation.json.gz"
+        }
+      ]
+    }
+  ]
+}

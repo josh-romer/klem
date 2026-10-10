@@ -3612,7 +3612,7 @@ review remains open under the completion review below.
   against the 69-entry Source/novel Native union pass as recorded below;
   the frontend build passes. Original expression homonyms 89455 (-렵니까) and
   89456 (-으렵니까) are distinct from the ending owners and remain separately
-  unreviewed outside the 715-entry inventory. A [separate source audit](formal-volitional-expression-source-preparation.json.gz)
+  separately reviewed below and outside the 715-entry inventory. A [separate source audit](formal-volitional-expression-source-preparation.json.gz)
   now preserves both complete homonym-2/POS-unclassified expression entries,
   all eight original groups, their contraction notes and 16 original Native
   identities. Eight lexical targets were authored before their probes. The
@@ -3641,9 +3641,27 @@ review remains open under the completion review below.
   harness failure and successful stdin retry are retained. The separate
   [complete expression Rust suite](formal-volitional-expression-full-rust-validation.json.gz)
   passes 1,153 tests with zero failures, one ignored and 248 batches; all
-  1,679 selected inputs stay unchanged. Actual Nix/installed/main integration,
-  broader distributions, contextual review and separate expression dispositions
-  remain pending.
+  1,679 selected inputs stay unchanged. The actual installed checks and
+  separate expression dispositions are recorded below. Full inventory/main
+  integration, formatting corrections and contextual review remain pending.
+  [Actual installed expression validation](formal-volitional-expression-installed-validation.json.gz)
+  now passes all four Nix packages, 1,153 release tests and exact
+  1,083/18/1,083 source/derivation/launcher binding. The complete 24 expression
+  streams retain 1,560 frames and 192 authored target checks; all 53,502
+  corpus/history words, 66,570 annotated rows and 1,128,312 broad frames
+  reproduce their frozen references. The actual launcher passes 48 browser
+  decisions and diagrams, six exact CLI exports and 16 original Native
+  responses; its server stops. All 24 installed corruption controls pass
+  and are wired into the separate branch's Nix inventory check.
+  [Two separately scoped expression reviews](formal-volitional-expression-reviews.json)
+  cover the original examples while retaining unclassified POS, contraction
+  notes and the full-form vowel-stem source tension; the 715-entry inventory
+  stays separate. Complete all-targets/web-feature Clippy passes. The
+  [complete Rustfmt check](formal-volitional-expression-full-format.json.gz)
+  records two inherited test formatting issues; they remain pending alongside
+  full inventory/main integration, family timing and wider/contextual/
+  independent Korean-language review. Application/attachment/label bytes
+  and all original targets remain unchanged.
   [Complete parent and ledger preparation](formal-volitional-ledger-preparation.json.gz)
   restores 4,430 missing files from the complete 5,096-file apprehensive parent
   while preserving all 702 existing private inputs. The private raw ledger
@@ -3711,7 +3729,11 @@ review remains open under the completion review below.
   groups is recovered. Every original byte and cache output is preserved.
   The [independent audit](../tools/conjectural_additive_source_audit.py)
   and thirteen corruption controls pass and are wired into the Nix inventory
-  check. These proposals and observations remain unjudged; the candidate
+  check. [Actual selected-source validation](conjectural-additive-main-selected-source.json.gz)
+  confirms all 21 new selected files match the clean committed Nix inventory
+  source; its audit and all thirteen controls also pass from that source. The
+  complete inventory gate remains pending. These proposals and observations
+  remain unjudged; the candidate
   ledger, grammar catalog and inventory dispositions are unchanged.
   All 34 original Native owners and every field are retained from the eleven
   original exports; their exact Python projections match the pinned dictionary.

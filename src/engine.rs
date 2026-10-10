@@ -1290,6 +1290,14 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // Native83919/83918 explicitly exclude these immediate markers.
+                if matches!(ending.form, "기로서" | "기로서니")
+                    && p.morphs
+                        .iter()
+                        .any(|m| matches!(m.form.as_str(), "더" | "으리"))
+                {
+                    continue;
+                }
                 // Native retrospective reports: commands permit honorifics,
                 // proposals are bare, plain statements permit 시/었/겠.
                 // Apply this only to the immediate predicate's own markers.
@@ -1934,6 +1942,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                         | "으랍디다"
                 ) {
                     p.rules.push("ending.reported_experience".into());
+                }
+                if matches!(ending.form, "기로서" | "기로서니") {
+                    p.rules.push("ending.concessive_giroseo".into());
                 }
                 if matches!(ending.form, "답니까" | "는답니까" | "랍니까" | "으랍니까")
                 {
@@ -3597,6 +3608,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "기에"
                 | "길래"
                 | "기로"
+                | "기로서"
+                | "기로서니"
                 | "기가"
                 | "기는"
                 | "기도"

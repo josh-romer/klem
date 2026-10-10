@@ -989,6 +989,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "니",
             "기",
             "기로",
+            "기로서",
+            "기로서니",
             "기가",
             "기는",
             "기도",
@@ -2291,6 +2293,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "formal_b.attested_stem_b" => {
             "Retain the exact Native 아름답네 formal-quotation witness without removing its lexical stem-final ㅂ; preserve ordinary 네 and mark the formal attachment tension unknown."
+        }
+        "ending.concessive_giroseo" => {
+            "Recover source-listed concessive -기로서/-기로서니 with separate canonical endings; preserve immediate honorific, past and modal owners while rejecting the explicitly excluded -더- and -으리- markers."
         }
         "ending.reported_experience" => {
             "Recover source-listed reported-experience statements/questions and factual/command contractions, preserving distinct allomorphs, immediate marker owners and original unclassified dictionary expression identities."

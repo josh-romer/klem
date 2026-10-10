@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 489 scoped
-  dispositions; 226 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 501 scoped
+  dispositions; 214 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3435,6 +3435,32 @@ review remains open under the completion review below.
   merge 170e773 and every installed source byte. Remaining: quiet performance, wider
   distributions and contextual/independent review.
 
+- [ ] **COV-017cs — Concessive -기로서 / -기로서니.**
+  **Partial: source-backed main implementation; Nix and installed validation pass.** Two original ending
+  entries retain all eight complete groups; complete added-path Native ownership
+  preserves 34 entries, including both 아름 noun homonyms. Four focused tests,
+  four labels, Clippy, 18 stream/Native, 12 source, five cohort, ten broad, ten
+  annotated recovery/statistics and 57 historical corruption controls pass. The shared ledger retains its 35,347
+  cases and appends 48 authored cases (34 required, 14 forbidden); all four
+  ledger tests pass. Twelve whole-source Unicode/filter/cache streams preserve
+  2,004 frames and individually track 132 additions. The complete browser passes
+  204 diagrams, six exports and 34 Native endpoints; no errors, server stopped.
+  All 53,502 corpus/history words, 66,570 annotated rows and 1,128,312 broad
+  frames remain exact; no new novel paths or spacing. [Scope](giroseo-draft.md)
+  preserves the initial 32-owner browser capture, original proposals, source
+  fields and pending contextual/independent review. The complete Rust suite passes 1,119 tests (one ignored), with all 1,540
+  frozen inputs unchanged. All four actual Nix packages pass with exact tested
+  source parity. Installed bindings preserve 1,024 Rust/adapter and 18 frontend
+  files. Complete installed validation passes 24 finite streams/3,144 frames,
+  53,502 words, 66,570 annotated rows, 1,128,312 broad frames, and 204 browser
+  diagrams/six exports/34 complete Native endpoints. The actual installed web
+  launcher is exercised; no browser errors, server stopped. All 18 portable
+  installed corruption controls pass. The [complete Nix inventory gate](giroseo-complete-inventory-gate.json.gz)
+  passes at e910d4d with all 4,767 tracked and 4,725 selected inventory inputs
+  unchanged. The [main runtime parity proof](giroseo-main-integration-preparation.json.gz)
+  retains all 1,024 Rust/adapter and 18 frontend source bytes and the exact
+  previous-main ledger prefix. Remaining: quiet performance and wider/contextual review.
+
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
   **Partial: original-source and independent finite tests pass in the private
   prototype; main implementation pending.** Entries 86497 and 86619 preserve
@@ -3445,7 +3471,7 @@ review remains open under the completion review below.
   retain 37 required and nine forbidden named paths, covering original
   examples, allomorph boundaries, licensed prefinals, explicit copulas and
   irregular recovery. Four focused Rust regressions and seven grammar-label
-  tests pass; the main executable and shared ledger remain unchanged.
+  tests pass; these ending changes are confined to the private prototype.
   [Private validation evidence](fear-lsera-prototype-validation.json.gz)
   preserves the exact implementation delta and the completed captures,
   audits, failures and producers. Twelve full-source modes retain 4,344

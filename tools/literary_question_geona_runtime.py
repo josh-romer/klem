@@ -26,6 +26,9 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('formal-b-novel-validity.json',9,'d42e0df2c6f0f3573e85545acd02494148c492acd815c9ae8a3fb62001b0a9b2','formal-b novel'),
     ('reported-experience-validity.json',97,'93e5294ec23e651c3cb85c7f131c3a91fa025f31a23d170bc49a6141c69e2d7a','reported-experience'),
     ('giroseo-validity.json',48,'da93852e351d2bc6fe0464bae93a6a6d4b3694fd4a42f9b01d7226cc4f959889','giroseo'),
+    ('explanatory-se-validity.json',46,'3d13d48a6814c40b9a7328f0c2fc748f20590974a57f197a38b375c3a397cad8','explanatory-se'),
+    ('explanatory-se-gold-validity.json',2,'2682e3b37b8d1782b1a9d86d8e4d1d3db3b46ec31323aa9303ab7f18ffea4582','explanatory-se-gold'),
+    ('explanatory-se-novel-validity.json',14,'41ca6b4a824266128de576190bc4389066375bb4e0c1550ebb478caef83bf02c','explanatory-se-novel'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

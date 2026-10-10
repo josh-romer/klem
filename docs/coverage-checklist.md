@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 501 scoped
-  dispositions; 214 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 504 scoped
+  dispositions; 211 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3460,6 +3460,41 @@ review remains open under the completion review below.
   unchanged. The [actual main integration proof](giroseo-main-integration.json.gz)
   retains all 1,024 Rust/adapter and 18 frontend source bytes and the exact
   previous-main ledger prefix. Remaining: quiet performance and wider/contextual review.
+
+- [ ] **COV-017ct — Explanatory/realization -ㄹ세 / -을세 and familiar 그려.**
+  **Partial: committed source-backed integration; Nix packages and installed validation pass.** Separate
+  original attachment notes and all 21 complete original groups are preserved.
+  Forty-six authored cases (37 required, nine forbidden) have stable named paths;
+  the source-based canonical 오 correction retains initial failure evidence.
+  The complete Source/correction audit passes all 15 corruption controls.
+  Six focused Rust tests pass, including all 632 Source path assessments against
+  80 complete Native owners, two original-gold full-sentence Unicode regressions,
+  and preservation of every previous 탈세/통일세 reading and order. All 12
+  Source Unicode/filter/cache streams conserve 3,804 frames. All 18 portable
+  stream/Native corruption controls pass, including coordinated rewrites. All 53,502 cohort
+  words preserve previous candidates; four changed surfaces and 15 new paths
+  have individual tracking. The 66,570 unchanged original annotated rows recover
+  two additional grouped matches and three lemmas. Complete original contexts,
+  outcomes, recalls, candidate statistics, common misses and deltas are verified
+  by the portable gold audit; all 13 corruption controls pass. Full broad replay
+  preserves 1,128,312 frames and tracks 655 path and 12 spacing observations.
+  The browser caught and fixed the particle catalog key; five grammar-label
+  tests pass. The successful retry passes 222 individual diagrams/six exact
+  exports/80 Native endpoints; no browser errors, server stopped. Initial failed
+  browser proof is retained. [Scope](explanatory-se-draft.md). Remaining:
+  complete inventory execution and main integration,
+  quiet timings and wider/contextual/independent review. Complete corpus/novel/
+  spacing audits pass 12/20 controls and preserve 170 distribution/128 novel
+  Native owners. Four novel Rust tests pass all 655 paths/12 spacing observations
+  with NFC/NFD ownership and 14 manual structural targets. The shared ledger
+  appends 62 cases to its exact 35,395 prefix: 35,457 total/31,244 required/4,229
+  forbidden; four ledger tests and 66 historical controls pass. Three finite
+  Source dispositions yield a verified 504 scoped/211 unreviewed inventory.
+  The [complete Rust suite](explanatory-se-full-rust.json.gz) passes 1,130 tests with zero failures, one ignored and all frozen inputs unchanged. The expanded browser passes 314 diagrams, all 318 filter decisions, six exact exports and 170 complete Native endpoints. The [independent browser audit](explanatory-se-browser-distribution-audit.log.gz) and [19 corruption controls](explanatory-se-browser-distribution-controls.log.gz) pass, including exact dictionary exclusions and displayed 하+였 expansion. Seven audit families are wired into Nix. The older-written 살으십니다그려 -> 살다
+  proposal remains an individually tracked unresolved allomorph, with its full
+  original sentence preserved and no required judgment added.
+  All four actual Nix packages and installed source/launcher binding pass with unchanged inputs: 1,044 Rust/adapter source files and 18 frontend files. Installed replay passes all 24 finite Unicode/filter/cache streams (5,280 frames), 53,502 cohort words, 66,570 original annotated rows with two gold recoveries, and 1,128,312 broad frames. The actual installed launcher passes 318 policy decisions, 314 diagrams, six exact exports and 170 complete Native endpoints; server stopped. The independent complete installed audit and all 24 corruption controls pass. The initial cache-budget lookup failure is retained; each 4 KiB installed eviction run is compared to both original 0/8 MiB cache outputs without changing commands or captures. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.
+
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
   **Partial: original-source and independent finite tests pass in the private

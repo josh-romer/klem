@@ -1,0 +1,46 @@
+[
+  {
+    "id": "id:MH2_0110-s387/3",
+    "surface": "오랫만일세",
+    "expected": [
+      "오랫만",
+      "이다"
+    ],
+    "text": "어이, 오랫만일세.",
+    "complete_original_annotation_block": "# sent_id = MH2_0110-s387\n# text = 어이, 오랫만일세.\n# translit = .eo.i, .o.raes.man.il.se.\n1\t어이\t어이\tINTJ\tii\t_\t3\tdiscourse\t_\tSpaceAfter=No|Translit=.eo.i|LTranslit=.eo.i\n2\t,\t,\tPUNCT\tsp\t_\t1\tpunct\t_\tTranslit=,|LTranslit=,\n3\t오랫만일세\t오랫만+이+ㄹ세\tVERB\tncn+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.o.raes.man.il.se|LTranslit=.o.raes.man+.i+ㄹ.se\n4\t.\t.\tPUNCT\tsf\t_\t3\tpunct\t_\tTranslit=.|LTranslit=.",
+    "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+    "original_annotation": "오랫만+이+ㄹ세",
+    "original_converted_row": {
+      "id": "id:MH2_0110-s387/3",
+      "surface": "오랫만일세",
+      "expected": [
+        "오랫만",
+        "이다"
+      ],
+      "matched": false,
+      "recovered": 0,
+      "recovered_sets": []
+    }
+  },
+  {
+    "id": "id:MH2_0110-s395/5",
+    "surface": "아닐세",
+    "expected": [
+      "아니다"
+    ],
+    "text": "자네가 탄 비행기는 BA가 아닐세.",
+    "complete_original_annotation_block": "# sent_id = MH2_0110-s395\n# text = 자네가 탄 비행기는 BA가 아닐세.\n# translit = .ja.ne.ga .tan .bi.haeng.gi.neun BA.ga .a.nil.se.\n1\t자네가\t자네+가\tPRON\tnpp+jcs\t_\t2\tnsubj\t_\tTranslit=.ja.ne.ga|LTranslit=.ja.ne+.ga\n2\t탄\t타+ㄴ\tVERB\tpvg+etm\t_\t3\tacl\t_\tTranslit=.tan|LTranslit=.ta+ㄴ\n3\t비행기는\t비행기+는\tNOUN\tncn+jxt\t_\t5\tdislocated\t_\tTranslit=.bi.haeng.gi.neun|LTranslit=.bi.haeng.gi+.neun\n4\tBA가\tBA+가\tNOUN\tf+jcs\t_\t5\tnsubj\t_\tTranslit=BA.ga|LTranslit=BA+.ga\n5\t아닐세\t아니+ㄹ세\tADJ\tpaa+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.a.nil.se|LTranslit=.a.ni+ㄹ.se\n6\t.\t.\tPUNCT\tsf\t_\t5\tpunct\t_\tTranslit=.|LTranslit=.",
+    "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+    "original_annotation": "아니+ㄹ세",
+    "original_converted_row": {
+      "id": "id:MH2_0110-s395/5",
+      "surface": "아닐세",
+      "expected": [
+        "아니다"
+      ],
+      "matched": false,
+      "recovered": 0,
+      "recovered_sets": []
+    }
+  }
+]

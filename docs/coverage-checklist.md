@@ -3613,11 +3613,21 @@ review remains open under the completion review below.
   contextual/independent review remain open.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
-  **Partial: complete private Nix gate passed; implementation merged into
-  main with focused validation. Whole main validation and wider review remain pending.** The four original owners (86548, 86549, 86604,
+  **Partial: implemented on main; complete main Rust and all four Nix checks
+  passed at `162e826`. Current installed workload replay, family timing and wider
+  contextual/independent review remain pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
   all 17 complete example groups, including multi-line dialogue. Statements
   express the speaker's intention; questions ask the listener's intention.
+
+  [Preserved actual main validation](formal-volitional-current-main-validation-archive.json.gz)
+  records 1,150 passed Rust tests, zero failures, one ignored and 247 batches,
+  exact 1,080/18/1,080 CLI/frontend/adapter source bindings, and a terminal
+  complete four-check Nix gate. Every captured source file, HEAD and index
+  remained unchanged. The earlier failed temporary-directory preparation is
+  retained alongside the successful retry. These checks do not establish
+  contextual precision or independent Korean-language review.
+
   [Source preparation](formal-volitional-source-preparation.json.gz) retains
   33 complete original Native owners and all lexical homonyms. Seventeen
   lexical and typed canonical targets were authored before any baseline
@@ -3768,72 +3778,10 @@ review remains open under the completion review below.
   Whole committed main Rust, actual main Nix/source/inventory/installed checks,
   quiet timing and wider contextual/independent review remain open.
 
-- [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
-  **Partial: complete private prototype validation now includes the observed
-  omitted copula; shared-ledger, inventory, Nix and main promotion remain pending.**
-  Implement and review both original ending owners 86083/86084, keeping their
-  conjectural acknowledgement and stated-intention senses separate. Original
-  attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
-  before the short form, and other consonantal predicates or -었-/-겠- before
-  the full form. Preserve adjective, nominal/copula, auxiliary/change-state,
-  past and modal paths, alongside boundary violations and other candidates.
-  [Source preflight](conjectural-additive-source-preflight.json.gz) retains
-  every original field, note and translation, four senses and all 16 example
-  groups. Sixteen target proposals were authored before probing the program;
-  stable IDs are `conjectural-additive-{86083|86084}-sense-N-group-N`.
-  [Complete baseline captures](conjectural-additive-before-streams.json.gz)
-  retain 4,080 frames and 384 target checks across 24 NFC/NFD, raw/headword/
-  Compatible and zero/4,096-byte cache streams. None of the proposed lemma
-  groups is recovered. Every original byte and cache output is preserved.
-  The [independent audit](../tools/conjectural_additive_source_audit.py)
-  and thirteen corruption controls pass and are wired into the Nix inventory
-  check. [Actual selected-source validation](conjectural-additive-main-selected-source.json.gz)
-  confirms all 21 new selected files match the clean committed Nix inventory
-  source; its audit and all thirteen controls also pass from that source. The
-  complete inventory gate remains pending. These proposals and observations
-  remain unjudged; the candidate
-  ledger, grammar catalog and inventory dispositions are unchanged.
-  All 34 original Native owners and every field are retained from the eleven
-  original exports; their exact Python projections match the pinned dictionary.
-  At that source-only checkpoint, required work included exact typed paths, Rust
-  Native import checks, attachment and neighboring-rule regressions,
-  CLI/library/browser/export checks, complete frozen corpus comparisons,
-  installed/main validation and contextual/independent Korean review.
+  **Historical formal volitional prototype record (COV-017cw).** The following
+  record describes the earlier private checkpoint; the current status and later
+  validation evidence above take precedence. Its original evidence is retained.
 
-  [Preserved initial prototype](conjectural-additive-prototype-phase1.json.gz)
-  now records all sixteen original typed targets and nineteen independently
-  authored boundary cases (28 required, seven forbidden). Six Rust regressions,
-  focused formatting/Clippy and twenty-seven independent corruption controls
-  pass. All 34 original Native owners survive Rust import and browser entry
-  retrieval. The 24 original Unicode/filter/cache streams retain 4,080 frames,
-  384 exact typed occurrences and every old candidate. Sixty-one new canonical
-  original-context paths have stable individual IDs: sixteen match the authored
-  required structures and forty-five alternatives remain unjudged. The actual
-  rebuilt SolidJS viewer passes 168 diagrams, six exact exports and all 34
-  Native endpoints, with its server stopped. Failed harness attempts are
-  preserved without changing linguistic targets.
-  Complete comparisons retain 53,502 corpus/history words and all 66,570
-  original annotated rows unchanged. The eight broad streams cover 1,128,312
-  frames and preserve every original candidate and Native assessment; all
-  changed records keep individual IDs and complete original lines. Fifteen
-  novel occurrences gain forty-one raw paths. The literal `장래려니와`, in
-  “장래도 장래려니와…”, missed `장래 + 이다` in that initial capture; the
-  separate fix below preserves that original observation. Broader independent distribution,
-  spacing and novel-context review, shared-ledger/inventory promotion, whole
-  Rust/Clippy, new Nix/installed/main validation, quiet timing and contextual
-  Korean review remain required. No observed alternative is promoted to gold.
-
-  [Actual installed validation](fear-lsera-installed-validation.json.gz) passes
-  all four Nix package builds and exact1062/18/1062source binding. Complete
-  replays retain53502cohortwords,66570goldrows,1128312broadframes and5436
-  finiteframes across24streams. The actual launcher passes222decisions and
-  diagrams, sixexports and74Native endpoints; owned server stopped. Its
-  independent combined audit passes24controls and is wired into Nix.
-  The initial offline dependency failure and exact successful cache-enabled
-  repeat are both retained. Full inventory/main, family timing and wider
-  contextual/independent review remain pending.
-
-- [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
   **Partial: source-backed private prototype with complete corpus and novel
   captures, browser validation and complete Rust suite; full Nix inventory/main integration pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
@@ -3923,6 +3871,72 @@ review remains open under the completion review below.
   Full inventory/main, family timing and wider/contextual/independent
   review remain pending.
 
+
+
+- [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
+  **Partial: complete private prototype validation now includes the observed
+  omitted copula; shared-ledger, inventory, Nix and main promotion remain pending.**
+  Implement and review both original ending owners 86083/86084, keeping their
+  conjectural acknowledgement and stated-intention senses separate. Original
+  attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
+  before the short form, and other consonantal predicates or -었-/-겠- before
+  the full form. Preserve adjective, nominal/copula, auxiliary/change-state,
+  past and modal paths, alongside boundary violations and other candidates.
+  [Source preflight](conjectural-additive-source-preflight.json.gz) retains
+  every original field, note and translation, four senses and all 16 example
+  groups. Sixteen target proposals were authored before probing the program;
+  stable IDs are `conjectural-additive-{86083|86084}-sense-N-group-N`.
+  [Complete baseline captures](conjectural-additive-before-streams.json.gz)
+  retain 4,080 frames and 384 target checks across 24 NFC/NFD, raw/headword/
+  Compatible and zero/4,096-byte cache streams. None of the proposed lemma
+  groups is recovered. Every original byte and cache output is preserved.
+  The [independent audit](../tools/conjectural_additive_source_audit.py)
+  and thirteen corruption controls pass and are wired into the Nix inventory
+  check. [Actual selected-source validation](conjectural-additive-main-selected-source.json.gz)
+  confirms all 21 new selected files match the clean committed Nix inventory
+  source; its audit and all thirteen controls also pass from that source. The
+  complete inventory gate remains pending. These proposals and observations
+  remain unjudged; the candidate
+  ledger, grammar catalog and inventory dispositions are unchanged.
+  All 34 original Native owners and every field are retained from the eleven
+  original exports; their exact Python projections match the pinned dictionary.
+  At that source-only checkpoint, required work included exact typed paths, Rust
+  Native import checks, attachment and neighboring-rule regressions,
+  CLI/library/browser/export checks, complete frozen corpus comparisons,
+  installed/main validation and contextual/independent Korean review.
+
+  [Preserved initial prototype](conjectural-additive-prototype-phase1.json.gz)
+  now records all sixteen original typed targets and nineteen independently
+  authored boundary cases (28 required, seven forbidden). Six Rust regressions,
+  focused formatting/Clippy and twenty-seven independent corruption controls
+  pass. All 34 original Native owners survive Rust import and browser entry
+  retrieval. The 24 original Unicode/filter/cache streams retain 4,080 frames,
+  384 exact typed occurrences and every old candidate. Sixty-one new canonical
+  original-context paths have stable individual IDs: sixteen match the authored
+  required structures and forty-five alternatives remain unjudged. The actual
+  rebuilt SolidJS viewer passes 168 diagrams, six exact exports and all 34
+  Native endpoints, with its server stopped. Failed harness attempts are
+  preserved without changing linguistic targets.
+  Complete comparisons retain 53,502 corpus/history words and all 66,570
+  original annotated rows unchanged. The eight broad streams cover 1,128,312
+  frames and preserve every original candidate and Native assessment; all
+  changed records keep individual IDs and complete original lines. Fifteen
+  novel occurrences gain forty-one raw paths. The literal `장래려니와`, in
+  “장래도 장래려니와…”, missed `장래 + 이다` in that initial capture; the
+  separate fix below preserves that original observation. Broader independent distribution,
+  spacing and novel-context review, shared-ledger/inventory promotion, whole
+  Rust/Clippy, new Nix/installed/main validation, quiet timing and contextual
+  Korean review remain required. No observed alternative is promoted to gold.
+
+  [Actual installed validation](fear-lsera-installed-validation.json.gz) passes
+  all four Nix package builds and exact1062/18/1062source binding. Complete
+  replays retain53502cohortwords,66570goldrows,1128312broadframes and5436
+  finiteframes across24streams. The actual launcher passes222decisions and
+  diagrams, sixexports and74Native endpoints; owned server stopped. Its
+  independent combined audit passes24controls and is wired into Nix.
+  The initial offline dependency failure and exact successful cache-enabled
+  repeat are both retained. Full inventory/main, family timing and wider
+  contextual/independent review remain pending.
 
   [Preserved omitted-copula prototype](conjectural-additive-copula-phase2.json.gz)
   now restores the independently authored `장래 + 이다 + 으려니와` path in the

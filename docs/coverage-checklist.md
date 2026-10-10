@@ -3993,9 +3993,29 @@ review remains open under the completion review below.
   expanded review scopes and invented dispositions. Both strict historical
   audit suites remain intact and continue to pass against their original
   archived ledgers; they also invoke the active combined audit. All three
-  tools are selected and executed in Nix. Whole combined Rust, actual current
-  Nix/installed/main checks, quiet performance and wider contextual/independent
-  review remain pending.
+  tools are selected and executed in Nix.
+  The [complete combined Rust](expression-combined-installed-proof-combined-main-full-rust.json.gz)
+  passes 1,164 tests, zero failures, one ignored and 251 batches, with all
+  captured inputs unchanged. All 155 selected-source controls also pass.
+  [Actual installed evidence](expression-combined-installed-proof-archive.json.gz)
+  binds the installed CLI, frontend, adapter and launcher: the retained release
+  log passes the same 1,164 tests; all 96 original Unicode/filter/cache streams
+  (58,992 frames), 53,502 cohort words, 66,570 annotated rows and 1,128,312 broad
+  frames preserve their complete expected outputs. The browser passes 336
+  reading/diagram decisions, six exports and 73 complete Native endpoints.
+  The [independent current installed audit](../tools/expression_conjectural_installed_audit.py)
+  and all 28 corruption controls pass and are wired into Nix.
+  The first complete combined Nix gate failed on an older ledger audit that
+  did not enumerate the three exact conjectural appends. Its inputs, HEAD and
+  index remained unchanged. The correction pins all three original fixture
+  hashes and preserves shared citations only when their URLs are identical;
+  94 historical/runtime controls pass, including the original exclusion and
+  corruption checks. A positive history test also retains unused citations
+  declared by a completed suite. The [reconciled audit evidence](expression-combined-reconciled-proof-archive.json)
+  passes all 170 controls and both current queue and installed audits with
+  captured inputs unchanged. The corrected complete Nix gate, main
+  integration, quiet performance and wider contextual/independent review
+  remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

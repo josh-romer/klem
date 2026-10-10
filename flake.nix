@@ -568,6 +568,8 @@
                 ./tools/test_conjectural_additive_installed_audit.py
                 ./tools/expression_conjectural_ledger_audit.py
                 ./tools/test_expression_conjectural_ledger_audit.py
+                ./tools/expression_conjectural_installed_audit.py
+                ./tools/test_expression_conjectural_installed_audit.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1191,6 +1193,8 @@
             python -m unittest discover -s tools -p 'test_conjectural_additive_installed_audit.py'
             python tools/expression_conjectural_ledger_audit.py
             python -m unittest discover -s tools -p 'test_expression_conjectural_ledger_audit.py'
+            python tools/expression_conjectural_installed_audit.py
+            python -m unittest discover -s tools -p 'test_expression_conjectural_installed_audit.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

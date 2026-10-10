@@ -3997,6 +3997,39 @@ review remains open under the completion review below.
   Nix/installed/main checks, quiet performance and wider contextual/independent
   review remain pending.
 
+- [ ] **COV-017cy — Friendly offer -련/-으련 and separate expression homonyms.**
+  **Partial: source-backed implementation on the isolated willingness-question
+  branch; integration and wider review pending.** KRDict
+  [-련 76564](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76564)
+  and [-으련 76567](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76567)
+  establish verb attachment: the short form follows a vowel or retained ㄹ,
+  and the full form follows another coda. The canonical ending is `으련`.
+  Ten independently authored targets retain all original example groups;
+  source examples such as 두련, 걷으련, and 있으련 gain the exact ending path.
+  The prior installed CLI already returned all 18 lexical proposals across
+  the two endings and their expression homonyms, in all 24 Unicode/filter/cache
+  streams. This addresses a decomposition gap, not a missing-lemma claim.
+  The two POS-none expressions (86640/86631) retain their complete original
+  examples and dictionary fields separately: asking about the listener's
+  intention does not assign them the offer ending's semantic ownership.
+  Tests preserve all prior alternatives and NFD equivalence, check twelve
+  independently authored short/full boundaries, and distinguish verb/adjective
+  있다 and regular/irregular 걷다 owners. All 29 original source/lexical
+  dictionary entries retain their complete fields. One supplemental original
+  adjective entry verifies that a dictionary-free unknown lexical hypothesis
+  survives while dictionary POS assessment rejects the verb-only attachment.
+  Bare copulas and the known adjectival 답다 derivation do not borrow this
+  ending. Unlisted prefinal paths remain candidates with Unknown compatibility.
+  The viewer label cites only the two ending owners.
+  Evidence: [source tests](../tests/willingness_question.rs),
+  [stable source judgments](../tests/fixtures/willingness-question-validity.json),
+  [complete source packet](../tests/fixtures/willingness-question-source.json),
+  and [native owners](../tests/fixtures/willingness-question-native-entries.json).
+  Active-ledger integration, inventory dispositions, broader class/prefinal/
+  particle/auxiliary interactions, corpus and novel comparisons, full Rust/Nix
+  checks, installed CLI/browser verification, main promotion, performance,
+  contextual sense judgments, and independent Korean review remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

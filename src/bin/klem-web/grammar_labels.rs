@@ -127,6 +127,37 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn willingness_offer_label_does_not_borrow_expression_homonyms() {
+        let label = &catalog()["-으련"];
+        assert_eq!(label.kind, MorphemeKind::Ending);
+        assert_eq!(
+            label
+                .sources
+                .iter()
+                .map(|source| source.id)
+                .collect::<Vec<_>>(),
+            [76564, 76567]
+        );
+        for (id, headword, pos, expected) in [
+            (76564, "-련", "어미", true),
+            (76567, "-으련", "어미", true),
+            (86640, "-련", "품사 없음", false),
+            (86631, "-으련", "품사 없음", false),
+        ] {
+            let entry = EntrySummary {
+                id: format!("krdict:{id}"),
+                headword: headword.into(),
+                homonym: String::new(),
+                pos: pos.into(),
+            };
+            assert_eq!(
+                entry_matches(MorphemeKind::Ending, "-으련", &entry),
+                expected
+            );
+            assert!(!entry_matches(MorphemeKind::Particle, "-으련", &entry));
+        }
+    }
+    #[test]
     fn formal_volitional_question_and_statement_keep_their_original_pairs() {
         for (canonical, owners, other) in [
             (
@@ -399,6 +430,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-familiar-geurae-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-fear-lsera-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-formal-volitional-labels.json"),
+                PathBuf::from("tests/fixtures/willingness-question-native.json"),
                 PathBuf::from("tests/fixtures/krdict-conjectural-additive-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),

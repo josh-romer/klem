@@ -399,6 +399,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-familiar-geurae-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-fear-lsera-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-formal-volitional-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-conjectural-additive-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),

@@ -556,6 +556,14 @@
                 ./tools/test_formal_volitional_expression_streams_audit.py
                 ./tools/conjectural_additive_source_audit.py
                 ./tools/test_conjectural_additive_source_audit.py
+                ./tools/conjectural_additive_prototype_audit.py
+                ./tools/test_conjectural_additive_prototype_audit.py
+                ./tools/conjectural_additive_distribution_audit.py
+                ./tools/test_conjectural_additive_distribution_audit.py
+                ./tools/conjectural_additive_ledger_audit.py
+                ./tools/test_conjectural_additive_ledger_audit.py
+                ./tools/conjectural_additive_novel_audit.py
+                ./tools/test_conjectural_additive_novel_audit.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1157,6 +1165,14 @@
             python -m unittest discover -s tools -p 'test_formal_volitional_expression_streams_audit.py'
             python tools/conjectural_additive_source_audit.py
             python -m unittest discover -s tools -p 'test_conjectural_additive_source_audit.py'
+            python tools/conjectural_additive_prototype_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_prototype_audit.py'
+            python tools/conjectural_additive_distribution_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_distribution_audit.py'
+            python tools/conjectural_additive_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_ledger_audit.py'
+            python tools/conjectural_additive_novel_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_novel_audit.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

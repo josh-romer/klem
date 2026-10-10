@@ -1154,6 +1154,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("로구먼", "로구먼", 0),
             ("로군", "로군", 0),
             ("로구만", "로구먼", 0),
+            // The original 무정 line "장래도 장래려니와" has a nominal
+            // owner and omitted copular 이. Keep this reconstruction separate
+            // from the ordinary predicate short/full allomorphs below.
+            ("려니와", "으려니와", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -1309,6 +1313,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             // Native 86545/86602 and 86546/86603: counterfactual expectation.
             ("으련마는", "련마는", "으련마는"),
             ("으련만", "련만", "으련만"),
+            // KRDict 86083/86084: conjectural acknowledgement or intention.
+            // Adjectives, copulas and past/modal are licensed independently
+            // of the narrower verb-only -(으)려 intention connectives.
+            ("으려니와", "려니와", "으려니와"),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -2297,6 +2305,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.counterfactual_ryeon" => {
             "Recover -(으)련만 and -(으)련마는 with their own stem allomorphs; retain conjectural and contextual interpretations separately."
+        }
+        "ending.conjectural_additive" => {
+            "Recover -(으)려니와 as a connective with its own short/full boundary, retaining predicates, copulas and separate honorific/past/modal markers. The original conjectural acknowledgement and stated-intention senses remain alternatives; contextual sense selection is unresolved."
         }
         "ending.reported_command_deoni" => {
             "Recover source-listed -라더니 factual copular/negative and -(으)라더니 command reports with separate stem and honorific boundaries; preserve contextual alternatives without inserting an implicit reporting lemma."

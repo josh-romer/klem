@@ -3494,6 +3494,25 @@ review remains open under the completion review below.
   actual Nix/installed validation, main integration, quiet performance and
   broader contextual/independent linguistic review.
 
+- [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
+  **Missing: original-source preparation and independent targets preserved;
+  implementation pending.** The four original owners (86548, 86549, 86604,
+  86605) retain every sense, their separate short/full attachment notes and
+  all 17 complete example groups, including multi-line dialogue. Statements
+  express the speaker's intention; questions ask the listener's intention.
+  [Source preparation](formal-volitional-source-preparation.json.gz) retains
+  33 complete original Native owners and all lexical homonyms. Seventeen
+  lexical and typed canonical targets were authored before any baseline
+  probe. The [latest installed baseline](formal-volitional-latest-baseline-gap.json.gz)
+  records 102 NFC/NFD/raw/headword/Compatible probes against the actual
+  familiar-particle Nix package; all miss their independent lexical and
+  morphological targets and exactly reproduce the earlier installed baseline.
+  Morphological matching checks roles and forms without requiring a newly
+  proposed rule name. These are source proposals, not passing gold or a
+  scoped inventory disposition. Remaining: independent boundary authoring,
+  implementation, source/Native/regression/corpus/browser checks, whole Rust,
+  actual Nix/installed/main integration, quiet performance and wider review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

@@ -3550,9 +3550,20 @@ review remains open under the completion review below.
   window completed, the [complete Rust suite](fear-lsera-full-rust.json.gz)
   passed 1,140 tests with zero failures, one ignored and 245 batches. All
   1,630 frozen inputs remain unchanged during the complete run. The isolated
-  integration branch is committed and its four actual Nix packages are building;
-  main does not yet include these endings.
-  Remaining: actual Nix/installed validation, main integration, family performance and
+  integration branch has passed all four actual Nix package builds and
+  [installed validation](fear-lsera-installed-validation.json.gz). Actual
+  derivations bind 1,062 Rust, 18 frontend and 1,062 adapter source files.
+  Complete replays preserve all 53,502 cohort words, 66,570 annotated rows,
+  1,128,312 broad frames and 5,436 finite frames across 24 Unicode/filter/cache
+  streams. The actual Nix launcher passes 222 policy decisions and diagrams,
+  six exact CLI exports and 74 original Native endpoints; its server stops.
+  The independent installed audit passes 24 corruption controls and is wired
+  into Nix. The offline dependency failure and cache-enabled successful retry
+  preserve identical tested inputs and package scope. Ten final inventory
+  controls pass with its 507/208 queue; the committed cd6bbcb integration
+  is running the complete four-check Nix gate with all tracked inputs frozen.
+  Main does not yet include these endings. Remaining: complete Nix inventory,
+  main integration, family performance and
   broader contextual/independent linguistic review.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
@@ -3608,7 +3619,10 @@ review remains open under the completion review below.
   [complete expression streams](formal-volitional-expression-source-streams.json.gz)
   recover all targets in 24 NFC/NFD/filter/cache streams with 1,560 frames and
   192 exact path checks. Independent source and stream audits pass 11 and six
-  corruption controls and are wired into the main Nix inventory check. The
+  corruption controls and are wired into the main Nix inventory check.
+  [Actual selected-source validation](formal-volitional-expression-main-selected-source.json.gz)
+  confirms all 17 new artifacts match the committed Nix inventory source;
+  both audits and all 17 controls also pass from that selected source. The
   original full-form note and its vowel-stem 모으렵니까 → 모으다 example remain
   a visible source tension. These expressions are not added to the ending
   label owners or the 715-entry queue; library/shared-ledger/browser/installed
@@ -3646,7 +3660,10 @@ review remains open under the completion review below.
   ending reviews bring its verified queue to 511/204. All 84 historical, ten
   performance and ten inventory controls pass. Its exact tested runtime and
   frontend sources are committed at 44553b8; all four actual Nix packages
-  are building with selected sources frozen. Remaining:
+  now build successfully and bind their actual 1,079/18/1,079 selected sources.
+  Complete installed finite/corpus/gold/broad/browser captures pass with all
+  prototype and installed inputs unchanged; the independent combined audit
+  and its corruption controls are running. Remaining:
   actual Nix/installed/main integration,
   quiet performance and wider contextual/independent review.
 

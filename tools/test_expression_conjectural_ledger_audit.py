@@ -24,7 +24,7 @@ class Controls(unittest.TestCase):
 
     def test_complete_exact_histories(self):
         result = audit.inspect(self.v)
-        self.assertEqual((result['active_cases'], result['required'], result['active_manual_reviews']), (35673, 31408, 513))
+        self.assertEqual((result['active_cases'], result['required'], result['active_manual_reviews']), (35681, 31412, 515))
         self.assertFalse(result['full_coverage_complete'])
 
     def test_historical_expression_cannot_be_reauthored(self):
@@ -67,7 +67,7 @@ class Controls(unittest.TestCase):
         self.reject(lambda v: v['current_reviews']['entries'].pop(), 'complete original and active inventory review sizes')
 
     def test_extra_disposition_cannot_claim_an_unreviewed_owner(self):
-        self.reject(lambda v: next(r for r in v['current_reviews']['entries'] if r['id'] == 'krdict:86084').update(id='krdict:invented'), 'only two bounded ending dispositions appended')
+        self.reject(lambda v: next(r for r in v['current_reviews']['entries'] if r['id'] == 'krdict:86084').update(id='krdict:invented'), 'only two conjectural and two willingness dispositions appended')
 
     def test_independent_judgment_cannot_be_refreshed(self):
         self.reject(lambda v: v['conjectural_cases'][0]['judgments'][0].update(lemmas=['invented']), 'fifty-six exact original conjectural judgments')
@@ -76,7 +76,46 @@ class Controls(unittest.TestCase):
         self.reject(lambda v: v['willingness_raw'].__setitem__(0, b'{}'), 'exact independently authored willingness judgments')
 
     def test_willingness_append_cannot_change_verdict(self):
-        self.reject(lambda v: self.current(v, lambda d: d['cases'][-1]['judgments'][0].update(verdict='required')), 'every exact original willingness append retained')
+        self.reject(lambda v: self.current(v, lambda d: next(c for c in d['cases'] if c['id'] == 'willingness-question-stem-boundary-12')['judgments'][0].update(verdict='required')), 'every exact original willingness append retained')
+
+
+    def test_pre_interaction_history_cannot_be_reauthored(self):
+        self.reject(lambda v: v.update(interaction_parent_raw=b'{}'), 'exact pre-interaction ledger bytes')
+
+    def test_interaction_fixture_cannot_be_reauthored(self):
+        self.reject(lambda v: v.update(interaction_raw=b'{}'), 'exact independently authored interaction judgments')
+
+    def test_interaction_lemma_role_cannot_change(self):
+        self.reject(lambda v: self.current(v, lambda d: d['cases'][35679]['judgments'][0].update(lemma_kinds=['predicate', 'predicate'])), 'every exact independently authored interaction append retained')
+
+    def test_interaction_verdict_cannot_change(self):
+        self.reject(lambda v: self.current(v, lambda d: d['cases'][35675]['judgments'][0].update(verdict='required')), 'every exact independently authored interaction append retained')
+
+    def test_pre_willingness_review_archive_cannot_be_refreshed(self):
+        self.reject(lambda v: v.update(willingness_parent_reviews_raw=b'{}'), 'exact pre-willingness inventory review bytes')
+
+    def test_original_conjectural_review_cannot_expand_its_scope(self):
+        self.reject(lambda v: v['current_reviews']['entries'][512].update(scope='all Korean'), 'every pre-willingness manual review field and order retained')
+
+    def test_willingness_review_cannot_expand_its_scope(self):
+        self.reject(lambda v: v['current_reviews']['entries'][513].update(scope='all Korean'), 'only exact independently recorded willingness reviews appended')
+
+    def test_willingness_review_source_hash_cannot_change(self):
+        self.reject(lambda v: v['current_reviews']['entries'][514].update(source_sha256='invented'), 'only exact independently recorded willingness reviews appended')
+
+    def test_coordinated_willingness_review_rewrite_is_rejected(self):
+        def mutate(v):
+            authored = json.loads(v['willingness_reviews_raw'])
+            authored['entries'][0]['remaining'] = 'nothing'
+            v['current_reviews']['entries'][513]['remaining'] = 'nothing'
+            v['willingness_reviews_raw'] = (json.dumps(authored, ensure_ascii=False, indent=2) + '\n').encode()
+        self.reject(mutate, 'exact bounded willingness dispositions')
+
+    def test_review_cannot_borrow_expression_owner(self):
+        self.reject(lambda v: v['willingness_source']['ending_owner_ids'].__setitem__(0, 'krdict:86640'), 'both original ending owners reviewed separately')
+
+    def test_original_source_digest_cannot_change_with_review(self):
+        self.reject(lambda v: v['willingness_source']['owners']['krdict:76567'].update(notes=['invented']), 'complete original inventory source digest for bounded review')
 
 
 if __name__ == '__main__':

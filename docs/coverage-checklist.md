@@ -4106,10 +4106,59 @@ review remains open under the completion review below.
   linguistic judgment was rewritten. The complete willingness Rust target now
   passes 11 tests (nine unchanged original tests plus two new regression
   functions), along with whole formatting and focused Clippy with warnings
-  denied. Original Native fixtures, runtime code and shared ledger are unchanged.
+  denied. At that initial checkpoint, original Native fixtures, runtime code
+  and the shared ledger were unchanged.
   The failed runner count assertion and exact-source-bound completion are both
   preserved. Shared-ledger/installed/browser/main promotion and wider review
   remain pending.
+
+
+  [Shared interaction ledger evidence](willingness-question-interaction-preflight.json)
+  now appends only the eight unchanged structural cases, preserving all 35,673
+  earlier cases and all 32,236,877 serialized prefix bytes. The ledger has
+  35,681 cases, 31,412 required and 4,286 forbidden judgments. All 22 active
+  and 97 historical preservation controls pass, alongside the complete affected
+  validity/willingness targets (15 tests), whole formatting and focused Clippy.
+  Four unjudged prefinal/follower proposals stay outside the ledger; every
+  manual inventory disposition and original Native field remains unchanged.
+  [Actual installed willingness validation](willingness-question-installed-proof-archive.json)
+  passes all four packages at `7dfba1d`, exact 1,111/18/1,111 source binding,
+  and 1,174 release tests. Complete comparisons retain 3,336 source frames,
+  53,502 cohort words, 66,570 annotated rows and 1,128,312 broad frames.
+  The installed Native importer retains all 30 complete original owners;
+  the actual launcher passes 90 decisions/diagrams, six exact CLI exports and
+  29 Native endpoints, with no page errors and its server stopped. Desktop and
+  mobile renders were inspected. All 44 independent controls pass and are
+  wired into Nix. The initial package-directory failure and failed auditor/
+  pipeline are preserved; the corrected audit derives actual shared Rust input
+  hashes and explicitly identifies the eight files outside the earlier debug
+  snapshot. All files remain bound by the complete actual Nix build snapshot.
+  Full inventory Nix is still running on frozen `7dfba1d`; the new interaction
+  test/ledger sources, broader ownership/particle review, main promotion,
+  performance and independent contextual review remain separate.
+
+  **Latest interaction checkpoint:** the [complete interaction Rust proof](willingness-question-interaction-proof-willingness-interaction-full-rust.json.gz)
+  passes 1,176 tests, zero failures, one ignored and 252 batches, with all
+  6,310 captured source/proof files, HEAD and index unchanged. The actual
+  installed parent runtime also passes all nineteen required source/boundary/
+  interaction paths under 114 dropdown and diagram decisions, six exact CLI
+  exports and all 29 complete Native endpoints. Its [desktop](willingness-question-interaction-browser-desktop.png)
+  and [mobile](willingness-question-interaction-browser-mobile.png) renders were
+  inspected. The [interaction browser audit](../tools/willingness_question_interaction_browser_audit.py)
+  checks every original package file against the complete new Rust snapshot:
+  production bytes are identical, while exactly three existing test files and
+  one new interaction fixture distinguish the compiled test profiles. All
+  seventeen browser controls pass and are wired into Nix.
+  The [two bounded structural dispositions](willingness-question-scoped-reviews.json)
+  cover ending owners 76564/76567 separately. Every field and ordering of the
+  preceding 513 reviews is retained. The expanded audit passes 219 controls,
+  including 29 active-history controls, and leaves 515 scoped and 200
+  unreviewed inventory entries. A scoped disposition retains its recorded
+  limitations; independent Korean-language and contextual precision review
+  remain pending. The initial review evidence-link draft, archival preparation
+  error, incomplete browser-audit preparation and their corrections are retained.
+  New test-profile Nix validation, main integration, quiet performance and
+  broader prefinal/particle/auxiliary/contextual review remain open.
 
 - [ ] **COV-017cz — Gentle permission and command -렴/-으렴.**
   **Private prototype:** the complete original entries
@@ -4146,6 +4195,16 @@ review remains open under the completion review below.
   performance remain open. The source's very informal register, permission
   versus command choice, wider owner/prefinal/particle licenses, contextual
   precision and independent Korean-language review are not certified.
+
+  The [merged checkpoint](gentle-command-merged-proof-archive.json) combines
+  this prototype with the complete willingness interaction/review history.
+  All 35,681 active cases and 515 manual reviews remain byte-identical; the
+  twenty-three gentle-command judgments stay private. The combined queue keeps
+  every original source, review and citation, adding only the two gentle-command
+  catalog links. All 72 source/history/browser-proof/inventory controls and
+  35 affected Rust tests pass, with whole formatting and focused Clippy. Every
+  captured file, HEAD and index remains unchanged during these checks. The
+  full merged runtime and remaining distribution/package/main checks stay open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -64,7 +64,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "4b51b28c625c768c19101c51f7f4572696186de9b07dff4b31e73cad17f1fe86",
+    "docs/coverage-checklist.md": "2a5616f81aba63381d0cda533a36ddcb39347729a665625e3613370e3cd626be",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -229,7 +229,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "5809cc3e8a9dabd2c81a1f6f1d4f2bf48c19cc7615dcc0b699e0957459f65e48",
+    "docs/inventory-reviews.json": "fd6a487eeaf98e0166f04115f1d3c664d695f4b1e2dc88a2cd47faac8a018950",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -377,6 +377,8 @@
     "docs/transition-aux-source-preflight.json": "cb8ace69bcaac108acb2393cd136eb603edb2b58ce68d6a37f6352b0d437f1f4",
     "docs/uncertainty-evaluation.json": "902cb50f1ffca1bbcec76821cf8530b2c624ffee2203df4828a3d0d11754ab17",
     "docs/vocative-evaluation.json": "d21badd5f8bca6e27a72946744619b55ae8e3329c6e3e8d21e3a33ead5525b46",
+    "docs/willingness-question-installed-proof-archive.json": "2183e70880b0c3e4e955a6fd28c9854c1faea44582992948ce9066800465a1ec",
+    "docs/willingness-question-interaction-preflight.json": "603c39b7291984b51367edf3f8cea4faf66a36ee1faefeb2a5d00ae93492679d",
     "src/bin/klem-web/grammar_labels.rs": "a060c0600023e0b92ffed3df38a4cb8145f08f7372913b093c8c218d87308a70",
     "tests/additive_particles.rs": "fa85e73922b937bf32d46715ad16c2b52a356dd7e92e130c9c9a0ce8befb1959",
     "tests/additive_ppundeoreo_boundaries.rs": "d37cc624852b075bec460f68628345588bb36e7845ddb222b91a64bbe3d36f95",
@@ -530,7 +532,8 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "5f695ecf212ef16b5d932c1a43bdf0df3d570e3eea6d46f191953ddc8ea0f799",
+    "tests/fixtures/validity.json": "e5bf297ad75bfec83b8836c16e718796827deb71caf96f4332979e4102cad88e",
+    "tests/fixtures/willingness-question-source.json": "d9cd3cc984bd14df26013928d99065161ec0739f6fd35cdcfb4c321330206bad",
     "tests/formal_b.rs": "e664556b1863b00a9126f36d297884b4c26f0a2afc6a150c7b7eda81d51b8194",
     "tests/formal_volitional.rs": "d94d3abe2047648913bda1e091236746927a9ca6d3977894b28905beec9e4140",
     "tests/formal_volitional_novel.rs": "b146adcef6431fb253fc5e59a7897015009bf9e67f00d41969ea385dda584788",
@@ -619,6 +622,7 @@
     "tests/transition_aux.rs": "ff9107b2542d6fb10ed2070c5f13a8761fcd6d6ff0d4e66bc5925484d6e704a3",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
+    "tests/willingness_question.rs": "2c9d89a3769f9ac7878a993388345a18ddff0da169ab4f970df88c12697a87ba",
     "tools/adjectival_allomorph_compare.py": "1793d7193cea57e8a82db9af4881a75c73673b0aea4a70ba81e7d8433b9b6e9f",
     "tools/adjectival_allomorph_runtime.py": "bd48472d74ad22d713a935242b79924008e59b1185badccdc2bccbbfe6cbe2bd",
     "tools/conjectural_additive_distribution_audit.py": "4c25d463ac97d77ab3ed7a19cabaa7f22a996c6277ddb22eb7ddf70c3152842c",
@@ -652,7 +656,7 @@
     "tools/emphatic_ending_runtime.py": "bc9f366a9713a26d8c7dab4cfcf0be3b6d1307cecc3f00ff24324331c82c47c3",
     "tools/explanatory_se_installed_audit.py": "005c0bb1feed240020a9b01204de4f2e0a629f1fd0999c86af74777b6530738c",
     "tools/expression_conjectural_installed_audit.py": "5d222d9de3be657ded3263ee1713c5bfe5385ffdb7ac549bb7950c469e677090",
-    "tools/expression_conjectural_ledger_audit.py": "963e77063cce1a0a7dd98d03265d7b43935bf20e6826e4b43fcdd2867a75e6d3",
+    "tools/expression_conjectural_ledger_audit.py": "b261fac23c7a5b77047d789b8338087e81b9c0a904d22c30e8f3c687e633f195",
     "tools/familiar_geurae_broad_audit.py": "4763e0411e98755acbd54a78287c0e7a1b244ccf5800669b710a21975a51d655",
     "tools/familiar_geurae_browser_audit.py": "de120333d23350ce618dcd156e61ab9f1a2ff7bc323bd62a71cb1095983c7eca",
     "tools/familiar_geurae_cohort_audit.py": "c8140a2670e74a71dce57f9d31782d822d861ea38eaddbd854b7bb23780408a0",
@@ -751,6 +755,8 @@
     "tools/test_reported_dana_release.py": "f69728b303ff406567c98d10aad425620898854bd2fa497ec4ed5a9f73dd5cc1",
     "tools/test_reported_dana_sources.py": "331e2df0f01ef7e9226eec36893164718c13ad0e4031f3a4688127f6152022a0",
     "tools/test_reported_deoni_release.py": "dbdd8158f4f48c1eebdf697ae51524adb9c6f43824f054f5bb90db761265e7ac",
+    "tools/willingness_question_installed_audit.py": "5ce7d9df969534b3635383fb1633ab9a5468bc7efe64aedbdc07707970df3a4b",
+    "tools/willingness_question_interaction_browser_audit.py": "7a1657c1b75357f1525580a1fd96f3943dd0e2bad28fcefe2293ddc4a1db0c1a",
     "web/src/grammar-labels.json": "7319da63d97966104ca8762b08696d9c858318beb0f81bd4e4df1358bc8adf41",
     "web/tests/adjectival-allomorph.mjs": "953c6080b3d52c25248b86e2efbe9d20d3a25fb8386b4d91028fd06cd6a065f7",
     "web/tests/browser.mjs": "e308d37afd41cd8ff91ec4c0073795f6c54097b9995c27dae5e9fe7a14dbfdac",
@@ -768,8 +774,8 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 513,
-      "unreviewed": 202
+      "scoped": 515,
+      "unreviewed": 200
     },
     "with_catalog_links": 521,
     "with_judgment_citations": 544
@@ -67823,7 +67829,73 @@
       ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:76564",
+        "source_sha256": "ada581f6ec36f1d7ed584a8ae44d6abce16d5dca3b751a35d080ab19d5d434bd",
+        "status": "scoped",
+        "checklist": [
+          "COV-017cy"
+        ],
+        "scope": "Bounded structural coverage of the two original ending owners76564/76567: canonical으련, vowel-or-ㄹshort versus other-coda full form on verb stems. All10complete original ending groups have independent typed lemma/role/morpheme/rule targets; original complete Native fields and all lexical homonyms are retained. Five positive/seven negative allomorph cases and eight new preauthored irregular/knowncopula/답다/auxiliary interactions pass. The active35681-case ledger retains every previous35673case byte and appends only4required/4forbidden interactions; all22active/97historical controls and15affectedRust tests pass. Source-specific Native POS/allomorph compatibility is checked, including distinctregular/irregular 걷다 andverb/adjective 있다 owners. Unknown rawadjective hypotheses survive whileNative adjectivePOS conflicts remain incompatible. Actual7dfNix packages freeze1111/18/1111sourcefiles andpass1174release tests; complete3336sourceframes/53502cohortwords/66570goldrows/1128312broadframes match their preserved references. Installedimporter retains30completeNative owners, originalbrowser90diagrams/sixexports/29endpoints passes with44controls. Newinteractionbrowser114policies/diagrams/sixexports/29Native fields and13independentcontrols pass usingbyte-identical parentproductioncode, with newcompiled-test-source/main verification separate. Friendlyoffer label cites only theseending owners; it does not selectcontextual senses orassign endingsemantics toPOSnone expressions86640/86631.",
+        "remaining": "Complete newtest-source/Nix/current-main integration andquietperformance. Original expression homonyms86640/86631 remain separately unjudged/outside715entryinventory. Past/modal/honorific andouter-particle licenses are not attested bythese originalending entries; rawhypotheses remain unjudged/Unknown and noautomatic compatibility is assigned. Source register/age/social/pragmatic conditions, contextual sense choice, broader auxiliary/particle/owner interactions, changedcorpus/noun hypotheses andindependent Korean-language/precision review remain open. No semantic/contextual precision or all-Korean coverage claim.",
+        "evidence": [
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "all_ten_independent_original_ending_targets_have_exact_paths"
+          },
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "source_iss_and_geot_paths_assess_each_original_lexical_owner"
+          },
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "interaction_targets_keep_native_compatibility_roles_and_unicode"
+          },
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "unlisted_prefinals_remain_candidates_without_automatic_compatibility"
+          },
+          {
+            "path": "tests/fixtures/willingness-question-source.json"
+          },
+          {
+            "path": "docs/willingness-question-interaction-preflight.json"
+          },
+          {
+            "path": "docs/willingness-question-installed-proof-archive.json"
+          },
+          {
+            "path": "tools/willingness_question_installed_audit.py"
+          },
+          {
+            "path": "tools/willingness_question_interaction_browser_audit.py"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "willingness-question-76564-sense-1-group-1",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76564-sense-1-group-2",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76564-sense-1-group-3",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76564-sense-1-group-4",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76564-sense-1-group-5",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76564-sense-1-group-6",
+            "judgment": "lexical-path"
+          }
+        ]
       }
     },
     {
@@ -84079,6 +84151,46 @@
           "verdict": "required"
         },
         {
+          "case": "willingness-question-interaction-benefactive",
+          "judgment": "exact-structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "willingness-question-interaction-copula",
+          "judgment": "exact-structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "willingness-question-interaction-d-full",
+          "judgment": "exact-structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "willingness-question-interaction-d-short",
+          "judgment": "exact-structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "willingness-question-interaction-derived-adjective",
+          "judgment": "exact-structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "willingness-question-interaction-negative",
+          "judgment": "exact-structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "willingness-question-interaction-s-full",
+          "judgment": "exact-structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "willingness-question-interaction-s-short",
+          "judgment": "exact-structural-path",
+          "verdict": "forbidden"
+        },
+        {
           "case": "willingness-question-stem-boundary-11",
           "judgment": "exact-verb-ending-path",
           "verdict": "forbidden"
@@ -84111,7 +84223,65 @@
       ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:76567",
+        "source_sha256": "f1def31b824be67c028c13e0dd962d24855868e0dcea96efb2e29e60a74de6b7",
+        "status": "scoped",
+        "checklist": [
+          "COV-017cy"
+        ],
+        "scope": "Bounded structural coverage of the two original ending owners76564/76567: canonical으련, vowel-or-ㄹshort versus other-coda full form on verb stems. All10complete original ending groups have independent typed lemma/role/morpheme/rule targets; original complete Native fields and all lexical homonyms are retained. Five positive/seven negative allomorph cases and eight new preauthored irregular/knowncopula/답다/auxiliary interactions pass. The active35681-case ledger retains every previous35673case byte and appends only4required/4forbidden interactions; all22active/97historical controls and15affectedRust tests pass. Source-specific Native POS/allomorph compatibility is checked, including distinctregular/irregular 걷다 andverb/adjective 있다 owners. Unknown rawadjective hypotheses survive whileNative adjectivePOS conflicts remain incompatible. Actual7dfNix packages freeze1111/18/1111sourcefiles andpass1174release tests; complete3336sourceframes/53502cohortwords/66570goldrows/1128312broadframes match their preserved references. Installedimporter retains30completeNative owners, originalbrowser90diagrams/sixexports/29endpoints passes with44controls. Newinteractionbrowser114policies/diagrams/sixexports/29Native fields and13independentcontrols pass usingbyte-identical parentproductioncode, with newcompiled-test-source/main verification separate. Friendlyoffer label cites only theseending owners; it does not selectcontextual senses orassign endingsemantics toPOSnone expressions86640/86631.",
+        "remaining": "Complete newtest-source/Nix/current-main integration andquietperformance. Original expression homonyms86640/86631 remain separately unjudged/outside715entryinventory. Past/modal/honorific andouter-particle licenses are not attested bythese originalending entries; rawhypotheses remain unjudged/Unknown and noautomatic compatibility is assigned. Source register/age/social/pragmatic conditions, contextual sense choice, broader auxiliary/particle/owner interactions, changedcorpus/noun hypotheses andindependent Korean-language/precision review remain open. No semantic/contextual precision or all-Korean coverage claim.",
+        "evidence": [
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "all_ten_independent_original_ending_targets_have_exact_paths"
+          },
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "source_iss_and_geot_paths_assess_each_original_lexical_owner"
+          },
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "interaction_targets_keep_native_compatibility_roles_and_unicode"
+          },
+          {
+            "path": "tests/willingness_question.rs",
+            "test": "unlisted_prefinals_remain_candidates_without_automatic_compatibility"
+          },
+          {
+            "path": "tests/fixtures/willingness-question-source.json"
+          },
+          {
+            "path": "docs/willingness-question-interaction-preflight.json"
+          },
+          {
+            "path": "docs/willingness-question-installed-proof-archive.json"
+          },
+          {
+            "path": "tools/willingness_question_installed_audit.py"
+          },
+          {
+            "path": "tools/willingness_question_interaction_browser_audit.py"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "willingness-question-76567-sense-1-group-1",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76567-sense-1-group-2",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76567-sense-1-group-3",
+            "judgment": "lexical-path"
+          },
+          {
+            "case": "willingness-question-76567-sense-1-group-4",
+            "judgment": "lexical-path"
+          }
+        ]
       }
     },
     {

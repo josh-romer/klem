@@ -127,6 +127,32 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn familiar_geurae_label_uses_the_particle_owner_and_preserves_interjection_scope() {
+        let label = catalog().get("그래").expect("particle catalog key");
+        assert_eq!(label.kind, MorphemeKind::Particle);
+        assert_eq!(label.sources.len(), 1);
+        assert_eq!(label.sources[0].id, 83913);
+        assert_eq!(label.sources[0].headword, "그래");
+        assert!(catalog().get("-그래").is_none());
+        for (id, pos, accepted) in [
+            ("krdict:83913", "조사", true),
+            ("krdict:27656", "감탄사", false),
+            ("krdict:60238", "품사 없음", false),
+        ] {
+            let entry = EntrySummary {
+                id: id.into(),
+                headword: "그래".into(),
+                homonym: String::new(),
+                pos: pos.into(),
+            };
+            assert_eq!(
+                entry_matches(MorphemeKind::Particle, "그래", &entry),
+                accepted
+            );
+            assert!(!entry_matches(MorphemeKind::Ending, "그래", &entry));
+        }
+    }
+    #[test]
     fn familiar_particle_label_uses_its_actual_particle_headword() {
         let label = catalog().get("그려").expect("particle catalog key");
         assert_eq!(label.kind, MorphemeKind::Particle);
@@ -291,6 +317,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-reported-experience-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-giroseo-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-explanatory-se-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-familiar-geurae-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),

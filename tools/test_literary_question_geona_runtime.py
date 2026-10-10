@@ -94,7 +94,7 @@ class Controls(unittest.TestCase):
  def ledger_through(self,count):
   c=copy.deepcopy(self.current);c['cases']=c['cases'][:count]
   used={j['source'] for case in c['cases'] for j in case['judgments']}
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json']:
    for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
     if key not in used:c['sources'].pop(key,None)
   return c
@@ -111,7 +111,7 @@ class Controls(unittest.TestCase):
  def coordinated_append_mutation(self,filename,index,label):
   c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures'/filename);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
   c['cases'][index]['judgments'][0]['reason']='coordinated changed '+label+' judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][index])
-  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json']}
+  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json']}
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
    for name,raw in originals.items():(fixtures/name).write_bytes(raw)
@@ -192,5 +192,23 @@ class Controls(unittest.TestCase):
   self.coordinated_append_mutation('explanatory-se-gold-validity.json',35442,'explanatory-se-gold')
  def test_coordinated_explanatory_novel_rewrite(self):
   self.coordinated_append_mutation('explanatory-se-novel-validity.json',35456,'explanatory-se-novel')
+ def test_exact_pre_familiar_geurae_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35457),self.proposal)['preserved_cases'],34920)
+ def test_familiar_geurae_case_order_changed(self):
+  c=copy.deepcopy(self.current);c['cases'][35457],c['cases'][35458]=c['cases'][35458],c['cases'][35457]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_familiar_geurae_source_changed(self):
+  c=copy.deepcopy(self.current);c['sources']['particle']='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_familiar_geurae_lemma_changed(self):
+  c=copy.deepcopy(self.current);c['cases'][35457]['judgments'][0]['lemmas']=['invented']
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_familiar_geurae_forbidden_promoted(self):
+  c=copy.deepcopy(self.current);c['cases'][-1]['judgments'][0]['verdict']='required'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_familiar_geurae_unreviewed_tail_rejected(self):
+  c=copy.deepcopy(self.current);case=copy.deepcopy(c['cases'][-1]);case['id']='invented-unreviewed';c['cases'].append(case)
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_familiar_geurae_fixture_rewrite(self):
+  self.coordinated_append_mutation('familiar-geurae-validity.json',35483,'familiar-geurae')
 if __name__=='__main__':unittest.main()
-

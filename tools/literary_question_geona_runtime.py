@@ -33,6 +33,7 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('fear-lsera-validity.json',46,'2ccc67014adcae61861ee24774ddd2eae92bf82c7a9f3d138179460851390f25','fear-lsera'),
     ('formal-volitional-raw-validity.json',53,'23346ec33a887be1eb10c925ef9cfe2777b901df3d6e600e5bea053d7a968124','formal-volitional raw'),
     ('formal-volitional-novel-validity.json',4,'db0853ac54c5ca0ab8995511e6d40f4c20b1a9b1020b9358a31d9ee19efaea41','formal-volitional novel'),
+    ('formal-volitional-expression-validity.json',8,'7ce331dcd291d1a5946d2d3f12aa36a5df86847361589ba4e0b6a6bfa553dd26','formal-volitional expression'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

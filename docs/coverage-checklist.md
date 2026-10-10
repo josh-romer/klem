@@ -3354,7 +3354,7 @@ review remains open under the completion review below.
   independent contextual review remain open.
 
 - [ ] **COV-017cq — Formal attached-ㅂ experience, assurance and quotation endings.**
-  **Partial: finite original source scope implemented in the private formal-ending prototype.**
+  **Partial: finite original source scope implemented and merged into main.**
   Five canonical pairs cover -ㅂ디다/-습디다, -ㅂ디까/-습디까,
   -ㅂ지요/-습지요, -ㅂ죠/-습죠 and -ㅂ네/-습네. Ten distinct
   ending owners retain all 46 original example groups and 92 complete Native
@@ -3396,11 +3396,11 @@ review remains open under the completion review below.
   Unicode/filter/cache streams conserve 12,396 finite frames; the installed
   browser passes 426 diagrams, six exact exports and 92 full Native responses.
   Portable installed evidence auditing and all 11 corruption controls pass.
-  The complete four-check [Nix gate](reported-experience-complete-inventory-gate.json.gz) passes at 9841000 with all 4,674 tracked files, 4,632 selected inventory inputs and HEAD/index unchanged. Remaining: main merge, quiet novel performance,
+  The complete four-check [Nix gate](reported-experience-complete-inventory-gate.json.gz) passes at 9841000 with all 4,674 tracked files, 4,632 selected inventory inputs and HEAD/index unchanged. The [main integration proof](formal-reported-main-integration.json.gz) verifies the actual merge and all installed source bytes. Remaining: quiet novel performance,
   wider distributions, contextual and independent review.
 
 - [ ] **COV-017cr — Reported-experience statement and question expressions.**
-  **Partial: finite original source scope implemented on coverage/reported-experience.**
+  **Partial: finite original source scope implemented and merged into main.**
   Ten source entries retain POS 품사 없음, outside the 715-entry inventory.
   All 51 original groups and 92 complete Native source/lexical identities survive.
   Present/plain reports and factual/command homonyms keep separate immediate
@@ -3430,8 +3430,9 @@ review remains open under the completion review below.
   Browser passes 474 diagrams/six exports/92 Native endpoints, no errors, server
   stopped. All 14 portable installed corruption controls pass. The complete four-check
   [Nix inventory gate](reported-experience-complete-inventory-gate.json.gz) passes
-  at 9841000 with all tracked inputs and HEAD/index unchanged. Remaining:
-  main integration, quiet performance, wider
+  at 9841000 with all tracked inputs and HEAD/index unchanged. The
+  [main integration proof](formal-reported-main-integration.json.gz) verifies
+  merge 170e773 and every installed source byte. Remaining: quiet performance, wider
   distributions and contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

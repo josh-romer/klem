@@ -68,7 +68,7 @@ validates these actual captures; all 14 corruption controls pass.
 An initial regression caught stale summary counts copied from the formal audit;
 the corrected summary derives counts from the current captures. Both failed
 and corrected attempts are retained. Complete Nix inventory execution, quiet
-performance, main integration, wider/contextual and independent review remain.
+performance, wider/contextual and independent review remain.
 
 
 The complete four-check Nix gate at 9841000 passed on 2026-10-10 UTC with
@@ -78,3 +78,5 @@ are actual checks. The [receipt](reported-experience-complete-inventory-gate.jso
 and [log](reported-experience-complete-inventory-gate.log.gz) are retained.
 Quiet paired performance, main integration and wider/contextual/independent
 review remain separate; no full linguistic-coverage claim is added.
+
+Local main integration is complete at `170e773`. The [actual merge proof](formal-reported-main-integration.json.gz) records both parents, complete tree equality to the validated branch, every installed source byte, and the exact previous-main ledger prefix. Quiet performance and wider/contextual/independent review remain open.

@@ -69,7 +69,7 @@ evidence files. These checks establish the recorded finite package behavior;
 they do not select contextual novel senses. The portable installed audit and
 all 11 corruption controls pass.
 
-The complete inventory gate, quiet novel timing, main merge, wider distributions
+The complete inventory gate, quiet novel timing, wider distributions
 and contextual/independent review remain open.
 
 
@@ -80,3 +80,5 @@ are actual checks. The [receipt](reported-experience-complete-inventory-gate.jso
 and [log](reported-experience-complete-inventory-gate.log.gz) are retained.
 Quiet paired performance, main integration and wider/contextual/independent
 review remain separate; no full linguistic-coverage claim is added.
+
+Local main integration is complete at `170e773`. The [actual merge proof](formal-reported-main-integration.json.gz) records both parents, complete tree equality to the validated branch, every installed source byte, and the exact previous-main ledger prefix. Quiet performance and wider/contextual/independent review remain open.

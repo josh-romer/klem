@@ -4989,3 +4989,32 @@ cannot split a composed Hangul syllable. Literal bound-noun joining such as
 These structural witnesses do not determine contextual senses or standard
 spacing. See [regressions](../tests/predicate_auxiliary_spacing.rs) and
 [owner requirements](../tests/fixtures/predicate-auxiliary-spacing-owner-cases.json).
+
+
+### Conjectural and intention -려니와/-으려니와
+
+The two original KRDict ending owners [86083](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86083)
+and [86084](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86084)
+retain separate conjectural-acknowledgement and stated-intention senses. Both
+surface forms emit canonical `으려니와` with `ending.conjectural_additive`.
+The short form follows vowel/ㄹ stems or the licensed honorific marker; the
+full form follows other consonantal stems or the licensed past/modal markers.
+Attachment follows the immediate owner. Unlisted markers remain unknown in
+dictionary assessment; these notes do not establish universal exclusions.
+
+This connective accepts adjectives and copulas as well as verbs. `고생이려니와`
+retains `고생 + 이다`; the original novel `장래려니와` restores omitted copular
+`이`, separately from predicate allomorph restoration. The omitted-copula rule
+requires a vowel boundary. `학생이려니와` retains its explicit copula, while
+the separately authored `학생려니와` copula path is forbidden. Earlier
+candidates remain available and contextual sense selection remains unjudged.
+
+The shared ledger adds exactly 35 source/boundary and six copula cases. Original
+Native entry fields, complete example groups, Unicode/cache/filter paths and
+browser exports are retained in the [coverage tracker](coverage-checklist.md).
+
+The finite novel regressions also retain the adverbial copula in `그만이려니와`,
+lexical `내다` in “성도 내려니와”, both local `그러다`/`그렇다` candidates,
+and the honorific boundary in `아시려니와`. These requirements cover all fifteen
+original occurrences in the retained novel. They do not rank other paths or
+select dictionary senses, and cross-token constructions remain separate.

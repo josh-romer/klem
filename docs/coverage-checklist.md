@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 511 scoped
-  dispositions; 204 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 513 scoped
+  dispositions; 202 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3797,8 +3797,9 @@ review remains open under the completion review below.
   contextual/independent review remain pending.
 
 - [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
-  **Partial: complete private prototype validation now includes the observed
-  omitted copula; shared-ledger, inventory, Nix and main promotion remain pending.**
+  **Partial: tested Source/copula/novel implementation and 56 authored cases are
+  integrated privately, with two bounded reviews; all 15 original novel cases
+  and actual installed validation also pass. Combined/main validation and wider review remain pending.**
   Implement and review both original ending owners 86083/86084, keeping their
   conjectural acknowledgement and stated-intention senses separate. Original
   attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
@@ -3878,9 +3879,123 @@ review remains open under the completion review below.
   from the original run plus the one repaired mutation rerun separately. The
   original failed full run is preserved and is not reported as a green suite.
   Every alternative and complete original context remains individually tracked
-  and contextually unjudged. Global ledger/dispositions, additional novel Native
+  and contextually unjudged. Main ledger/dispositions, additional novel Native
   and contextual/spacing review, new Nix/installed/main validation, quiet timing
   and independent Korean review remain open.
+
+
+  The current private integration preserves every prior 35,587 ledger case and
+  all 511 reviews, adding only the 41 independently authored cases and two
+  bounded ending dispositions: 35,628 cases, 31,369 required, 4,275 forbidden;
+  inventory 513 scoped/202 unreviewed. Eight Source/copula and four complete
+  shared-ledger tests, whole formatting and all-target Clippy pass. Two portable
+  Source/Native/browser, distribution and exact-ledger audits retain the original
+  captures and pass all three actual full suites: 38, 17 and nine controls.
+  Their portable inputs and execution are wired into the Nix inventory check.
+  Actual Nix/full updated integration/installed/main and wider review remain
+  pending; no private alternative or contextual sense is promoted to gold.
+
+  [Complete isolated integration Rust validation](conjectural-additive-integration-full-rust.json.gz)
+  passes 1,158 tests with zero failures, one ignored and 249 batches. Every
+  one of the 5,775 recorded inputs, HEAD and index remains unchanged during
+  the complete run. The 41 independently authored cases extend the exact
+  35,587-case parent to 35,628 cases; all 511 previous review records stay
+  intact and two bounded ending reviews bring the private queue to 513 scoped
+  and 202 unreviewed identities. All three portable audit families pass their
+  actual complete suites: 38 source/Native/browser, 17 distribution and nine
+  ledger controls. Actual selected Nix sources, installed/runtime checks,
+  additional novel targets, main integration, quiet timing and independent
+  contextual Korean review remain open.
+
+  [Additional original novel regressions](../tests/conjectural_additive_novel.rs)
+  now cover every one of the fifteen literal occurrences with sixteen local
+  typed requirements authored from complete original lines before the new
+  regression probe. `그만이려니와` retains adverbial `그만 + 이다`;
+  `내려니와` in “성도 내려니와” requires `내다`; `그러려니와` preserves
+  both `그러다` and `그렇다`. The complete original Native fixture retains
+  all 29 word homonyms and every imported field. Twenty-four actual CLI streams
+  preserve 48,048 original frames and every authored path across both encodings,
+  three filter policies and both cache settings; permanent Rust tests also
+  compare every full-context CLI record with the library and preserve byte spans.
+  [Focused updated validation](conjectural-additive-conjectural-integration-novel-focused.json.gz)
+  passes all fifteen Source/copula/novel/global-ledger tests, whole formatting
+  and all-target warnings-denied Clippy. The
+  [exact novel ledger append](conjectural-additive-novel-ledger-append.json.gz)
+  retains every serialized prior 35,628 case and adds only fifteen cases with
+  sixteen requirements: 35,643 cases, 31,385 required and 4,275 forbidden.
+  [Fourteen ledger controls](conjectural-additive-novel-ledger-controls.json.gz)
+  pass without rewriting an original expectation. No other path, dictionary
+  sense or spacing hypothesis receives a new judgment. Updated complete Rust,
+  selected-source Nix/installed/main validation, wider/contextual and independent
+  Korean review and quiet timing remain required.
+
+  [Complete updated private Rust validation](conjectural-additive-conjectural-integration-novel-full-rust.json.gz)
+  now passes 1,161 tests, zero failures, one ignored and 250 batches, including
+  all permanent novel regressions and the expanded shared ledger. Every recorded
+  Source/fixture/tool/document/catalog input, HEAD and index remains unchanged
+  throughout that full run. The [independent original-novel audit](../tools/conjectural_additive_novel_audit.py)
+  independently derives all fifteen occurrences and complete original lines,
+  binds all eleven dictionary exports and 29 exact Native owners, and checks
+  all 48,048 frames and 384 typed occurrences. Its fourteen mutation controls
+  pass, including changed contexts, fabricated POS/owners, erased frames,
+  incorrect filters, and repaired output hashes. Both new Python tools are
+  selected and executed by the private Nix inventory check. Actual new Nix,
+  installed CLI/adapter/browser, main integration, quiet timing and wider
+  contextual/independent Korean review remain required.
+
+  The [actual installed proof archive](conjectural-additive-installed-archive.json.gz)
+  now binds all four Nix packages and their selected sources at `a23eb576`.
+  The actual retained Nix release log also passes 1,161 tests, zero failures,
+  one ignored and 250 batches. All 106 original audit controls pass directly
+  from the selected Nix inventory source. The installed CLI exactly reproduces
+  72 complete Source/copula/novel Unicode/filter/cache streams (57,432 frames),
+  all 53,502 corpus/history words and paths, all 66,570 annotated rows and
+  summaries, and all 1,128,312 broad workload frames. The installed SolidJS
+  application passes all 288 independently authored path decisions and component
+  orders, six exact exports and 57 complete original Native entry endpoints;
+  its owned server stops cleanly. Both local 그러다/그렇다 targets are retained.
+  [Mobile](conjectural-additive-installed-browser-mobile.png) and
+  [desktop](conjectural-additive-installed-browser-desktop.png) captures are
+  preserved. The initial Playwright module-resolution failure and the corrected
+  cached-dependency harness remain separate unchanged artifacts.
+
+  The [independent installed audit](../tools/conjectural_additive_installed_audit.py)
+  derives every filter choice and full export from raw API records, checks
+  typed forms against original Source/copula/novel judgments and compares all
+  Native fields against their original closures. Its 25 mutation controls pass,
+  including missing Unicode streams, the second novel alternative, fabricated
+  POS, reordered morphemes, changed output hashes and missing spacing flags.
+  Both tools are selected and executed by the private Nix inventory check.
+  The new complete four-check inventory gate, current main integration, quiet
+  performance and wider contextual/independent Korean review remain required.
+
+  Isolated expression/conjectural reconciliation retains the complete original
+  35,595-case expression prefix and appends precisely the 56 independently
+  authored conjectural Source/copula/novel cases. The new tree contains 35,651
+  cases, 31,393 required and 4,275 forbidden judgments, with every prior source
+  citation and all 511 original inventory review records retained. Both exact
+  historical private ledgers remain archived separately; audits must validate
+  those histories and this active combined ledger. Combined Rust, Nix, installed,
+  main, performance and wider review are pending.
+
+  [Actual reconciled expression-only complete Rust](formal-volitional-expression-main-complete-expression-main-full-rust.json.gz)
+  passes 1,153 tests, zero failures, one ignored and 248 batches at `b7a626b`,
+  with every captured input, HEAD and index unchanged. That proof retains its
+  expression-only scope. The [actual combined focused checks](expression-conjectural-main-focused.json.gz)
+  now pass all 18 Source/copula/novel/expression/shared-ledger Rust tests,
+  whole-project formatting and all-target web-feature Clippy with warnings
+  denied. The [combined Python controls](expression-conjectural-main-python-controls.json.gz)
+  pass 73 tests across the active ledger, both historical ledgers, installed
+  evidence and review queue. The [active-ledger audit](../tools/expression_conjectural_ledger_audit.py)
+  pins both complete historical ledgers, the complete original manual review
+  snapshot, every original case/judgment/source field and all serialized
+  expression-prefix bytes. Its 16 controls reject erased alternatives,
+  expanded review scopes and invented dispositions. Both strict historical
+  audit suites remain intact and continue to pass against their original
+  archived ledgers; they also invoke the active combined audit. All three
+  tools are selected and executed in Nix. Whole combined Rust, actual current
+  Nix/installed/main checks, quiet performance and wider contextual/independent
+  review remain pending.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

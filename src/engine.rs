@@ -1941,6 +1941,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if matches!(ending.form, "으련만" | "으련마는") {
                     p.rules.push("ending.counterfactual_ryeon".into());
                 }
+                if ending.form == "으려니와" {
+                    p.rules.push("ending.conjectural_additive".into());
+                }
                 if matches!(ending.form, "라더니" | "으라더니") {
                     p.rules.push("ending.reported_command_deoni".into());
                 }
@@ -3499,6 +3502,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으리만큼"
                 | "으련만"
                 | "으련마는"
+                | "으려니와"
                 | "으리"
                 | "으리라고"
                 | "으리까"

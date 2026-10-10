@@ -31,12 +31,14 @@ def inspect(packet, suite, ledger, native, entries, projection):
     assert {value['id']: value for value in map(entry, owners)} == entries == packet['complete_imported_entries'], 'exact complete Rust importer expectations'
     from literary_question_geona_runtime import read, verify_ledger
     verify_ledger(ledger, read(ROOT / 'docs/literary-question-geona-proposed-ledger.json.gz'))
-    return {**summary, 'preserved_parent_cases': 35587, 'appended_cases': 8, 'ledger_cases': 35595, 'counts': counts}
+    from expression_conjectural_ledger_audit import inputs as active_inputs, inspect as inspect_active
+    active = inspect_active(active_inputs())
+    return {**summary, 'active_ledger_cases': active['active_cases'], 'historical_private_scope': True, 'preserved_parent_cases': 35587, 'appended_cases': 8, 'ledger_cases': 35595, 'counts': counts}
 
 
 def inputs():
     return (*source.inputs(),
-            source.read(ROOT / 'tests/fixtures/validity.json'),
+            source.read(ROOT / 'docs/formal-volitional-expression-validated-private-validity.json.gz'),
             source.read(ROOT / 'tests/fixtures/formal-volitional-expression-native.json'),
             source.read(ROOT / 'tests/fixtures/formal-volitional-expression-native-entries.json'),
             source.read(ROOT / 'docs/formal-volitional-expression-ledger-projection.json.gz'))

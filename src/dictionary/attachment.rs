@@ -2002,6 +2002,18 @@ impl Annotation {
                         // Other markers and followers remain uncertain.
                         status = Compatibility::Unknown;
                     }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "으려니와")
+                        && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if (analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠"))
+                                || analysis.morphemes[*j].kind == MorphemeKind::Particle))
+                    {
+                        // KRDict 86083/86084 explicitly list canonical 시,
+                        // past and modal. Other markers/followers remain
+                        // candidates without a reviewed attachment license.
+                        status = Compatibility::Unknown;
+                    }
                     if status == Compatibility::Compatible && let Some(i) = ending {
                         let form = analysis.morphemes[i].form.as_str();
                         let listed: Option<&[&str]> = if crate::engine::present_exclamation(form)

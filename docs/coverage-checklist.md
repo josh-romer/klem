@@ -4017,6 +4017,19 @@ review remains open under the completion review below.
   integration, quiet performance and wider contextual/independent review
   remain open.
 
+  The [complete-gate failure archive](expression-conjectural-complete-gate-failure.json)
+  retains the terminal four-check Nix failure at the frozen 1f5a7d3 checkpoint
+  and the separately passed selected-source completion. The formal-volitional
+  ledger audit incorrectly required the historical final length after later
+  appends. Its repair checks the original raw53/novel4 scope separately and
+  verifies every later reviewed fixture and source identity in exact order.
+  Eleven ledger controls and 94 inherited history controls pass, including
+  rejection of missing, reordered, altered and unreviewed tails. The first
+  repair preflight then correctly rejects stale derived queue hashes; its
+  receipt and logs remain failed and archived. Source rows, cases and manual
+  dispositions remain unchanged. The corrected complete Nix rerun, main and
+  quiet performance remain pending.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

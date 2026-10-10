@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 489 scoped
-  dispositions; 226 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 507 scoped
+  dispositions; 208 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3496,6 +3496,16 @@ review remains open under the completion review below.
   The complete Rust suite passes 1,135 tests with zero failures and one ignored across 244 batches; all 1,607 frozen inputs, including actual grammar labels and literal compiled JSON inputs, remain unchanged.
   [Finite scope and retained evidence](familiar-geurae-draft.md).
   All four actual Nix packages pass; the Nix Rust suite records 1,135 passed, zero failed and one ignored across 244 batches. Installed source/launcher binding preserves all 1,053 Rust/adapter and 18 frontend files. Complete installed replay passes 24 finite Unicode/filter/cache streams (1,152 frames), 53,502 saved corpus/history words, 66,570 original annotated rows and 1,128,312 broad frames. The actual Nix launcher passes 114 policy decisions and diagrams, six exact exports and 50 complete Native entry endpoints; its owned server stops. The independent installed audit and all 24 corruption controls pass. Zero new corpus/history paths or gold recoveries are claimed for this family; earlier outcomes remain exact. The 398 prototype spacing probe-only changes retain their individual records and exact installed hashes. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.
+
+- [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
+  **Partial: complete finite source-backed private prototype; Nix/installed/main integration pending.**
+  Two original ending owners (86497/86619) retain all three senses, separate short/full attachment notes and every25complete example groups, including multi-line contexts. Forty-six independently authored judgments (37required/9forbidden) cover all original targets, allomorphs, source-licensed honorific/past prefinals, explicit copulas and irregular recovery. Four focused Rust regressions preserve every prior path/order and all628observed Source additions against74complete original Native identities. Seven viewer-label tests and focused Clippy with warnings denied pass. Twelve whole-source Unicode/filter/cache streams preserve4344frames and complete original contexts. Six independent source/stream/cohort/gold/browser/broad audits pass 23/18/5/10/19/15corruption controls. All53502cohort words,66570original annotated rows and1128312broad frames remain exact, including all spacing diagnostics. The first broad replay failed after a Rust integration test rebuilt the CLI; its failure and producer are retained. Exact original feature-web CLI hash was restored, and the complete repeat passed with unchanged inputs. Browser proof passes222policy decisions/222diagrams/six exact CLI exports/74fullNative responses; owned server stopped. The shared ledger preserves its exact35484case prefix and appends only the46independent cases:35530total,31300required and4246forbidden. Four shared-ledger tests and all78historical corruption controls pass. The628observed alternative paths remain contextually unjudged and are not promoted to gold. Whole Rust, actual Nix/installed/main integration, quiet performance and wider/contextual/independent linguistic review remain open.
+  [Finite scope](fear-lsera-draft.md).
+
+  The [complete frozen Rust suite](fear-lsera-full-rust.json.gz) passes 1,140
+  tests with zero failures, one ignored and 245 batches. All 1,630 selected
+  inputs remain unchanged during the complete run. Actual Nix/installed/main
+  integration, family timing and wider linguistic review remain pending.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -1114,6 +1114,16 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                     continue;
                 }
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
+                // Original 86497/86619 list honorific 시 and immediate past
+                // before their short/full allomorphs. Other prefinal families
+                // require their own source license.
+                if ending.form == "을세라"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었"))
+                {
+                    continue;
+                }
                 if ending.form == "을세" {
                     if matches!(
                         ending.boundary,
@@ -1993,6 +2003,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if ending.form == "을라" {
                     p.rules.push("ending.caution".into());
+                }
+                if ending.form == "을세라" {
+                    p.rules.push("ending.apprehensive_lsera".into());
                 }
                 if ending.form == "으되" {
                     p.rules.push("ending.contrast_doe".into());
@@ -3486,6 +3499,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을걸"
                 | "을까"
                 | "을꼬"
+                | "을세라"
                 | "을거나"
                 | "을뿐더러"
                 | "을까요"

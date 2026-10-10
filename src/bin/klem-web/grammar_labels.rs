@@ -127,6 +127,52 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn formal_volitional_question_and_statement_keep_their_original_pairs() {
+        for (canonical, owners, other) in [
+            (
+                "-으렵니까",
+                [(86548, "-렵니까"), (86604, "-으렵니까")],
+                ("krdict:86549", "-렵니다"),
+            ),
+            (
+                "-으렵니다",
+                [(86549, "-렵니다"), (86605, "-으렵니다")],
+                ("krdict:86548", "-렵니까"),
+            ),
+        ] {
+            let label = catalog().get(canonical).expect("canonical ending key");
+            assert_eq!(label.kind, MorphemeKind::Ending);
+            assert_eq!(
+                label
+                    .sources
+                    .iter()
+                    .map(|source| source.id)
+                    .collect::<Vec<_>>(),
+                owners.map(|owner| owner.0)
+            );
+            for (id, headword) in owners {
+                let entry = EntrySummary {
+                    id: format!("krdict:{id}"),
+                    headword: headword.into(),
+                    homonym: String::new(),
+                    pos: "어미".into(),
+                };
+                assert!(entry_matches(MorphemeKind::Ending, canonical, &entry));
+                assert!(!entry_matches(MorphemeKind::Particle, canonical, &entry));
+            }
+            assert!(!entry_matches(
+                MorphemeKind::Ending,
+                canonical,
+                &EntrySummary {
+                    id: other.0.into(),
+                    headword: other.1.into(),
+                    homonym: String::new(),
+                    pos: "어미".into(),
+                }
+            ));
+        }
+    }
+    #[test]
     fn apprehensive_lsera_keeps_both_original_ending_owners() {
         let label = catalog().get("-을세라").expect("canonical ending key");
         assert_eq!(label.kind, MorphemeKind::Ending);
@@ -352,6 +398,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-explanatory-se-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-familiar-geurae-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-fear-lsera-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-formal-volitional-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),

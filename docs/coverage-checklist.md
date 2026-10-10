@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 507 scoped
-  dispositions; 208 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 511 scoped
+  dispositions; 204 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3506,6 +3506,84 @@ review remains open under the completion review below.
   tests with zero failures, one ignored and 245 batches. All 1,630 selected
   inputs remain unchanged during the complete run. Actual Nix/installed/main
   integration, family timing and wider linguistic review remain pending.
+
+- [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
+  **Partial: source-backed private prototype with complete corpus and novel
+  captures, browser validation and complete Rust suite; Nix/main integration pending.** The four original owners (86548, 86549, 86604,
+  86605) retain every sense, their separate short/full attachment notes and
+  all 17 complete example groups, including multi-line dialogue. Statements
+  express the speaker's intention; questions ask the listener's intention.
+  [Source preparation](formal-volitional-source-preparation.json.gz) retains
+  33 complete original Native owners and all lexical homonyms. Seventeen
+  lexical and typed canonical targets were authored before any baseline
+  probe. The [latest installed baseline](formal-volitional-latest-baseline-gap.json.gz)
+  records 102 NFC/NFD/raw/headword/Compatible probes against the actual
+  familiar-particle Nix package; all miss their independent lexical and
+  morphological targets and exactly reproduce the earlier installed baseline.
+  Morphological matching checks roles and forms without requiring a newly
+  proposed rule name. The baseline establishes missing targets; it does not
+  certify candidates or a scoped inventory disposition. [Independent boundary authoring](formal-volitional-independent-authoring.json.gz)
+  now preserves 59 cases: 33 required and 26 forbidden named paths, with
+  [43 complete Native owners](formal-volitional-authored-native-closure.json.gz).
+  Cases cover both styles, allomorphs, honorifics, three irregular families,
+  unlisted past/modal/retrospective prefinals and adjective/copular exclusions
+  before and after honorifics. Targets were authored without consulting engine
+  output. [Focused prototype validation](formal-volitional-prototype-validation.json.gz)
+  now passes five Rust regressions, eight viewer-source tests and Clippy
+  with warnings denied. Raw rules check 53 structural cases; all 59 judgments
+  also pass dictionary compatibility, including six lexical POS exclusions.
+  Twelve complete-source streams retain 3,264 frames, every prior ordered
+  candidate and dictionary assessment, and 404 individually tracked new paths
+  against 63 complete Native identities. These additional paths remain
+  contextually unjudged; 18 stream corruption controls pass. The initial
+  viewer test failure from omitted historical fixtures is retained, and its
+  complete repeat passes. Original spoken pronunciation notes remain separate.
+  Main ending code, shared ledger and inventory dispositions remain unchanged.
+  [Complete private distribution evidence](formal-volitional-distribution-validation.json.gz)
+  now preserves the independent original-source audit and 30 corruption
+  controls, including distinct question/statement homonym numbers. All 53,502
+  corpus/history words and 66,570 original annotated rows remain unchanged;
+  their complete audits pass five and ten controls. All eight broad workloads
+  retain 1,128,312 frames and every prior ordered path and dictionary assessment.
+  The novel adds 32 individually tracked paths, two spacing hypotheses and two
+  probe diagnostics; all 23 broad controls pass. Four separate manually reviewed
+  lexical targets recover 되다, 가다, 버리다 and 뜯어먹다. Every other observed
+  alternative remains unjudged, with complete original contexts and 11 complete
+  Native owners. Novel Rust regressions and a 222-decision browser capture
+  against the 69-entry Source/novel Native union pass as recorded below;
+  the frontend build passes. Original expression homonyms 89455 (-렵니까) and
+  89456 (-으렵니까) are distinct from the ending owners and remain separately
+  unreviewed outside the 715-entry inventory.
+  [Complete parent and ledger preparation](formal-volitional-ledger-preparation.json.gz)
+  restores 4,430 missing files from the complete 5,096-file apprehensive parent
+  while preserving all 702 existing private inputs. The private raw ledger
+  retains its exact 35,530-case prefix and adds 53 original structural cases
+  and four manually reviewed novel targets: 35,587 total, 31,337 required and
+  4,266 forbidden. The original 59-case dictionary suite remains unchanged.
+  Six independent projection controls and all 84 historical controls pass.
+  An earlier familiar-particle control now finds its original forbidden case
+  by stable ID; its initial failure after the ledger grew is retained.
+  Four novel Rust tests pass, including both recorded spacing
+  hypotheses with complete Native assessments and NFC/NFD byte boundaries.
+  [Actual Rust and browser validation](formal-volitional-rust-browser-validation.json.gz)
+  passes all 13 focused Source/novel/shared-ledger tests and Clippy with warnings
+  denied. The initial repeat found stale parent ledger-count assertions; both
+  attempts are retained and the corrected counts follow the independently
+  verified append without changing a judgment. The actual SolidJS browser passes
+  all 222 policy decisions and diagrams, six exact CLI exports and 69 complete
+  Source/novel Native endpoints. Its independent audit and 19 corruption controls
+  pass; no page errors, owned server stopped and all captured inputs unchanged.
+  [Complete finite validation](formal-volitional-complete-finite-validation.json.gz)
+  adds four explicitly bounded private ending dispositions and verifies the
+  511 scoped/204 unreviewed private inventory with ten controls. Seven formal
+  audit families and the already completed historical performance auditing are
+  wired into its Nix check. All 111 family and 84 historical controls pass.
+  The [complete private Rust suite](formal-volitional-full-rust.json.gz) passes
+  1,150 tests with zero failures, one ignored and 247 batches. All 1,663 selected
+  inputs remain unchanged throughout the run. This integration has a verified 511/204
+  private inventory; main integration remains pending. Remaining:
+  actual Nix/installed/main integration,
+  quiet performance and wider contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -9,3 +9,5 @@ The component uses canonical ending key -을세라 with both original owners. Th
 The complete frozen Rust suite passes 1,140 tests, zero failures and one
 ignored across 245 batches. All 1,630 selected inputs stay unchanged.
 Nix/installed/main integration, family timing and wider review remain open.
+
+Actual installed packages/source binding,53502cohortwords,66570goldrows,1128312broadframes,24finite streams and222browser decisions/diagrams with74Native owners pass. Independent installed audit and24controls pass. Whole Nixinventory/main/familytiming/contextualreview remain open.

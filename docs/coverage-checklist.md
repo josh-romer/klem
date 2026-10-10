@@ -3507,6 +3507,16 @@ review remains open under the completion review below.
   inputs remain unchanged during the complete run. Actual Nix/installed/main
   integration, family timing and wider linguistic review remain pending.
 
+  [Actual installed validation](fear-lsera-installed-validation.json.gz) passes
+  all four Nix package builds and exact1062/18/1062source binding. Complete
+  replays retain53502cohortwords,66570goldrows,1128312broadframes and5436
+  finiteframes across24streams. The actual launcher passes222decisions and
+  diagrams, sixexports and74Native endpoints; owned server stopped. Its
+  independent combined audit passes24controls and is wired into Nix.
+  The initial offline dependency failure and exact successful cache-enabled
+  repeat are both retained. Full inventory/main, family timing and wider
+  contextual/independent review remain pending.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

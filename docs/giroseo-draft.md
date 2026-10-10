@@ -1,6 +1,6 @@
 # Concessive -기로서 / -기로서니
 
-Status: implemented on the local integration branch; all four Nix packages and installed validation pass. Main integration and complete inventory execution remain pending.
+Status: merged into main at `8f2d9bb`; all four Nix packages, installed validation and the complete inventory gate pass. Quiet performance and wider review remain pending.
 
 Two original endings preserve all eight complete example groups, original
 attachment notes (excluding -더- and -으리-), trailing spaces and 32 complete
@@ -66,10 +66,11 @@ authored diagram paths, label identities, missing export bytes, flags and
 executable identity. Complete producers, receipts, logs and screenshots are
 archived under docs/giroseo-installed-* and docs/giroseo-nix-*.
 
-Remaining: complete inventory execution for this branch, quiet timings, main
-integration, wider distributions and contextual/independent review. Six portable
+Remaining: quiet timings, wider distributions and contextual/independent review. Six portable
 audit families are wired into the Nix inventory gate. These checks establish
 recorded finite coverage and conservation; no contextual precision claim is
 made for unjudged paths or additional distributions.
 
-The [complete Nix inventory gate](giroseo-complete-inventory-gate.json.gz) passes at e910d4d with all4767tracked/4725selectedinputs and HEAD/index unchanged. [Merged main runtime parity](giroseo-main-integration-preparation.json.gz) preserves every actual installed1024Rust/18frontend/1024adapter source byte and the exact35347case prior-main ledger prefix. Quiet performance and wider/contextual/independent review remain open.
+The [complete Nix inventory gate](giroseo-complete-inventory-gate.json.gz) passes at e910d4d with all 4,767 tracked and 4,725 selected inputs and HEAD/index unchanged. [Merged main runtime parity](giroseo-main-integration-preparation.json.gz) preserves all 1,024 Rust/adapter and 18 frontend source files and the exact 35,347-case prior-main ledger prefix. Quiet performance and wider/contextual/independent review remain open.
+
+Actual local main integration is complete at `8f2d9bb`. The [merge proof](giroseo-main-integration.json.gz) retains both parent trees and every selected installed source byte.

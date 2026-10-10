@@ -3457,7 +3457,7 @@ review remains open under the completion review below.
   launcher is exercised; no browser errors, server stopped. All 18 portable
   installed corruption controls pass. The [complete Nix inventory gate](giroseo-complete-inventory-gate.json.gz)
   passes at e910d4d with all 4,767 tracked and 4,725 selected inventory inputs
-  unchanged. The [main runtime parity proof](giroseo-main-integration-preparation.json.gz)
+  unchanged. The [actual main integration proof](giroseo-main-integration.json.gz)
   retains all 1,024 Rust/adapter and 18 frontend source bytes and the exact
   previous-main ledger prefix. Remaining: quiet performance and wider/contextual review.
 
@@ -3481,11 +3481,16 @@ review remains open under the completion review below.
   contextually unjudged. All 53,502 corpus/history words and 66,570 original
   annotated rows remain unchanged. The actual SolidJS browser passes 222
   policy decisions and diagrams, six exact CLI exports and 74 full entry
-  endpoints. Five independent source/stream/cohort/gold/browser audits and
-  all 75 corruption controls pass. The initial broad capture failed its final
+  endpoints. Six independent source/stream/cohort/gold/browser/broad audits and
+  all 90 corruption controls pass. The initial broad capture failed its final
   input freeze after a Rust test rebuilt the CLI; its failure is retained.
-  The original CLI hash is restored and a complete broad replay is running.
-  Remaining: completed broad audit, shared-ledger regressions, whole Rust,
+  The original CLI hash was restored; the repeat preserves all 1,128,312
+  frames byte-for-byte, including spacing diagnostics. [Complete finite evidence](fear-lsera-complete-finite-validation.json.gz)
+  preserves the exact 35,484-case private ledger prefix and appends only the
+  46 authored cases: 35,530 total, 31,300 required and 4,246 forbidden. All
+  four shared-ledger tests, 78 historical controls and ten inventory controls
+  pass. The private queue has 507 scoped and 208 unreviewed entries; main
+  retains its separate review state. Remaining: whole Rust,
   actual Nix/installed validation, main integration, quiet performance and
   broader contextual/independent linguistic review.
 

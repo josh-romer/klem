@@ -94,7 +94,7 @@ class Controls(unittest.TestCase):
  def ledger_through(self,count):
   c=copy.deepcopy(self.current);c['cases']=c['cases'][:count]
   used={j['source'] for case in c['cases'] for j in case['judgments']}
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json']:
    for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
     if key not in used:c['sources'].pop(key,None)
   return c
@@ -111,7 +111,7 @@ class Controls(unittest.TestCase):
  def coordinated_append_mutation(self,filename,index,label):
   c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures'/filename);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
   c['cases'][index]['judgments'][0]['reason']='coordinated changed '+label+' judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][index])
-  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json']}
+  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json']}
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
    for name,raw in originals.items():(fixtures/name).write_bytes(raw)
@@ -122,4 +122,43 @@ class Controls(unittest.TestCase):
   self.coordinated_append_mutation('dapnikka-validity.json',35140,'dapnikka')
  def test_coordinated_novel_fixture_mutation_cannot_pass(self):
   self.coordinated_append_mutation('dapnikka-novel-validity.json',35141,'dapnikka novel')
+ def test_exact_pre_formal_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35142),self.proposal)['preserved_cases'],34920)
+ def test_formal_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][35240],c['cases'][35239]=c['cases'][35239],c['cases'][35240]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_formal_source_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['formal-b-80528']='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_formal_required_rule_cannot_be_erased(self):
+  c=copy.deepcopy(self.current);c['cases'][35142]['judgments'][0]['required_rules']=[]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_formal_fixture_mutation_cannot_pass(self):
+  self.coordinated_append_mutation('formal-b-validity.json',35240,'formal-b')
+ def test_exact_pre_formal_novel_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35241),self.proposal)['preserved_cases'],34920)
+ def test_formal_novel_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][35249],c['cases'][35248]=c['cases'][35248],c['cases'][35249]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_formal_novel_source_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['formal-b-novel-mujeong']='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_formal_novel_fixture_mutation_cannot_pass(self):
+  self.coordinated_append_mutation('formal-b-novel-validity.json',35249,'formal-b novel')
+ def test_exact_pre_reported_experience_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35250),self.proposal)['preserved_cases'],34920)
+ def test_reported_experience_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][35250],c['cases'][35251]=c['cases'][35251],c['cases'][35250]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_reported_experience_source_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures/reported-experience-validity.json');key=next(iter(suite['sources']));c['sources'][key]='https://example.invalid/changed'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_reported_experience_required_rule_cannot_be_erased(self):
+  c=copy.deepcopy(self.current);c['cases'][35250]['judgments'][0]['required_rules']=[]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_reported_experience_fixture_mutation_cannot_pass(self):
+  self.coordinated_append_mutation('reported-experience-validity.json',35346,'reported-experience')
+ def test_native_conditional_reported_experience_cannot_enter_raw_ledger(self):
+  c=copy.deepcopy(self.current);conditional=audit.read(audit.ROOT/'tests/fixtures/reported-experience-native-conditional-cases.json');c['cases'].append(conditional['cases'][0])
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
 if __name__=='__main__':unittest.main()

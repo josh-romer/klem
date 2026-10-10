@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "review_status": "The two original authored forbidden judgments require dictionary POS, not raw structural generation. Initial raw failures are retained. Each case must be present in raw/headword modes and absent after actual dictionary-compatible filtering; full adjective Native identity and per-entry conflict are tested.",
+  "cases": [
+    {
+      "id": "reported-experience-boundary-까-adjectival-command",
+      "surface": "좋으랍디까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으랍디까"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.reported_experience"
+          ],
+          "verdict": "forbidden",
+          "source": "reported-experience-86336",
+          "reason": "Agent-authored finite allomorph, lexical-class or immediate-marker boundary; not an explicit source prohibition or independently annotated sentence gold."
+        }
+      ]
+    },
+    {
+      "id": "reported-experience-boundary-다-adjectival-command",
+      "surface": "좋으랍디다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으랍디다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.reported_experience"
+          ],
+          "verdict": "forbidden",
+          "source": "reported-experience-86338",
+          "reason": "Agent-authored finite allomorph, lexical-class or immediate-marker boundary; not an explicit source prohibition or independently annotated sentence gold."
+        }
+      ]
+    }
+  ]
+}

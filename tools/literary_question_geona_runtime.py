@@ -22,6 +22,9 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('self-question-validity.json',29,'882d5671aa228e25ede6809e03da1d11ac097dd484315e59d1b2f6ce02fa566a','self-question'),
     ('dapnikka-validity.json',62,'ebba195627702a1ccbe768f559983143e51094f3dd671a7b20c05ac00f0487f0','dapnikka'),
     ('dapnikka-novel-validity.json',1,'162bde7235fccb0091eacf4e1370cc2aad58c67a298303a2182483e176b4137f','dapnikka novel'),
+    ('formal-b-validity.json',99,'e64d2f15524b6bd8d8cc199b6f46c17a3073d2791d16677cdfdf17721125d94f','formal-b'),
+    ('formal-b-novel-validity.json',9,'d42e0df2c6f0f3573e85545acd02494148c492acd815c9ae8a3fb62001b0a9b2','formal-b novel'),
+    ('reported-experience-validity.json',97,'93e5294ec23e651c3cb85c7f131c3a91fa025f31a23d170bc49a6141c69e2d7a','reported-experience'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

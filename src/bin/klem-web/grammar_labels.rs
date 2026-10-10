@@ -270,6 +270,8 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-declarative-dao-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-self-question-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-dapnikka-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-formal-b-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-reported-experience-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),

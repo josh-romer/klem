@@ -3353,6 +3353,87 @@ review remains open under the completion review below.
   servers stopped. Quiet timing, main integration, wider distributions and
   independent contextual review remain open.
 
+- [ ] **COV-017cq — Formal attached-ㅂ experience, assurance and quotation endings.**
+  **Partial: finite original source scope implemented in the private formal-ending prototype.**
+  Five canonical pairs cover -ㅂ디다/-습디다, -ㅂ디까/-습디까,
+  -ㅂ지요/-습지요, -ㅂ죠/-습죠 and -ㅂ네/-습네. Ten distinct
+  ending owners retain all 46 original example groups and 92 complete Native
+  identities. [Ninety-nine stable cases](../tests/fixtures/formal-b-validity.json)
+  add 71 required and 28 forbidden judgments to the shared ledger, preserving
+  all 35,142 earlier cases exactly. Full/attached allomorphs, explicit nominal
+  + 이다, immediate honorific/past/modal boundaries and retrospective rejection
+  remain separate. The exact source's 아름답네 formal alternative remains Unknown;
+  its ordinary 네 analysis remains Compatible. Unlisted immediate honorific
+  attachment before assurance endings remains Unknown.
+  [Evidence](formal-b-draft.md) retains five focused tests, eight viewer-label
+  tests, 426 browser diagrams/six exports and all 92 Native entry responses.
+  Full pre-append Rust passes 1,107 tests, with one ignored test; nine tests
+  validate the expanded shared ledger and formal cases. All 53,502 corpus/history
+  words preserve previous candidates, order and dictionary assessments. Eight
+  additions on two historical surfaces retain stable IDs, complete original
+  witnesses and seven complete Native owners; none is promoted to contextual gold.
+  All 66,570 annotated rows remain exact. Source/cohort controls pass 9/5;
+  47 historical-ledger controls reject coordinated fixture/ledger mutations.
+  All 44 affected historical tests and affected-target Clippy pass.
+  Complete broad replay preserves all 1,128,312 frames, old paths, assessments,
+  diagrams and spacing boundaries. All 91 added path observations and two added
+  spacing options have stable IDs and exact original context; 33 complete Native
+  owners remain unchanged. Eighteen corruption controls pass. Nine separate
+  [novel cases](../tests/fixtures/formal-b-novel-validity.json) add eight required
+  and one forbidden judgment, preserving the ordinary 아름답지요 reading and
+  preventing unlicensed borrowing of the exact 아름답네 exception. The shared
+  ledger now contains 35,250 cases (31,078 required, 4,188 forbidden). The spacing
+  hypothesis 들인 답디까 remains contextually unjudged. Intended 번답디까 and
+  들인답디까 expose a separate reported-experience expression gap: ten source
+  entries have POS 품사 없음 and are absent from the 715-entry inventory.
+  Complete post-append Rust passes 1,110 tests, zero failures and one ignored
+  test across 239 batches; 991 private/integration Rust inputs match exactly.
+  All four actual Nix packages pass with selected package inputs and Git state
+  unchanged during the explicit path-flake build before local commit.
+  The committed installed source binding passes for all 1,003 Rust-package and
+  18 frontend files. Installed replay preserves all 1,128,312 broad frames,
+  53,502 cohort words and 66,570 original annotated rows exactly. Twenty-four
+  Unicode/filter/cache streams conserve 12,396 finite frames; the installed
+  browser passes 426 diagrams, six exact exports and 92 full Native responses.
+  Portable installed evidence auditing and all 11 corruption controls pass.
+  The complete four-check [Nix gate](reported-experience-complete-inventory-gate.json.gz) passes at 9841000 with all 4,674 tracked files, 4,632 selected inventory inputs and HEAD/index unchanged. Remaining: main merge, quiet novel performance,
+  wider distributions, contextual and independent review.
+
+- [ ] **COV-017cr — Reported-experience statement and question expressions.**
+  **Partial: finite original source scope implemented on coverage/reported-experience.**
+  Ten source entries retain POS 품사 없음, outside the 715-entry inventory.
+  All 51 original groups and 92 complete Native source/lexical identities survive.
+  Present/plain reports and factual/command homonyms keep separate immediate
+  allomorph and marker boundaries. [Evidence](reported-experience-draft.md)
+  retains 97 raw cases (79 required, 18 forbidden), two separately enforced
+  dictionary-dependent cases, the initial failed scope judgments and the exact
+  original 했답디까 categorization tension. Five focused, eight guarded formal-novel and four viewer-label
+  tests, frontend build, Clippy and 12 source corruption controls pass.
+  All 12 complete source streams preserve 8,616 frames and previous paths/order/
+  Native assessments; 1,568 added path observations retain individual evidence.
+  Browser replay passes 474 diagrams/six exports/92 Native endpoints without
+  errors. All 53,502 corpus/history words and 66,570 annotated rows stay exact.
+  Novel readings 번답디까 → 벌다 and 들인답디까 → 들이다 are recovered; the
+  prior 들인 답디까 spacing hypothesis survives and remains contextually unjudged.
+  Complete broad replay preserves 1,128,312 frames, adds 16 tracked observations
+  on two novel tokens and introduces no new spacing. Exact regression guards
+  retain all eight raw additions and complete original contexts/Native owners.
+  Sixteen broad, five cohort, ten gold/candidate and 53 historical corruption
+  controls pass. The shared ledger preserves its 35,250-case prefix and appends
+  97 cases (35,347 total: 31,157 required, 4,206 forbidden); the two dictionary-
+  dependent cases stay outside raw gold. The complete private and Nix release suites pass 1,115 tests (one ignored),
+  with unchanged inputs. All four committed Git-backed Nix packages pass;
+  package profiles preserve all 1,015 Rust/adapter and 18 frontend source files.
+  Installed source/launcher binding passes 1,015 Rust/adapter and 18 frontend
+  files. Installed CLI preserves all 1,128,312 broad frames, 53,502 cohort words
+  and 24 finite streams/10,980 frames; installed adapter preserves 66,570 rows.
+  Browser passes 474 diagrams/six exports/92 Native endpoints, no errors, server
+  stopped. All 14 portable installed corruption controls pass. The complete four-check
+  [Nix inventory gate](reported-experience-complete-inventory-gate.json.gz) passes
+  at 9841000 with all tracked inputs and HEAD/index unchanged. Remaining:
+  main integration, quiet performance, wider
+  distributions and contextual/independent review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

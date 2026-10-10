@@ -4297,7 +4297,7 @@ fn nominals(
         }
         // 마는 is post-ending; emphatic 다/다가 need the bases above or an
         // explicit case phrase. None license arbitrary nominal suffix peeling.
-        if !matches!(particle.form, "마는" | "그려") && !emphatic_adverbial {
+        if !matches!(particle.form, "마는" | "그려" | "그래") && !emphatic_adverbial {
             for mut a in nominal_bases(base) {
                 a.morphemes.extend(morphs.clone());
                 a.rules.push("particle".into());
@@ -4352,6 +4352,7 @@ fn nominals(
                     | "만"
                     | "마는"
                     | "그려"
+                    | "그래"
                     | "나"
                     | "라도"
                     | "든지"
@@ -4422,7 +4423,7 @@ fn nominals(
             inner_class
         };
         // Enumerative 다/이다 follows a nominal, not a preceding case phrase.
-        if !matches!(particle.form, "마는" | "그려") && !enumerative_da {
+        if !matches!(particle.form, "마는" | "그려" | "그래") && !enumerative_da {
             nominals(
                 base,
                 next,
@@ -4465,6 +4466,7 @@ fn nominals(
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
                 "그려" => a.rules.push("particle.familiar_gryeo".into()),
+                "그래" => a.rules.push("particle.familiar_geurae".into()),
                 "치고" | "치고는" | "치고서" => a.rules.push("particle.chigo".into()),
                 "만치" | "마냥" | "토록" => a.rules.push("particle.comparison_extent".into()),
                 "들" => a.rules.push("particle.distributive".into()),
@@ -4943,8 +4945,8 @@ impl PredicateEnd {
                 if matches!(self, Self::CopulaBase) {
                     return matches!(m.form.as_str(), "기" | "음" | "어서");
                 }
-                if matches!(self, Self::BeforeParticle("그려")) {
-                    return before_particle(&m.form, "그려");
+                if let Self::BeforeParticle(particle @ ("그려" | "그래")) = self {
+                    return before_particle(&m.form, particle);
                 }
                 if matches!(self, Self::BeforeParticle("마는")) {
                     return concessive_ending(&m.form);
@@ -5283,6 +5285,12 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "그려" => matches!(
             ending,
             "네" | "소" | "게" | "읍시다" | "오" | "습니다" | "을세"
+        ),
+        // Native 83913 lists 구먼, 군, 지; their existing verbal,
+        // retrospective and copular endings retain their own canonical owners.
+        "그래" => matches!(
+            ending,
+            "구먼" | "는구먼" | "더구먼" | "로구먼" | "군" | "는군" | "로군" | "지"
         ),
         "를" => matches!(ending, "어" | "게" | "지" | "고"),
         "가" => ending == "지",

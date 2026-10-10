@@ -1668,6 +1668,7 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("만", 3, 0),
             ("마는", 3, 0),
             ("그려", 3, 0),
+            ("그래", 3, 0),
             ("까지", 3, 0),
             ("부터", 3, 0),
             // Bundled source particles retain the outer stage of 부터.
@@ -2309,6 +2310,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.familiar_gryeo" => {
             "Attach the original familiar 그려 particle after its source-listed final endings; keep lexical and contextual alternatives separate."
+        }
+        "particle.familiar_geurae" => {
+            "Attach the source-listed familiar 그래 particle after its reviewed final endings; preserve other lexical and contextual alternatives."
         }
         "ending.concessive_giroseo" => {
             "Recover source-listed concessive -기로서/-기로서니 with separate canonical endings; preserve immediate honorific, past and modal owners while rejecting the explicitly excluded -더- and -으리- markers."

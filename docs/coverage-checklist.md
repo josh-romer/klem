@@ -4161,7 +4161,8 @@ review remains open under the completion review below.
   broader prefinal/particle/auxiliary/contextual review remain open.
 
 - [ ] **COV-017cz — Gentle permission and command -렴/-으렴.**
-  **Private prototype:** the complete original entries
+  **Implemented on `coverage/gentle-command`, with main integration pending:**
+  the complete original entries
   [-렴](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79340) and
   [-으렴](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79343)
   have eight source groups. Independently authored lexical/canonical proposals
@@ -4292,10 +4293,24 @@ review remains open under the completion review below.
   The [shared-ledger draft](gentle-command-ledger-draft-proof-archive.json)
   preserves every original 35,681 case and 515 review byte and proposes only
   the exact 23 preauthored structural judgments and two bounded ending-owner
-  reviews. All 25 draft corruption controls pass; the active ledger and reviews
-  are unchanged. Complete current inventory Nix, actual shared-case promotion,
-  main integration, quiet performance and wider contextual/independent review
-  remain open.
+  reviews. All 25 draft corruption controls passed before promotion. The exact
+  proposal is now applied to the shared ledger: **35,704 cases, 31,427 required
+  and 4,294 forbidden judgments**, with **517 scoped reviews and 198 unreviewed
+  entries**. The [append auditor](../tools/gentle_command_ledger_audit.py) binds
+  every original serialized parent case byte, every original review field and
+  only the 23 source-authored judgments and two scoped dispositions. Historical
+  expression/conjectural assertions retain their original 35,681-case scope;
+  a separate mandatory check validates the entire current append. The earlier
+  ledger verifier admits only the byte-pinned gentle fixture in integration
+  order. The eighteen historical additions and novel command hypotheses stay
+  unjudged. The [actual shared-promotion validation](gentle-command-promoted-proof-archive.json)
+  passes all **175 corruption controls** and **ten Rust tests**, including
+  evaluation of the complete 35,704-case ledger and the six original gentle
+  regressions. All 6,570 captured source files, HEAD and index remain unchanged
+  during both runs. The derived queue retains every original source row and
+  adds only the eight original-group judgment citations for the two ending
+  owners. Complete current inventory Nix, main integration, quiet performance
+  and wider contextual/independent review remain open.
 
 - [ ] **COV-017da — Gentle command -려무나/-으려무나.**
   The [original-source packet](gentle-command-long-source-proof-archive.json)

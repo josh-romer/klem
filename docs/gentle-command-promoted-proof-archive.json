@@ -1,0 +1,58 @@
+{
+  "state": "exact-shared-judgments-and-bounded-reviews-promoted-and-validated",
+  "files": {
+    "validate_gentle_command_promoted.py": {
+      "path": "gentle-command-promoted-proof-validate_gentle_command_promoted.py.gz",
+      "source_sha256": "850f57b4f1fc12075fbfce925bfda18097fe053802fc82a8180394737fce11b5",
+      "archive_sha256": "bcb4b733d7520b944d1d30d5f10a7d13927a11ebbb23d28f11e6814888e00255"
+    },
+    "gentle-command-promoted-validation.json": {
+      "path": "gentle-command-promoted-proof-gentle-command-promoted-validation.json.gz",
+      "source_sha256": "ec11309fd86acfc0507504acf20a8d8ff61c94ce059a8c287d7bc514945aad58",
+      "archive_sha256": "e305eb9c54b9b10c3e46d85a1e38c2cdfc6497559fd9ffe7cd797acd28046cb8"
+    },
+    "gentle-command-promoted-validation.log": {
+      "path": "gentle-command-promoted-proof-gentle-command-promoted-validation.log.gz",
+      "source_sha256": "663566b9cbca770ac5ef781452f55ea805df238210d83de94a4ebf3e93bc0f2b",
+      "archive_sha256": "6f347c4d35182c40eb53ed77eaaecf0377b0345768bb1c447f79e8cf936c8929"
+    },
+    "run_gentle_command_promoted_rust.py": {
+      "path": "gentle-command-promoted-proof-run_gentle_command_promoted_rust.py.gz",
+      "source_sha256": "2c1976ed9aeba5a1abf932ca477a1866435d8bd9c4e7e348e4e4afd49ff254b8",
+      "archive_sha256": "d8d680065252c6f435d98f13661e1e26d6f38d861dcbd5e60fa5a1a8d56576e4"
+    },
+    "gentle-command-promoted-rust.json": {
+      "path": "gentle-command-promoted-proof-gentle-command-promoted-rust.json.gz",
+      "source_sha256": "633d1676cfae60f3ab76347b668ca4e69f7b15cd39e8844812702a0a0e5724be",
+      "archive_sha256": "978b1160583e2c302892f3b770260838fe229850c4a3502bae23f4f09a15e82c"
+    },
+    "gentle-command-promoted-rust.log": {
+      "path": "gentle-command-promoted-proof-gentle-command-promoted-rust.log.gz",
+      "source_sha256": "b6e887692dd40f568f827203f0fd167da0902ad099e6af54d40eae8e6f6efc70",
+      "archive_sha256": "64a58d71b775612dbc2c9f2c29ac7b9d9aa40017b3c84092bba2b3236ab5f4d5"
+    }
+  },
+  "captured_parent_head": "749a31b3634e6764246501e17fa96143ea068286",
+  "source_state": "Promotion changes were applied over the captured parent HEAD and frozen for both runs; all actual input bytes are recorded in their receipts.",
+  "controls": 175,
+  "source_files": 6570,
+  "rust_selected_tests": 10,
+  "complete_shared_cases": 35704,
+  "required": 31427,
+  "forbidden": 4294,
+  "scoped_reviews": 517,
+  "unreviewed": 198,
+  "previous_cases": 35681,
+  "previous_reviews": 515,
+  "added_cases": 23,
+  "added_reviews": 2,
+  "old_serialized_case_bytes_preserved": true,
+  "old_manual_review_fields_preserved": true,
+  "unjudged_novel_or_history_paths_promoted": false,
+  "full_coverage_complete": false,
+  "remaining": [
+    "Complete current Nix inventory and main integration",
+    "Quiet performance",
+    "Wider contextual and independent Korean review"
+  ]
+}

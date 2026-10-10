@@ -24,7 +24,9 @@ class Controls(unittest.TestCase):
 
     def test_complete_exact_histories(self):
         result = audit.inspect(self.v)
-        self.assertEqual((result['active_cases'], result['required'], result['active_manual_reviews']), (35681, 31412, 515))
+        self.assertEqual((result['active_cases'], result['required'], result['active_manual_reviews']), (35704, 31427, 517))
+        self.assertEqual((result['historical']['active_cases'], result['historical']['required'],
+                          result['historical']['active_manual_reviews']), (35681, 31412, 515))
         self.assertFalse(result['full_coverage_complete'])
 
     def test_historical_expression_cannot_be_reauthored(self):
@@ -116,6 +118,38 @@ class Controls(unittest.TestCase):
 
     def test_original_source_digest_cannot_change_with_review(self):
         self.reject(lambda v: v['willingness_source']['owners']['krdict:76567'].update(notes=['invented']), 'complete original inventory source digest for bounded review')
+
+
+    def test_complete_current_append_cannot_be_dropped(self):
+        def mutate(v):
+            ledger = json.loads(v['gentle_append']['current_raw'])
+            ledger['cases'].pop()
+            v['gentle_append']['current_raw'] = (json.dumps(ledger, ensure_ascii=False, indent=2) + '\n').encode()
+        self.reject(mutate, 'complete parent and23-case append')
+
+    def test_complete_current_forbidden_judgment_cannot_change(self):
+        def mutate(v):
+            ledger = json.loads(v['gentle_append']['current_raw'])
+            ledger['cases'][35695]['judgments'][0]['verdict'] = 'required'
+            v['gentle_append']['current_raw'] = (json.dumps(ledger, ensure_ascii=False, indent=2) + '\n').encode()
+        self.reject(mutate, 'exact reviewed15required8forbidden append')
+
+    def test_complete_current_review_cannot_expand(self):
+        self.reject(lambda v: v['gentle_append']['current_reviews']['entries'][-1].update(status='complete'),
+                    'only exact bounded gentle reviews appended')
+
+    def test_complete_current_cannot_append_an_unjudged_novel(self):
+        def mutate(v):
+            ledger = json.loads(v['gentle_append']['current_raw'])
+            ledger['cases'].append({'id': 'unjudged-novel', 'surface': '주렴', 'judgments': []})
+            v['gentle_append']['current_raw'] = (json.dumps(ledger, ensure_ascii=False, indent=2) + '\n').encode()
+        self.reject(mutate, 'complete parent and23-case append')
+
+    def test_historical_projection_cannot_omit_complete_current_check(self):
+        values = copy.deepcopy(self.v)
+        del values['gentle_append']
+        with self.assertRaises(KeyError):
+            audit.inspect(values)
 
 
 if __name__ == '__main__':

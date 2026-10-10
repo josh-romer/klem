@@ -3586,8 +3586,18 @@ review remains open under the completion review below.
   the frontend build passes. Original expression homonyms 89455 (-렵니까) and
   89456 (-으렵니까) are distinct from the ending owners and remain separately
   unreviewed outside the 715-entry inventory.
-  Remaining: complete parent restoration/shared-ledger regressions, novel
-  Rust and browser checks, whole Rust, actual Nix/installed/main integration,
+  [Complete parent and ledger preparation](formal-volitional-ledger-preparation.json.gz)
+  restores 4,430 missing files from the complete 5,096-file apprehensive parent
+  while preserving all 702 existing private inputs. The private raw ledger
+  retains its exact 35,530-case prefix and adds 53 original structural cases
+  and four manually reviewed novel targets: 35,587 total, 31,337 required and
+  4,266 forbidden. The original 59-case dictionary suite remains unchanged.
+  Six independent projection controls and all 84 historical controls pass.
+  An earlier familiar-particle control now finds its original forbidden case
+  by stable ID; its initial failure after the ledger grew is retained.
+  Four novel Rust tests are prepared, including both recorded spacing
+  hypotheses with complete Native assessments and NFC/NFD byte boundaries.
+  Remaining: shared-ledger and novel Rust checks, browser checks, whole Rust, actual Nix/installed/main integration,
   quiet performance and wider contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

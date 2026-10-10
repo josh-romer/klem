@@ -3531,7 +3531,14 @@ review remains open under the completion review below.
   [browser scope clarification](familiar-geurae-browser-scope-clarification.json.gz)
   preserves the original capture prose and rederives the correct familiar
   totals of 114 decisions/diagrams, six exports and 50 Native entries.
-  Actual current-main package/source binding, quiet family timing and
+  [Actual current-main integration](familiar-geurae-main-integration.json.gz)
+  now verifies the dc20dce merge and all four main Nix packages, with 1,135
+  release tests passing, zero failures and one ignored across 244 batches.
+  Every actual selected source byte and installed derivation is bound:
+  1,054 Rust/adapter files and 18 frontend files, including the preexisting
+  expression fixture beyond the familiar branch's 1,053-file profile. Its
+  original disk-space failure and same-source `/tmp` retry remain preserved.
+  Complete current-main inventory execution, quiet family timing and
   wider/contextual/independent linguistic review remain pending.
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**

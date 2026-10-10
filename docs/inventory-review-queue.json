@@ -51,7 +51,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "ed7401721783b2f5904cc712a756bd0c24ac8723cfc251d2ed512bc66a5e2294",
+    "docs/coverage-checklist.md": "6e34e4913af81b7b803ac3e1185235087dc7569cfeeaef5deabdac6cbdf4d9d9",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -120,7 +120,7 @@
     "docs/familiar-geurae-closure-browser.json.gz": "9a5324564e5fd7c8701e881d04f4b9a5137285a748a13e4f2e2ff53822682603",
     "docs/familiar-geurae-cohorts.json.gz": "df24173c2a67eb27aab062bd8572abae3a545c084193425cfca7b784080275c6",
     "docs/familiar-geurae-corpora.json.gz": "2b0a9ab9a94d32d20ae4fbb6398dd6432f100e43bc28ea57ff1da6f7f4ad55c4",
-    "docs/familiar-geurae-draft.md": "7b34c407fc8a81994d1eec9b96640cb565b7d25ae21f38cf85a4503fcba735b7",
+    "docs/familiar-geurae-draft.md": "07e3684ba023f9c285df3b3bf74b539151d56e21cb4af7bb675032da50e79679",
     "docs/familiar-geurae-existing-variant-rule-correction.json.gz": "a3d7973f56025b5e30e3c16d663e26fede42c68544ab0241032106f9232c3dab",
     "docs/familiar-geurae-full-native-preparation.json.gz": "8075bb580e526a6dbe2100afd19a90bf11cc39345bf18bcf9d4e005ae18f1c1d",
     "docs/familiar-geurae-full-rust.json.gz": "49ba058142ff8aa7386ee2729d010f6dea7a37e83f74843dcd2c402a553f3923",
@@ -134,6 +134,7 @@
     "docs/familiar-geurae-installed-finite.json.gz": "2b9f5b2fa947402774846fc69f099848ea7382c7f8b6d511272f6d33f70226af",
     "docs/familiar-geurae-installed-source-binding.json.gz": "b0ffddade866c7ff85d9677907e16f26a5fac5657e30d92e6f425b56e169f311",
     "docs/familiar-geurae-integration-packages.json.gz": "caac4ab9b9b67fb4e437cf9eb3fd752b750c820befb8fc25c4607798da595438",
+    "docs/familiar-geurae-main-integration.json.gz": "d3c1286d9cf7ad2644e4aa1b22fe97f6956d48fc59e7e68490f354ecd774ee9d",
     "docs/familiar-geurae-native-closure.json.gz": "3526dfa7c6774e489fc2a58f397438baa99db18edf6ff8fd83ae26d1b25299bd",
     "docs/familiar-geurae-original-source-proposals.json.gz": "eace97cf4d487940e5024cfffdd8f1726c899c0a8437c054cb4fb60819b1ec16",
     "docs/familiar-geurae-shared-ledger-append.json.gz": "1c98cd337a89861601911ffd88a0b3b334cd3bfdd48cdedd23a27c5e4a5bd69b",
@@ -180,7 +181,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "6645e284ab0b8e5cb46297ad658f884c33e77ef0279c73fb3bfa854507039eae",
+    "docs/inventory-reviews.json": "edb6341592fac05eb4c58596741b982cfc48e6e8fc0a6712b652c8efe1b802d1",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -97706,8 +97707,8 @@
         "checklist": [
           "COV-017cu"
         ],
-        "scope": "One finite source-backed particle scope (83913) preserves every original note and all four complete example groups, including the full two-line group. Twenty-seven independently authored cases (19 required, eight forbidden) cover the original examples, explicit attachment boundaries and separately licensed written variants. Initial literal 구만 and the failed redundant-alias implementation are retained; the corrected implementation reuses existing ending.exclamation_variant without altering any linguistic target. Four Rust regressions check all 152 observed Source paths against 50 complete original Native owners and preserve every pre-change path/order. Six grammar-label tests and focused Clippy with warnings denied pass. Complete independent Source/stream/cohort/broad/gold/browser audits pass 19/18/5/17/10/19 corruption controls. All 53,502 cohort words and 66,570 original annotated rows remain exact; original gold outcomes and candidate statistics are independently rederived. Of 1,128,312 broad frames, all six nonspacing streams are byte-exact. The two spacing modes have 398 individually tracked internal probe-count changes on 12 surfaces; every candidate, assessment, display and spacing alternative remains exact. Browser proof passes 114 decisions/114 diagrams/six exact exports/50 full Native endpoints, with owned server stopped. The shared ledger retains its exact 35,457-case prefix and appends only the 27 authored cases: 35,484 total, 31,263 required and 4,237 forbidden. Four ledger tests and 73 historical corruption controls pass. No observed alternative or diagnostic is promoted to contextual gold. Nix/installed/main integration, quiet timing and wider/contextual/independent linguistic review remain open. The complete Rust suite passes 1,135 tests with zero failures and one ignored across 244 batches; all 1,607 frozen inputs, including actual grammar labels and literal compiled JSON inputs, remain unchanged. All four actual Nix packages pass; the Nix Rust suite records 1,135 passed, zero failed and one ignored across 244 batches. Installed source/launcher binding preserves all 1,053 Rust/adapter and 18 frontend files. Complete installed replay passes 24 finite Unicode/filter/cache streams (1,152 frames), 53,502 saved corpus/history words, 66,570 original annotated rows and 1,128,312 broad frames. The actual Nix launcher passes 114 policy decisions and diagrams, six exact exports and 50 complete Native entry endpoints; its owned server stops. The independent installed audit and all 24 corruption controls pass. Zero new corpus/history paths or gold recoveries are claimed for this family; earlier outcomes remain exact. The 398 prototype spacing probe-only changes retain their individual records and exact installed hashes. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.",
-        "remaining": "Complete Nix inventory execution, main integration, quiet paired novel timing, wider attachment licenses, contextual homonym selection and independent linguistic review.",
+        "scope": "One finite source-backed particle scope (83913) preserves every original note and all four complete example groups, including the full two-line group. Twenty-seven independently authored cases (19 required, eight forbidden) cover the original examples, explicit attachment boundaries and separately licensed written variants. Initial literal 구만 and the failed redundant-alias implementation are retained; the corrected implementation reuses existing ending.exclamation_variant without altering any linguistic target. Four Rust regressions check all 152 observed Source paths against 50 complete original Native owners and preserve every pre-change path/order. Six grammar-label tests and focused Clippy with warnings denied pass. Complete independent Source/stream/cohort/broad/gold/browser audits pass 19/18/5/17/10/19 corruption controls. All 53,502 cohort words and 66,570 original annotated rows remain exact; original gold outcomes and candidate statistics are independently rederived. Of 1,128,312 broad frames, all six nonspacing streams are byte-exact. The two spacing modes have 398 individually tracked internal probe-count changes on 12 surfaces; every candidate, assessment, display and spacing alternative remains exact. Browser proof passes 114 decisions/114 diagrams/six exact exports/50 full Native endpoints, with owned server stopped. The shared ledger retains its exact 35,457-case prefix and appends only the 27 authored cases: 35,484 total, 31,263 required and 4,237 forbidden. Four ledger tests and 73 historical corruption controls pass. No observed alternative or diagnostic is promoted to contextual gold. Nix/installed/main integration, quiet timing and wider/contextual/independent linguistic review remain open. The complete Rust suite passes 1,135 tests with zero failures and one ignored across 244 batches; all 1,607 frozen inputs, including actual grammar labels and literal compiled JSON inputs, remain unchanged. All four actual Nix packages pass; the Nix Rust suite records 1,135 passed, zero failed and one ignored across 244 batches. Installed source/launcher binding preserves all 1,053 Rust/adapter and 18 frontend files. Complete installed replay passes 24 finite Unicode/filter/cache streams (1,152 frames), 53,502 saved corpus/history words, 66,570 original annotated rows and 1,128,312 broad frames. The actual Nix launcher passes 114 policy decisions and diagrams, six exact exports and 50 complete Native entry endpoints; its owned server stops. The independent installed audit and all 24 corruption controls pass. Zero new corpus/history paths or gold recoveries are claimed for this family; earlier outcomes remain exact. The 398 prototype spacing probe-only changes retain their individual records and exact installed hashes. Seven audit families are wired into Nix. Complete current-main inventory execution, quiet performance and wider/contextual/independent review remain open. Actual complete four-check familiar gate passes at6506feb. Main merge dc20dce preserves504priorreviews and35457ledgerprefix; allfour actual mainNixpackages bind1054Rust/18frontend/1054adapter selected bytes and launcher, with1135release tests/0failures/1ignored/244batches. Original ENOSPCfailure and same-source/tmp successful retry are preserved.",
+        "remaining": "Complete current-main Nix inventory execution, quiet paired novel timing, wider attachment licenses, contextual homonym selection and independent linguistic review.",
         "evidence": [
           {
             "path": "docs/familiar-geurae-draft.md"
@@ -97834,6 +97835,9 @@
           },
           {
             "path": "tools/test_familiar_geurae_installed_audit.py"
+          },
+          {
+            "path": "docs/familiar-geurae-main-integration.json.gz"
           }
         ],
         "judgments": [

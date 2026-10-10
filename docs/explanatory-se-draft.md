@@ -1,7 +1,7 @@
 # Explanatory endings and familiar particle
 
-Status: isolated private prototype; current main and both running Nix branches
-are unchanged. Three finite source dispositions are now scoped in the private inventory.
+Status: committed source-backed integration on `coverage/explanatory-se`;
+actual Nix packages and complete installed replays pass. Main integration remains pending. Three finite source dispositions are now scoped in the private inventory.
 
 The original -ㄹ세 entry (79278) names 이다/아니다; -을세 (79279) names
 consonantal verbs/adjectives or immediate past. Both have explanation and
@@ -62,7 +62,7 @@ and compilation feedback are retained; the separate browser retry passes 222 ind
 and all 80 complete Native entry endpoints, with no browser errors and its owned
 server stopped. Both the initial failure and successful retry are archived.
 
-Remaining: exact Nix and installed validation, quiet timings, main integration,
+Remaining: complete Nix inventory execution, quiet timings, main integration,
 wider/contextual and independent review. No emitted candidate is promoted to
 gold and no contextual homonym sense or linguistic precision is certified.
 
@@ -82,7 +82,7 @@ The shared ledger preserves the exact 35,395-case parent prefix and appends
 31,244 required and 4,229 forbidden. All four shared-ledger tests pass. Current
 finite scopes add three Source inventory dispositions while preserving every
 prior parent disposition; final queue verification and historical append
-controls pass as described below. Six new audit families are wired into the Nix gate.
+controls pass as described below. Seven new audit families are wired into the Nix gate.
 
 A separate unresolved older-written allomorph is recorded with its complete
 original novel sentence: 살으십니다그려 lacks the proposed 살다 reading. No
@@ -108,5 +108,7 @@ judgments. It checks actual ordered displayed components (including 하+였),
 labels/Source identities, complete Native fields and bounded owned-server
 shutdown. All 19 controls pass. Initial audit failures are retained: the
 supervisor intentionally ends its server with SIGINT, and the display expands
-하+었 without altering the canonical path. Six audit families are wired into
-Nix; the actual Nix gate, installed replays and main integration remain separate.
+하+었 without altering the canonical path. Seven audit families are wired into
+Nix; complete inventory execution and main integration remain separate.
+
+All four actual Nix packages and installed source/launcher binding pass with unchanged inputs: 1,044 Rust/adapter source files and 18 frontend files. Installed replay passes all 24 finite Unicode/filter/cache streams (5,280 frames), 53,502 cohort words, 66,570 original annotated rows with two gold recoveries, and 1,128,312 broad frames. The actual installed launcher passes 318 policy decisions, 314 diagrams, six exact exports and 170 complete Native endpoints; server stopped. The independent complete installed audit and all 24 corruption controls pass. The initial cache-budget lookup failure is retained; each 4 KiB installed eviction run is compared to both original 0/8 MiB cache outputs without changing commands or captures. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.

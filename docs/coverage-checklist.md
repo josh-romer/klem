@@ -3433,7 +3433,7 @@ review remains open under the completion review below.
   distributions and contextual/independent review.
 
 - [ ] **COV-017cs — Concessive -기로서 / -기로서니.**
-  **Partial: source-backed isolated private prototype.** Two original ending
+  **Partial: source-backed local integration; Nix and installed validation pass.** Two original ending
   entries retain all eight complete groups; complete added-path Native ownership
   preserves 34 entries, including both 아름 noun homonyms. Four focused tests,
   four labels, Clippy, 18 stream/Native, 12 source, five cohort, ten broad, ten
@@ -3446,8 +3446,14 @@ review remains open under the completion review below.
   frames remain exact; no new novel paths or spacing. [Scope](giroseo-draft.md)
   preserves the initial 32-owner browser capture, original proposals, source
   fields and pending contextual/independent review. The complete Rust suite passes 1,119 tests (one ignored), with all 1,540
-  frozen inputs unchanged. Remaining: Nix/installed/main
-  validation, quiet performance and wider/contextual review.
+  frozen inputs unchanged. All four actual Nix packages pass with exact tested
+  source parity. Installed bindings preserve 1,024 Rust/adapter and 18 frontend
+  files. Complete installed validation passes 24 finite streams/3,144 frames,
+  53,502 words, 66,570 annotated rows, 1,128,312 broad frames, and 204 browser
+  diagrams/six exports/34 complete Native endpoints. The actual installed web
+  launcher is exercised; no browser errors, server stopped. All 18 portable
+  installed corruption controls pass. Remaining: complete inventory execution,
+  main integration, quiet performance and wider/contextual review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

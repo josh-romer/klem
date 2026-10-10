@@ -558,6 +558,8 @@
                 ./tools/test_giroseo_broad_audit.py
                 ./tools/giroseo_corpora_audit.py
                 ./tools/test_giroseo_corpora_audit.py
+                ./tools/giroseo_installed_audit.py
+                ./tools/test_giroseo_installed_audit.py
                 ./tools/bound_noun_spacing_runtime.py
                 ./tools/test_bound_noun_spacing_runtime.py
                 ./tools/bound_noun_spacing_package_audit.py
@@ -1091,6 +1093,8 @@
             python -m unittest discover -s tools -p 'test_giroseo_broad_audit.py'
             python tools/giroseo_corpora_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_corpora_audit.py'
+            python tools/giroseo_installed_audit.py
+            python -m unittest discover -s tools -p 'test_giroseo_installed_audit.py'
             python -m unittest discover -s tools -p 'test_declarative_dao_*.py'
             python -m unittest discover -s tools -p 'test_possessive_bound_noun_*.py'
             python tools/bound_noun_spacing_runtime.py --fixture tests/fixtures/bound-noun-spacing-cases.json --closure docs/bound-noun-spacing-native-closure.json.gz --verify docs/bound-noun-spacing-installed-runtime.json.gz

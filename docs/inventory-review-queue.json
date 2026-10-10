@@ -51,7 +51,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "91d1dd91874a5322bdf0c234553c48f76b47b36a17ac441a9c46b688d5d21f5d",
+    "docs/coverage-checklist.md": "5383626b05bfc274fc02315d2a71c3c61858734bf9990329af9627e1bb2b6d94",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -113,9 +113,12 @@
     "docs/gera-nera-source-preflight.json": "779e33a4a3532513fa6c31531f72083a8a58899d12f315c8ecec9fd687b3a4fa",
     "docs/giroseo-closure-browser.json.gz": "6b302bbd8c79ce9c82f5869ddb9db4b822e75a450f2ee86c2bb37db45e103433",
     "docs/giroseo-corpora-controls.log.gz": "c08677ca4727e747e0beb2472578f1027b09594e27f77ca3894521b4481fd1cc",
-    "docs/giroseo-draft.md": "59c08515d495fb01b38f91405e34b10e41dc0d486545aeec486f3732cec1681e",
+    "docs/giroseo-draft.md": "1a9ae7cd0c47c582709aa8a06f615a9ce6cb2030f4ceed834daf24229833f362",
     "docs/giroseo-full-rust.json.gz": "ae6856c2692c128af877d5684c62b237d903c237b7922a2e0c9f5099f26f5e1b",
+    "docs/giroseo-installed-audit-controls.log.gz": "2e28400f655c9e154caac46c1958eda6f85c70b588293616d164a18d89d5b92d",
+    "docs/giroseo-installed-source-binding.json.gz": "a9c50f873f5ffc33213f7fc4a7824b3b28753315740908fcafcdef444bf29377",
     "docs/giroseo-native-closure.json.gz": "d014b22870955a29927b6d451bbc84d3885fbc4260c5f5c32fa71749c1faa958",
+    "docs/giroseo-nix-packages.json.gz": "db1fd2a2ec7b24eb34d2f63079c011dcdfb6ca4a0256820832ed241c74d6e4ba",
     "docs/giroseo-source-preparation.json.gz": "faede6bac85fcf0cf1f6beabb989139e898a250e60f09c0f8640b03acc577fc9",
     "docs/giroseo-source-streams.json.gz": "bd628c08e3d48476f421ed612fa4cc755d4c70acbfc3bc4a1aa85e05e0c92e6c",
     "docs/hada-aux-evaluation.json": "6cbda8c5a7b8dcc4062605ad1b15206dace8554cb7bbd823e14e0c92e1f6067b",
@@ -126,7 +129,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "945c811f134de0e9b18df034befb41a62d9e6e3c73b6b8317212c63fc0191600",
+    "docs/inventory-reviews.json": "77387b2dfd971ed0d06c51a1f9ddec2239374d16bd7091979de157051ce33e33",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -34259,8 +34262,8 @@
         "checklist": [
           "COV-017cs"
         ],
-        "scope": "All eight complete original groups across both entries and finite class, represented copula and immediate marker boundaries. Source exclusions for 더/으리 are enforced with separate full canonical rule provenance. Forty-eight independently authored judgments, complete 34-entry Native closure, twelve source streams and browser validation; all prior paths and original corpus/broad outputs preserved. Structural finite scope only. All ten original gold recovery and candidate-statistics corruption controls pass. The complete prototype Rust suite passes1119tests/0failed/1ignored with1540sourcefiles unchanged.",
-        "remaining": "Prototype full Rust passed; integration source parity and Nix remain. Nix/installed/main validation, quiet performance, wider ending distributions, contextual selection and independent Korean review remain open.",
+        "scope": "All eight complete original groups across both entries and finite class, represented copula and immediate marker boundaries. Source exclusions for 더/으리 are enforced with separate full canonical rule provenance. Forty-eight independently authored judgments, complete 34-entry Native closure, twelve source streams and browser validation; all prior paths and original corpus/broad outputs preserved. Structural finite scope only. All ten original gold recovery and candidate-statistics corruption controls pass. The complete prototype Rust suite passes1119tests/0failed/1ignored with1540sourcefiles unchanged. All four actual Nix packages pass with exact committed/tested source parity. Installed complete finite/cohort/annotated/broad and SolidJS browser outputs pass;18installed corruption controls pass.",
+        "remaining": "Complete inventory execution, main integration, quiet performance, wider distributions and contextual/independent review remain.",
         "evidence": [
           {
             "path": "tests/giroseo.rs",
@@ -34298,6 +34301,15 @@
           },
           {
             "path": "docs/giroseo-full-rust.json.gz"
+          },
+          {
+            "path": "docs/giroseo-nix-packages.json.gz"
+          },
+          {
+            "path": "docs/giroseo-installed-source-binding.json.gz"
+          },
+          {
+            "path": "docs/giroseo-installed-audit-controls.log.gz"
           }
         ],
         "judgments": [
@@ -34567,8 +34579,8 @@
         "checklist": [
           "COV-017cs"
         ],
-        "scope": "All eight complete original groups across both entries and finite class, represented copula and immediate marker boundaries. Source exclusions for 더/으리 are enforced with separate full canonical rule provenance. Forty-eight independently authored judgments, complete 34-entry Native closure, twelve source streams and browser validation; all prior paths and original corpus/broad outputs preserved. Structural finite scope only. All ten original gold recovery and candidate-statistics corruption controls pass. The complete prototype Rust suite passes1119tests/0failed/1ignored with1540sourcefiles unchanged.",
-        "remaining": "Prototype full Rust passed; integration source parity and Nix remain. Nix/installed/main validation, quiet performance, wider ending distributions, contextual selection and independent Korean review remain open.",
+        "scope": "All eight complete original groups across both entries and finite class, represented copula and immediate marker boundaries. Source exclusions for 더/으리 are enforced with separate full canonical rule provenance. Forty-eight independently authored judgments, complete 34-entry Native closure, twelve source streams and browser validation; all prior paths and original corpus/broad outputs preserved. Structural finite scope only. All ten original gold recovery and candidate-statistics corruption controls pass. The complete prototype Rust suite passes1119tests/0failed/1ignored with1540sourcefiles unchanged. All four actual Nix packages pass with exact committed/tested source parity. Installed complete finite/cohort/annotated/broad and SolidJS browser outputs pass;18installed corruption controls pass.",
+        "remaining": "Complete inventory execution, main integration, quiet performance, wider distributions and contextual/independent review remain.",
         "evidence": [
           {
             "path": "tests/giroseo.rs",
@@ -34606,6 +34618,15 @@
           },
           {
             "path": "docs/giroseo-full-rust.json.gz"
+          },
+          {
+            "path": "docs/giroseo-nix-packages.json.gz"
+          },
+          {
+            "path": "docs/giroseo-installed-source-binding.json.gz"
+          },
+          {
+            "path": "docs/giroseo-installed-audit-controls.log.gz"
           }
         ],
         "judgments": [

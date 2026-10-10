@@ -1,6 +1,6 @@
 # Concessive -기로서 / -기로서니
 
-Status: isolated private prototype; not integrated into main or the current Nix build.
+Status: implemented on the local integration branch; all four Nix packages and installed validation pass. Main integration and complete inventory execution remain pending.
 
 Two original endings preserve all eight complete example groups, original
 attachment notes (excluding -더- and -으리-), trailing spaces and 32 complete
@@ -50,14 +50,24 @@ across 241 batches. All 1,540 source, test, tool, example and manifest inputs
 stayed unchanged. Debug/incremental suppression is for disk
 usage and does not support a performance claim.
 
-Remaining: Nix and
-installed validation, quiet timings, main integration, wider distributions and
-contextual/independent review. Five portable audit families are wired into the
-Nix inventory gate; the gate has not yet run for this prototype.
+The actual committed Nix build at 029a80d passes all four packages; every
+selected byte equals the fully tested prototype, and source, HEAD, index and
+status stay unchanged. Installed derivations bind 1,024 Rust/adapter files and
+18 frontend files to those exact sources. The actual Nix web launcher serves
+those installed assets and server.
 
-The local integration worktree is prepared atop 9841000, preserving the newer
-reported-question evidence and completed reported-experience installed checks.
-Every parent core source matched the original 8d baseline before copying the
-exact tested prototype. The inventory merges only the two new scoped entries
-and retains all prior 715 identities and newer evidence. Exact selected Nix
-source parity and committed package builds are next; no main merge yet.
+Installed validation passes 24 finite Unicode/filter/cache streams (3,144
+frames), all 53,502 cohort words, all 66,570 original annotated rows, and every
+byte of 1,128,312 broad frames. The installed SolidJS browser passes 204
+individual diagrams, six exact CLI exports and all 34 complete Native entry
+responses, with no errors and its owned server stopped. The portable installed
+audit passes all 18 corruption controls, including original Native fields,
+authored diagram paths, label identities, missing export bytes, flags and
+executable identity. Complete producers, receipts, logs and screenshots are
+archived under docs/giroseo-installed-* and docs/giroseo-nix-*.
+
+Remaining: complete inventory execution for this branch, quiet timings, main
+integration, wider distributions and contextual/independent review. Six portable
+audit families are wired into the Nix inventory gate. These checks establish
+recorded finite coverage and conservation; no contextual precision claim is
+made for unjudged paths or additional distributions.

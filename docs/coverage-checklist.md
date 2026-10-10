@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-08.
+Last reviewed: 2026-10-09.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -3434,6 +3434,25 @@ review remains open under the completion review below.
   [main integration proof](formal-reported-main-integration.json.gz) verifies
   merge 170e773 and every installed source byte. Remaining: quiet performance, wider
   distributions and contextual/independent review.
+
+- [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
+  **Missing: complete original source preparation and independent targets;
+  implementation pending.** Original entries 86497 and 86619 preserve all
+  three senses, separate short/full attachment notes and all 25 complete
+  groups, including their multi-line contexts. Fifty initial and 69 complete
+  authored Native owners retain every lexical homonym and original field.
+  [Independent source proposals](fear-lsera-independent-source-proposals.json.gz)
+  were preserved before probing the immutable installed baseline. All 150
+  NFC/NFD/raw/headword/Compatible probes miss their intended lexical and
+  canonical structural targets; actual commands and unchanged input hashes
+  are retained in the [baseline capture](fear-lsera-baseline-gap.json.gz).
+  [Forty-six authored cases](fear-lsera-fear-lsera-validity.json.gz) propose
+  37 required and nine forbidden named paths, covering original examples,
+  immediate allomorphs, prefinals, explicit copulas and irregular recovery.
+  These are proposed targets, not passing tests or candidate-authored gold.
+  Remaining: implementation, independent source/Native/distribution audits,
+  shared-ledger regressions, library/CLI/browser parity, full Rust and actual
+  Nix/installed validation, quiet performance, integration and broader review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

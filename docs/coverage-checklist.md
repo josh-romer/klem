@@ -4329,11 +4329,47 @@ review remains open under the completion review below.
   policies, with 1,512 complete original output frames and unchanged inputs.
   Each independently proposed lemma and decomposition is absent in every
   policy. The original source targets precede these observations; neither
-  their fields nor a baseline is refreshed. No rule, label, active judgment
-  or scoped review is added yet. Remaining: regular/irregular/allomorph,
-  known class and auxiliary boundary judgments, rule/catalog/dictionary
-  implementation, complete corpus/history/broad impact, browser/Nix/main and
+  their fields nor a baseline is refreshed.
+
+  **Private implementation on `coverage/gentle-command-long`:** canonical
+  으려무나 now has a separate `ending.gentle_command_long` marker, source-owned
+  vowel/ㄹ short and other-coda full attachment, and the two original catalog
+  owners. The [25 independent private judgments](../tests/fixtures/gentle-command-long-validity.json)
+  were authored before the new rule or its output: sixteen required and nine
+  forbidden paths cover every original group, regular/ㄹ/ㄷ/ㅂ/ㅅ boundaries,
+  exact bare copula/답다 exclusions and an isolated joined auxiliary alternative.
+  The dictionary checks each immediate owner's verb class, retaining lexical
+  homonyms and leaving unlisted prefinal/outer-particle combinations unknown.
+  The fixture retains all sixteen original source Native owners and 27 complete
+  inherited boundary owners; every field and homonym imports unchanged.
+
+  The [source auditor](../tools/gentle_command_long_source_audit.py) checks
+  the original manifests/payload bytes, all eight whole original groups,
+  24-policy installed baseline, sixteen-source/twenty-seven-boundary Native
+  closure, exact independent judgments and both catalog owners. Fifteen
+  corruption controls reject rewritten targets/baselines, lost homonyms,
+  shortened source records and borrowed ending ownership. These checks are
+  wired into the Nix fileset and inventory commands.
+  [Focused validation](gentle-command-long-focused-proof-archive.json) passes
+  **36 Rust tests and forty controls**, formatting and Clippy with warnings
+  denied, with all 6,592 captured source files, HEAD and index unchanged. It
+  includes the complete 35,704-case shared ledger, the six prior gentle-command
+  tests, seven longer-form regressions, library ordering/label checks and thirteen
+  web API/label tests. The original baseline paths and relative order survive;
+  낫다 and 있다 verb/adjective entries receive separate ending assessments.
+  The [original first harness failure](gentle-command-long-judgments-proof-archive.json)
+  is preserved with its exact test source. The correction reads the original
+  baseline surface from `actual_record`; no source or baseline is rewritten.
+  The shared cases and 517 reviews remain unchanged; the new twenty-five
+  judgments stay private. The original 기다리고 있으려무나 dialogue remains
+  intact and does not establish a cross-token auxiliary/sense decision.
+
+  Remaining: complete corpus/history/broad impact and individual added-path
+  tracking, full current Rust, installed CLI/dictionary/browser/Nix/main,
   quiet performance, plus contextual/register and independent Korean review.
+  Earlier runtime archives retain their exact production closure; a future
+  integration must explicitly bind this new production revision rather than
+  refresh or weaken the historical source comparison.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

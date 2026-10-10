@@ -432,6 +432,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-formal-volitional-labels.json"),
                 PathBuf::from("tests/fixtures/willingness-question-native.json"),
                 PathBuf::from("tests/fixtures/gentle-command-ending-native.json"),
+                PathBuf::from("tests/fixtures/gentle-command-long-ending-native.json"),
                 PathBuf::from("tests/fixtures/krdict-conjectural-additive-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),

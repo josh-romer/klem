@@ -3927,6 +3927,32 @@ review remains open under the completion review below.
   installed CLI/adapter/browser, main integration, quiet timing and wider
   contextual/independent Korean review remain required.
 
+  The [actual installed proof archive](conjectural-additive-installed-archive.json.gz)
+  now binds all four Nix packages and their selected sources at `a23eb576`.
+  The actual retained Nix release log also passes 1,161 tests, zero failures,
+  one ignored and 250 batches. All 106 original audit controls pass directly
+  from the selected Nix inventory source. The installed CLI exactly reproduces
+  72 complete Source/copula/novel Unicode/filter/cache streams (57,432 frames),
+  all 53,502 corpus/history words and paths, all 66,570 annotated rows and
+  summaries, and all 1,128,312 broad workload frames. The installed SolidJS
+  application passes all 288 independently authored path decisions and component
+  orders, six exact exports and 57 complete original Native entry endpoints;
+  its owned server stops cleanly. Both local 그러다/그렇다 targets are retained.
+  [Mobile](conjectural-additive-installed-browser-mobile.png) and
+  [desktop](conjectural-additive-installed-browser-desktop.png) captures are
+  preserved. The initial Playwright module-resolution failure and the corrected
+  cached-dependency harness remain separate unchanged artifacts.
+
+  The [independent installed audit](../tools/conjectural_additive_installed_audit.py)
+  derives every filter choice and full export from raw API records, checks
+  typed forms against original Source/copula/novel judgments and compares all
+  Native fields against their original closures. Its 25 mutation controls pass,
+  including missing Unicode streams, the second novel alternative, fabricated
+  POS, reordered morphemes, changed output hashes and missing spacing flags.
+  Both tools are selected and executed by the private Nix inventory check.
+  The new complete four-check inventory gate, current main integration, quiet
+  performance and wider contextual/independent Korean review remain required.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

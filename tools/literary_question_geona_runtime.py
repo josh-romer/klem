@@ -31,6 +31,8 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('explanatory-se-novel-validity.json',14,'41ca6b4a824266128de576190bc4389066375bb4e0c1550ebb478caef83bf02c','explanatory-se-novel'),
     ('familiar-geurae-validity.json',27,'e2b927b7691731277b429a7322639d26562b9946741d1bcd029943d87d61f9f5','familiar-geurae'),
     ('fear-lsera-validity.json',46,'2ccc67014adcae61861ee24774ddd2eae92bf82c7a9f3d138179460851390f25','fear-lsera'),
+    ('formal-volitional-raw-validity.json',53,'23346ec33a887be1eb10c925ef9cfe2777b901df3d6e600e5bea053d7a968124','formal-volitional raw'),
+    ('formal-volitional-novel-validity.json',4,'db0853ac54c5ca0ab8995511e6d40f4c20b1a9b1020b9358a31d9ee19efaea41','formal-volitional novel'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

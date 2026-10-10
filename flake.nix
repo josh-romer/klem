@@ -610,6 +610,22 @@
                 ./tools/test_fear_lsera_broad_audit.py
                 ./tools/fear_lsera_installed_audit.py
                 ./tools/test_fear_lsera_installed_audit.py
+                ./tools/formal_volitional_source_audit.py
+                ./tools/test_formal_volitional_source_audit.py
+                ./tools/formal_volitional_streams_audit.py
+                ./tools/test_formal_volitional_streams_audit.py
+                ./tools/formal_volitional_cohort_audit.py
+                ./tools/test_formal_volitional_cohort_audit.py
+                ./tools/formal_volitional_corpora_audit.py
+                ./tools/test_formal_volitional_corpora_audit.py
+                ./tools/formal_volitional_broad_audit.py
+                ./tools/test_formal_volitional_broad_audit.py
+                ./tools/formal_volitional_browser_audit.py
+                ./tools/test_formal_volitional_browser_audit.py
+                ./tools/formal_volitional_ledger_audit.py
+                ./tools/test_formal_volitional_ledger_audit.py
+                ./tools/formal_volitional_installed_audit.py
+                ./tools/test_formal_volitional_installed_audit.py
                 ./tools/bound_noun_spacing_runtime.py
                 ./tools/test_bound_noun_spacing_runtime.py
                 ./tools/bound_noun_spacing_package_audit.py
@@ -1195,6 +1211,22 @@
             python -m unittest discover -s tools -p 'test_fear_lsera_broad_audit.py'
             python tools/fear_lsera_installed_audit.py
             python -m unittest discover -s tools -p 'test_fear_lsera_installed_audit.py'
+            python tools/formal_volitional_source_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_source_audit.py'
+            python tools/formal_volitional_streams_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_streams_audit.py'
+            python tools/formal_volitional_cohort_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_cohort_audit.py'
+            python tools/formal_volitional_corpora_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_corpora_audit.py'
+            python tools/formal_volitional_broad_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_broad_audit.py'
+            python tools/formal_volitional_browser_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_browser_audit.py'
+            python tools/formal_volitional_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_ledger_audit.py'
+            python tools/formal_volitional_installed_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_installed_audit.py'
             python -m unittest discover -s tools -p 'test_declarative_dao_*.py'
             python -m unittest discover -s tools -p 'test_possessive_bound_noun_*.py'
             python tools/bound_noun_spacing_runtime.py --fixture tests/fixtures/bound-noun-spacing-cases.json --closure docs/bound-noun-spacing-native-closure.json.gz --verify docs/bound-noun-spacing-installed-runtime.json.gz

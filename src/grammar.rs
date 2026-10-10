@@ -1216,6 +1216,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으려고", "려고", "으려고"),
             ("으려면", "려면", "으려면"),
             ("으려", "려", "으려"),
+            // KRDict 86548/86549/86604/86605: formal intention questions/statements.
+            ("으렵니까", "렵니까", "으렵니까"),
+            ("으렵니다", "렵니다", "으렵니다"),
             ("으려는", "려는", "으려는"),
             ("으려는가", "려는가", "으려는가"),
             ("으려는지", "려는지", "으려는지"),
@@ -2303,6 +2306,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.formal_b" => {
             "Recover source-listed formal attached-ㅂ and 습 allomorphs for experience reports/questions, assured statements and disapproving quotation; retain lexical and contextual alternatives."
+        }
+        "ending.formal_volitional" => {
+            "Recover original -렵니까/-으렵니까 intention questions and -렵니다/-으렵니다 intention statements with verb and honorific attachment, preserving separate original owners and contextual alternatives."
         }
         "formal_b.attested_stem_b" => {
             "Retain the exact Native 아름답네 formal-quotation witness without removing its lexical stem-final ㅂ; preserve ordinary 네 and mark the formal attachment tension unknown."

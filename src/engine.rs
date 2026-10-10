@@ -1030,7 +1030,11 @@ fn intention_connective(form: &str) -> bool {
 }
 
 pub(crate) fn verbal_intention(form: &str) -> bool {
-    intention_connective(form) || matches!(form, "으려는" | "으려는가" | "으려는지")
+    intention_connective(form)
+        || matches!(
+            form,
+            "으려는" | "으려는가" | "으려는지" | "으렵니까" | "으렵니다"
+        )
 }
 
 fn ryeo_expression(form: &str) -> bool {
@@ -1930,6 +1934,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 }
                 if ending.form == "음세" {
                     p.rules.push("ending.volitional_promise".into());
+                }
+                if matches!(ending.form, "으렵니까" | "으렵니다") {
+                    p.rules.push("ending.formal_volitional".into());
                 }
                 if matches!(ending.form, "으련만" | "으련마는") {
                     p.rules.push("ending.counterfactual_ryeon".into());

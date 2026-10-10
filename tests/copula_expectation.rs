@@ -8,6 +8,8 @@ mod dao_history;
 mod deoniman_parent;
 #[path = "support/formal_b_history.rs"]
 mod formal_b_history;
+#[path = "support/gentle_command_history.rs"]
+mod gentle_command_history;
 #[path = "support/literary_question_go_history.rs"]
 mod question_go_history;
 #[path = "reported_dana_support/parent.rs"]
@@ -59,6 +61,14 @@ fn frozen_old_candidates_and_explicit_parents_are_preserved() {
         )
         .unwrap();
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.gentle_command") {
+                gentle_command_history::assert_addition(
+                    "tests/copula-expectation-full-source.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.formal_b") {
                 formal_b_history::assert_addition(
                     "tests/copula-expectation-full-source.json",
@@ -224,6 +234,14 @@ fn complete_original_source_words_preserve_order_and_attribute_each_addition() {
             "{word}"
         );
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.gentle_command") {
+                gentle_command_history::assert_addition(
+                    "tests/copula-expectation-full-source.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.formal_b") {
                 formal_b_history::assert_addition(
                     "tests/copula-expectation-full-source.json",

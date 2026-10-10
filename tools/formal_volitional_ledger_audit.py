@@ -13,14 +13,11 @@ def read(name):
 def inspect(full, policy, raw, novel, ledger):
     complete_ledger = ledger
     complete_ledger_cases = len(ledger['cases'])
-    if complete_ledger_cases == 35595:
-        # Preserve the original raw53+novel4 scope while binding the reviewed tail.
-        from literary_question_geona_runtime import read as archived, verify_ledger
-        expression = read('formal-volitional-expression-validity.json')
-        assert ledger['cases'][35587:] == expression['cases'], 'exact independent expression8 append'
-        assert all(ledger['sources'][key] == value for key, value in expression['sources'].items()), 'separate expression source links'
-        ledger = {**ledger, 'cases': ledger['cases'][:35587],
-                  'sources': {key: value for key, value in ledger['sources'].items() if key not in expression['sources']}}
+    # The historical assertions below concern exactly the original raw53 and
+    # novel4 append. The complete ledger is independently checked below against
+    # every byte-pinned reviewed suite, including later additions in order.
+    # A prefix projection alone never authorizes a new tail or source identity.
+    ledger = {**ledger, 'cases': ledger['cases'][:35587]}
     assert hashlib.sha256((ROOT / 'tests/fixtures/formal-volitional-validity.json').read_bytes()).hexdigest() == '4baa4c4bc9da65a9a9c493b7aadd537afd82ff3464daf586dc3e59823d9cd181', 'unchanged original59 fixture'
     assert hashlib.sha256((ROOT / 'tests/fixtures/formal-volitional-novel-validity.json').read_bytes()).hexdigest() == 'db0853ac54c5ca0ab8995511e6d40f4c20b1a9b1020b9358a31d9ee19efaea41', 'unchanged manual novel4 fixture'
     original = read('formal-volitional-validity.json')

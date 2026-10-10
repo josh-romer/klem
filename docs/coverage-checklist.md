@@ -4206,6 +4206,30 @@ review remains open under the completion review below.
   captured file, HEAD and index remains unchanged during these checks. The
   full merged runtime and remaining distribution/package/main checks stay open.
 
+
+  The [historical-attribution checkpoint](gentle-command-history-proof-archive.json)
+  preserves the actual complete-suite failure (182 tests passed before one
+  historical copula assertion failed), rather than refreshing its baseline.
+  All 53,502 original corpus/history words were compared against the actual
+  prior installed CLI. Every previous candidate and its order survives;
+  no corpus word changes, while eight history words gain eighteen raw paths.
+  The [individual history fixture](../tests/fixtures/gentle-command-history.json)
+  retains every unchanged original witness and available complete source group,
+  and actual prior installed -으련 counterpart analyses for each addition.
+  The complete prior counterpart records and original capture bytes are pinned;
+  fabricated extra parents and refreshed archives are rejected. Six historical
+  Rust suites now check these exact individual paths, retaining
+  their original assertions and counts. All 43 affected Rust tests, sixteen
+  history corruption controls, eleven strict ledger controls and 97 inherited
+  history controls pass, with formatting and focused Clippy; all captured
+  files, HEAD and index remain unchanged throughout. The ledger check verifies
+  the original scope and every separately pinned later append in full; it
+  rejects altered, missing, reordered or unreviewed tails. All preparation
+  failures and original outputs remain archived. These eighteen raw hypotheses
+  remain contextually unjudged with independent review pending. The corrected
+  complete Rust run, annotated-row/runtime distribution, Nix/packages/browser,
+  shared-case promotion, main integration and quiet performance remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

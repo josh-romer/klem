@@ -3601,7 +3601,18 @@ review remains open under the completion review below.
   against the 69-entry Source/novel Native union pass as recorded below;
   the frontend build passes. Original expression homonyms 89455 (-렵니까) and
   89456 (-으렵니까) are distinct from the ending owners and remain separately
-  unreviewed outside the 715-entry inventory.
+  unreviewed outside the 715-entry inventory. A [separate source audit](formal-volitional-expression-source-preparation.json.gz)
+  now preserves both complete homonym-2/POS-unclassified expression entries,
+  all eight original groups, their contraction notes and 16 original Native
+  identities. Eight lexical targets were authored before their probes. The
+  [complete expression streams](formal-volitional-expression-source-streams.json.gz)
+  recover all targets in 24 NFC/NFD/filter/cache streams with 1,560 frames and
+  192 exact path checks. Independent source and stream audits pass 11 and six
+  corruption controls and are wired into the main Nix inventory check. The
+  original full-form note and its vowel-stem 모으렵니까 → 모으다 example remain
+  a visible source tension. These expressions are not added to the ending
+  label owners or the 715-entry queue; library/shared-ledger/browser/installed
+  validation and their separate review dispositions remain pending.
   [Complete parent and ledger preparation](formal-volitional-ledger-preparation.json.gz)
   restores 4,430 missing files from the complete 5,096-file apprehensive parent
   while preserving all 702 existing private inputs. The private raw ledger

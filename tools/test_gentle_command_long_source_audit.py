@@ -82,6 +82,23 @@ class Controls(unittest.TestCase):
         self.reject(lambda v: v['prior_paths'][0]['actual_record']['analysis']['analyses'].pop(),
                     'all8 full original baseline records retained')
 
+    def test_additional_derived_class_judgments_cannot_be_refreshed(self):
+        self.reject(lambda v: v.update(interactions_raw=b'{}'), 'exact additional derived-class judgments')
+
+    def test_derived_suffix_cannot_become_a_second_lexical_lemma(self):
+        self.reject(lambda v: v['interactions']['cases'][0]['judgments'][0].update(lemmas=['학생', '답다']),
+                    'actual nominal-plus-suffix target fields')
+
+    def test_novel_context_packet_cannot_be_refreshed(self):
+        self.reject(lambda v: v.update(novel_packet_raw=b'{}'), 'exact original novel occurrence packet')
+
+    def test_novel_proposal_cannot_be_reauthored(self):
+        self.reject(lambda v: v.update(novel_suite_raw=b'{}'), 'exact eight bounded novel proposals')
+
+    def test_novel_lexical_homonym_cannot_disappear(self):
+        self.reject(lambda v: v['novel_entries'].pop(next(iter(v['novel_entries']))),
+                    'all fifteen complete novel Native owners')
+
 
 if __name__ == '__main__':
     unittest.main()

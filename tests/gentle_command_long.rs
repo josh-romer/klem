@@ -26,6 +26,7 @@ fn dictionary(test: &str) -> (Cleanup, SqliteDictionary) {
         &[
             "tests/fixtures/gentle-command-long-native.json".into(),
             "tests/fixtures/gentle-command-long-boundary-native.json".into(),
+            "tests/fixtures/gentle-command-long-novel-boundary-native.json".into(),
         ],
         &path,
         "complete-original-gentle-command",
@@ -249,5 +250,71 @@ fn existential_homonyms_keep_individual_verb_attachment_without_selecting_contex
         } else if owner.pos == "동사" {
             assert_eq!(entry.status, Compatibility::Compatible);
         }
+    }
+}
+
+#[test]
+fn correctly_inflected_dapda_exclusions_use_the_actual_nominal_suffix_shape() {
+    let raw = include_str!("fixtures/gentle-command-class-interaction-validity.json");
+    let suite: validity::Suite = serde_json::from_str(raw).unwrap();
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!(
+        (report.cases, report.required_total, report.forbidden_total),
+        (3, 1, 2)
+    );
+
+    // Exercise the same target shape against an actually emitted ordinary
+    // adjective path, so an incorrect lemma/suffix representation cannot make
+    // all forbidden assertions vacuously pass.
+    let mut altered: validity::Suite = serde_json::from_str(raw).unwrap();
+    altered
+        .cases
+        .retain(|case| case.id == "dapda-gentle-boundary-short-gentle");
+    altered.cases[0].surface = "학생다워요".into();
+    altered.cases[0].judgments[0].morphemes = Some(vec!["답다".into(), "어요".into()]);
+    altered.cases[0].judgments[0].required_rules = Some(vec!["suffix.adjectival.dap".into()]);
+    let report = validity::evaluate(&altered).unwrap();
+    assert!(!report.passed());
+    assert_eq!(report.forbidden_present, 1);
+    assert_eq!(report.violations.len(), 1);
+}
+
+#[test]
+fn all_individual_novel_targets_keep_dictionary_verbs_and_complete_native_owners() {
+    let suite: validity::Suite = serde_json::from_str(include_str!(
+        "fixtures/gentle-command-long-novel-validity.json"
+    ))
+    .unwrap();
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!(
+        (report.cases, report.required_total, report.forbidden_total),
+        (8, 8, 0)
+    );
+    let (_cleanup, dictionary) = dictionary("novel");
+    let mut session = DictionarySession::new(&dictionary, 4096);
+    for case in suite.cases {
+        let word = Lemmatizer::new().analyze_word(&case.surface).unwrap();
+        let target = &case.judgments[0];
+        let path = reading(&word, &target.lemmas[0]).unwrap();
+        assert_eq!(
+            session.annotate(&word).unwrap().assess(path).status,
+            Compatibility::Compatible,
+            "{}",
+            case.id
+        );
+    }
+    let entries: serde_json::Map<String, Value> = serde_json::from_str(include_str!(
+        "fixtures/gentle-command-long-novel-native-entries.json"
+    ))
+    .unwrap();
+    assert_eq!(entries.len(), 15);
+    for (ident, original) in entries {
+        assert_eq!(
+            serde_json::to_value(dictionary.entry(&ident).unwrap().unwrap()).unwrap(),
+            original,
+            "{ident}"
+        );
     }
 }

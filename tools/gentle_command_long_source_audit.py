@@ -38,6 +38,13 @@ def inputs():
                 source_raw=(fixtures / 'gentle-command-long-source.json').read_bytes(),
                 suite_raw=(fixtures / 'gentle-command-long-validity.json').read_bytes(),
                 suite=read('gentle-command-long-validity.json'),
+                interactions_raw=(fixtures / 'gentle-command-class-interaction-validity.json').read_bytes(),
+                interactions=read('gentle-command-class-interaction-validity.json'),
+                novel_packet_raw=(ROOT / 'docs/gentle-command-long-runtime-proof-gentle-command-long-novel-targets.json.gz').read_bytes(),
+                novel_suite_raw=(fixtures / 'gentle-command-long-novel-validity.json').read_bytes(),
+                novel_entries=read('gentle-command-long-novel-native-entries.json'),
+                novel_extra_native=read('gentle-command-long-novel-boundary-native.json'),
+                novel_extra_entries=read('gentle-command-long-novel-boundary-native-entries.json'),
                 native=read('gentle-command-long-native.json'),
                 entries=read('gentle-command-long-native-entries.json'),
                 boundary_native=read('gentle-command-long-boundary-native.json'),
@@ -65,6 +72,8 @@ def inspect(v):
     assert not source['observed_runtime'] and not source['linguistic_judgments_promoted'], 'original targets precede candidate observation'
     assert sha(v['suite_raw']) == SUITE_SHA, 'exact independently authored25 judgments'
     assert v['suite'] == json.loads(v['suite_raw']), 'every original private judgment field'
+    assert sha(v['interactions_raw']) == '655f08927753cc454373a47dff559e77b08b1afc80cc46c84bdf2abbd8bd5026', 'exact additional derived-class judgments'
+    assert v['interactions'] == json.loads(v['interactions_raw']), 'actual nominal-plus-suffix target fields'
     suite = v['suite']
     assert len(suite['cases']) == 25, 'bounded25-case scope'
     assert {kind: sum(j['verdict'] == kind for case in suite['cases'] for j in case['judgments'])
@@ -88,6 +97,18 @@ def inspect(v):
                        if 'krdict:' + owner['val'] in expected]
     assert v['boundary_native']['LexicalResource']['Lexicon']['LexicalEntry'] == expected_native, 'all27 original boundary Native fields/order'
     assert {e['id']: e for e in map(entry, expected_native)} == expected, 'all boundary import projections'
+    assert sha(v['novel_packet_raw']) == '3267cd77c36f3adea700eeb76426c177b83cb00379748079e266f5c2a611620f', 'exact original novel occurrence packet'
+    novel = json.loads(gzip.decompress(v['novel_packet_raw']))
+    manifest_raw = (ROOT / 'docs/gentle-command-long-runtime-proof-archive.json').read_bytes()
+    assert sha(manifest_raw) == 'a38f4bd748e734ca314d908bc24676e551e6cb815a923fc3075c879726a4da31', 'exact novel runtime archive manifest'
+    item = json.loads(manifest_raw)['files']['gentle-command-long-novel-validity.json']
+    assert sha(v['novel_suite_raw']) == item['source_sha256'], 'exact eight bounded novel proposals'
+    assert not novel['proposals_precede_runtime'] and len(novel['items']) == 8, 'honest post-observation novel scope'
+    assert v['novel_entries'] == novel['complete_imported_entries'] and len(v['novel_entries']) == 15, 'all fifteen complete novel Native owners'
+    extra = {ident: owner for ident, owner in v['novel_entries'].items() if ident not in v['entries'] and ident not in expected}
+    assert v['novel_extra_entries'] == extra and len(extra) == 5, 'five exact additional lexical owners'
+    extra_native = [owner for ident, owner in novel['original_native_entries'].items() if ident in extra]
+    assert v['novel_extra_native']['LexicalResource']['Lexicon']['LexicalEntry'] == extra_native, 'all five additional original Native records'
     endings = [owner for owner in native if 'krdict:' + owner['val'] in source['ending_owner_ids']]
     assert v['ending_native']['LexicalResource']['Lexicon']['LexicalEntry'] == endings and len(endings) == 2, 'catalog fixture has both exact ending owners'
     assert v['label']['kind'] == 'ending' and v['label']['label'] == 'Gentle command / permission' and v['label']['sources'] == [
@@ -102,6 +123,8 @@ def inspect(v):
     assert v['prior_paths'] == observations and len(observations) == 8, 'all8 full original baseline records retained'
     return dict(state='independent-long-gentle-source-and-baseline-passed', cases=25, required=16,
                 forbidden=9, source_groups=8, native_owners=43, prior_streams=24, prior_frames=1512,
+                extra_interaction_cases=3, extra_required=1, extra_forbidden=2,
+                extra_novel_cases=8, complete_novel_native_owners=15,
                 contextual_and_independent_review='pending', full_coverage_complete=False)
 
 

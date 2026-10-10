@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "review_status": "Additional source-backed structural boundary review after initial runtime observation and correction of a proposed model shape. Every original private/shared judgment and failed proposal is preserved; independent Korean-language/context review pending.",
+  "sources": {
+    "dapda-gentle-boundary-92145": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=92145",
+    "dapda-gentle-boundary-79340": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79340",
+    "dapda-gentle-boundary-79266": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79266"
+  },
+  "cases": [
+    {
+      "id": "dapda-gentle-boundary-ordinary-adjective",
+      "surface": "학생다워요",
+      "judgments": [
+        {
+          "id": "nominal-derived-adjective",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "required_rules": [
+            "suffix.adjectival.dap"
+          ],
+          "verdict": "required",
+          "source": "dapda-gentle-boundary-92145",
+          "reason": "The library represents this known adjective as a nominal lemma and inflected 답다 suffix. Ordinary adjective inflection remains available; the correctly vowel-inflected derived adjective cannot borrow either bare verb-only gentle command. Unknown lexical readings remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "dapda-gentle-boundary-short-gentle",
+      "surface": "학생다우렴",
+      "judgments": [
+        {
+          "id": "nominal-derived-adjective",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으렴"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.gentle_command"
+          ],
+          "verdict": "forbidden",
+          "source": "dapda-gentle-boundary-79340",
+          "reason": "The library represents this known adjective as a nominal lemma and inflected 답다 suffix. Ordinary adjective inflection remains available; the correctly vowel-inflected derived adjective cannot borrow either bare verb-only gentle command. Unknown lexical readings remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "dapda-gentle-boundary-long-gentle",
+      "surface": "학생다우려무나",
+      "judgments": [
+        {
+          "id": "nominal-derived-adjective",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으려무나"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.gentle_command_long"
+          ],
+          "verdict": "forbidden",
+          "source": "dapda-gentle-boundary-79266",
+          "reason": "The library represents this known adjective as a nominal lemma and inflected 답다 suffix. Ordinary adjective inflection remains available; the correctly vowel-inflected derived adjective cannot borrow either bare verb-only gentle command. Unknown lexical readings remain unjudged."
+        }
+      ]
+    }
+  ]
+}

@@ -4364,8 +4364,57 @@ review remains open under the completion review below.
   judgments stay private. The original 기다리고 있으려무나 dialogue remains
   intact and does not establish a cross-token auxiliary/sense decision.
 
-  Remaining: complete corpus/history/broad impact and individual added-path
-  tracking, full current Rust, installed CLI/dictionary/browser/Nix/main,
+  The [actual complete runtime archive](gentle-command-long-runtime-proof-archive.json)
+  preserves the whole Rust run at `6413c1b`: **1,189 passed, zero failed, one
+  ignored in 254 batches**, with 6,597 captured source files, HEAD and index
+  unchanged. A separate actual CLI/server/adapter build binds all 44 compiled
+  production inputs, including the proper-name JSON, and explicitly records
+  the five changed source/catalog files against the unchanged earlier capture.
+  Its observation that the full Rust suite was still running remains intact;
+  completed Rust evidence is a separate original receipt.
+  The actual CLI passes **36 Unicode/filter/cache streams, 2,100 complete frames
+  and 492 individually checked observations**. Every original source candidate,
+  Native assessment, token byte and candidate order remains. Both actual CLI
+  versions return the same complete fields for all 43 source/boundary owners.
+  All **53,502 original corpus/history words** retain identical output, and all
+  **66,570 original KAIST/GSD rows** and summaries remain unchanged.
+
+  The full **1,128,312-frame, eight-stream** comparison preserves every original
+  byte, candidate, Native assessment and relative order. The three candidate
+  streams are unchanged. Five novel policies each gain analyses at the same
+  eight individual original occurrences: 읽으려무나, 참으려무나, three 하려무나
+  occurrences, 오려무나, 앉으려무나 and 보려무나. The raw policy adds nineteen
+  hypotheses; each dictionary/spacing policy adds eight. All prior records,
+  complete original paragraphs and byte-specific tracking IDs are retained.
+  A separate eight-case structural novel fixture records specific lexical
+  proposals after runtime observation; it is not described as pre-observation
+  gold. Fifteen complete novel Native owners and every lexical homonym are
+  recovered from the eleven original exports. The [actual novel Native CLI proof](gentle-command-long-novel-native-proof-archive.json)
+  confirms every field byte-for-byte through both actual versions; together
+  with the original source/boundary set, 48 distinct owners are retained.
+  Other eleven raw hypotheses,
+  dictionary sense selection and social/register interpretation remain unjudged.
+  Original baseline and private twenty-five judgments are not refreshed.
+
+  The additional [derived-class interaction fixture](../tests/fixtures/gentle-command-class-interaction-validity.json)
+  requires the allowed 학생 + 답다 adjective derivation in 학생다워요 and forbids
+  the exact correctly vowel-inflected 학생다우렴 and 학생다우려무나 derivations.
+  It uses the actual single nominal 학생 lemma plus 답다 suffix representation,
+  with a mutation control against an actually emitted positive path. Earlier
+  unalternated stem exclusions do not substitute for this vowel-stem boundary.
+  The original erroneous two-lemma proposal and first compile failure are
+  preserved; no original judgment is rewritten to conceal them.
+  [Current individual-case validation](gentle-command-long-runtime-validation-proof-archive.json)
+  passes **18 Rust tests and 45 controls**, formatting and Clippy with warnings
+  denied, with 6,638 source files, HEAD and index unchanged. It includes every
+  original longer/shorter gentle regression, ordinary suffix behavior, eight
+  byte-tracked novel targets and complete novel dictionary imports. The source
+  auditor checks twenty corruption controls, including the additional target
+  representation and exact original novel packet/Native fields. The shared
+  35,704 cases and 517 reviews remain unchanged; all new proposals stay private.
+
+  Remaining: independent complete runtime/current-production-revision audit,
+  current test-source full verification, installed CLI/dictionary/browser/Nix/main,
   quiet performance, plus contextual/register and independent Korean review.
   Earlier runtime archives retain their exact production closure; a future
   integration must explicitly bind this new production revision rather than

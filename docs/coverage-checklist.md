@@ -3432,8 +3432,21 @@ review remains open under the completion review below.
   [Nix inventory gate](reported-experience-complete-inventory-gate.json.gz) passes
   at 9841000 with all tracked inputs and HEAD/index unchanged. The
   [main integration proof](formal-reported-main-integration.json.gz) verifies
-  merge 170e773 and every installed source byte. Remaining: quiet performance, wider
-  distributions and contextual/independent review.
+  merge 170e773 and every installed source byte.
+  The [historical paired performance report](reported-experience-performance.json.gz)
+  passes all 80 interleaved fresh-process full-novel measurements and six complete
+  cache-parity streams. Both exact original releases (1,003 to 1,015 source
+  files) were restored without version substitution; initial preflight/offline
+  restoration failures are retained. The single-CPU window kept our compiler,
+  browser and large-audit jobs idle and retained process/load/clock context.
+  Independently recomputed after medians range from 0.91 to 4.07 seconds;
+  dictionary annotation with the 8 MiB cache takes 1.87 seconds. Observed median
+  deltas range from +0.25% to +2.02%; this bounded sample does not establish
+  statistical equivalence or timing for later ending families. All six cache
+  streams exactly match the original 179,112-record outputs; frozen inputs,
+  the independent performance audit and ten corruption controls pass. The new
+  audit and controls are wired into Nix. Remaining: wider distributions and
+  contextual/independent review.
 
 - [ ] **COV-017cs — Concessive -기로서 / -기로서니.**
   **Partial: source-backed main implementation; Nix and installed validation pass.** Two original ending
@@ -3541,7 +3554,7 @@ review remains open under the completion review below.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
   **Partial: source-backed private prototype with complete corpus and novel
-  captures; browser and integration pending.** The four original owners (86548, 86549, 86604,
+  captures and browser validation; full Rust/Nix/main integration pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
   all 17 complete example groups, including multi-line dialogue. Statements
   express the speaker's intention; questions ask the listener's intention.
@@ -3582,7 +3595,7 @@ review remains open under the completion review below.
   lexical targets recover 되다, 가다, 버리다 and 뜯어먹다. Every other observed
   alternative remains unjudged, with complete original contexts and 11 complete
   Native owners. Novel Rust regressions and a 222-decision browser capture
-  against the 69-entry Source/novel Native union are prepared but not executed;
+  against the 69-entry Source/novel Native union pass as recorded below;
   the frontend build passes. Original expression homonyms 89455 (-렵니까) and
   89456 (-으렵니까) are distinct from the ending owners and remain separately
   unreviewed outside the 715-entry inventory.
@@ -3595,9 +3608,17 @@ review remains open under the completion review below.
   Six independent projection controls and all 84 historical controls pass.
   An earlier familiar-particle control now finds its original forbidden case
   by stable ID; its initial failure after the ledger grew is retained.
-  Four novel Rust tests are prepared, including both recorded spacing
+  Four novel Rust tests pass, including both recorded spacing
   hypotheses with complete Native assessments and NFC/NFD byte boundaries.
-  Remaining: shared-ledger and novel Rust checks, browser checks, whole Rust, actual Nix/installed/main integration,
+  [Actual Rust and browser validation](formal-volitional-rust-browser-validation.json.gz)
+  passes all 13 focused Source/novel/shared-ledger tests and Clippy with warnings
+  denied. The initial repeat found stale parent ledger-count assertions; both
+  attempts are retained and the corrected counts follow the independently
+  verified append without changing a judgment. The actual SolidJS browser passes
+  all 222 policy decisions and diagrams, six exact CLI exports and 69 complete
+  Source/novel Native endpoints. Its independent audit and 19 corruption controls
+  pass; no page errors, owned server stopped and all captured inputs unchanged.
+  Remaining: final private inventory scopes/queue, whole Rust, actual Nix/installed/main integration,
   quiet performance and wider contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

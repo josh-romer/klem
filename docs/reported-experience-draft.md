@@ -1,6 +1,8 @@
 # Reported experience expressions
 
-Status: finite source-backed implementation on coverage/reported-experience; not merged into main.
+Status: finite source-backed implementation merged into local main at `170e773`.
+Complete Rust, Nix, installed validation and the historical paired performance
+benchmark pass. Wider distributions and contextual/independent review remain open.
 
 Ten original entries retain POS 품사 없음 and therefore fall outside the
 715-entry ending/particle/auxiliary queue. They provide 51 complete original
@@ -13,7 +15,7 @@ adjective-command cases remain separately enforced with the actual SQLite
 POS-dependent filter: raw and headword modes preserve them; Compatible rejects
 them with owned entry conflicts. The initial authored 99-case suite and failed
 raw-scope run are retained. The 97 raw cases are appended after the unchanged 35,250-case prefix; the shared
-ledger now contains 35,347 cases (31,157 required and 4,206 forbidden). The two
+ledger at this family checkpoint contains 35,347 cases (31,157 required and 4,206 forbidden). The two
 Native-dependent cases remain outside the raw ledger. Historical fixture-byte
 binding and all 53 corruption controls pass.
 The original -는답디까 group containing 했답디까 remains classified as exported;
@@ -41,10 +43,9 @@ complete original sentence contexts and two complete Native owner identities.
 All 16 broad corruption controls, five complete-cohort controls and ten original
 gold/independently derived candidate-statistics controls pass.
 
-The complete Rust suite is running with all source/tests/tools/manifests frozen.
-Full Rust/Nix and
-installed-package/source/runtime/browser/adapter validation, quiet performance,
-wider distributions and contextual/independent Korean review remain pending.
+The complete Rust/Nix and installed-package/source/runtime/browser/adapter
+validation results are retained below. Wider distributions and
+contextual/independent Korean review remain pending.
 
 The complete private Rust suite passed 1,115 tests (one ignored), with all
 1,514 selected source/tool/test/example/manifest files unchanged. The committed
@@ -53,8 +54,8 @@ release tests. All package inputs, HEAD, index and worktree status stayed fixed.
 The 1,015 Rust/adapter and 18 frontend input profiles matched the prototype.
 The later reported-question evidence commit is integrated locally; its generated
 inventory queue was rebuilt to preserve all 499 scoped and 216 unreviewed entries.
-Installed source/runtime/browser/adapter, complete inventory execution, main
-integration, quiet performance and wider/contextual review remain pending.
+Installed source/runtime/browser/adapter, complete inventory execution and main
+integration subsequently passed as described below; wider review remains open.
 
 Installed validation at committed 45ff043 now passes all three exact source
 profiles (1,015 Rust/adapter, 18 frontend) and the launcher. The actual installed
@@ -67,8 +68,7 @@ All producer-selected inputs stayed unchanged. The portable combined audit
 validates these actual captures; all 14 corruption controls pass.
 An initial regression caught stale summary counts copied from the formal audit;
 the corrected summary derives counts from the current captures. Both failed
-and corrected attempts are retained. Complete Nix inventory execution, quiet
-performance, wider/contextual and independent review remain.
+and corrected attempts are retained. Wider/contextual and independent review remain.
 
 
 The complete four-check Nix gate at 9841000 passed on 2026-10-10 UTC with
@@ -76,7 +76,28 @@ all 4,674 tracked inputs, 4,632 selected inventory files and HEAD/index unchange
 The CLI/server, frontend assets, annotated adapter and complete inventory audit
 are actual checks. The [receipt](reported-experience-complete-inventory-gate.json.gz)
 and [log](reported-experience-complete-inventory-gate.log.gz) are retained.
-Quiet paired performance, main integration and wider/contextual/independent
-review remain separate; no full linguistic-coverage claim is added.
+Main integration and the historical paired performance check subsequently
+passed; wider/contextual/independent review remains separate.
 
-Local main integration is complete at `170e773`. The [actual merge proof](formal-reported-main-integration.json.gz) records both parents, complete tree equality to the validated branch, every installed source byte, and the exact previous-main ledger prefix. Quiet performance and wider/contextual/independent review remain open.
+Local main integration is complete at `170e773`. The [actual merge proof](formal-reported-main-integration.json.gz) records both parents, complete tree equality to the validated branch, every installed source byte, and the exact previous-main ledger prefix. Wider/contextual/independent review remains open.
+
+The [paired performance report](reported-experience-performance.json.gz) contains
+80 interleaved fresh-process measurements across all eight full-novel workloads.
+The exact original formal (`173d1c9`, 1,003 source files) and reported-experience
+(`45ff043`, 1,015 files) Nix releases were restored with their original source,
+derivation and output identities; the failed initial preflight and offline
+restoration attempts are retained. Both outputs now have local GC roots.
+Our compiler, browser and large-audit jobs were idle for the measurement window.
+Both versions used the same single allowed CPU, novel and dictionary, with
+process/load/clock context recorded and every selected input unchanged.
+
+After medians range from 0.91 seconds for cached dictionary-free output to
+4.07 seconds with dictionary filtering and spacing suggestions. Dictionary
+annotation takes 1.87 seconds with the 8 MiB cache. The observed median deltas
+range from +0.25% to +2.02% across workloads; five pairs per workload do not
+establish statistical equivalence, constant clocks, host isolation or causality.
+All six zero-cache/8 MiB raw/headword/Compatible parity streams match the full
+179,112-record original novel outputs exactly. The independent audit rederives
+commands, ordering, summaries and complete output bindings; all ten controls pass
+and both are wired into the Nix inventory check. These timings cover this
+historical release pair; later ending families still need their own measurements.

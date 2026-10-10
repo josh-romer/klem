@@ -548,6 +548,8 @@
                 ./tools/test_reported_experience_corpora_audit.py
                 ./tools/reported_experience_installed_audit.py
                 ./tools/test_reported_experience_installed_audit.py
+                ./tools/reported_experience_performance.py
+                ./tools/test_reported_experience_performance.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1097,6 +1099,8 @@
             python -m unittest discover -s tools -p 'test_reported_experience_corpora_audit.py'
             python tools/reported_experience_installed_audit.py
             python -m unittest discover -s tools -p 'test_reported_experience_installed_audit.py'
+            python tools/reported_experience_performance.py
+            python -m unittest discover -s tools -p 'test_reported_experience_performance.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

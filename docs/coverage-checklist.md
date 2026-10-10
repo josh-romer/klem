@@ -4226,9 +4226,41 @@ review remains open under the completion review below.
   the original scope and every separately pinned later append in full; it
   rejects altered, missing, reordered or unreviewed tails. All preparation
   failures and original outputs remain archived. These eighteen raw hypotheses
-  remain contextually unjudged with independent review pending. The corrected
-  complete Rust run, annotated-row/runtime distribution, Nix/packages/browser,
-  shared-case promotion, main integration and quiet performance remain open.
+  remain contextually unjudged with independent review pending.
+
+  The [complete runtime archive](gentle-command-runtime-proof-archive.json)
+  records the corrected full Rust run at `e79f160`: **1,182 passed, zero failed,
+  one ignored in 253 batches**, with all 6,474 source files, HEAD and index
+  unchanged. Actual binaries match the complete 44-file production closure,
+  including the compiled proper-name JSON. The earlier production binding
+  honestly retains its observation that the full suite was still running;
+  the completed result is a separate preserved receipt.
+  Actual CLI captures cover all **36 NFC/NFD, raw/headword/compatible and
+  zero/4,096-byte cache policies**, with 2,160 complete frames and 468 individually
+  checked source/required/forbidden observations. All original baseline paths,
+  byte spans, Native assessments and candidate order survive. Both actual CLI
+  versions return the same complete fields for all **47 Native owners**.
+  An explicitly synthetic adapter probe recovers all eight independently
+  proposed source lemmas, versus zero with the prior adapter; it is separate
+  from the annotated datasets. Both actual adapters also process all **66,570
+  original KAIST/GSD rows**, with no changed rows or summary deltas.
+
+  The complete eight-stream comparison retains all **1,128,312 original broad
+  output frames**. Candidate streams are unchanged; each of the five novel
+  policies gains command hypotheses for the same original `주렴` occurrence
+  at bytes 746,499–746,505. The archive retains the complete original paragraph,
+  every previous candidate and its Native assessment. In its rain simile,
+  a noun meaning a beaded curtain is a bounded contextual inference supported
+  by the preserved primary lexical reference; the actual KRDict snapshot has
+  no `주렴` headword. The standalone `주다 + 으렴` command remains a valid raw
+  possibility. This occurrence is not promoted as a correct contextual command,
+  other raw hypotheses remain unjudged, and independent review is pending.
+  The [runtime auditor](../tools/gentle_command_runtime_audit.py) checks the
+  original archive bytes, current production closure, actual commands, complete
+  policies, independent annotations and bounded review claims; its corruption
+  controls are wired into the Nix inventory check. Current-source installed
+  Nix/packages/browser proof, shared-case promotion, main integration, quiet
+  performance and wider contextual/independent review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

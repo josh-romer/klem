@@ -3694,6 +3694,32 @@ review remains open under the completion review below.
   files, HEAD and index frozen. Remaining: complete Nix inventory, main integration,
   quiet performance and wider contextual/independent review.
 
+- [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
+  Implement and review both original ending owners 86083/86084, keeping their
+  conjectural acknowledgement and stated-intention senses separate. Original
+  attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
+  before the short form, and other consonantal predicates or -었-/-겠- before
+  the full form. Preserve adjective, nominal/copula, auxiliary/change-state,
+  past and modal paths, alongside boundary violations and other candidates.
+  [Source preflight](conjectural-additive-source-preflight.json.gz) retains
+  every original field, note and translation, four senses and all 16 example
+  groups. Sixteen target proposals were authored before probing the program;
+  stable IDs are `conjectural-additive-{86083|86084}-sense-N-group-N`.
+  [Complete baseline captures](conjectural-additive-before-streams.json.gz)
+  retain 4,080 frames and 384 target checks across 24 NFC/NFD, raw/headword/
+  Compatible and zero/4,096-byte cache streams. None of the proposed lemma
+  groups is recovered. Every original byte and cache output is preserved.
+  The [independent audit](../tools/conjectural_additive_source_audit.py)
+  and thirteen corruption controls pass and are wired into the Nix inventory
+  check. These proposals and observations remain unjudged; the candidate
+  ledger, grammar catalog and inventory dispositions are unchanged.
+  All 34 original Native owners and every field are retained from the eleven
+  original exports; their exact Python projections match the pinned dictionary.
+  Required work includes independently authored exact typed paths, Rust
+  Native import checks, attachment and neighboring-rule regressions,
+  CLI/library/browser/export checks, complete frozen corpus comparisons,
+  installed/main validation and contextual/independent Korean review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

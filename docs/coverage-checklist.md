@@ -3498,8 +3498,8 @@ review remains open under the completion review below.
   All four actual Nix packages pass; the Nix Rust suite records 1,135 passed, zero failed and one ignored across 244 batches. Installed source/launcher binding preserves all 1,053 Rust/adapter and 18 frontend files. Complete installed replay passes 24 finite Unicode/filter/cache streams (1,152 frames), 53,502 saved corpus/history words, 66,570 original annotated rows and 1,128,312 broad frames. The actual Nix launcher passes 114 policy decisions and diagrams, six exact exports and 50 complete Native entry endpoints; its owned server stops. The independent installed audit and all 24 corruption controls pass. Zero new corpus/history paths or gold recoveries are claimed for this family; earlier outcomes remain exact. The 398 prototype spacing probe-only changes retain their individual records and exact installed hashes. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
-  **Partial: complete finite source-backed private prototype; Nix/installed/main integration pending.**
-  Two original ending owners (86497/86619) retain all three senses, separate short/full attachment notes and every25complete example groups, including multi-line contexts. Forty-six independently authored judgments (37required/9forbidden) cover all original targets, allomorphs, source-licensed honorific/past prefinals, explicit copulas and irregular recovery. Four focused Rust regressions preserve every prior path/order and all628observed Source additions against74complete original Native identities. Seven viewer-label tests and focused Clippy with warnings denied pass. Twelve whole-source Unicode/filter/cache streams preserve4344frames and complete original contexts. Six independent source/stream/cohort/gold/browser/broad audits pass 23/18/5/10/19/15corruption controls. All53502cohort words,66570original annotated rows and1128312broad frames remain exact, including all spacing diagnostics. The first broad replay failed after a Rust integration test rebuilt the CLI; its failure and producer are retained. Exact original feature-web CLI hash was restored, and the complete repeat passed with unchanged inputs. Browser proof passes222policy decisions/222diagrams/six exact CLI exports/74fullNative responses; owned server stopped. The shared ledger preserves its exact35484case prefix and appends only the46independent cases:35530total,31300required and4246forbidden. Four shared-ledger tests and all78historical corruption controls pass. The628observed alternative paths remain contextually unjudged and are not promoted to gold. Whole Rust, actual Nix/installed/main integration, quiet performance and wider/contextual/independent linguistic review remain open.
+  **Partial: complete finite source-backed private prototype; full Nix inventory/main integration pending.**
+  Two original ending owners (86497/86619) retain all three senses, separate short/full attachment notes and every25complete example groups, including multi-line contexts. Forty-six independently authored judgments (37required/9forbidden) cover all original targets, allomorphs, source-licensed honorific/past prefinals, explicit copulas and irregular recovery. Four focused Rust regressions preserve every prior path/order and all628observed Source additions against74complete original Native identities. Seven viewer-label tests and focused Clippy with warnings denied pass. Twelve whole-source Unicode/filter/cache streams preserve4344frames and complete original contexts. Six independent source/stream/cohort/gold/browser/broad audits pass 23/18/5/10/19/15corruption controls. All53502cohort words,66570original annotated rows and1128312broad frames remain exact, including all spacing diagnostics. The first broad replay failed after a Rust integration test rebuilt the CLI; its failure and producer are retained. Exact original feature-web CLI hash was restored, and the complete repeat passed with unchanged inputs. Browser proof passes222policy decisions/222diagrams/six exact CLI exports/74fullNative responses; owned server stopped. The shared ledger preserves its exact35484case prefix and appends only the46independent cases:35530total,31300required and4246forbidden. Four shared-ledger tests and all78historical corruption controls pass. The628observed alternative paths remain contextually unjudged and are not promoted to gold. Full Nix inventory/main integration, quiet performance and wider/contextual/independent linguistic review remain open.
   [Finite scope](fear-lsera-draft.md).
 
   The [complete frozen Rust suite](fear-lsera-full-rust.json.gz) passes 1,140
@@ -3507,9 +3507,19 @@ review remains open under the completion review below.
   inputs remain unchanged during the complete run. Actual Nix/installed/main
   integration, family timing and wider linguistic review remain pending.
 
+  [Actual installed validation](fear-lsera-installed-validation.json.gz) passes
+  all four Nix package builds and exact1062/18/1062source binding. Complete
+  replays retain53502cohortwords,66570goldrows,1128312broadframes and5436
+  finiteframes across24streams. The actual launcher passes222decisions and
+  diagrams, sixexports and74Native endpoints; owned server stopped. Its
+  independent combined audit passes24controls and is wired into Nix.
+  The initial offline dependency failure and exact successful cache-enabled
+  repeat are both retained. Full inventory/main, family timing and wider
+  contextual/independent review remain pending.
+
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
   **Partial: source-backed private prototype with complete corpus and novel
-  captures, browser validation and complete Rust suite; Nix/main integration pending.** The four original owners (86548, 86549, 86604,
+  captures, browser validation and complete Rust suite; full Nix inventory/main integration pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
   all 17 complete example groups, including multi-line dialogue. Statements
   express the speaker's intention; questions ask the listener's intention.
@@ -3584,6 +3594,18 @@ review remains open under the completion review below.
   private inventory; main integration remains pending. Remaining:
   actual Nix/installed/main integration,
   quiet performance and wider contextual/independent review.
+
+  [Actual installed validation](formal-volitional-installed-validation.json.gz)
+  passes all four Nix packages and exact 1,079/18/1,079 source binding.
+  Complete replays retain 53,502 cohort words, 66,570 original gold rows,
+  1,128,312 broad frames and 4,764 finite frames across 24 streams. The
+  actual launcher passes 222 decisions and diagrams, six CLI exports
+  and 69 full Native endpoints; its server stops. The combined audit
+  passes 24 corruption controls and is wired into Nix, alongside the
+  completed apprehensive installed audit. Both original offline
+  dependency failure and successful identical-source retry are retained.
+  Full inventory/main, family timing and wider/contextual/independent
+  review remain pending.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

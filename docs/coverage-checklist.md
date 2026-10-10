@@ -3661,10 +3661,20 @@ review remains open under the completion review below.
   performance and ten inventory controls pass. Its exact tested runtime and
   frontend sources are committed at 44553b8; all four actual Nix packages
   now build successfully and bind their actual 1,079/18/1,079 selected sources.
-  Complete installed finite/corpus/gold/broad/browser captures pass with all
-  prototype and installed inputs unchanged; the independent combined audit
-  and its corruption controls are running. Remaining:
-  actual Nix/installed/main integration,
+  [Complete installed validation](formal-volitional-installed-validation.json.gz)
+  preserves 53,502 cohort words, 66,570 annotated rows, 1,128,312 broad frames
+  and 4,764 finite frames across 24 streams. The actual launcher passes 222
+  policy decisions and diagrams, six exact exports and 69 original Native
+  endpoints; its server stops and all captured inputs stay unchanged. The
+  independent combined audit passes 24 corruption controls.
+  [Installed finalization](formal-volitional-installed-finalization.json.gz)
+  carries forward the completed apprehensive installed audit and its two
+  reviews while preserving the four formal reviews and every installed source
+  byte. Ten final inventory controls pass with its 511/204 queue.
+  [Actual source verification](formal-volitional-installed-post-reconciliation-source.json.gz)
+  confirms the committed ffa542f package profiles exactly equal the tested
+  installed profiles; its complete four-check Nix gate is running with tracked
+  files, HEAD and index frozen. Remaining: complete Nix inventory, main integration,
   quiet performance and wider contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

@@ -268,3 +268,78 @@ fn unknown_raw_head_is_preserved_and_original_adjective_pos_is_incompatible() {
         Compatibility::Incompatible
     );
 }
+
+#[test]
+fn independently_authored_irregular_auxiliary_and_class_interactions() {
+    let suite: validity::Suite = serde_json::from_str(include_str!(
+        "fixtures/willingness-question-interaction-validity.json"
+    ))
+    .unwrap();
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!(
+        (report.cases, report.required_total, report.forbidden_total),
+        (8, 4, 4)
+    );
+    // Unknown readings remain visible alongside the four named exclusions.
+    assert!(!report.review_queue.is_empty());
+}
+
+#[test]
+fn interaction_targets_keep_native_compatibility_roles_and_unicode() {
+    let suite: validity::Suite = serde_json::from_str(include_str!(
+        "fixtures/willingness-question-interaction-validity.json"
+    ))
+    .unwrap();
+    let (_cleanup, dictionary) = dictionary("interactions");
+    let mut session = DictionarySession::new(&dictionary, 4096);
+    let engine = Lemmatizer::new();
+    for case in suite.cases {
+        let word = engine.analyze_word(&case.surface).unwrap();
+        assert_eq!(
+            word,
+            engine
+                .analyze_word(&case.surface.nfd().collect::<String>())
+                .unwrap(),
+            "{}",
+            case.id
+        );
+        let target = &case.judgments[0];
+        if target.verdict != validity::Verdict::Required {
+            continue;
+        }
+        let path = word
+            .analyses
+            .iter()
+            .find(|path| {
+                path.lemmas
+                    .iter()
+                    .map(|head| &head.text)
+                    .eq(target.lemmas.iter())
+                    && path.lemmas.iter().map(|head| &head.kind).eq(target
+                        .lemma_kinds
+                        .as_ref()
+                        .unwrap()
+                        .iter())
+                    && path.morphemes.iter().map(|part| &part.form).eq(target
+                        .morphemes
+                        .as_ref()
+                        .unwrap()
+                        .iter())
+                    && path.morphemes.iter().map(|part| &part.kind).eq(target
+                        .morpheme_kinds
+                        .as_ref()
+                        .unwrap()
+                        .iter())
+                    && path.rules.iter().any(|rule| rule == RULE)
+            })
+            .unwrap();
+        assert_eq!(
+            session.annotate(&word).unwrap().assess(path).status,
+            Compatibility::Compatible,
+            "{}",
+            case.id
+        );
+        assert!(path.breakdown().is_some(), "{}", case.id);
+    }
+}

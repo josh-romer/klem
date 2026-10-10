@@ -4093,6 +4093,24 @@ review remains open under the completion review below.
   performance, contextual sense judgments, and independent Korean review
   remain open.
 
+
+  [Independently authored interaction preflight](willingness-question-interaction-preflight.json)
+  preserves eight additional typed cases: four required and four forbidden
+  paths for ㄷ/ㅅ recovery, known copula/답다 exclusions, and verbal 주다/않다
+  auxiliary composition. Twelve Unicode/filter/cache streams retain 276
+  frames and all 96 named structural observations satisfy their unchanged
+  targets. Four prefinal/follower proposals remain unjudged; past and modal
+  paths retain Unknown dictionary status. The original honorific proposal used
+  written 으시 in a canonical-form field; its zero-match observation and separate
+  pre-existing 시 serialization correction are both preserved. No baseline or
+  linguistic judgment was rewritten. The complete willingness Rust target now
+  passes 11 tests (nine unchanged original tests plus two new regression
+  functions), along with whole formatting and focused Clippy with warnings
+  denied. Original Native fixtures, runtime code and shared ledger are unchanged.
+  The failed runner count assertion and exact-source-bound completion are both
+  preserved. Shared-ledger/installed/browser/main promotion and wider review
+  remain pending.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

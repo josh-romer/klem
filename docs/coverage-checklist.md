@@ -4093,6 +4093,17 @@ review remains open under the completion review below.
   performance, contextual sense judgments, and independent Korean review
   remain open.
 
+  The [original complete Nix gate failure](willingness-historical-gate-proof-archive.json)
+  preserves the actual exit code 1 at `7dfba1d`, its full log, all selected and
+  tracked source hashes, and both original audit scripts. All source files,
+  HEAD and index stayed unchanged. The failure comes from the historical
+  formal-volitional audit assuming that its 35,587-case ledger is still the
+  final ledger after separately reviewed appends. Its repair checks the exact
+  original scope plus the complete current ledger against independently pinned
+  append suites, rejecting rewritten or unreviewed tails. All 35,673 original
+  active cases and 513 review entries remain unchanged. A new complete Nix
+  gate is required before claiming this failed gate has been resolved.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

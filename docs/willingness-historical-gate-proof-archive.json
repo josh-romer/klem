@@ -1,0 +1,59 @@
+{
+  "state": "original-gate-failure-preserved-strict-repair-validated",
+  "original_head": "7dfba1dd978809287a43e75c3997d92870a75e8b",
+  "original_gate_exit_code": 1,
+  "all_original_inputs_head_index_unchanged": true,
+  "files": {
+    "willingness-reconciled-complete.json": {
+      "path": "willingness-historical-gate-proof-willingness-reconciled-complete.json.gz",
+      "source_sha256": "7cc1c43d6908350230d5f474b859a836d1a4d17bbb6583adf8d4b3740e50e6fa",
+      "archive_sha256": "4d63e36cebfe0e9def1b6c0302d28c033f6d7ae0a9ba263d8391d7699dc84e50"
+    },
+    "willingness-reconciled-complete.log": {
+      "path": "willingness-historical-gate-proof-willingness-reconciled-complete.log.gz",
+      "source_sha256": "a5ebdee2156ae75797508fcb84e492e020ae935039948f8bac41afea0231518e",
+      "archive_sha256": "faef99ab15042d85495331b91f9175dbe784f736ab241d4d21ae6d185a661d45"
+    },
+    "run_complete_willingness_inventory_gate.py": {
+      "path": "willingness-historical-gate-proof-run_complete_willingness_inventory_gate.py.gz",
+      "source_sha256": "194a2823a1068a53ca1d7223378a905ed596865a9d9a3b3c8aaf22dc630ad882",
+      "archive_sha256": "a71711c14b861ddf313a6e79d8b58e1b3b5f1aeb564a7903d5b4049fd274d2ad"
+    },
+    "formal_volitional_ledger_audit.py": {
+      "path": "willingness-historical-gate-proof-formal_volitional_ledger_audit.py.gz",
+      "source_sha256": "6c6b4e0137337b36082cad936657933a38a3f8e3e48a34f5ade5758189a798e3",
+      "archive_sha256": "85f627000636dde23a43dc1c90d0fc7d06ca23adf7854604bf7b433972cc52fa"
+    },
+    "test_formal_volitional_ledger_audit.py": {
+      "path": "willingness-historical-gate-proof-test_formal_volitional_ledger_audit.py.gz",
+      "source_sha256": "744fee179aa8148f3ea4640425d81a53a55d7d08e417be7846baeebb50314273",
+      "archive_sha256": "60b8d30a8f0c5f35a7e2ef7bcf4880088d4b3772ce8f554b1c280b269ecabea6"
+    },
+    "validate_willingness_historical_gate_repair.py": {
+      "path": "willingness-historical-gate-proof-validate_willingness_historical_gate_repair.py.gz",
+      "source_sha256": "11630ecf6924379569bf918ce76eeed7efb2e0159b3eed5a95dcf90410b6b591",
+      "archive_sha256": "c99e2cad979cac5091dbb9b83025e717abac109168e5a1d7306fc92f99b2dea7"
+    },
+    "willingness-historical-gate-repair-validation.json": {
+      "path": "willingness-historical-gate-proof-willingness-historical-gate-repair-validation.json.gz",
+      "source_sha256": "7a2159a5711f213dd266f3301eb499878386d8db8d1326c2a1194ce6ed9c10e4",
+      "archive_sha256": "baf1a68f4c3efd35950fc5252f6c54c58701813aef5eeba2f2af38b906e537dd"
+    },
+    "willingness-historical-gate-repair-validation.log": {
+      "path": "willingness-historical-gate-proof-willingness-historical-gate-repair-validation.log.gz",
+      "source_sha256": "4e6ab2f1add1cb9acfa351da74eb5d37d0ceb1114e4d54d81a31bccc57917919",
+      "archive_sha256": "2e9a15c86e72921c1c6bf66d50ac0bf59190a954178a694e9971a6665cb10c93"
+    },
+    "willingness-historical-gate-queue-reconciliation.json": {
+      "path": "willingness-historical-gate-proof-willingness-historical-gate-queue-reconciliation.json.gz",
+      "source_sha256": "565aceae55269da0095f92a40b6caff67217fd549dbb73fd9e25ee6efff7d9cc",
+      "archive_sha256": "a486c8635448da88fef5a7ca7adc0c4f8e442596f31c6922494e975ec476b7a8"
+    }
+  },
+  "reason": "Historical formal-volitional audit incorrectly assumes final ledger length35587 after separately reviewed append-only additions. Repair verifies original35587prefix and strict complete current ledger; no source or judgment changed.",
+  "complete_gate_retry": "pending; current combined gate at32baefc already includes the same strict repair; this original branch not yet rebuilt",
+  "full_coverage_complete": false,
+  "repair_controls": 39,
+  "validation_source_files": 6188,
+  "repair_inputs_head_index_unchanged": true
+}

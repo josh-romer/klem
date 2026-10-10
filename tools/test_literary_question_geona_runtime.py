@@ -94,7 +94,13 @@ class Controls(unittest.TestCase):
  def ledger_through(self,count):
   c=copy.deepcopy(self.current);c['cases']=c['cases'][:count]
   used={j['source'] for case in c['cases'] for j in case['judgments']}
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json']:
+  # Completed suites retain even their unused source citations.
+  completed=35014
+  used.update(audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')['proposed_ledger']['sources'])
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json','willingness-question-validity.json','willingness-question-boundary-validity.json']:
+   suite=audit.read(audit.ROOT/'tests/fixtures'/name);completed+=len(suite['cases'])
+   if completed<=count:used.update(suite['sources'])
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json' ,'willingness-question-validity.json','willingness-question-boundary-validity.json']:
    for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
     if key not in used:c['sources'].pop(key,None)
   return c
@@ -111,7 +117,7 @@ class Controls(unittest.TestCase):
  def coordinated_append_mutation(self,filename,index,label):
   c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures'/filename);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
   c['cases'][index]['judgments'][0]['reason']='coordinated changed '+label+' judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][index])
-  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json']}
+  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json','willingness-question-validity.json','willingness-question-boundary-validity.json']}
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
    for name,raw in originals.items():(fixtures/name).write_bytes(raw)
@@ -251,4 +257,19 @@ class Controls(unittest.TestCase):
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
  def test_coordinated_formal_expression_fixture_rewrite(self):
   self.coordinated_append_mutation('formal-volitional-expression-validity.json',35594,'formal-volitional expression')
+ def test_exact_pre_conjectural_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35595),self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_conjectural_copula_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35630),self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_conjectural_novel_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35636),self.proposal)['preserved_cases'],34920)
+ def test_conjectural_append_cannot_change_verdict(self):
+  c=copy.deepcopy(self.current);c['cases'][35595]['judgments'][0]['verdict']='forbidden'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_conjectural_copula_cannot_borrow_predicate_role(self):
+  c=copy.deepcopy(self.current);c['cases'][35630]['judgments'][0]['lemma_kinds']=['predicate']
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_conjectural_second_novel_alternative_cannot_disappear(self):
+  c=copy.deepcopy(self.current);next(case for case in c['cases'][35636:] if len(case['judgments'])==2)['judgments'].pop()
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
 if __name__=='__main__':unittest.main()

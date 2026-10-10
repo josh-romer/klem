@@ -24,7 +24,7 @@ class Controls(unittest.TestCase):
 
     def test_complete_exact_histories(self):
         result = audit.inspect(self.v)
-        self.assertEqual((result['active_cases'], result['required'], result['active_manual_reviews']), (35651, 31393, 513))
+        self.assertEqual((result['active_cases'], result['required'], result['active_manual_reviews']), (35673, 31408, 513))
         self.assertFalse(result['full_coverage_complete'])
 
     def test_historical_expression_cannot_be_reauthored(self):
@@ -71,6 +71,12 @@ class Controls(unittest.TestCase):
 
     def test_independent_judgment_cannot_be_refreshed(self):
         self.reject(lambda v: v['conjectural_cases'][0]['judgments'][0].update(lemmas=['invented']), 'fifty-six exact original conjectural judgments')
+
+    def test_willingness_source_cannot_be_reauthored(self):
+        self.reject(lambda v: v['willingness_raw'].__setitem__(0, b'{}'), 'exact independently authored willingness judgments')
+
+    def test_willingness_append_cannot_change_verdict(self):
+        self.reject(lambda v: self.current(v, lambda d: d['cases'][-1]['judgments'][0].update(verdict='required')), 'every exact original willingness append retained')
 
 
 if __name__ == '__main__':

@@ -97,6 +97,21 @@ fn original_attachment_notes_select_the_short_and_full_stem_boundaries() {
 }
 
 #[test]
+fn stable_boundary_judgments_target_exact_paths_and_preserve_other_hypotheses() {
+    let suite: validity::Suite = serde_json::from_str(include_str!(
+        "fixtures/willingness-question-boundary-validity.json"
+    ))
+    .unwrap();
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!(
+        (report.cases, report.required_total, report.forbidden_total),
+        (12, 5, 7)
+    );
+    assert!(!report.review_queue.is_empty());
+}
+
+#[test]
 fn all_original_ending_and_expression_targets_keep_prior_alternatives_and_nfd() {
     let observations: Vec<Value> = serde_json::from_str(include_str!(
         "fixtures/willingness-question-prior-paths.json"

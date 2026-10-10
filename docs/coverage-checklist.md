@@ -4025,10 +4025,49 @@ review remains open under the completion review below.
   [stable source judgments](../tests/fixtures/willingness-question-validity.json),
   [complete source packet](../tests/fixtures/willingness-question-source.json),
   and [native owners](../tests/fixtures/willingness-question-native-entries.json).
-  Active-ledger integration, inventory dispositions, broader class/prefinal/
-  particle/auxiliary interactions, corpus and novel comparisons, full Rust/Nix
-  checks, installed CLI/browser verification, main promotion, performance,
-  contextual sense judgments, and independent Korean review remain open.
+  The active ledger now appends these ten source cases and twelve independently
+  authored short/full-boundary cases (fifteen required and seven forbidden
+  paths). Its 35,651 parent cases retain every serialized byte; the combined
+  history audit checks both exact older branch ledgers and the exact new append.
+  [Source controls](../tools/test_willingness_question_source_audit.py) reject
+  rewritten contexts, owners, judgments, baseline claims and expression roles.
+  Derived queue links now cite the two endings, while all 715 original source
+  rows and manual dispositions remain unchanged (513 scoped, 202 unreviewed).
+  The [complete prototype distribution evidence](willingness-question-distribution-proof-archive.json)
+  retains the actual source-bound debug CLI and adapter, 24 source streams
+  (3,336 frames), all 53,502 original corpus/history words, all 66,570 annotated
+  rows, and 1,128,312 broad candidate/novel/filter/spacing frames. Every prior
+  candidate, source byte, Native assessment and gold recovery is preserved.
+  Source streams gain the required ten canonical decompositions; all eight
+  expression groups remain separate and contextually unjudged. Four isolated
+  corpus words (구소련, 대련, 마련, 소련) gain raw hypotheses. Fourteen complete
+  original annotated occurrences independently explain the 28 additional raw
+  candidates and the mean-candidate changes; no annotated gold row changes.
+  The sole broad change is a raw 궐다 + 으련 hypothesis for the novel's 궐련,
+  with its complete original passage retained; dictionary filters remove it.
+  These observations do not authorize globally forbidding every alternative
+  of the observed noun surfaces or claim improved lexical recall/precision.
+  The [independent distribution audit](../tools/willingness_question_distribution_audit.py)
+  and all 30 corruption controls pass, including rewritten gold, fabricated
+  candidate means, erased alternatives, cropped contexts and refreshed parent
+  archives. Both source and distribution audits are selected and run in Nix.
+  Focused checks pass 51 Rust tests, formatting and all-target Clippy.
+  The [complete ledger/distribution controls](willingness-question-distribution-proof-ledger-distribution-controls.json.gz)
+  pass 188 tests with all captured source/proof files, HEAD and index unchanged.
+  The source-bound debug server and offline-built SolidJS frontend also pass
+  90 reading/diagram decisions for all fifteen required source/boundary paths,
+  all six Unicode/filter exports matching the bound CLI, and 29 complete Native
+  endpoints. [Desktop](willingness-question-prototype-browser-desktop.png) and
+  [mobile](willingness-question-prototype-browser-mobile.png) renders were
+  inspected. The [independent browser audit](../tools/willingness_question_browser_audit.py)
+  and seventeen corruption controls pass and are wired into Nix. The original
+  auditor's zero-exit assumption was corrected to accept the captured explicit
+  SIGINT shutdown; unexpected signals remain rejected and the failed evidence
+  remains archived. This browser proof retains its debug/prototype scope.
+  Inventory dispositions, broader class/prefinal/particle/auxiliary interactions,
+  full Rust/Nix checks, installed CLI/browser verification, main promotion,
+  performance, contextual sense judgments, and independent Korean review
+  remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

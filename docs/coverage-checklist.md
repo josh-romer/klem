@@ -3436,23 +3436,32 @@ review remains open under the completion review below.
   distributions and contextual/independent review.
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
-  **Missing: complete original source preparation and independent targets;
-  implementation pending.** Original entries 86497 and 86619 preserve all
-  three senses, separate short/full attachment notes and all 25 complete
-  groups, including their multi-line contexts. Fifty initial and 69 complete
-  authored Native owners retain every lexical homonym and original field.
-  [Independent source proposals](fear-lsera-independent-source-proposals.json.gz)
-  were preserved before probing the immutable installed baseline. All 150
-  NFC/NFD/raw/headword/Compatible probes miss their intended lexical and
-  canonical structural targets; actual commands and unchanged input hashes
-  are retained in the [baseline capture](fear-lsera-baseline-gap.json.gz).
-  [Forty-six authored cases](fear-lsera-fear-lsera-validity.json.gz) propose
-  37 required and nine forbidden named paths, covering original examples,
-  immediate allomorphs, prefinals, explicit copulas and irregular recovery.
-  These are proposed targets, not passing tests or candidate-authored gold.
-  Remaining: implementation, independent source/Native/distribution audits,
-  shared-ledger regressions, library/CLI/browser parity, full Rust and actual
-  Nix/installed validation, quiet performance, integration and broader review.
+  **Partial: original-source and independent finite tests pass in the private
+  prototype; main implementation pending.** Entries 86497 and 86619 preserve
+  all three senses, separate short/full attachment notes and all 25 complete
+  groups, including multi-line contexts. [Independent source proposals](fear-lsera-independent-source-proposals.json.gz)
+  precede all 150 installed-baseline probes, which miss their intended lexical
+  and canonical structural targets. [Forty-six authored cases](fear-lsera-fear-lsera-validity.json.gz)
+  retain 37 required and nine forbidden named paths, covering original
+  examples, allomorph boundaries, licensed prefinals, explicit copulas and
+  irregular recovery. Four focused Rust regressions and seven grammar-label
+  tests pass; the main executable and shared ledger remain unchanged.
+  [Private validation evidence](fear-lsera-prototype-validation.json.gz)
+  preserves the exact implementation delta and the completed captures,
+  audits, failures and producers. Twelve full-source modes retain 4,344
+  frames, every prior ordered path and Native assessment, and 628 individually
+  identified new paths with complete original lines. All 74 original Native
+  owners retain their complete fields; additional observed paths remain
+  contextually unjudged. All 53,502 corpus/history words and 66,570 original
+  annotated rows remain unchanged. The actual SolidJS browser passes 222
+  policy decisions and diagrams, six exact CLI exports and 74 full entry
+  endpoints. Five independent source/stream/cohort/gold/browser audits and
+  all 75 corruption controls pass. The initial broad capture failed its final
+  input freeze after a Rust test rebuilt the CLI; its failure is retained.
+  The original CLI hash is restored and a complete broad replay is running.
+  Remaining: completed broad audit, shared-ledger regressions, whole Rust,
+  actual Nix/installed validation, main integration, quiet performance and
+  broader contextual/independent linguistic review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

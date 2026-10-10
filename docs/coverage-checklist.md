@@ -3740,6 +3740,8 @@ review remains open under the completion review below.
   quiet performance and wider contextual/independent review.
 
 - [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
+  **Partial: independently tested initial private prototype; main runtime and
+  the newly observed omitted-copula case remain pending.**
   Implement and review both original ending owners 86083/86084, keeping their
   conjectural acknowledgement and stated-intention senses separate. Original
   attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
@@ -3768,6 +3770,29 @@ review remains open under the completion review below.
   Native import checks, attachment and neighboring-rule regressions,
   CLI/library/browser/export checks, complete frozen corpus comparisons,
   installed/main validation and contextual/independent Korean review.
+
+  [Preserved initial prototype](conjectural-additive-prototype-phase1.json.gz)
+  now records all sixteen original typed targets and nineteen independently
+  authored boundary cases (28 required, seven forbidden). Six Rust regressions,
+  focused formatting/Clippy and twenty-seven independent corruption controls
+  pass. All 34 original Native owners survive Rust import and browser entry
+  retrieval. The 24 original Unicode/filter/cache streams retain 4,080 frames,
+  384 exact typed occurrences and every old candidate. Sixty-one new canonical
+  original-context paths have stable individual IDs: sixteen match the authored
+  required structures and forty-five alternatives remain unjudged. The actual
+  rebuilt SolidJS viewer passes 168 diagrams, six exact exports and all 34
+  Native endpoints, with its server stopped. Failed harness attempts are
+  preserved without changing linguistic targets.
+  Complete comparisons retain 53,502 corpus/history words and all 66,570
+  original annotated rows unchanged. The eight broad streams cover 1,128,312
+  frames and preserve every original candidate and Native assessment; all
+  changed records keep individual IDs and complete original lines. Fifteen
+  novel occurrences gain forty-one raw paths. The literal `장래려니와`, in
+  “장래도 장래려니와…”, still misses `장래 + 이다`; this observed gap remains
+  open for a separate omitted-copula fix. Broader independent distribution,
+  spacing and novel-context review, shared-ledger/inventory promotion, whole
+  Rust/Clippy, new Nix/installed/main validation, quiet timing and contextual
+  Korean review remain required. No observed alternative is promoted to gold.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

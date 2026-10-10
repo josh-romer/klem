@@ -51,7 +51,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "82905457ceeab08d7098bf5a3db3b2a39d31c65cb9a8fc8279e0ef603a7835d6",
+    "docs/coverage-checklist.md": "ec2d7ff55fb9c1d83017a4e15f01a0feeea9db24a5f986a43384d0e383ab42d9",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -95,7 +95,7 @@
     "docs/factual-prefinal-evaluation.json": "460e7619e554153cf572e6db83d0786906cfeb1744aa11ab59506657da85f227",
     "docs/formal-b-broad.json.gz": "70cdaa20aef3984626469af0a102a0ab24007f26fcfb34e5b93ff67e98092223",
     "docs/formal-b-cohorts.json.gz": "b86e3263ea50603ff5ba45c61f5373d03f4977f97f64ca0e5d8a27deca7a1fba",
-    "docs/formal-b-draft.md": "2987851024188477c679503c84859b33332db3ad3de39b7bb874dc68c1189a2f",
+    "docs/formal-b-draft.md": "a49137d9f8037914cedced176fe4ef406a2d357e701b531538da47dc4e38d92d",
     "docs/formal-b-full-rust.json.gz": "713fbcc8c21a5228e6637094ea8cfff4ad7cb5dae7da65ccfac0eea8d0be0b14",
     "docs/formal-b-nix-packages.json.gz": "40926509b0fb45c0bf5db43c46a7947f1065eae6fed9109d2317f058cc3f708f",
     "docs/formal-b-novel-native-closure.json.gz": "1d58255ff3e5bd0cdb34bf387f5187527de23863bec2b8c162664c5a4baa99e0",
@@ -119,7 +119,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "c15677792e9b5f8fdd0baa34277402ceba1c2948d2e9b7418616d28b202d2fff",
+    "docs/inventory-reviews.json": "b661436f72eb8cda57b353840ce4671893c7f893dcbbccb8cf140df29100487a",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -236,6 +236,7 @@
     "docs/reported-deoni-packaged-checks.json": "ccd44248ef073af91a2e4a6af56ab1e74d5d424f8b5947465fc18125648bf88d",
     "docs/reported-deoni-performance.json": "93e94557541e4a12211064609efc408ea10cf2d037acef7b9b523afce714f366",
     "docs/reported-deoni-pre-supplement-nix.json": "b0d5ed173a2342528640fbb8fa0be4e38677df4af8087fa6af0478d98676fcd9",
+    "docs/reported-experience-complete-inventory-gate.json.gz": "7e56fb82286ee03642ee1b05b2737cc0288f52c5aedb8c1477f51a7932be6cfa",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
     "docs/request-aux-evaluation.json": "2b9ec24373fc6069e795b570b994ac550faf43e9b34f140717edb01c2253dc72",
     "docs/result-connectives-evaluation.json": "ae1929b6cb13e422c86e757bc6e3bcd012a0087951f3d94f12e2efd75e093fb4",
@@ -26960,8 +26961,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -27011,6 +27012,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -27331,8 +27335,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -27382,6 +27386,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -27521,8 +27528,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -27572,6 +27579,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -27841,8 +27851,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -27892,6 +27902,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -28026,8 +28039,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -28077,6 +28090,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -69173,8 +69189,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -69224,6 +69240,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -69541,8 +69560,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -69592,6 +69611,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -69735,8 +69757,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -69786,6 +69808,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -69929,8 +69954,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -69980,6 +70005,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [
@@ -70123,8 +70151,8 @@
         "checklist": [
           "COV-017cq"
         ],
-        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate.",
-        "remaining": "Committed and installed source/package binding, complete runtime/browser/cohort/broad/adapter checks, full inventory gate, main merge, quiet novel timing, wider distributions and contextual/independent review remain open. The separate ten POS-none reported-experience expressions remain outside this inventory.",
+        "scope": "All complete original source groups and finite allomorph/owner/marker boundaries implemented in private prototype; 99 stable source/boundary cases. Original Native identities and earlier paths retained. Structural scope only. Full eight-mode broad replay preserves 1,128,312 frames; 91 path and two spacing observations retain individual source contexts and 33 complete Native owners. Nine separate structural novel cases do not certify contextual readings. Complete post-append Rust1110/0/1 and four actual Nix package builds pass; all991private/integration Rust inputs match. Explicit path-flake package build precedes local commit; committed and installed binding remain separate. The complete four-check Nix inventory gate at9841000 passes with alltrackedinputs/HEAD/index unchanged; no wider/contextual certification inferred.",
+        "remaining": "Main integration, quiet paired novel performance, wider distributions and contextual/independent review remain. The separate ten POS-none reported-experience expressions remain outside this inventory; their finite implementation and installed checks are recorded separately in COV-017cr.",
         "evidence": [
           {
             "path": "tests/formal_b.rs",
@@ -70174,6 +70202,9 @@
           },
           {
             "path": "docs/formal-b-private-integration-rust-parity.json.gz"
+          },
+          {
+            "path": "docs/reported-experience-complete-inventory-gate.json.gz"
           }
         ],
         "judgments": [

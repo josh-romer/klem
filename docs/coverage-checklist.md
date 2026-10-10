@@ -3396,7 +3396,7 @@ review remains open under the completion review below.
   Unicode/filter/cache streams conserve 12,396 finite frames; the installed
   browser passes 426 diagrams, six exact exports and 92 full Native responses.
   Portable installed evidence auditing and all 11 corruption controls pass.
-  Remaining: complete inventory gate/main merge, quiet novel performance,
+  The complete four-check [Nix gate](reported-experience-complete-inventory-gate.json.gz) passes at 9841000 with all 4,674 tracked files, 4,632 selected inventory inputs and HEAD/index unchanged. Remaining: main merge, quiet novel performance,
   wider distributions, contextual and independent review.
 
 - [ ] **COV-017cr — Reported-experience statement and question expressions.**
@@ -3428,8 +3428,10 @@ review remains open under the completion review below.
   files. Installed CLI preserves all 1,128,312 broad frames, 53,502 cohort words
   and 24 finite streams/10,980 frames; installed adapter preserves 66,570 rows.
   Browser passes 474 diagrams/six exports/92 Native endpoints, no errors, server
-  stopped. All 14 portable installed corruption controls pass. Remaining:
-  complete inventory execution, main integration, quiet performance, wider
+  stopped. All 14 portable installed corruption controls pass. The complete four-check
+  [Nix inventory gate](reported-experience-complete-inventory-gate.json.gz) passes
+  at 9841000 with all tracked inputs and HEAD/index unchanged. Remaining:
+  main integration, quiet performance, wider
   distributions and contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

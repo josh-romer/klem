@@ -71,3 +71,12 @@ all 11 corruption controls pass.
 
 The complete inventory gate, quiet novel timing, main merge, wider distributions
 and contextual/independent review remain open.
+
+
+The complete four-check Nix gate at 9841000 passed on 2026-10-10 UTC with
+all 4,674 tracked inputs, 4,632 selected inventory files and HEAD/index unchanged.
+The CLI/server, frontend assets, annotated adapter and complete inventory audit
+are actual checks. The [receipt](reported-experience-complete-inventory-gate.json.gz)
+and [log](reported-experience-complete-inventory-gate.log.gz) are retained.
+Quiet paired performance, main integration and wider/contextual/independent
+review remain separate; no full linguistic-coverage claim is added.

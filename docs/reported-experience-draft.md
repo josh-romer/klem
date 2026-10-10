@@ -69,3 +69,12 @@ An initial regression caught stale summary counts copied from the formal audit;
 the corrected summary derives counts from the current captures. Both failed
 and corrected attempts are retained. Complete Nix inventory execution, quiet
 performance, main integration, wider/contextual and independent review remain.
+
+
+The complete four-check Nix gate at 9841000 passed on 2026-10-10 UTC with
+all 4,674 tracked inputs, 4,632 selected inventory files and HEAD/index unchanged.
+The CLI/server, frontend assets, annotated adapter and complete inventory audit
+are actual checks. The [receipt](reported-experience-complete-inventory-gate.json.gz)
+and [log](reported-experience-complete-inventory-gate.log.gz) are retained.
+Quiet paired performance, main integration and wider/contextual/independent
+review remain separate; no full linguistic-coverage claim is added.

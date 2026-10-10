@@ -3490,13 +3490,18 @@ review remains open under the completion review below.
   46 authored cases: 35,530 total, 31,300 required and 4,246 forbidden. All
   four shared-ledger tests, 78 historical controls and ten inventory controls
   pass. The private queue has 507 scoped and 208 unreviewed entries; main
-  retains its separate review state. Remaining: whole Rust,
+  retains its separate review state. [Parent reconciliation](fear-lsera-installed-parent-reconciliation.json.gz)
+  brings in the completed familiar installed evidence and seventh audit from
+  6506feb, preserving every apprehensive runtime file, judgment and proof.
+  Ten inventory controls pass again; the full Rust driver is prepared but
+  has not started, reserving the pending quiet performance window.
+  Remaining: whole Rust,
   actual Nix/installed validation, main integration, quiet performance and
   broader contextual/independent linguistic review.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
-  **Missing: original-source preparation and independent targets preserved;
-  implementation pending.** The four original owners (86548, 86549, 86604,
+  **Partial: source-backed focused private prototype; full validation and
+  main integration pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
   all 17 complete example groups, including multi-line dialogue. Statements
   express the speaker's intention; questions ask the listener's intention.
@@ -3508,9 +3513,26 @@ review remains open under the completion review below.
   familiar-particle Nix package; all miss their independent lexical and
   morphological targets and exactly reproduce the earlier installed baseline.
   Morphological matching checks roles and forms without requiring a newly
-  proposed rule name. These are source proposals, not passing gold or a
-  scoped inventory disposition. Remaining: independent boundary authoring,
-  implementation, source/Native/regression/corpus/browser checks, whole Rust,
+  proposed rule name. The baseline establishes missing targets; it does not
+  certify candidates or a scoped inventory disposition. [Independent boundary authoring](formal-volitional-independent-authoring.json.gz)
+  now preserves 59 cases: 33 required and 26 forbidden named paths, with
+  [43 complete Native owners](formal-volitional-authored-native-closure.json.gz).
+  Cases cover both styles, allomorphs, honorifics, three irregular families,
+  unlisted past/modal/retrospective prefinals and adjective/copular exclusions
+  before and after honorifics. Targets were authored without consulting engine
+  output. [Focused prototype validation](formal-volitional-prototype-validation.json.gz)
+  now passes five Rust regressions, eight viewer-source tests and Clippy
+  with warnings denied. Raw rules check 53 structural cases; all 59 judgments
+  also pass dictionary compatibility, including six lexical POS exclusions.
+  Twelve complete-source streams retain 3,264 frames, every prior ordered
+  candidate and dictionary assessment, and 404 individually tracked new paths
+  against 63 complete Native identities. These additional paths remain
+  contextually unjudged; 18 stream corruption controls pass. The initial
+  viewer test failure from omitted historical fixtures is retained, and its
+  complete repeat passes. Original spoken pronunciation notes remain separate.
+  Main code, shared ledger and inventory dispositions remain unchanged.
+  Remaining: complete parent restoration/shared-ledger regressions, original
+  source audit, corpus/history/gold/broad/browser checks, whole Rust,
   actual Nix/installed/main integration, quiet performance and wider review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

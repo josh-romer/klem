@@ -4084,8 +4084,12 @@ review remains open under the completion review below.
   auditor's zero-exit assumption was corrected to accept the captured explicit
   SIGINT shutdown; unexpected signals remain rejected and the failed evidence
   remains archived. This browser proof retains its debug/prototype scope.
+  [Complete reconciled Rust evidence](willingness-question-complete-proof-archive.json)
+  passes 1,174 tests, zero failures, one ignored and 252 batches at `37bdf91`,
+  with all 6,095 captured files, HEAD and index unchanged. Reconciliation also
+  passes the 18 active-ledger and 28 inherited installed-evidence controls.
   Inventory dispositions, broader class/prefinal/particle/auxiliary interactions,
-  full Rust/Nix checks, installed CLI/browser verification, main promotion,
+  actual current Nix packages/full inventory, installed CLI/browser verification, main promotion,
   performance, contextual sense judgments, and independent Korean review
   remain open.
 

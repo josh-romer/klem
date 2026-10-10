@@ -1,7 +1,8 @@
 # Explanatory endings and familiar particle
 
-Status: committed source-backed integration on `coverage/explanatory-se`;
-actual Nix packages and complete installed replays pass. Main integration remains pending. Three finite source dispositions are now scoped in the private inventory.
+Status: merged into local main at `8f4a66f`; actual Nix packages, complete
+installed replays and the complete inventory gate pass. Three finite source
+dispositions are scoped in the main inventory.
 
 The original -ㄹ세 entry (79278) names 이다/아니다; -을세 (79279) names
 consonantal verbs/adjectives or immediate past. Both have explanation and
@@ -62,8 +63,7 @@ and compilation feedback are retained; the separate browser retry passes 222 ind
 and all 80 complete Native entry endpoints, with no browser errors and its owned
 server stopped. Both the initial failure and successful retry are archived.
 
-Remaining: complete Nix inventory execution, quiet timings, main integration,
-wider/contextual and independent review. No emitted candidate is promoted to
+Remaining: quiet timings, wider/contextual and independent review. No emitted candidate is promoted to
 gold and no contextual homonym sense or linguistic precision is certified.
 
 Complete distribution review preserves 170 full original dictionary identities,
@@ -109,6 +109,13 @@ labels/Source identities, complete Native fields and bounded owned-server
 shutdown. All 19 controls pass. Initial audit failures are retained: the
 supervisor intentionally ends its server with SIGINT, and the display expands
 하+었 without altering the canonical path. Seven audit families are wired into
-Nix; complete inventory execution and main integration remain separate.
+Nix; their complete inventory execution passed before the main merge.
 
-All four actual Nix packages and installed source/launcher binding pass with unchanged inputs: 1,044 Rust/adapter source files and 18 frontend files. Installed replay passes all 24 finite Unicode/filter/cache streams (5,280 frames), 53,502 cohort words, 66,570 original annotated rows with two gold recoveries, and 1,128,312 broad frames. The actual installed launcher passes 318 policy decisions, 314 diagrams, six exact exports and 170 complete Native endpoints; server stopped. The independent complete installed audit and all 24 corruption controls pass. The initial cache-budget lookup failure is retained; each 4 KiB installed eviction run is compared to both original 0/8 MiB cache outputs without changing commands or captures. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.
+All four actual Nix packages and installed source/launcher binding pass with unchanged inputs: 1,044 Rust/adapter source files and 18 frontend files. Installed replay passes all 24 finite Unicode/filter/cache streams (5,280 frames), 53,502 cohort words, 66,570 original annotated rows with two gold recoveries, and 1,128,312 broad frames. The actual installed launcher passes 318 policy decisions, 314 diagrams, six exact exports and 170 complete Native endpoints; server stopped. The independent complete installed audit and all 24 corruption controls pass. The initial cache-budget lookup failure is retained; each 4 KiB installed eviction run is compared to both original 0/8 MiB cache outputs without changing commands or captures. Seven audit families are wired into Nix. Quiet performance and wider/contextual/independent review remain open.
+
+The [complete four-check Nix inventory gate](explanatory-se-complete-inventory-gate.json.gz)
+passes at `46d8825`, with all 4,909 tracked files and 4,867 selected inventory
+inputs unchanged, along with HEAD and index. The gate exercises the actual
+CLI/server, frontend, adapter and every wired inventory audit and control.
+
+Actual local main integration is complete at `8f4a66f`. The [merge proof](explanatory-se-main-integration.json.gz) retains both parent trees and every selected installed source byte.

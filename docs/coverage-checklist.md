@@ -3462,7 +3462,7 @@ review remains open under the completion review below.
   previous-main ledger prefix. Remaining: quiet performance and wider/contextual review.
 
 - [ ] **COV-017ct — Explanatory/realization -ㄹ세 / -을세 and familiar 그려.**
-  **Partial: committed source-backed integration; Nix packages and installed validation pass.** Separate
+  **Partial: merged into main; Nix packages, installed validation and the complete inventory gate pass.** Separate
   original attachment notes and all 21 complete original groups are preserved.
   Forty-six authored cases (37 required, nine forbidden) have stable named paths;
   the source-based canonical 오 correction retains initial failure evidence.
@@ -3482,7 +3482,6 @@ review remains open under the completion review below.
   tests pass. The successful retry passes 222 individual diagrams/six exact
   exports/80 Native endpoints; no browser errors, server stopped. Initial failed
   browser proof is retained. [Scope](explanatory-se-draft.md). Remaining:
-  complete inventory execution and main integration,
   quiet timings and wider/contextual/independent review. Complete corpus/novel/
   spacing audits pass 12/20 controls and preserve 170 distribution/128 novel
   Native owners. Four novel Rust tests pass all 655 paths/12 spacing observations
@@ -3493,7 +3492,13 @@ review remains open under the completion review below.
   The [complete Rust suite](explanatory-se-full-rust.json.gz) passes 1,130 tests with zero failures, one ignored and all frozen inputs unchanged. The expanded browser passes 314 diagrams, all 318 filter decisions, six exact exports and 170 complete Native endpoints. The [independent browser audit](explanatory-se-browser-distribution-audit.log.gz) and [19 corruption controls](explanatory-se-browser-distribution-controls.log.gz) pass, including exact dictionary exclusions and displayed 하+였 expansion. Seven audit families are wired into Nix. The older-written 살으십니다그려 -> 살다
   proposal remains an individually tracked unresolved allomorph, with its full
   original sentence preserved and no required judgment added.
-  All four actual Nix packages and installed source/launcher binding pass with unchanged inputs: 1,044 Rust/adapter source files and 18 frontend files. Installed replay passes all 24 finite Unicode/filter/cache streams (5,280 frames), 53,502 cohort words, 66,570 original annotated rows with two gold recoveries, and 1,128,312 broad frames. The actual installed launcher passes 318 policy decisions, 314 diagrams, six exact exports and 170 complete Native endpoints; server stopped. The independent complete installed audit and all 24 corruption controls pass. The initial cache-budget lookup failure is retained; each 4 KiB installed eviction run is compared to both original 0/8 MiB cache outputs without changing commands or captures. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.
+  All four actual Nix packages and installed source/launcher binding pass with unchanged inputs: 1,044 Rust/adapter source files and 18 frontend files. Installed replay passes all 24 finite Unicode/filter/cache streams (5,280 frames), 53,502 cohort words, 66,570 original annotated rows with two gold recoveries, and 1,128,312 broad frames. The actual installed launcher passes 318 policy decisions, 314 diagrams, six exact exports and 170 complete Native endpoints; server stopped. The independent complete installed audit and all 24 corruption controls pass. The initial cache-budget lookup failure is retained; each 4 KiB installed eviction run is compared to both original 0/8 MiB cache outputs without changing commands or captures. Seven audit families are wired into Nix.
+  The [complete four-check Nix inventory gate](explanatory-se-complete-inventory-gate.json.gz)
+  passes at 46d8825 with all 4,909 tracked files, 4,867 selected inventory
+  inputs, HEAD and index unchanged. The [actual main integration proof](explanatory-se-main-integration.json.gz)
+  verifies merge 8f4a66f, every installed 1,044 Rust/adapter and 18 frontend
+  source file, both parent evidence trees and the exact previous-main ledger
+  prefix. Quiet performance and wider/contextual/independent review remain open.
 
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**

@@ -94,7 +94,7 @@ class Controls(unittest.TestCase):
  def ledger_through(self,count):
   c=copy.deepcopy(self.current);c['cases']=c['cases'][:count]
   used={j['source'] for case in c['cases'] for j in case['judgments']}
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json']:
    for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
     if key not in used:c['sources'].pop(key,None)
   return c
@@ -111,7 +111,7 @@ class Controls(unittest.TestCase):
  def coordinated_append_mutation(self,filename,index,label):
   c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures'/filename);later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
   c['cases'][index]['judgments'][0]['reason']='coordinated changed '+label+' judgment';suite['cases'][-1]=copy.deepcopy(c['cases'][index])
-  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json']}
+  originals={name:(audit.ROOT/'tests/fixtures'/name).read_bytes() for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json']}
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
    for name,raw in originals.items():(fixtures/name).write_bytes(raw)
@@ -171,4 +171,26 @@ class Controls(unittest.TestCase):
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
  def test_coordinated_giroseo_fixture_mutation_cannot_pass(self):
   self.coordinated_append_mutation('giroseo-validity.json',35394,'giroseo')
+ def test_exact_pre_explanatory_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35395),self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_explanatory_gold_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35441),self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_explanatory_novel_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35443),self.proposal)['preserved_cases'],34920)
+ def test_explanatory_case_order_changed(self):
+  c=copy.deepcopy(self.current);c['cases'][35395],c['cases'][35396]=c['cases'][35396],c['cases'][35395]
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_explanatory_gold_targets_cannot_be_rewritten(self):
+  c=copy.deepcopy(self.current);c['cases'][35441]['judgments'][0]['lemmas']=['invented']
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_explanatory_novel_source_link_cannot_be_rewritten(self):
+  c=copy.deepcopy(self.current);c['sources']['original-79278']='https://example.invalid/invented'
+  with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_explanatory_source_rewrite(self):
+  self.coordinated_append_mutation('explanatory-se-validity.json',35440,'explanatory-se')
+ def test_coordinated_explanatory_gold_rewrite(self):
+  self.coordinated_append_mutation('explanatory-se-gold-validity.json',35442,'explanatory-se-gold')
+ def test_coordinated_explanatory_novel_rewrite(self):
+  self.coordinated_append_mutation('explanatory-se-novel-validity.json',35456,'explanatory-se-novel')
 if __name__=='__main__':unittest.main()
+

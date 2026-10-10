@@ -3455,6 +3455,40 @@ review remains open under the completion review below.
   installed corruption controls pass. Remaining: complete inventory execution,
   main integration, quiet performance and wider/contextual review.
 
+- [ ] **COV-017ct — Explanatory/realization -ㄹ세 / -을세 and familiar 그려.**
+  **Partial: isolated source-backed implementation; main unchanged.** Separate
+  original attachment notes and all 21 complete original groups are preserved.
+  Forty-six authored cases (37 required, nine forbidden) have stable named paths;
+  the source-based canonical 오 correction retains initial failure evidence.
+  The complete Source/correction audit passes all 15 corruption controls.
+  Six focused Rust tests pass, including all 632 Source path assessments against
+  80 complete Native owners, two original-gold full-sentence Unicode regressions,
+  and preservation of every previous 탈세/통일세 reading and order. All 12
+  Source Unicode/filter/cache streams conserve 3,804 frames. All 18 portable
+  stream/Native corruption controls pass, including coordinated rewrites. All 53,502 cohort
+  words preserve previous candidates; four changed surfaces and 15 new paths
+  have individual tracking. The 66,570 unchanged original annotated rows recover
+  two additional grouped matches and three lemmas. Complete original contexts,
+  outcomes, recalls, candidate statistics, common misses and deltas are verified
+  by the portable gold audit; all 13 corruption controls pass. Full broad replay
+  preserves 1,128,312 frames and tracks 655 path and 12 spacing observations.
+  The browser caught and fixed the particle catalog key; five grammar-label
+  tests pass. The successful retry passes 222 individual diagrams/six exact
+  exports/80 Native endpoints; no browser errors, server stopped. Initial failed
+  browser proof is retained. [Scope](explanatory-se-draft.md). Remaining:
+  Nix/installed/main validation,
+  quiet timings and wider/contextual/independent review. Complete corpus/novel/
+  spacing audits pass 12/20 controls and preserve 170 distribution/128 novel
+  Native owners. Four novel Rust tests pass all 655 paths/12 spacing observations
+  with NFC/NFD ownership and 14 manual structural targets. The shared ledger
+  appends 62 cases to its exact 35,395 prefix: 35,457 total/31,244 required/4,229
+  forbidden; four ledger tests and 66 historical controls pass. Three finite
+  Source dispositions yield a verified 504 scoped/211 unreviewed inventory.
+  The [complete Rust suite](explanatory-se-full-rust.json.gz) passes 1,130 tests with zero failures, one ignored and all frozen inputs unchanged. The expanded browser passes 314 diagrams, all 318 filter decisions, six exact exports and 170 complete Native endpoints. The [independent browser audit](explanatory-se-browser-distribution-audit.log.gz) and [19 corruption controls](explanatory-se-browser-distribution-controls.log.gz) pass, including exact dictionary exclusions and displayed 하+였 expansion. Six audit families are wired into Nix. The older-written 살으십니다그려 -> 살다
+  proposal remains an individually tracked unresolved allomorph, with its full
+  original sentence preserved and no required judgment added.
+
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

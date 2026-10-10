@@ -1114,6 +1114,15 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                     continue;
                 }
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
+                if ending.form == "을세" {
+                    if matches!(
+                        ending.boundary,
+                        Boundary::Attached(8) | Boundary::OmittedCopula(8)
+                    ) {
+                        p.copula_only = p.stem != "아니";
+                    }
+                    p.rules.push("ending.explanatory_se".into());
+                }
                 if p.rules.iter().any(|r| r == "copula.omitted_polite")
                     && (ending.form != "으리까"
                         || p.morphs.len() != 1
@@ -4288,7 +4297,7 @@ fn nominals(
         }
         // 마는 is post-ending; emphatic 다/다가 need the bases above or an
         // explicit case phrase. None license arbitrary nominal suffix peeling.
-        if particle.form != "마는" && !emphatic_adverbial {
+        if !matches!(particle.form, "마는" | "그려") && !emphatic_adverbial {
             for mut a in nominal_bases(base) {
                 a.morphemes.extend(morphs.clone());
                 a.rules.push("particle".into());
@@ -4342,6 +4351,7 @@ fn nominals(
                     | "도"
                     | "만"
                     | "마는"
+                    | "그려"
                     | "나"
                     | "라도"
                     | "든지"
@@ -4412,7 +4422,7 @@ fn nominals(
             inner_class
         };
         // Enumerative 다/이다 follows a nominal, not a preceding case phrase.
-        if particle.form != "마는" && !enumerative_da {
+        if !matches!(particle.form, "마는" | "그려") && !enumerative_da {
             nominals(
                 base,
                 next,
@@ -4454,6 +4464,7 @@ fn nominals(
             }
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
+                "그려" => a.rules.push("particle.familiar_gryeo".into()),
                 "치고" | "치고는" | "치고서" => a.rules.push("particle.chigo".into()),
                 "만치" | "마냥" | "토록" => a.rules.push("particle.comparison_extent".into()),
                 "들" => a.rules.push("particle.distributive".into()),
@@ -4932,6 +4943,9 @@ impl PredicateEnd {
                 if matches!(self, Self::CopulaBase) {
                     return matches!(m.form.as_str(), "기" | "음" | "어서");
                 }
+                if matches!(self, Self::BeforeParticle("그려")) {
+                    return before_particle(&m.form, "그려");
+                }
                 if matches!(self, Self::BeforeParticle("마는")) {
                     return concessive_ending(&m.form);
                 }
@@ -5265,6 +5279,11 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 )
         }
         "마는" => concessive_ending(ending),
+        // Original83914 examples/notes and79278/79279 explicit -세그려 variants.
+        "그려" => matches!(
+            ending,
+            "네" | "소" | "게" | "읍시다" | "오" | "습니다" | "을세"
+        ),
         "를" => matches!(ending, "어" | "게" | "지" | "고"),
         "가" => ending == "지",
         "ㄹ랑" | "ㄹ랑은" => matches!(ending, "고서" | "어서" | "지"),

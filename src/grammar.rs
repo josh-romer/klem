@@ -1344,6 +1344,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을까요", "까요", "을까요", 8),
             // KRDict 81026/81032: literary conjecture/intention questions.
             ("을꼬", "꼬", "을꼬", 8),
+            // Native79278/79279 keep separate copular and consonantal/past owners.
+            ("을세", "세", "을세", 8),
             // KRDict 80970/80972: final self/opinion questions, separate from -거나.
             ("을거나", "거나", "을거나", 8),
             // KRDict 74341/74021: source-listed -(으)ㄹ뿐더러 allomorphs.
@@ -1567,6 +1569,13 @@ pub(crate) fn endings() -> &'static [Ending] {
                 connector: false,
             });
         }
+        // Original 날세: vowel nominal + omitted 이 + attached ㄹ세.
+        out.push(Ending {
+            suffix: "세",
+            form: "을세",
+            boundary: OmittedCopula(8),
+            connector: false,
+        });
         for ending in &mut out {
             ending.connector = AUXILIARY_CONNECTORS.contains(&ending.form);
         }
@@ -1658,6 +1667,7 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("설랑은", 4, 0),
             ("만", 3, 0),
             ("마는", 3, 0),
+            ("그려", 3, 0),
             ("까지", 3, 0),
             ("부터", 3, 0),
             // Bundled source particles retain the outer stage of 부터.
@@ -2293,6 +2303,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "formal_b.attested_stem_b" => {
             "Retain the exact Native 아름답네 formal-quotation witness without removing its lexical stem-final ㅂ; preserve ordinary 네 and mark the formal attachment tension unknown."
+        }
+        "ending.explanatory_se" => {
+            "Recover the separate source-owned copular -ㄹ세 and consonantal/past -을세 explanatory or realization finals."
+        }
+        "particle.familiar_gryeo" => {
+            "Attach the original familiar 그려 particle after its source-listed final endings; keep lexical and contextual alternatives separate."
         }
         "ending.concessive_giroseo" => {
             "Recover source-listed concessive -기로서/-기로서니 with separate canonical endings; preserve immediate honorific, past and modal owners while rejecting the explicitly excluded -더- and -으리- markers."

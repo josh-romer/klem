@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "review_status": "Original annotated structural gold; no contextual homonym or whole-sentence precision claim.",
+  "sources": {
+    "original-kaist-test": "https://github.com/UniversalDependencies/UD_Korean-Kaist/blob/master/ko_kaist-ud-test.conllu"
+  },
+  "cases": [
+    {
+      "id": "explanatory-se-gold-MH2_0110-s387-3",
+      "surface": "오랫만일세",
+      "judgments": [
+        {
+          "id": "original-gold",
+          "lemmas": [
+            "오랫만",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "을세"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.explanatory_se"
+          ],
+          "verdict": "required",
+          "source": "original-kaist-test",
+          "reason": "Unchanged original annotated row id:MH2_0110-s387/3; lemma target authored from annotation, not emitted candidates. Canonical ending uses the separate complete KRDict short-ending source note."
+        }
+      ]
+    },
+    {
+      "id": "explanatory-se-gold-MH2_0110-s395-5",
+      "surface": "아닐세",
+      "judgments": [
+        {
+          "id": "original-gold",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을세"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.explanatory_se"
+          ],
+          "verdict": "required",
+          "source": "original-kaist-test",
+          "reason": "Unchanged original annotated row id:MH2_0110-s395/5; lemma target authored from annotation, not emitted candidates. Canonical ending uses the separate complete KRDict short-ending source note."
+        }
+      ]
+    }
+  ]
+}

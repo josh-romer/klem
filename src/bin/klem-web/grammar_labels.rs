@@ -127,6 +127,23 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn familiar_particle_label_uses_its_actual_particle_headword() {
+        let label = catalog().get("그려").expect("particle catalog key");
+        assert_eq!(label.kind, MorphemeKind::Particle);
+        assert_eq!(label.sources.len(), 1);
+        assert_eq!(label.sources[0].id, 83914);
+        assert_eq!(label.sources[0].headword, "그려");
+        assert!(catalog().get("-그려").is_none());
+        let entry = EntrySummary {
+            id: "krdict:83914".into(),
+            headword: "그려".into(),
+            homonym: String::new(),
+            pos: "조사".into(),
+        };
+        assert!(entry_matches(MorphemeKind::Particle, "그려", &entry));
+        assert!(!entry_matches(MorphemeKind::Ending, "그려", &entry));
+    }
+    #[test]
     fn literary_ri_assertion_requires_same_reading_adjacency_and_kinds() {
         use klem::breakdown::Component::{Lemma, Morpheme};
         let mut morphs = klem::Lemmatizer::new()
@@ -273,6 +290,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-formal-b-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-reported-experience-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-giroseo-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-explanatory-se-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),

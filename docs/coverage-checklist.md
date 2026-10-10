@@ -3542,8 +3542,8 @@ review remains open under the completion review below.
   wider/contextual/independent linguistic review remain pending.
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
-  **Partial: complete private Nix gate passed; tested implementation merged
-  into main, with current-main package validation and wider review pending.** Entries 86497 and 86619 preserve
+  **Partial: implementation merged; whole main Rust and four actual Nix
+  packages pass. Wider review and current-main inventory remain pending.** Entries 86497 and 86619 preserve
   all three senses, separate short/full attachment notes and all 25 complete
   groups, including multi-line contexts. [Independent source proposals](fear-lsera-independent-source-proposals.json.gz)
   precede all 150 installed-baseline probes, which miss their intended lexical
@@ -3587,11 +3587,10 @@ review remains open under the completion review below.
   The independent installed audit passes 24 corruption controls and is wired
   into Nix. The offline dependency failure and cache-enabled successful retry
   preserve identical tested inputs and package scope. Ten final inventory
-  controls pass with its 507/208 queue; the committed cd6bbcb integration
-  is running the complete four-check Nix gate with all tracked inputs frozen.
-  Main does not yet include these endings. Remaining: complete Nix inventory,
-  main integration, family performance and
-  broader contextual/independent linguistic review.
+  controls pass with its 507/208 queue. The committed cd6bbcb integration
+  completed its four-check Nix gate before the main merge described below.
+  Current-main inventory, family performance and broader contextual/independent
+  linguistic review remain open.
 
   The [complete four-check Nix gate](fear-lsera-complete-gate.json.gz)
   passes at cd6bbcb, preserving all 5,261 tracked files, 5,219 selected
@@ -3604,9 +3603,14 @@ review remains open under the completion review below.
   inherited formatting wraps change in the fear test. Four main family tests
   and whole main formatting pass; actual all-target Clippy with web features
   and warnings denied also passes. Both Root expression/source/performance audit
-  sections survive conflict resolution. Current-main whole Rust, package
-  and source validation, quiet timing and wider contextual/independent review
-  remain open.
+  sections survive conflict resolution. [Actual main validation](fear-lsera-main-integration.json.gz)
+  now confirms both complete development and release suites: 1,140 passed,
+  zero failed, one ignored, 245 batches. All four actual Nix outputs pass;
+  their derivations bind 1,063 Rust, 18 frontend and 1,063 adapter source files
+  byte-for-byte, including the recorded formatting fixes and retained expression
+  fixture. HEAD, index and frozen inputs stay unchanged during both main runs.
+  Current-main inventory, installed integration, quiet timing and wider
+  contextual/independent review remain open.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
   **Partial: source-backed private prototype with complete corpus and novel

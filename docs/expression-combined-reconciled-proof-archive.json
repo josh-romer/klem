@@ -1,0 +1,59 @@
+{
+  "state": "terminal-reconciled-audits-archived",
+  "commands": 8,
+  "controls": 170,
+  "inputs_unchanged": true,
+  "files": [
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python.json.gz",
+      "original_bytes": 961003,
+      "sha256": "8a1bd99acfb98d987bc52c9aa47ee8b71ace2745a09f476201e031474cb432de"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-run_reconciled_python.py.gz",
+      "original_bytes": 2303,
+      "sha256": "a4a2e441827217d028c159f57df887304c00d7225ee472c875f92467eb8f6a0c"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-0.log.gz",
+      "original_bytes": 194,
+      "sha256": "00acb68676b727d6bd33ddce2f9c1fd6e8b6c289786c2b810975801525fc7b99"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-1.log.gz",
+      "original_bytes": 128,
+      "sha256": "5eb5e048238bf7c36a262d14dde85cc9d2f48874874ded2bc03d7f113619f538"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-2.log.gz",
+      "original_bytes": 116,
+      "sha256": "d3f5d3ef0bec5d6e6885f6d971c5269eef07143a4c70cd197c7f969c0491c59f"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-3.log.gz",
+      "original_bytes": 113,
+      "sha256": "d9b8dc3951e228f0503672b2ea360886172107894966b4b9108dd0c4413e5a80"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-4.log.gz",
+      "original_bytes": 106,
+      "sha256": "0ce05bce784952123e93c45a773d67ae61c6c945ee8c751e46bf6d9afc29f94d"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-5.log.gz",
+      "original_bytes": 109,
+      "sha256": "c0a234441cecc9937a09c7cbc31cee2a9774cd3f1dce8048b17104e7e417c7f1"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-6.log.gz",
+      "original_bytes": 212,
+      "sha256": "e35b62a1d1ddd57f9ef8e0ffecab12a7082ded89abebd6adf47b013abd4b3ee8"
+    },
+    {
+      "file": "expression-combined-reconciled-proof-combined-reconciled-python-7.log.gz",
+      "original_bytes": 343,
+      "sha256": "fd6a02bb274fff4ee564e30f6b46bdb9db878eca83922fb2d057e5a7b8dcfa94"
+    }
+  ],
+  "initial_failure": "Initial complete Nix gate and exact failed producer/log/receipt remain separately archived. A first positive-history control failed because its helper dropped an unused citation from a completed suite; corrected helper retains suite-declared citations. Original corruption checks remain intact. Complete corrected Nix gate and main integration remain pending."
+}

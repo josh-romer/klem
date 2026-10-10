@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-09.
+Last reviewed: 2026-10-10.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -3546,15 +3546,18 @@ review remains open under the completion review below.
   retains its separate review state. [Parent reconciliation](fear-lsera-installed-parent-reconciliation.json.gz)
   brings in the completed familiar installed evidence and seventh audit from
   6506feb, preserving every apprehensive runtime file, judgment and proof.
-  Ten inventory controls pass again; the full Rust driver is prepared but
-  has not started, reserving the pending quiet performance window.
-  Remaining: whole Rust,
-  actual Nix/installed validation, main integration, quiet performance and
+  Ten inventory controls pass again. After the reserved paired performance
+  window completed, the [complete Rust suite](fear-lsera-full-rust.json.gz)
+  passed 1,140 tests with zero failures, one ignored and 245 batches. All
+  1,630 frozen inputs remain unchanged during the complete run. The isolated
+  integration branch is committed and its four actual Nix packages are building;
+  main does not yet include these endings.
+  Remaining: actual Nix/installed validation, main integration, family performance and
   broader contextual/independent linguistic review.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
   **Partial: source-backed private prototype with complete corpus and novel
-  captures and browser validation; full Rust/Nix/main integration pending.** The four original owners (86548, 86549, 86604,
+  captures, browser validation and complete Rust suite; Nix/main integration pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
   all 17 complete example groups, including multi-line dialogue. Statements
   express the speaker's intention; questions ask the listener's intention.
@@ -3618,7 +3621,16 @@ review remains open under the completion review below.
   all 222 policy decisions and diagrams, six exact CLI exports and 69 complete
   Source/novel Native endpoints. Its independent audit and 19 corruption controls
   pass; no page errors, owned server stopped and all captured inputs unchanged.
-  Remaining: final private inventory scopes/queue, whole Rust, actual Nix/installed/main integration,
+  [Complete finite validation](formal-volitional-complete-finite-validation.json.gz)
+  adds four explicitly bounded private ending dispositions and verifies the
+  511 scoped/204 unreviewed private inventory with ten controls. Seven formal
+  audit families and the already completed historical performance auditing are
+  wired into its Nix check. All 111 family and 84 historical controls pass.
+  The [complete private Rust suite](formal-volitional-full-rust.json.gz) passes
+  1,150 tests with zero failures, one ignored and 247 batches. All 1,663 selected
+  inputs remain unchanged throughout the run. Main keeps its separate 504/211
+  inventory and has no formal volitional implementation yet. Remaining:
+  actual Nix/installed/main integration,
   quiet performance and wider contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

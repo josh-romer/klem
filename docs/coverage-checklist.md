@@ -3638,9 +3638,12 @@ review remains open under the completion review below.
   and all 16 original Native responses; no errors and owned server stopped.
   Its independent audit passes 19 corruption controls. Original targets and
   application/label/attachment code remain unchanged; the initial CLI test
-  harness failure and successful stdin retry are retained. Whole Rust,
-  actual Nix/installed/main integration, broader distributions, contextual
-  review and separate expression dispositions remain pending.
+  harness failure and successful stdin retry are retained. The separate
+  [complete expression Rust suite](formal-volitional-expression-full-rust-validation.json.gz)
+  passes 1,153 tests with zero failures, one ignored and 248 batches; all
+  1,679 selected inputs stay unchanged. Actual Nix/installed/main integration,
+  broader distributions, contextual review and separate expression dispositions
+  remain pending.
   [Complete parent and ledger preparation](formal-volitional-ledger-preparation.json.gz)
   restores 4,430 missing files from the complete 5,096-file apprehensive parent
   while preserving all 702 existing private inputs. The private raw ledger

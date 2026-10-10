@@ -1941,6 +1941,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "으련" {
                     p.rules.push("ending.willingness_question".into());
                 }
+                if ending.form == "으렴" {
+                    p.rules.push("ending.gentle_command".into());
+                }
                 if matches!(ending.form, "으련만" | "으련마는") {
                     p.rules.push("ending.counterfactual_ryeon".into());
                 }
@@ -3162,11 +3165,11 @@ fn auxiliary_inflections_allowed_for(
             {
                 return false;
             }
-            // Native 76564/76567 select verbs. Retain ambiguous lexical
+            // Native 76564/76567 and 79340/79343 select verbs. Retain ambiguous lexical
             // classes (including 있다); dictionary homonyms are assessed
             // individually. Unlisted prefinal combinations remain hypotheses.
             if bare
-                && m.form == "으련"
+                && matches!(m.form.as_str(), "으련" | "으렴")
                 && matches!(
                     class,
                     Some(PredicateClass::Adjective | PredicateClass::Copula)
@@ -3402,7 +3405,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             || copular_exclamation(&m.form)
             || matches!(
                 m.form.as_str(),
-                "음세" | "으련" | "는바" | "는걸" | "는감" | "는고"
+                "음세" | "으련" | "으렴" | "는바" | "는걸" | "는감" | "는고"
             )
     }) {
         return false;
@@ -3776,7 +3779,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
             || present_exclamation(&m.form)
             || matches!(
                 m.form.as_str(),
-                "음세" | "으련" | "는바" | "는걸" | "는감" | "는고"
+                "음세" | "으련" | "으렴" | "는바" | "는걸" | "는감" | "는고"
             )
     }) {
         return;

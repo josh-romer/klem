@@ -4111,6 +4111,42 @@ review remains open under the completion review below.
   preserved. Shared-ledger/installed/browser/main promotion and wider review
   remain pending.
 
+- [ ] **COV-017cz — Gentle permission and command -렴/-으렴.**
+  **Private prototype:** the complete original entries
+  [-렴](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79340) and
+  [-으렴](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79343)
+  have eight source groups. Independently authored lexical/canonical proposals
+  precede runtime observation. The unchanged installed baseline returns none
+  of these eight lexical targets or 으렴 decompositions in any of the 24
+  original Unicode/filter/cache streams (1,620 frames); every output and source
+  byte is retained in the [prototype archive](gentle-command-prototype-proof-archive.json).
+  Canonical 으렴 now applies the vowel-or-ㄹ short and other-coda full boundary,
+  including source-attested 나으렴 → 낫다 and the separate 물어보다 lexical
+  compound and 묻다 + 보다 auxiliary alternatives in 물어보렴.
+  The [23 private stable judgments](../tests/fixtures/gentle-command-validity.json)
+  contain fifteen required and eight forbidden paths: eight original groups,
+  twelve regular/irregular allomorph boundaries, two known bare copula/답다
+  exclusions and the source auxiliary alternative. Other hypotheses stay
+  unjudged. The [Rust regressions](../tests/gentle_command.rs) preserve all
+  previous source candidates and their ordering, Unicode parity, all 47
+  complete original Native owners, per-owner verb/adjective distinctions and
+  Unknown compatibility for unlisted prefinals. The viewer label cites only
+  the two original ending owners. Focused validation passes 55 Rust tests,
+  including prior willingness/candidate/stress/related-ending/catalog checks,
+  whole formatting and focused Clippy with warnings denied. The offline catalog
+  fixture initially lacked the new ending owners; its failed result, unchanged
+  input binding and correction using the two complete original entries remain
+  archived. Native preparation failures also remain recorded; no original
+  source field, baseline or linguistic expectation was rewritten.
+  The [independent source audit](../tools/gentle_command_source_audit.py) pins
+  original authoring/baseline/Native archives and all private judgments;
+  sixteen corruption controls pass and are wired into Nix.
+  Shared-ledger/manual-review promotion, complete source/runtime/cohort/gold/
+  novel distribution, installed packages/browser, full Rust/Nix/main and quiet
+  performance remain open. The source's very informal register, permission
+  versus command choice, wider owner/prefinal/particle licenses, contextual
+  precision and independent Korean-language review are not certified.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

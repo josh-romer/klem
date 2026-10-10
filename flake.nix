@@ -576,6 +576,8 @@
                 ./tools/test_willingness_question_distribution_audit.py
                 ./tools/willingness_question_browser_audit.py
                 ./tools/test_willingness_question_browser_audit.py
+                ./tools/gentle_command_source_audit.py
+                ./tools/test_gentle_command_source_audit.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1207,6 +1209,8 @@
             python -m unittest discover -s tools -p 'test_willingness_question_distribution_audit.py'
             python tools/willingness_question_browser_audit.py
             python -m unittest discover -s tools -p 'test_willingness_question_browser_audit.py'
+            python tools/gentle_command_source_audit.py
+            python -m unittest discover -s tools -p 'test_gentle_command_source_audit.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

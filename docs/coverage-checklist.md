@@ -3769,8 +3769,8 @@ review remains open under the completion review below.
   quiet timing and wider contextual/independent review remain open.
 
 - [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
-  **Partial: independently tested initial private prototype; main runtime and
-  the newly observed omitted-copula case remain pending.**
+  **Partial: complete private prototype validation now includes the observed
+  omitted copula; shared-ledger, inventory, Nix and main promotion remain pending.**
   Implement and review both original ending owners 86083/86084, keeping their
   conjectural acknowledgement and stated-intention senses separate. Original
   attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
@@ -3795,7 +3795,7 @@ review remains open under the completion review below.
   ledger, grammar catalog and inventory dispositions are unchanged.
   All 34 original Native owners and every field are retained from the eleven
   original exports; their exact Python projections match the pinned dictionary.
-  Required work includes independently authored exact typed paths, Rust
+  At that source-only checkpoint, required work included exact typed paths, Rust
   Native import checks, attachment and neighboring-rule regressions,
   CLI/library/browser/export checks, complete frozen corpus comparisons,
   installed/main validation and contextual/independent Korean review.
@@ -3817,8 +3817,8 @@ review remains open under the completion review below.
   frames and preserve every original candidate and Native assessment; all
   changed records keep individual IDs and complete original lines. Fifteen
   novel occurrences gain forty-one raw paths. The literal `장래려니와`, in
-  “장래도 장래려니와…”, still misses `장래 + 이다`; this observed gap remains
-  open for a separate omitted-copula fix. Broader independent distribution,
+  “장래도 장래려니와…”, missed `장래 + 이다` in that initial capture; the
+  separate fix below preserves that original observation. Broader independent distribution,
   spacing and novel-context review, shared-ledger/inventory promotion, whole
   Rust/Clippy, new Nix/installed/main validation, quiet timing and contextual
   Korean review remain required. No observed alternative is promoted to gold.
@@ -3922,6 +3922,38 @@ review remains open under the completion review below.
   dependency failure and successful identical-source retry are retained.
   Full inventory/main, family timing and wider/contextual/independent
   review remain pending.
+
+
+  [Preserved omitted-copula prototype](conjectural-additive-copula-phase2.json.gz)
+  now restores the independently authored `장래 + 이다 + 으려니와` path in the
+  complete original novel line. Six separately authored contrasts cover four
+  required and two forbidden nominal/copula paths without changing the original
+  35-case source fixture. Eight focused regressions and the complete inherited
+  Rust suite pass: 1,161 tests, zero failures, one ignored, 250 batches. Whole
+  formatting and all-target Clippy with warnings denied pass; all 4,932 inputs
+  remain unchanged. The inherited catalog test now imports a separate fixture
+  containing the two exact original ending owners; its earlier missing-import
+  and duplicate-owner failures are retained.
+  Twenty-four full-source streams preserve 4,080 frames, all 384 typed target
+  occurrences and every earlier candidate/Native assessment. Eighty-two new
+  canonical source paths have stable IDs: sixteen required structures and
+  sixty-six unjudged alternatives. The novel line and standalone target pass
+  all 24 Unicode/filter/cache streams, retaining 5,304 frames. Eight supplemental
+  original Native owners preserve every field; the viewer retrieves all 37
+  unique source/noun/copula owners and passes 192 diagrams, six exact exports
+  and clean server shutdown. Its independent audit passes 38 controls.
+  Updated complete comparisons preserve all 53,502 corpus/history words and
+  66,570 original annotated rows unchanged. All 1,128,312 broad frames retain
+  every earlier candidate and Native assessment; fifteen complete novel
+  occurrences gain 58 raw, 30 headword and 27 Compatible paths, including the
+  copula fix. An independent distribution audit passes. Its seventeen final
+  control methods have actual passing coverage: sixteen unchanged methods
+  from the original run plus the one repaired mutation rerun separately. The
+  original failed full run is preserved and is not reported as a green suite.
+  Every alternative and complete original context remains individually tracked
+  and contextually unjudged. Global ledger/dispositions, additional novel Native
+  and contextual/spacing review, new Nix/installed/main validation, quiet timing
+  and independent Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -1346,6 +1346,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을꼬", "꼬", "을꼬", 8),
             // Native79278/79279 keep separate copular and consonantal/past owners.
             ("을세", "세", "을세", 8),
+            // KRDict 86497/86619: worry connectives/finals and exclamations.
+            ("을세라", "세라", "을세라", 8),
             // KRDict 80970/80972: final self/opinion questions, separate from -거나.
             ("을거나", "거나", "을거나", 8),
             // KRDict 74341/74021: source-listed -(으)ㄹ뿐더러 allomorphs.
@@ -2307,6 +2309,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.explanatory_se" => {
             "Recover the separate source-owned copular -ㄹ세 and consonantal/past -을세 explanatory or realization finals."
+        }
+        "ending.apprehensive_lsera" => {
+            "Recover the original -ㄹ세라/-을세라 short/full allomorphs for worry or exclamation, preserving separate stem, honorific, past and explicit copular owners without selecting a contextual sense."
         }
         "particle.familiar_gryeo" => {
             "Attach the original familiar 그려 particle after its source-listed final endings; keep lexical and contextual alternatives separate."

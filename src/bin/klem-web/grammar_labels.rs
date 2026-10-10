@@ -127,6 +127,39 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn apprehensive_lsera_keeps_both_original_ending_owners() {
+        let label = catalog().get("-을세라").expect("canonical ending key");
+        assert_eq!(label.kind, MorphemeKind::Ending);
+        assert_eq!(
+            label
+                .sources
+                .iter()
+                .map(|source| source.id)
+                .collect::<Vec<_>>(),
+            [86497, 86619]
+        );
+        for (id, headword) in [("krdict:86497", "-ㄹ세라"), ("krdict:86619", "-을세라")] {
+            let owner = EntrySummary {
+                id: id.into(),
+                headword: headword.into(),
+                homonym: String::new(),
+                pos: "어미".into(),
+            };
+            assert!(entry_matches(MorphemeKind::Ending, "-을세라", &owner));
+            assert!(!entry_matches(MorphemeKind::Particle, "-을세라", &owner));
+        }
+        assert!(!entry_matches(
+            MorphemeKind::Ending,
+            "-을세라",
+            &EntrySummary {
+                id: "krdict:77346".into(),
+                headword: "-을라".into(),
+                homonym: String::new(),
+                pos: "어미".into(),
+            }
+        ));
+    }
+    #[test]
     fn familiar_geurae_label_uses_the_particle_owner_and_preserves_interjection_scope() {
         let label = catalog().get("그래").expect("particle catalog key");
         assert_eq!(label.kind, MorphemeKind::Particle);
@@ -318,6 +351,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/krdict-giroseo-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-explanatory-se-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-familiar-geurae-labels.json"),
+                PathBuf::from("tests/fixtures/krdict-fear-lsera-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-declarative-contrast-labels.json"),

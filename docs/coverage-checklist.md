@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 504 scoped
-  dispositions; 211 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 507 scoped
+  dispositions; 208 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -3519,7 +3519,7 @@ review remains open under the completion review below.
   One finite source-backed particle scope (83913) preserves every original note and all four complete example groups, including the full two-line group. Twenty-seven independently authored cases (19 required, eight forbidden) cover the original examples, explicit attachment boundaries and separately licensed written variants. Initial literal 구만 and the failed redundant-alias implementation are retained; the corrected implementation reuses existing ending.exclamation_variant without altering any linguistic target. Four Rust regressions check all 152 observed Source paths against 50 complete original Native owners and preserve every pre-change path/order. Six grammar-label tests and focused Clippy with warnings denied pass. Complete independent Source/stream/cohort/broad/gold/browser audits pass 19/18/5/17/10/19 corruption controls. All 53,502 cohort words and 66,570 original annotated rows remain exact; original gold outcomes and candidate statistics are independently rederived. Of 1,128,312 broad frames, all six nonspacing streams are byte-exact. The two spacing modes have 398 individually tracked internal probe-count changes on 12 surfaces; every candidate, assessment, display and spacing alternative remains exact. Browser proof passes 114 decisions/114 diagrams/six exact exports/50 full Native endpoints, with owned server stopped. The shared ledger retains its exact 35,457-case prefix and appends only the 27 authored cases: 35,484 total, 31,263 required and 4,237 forbidden. Four ledger tests and 73 historical corruption controls pass. No observed alternative or diagnostic is promoted to contextual gold. Complete inventory execution, main integration, quiet timing and wider/contextual/independent linguistic review remain open.
   The complete Rust suite passes 1,135 tests with zero failures and one ignored across 244 batches; all 1,607 frozen inputs, including actual grammar labels and literal compiled JSON inputs, remain unchanged.
   [Finite scope and retained evidence](familiar-geurae-draft.md).
-  All four actual Nix packages pass; the Nix Rust suite records 1,135 passed, zero failed and one ignored across 244 batches. Installed source/launcher binding preserves all 1,053 Rust/adapter and 18 frontend files. Complete installed replay passes 24 finite Unicode/filter/cache streams (1,152 frames), 53,502 saved corpus/history words, 66,570 original annotated rows and 1,128,312 broad frames. The actual Nix launcher passes 114 policy decisions and diagrams, six exact exports and 50 complete Native entry endpoints; its owned server stops. The independent installed audit and all 24 corruption controls pass. Zero new corpus/history paths or gold recoveries are claimed for this family; earlier outcomes remain exact. The 398 prototype spacing probe-only changes retain their individual records and exact installed hashes. Seven audit families are wired into Nix. Complete inventory execution, main integration, quiet performance and wider/contextual/independent review remain open.
+  All four actual Nix packages pass; the Nix Rust suite records 1,135 passed, zero failed and one ignored across 244 batches. Installed source/launcher binding preserves all 1,053 Rust/adapter and 18 frontend files. Complete installed replay passes 24 finite Unicode/filter/cache streams (1,152 frames), 53,502 saved corpus/history words, 66,570 original annotated rows and 1,128,312 broad frames. The actual Nix launcher passes 114 policy decisions and diagrams, six exact exports and 50 complete Native entry endpoints; its owned server stops. The independent installed audit and all 24 corruption controls pass. Zero new corpus/history paths or gold recoveries are claimed for this family; earlier outcomes remain exact. The 398 prototype spacing probe-only changes retain their individual records and exact installed hashes. Seven audit families are wired into Nix. Complete current-main inventory execution, quiet performance and wider/contextual/independent review remain open.
 
   The [complete four-check Nix gate](familiar-geurae-complete-gate-familiar-geurae-installed-retry1.json.gz)
   now passes at 6506feb, with all 5,039 tracked files and 4,997 selected
@@ -3542,8 +3542,8 @@ review remains open under the completion review below.
   wider/contextual/independent linguistic review remain pending.
 
 - [ ] **COV-017cv — Apprehensive and exclamatory -ㄹ세라/-을세라.**
-  **Partial: original-source and independent finite tests pass in the private
-  prototype; main implementation pending.** Entries 86497 and 86619 preserve
+  **Partial: complete private Nix gate passed; tested implementation merged
+  into main, with current-main package validation and wider review pending.** Entries 86497 and 86619 preserve
   all three senses, separate short/full attachment notes and all 25 complete
   groups, including multi-line contexts. [Independent source proposals](fear-lsera-independent-source-proposals.json.gz)
   precede all 150 installed-baseline probes, which miss their intended lexical
@@ -3551,7 +3551,7 @@ review remains open under the completion review below.
   retain 37 required and nine forbidden named paths, covering original
   examples, allomorph boundaries, licensed prefinals, explicit copulas and
   irregular recovery. Four focused Rust regressions and seven grammar-label
-  tests pass; these ending changes are confined to the private prototype.
+  tests pass in the original prototype; main now receives its tested ending implementation.
   [Private validation evidence](fear-lsera-prototype-validation.json.gz)
   preserves the exact implementation delta and the completed captures,
   audits, failures and producers. Twelve full-source modes retain 4,344
@@ -3592,6 +3592,21 @@ review remains open under the completion review below.
   Main does not yet include these endings. Remaining: complete Nix inventory,
   main integration, family performance and
   broader contextual/independent linguistic review.
+
+  The [complete four-check Nix gate](fear-lsera-complete-gate.json.gz)
+  passes at cd6bbcb, preserving all 5,261 tracked files, 5,219 selected
+  inventory inputs, HEAD and index. Actual CLI/server, frontend, adapter and
+  inventory audits are independently built.
+  [Main merge preparation](fear-lsera-main-merge-preparation.json.gz)
+  preserves the previous 35,484 ledger cases and all 505 reviews, appending
+  only 46 authored cases and two scoped dispositions: 507 scoped/208 unreviewed.
+  Every tested runtime/catalog/fixture byte is retained; only the two recorded
+  inherited formatting wraps change in the fear test. Four main family tests
+  and whole main formatting pass; actual all-target Clippy with web features
+  and warnings denied also passes. Both Root expression/source/performance audit
+  sections survive conflict resolution. Current-main whole Rust, package
+  and source validation, quiet timing and wider contextual/independent review
+  remain open.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
   **Partial: source-backed private prototype with complete corpus and novel

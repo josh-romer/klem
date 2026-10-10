@@ -76,7 +76,38 @@
       "path": "gentle-command-merged-proof-gentle-command-merged-validation-10.log.gz",
       "sha256": "f28b1333280413350de8ec09f9845e693aede5d51034d09d03c7dd12867bee07",
       "original_sha256": "6edc9a21fdaa5d920ef7dcca5eba26af7e92f81223ef544c3f102a5b40c4198a"
+    },
+    "run_gentle_command_merged_full_rust.py": {
+      "path": "gentle-command-merged-proof-run_gentle_command_merged_full_rust.py.gz",
+      "sha256": "f9d98210c7efac9bae8f5510cd2c0d0c6f21d3db9e11d1add7dd5ad5515f2d3a",
+      "original_sha256": "8ff9a5858aec61b874d3906456af200d2390dbeb2fd487f74323a585a31f2604"
+    },
+    "gentle-command-merged-full-rust.json": {
+      "path": "gentle-command-merged-proof-gentle-command-merged-full-rust.json.gz",
+      "sha256": "d9018d69706bb94b44e86a46b35f7aeda6fa23da5b9f4115925de1d1dece7c8f",
+      "original_sha256": "36f18cad493cd02d703564d7b51ecd0ec6251bcca687724c9a937032d3f490f3"
+    },
+    "gentle-command-merged-full-rust.log": {
+      "path": "gentle-command-merged-proof-gentle-command-merged-full-rust.log.gz",
+      "sha256": "ba895b89de85fbe7a1268a8cf24d5a1cc98d70a4e489d2065c8bcfe4712024e1",
+      "original_sha256": "c9d4cd9dfc871af0b6033c43c06fea61129b75186ccb84fba4e2779f7b6db348"
+    },
+    "gentle-command-full-rust-initial-stop.json": {
+      "path": "gentle-command-merged-proof-gentle-command-full-rust-initial-stop.json.gz",
+      "sha256": "87619a489d0d874d0c68b845af12da99c4ff208120f9909b59e80f921a8ae41a",
+      "original_sha256": "3e790ae489568674cdbaa4ddac390a5279578aa588a6b8246bc6307f528220ae"
     }
   },
-  "scope": "Both complete branch histories preserved; unchanged active ledger/reviews and all original Native/source fields. Actual merged affected Rust, independent source/history/browser proofs, review queue, formatting and focused Clippy pass. Full merged Rust/Nix/installed browser/distribution/main/timing and contextual/independent review remain pending."
+  "scope": "Both complete branch histories preserved; unchanged active ledger/reviews and all original Native/source fields. Actual merged affected Rust, independent source/history/browser proofs, review queue, formatting and focused Clippy pass. Full merged Rust/Nix/installed browser/distribution/main/timing and contextual/independent review remain pending.",
+  "initial_full_rust_preparation_interruption": {
+    "state": "terminal-stopped",
+    "session": 84442,
+    "exit_code": 143,
+    "original_receipt_state": "running-preserved-not-completion",
+    "changed_input": "/tmp/klem-gentle-command/docs/inventory-review-queue.json",
+    "captured_queue_sha256": "0561e3730f0eae9bf90db1235e84e0165a3fba6620d4d2738e00396cb26d384f",
+    "final_queue_sha256": "5ae52eafd89b2f340869275da3bb6652a63c5df6fbd8d6328460d545b040bfe8",
+    "all_other_captured_inputs_unchanged": true,
+    "reason": "Final derived queue writer overlapped the source-frozen full Rust check. Stopped only verified owned process group; no baseline/judgment/runtime expectation changed. Complete new run remains required."
+  }
 }

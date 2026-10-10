@@ -3629,7 +3629,13 @@ review remains open under the completion review below.
   The [complete private Rust suite](formal-volitional-full-rust.json.gz) passes
   1,150 tests with zero failures, one ignored and 247 batches. All 1,663 selected
   inputs remain unchanged throughout the run. Main keeps its separate 504/211
-  inventory and has no formal volitional implementation yet. Remaining:
+  inventory and has no formal volitional implementation yet.
+  [Isolated integration](formal-volitional-integration-preparation.json.gz)
+  preserves all 507 parent reviews and the newer apprehensive proof; four
+  ending reviews bring its verified queue to 511/204. All 84 historical, ten
+  performance and ten inventory controls pass. Its exact tested runtime and
+  frontend sources are committed at 44553b8; all four actual Nix packages
+  are building with selected sources frozen. Remaining:
   actual Nix/installed/main integration,
   quiet performance and wider contextual/independent review.
 

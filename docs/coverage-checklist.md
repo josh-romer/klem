@@ -3540,8 +3540,8 @@ review remains open under the completion review below.
   broader contextual/independent linguistic review.
 
 - [ ] **COV-017cw — Formal volitional -렵니다/-으렵니다 and -렵니까/-으렵니까.**
-  **Partial: source-backed focused private prototype; full validation and
-  main integration pending.** The four original owners (86548, 86549, 86604,
+  **Partial: source-backed private prototype with complete corpus and novel
+  captures; browser and integration pending.** The four original owners (86548, 86549, 86604,
   86605) retain every sense, their separate short/full attachment notes and
   all 17 complete example groups, including multi-line dialogue. Statements
   express the speaker's intention; questions ask the listener's intention.
@@ -3570,10 +3570,25 @@ review remains open under the completion review below.
   contextually unjudged; 18 stream corruption controls pass. The initial
   viewer test failure from omitted historical fixtures is retained, and its
   complete repeat passes. Original spoken pronunciation notes remain separate.
-  Main code, shared ledger and inventory dispositions remain unchanged.
-  Remaining: complete parent restoration/shared-ledger regressions, original
-  source audit, corpus/history/gold/broad/browser checks, whole Rust,
-  actual Nix/installed/main integration, quiet performance and wider review.
+  Main ending code, shared ledger and inventory dispositions remain unchanged.
+  [Complete private distribution evidence](formal-volitional-distribution-validation.json.gz)
+  now preserves the independent original-source audit and 30 corruption
+  controls, including distinct question/statement homonym numbers. All 53,502
+  corpus/history words and 66,570 original annotated rows remain unchanged;
+  their complete audits pass five and ten controls. All eight broad workloads
+  retain 1,128,312 frames and every prior ordered path and dictionary assessment.
+  The novel adds 32 individually tracked paths, two spacing hypotheses and two
+  probe diagnostics; all 23 broad controls pass. Four separate manually reviewed
+  lexical targets recover 되다, 가다, 버리다 and 뜯어먹다. Every other observed
+  alternative remains unjudged, with complete original contexts and 11 complete
+  Native owners. Novel Rust regressions and a 222-decision browser capture
+  against the 69-entry Source/novel Native union are prepared but not executed;
+  the frontend build passes. Original expression homonyms 89455 (-렵니까) and
+  89456 (-으렵니까) are distinct from the ending owners and remain separately
+  unreviewed outside the 715-entry inventory.
+  Remaining: complete parent restoration/shared-ledger regressions, novel
+  Rust and browser checks, whole Rust, actual Nix/installed/main integration,
+  quiet performance and wider contextual/independent review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

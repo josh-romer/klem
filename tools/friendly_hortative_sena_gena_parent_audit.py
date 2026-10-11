@@ -40,12 +40,23 @@ def inputs(prepared=None):
     def raw(name):
         return files[name] if archived else (prepared / name).read_bytes()
     rraw = raw('friendly-hortative-sena-gena-parent-full-rust.json')
-    return dict(rust=json.loads(rraw), rust_raw=rraw,
+    values = dict(rust=json.loads(rraw), rust_raw=rraw,
                 rust_log=raw('friendly-hortative-sena-gena-parent-full-rust.log'),
                 rust_producer=raw('run_sena_gena_parent_full_rust.py'),
                 parent_raw=(ROOT / 'tests/fixtures/validity.json').read_bytes(),
                 parent_test_raw=(ROOT / 'tests/validity.rs').read_bytes(),
                 parent_manifest_raw=(ROOT / 'docs/friendly-hortative-sena-gena-parent-preservation-proof-archive.json').read_bytes())
+    if sha(values['parent_raw']) != PARENT_SHA or sha(values['parent_test_raw']) != PARENT_TEST_SHA:
+        import friendly_hortative_sena_promotion_audit as promotion
+        child = promotion.inputs()
+        promotion.inspect(child)
+        assert child['ledger']['current_raw'] == values['parent_raw'], 'whole actual promoted parent ledger'
+        assert child['actual_test_raw'] == values['parent_test_raw'], 'whole actual promoted validity regression'
+        values.update(actual_parent_raw=values['parent_raw'], actual_parent_test_raw=values['parent_test_raw'],
+                      verified_promotion=child,
+                      parent_raw=child['authored']['original/tests/fixtures/validity.json'],
+                      parent_test_raw=child['authored']['original/tests/validity.rs'])
+    return values
 
 
 def inspect(v, current_profiles, original_profiles, production):
@@ -81,6 +92,20 @@ def inspect(v, current_profiles, original_profiles, production):
     assert parent['current_raw'] == v['parent_raw'], 'entire current parent ledger is independently audited'
     checked = gena.inspect(parent)
     assert checked['current_cases'] == 35764 and checked['current_reviews'] == 520, 'complete actual35764-case520-review parent'
+    verified_current = None
+    if sha((ROOT / 'tests/fixtures/validity.json').read_bytes()) != PARENT_SHA or sha((ROOT / 'tests/validity.rs').read_bytes()) != PARENT_TEST_SHA:
+        import friendly_hortative_sena_promotion_audit as promotion
+        child = v['verified_promotion']
+        verified_current = promotion.inspect(child)
+        assert v['actual_parent_raw'] == child['ledger']['current_raw'] == (ROOT / 'tests/fixtures/validity.json').read_bytes(), 'mandatory complete actual promoted ledger'
+        assert v['actual_parent_test_raw'] == child['actual_test_raw'] == (ROOT / 'tests/validity.rs').read_bytes(), 'mandatory complete actual promoted test bytes'
+        assert set(current_profiles) == set(original_profiles) == {'klem','corpus-adapter','web-assets'}, 'all three whole parent profiles'
+        for name, original in original_profiles.items():
+            current = current_profiles[name]
+            assert set(current) == set(original) and len(current) == (18 if name == 'web-assets' else 1158), 'every original1158/1158/18 profile member retained'
+            changed = {path for path in current if current[path] != original[path]}
+            assert changed == (set() if name == 'web-assets' else {'tests/fixtures/validity.json','tests/validity.rs'}), 'only exact two tested Gena-parent input changes'
+        current_profiles = promotion.parent_profiles(child, current_profiles)
     assert set(current_profiles) == set(original_profiles) == {'klem','corpus-adapter','web-assets'}, 'all three whole parent profiles'
     for name, original in original_profiles.items():
         current = current_profiles[name]
@@ -91,9 +116,16 @@ def inspect(v, current_profiles, original_profiles, production):
         assert all(r['frozen_inputs'][prefix + path] == digest for path, digest in current.items()), 'every current profile byte belongs to actual passed parent Rust source'
     for name in ['klem','corpus-adapter']:
         assert current_profiles[name]['tests/fixtures/validity.json'] == PARENT_SHA and current_profiles[name]['tests/validity.rs'] == PARENT_TEST_SHA, 'both Rust owners have exact tested parent changes'
-    return dict(parent_cases=35764, parent_reviews=520, unchanged_production_inputs=44,
+    result = dict(parent_cases=35764, parent_reviews=520, unchanged_production_inputs=44,
                 exact_changed_test_inputs=2, full_rust_tests=1212, original25_Sena_cases_promoted=False,
                 full_coverage_complete=False)
+    if verified_current is not None:
+        result.update(verified_current_shared_cases=verified_current['current_cases'],
+                      verified_current_shared_reviews=verified_current['current_reviews'],
+                      verified_current_full_rust_tests=verified_current['full_rust_tests'],
+                      actual_current25_Sena_cases_promoted=True,
+                      legacy_checkpoint_fields='Original35764/520/1212-test unpromoted parent; current complete promotion is verified_current_*')
+    return result
 
 
 def historical_profiles(v, current_profiles, original_profiles, production):

@@ -110,6 +110,13 @@ def inspect(v):
     profiles=selected['profiles']
     assert {name:len(value['files']) for name,value in profiles.items()}=={'klem':1158,'corpus-adapter':1158,'web-assets':18}, 'all1158/1158/18 actual compile profiles'
     assert v['current_profiles']=={name:value['files'] for name,value in profiles.items()}, 'every current compiled Rust frontend byte'
+    if sha((ROOT / 'tests/fixtures/validity.json').read_bytes()) != '605f5a1540fec9680143b5112a6dae2b57d52ccd03cba58167bcd10de1046d66':
+        assert v.get('verified_parent_update') is not None, 'mandatory complete promoted parent proof before historical revision projection'
+        import friendly_hortative_sena_promotion_audit as promotion
+        child = v['verified_parent_update'].get('verified_promotion')
+        assert child is not None, 'mandatory complete promotion child before historical revision projection'
+        promotion.inspect(child)
+        assert v['actual_current_profiles'] == child['current_profiles'], 'complete actual promoted profiles before historical revision projection'
     if v.get('verified_parent_update') is not None:
         import friendly_hortative_sena_gena_parent_audit as parent_update
         parent_update.inspect(v['verified_parent_update'], v['actual_current_profiles'],

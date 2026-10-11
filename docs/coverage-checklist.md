@@ -5200,9 +5200,30 @@ review remains open under the completion review below.
   rows and the whitespace check with every source byte, HEAD, index and six
   protected executables unchanged. The whole artifact archive preserves both
   failed producers, all original inputs and the completed controls/finalization.
-  A fresh complete Rust gate for the two changed compiled test inputs, updated
-  strict profile proof and main integration remain pending. Quiet performance
-  and contextual or independent Korean review also remain required.
+  [Complete promotion source and Rust proof](friendly-hortative-sena-promotion-rust-proof-archive.json)
+  now preserves seventeen whole originals. All 1,213 Rust tests and the original
+  doctest pass in 263 batches, with zero failures and one ignored benchmark;
+  every one of 262 Cargo targets and all 267 commands complete, including
+  formatting, warning-denied Clippy, the 715-entry queue and whitespace check.
+  Four actual committed Nix source evaluations bind every 1,158/1,158/18
+  compiled input to this same tested checkpoint. All 44 production inputs,
+  frontend files and six protected executable fingerprints remain unchanged.
+  The first source-selection failure remains failed, with its complete producer,
+  receipt and log preserved separately from the successful retry.
+  [The promotion guard](../tools/friendly_hortative_sena_promotion_audit.py)
+  verifies the entire current ledger and every tested and selected compiled byte
+  before exposing a historical parent profile. Its twenty-eight corruption
+  controls pass against the actual complete proof. The
+  [installed control archive](friendly-hortative-sena-promotion-public-proof-archive.json)
+  preserves the actual eighty-three-control run: those twenty-eight controls,
+  all fourteen original parent controls, all thirty-one original revision
+  controls and ten additional mandatory-child controls. Every original parent
+  and revision assertion remains intact; both original test files remain
+  byte-identical. Removing the full child proof, substituting historical profiles
+  for actual inputs or truncating current ledger/test bindings cannot authorize
+  a historical view. These guards and controls are wired into the Nix inventory
+  check. Full four-check Nix validation and main integration remain pending.
+  Quiet performance and contextual or independent Korean review remain required.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

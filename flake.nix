@@ -613,6 +613,9 @@
                 ./tools/test_friendly_hortative_sena_browser_audit.py
                 ./tools/friendly_hortative_sena_revision.py
                 ./tools/friendly_hortative_sena_gena_parent_audit.py
+                ./tools/friendly_hortative_sena_promotion_audit.py
+                ./tools/test_friendly_hortative_sena_promotion_audit.py
+                ./tools/test_friendly_hortative_sena_promotion_parent.py
                 ./tools/friendly_hortative_sena_ledger_draft_audit.py
                 ./tools/test_friendly_hortative_sena_ledger_draft_audit.py
                 ./tools/friendly_hortative_sena_ledger_audit.py
@@ -1304,7 +1307,10 @@
             KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_browser_audit.py'
             python tools/friendly_hortative_sena_revision.py
             python -m unittest discover -s tools -p 'test_friendly_hortative_sena_revision.py'
+            python tools/friendly_hortative_sena_promotion_audit.py
             python -m unittest discover -s tools -p 'test_friendly_hortative_sena_gena_parent_audit.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_promotion_audit.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_promotion_parent.py'
             python tools/friendly_hortative_sena_ledger_draft_audit.py
             python tools/friendly_hortative_sena_ledger_audit.py --draft
             python tools/friendly_hortative_sena_ledger_audit.py

@@ -1223,6 +1223,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             // KRDict 86548/86549/86604/86605: formal intention questions/statements.
             ("으렵니까", "렵니까", "으렵니까"),
             ("으렵니다", "렵니다", "으렵니다"),
+            // KRDict 76564/76567: friendly offers, with a retained ㄹ stem.
+            // Same-head expression homonyms have separate semantic owners.
+            ("으련", "련", "으련"),
             ("으려는", "려는", "으려는"),
             ("으려는가", "려는가", "으려는가"),
             ("으려는지", "려는지", "으려는지"),
@@ -2320,6 +2323,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.formal_volitional" => {
             "Recover original -렵니까/-으렵니까 intention questions and -렵니다/-으렵니다 intention statements with verb and honorific attachment, preserving separate original owners and contextual alternatives."
+        }
+        "ending.willingness_question" => {
+            "Recover -련/-으련 as canonical 으련 with vowel-or-ㄹ versus other-coda attachment. The ending offers the speaker's action; same-head expressions and contextual sense selection remain separate."
         }
         "formal_b.attested_stem_b" => {
             "Retain the exact Native 아름답네 formal-quotation witness without removing its lexical stem-final ㅂ; preserve ordinary 네 and mark the formal attachment tension unknown."

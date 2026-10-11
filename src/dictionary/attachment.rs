@@ -54,6 +54,7 @@ pub enum AttachmentRule {
     BareLiteraryDeclarative,
     BareLiteraryQuestion,
     VolitionalPromiseVerb,
+    WillingnessQuestionVerb,
     BareBackgroundVerb,
     BareNeuniVerb,
     BareGeolVerb,
@@ -1253,6 +1254,8 @@ impl Annotation {
                             None
                         } else if bare && form == "음세" && adjective {
                             Some(AttachmentRule::VolitionalPromiseVerb)
+                        } else if bare && form == "으련" && adjective {
+                            Some(AttachmentRule::WillingnessQuestionVerb)
                         } else if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if adjective && crate::engine::verbal_intention(form) {
@@ -1338,6 +1341,17 @@ impl Annotation {
                         // The reviewed sources list bare verbs. Generic
                         // prefinal hypotheses survive without claiming that
                         // this new final licenses every such combination.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "으련")
+                        && (!bare || morphs.iter().any(|c| matches!(c,
+                            Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Particle)))
+                    {
+                        // The original notes establish bare verbal attachment.
+                        // They do not certify prefinal or outer-particle
+                        // combinations. Preserve those paths without assigning
+                        // the offer ending's ownership to an expression homonym.
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible

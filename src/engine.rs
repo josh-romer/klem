@@ -1938,6 +1938,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 if matches!(ending.form, "으렵니까" | "으렵니다") {
                     p.rules.push("ending.formal_volitional".into());
                 }
+                if ending.form == "으련" {
+                    p.rules.push("ending.willingness_question".into());
+                }
                 if matches!(ending.form, "으련만" | "으련마는") {
                     p.rules.push("ending.counterfactual_ryeon".into());
                 }
@@ -3159,6 +3162,18 @@ fn auxiliary_inflections_allowed_for(
             {
                 return false;
             }
+            // Native 76564/76567 select verbs. Retain ambiguous lexical
+            // classes (including 있다); dictionary homonyms are assessed
+            // individually. Unlisted prefinal combinations remain hypotheses.
+            if bare
+                && m.form == "으련"
+                && matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                )
+            {
+                return false;
+            }
             // These class checks belong to the immediate bare owner.
             // A prefinal/other auxiliary establishes a distinct boundary.
             if bare
@@ -3385,7 +3400,10 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
             || copular_exclamation(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감" | "는고")
+            || matches!(
+                m.form.as_str(),
+                "음세" | "으련" | "는바" | "는걸" | "는감" | "는고"
+            )
     }) {
         return false;
     }
@@ -3756,7 +3774,10 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         literary_na_ending(&m.form)
             || neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바" | "는걸" | "는감" | "는고")
+            || matches!(
+                m.form.as_str(),
+                "음세" | "으련" | "는바" | "는걸" | "는감" | "는고"
+            )
     }) {
         return;
     }

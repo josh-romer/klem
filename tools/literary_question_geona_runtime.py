@@ -37,6 +37,8 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('conjectural-additive-validity.json',35,'669e3f979cbb6156dfa2444e67272b4cdd24151a276976b6c5cbe9b137acbb06','conjectural-additive'),
     ('conjectural-additive-copula-validity.json',6,'5c585034c57c61fb665a68a6acf949477cca054d1fb219c587f2f67ac7cada15','conjectural-additive copula'),
     ('conjectural-additive-novel-validity.json',15,'b0b3a87c59895f1a056ccb3525ae9a3e4b9e0536edb6729af8c8574f67341732','conjectural-additive novel'),
+    ('willingness-question-validity.json',10,'fb972dd5554f0f1016768cc98900b9d883702f11c481ca854c005191aeb1e769','willingness-question source'),
+    ('willingness-question-boundary-validity.json',12,'4e0e2d5d67b68c6fc3782a1d7457f8a3203f37e5acbfbdc3941e6ee58a5f66cf','willingness-question boundary'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

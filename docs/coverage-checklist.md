@@ -4786,8 +4786,20 @@ review remains open under the completion review below.
   initializes the same four ordered ending records with `vec!`. Parent source,
   binaries, all old fixtures, gold annotations and the shared 35,740 cases / 519
   reviews remain unchanged. The display label cites only its own -세나 owner;
-  related -세/-으세 entries remain separate. Full Rust/history/broad/gold and
-  CLI/browser/installed/Nix/main checks, independent artifact corruption tests,
+  related -세/-으세 entries remain separate.
+  The [independent source/baseline auditor](../tools/friendly_hortative_sena_source_audit.py)
+  and [42 integrity controls](../tools/test_friendly_hortative_sena_source_audit.py)
+  pass; their [complete actual proof](friendly-hortative-sena-source-audit-proof-archive.json)
+  preserves every original authoring/correction artifact, all full Native fields,
+  the installed parent source/binary binding and baseline output. The auditor
+  recomputes all policy inputs, UTF-8 spans, typed and lemma-role observations,
+  cache parity and complete receipt/log totals independently of rule IDs.
+  [The same 42 controls after reducing per-test copies](friendly-hortative-sena-source-controls-retry-proof-archive.json)
+  pass with every assertion retained; the combined run's final stale-queue
+  failure is preserved separately from those passing controls. Queue recovery
+  changes only evidence hashes, retaining all source/review rows and counts.
+  The Nix inventory check selects and runs both new modules. Full Rust/history/broad/gold and
+  CLI/browser/installed/full Nix/main checks, wider runtime integrity controls,
   quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.

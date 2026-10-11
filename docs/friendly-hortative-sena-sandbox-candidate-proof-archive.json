@@ -1,0 +1,64 @@
+{
+  "state": "actual-external-live-and-captured-Sena-evidence-modes123controls-passed",
+  "files": {
+    "validate_friendly_hortative_sena_sandbox_candidate.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-validate_friendly_hortative_sena_sandbox_candidate.py.gz",
+      "source_sha256": "b23c43d20bcf5335758e8084e3bf4049c0529d6422cbcefd9e14fed4a07f4877",
+      "archive_sha256": "c623dd0db718f177482b977c3753cdedfdc6634cc197df20ea078c048ab09e05"
+    },
+    "friendly-hortative-sena-sandbox-candidate.json": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-friendly-hortative-sena-sandbox-candidate.json.gz",
+      "source_sha256": "25900b2d4c1847366ca554770db9541832e8d0d0dd0f2395ab65617152c8c683",
+      "archive_sha256": "aa64486bd9445e9ad03017bb3734e974750d125508ea5fed74b7ff21bc830c01"
+    },
+    "friendly-hortative-sena-sandbox-candidate.log": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-friendly-hortative-sena-sandbox-candidate.log.gz",
+      "source_sha256": "eb6337b88812065689b63c392def482a36901f01fc07f8306e0f094e39259c14",
+      "archive_sha256": "7657871b43e8d0536edcbd1f06dd0e341f1226f30888f297c11e620dca336a77"
+    },
+    "friendly_hortative_sena_runtime_audit.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-friendly_hortative_sena_runtime_audit.py.gz",
+      "source_sha256": "e44f27cbe260cb785e0219141fdb0b5fa22a788c509ac4a7e0056d8b37c26780",
+      "archive_sha256": "18fbf8a321a2ac561f56bc788c91355f1c49da015fded5ee35571ef2bbf8b1e6"
+    },
+    "friendly_hortative_sena_wide_audit.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-friendly_hortative_sena_wide_audit.py.gz",
+      "source_sha256": "dff960d5e4b75bef3dcba4d150fca92b07ab20438fb1870c0d7108a4d0bc526d",
+      "archive_sha256": "f0232020f6ef8b6209caf3bb618ca42e5e0420904186e40c95ac4c50886e2696"
+    },
+    "test_friendly_hortative_sena_binary_evidence.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-test_friendly_hortative_sena_binary_evidence.py.gz",
+      "source_sha256": "86a8d9e9b1396269d83c76759216cf50a44c75786f1d944f24232a2bd2593787",
+      "archive_sha256": "d594cb6a33342fb4441a50c70ed4067ca3e373d6d1c9f338b022340551991344"
+    },
+    "test_friendly_hortative_sena_runtime_audit.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-test_friendly_hortative_sena_runtime_audit.py.gz",
+      "source_sha256": "4931b284c94e30bf6bd4f770c45b9697185b17b98412055acca7eaf85a044742",
+      "archive_sha256": "823da1eaab4aaa1e3a775e98ca75e345e379176c56f848196200015664bb5302"
+    },
+    "test_friendly_hortative_sena_wide_audit.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-test_friendly_hortative_sena_wide_audit.py.gz",
+      "source_sha256": "c1cc71c8c45289e49def77a92e51759daf4f345940b08c9fa3ca4259629e1c45",
+      "archive_sha256": "aefb72ee261c99703b9339e2e8350f0b49aaebb6783218a677426a1c363efa4a"
+    },
+    "archive_friendly_hortative_sena_sandbox_candidate_proof.py": {
+      "path": "friendly-hortative-sena-sandbox-candidate-proof-archive_friendly_hortative_sena_sandbox_candidate_proof.py.gz",
+      "source_sha256": "f1682480e06a5d380ca8879fbf3f32f10c7fe2664cb90e9298f6153e8ad0f777",
+      "archive_sha256": "2f775335ed41f2b51e9fc8273508e696a702385f3f62e30a6f159e4f02be847f"
+    }
+  },
+  "controls": 123,
+  "old_runtime_controls_live": 41,
+  "old_runtime_controls_captured": 41,
+  "new_binary_evidence_controls": 7,
+  "old_wide_controls_captured": 34,
+  "every_old41_and34_test_source_byte_exact": true,
+  "live_mode_verifies_all_six_actual_executable_files": true,
+  "captured_mode_explicitly_does_not_claim_live_executable_verification": true,
+  "captured_mode_checks_current44_production_and18_frontend_inputs_and_full_immutable_runtime_evidence": true,
+  "executable_file_read_denial_control_passed": true,
+  "source_head_index_and_protected_binaries_unchanged": true,
+  "scope": "External candidate validated before worktree integration. Explicit immutable artifact replay enables future Nix sandbox checks; no actual sandboxed/fullNix execution claimed.",
+  "actual_Nix_sandbox_execution": "pending",
+  "full_coverage_complete": false
+}

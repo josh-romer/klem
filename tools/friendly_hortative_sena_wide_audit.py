@@ -215,7 +215,7 @@ def inspect(v):
         check(v)
     return dict(cohort_words=53502,annotated_rows=66570,broad_frames=1128312,
                 unjudged_corpus_additions=1,historical_fixture_changes=0,native_heads=71,
-                native_owners=41,unmatched_heads=48,full_coverage_complete=False)
+                native_owners=41,unmatched_heads=48,binary_evidence=v['runtime']['binary_evidence'],full_coverage_complete=False)
 
 
 if __name__=='__main__':

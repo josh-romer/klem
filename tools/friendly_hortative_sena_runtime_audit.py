@@ -1,6 +1,7 @@
 """Independently verify Source-bound -세나 binaries and complete CLI comparisons."""
 import gzip
 import json
+import os
 import unicodedata
 from pathlib import Path
 
@@ -31,17 +32,31 @@ def archive(name, digest):
     return result, hashes, originals
 
 
-def inputs():
+def binary_mode(value=None):
+    mode = os.environ.get('KLEM_SENA_BINARY_EVIDENCE', 'live') if value is None else value
+    assert mode in {'live', 'captured'}, 'explicit live or captured binary evidence mode'
+    return mode
+
+
+def inputs(binary_evidence=None):
+    mode = binary_mode(binary_evidence)
     proof, hashes, originals = archive('friendly-hortative-sena-runtime-proof-archive.json', RUNTIME_SHA)
     selected, selected_hashes, selected_originals = archive(
         'friendly-hortative-sena-selected-source-proof-archive.json', SELECTED_SHA)
     binding = proof['friendly-hortative-sena-complete-runtime-binding.json']
+    current_binaries = ({name: sha(Path(row['path']).read_bytes()) for name, row in binding['binaries'].items()}
+                        if mode == 'live' else {name: row['sha256'] for name, row in binding['binaries'].items()})
+    parent_binaries = ({path: sha(Path(path).read_bytes()) for path in binding['protected_parent_binaries']}
+                       if mode == 'live' else binding['protected_parent_binaries'].copy())
+    evidence = dict(mode=mode, live_executable_files_verified=mode == 'live',
+                    binding_manifest_sha256=RUNTIME_SHA,
+                    binding_receipt_sha256=hashes['friendly-hortative-sena-complete-runtime-binding.json'])
     return dict(source=source.inputs(), hashes=hashes, originals=originals,
                 selected_hashes=selected_hashes, selected_originals=selected_originals,
                 selected=selected['friendly-hortative-sena-selected-source.json'],
                 binding=binding, streams=proof['friendly-hortative-sena-runtime.json'],
                 captures=proof['friendly-hortative-sena-runtime-records.json.gz'],
-                current_binaries={name: sha(Path(row['path']).read_bytes()) for name, row in binding['binaries'].items()},
+                current_binaries=current_binaries, parent_binaries=parent_binaries, binary_evidence=evidence,
                 current={p: sha((ROOT / p).read_bytes()) for p in binding['production_inputs']},
                 frontend={p: sha((ROOT / p).read_bytes()) for p in binding['frontend_inputs']})
 
@@ -81,7 +96,11 @@ def inspect_binding(v):
     assert set(binding['binaries']) == {'klem', 'server', 'adapter'}, 'all three captured binaries'
     assert v['current_binaries'] == {name: b['sha256'] for name, b in binding['binaries'].items()}, 'all actual current binary fingerprints'
     assert all(len(b['sha256']) == 64 and b['path'].startswith('/home/josh/projects/klem/.direnv/friendly-hortative-sena-target/debug/') for b in binding['binaries'].values()), 'own captured binary paths'
-    assert all(sha(Path(path).read_bytes()) == digest for path, digest in binding['protected_parent_binaries'].items()), 'all original parent binaries retained'
+    assert v['parent_binaries'] == binding['protected_parent_binaries'], 'all original parent binaries retained'
+    mode = binary_mode(v['binary_evidence']['mode'])
+    assert v['binary_evidence'] == dict(mode=mode, live_executable_files_verified=mode == 'live',
+        binding_manifest_sha256=RUNTIME_SHA,
+        binding_receipt_sha256=v['hashes']['friendly-hortative-sena-complete-runtime-binding.json']), 'honest immutable binary evidence scope'
 
 
 def word_additions(old, new):
@@ -210,7 +229,7 @@ def inspect(v):
     inspect_boundaries(v)
     return dict(cli_runs=36, cli_frames=1608, old_path_occurrences=2916, new_unjudged_path_occurrences=716,
                 required_checks=324, forbidden_checks=72, complete_native_owners=36,
-                production_inputs=44, frontend_inputs=18,
+                production_inputs=44, frontend_inputs=18, binary_evidence=v['binary_evidence'],
                 full_Rust_history_broad_gold_browser_installed_Nix_main_quiet_context_register_independent_review='pending',
                 full_coverage_complete=False)
 

@@ -4848,10 +4848,33 @@ review remains open under the completion review below.
   original test expectation failure, separate diagnostic and successful retry
   are retained. [Corpus regressions](../tests/friendly_hortative_sena_corpus.rs)
   preserve the full attributed sentence, gold row, Native owner, old candidate
-  order and CLI/library/filter/Unicode/cache parity; their current Rust
-  execution remains pending. The Nix inventory check now also selects and
-  runs both wide-audit modules; actual execution of this expanded selection is
-  pending. Full Rust/history guards and browser/installed/full Nix/main checks,
+  order and CLI/library/filter/Unicode/cache parity. The
+  [complete current Rust proof](friendly-hortative-sena-full-rust-current-proof-archive.json)
+  passes 1,211 tests across every one of 262 lib/bin/integration/example
+  targets, with one ignored test and zero failures; warning-denied Clippy,
+  formatting, source-queue verification and diff checks also pass. All 7,129
+  source files, Git revision/index and six protected current/parent executables
+  stay unchanged. Tests run serially to bound disk use, removing only passed
+  Cargo-emitted test harnesses. The original disk-full compilation attempt,
+  its valid failed receipt and limited log, the original example-cleanup guard
+  failure and both failed archiver attempts remain separate from the passing
+  retry. An incorrect original receipt-validity note is retained with its
+  correction. All original tests and assertions remain present.
+  The [actual expanded Nix selection](friendly-hortative-sena-wide-selected-source-proof-archive.json)
+  passes all 139 controls. Both Rust source profiles contain 1,158 files:
+  every previous 1,153 input is byte-identical and only the corpus test and
+  four attributed fixtures are added; all 18 frontend inputs stay unchanged.
+  [Explicit live/captured binary-evidence controls](friendly-hortative-sena-sandbox-candidate-proof-archive.json)
+  pass 123 checks, including all original 41 runtime tests in each mode and
+  all 34 wide tests without changing any assertion. Seven added controls
+  reject incorrect evidence scope and executable reads during captured replay.
+  Live mode remains the default and hashes the six actual executable files.
+  Captured mode verifies the complete immutable runtime artifacts and current
+  44 production / 18 frontend inputs, while explicitly reporting that it has
+  not verified live executable files. The Nix inventory check selects the new
+  controls and uses captured mode for these sandboxed auditors; actual
+  execution of that updated selection remains pending. Historical revision
+  guards and browser/installed/full Nix/main checks,
   quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.

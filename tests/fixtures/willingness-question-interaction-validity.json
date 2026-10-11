@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "review_status": "Independently authored synthetic structural interaction cases. Four required/four forbidden exact paths; original source/native/authoring and prototype preflight are separately preserved. Contextual and independent Korean review remain pending.",
+  "sources": {
+    "ending-76564-76567": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76567"
+  },
+  "cases": [
+    {
+      "id": "willingness-question-interaction-d-full",
+      "surface": "걸으련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "required",
+          "lemmas": [
+            "걷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Constructed morphological contrast: original ending76564/76567 bare-verb/allomorph notes, plus complete Native29667 걸으니 or Native66585 지으니. Irregular stem recovery retains the full 으 form; a shortened surface must not recover the same consonantal lexical head. This does not certify an original sentence or contextual sense."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-s-full",
+      "surface": "지으련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "required",
+          "lemmas": [
+            "짓다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Constructed morphological contrast: original ending76564/76567 bare-verb/allomorph notes, plus complete Native29667 걸으니 or Native66585 지으니. Irregular stem recovery retains the full 으 form; a shortened surface must not recover the same consonantal lexical head. This does not certify an original sentence or contextual sense."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-d-short",
+      "surface": "걸련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "걷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Constructed morphological contrast: original ending76564/76567 bare-verb/allomorph notes, plus complete Native29667 걸으니 or Native66585 지으니. Irregular stem recovery retains the full 으 form; a shortened surface must not recover the same consonantal lexical head. This does not certify an original sentence or contextual sense."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-s-short",
+      "surface": "지련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "짓다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Constructed morphological contrast: original ending76564/76567 bare-verb/allomorph notes, plus complete Native29667 걸으니 or Native66585 지으니. Irregular stem recovery retains the full 으 form; a shortened surface must not recover the same consonantal lexical head. This does not certify an original sentence or contextual sense."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-copula",
+      "surface": "학생이련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Original ending notes restrict this bare ending to verbs; this exact nominal/copula path must not borrow that license. Other lexical hypotheses remain unjudged."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-derived-adjective",
+      "surface": "학생답련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "The known adjectival 답다 derivation must not borrow the original bare verb ending license. This named structural exclusion preserves unrelated hypotheses."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-benefactive",
+      "surface": "먹어주련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "required",
+          "lemmas": [
+            "먹다",
+            "주다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Constructed composition of the ending bare-verb license with original auxiliary77245 verbal complement notes. Preserve connector and auxiliary ownership separately. Contextual sense and complete Native policy assessment remain separate."
+        }
+      ]
+    },
+    {
+      "id": "willingness-question-interaction-negative",
+      "surface": "먹지않으련",
+      "judgments": [
+        {
+          "id": "exact-structural-path",
+          "verdict": "required",
+          "lemmas": [
+            "먹다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "으련"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "required_rules": [
+            "ending.willingness_question"
+          ],
+          "source": "ending-76564-76567",
+          "reason": "Constructed composition of the ending bare-verb license with original auxiliary71581 verbal complement notes. Preserve connector and auxiliary ownership separately. Contextual sense and complete Native policy assessment remain separate."
+        }
+      ]
+    }
+  ]
+}

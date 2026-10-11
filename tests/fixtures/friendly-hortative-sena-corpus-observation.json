@@ -1,0 +1,687 @@
+{
+  "state": "single-unjudged-Sena-corpus-hypothesis-original-annotation-preserved",
+  "producer": {
+    "text": "\"\"\"Retain the sole observed corpus hypothesis alongside unchanged original gold.\"\"\"\nimport gzip\nimport hashlib\nimport json\nfrom pathlib import Path\n\nP = Path(__file__).resolve().parent\nROOT = P.parents[1]\nO = P / 'friendly-hortative-sena-corpus-observations.json'\nassert not O.exists()\nsha = lambda b: hashlib.sha256(b).hexdigest()\ncohort_path = P / 'friendly-hortative-sena-cohorts.json.gz'\ngold_path = P / 'friendly-hortative-sena-corpora.json.gz'\ncohort = json.loads(gzip.decompress(cohort_path.read_bytes()))\ngold = json.loads(gzip.decompress(gold_path.read_bytes()))\nassert cohort['inputs_unchanged'] and gold['inputs_unchanged']\nassert [r['surface'] for r in cohort['individual_changed_words']] == ['중세나']\nassert next(r for r in cohort['runs'] if r['family'] == 'history')['changed_words'] == []\nrun = next(r for r in gold['runs'] if r['corpus'] == 'kaist' and r['partition'] == 'test')\nrow = next(r for r in map(json.loads, run['jsonl'].splitlines()) if r.get('surface') == '중세나')\nassert row == dict(id='id:MH2_0180-s63/5', surface='중세나', expected=['중세'],\n                   matched=True, recovered=1, recovered_sets=[[0]])\npath = ROOT / run['source']\nraw = path.read_bytes()\nassert sha(raw) == run['source_sha256']\nblock = next(b for b in raw.split(b'\\n\\n') if b'# sent_id = MH2_0180-s63\\n' in b)\nstart = raw.index(block)\nfields = next(line.decode().split('\\t') for line in block.splitlines() if line.startswith(b'5\\t'))\nassert fields[1:5] == ['중세나', '중세+나', 'CCONJ', 'ncn+jcj']\nchange = cohort['individual_changed_words'][0]\nassert len(change['new_paths']) == 1\nnew = change['new_paths'][0]\nassert [l['text'] for l in new['lemmas']] == ['중다']\nassert new['morphemes'] == [dict(form='세나', kind='ending')]\nassert 'ending.friendly_hortative.sena' in new['rules']\nassert [p for p in change['after']['analyses'] if p in change['before']['analyses']] == change['before']['analyses']\nrecord = dict(\n    state='single-unjudged-Sena-corpus-hypothesis-original-annotation-preserved',\n    producer=dict(text=Path(__file__).read_text(), sha256=sha(Path(__file__).read_bytes())),\n    source=str(path.relative_to(ROOT)), source_sha256=sha(raw),\n    cohort_sha256=sha(cohort_path.read_bytes()), gold_sha256=sha(gold_path.read_bytes()),\n    observations_precede_runtime=False, historical_fixture_words_changed=0,\n    historical_allowances_assigned=False,\n    items=[dict(id='friendly-hortative-sena-kaist-MH2_0180-s63-5',\n                complete_original_conllu_block=block.decode(), sentence_byte_start=start,\n                complete_original_token_fields=fields, original_gold_row=row,\n                complete_original_word_analysis=change['before'], current_word_analysis=change['after'],\n                new_unjudged_paths=change['new_paths'], contextual_verdict='unjudged',\n                independent_korean_review='pending')],\n    shared_cases_reviews_changed=False, full_coverage_complete=False)\nO.write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\\n')\nassert sha(path.read_bytes()) == run['source_sha256']\nprint('Recorded exact original KAIST sentence/token/gold and one unjudged 중다+세나 hypothesis; no historical allowance or gold changes.', flush=True)\n",
+    "sha256": "4986b054812b4daac3b6a00a01d388af2d8e7daa75a91febaa51dcc7e7213c9c"
+  },
+  "source": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+  "source_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+  "cohort_sha256": "cae63559539b77d33e452c625b9b2d4a00bc1c8cc8b55b59c084f63d2a55e4e7",
+  "gold_sha256": "8354387dce6a577e30739e57cd2c0ce60e3a1a3790256b45d0aff0b8858a1931",
+  "observations_precede_runtime": false,
+  "historical_fixture_words_changed": 0,
+  "historical_allowances_assigned": false,
+  "items": [
+    {
+      "id": "friendly-hortative-sena-kaist-MH2_0180-s63-5",
+      "complete_original_conllu_block": "# sent_id = MH2_0180-s63\n# text = 더구나 그것은 헤겔 이전에는 중세나 근세에 있어서도 누구에게나 자각되지도 못할 만큼 명료하게 구현되어 있다.\n# translit = .deo.gu.na .geu.geos.eun .he.gel .i.jeon.e.neun .jung.se.na .geun.se.e .iss.eo.seo.do .nu.gu.e.ge.na .ja.gag.doe.ji.do .mos.hal .man.keum .myeong.ryo.ha.ge .gu.hyeon.doe.eo .iss.da.\n1\t더구나\t더구나\tADV\tmag\t_\t13\tadvmod\t_\tTranslit=.deo.gu.na|LTranslit=.deo.gu.na\n2\t그것은\t그것+은\tPRON\tnpd+jxt\t_\t13\tdislocated\t_\tTranslit=.geu.geos.eun|LTranslit=.geu.geos+.eun\n3\t헤겔\t헤겔\tPROPN\tnq\t_\t4\tcompound\t_\tTranslit=.he.gel|LTranslit=.he.gel\n4\t이전에는\t이전+에+는\tNOUN\tncn+jca+jxt\t_\t7\tdislocated\t_\tTranslit=.i.jeon.e.neun|LTranslit=.i.jeon+.e+.neun\n5\t중세나\t중세+나\tCCONJ\tncn+jcj\t_\t7\tobl\t_\tTranslit=.jung.se.na|LTranslit=.jung.se+.na\n6\t근세에\t근세+에\tADV\tncn+jca\t_\t5\tconj\t_\tTranslit=.geun.se.e|LTranslit=.geun.se+.e\n7\t있어서도\t있+어서+도\tADV\tpaa+ecs+jxc\t_\t13\tamod\t_\tTranslit=.iss.eo.seo.do|LTranslit=.iss+.eo.seo+.do\n8\t누구에게나\t누구+에게+나\tADV\tnpp+jca+jxc\t_\t9\tadvcl\t_\tTranslit=.nu.gu.e.ge.na|LTranslit=.nu.gu+.e.ge+.na\n9\t자각되지도\t자각+되+지+도\tADV\tncpa+xsv+ecx+jxc\t_\t11\tacl\t_\tTranslit=.ja.gag.doe.ji.do|LTranslit=.ja.gag+.doe+.ji+.do\n10\t못할\t못하+ㄹ\tVERB\tpx+etm\t_\t9\tadvcl\t_\tTranslit=.mos.hal|LTranslit=.mos.ha+ㄹ\n11\t만큼\t만큼\tNOUN\tnbn\t_\t12\tobl\t_\tOrigDeprel=mark|Translit=.man.keum|LTranslit=.man.keum\n12\t명료하게\t명료하+게\tSCONJ\tpaa+ecs\t_\t13\txcomp\t_\tTranslit=.myeong.ryo.ha.ge|LTranslit=.myeong.ryo.ha+.ge\n13\t구현되어\t구현+되+어\tVERB\tncpa+xsv+ecx\t_\t0\troot\t_\tTranslit=.gu.hyeon.doe.eo|LTranslit=.gu.hyeon+.doe+.eo\n14\t있다\t있\tAUX\tpx+ef\t_\t13\taux\t_\tOrigLemma=있+다|SpaceAfter=No|Translit=.iss.da|LTranslit=.iss\n15\t.\t.\tPUNCT\tsf\t_\t14\tpunct\t_\tTranslit=.|LTranslit=.",
+      "sentence_byte_start": 2000347,
+      "complete_original_token_fields": [
+        "5",
+        "중세나",
+        "중세+나",
+        "CCONJ",
+        "ncn+jcj",
+        "_",
+        "7",
+        "obl",
+        "_",
+        "Translit=.jung.se.na|LTranslit=.jung.se+.na"
+      ],
+      "original_gold_row": {
+        "id": "id:MH2_0180-s63/5",
+        "surface": "중세나",
+        "expected": [
+          "중세"
+        ],
+        "matched": true,
+        "recovered": 1,
+        "recovered_sets": [
+          [
+            0
+          ]
+        ]
+      },
+      "complete_original_word_analysis": {
+        "normalized": "중세나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "중섷다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중섷다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중셀다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중셀다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중셓다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "current_word_analysis": {
+        "normalized": "중세나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "중다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "세나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_hortative.sena"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중섷다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중섷다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중세다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중셀다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중셀다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "중셓다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "new_unjudged_paths": [
+        {
+          "lemmas": [
+            {
+              "text": "중다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "세나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.friendly_hortative.sena"
+          ],
+          "unchanged": false
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_korean_review": "pending"
+    }
+  ],
+  "shared_cases_reviews_changed": false,
+  "full_coverage_complete": false
+}

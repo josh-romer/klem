@@ -4820,8 +4820,38 @@ review remains open under the completion review below.
   changes spans or ownership, or borrows -세/-나. Unreviewed prefinal paths
   retain Unknown; bare known adjectives cannot borrow verb attachment, and
   사세나 retains both 살다 with ㄹ recovery and 사다 without it. Both modules
-  are selected and run by the Nix inventory check. Full Rust/history/broad/gold and
-  broader CLI/browser/installed/full Nix/main checks, wider runtime integrity controls,
+  are selected and run by the Nix inventory check. The
+  [actual expanded Nix-selected execution](friendly-hortative-sena-runtime-selected-source-proof-archive.json)
+  passes all 105 source and runtime controls from the same 44 production inputs.
+  [Complete wider comparisons](friendly-hortative-sena-wide-proof-archive.json)
+  preserve all 53,502 original corpus/history words, all 66,570 full annotated
+  rows and every output byte across eight streams totaling 1,128,312 frames.
+  No historical fixture word or broad frame changes; no historical allowance
+  is assigned. The only corpus addition is the unjudged 중다 + 세나 hypothesis
+  for KAIST MH2_0180-s63/5, whose original annotation remains 중세 + 나.
+  The complete original sentence, ten token fields and original gold recovery
+  are retained with a stable case ID. Only the KAIST test mean candidate count
+  increases; all gold rows, recall and other metadata remain unchanged.
+  [The independent wide auditor](../tools/friendly_hortative_sena_wide_audit.py)
+  and [34 corruption controls](../tools/test_friendly_hortative_sena_wide_audit.py)
+  pass with [all original audit artifacts retained](friendly-hortative-sena-wide-audit-proof-archive.json).
+  They rederive every cohort addition and full gold row, check whole-stream
+  fingerprints and original candidate counts, and preserve all 41 complete
+  Native owners for 71 new-path headwords, including nine additional owners
+  and 48 unmatched hypothetical heads. The original stopped dictionary
+  collector and its unknown terminal result remain separate from the passed
+  retry; only the collector's shadowed Git revision variable was corrected.
+  [The original sentence regression](friendly-hortative-sena-corpus-regression-proof-archive.json)
+  passes all 12 Unicode/filter/cache policies over 336 complete frames. The
+  original nominal 중세 + 나 reading stays compatible; unmatched 중다 has
+  Unknown compatibility and is excluded by both dictionary filters. The
+  original test expectation failure, separate diagnostic and successful retry
+  are retained. [Corpus regressions](../tests/friendly_hortative_sena_corpus.rs)
+  preserve the full attributed sentence, gold row, Native owner, old candidate
+  order and CLI/library/filter/Unicode/cache parity; their current Rust
+  execution remains pending. The Nix inventory check now also selects and
+  runs both wide-audit modules; actual execution of this expanded selection is
+  pending. Full Rust/history guards and browser/installed/full Nix/main checks,
   quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.

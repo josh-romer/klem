@@ -16,7 +16,9 @@ fn source_backed_judgments_pass_and_unreviewed_outputs_stay_visible() {
     assert_eq!(parent_report.required_total, 31427);
     assert_eq!(parent_report.forbidden_total, 4294);
 
-    let report = validity::evaluate(&fixture()).unwrap();
+    let mut long = fixture();
+    long.cases.truncate(35740);
+    let report = validity::evaluate(&long).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(report.required_total, parent_report.required_total + 25);
     assert_eq!(report.forbidden_total, parent_report.forbidden_total + 11);
@@ -26,6 +28,16 @@ fn source_backed_judgments_pass_and_unreviewed_outputs_stay_visible() {
         report.judged_nonidentity + report.review_queue.len()
     );
     assert!(report.review_queue.iter().all(|i| !i.analysis.unchanged));
+
+    let gena = validity::evaluate(&fixture()).unwrap();
+    assert!(gena.passed(), "{:?}", gena.violations);
+    assert_eq!(gena.required_total, report.required_total + 17);
+    assert_eq!(gena.forbidden_total, report.forbidden_total + 7);
+    assert_eq!(
+        gena.emitted_nonidentity,
+        gena.judged_nonidentity + gena.review_queue.len()
+    );
+    assert!(gena.review_queue.iter().all(|i| !i.analysis.unchanged));
 }
 
 #[test]

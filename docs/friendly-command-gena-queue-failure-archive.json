@@ -1,0 +1,34 @@
+{
+  "state": "actual-full-gena-rust-and-source-pass-stale-queue-only",
+  "files": {
+    "validate_friendly_command_gena_initial_retry2.py": {
+      "path": "friendly-command-gena-queue-failure-validate_friendly_command_gena_initial_retry2.py.gz",
+      "source_sha256": "8d86380d7a0517cdeed1e1f91e4867e8bdf14ffd420efd5951ec33c6fa4c4330",
+      "archive_sha256": "9e387a2892012a92d81fb00252d5b50051dc9fe7b385788529365d3b296b0e22"
+    },
+    "friendly-command-gena-initial-validation-retry2.json": {
+      "path": "friendly-command-gena-queue-failure-friendly-command-gena-initial-validation-retry2.json.gz",
+      "source_sha256": "9141405fa483b145982d1b893403c45ea6e59a990e6468abf6c71c8ad9c09e58",
+      "archive_sha256": "0f5168e498462bf3e5ec9aa7beb20926ca4b4f42533855377e3b2a6c7693bb6c"
+    },
+    "friendly-command-gena-initial-validation-retry2.log": {
+      "path": "friendly-command-gena-queue-failure-friendly-command-gena-initial-validation-retry2.log.gz",
+      "source_sha256": "c9eae2305f12b9c6ae58964ea7ec1a648a03130a75979f6566d5dfd040e8b2c5",
+      "archive_sha256": "061da2f365abaa93ba948c18c91bfb2882120b94b64b506ca941ad19c5471dab"
+    },
+    "original-inventory-review-queue.json": {
+      "path": "friendly-command-gena-queue-failure-original-inventory-review-queue.json.gz",
+      "source_sha256": "ffa051bde1fbf959d1be0df9b65519e6cc1c59aab9efd42d0a9dd4c941a89657",
+      "archive_sha256": "5c62b30c978dc090d5c0bed507c517c7e6282990e13b03c2c1b1e03babd6f93a"
+    }
+  },
+  "rust_passed": 1200,
+  "rust_failed": 0,
+  "ignored": 1,
+  "batches": 255,
+  "source_controls": 22,
+  "whole_formatting_focused_clippy_passed": true,
+  "all_source_head_index_unchanged": true,
+  "cause": "Historical deoniman test extension changes an evidence-file hash in the inventory queue; rows/reviews/judgments unchanged.",
+  "fix": "Regenerate evidence_sha256 from unchanged715 original source entries; assert every queue row exactly unchanged. No code/data/fixture/expectation refresh and no repeat of passed fullRust required."
+}

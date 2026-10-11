@@ -7,6 +7,21 @@ from native_lmf import array, entry, verify_native_lmf
 from friendly_command_preparation import inspect as preparation
 
 
+def command_ledger(current_raw=None):
+    """Keep the original command owner view after verifying the complete Gena append."""
+    current_raw = ((ROOT / 'tests/fixtures/validity.json').read_bytes()
+                   if current_raw is None else current_raw)
+    ledger = json.loads(current_raw)
+    if len(ledger['cases']) > 35740:
+        import friendly_command_gena_ledger_audit as gena
+        values = gena.inputs()
+        assert values['current_raw'] == current_raw, 'complete current command ledger matches guarded Gena source'
+        gena.inspect(values)
+        ledger = json.loads(values['parent_raw'])
+        assert len(ledger['cases']) == 35740, 'exact fully guarded historical command owner view'
+    return ledger
+
+
 def inspect():
     assert preparation() == (59, 5, 4)
     p = read(ROOT / 'docs/friendly-command-preflight.json.gz')
@@ -56,7 +71,7 @@ def inspect():
         if mode == 'raw':
             before = {r['analysis']['normalized']: r['analysis'] for r in rows if r['kind'] == 'word'}
             assert before == p['before_analyses'] == f['before_analyses'] and len(before) == 4794
-    ledger = read(ROOT / 'tests/fixtures/validity.json')
+    ledger = command_ledger()
     assert [c for c in ledger['cases'] if c['id'].startswith('friendly-command-')] == f['cases']
     assert len(f['cases']) == 7
     assert sum(j['verdict'] == 'required' for c in f['cases'] for j in c['judgments']) == 4

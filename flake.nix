@@ -370,6 +370,7 @@
                 ./tools/ssik_adverb_outer_tails.py
                 ./tools/friendly_command_preparation.py
                 ./tools/friendly_command_audit.py
+                ./tools/test_friendly_command_historical_gena.py
                 ./tools/degree_expectation_audit.py
                 ./tools/degree_expectation_parent.py
                 ./tools/degree_expectation_runtime.py
@@ -599,6 +600,23 @@
                 ./tools/test_gentle_command_long_installed_audit.py
                 ./tools/gentle_command_long_ledger_audit.py
                 ./tools/test_gentle_command_long_ledger_audit.py
+                ./tools/friendly_command_gena_source_audit.py
+                ./tools/test_friendly_command_gena_source_audit.py
+                ./tools/friendly_command_gena_revision.py
+                ./tools/friendly_command_gena_runtime_audit.py
+                ./tools/test_friendly_command_gena_runtime_audit.py
+                ./tools/friendly_command_gena_browser_audit.py
+                ./tools/test_friendly_command_gena_browser_audit.py
+                ./tools/friendly_command_gena_installed_audit.py
+                ./tools/test_friendly_command_gena_installed_audit.py
+                ./tools/friendly_command_gena_promoted_installed_audit.py
+                ./tools/friendly_command_gena_promoted_streams.py
+                ./tools/test_friendly_command_gena_promoted_installed_audit.py
+                ./tools/friendly_command_gena_performance_audit.py
+                ./tools/test_friendly_command_gena_performance_audit.py
+                ./tools/friendly_command_gena_ledger_audit.py
+                ./tools/test_friendly_command_gena_ledger_audit.py
+                ./tools/test_friendly_command_gena_ledger_descendant.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1058,6 +1076,7 @@
             python tools/ssik_adverb_outer_tails.py
             python tools/friendly_command_preparation.py
             python tools/friendly_command_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_historical_gena.py'
             python tools/degree_expectation_audit.py
             python tools/degree_expectation_runtime.py
             python tools/degree_expectation_corpora.py
@@ -1252,6 +1271,21 @@
             python -m unittest discover -s tools -p 'test_gentle_command_long_installed_audit.py'
             python tools/gentle_command_long_ledger_audit.py
             python -m unittest discover -s tools -p 'test_gentle_command_long_ledger_audit.py'
+            python tools/friendly_command_gena_source_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_source_audit.py'
+            python tools/friendly_command_gena_runtime_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_runtime_audit.py'
+            python tools/friendly_command_gena_browser_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_browser_audit.py'
+            python tools/friendly_command_gena_installed_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_installed_audit.py'
+            python tools/friendly_command_gena_promoted_installed_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_promoted_installed_audit.py'
+            python tools/friendly_command_gena_performance_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_performance_audit.py'
+            python tools/friendly_command_gena_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_ledger_audit.py'
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_ledger_descendant.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

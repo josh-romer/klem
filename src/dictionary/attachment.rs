@@ -59,6 +59,8 @@ pub enum AttachmentRule {
     GentleCommandVerb,
     /// Native 79266/79265 list longer gentle permission/command forms on verbs.
     GentleCommandLongVerb,
+    /// Native 66968 lists verbs at the bare friendly-command boundary.
+    FriendlyCommandGenaVerb,
     BareBackgroundVerb,
     BareNeuniVerb,
     BareGeolVerb,
@@ -1262,6 +1264,8 @@ impl Annotation {
                             Some(AttachmentRule::WillingnessQuestionVerb)
                         } else if bare && form == "으려무나" && adjective {
                             Some(AttachmentRule::GentleCommandLongVerb)
+                        } else if bare && form == "게나" && adjective {
+                            Some(AttachmentRule::FriendlyCommandGenaVerb)
                         } else if bare && form == "으렴" && adjective {
                             Some(AttachmentRule::GentleCommandVerb)
                         } else if crate::engine::present_declarative(form) && adjective {
@@ -1360,6 +1364,21 @@ impl Annotation {
                         // They do not certify prefinal or outer-particle
                         // combinations. Preserve those paths without assigning
                         // ownership beyond the reviewed ending entries.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "게나")
+                        && ((!bare
+                            && (!matches!(pos, "동사" | "보조 동사")
+                                || morphs.iter().any(|component| matches!(component,
+                                    Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                        && analysis.morphemes[*j].form != "시"))))
+                            || morphs.iter().any(|component| matches!(component,
+                                Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Particle)))
+                    {
+                        // The explicit 으시 note licenses verb honorifics.
+                        // Other prefinals, outer particles, and adjective or
+                        // copula honorifics remain unreviewed hypotheses.
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible

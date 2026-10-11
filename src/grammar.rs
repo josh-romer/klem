@@ -767,6 +767,14 @@ pub(crate) fn endings() -> &'static [Ending] {
             boundary: Literal,
             connector: false,
         });
+        // KRDict 66968: a friendly command after a verb or honorific 으시.
+        // Consonant-initial 게나 has no 으 allomorph or irregular stem recovery.
+        out.push(Ending {
+            suffix: "게나",
+            form: "게나",
+            boundary: Literal,
+            connector: false,
+        });
         // KRDict 73877: colloquial friendly command after 오다 or an
         // 오다-final verb. The engine checks the recovered owner separately.
         out.push(Ending {
@@ -2261,6 +2269,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.friendly_command.n" => {
             "Separate colloquial friendly-command -ㄴ from a bare 오다-final stem. KRDict 73877 illustrates adults addressing children or small animals; speaker, addressee, register, lexical sense and auxiliary attachment remain contextual hypotheses."
+        }
+        "ending.friendly_command.gena" => {
+            "Separate friendly-command -게나 after a verb or the source-listed honorific -으시-. Keep regular consonant-initial stem boundaries and existing -게 plus -나 alternatives. KRDict 66968 describes 예사 낮춤; contextual sense and social/register appropriateness remain unresolved."
         }
         "ending.activity_reason" => {
             "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."

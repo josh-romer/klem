@@ -92,7 +92,11 @@ def inspect(v, check_current=True):
         assert binary['path'] == '/home/josh/projects/klem/.direnv/gentle-command-long-target' + suffixes[name], 'actual isolated revision executable'
         assert len(binary['sha256']) == 64, 'complete captured executable digest'
     if check_current:
-        assert v['current'] == production, 'current complete named production closure'
+        current_matches = v['current'] == production
+        if not current_matches:
+            import friendly_command_gena_revision as gena
+            current_matches = gena.accepts_production(v['current'])
+        assert current_matches, 'current complete named production closure'
     return production
 
 
@@ -101,7 +105,10 @@ def accepts_production(current):
     v = inputs(); expected = inspect(v)
     relative = {str(Path(p).relative_to('/tmp/klem-gentle-command')): digest
                 for p, digest in current.items()}
-    return relative == expected
+    if relative == expected:
+        return True
+    import friendly_command_gena_revision as gena
+    return gena.accepts_production(current)
 
 
 def accepts_frontend(current, historical):
@@ -110,4 +117,7 @@ def accepts_frontend(current, historical):
     assert len(expected) == 18 and 'src/grammar-labels.json' in expected, 'complete historical18 frontend inputs'
     assert expected['src/grammar-labels.json'] == v['binding']['parent_production_inputs']['/tmp/klem-gentle-command/web/src/grammar-labels.json'], 'original frontend belongs to captured parent'
     expected['src/grammar-labels.json'] = production['web/src/grammar-labels.json']
-    return current == expected
+    if current == expected:
+        return True
+    import friendly_command_gena_revision as gena
+    return gena.accepts_frontend(current, historical)

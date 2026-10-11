@@ -20,7 +20,7 @@ SUITES = [('gentle-command-long-validity.json',25,'d5440ac1a4801573e78eca3a5fdd9
           ('gentle-command-class-interaction-validity.json',3,'655f08927753cc454373a47dff559e77b08b1afc80cc46c84bdf2abbd8bd5026')]
 
 
-def inputs(draft=False):
+def original_inputs(draft=False):
     docs = ROOT/'docs'
     parent_raw = gzip.decompress((docs/'gentle-command-long-parent-validity.json.gz').read_bytes())
     reviews_raw = gzip.decompress((docs/'gentle-command-long-parent-inventory-reviews.json.gz').read_bytes())
@@ -41,6 +41,19 @@ def inputs(draft=False):
                 suite_raw=[(ROOT/'tests/fixtures'/name).read_bytes() for name,_,_ in SUITES],
                 source_evidence=source_audit.inputs(),historical=original,
                 current_raw=current_raw,current_reviews=reviews,draft=draft)
+
+
+def inputs(draft=False):
+    values = original_inputs(draft=draft)
+    if not draft and len(json.loads(values['current_raw'])['cases']) > 35740:
+        import friendly_command_gena_ledger_audit as gena
+        complete = gena.inputs()
+        values['actual_current_raw'] = values['current_raw']
+        values['actual_current_reviews'] = values['current_reviews']
+        values['gena_append'] = complete
+        values['current_raw'] = complete['parent_raw']
+        values['current_reviews'] = json.loads(complete['parent_reviews_raw'])
+    return values
 
 
 def inspect(v):
@@ -91,11 +104,26 @@ def inspect(v):
         assert len(expected)==4 and review['judgments']==expected, 'all four original example groups per long owner'
     metadata = json.loads(v['draft_raw'])
     assert metadata['long25_authoring_precedes_runtime'] is True and metadata['novel8_authoring_precedes_runtime'] is False and metadata['other11novel_hypotheses_promoted'] is False, 'honest authoring and unjudged novel scope'
-    return dict(state='exact-long-command-append-and-scoped-reviews-passed',parent_cases=35704,
+    result = dict(state='exact-long-command-append-and-scoped-reviews-passed',parent_cases=35704,
                 active_cases=35740,added_cases=36,required=31452,forbidden=4305,
                 parent_reviews=517,active_reviews=519,unreviewed=196,
                 original25preauthored=True,novel8preauthored=False,other11rawnovel_promoted=False,
                 actual_shared_promotion=not v['draft'],full_coverage_complete=False)
+    if 'actual_current_raw' in v or 'actual_current_reviews' in v:
+        import friendly_command_gena_ledger_audit as gena
+        complete = v['gena_append']
+        assert complete['current_raw'] == v['actual_current_raw'], 'mandatory complete current Gena ledger bytes'
+        assert complete['current_reviews'] == v['actual_current_reviews'], 'mandatory complete current Gena review fields'
+        assert complete['parent_raw'] == v['current_raw'], 'historical long matches exact Gena parent'
+        assert sha(complete['parent_reviews_raw']) == gena.REVIEWS_SHA and json.loads(complete['parent_reviews_raw']) == v['current_reviews'], 'historical long reviews match exact Gena parent'
+        checked = gena.inspect(complete)
+        result.update(scope='historical-long35740-with-complete-current-Gena35764',
+                      complete_current_cases=checked['current_cases'],complete_current_reviews=checked['current_reviews'],
+                      complete_current_required=checked['required'],complete_current_forbidden=checked['forbidden'],
+                      gena_added_cases=checked['added_cases'])
+    else:
+        result['scope'] = 'complete-evaluated-long35740'
+    return result
 
 
 if __name__=='__main__':

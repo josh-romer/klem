@@ -97,10 +97,10 @@ class Controls(unittest.TestCase):
   # Completed suites retain even their unused source citations.
   completed=35014
   used.update(audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')['proposed_ledger']['sources'])
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json','willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json','gentle-command-validity.json','gentle-command-long-validity.json','gentle-command-long-novel-validity.json','gentle-command-class-interaction-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json','willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json','gentle-command-validity.json','gentle-command-long-validity.json','gentle-command-long-novel-validity.json','gentle-command-class-interaction-validity.json','friendly-command-gena-validity.json']:
    suite=audit.read(audit.ROOT/'tests/fixtures'/name);completed+=len(suite['cases'])
    if completed<=count:used.update(suite['sources'])
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json' ,'willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json','gentle-command-validity.json','gentle-command-long-validity.json','gentle-command-long-novel-validity.json','gentle-command-class-interaction-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json' ,'willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json','gentle-command-validity.json','gentle-command-long-validity.json','gentle-command-long-novel-validity.json','gentle-command-class-interaction-validity.json','friendly-command-gena-validity.json']:
    for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
     if key not in used:c['sources'].pop(key,None)
   return c
@@ -294,4 +294,53 @@ class Controls(unittest.TestCase):
   with self.assertRaisesRegex(AssertionError,'append-only ledger'):audit.verify_ledger(c,self.proposal)
  def test_coordinated_interaction_fixture_rewrite(self):
   self.coordinated_append_mutation('willingness-question-interaction-validity.json',35680,'willingness-question interaction')
+ def test_exact_current_gena_tail_and_parent_pass(self):
+  suite=audit.read(audit.ROOT/'tests/fixtures/friendly-command-gena-validity.json')
+  self.assertEqual(len(self.current['cases']),35764)
+  self.assertEqual(self.current['cases'][35740:],suite['cases'])
+  parent=audit.read(audit.ROOT/'docs/friendly-command-gena-parent-validity.json.gz')
+  self.assertEqual(self.ledger_through(35740),parent)
+  for ledger in [self.current,parent]:
+   self.assertEqual(audit.verify_ledger(ledger,self.proposal)['preserved_cases'],34920)
+ def test_each_gena_judgment_change_cannot_pass(self):
+  for index in range(35740,35764):
+   with self.subTest(case=self.current['cases'][index]['id']):
+    c=copy.deepcopy(self.current);c['cases'][index]['judgments'][0]['reason']='changed original Gena rationale'
+    with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_case_order_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'][35740:]=c['cases'][35740:][::-1]
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_missing_gena_case_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['cases'].pop()
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_unreviewed_extra_case_cannot_pass(self):
+  c=copy.deepcopy(self.current);extra=copy.deepcopy(c['cases'][-1]);extra['id']='unreviewed-gena-extra';c['cases'].append(extra)
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_source_identity_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['friendly-command-gena-66968']='https://invalid.example/owner'
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_source_omission_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources'].pop('friendly-command-gena-66968')
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_unused_source_addition_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['sources']['unreviewed-gena-source']='https://invalid.example/owner'
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_ledger_metadata_change_cannot_pass(self):
+  c=copy.deepcopy(self.current);c['invented_metadata']='changed'
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_gena_forbidden_promotion_cannot_pass(self):
+  c=copy.deepcopy(self.current);case=next(case for case in c['cases'][35740:] if case['judgments'][0]['verdict']=='forbidden');case['judgments'][0]['verdict']='required'
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(c,self.proposal)
+ def test_coordinated_gena_fixture_rewrite_cannot_pass(self):
+  import ast
+  c=copy.deepcopy(self.current);suite=audit.read(audit.ROOT/'tests/fixtures/friendly-command-gena-validity.json');later=audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')
+  c['cases'][-1]['judgments'][0]['reason']='coordinated changed Gena rationale';suite['cases'][-1]=copy.deepcopy(c['cases'][-1])
+  tree=ast.parse((audit.ROOT/'tools/literary_question_geona_runtime.py').read_text())
+  reviewed=next(ast.literal_eval(node.value) for node in ast.walk(tree) if isinstance(node,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='reviewed_appends' for t in node.targets))
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);fixtures=root/'tests/fixtures';fixtures.mkdir(parents=True)
+   for name,_,_,_ in reviewed:(fixtures/name).write_bytes((audit.ROOT/'tests/fixtures'/name).read_bytes())
+   (fixtures/'friendly-command-gena-validity.json').write_text(audit.json.dumps(suite))
+   with patch.object(audit,'ROOT',root):
+    with self.assertRaisesRegex(AssertionError,'reviewed friendly-command Gena preauthored fixture bytes'):audit.verify_ledger(c,self.proposal,later)
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,5239 @@
+{
+  "state": "complete-gena-history-and-unchanged-parent-fixture-capture-passed",
+  "captured_at": "2026-10-11T02:11:16.608977+00:00",
+  "source_files_sha256": {
+    "tests/fixtures/bieup-sources.json": "087a11b8f5a8b1a01dd85ba5ab7b373071bc5e94f44814fd9c1586ff381a1eb7",
+    "tests/fixtures/continuation-left-vowel-compat-judgments.json": "25a5ee46667b6f43c38e9f31227c326fd0c821bfba2ce4586b9d8dd7348f0cbd",
+    "tests/fixtures/deoniman-sources.json": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+    "tests/fixtures/doeda-complement-sources.json": "e069a758943e1d991e3ecfd8bc6050e53be7369bdf8491232c4302a86f8cf004",
+    "tests/fixtures/doeda-suffix-sources.json": "ec6383acc3e7c13a38c775b6eef0b2aa7f59f5a8b6963988a6e7d489bc2fdfbb",
+    "tests/fixtures/fear-lsera-additional-native-entries.json": "43c53beb1d503a4d80a25bd56b7060f8c2738919a925c9cff79ab50561a5f30e",
+    "tests/fixtures/fear-lsera-additional-native.json": "76e9bd635e99b06fa0f507e35d8dcf33baec6592b1fc0b7b8ed8050035abbc99",
+    "tests/fixtures/fear-lsera-native-entries.json": "7c4fab7d5de837c2f6b330c62f9fa206edc62c90d8b8bd9e8904dd5b834c9b30",
+    "tests/fixtures/fear-lsera-native.json": "c73ba2ab84cb619abb668272f3a348ae3a3762d8f77e9fb866e41dccd47f1d7b",
+    "tests/fixtures/future-question-additional-native.json": "d7ea0746c34bbe4dea6b50688015451b7250b01e4aaad3d5bc257ce57ecf4ec2",
+    "tests/fixtures/future-question-sources.json": "a8e4f4e0f62a56bce8c77045e01e08e7ffed3d160e8bedec672515eca7712c04",
+    "tests/fixtures/gam-question-sources.json": "2cd8ab46f043f4bc6c2c95872864c505e81f7c026702899d42327c7ea74b5394",
+    "tests/fixtures/krdict-adjectival-allomorph.json": "71f9e8c86ca7ec8c1288a0a45374e13a94ac909edd77b66c4b6bb222c9ca10ba",
+    "tests/fixtures/krdict-bieup.json": "72627637d2499b6a8f6f2230818b4094840f025947eabf0fe908c1810426f3f5",
+    "tests/fixtures/krdict-conjectural-aux.json": "38fddd8754b8cf25ac74e7b7bcb0d64307ce2f5d79e58eb7d369d2261f5776d1",
+    "tests/fixtures/krdict-copular-class.json": "463dee29d7405060e0d1909048488ed0334d43ac31f672a0aaaac13041ff2950",
+    "tests/fixtures/krdict-deoniman-english.json": "68c01844104645c7135b3ed9e18afdb1015eed697928a8a4794cbf31e61afce5",
+    "tests/fixtures/krdict-doeda-complement.json": "d938a8f01f754fb07a98d4b4cb0a7c59f6f4c45226adf47a2f1b38f35d66cb1b",
+    "tests/fixtures/krdict-doeda-native.json": "57beebf47e99868a53a08b8836eb87f5c38b2d5606593af0e0f85822c672dfd6",
+    "tests/fixtures/krdict-doeda-suffix.json": "5741f311d4574c299b569c00258831894b4a37fa9aa5ee8fcafc8b95ec5f3faf",
+    "tests/fixtures/krdict-exclamation.json": "437e091b002a1d989c8d715e721c3f173871ca623cbfff3a4da13e066620394c",
+    "tests/fixtures/krdict-future-question-additional.json": "570682c6970a96d4de7b3e10ba509a1852dac3222cde07c526a2b0ff11ce7474",
+    "tests/fixtures/krdict-future-question.json": "6a0294a06adcecbc99479ecc3da2a747855d5b0c40c13ac30783c3968572806d",
+    "tests/fixtures/krdict-gam-question.json": "d843d9b822bc13302c56a11814c2f267ece53c53309514c6d9546158e04f9b4c",
+    "tests/fixtures/krdict-neuni.json": "cf6554fad2a9ab0af136e4e431a89f23b7870ab106653bd9d162c3078ed6d1a2",
+    "tests/fixtures/krdict-past-prefinal-english.json": "33fd67e33e5d8e4f8e7be1e827b304e81cc9b7d8d1dbc71af43aa6cb6d308157",
+    "tests/fixtures/krdict-question-exclamation.json": "2a30236b9650d139ea7c642e9b275c3a25a19372d725c516d8db6c94710672b2",
+    "tests/fixtures/krdict-reported-deoni-english.json": "37d316922eeb551e4fe41a94c652860564838a50c8067a777376cfcc3921514b",
+    "tests/fixtures/krdict-reported-retrospective-additional.json": "dff4f3404d48709403c2c86d2e11df8a075027320a86cf1713bd51d79bce5aaf",
+    "tests/fixtures/krdict-request-aux.json": "658189aa5bc7fe7a7287ce1bcc5b9c54f222882b4c8de4ca90b1e1e6a7aec5ab",
+    "tests/fixtures/krdict-reu.json": "d58a80a874ad70ec098212fec5dd2ff1b3aa6e708ff7b75c5f608d9ea0dd97e6",
+    "tests/fixtures/krdict-written-vowel-compat.json": "c11238f0f891c63998ed509fcc1fd14c30304e173c3cbb9b318798ad1cc65713",
+    "tests/fixtures/literary-question-go-english.json": "1ea0abc9ccb9fa5ed11152f1fa74b56ea238a1d19c53912c3a9ee1b9383ce6f7",
+    "tests/fixtures/literary-question-go-native.json": "137f4c313e1e3ecdc90d5aeb4db4fa7cb3ea0b13f4f9ba875e7b2248dd9ae398",
+    "tests/fixtures/literary-question-go-spelling-spacing-english.json": "20f713ea49b69c8b87828d032cef542c10c67a033d6656f76d9718fca12a70da",
+    "tests/fixtures/literary-question-go-spelling-spacing-native.json": "ec75767b34cb81fe6f88ff55604d27e2bd631697c00b6386e92863939ca7813f",
+    "tests/fixtures/past-prefinal-native.json": "337d8fd4e657e4df744b3d158c83dba5404b251af451ec1faa90d0b85d2781c5",
+    "tests/fixtures/possessive-bound-noun-native.json": "4751f2f775e17bba8cca6265d80332a605cbd8f16596b2443ba7393d61dc2804",
+    "tests/fixtures/reported-deoni-native.json": "24e2809f7514eee63ed96ec061346d4429f74fef226fad0a0d8a552d785134b3",
+    "tests/fixtures/reported-retrospective-additional-native.json": "e84106024d587be8c359b781a6053fa9fa8779c40670a6243facd491fb518639",
+    "tests/fixtures/request-aux-sources.json": "a9fd62840b548e53e9084f24e5b09973f08e670fb0182cd75af195ff2e25ef2a",
+    "tests/fixtures/reu-sources.json": "307c9b8afeac912d4d8caf62f8ba69fc3477d3598b12a3eac2c1fdd8425bc053",
+    "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
+    "tests/fixtures/written-vowel-compat-sources.json": "072b22762bb2e0a3ec8ea7083a887d2148dbd1cf06ebe7b5e0c7cd7b4efb05b0"
+  },
+  "changed_words": {
+    "누구에게나": {
+      "before": {
+        "normalized": "누구에게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "누구",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "누구에게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "누구",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "누구에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena"
+            ],
+            "unchanged": false
+          }
+        ]
+      }
+    },
+    "머슴에게나": {
+      "before": {
+        "normalized": "머슴에게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "머스다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              },
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슿다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              },
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "after": {
+        "normalized": "머슴에게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "머스다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              },
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슴에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "머슿다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "음",
+                "kind": "ending"
+              },
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "보게나": {
+      "before": {
+        "normalized": "보게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "보",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "보게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "보",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena"
+            ],
+            "unchanged": false
+          }
+        ]
+      }
+    },
+    "알려주시게나": {
+      "before": {
+        "normalized": "알려주시게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "알려다",
+                "kind": "predicate"
+              },
+              {
+                "text": "주다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.yeo_absorption",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_honorific",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려줄다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.rieul",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려줗다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "irregular.hieut",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "주다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.vowel",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "알려주시게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "알려다",
+                "kind": "predicate"
+              },
+              {
+                "text": "주다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.yeo_absorption",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려다",
+                "kind": "predicate"
+              },
+              {
+                "text": "주다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.yeo_absorption",
+              "ending",
+              "ending.friendly_command.gena",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_honorific",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "copula",
+              "copula.omitted_ending",
+              "copula.omitted_honorific",
+              "ending",
+              "ending.friendly_command.gena",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려주시다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려줄다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.rieul",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려줄다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.rieul",
+              "ending",
+              "ending.friendly_command.gena",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려줗다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "irregular.hieut",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알려줗다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena",
+              "irregular.hieut",
+              "prefinal.honorific"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "주다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.vowel",
+              "ending",
+              "particle",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "알리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "주다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "시",
+                "kind": "prefinal"
+              },
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.vowel",
+              "ending",
+              "ending.friendly_command.gena",
+              "prefinal.honorific"
+            ],
+            "unchanged": false
+          }
+        ]
+      }
+    },
+    "아무에게나": {
+      "before": {
+        "normalized": "아무에게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "아무",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ]
+      },
+      "after": {
+        "normalized": "아무에게나",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "아무",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "에게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "particle"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.recipient"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겋다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게나",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게나다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "나다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겔다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에겧다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "나",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "아무에다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.friendly_command.gena"
+            ],
+            "unchanged": false
+          }
+        ]
+      }
+    }
+  },
+  "individual_additions": [
+    {
+      "id": "friendly-command-gena-history-1",
+      "surface": "누구에게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "누구에다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-2",
+      "surface": "머슴에게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "머슴에다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-3",
+      "surface": "보게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "보다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-4",
+      "surface": "아무에게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "아무에다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [
+        {
+          "source": "tests/fixtures/deoniman-sources.json",
+          "source_sha256": "812b2c4645f6aab4683315a7737dce869c4d260a45a4ad0cbe829610a42e779a",
+          "pointer": "/source_before_analyses/아무에게나",
+          "complete_original_record": {
+            "normalized": "아무에게나",
+            "analyses": [
+              {
+                "lemmas": [
+                  {
+                    "text": "아무",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "에게",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "게",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.recipient"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에겋다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "ending",
+                  "irregular.hieut",
+                  "particle"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "hieut_irregular"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에겋다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "contraction.identical",
+                  "ending",
+                  "irregular.hieut"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "hieut_irregular"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게나",
+                    "kind": "unclassified"
+                  }
+                ],
+                "morphemes": [],
+                "rules": [
+                  "identity"
+                ],
+                "unchanged": true
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게나다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "contraction.identical",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "contraction.identical",
+                  "ending",
+                  "particle"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에게다",
+                    "kind": "predicate"
+                  },
+                  {
+                    "text": "나다",
+                    "kind": "auxiliary"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "어",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "auxiliary",
+                  "contraction.identical",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에겔다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.rieul",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에겔다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "deletion.rieul",
+                  "ending"
+                ],
+                "unchanged": false
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에겧다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으나",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "ending",
+                  "irregular.hieut"
+                ],
+                "unchanged": false,
+                "spelling_paths": [
+                  [
+                    {
+                      "morpheme_index": 0,
+                      "class": "hieut_irregular"
+                    }
+                  ]
+                ]
+              },
+              {
+                "lemmas": [
+                  {
+                    "text": "아무에다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "게",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "나",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending",
+                  "particle"
+                ],
+                "unchanged": false
+              }
+            ]
+          },
+          "kind": "original-word-analysis"
+        }
+      ],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-5",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "주다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "시",
+            "kind": "prefinal"
+          },
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.friendly_command.gena",
+          "prefinal.honorific"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-6",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알려주",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "시",
+            "kind": "prefinal"
+          },
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_honorific",
+          "ending",
+          "ending.friendly_command.gena",
+          "prefinal.honorific"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-7",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알려주다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "시",
+            "kind": "prefinal"
+          },
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena",
+          "prefinal.honorific"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-8",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알려주시다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-9",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알려줄다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "시",
+            "kind": "prefinal"
+          },
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "deletion.rieul",
+          "ending",
+          "ending.friendly_command.gena",
+          "prefinal.honorific"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-10",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알려줗다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "시",
+            "kind": "prefinal"
+          },
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.friendly_command.gena",
+          "irregular.hieut",
+          "prefinal.honorific"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    },
+    {
+      "id": "friendly-command-gena-history-11",
+      "surface": "알려주시게나",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "알리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "주다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "시",
+            "kind": "prefinal"
+          },
+          {
+            "form": "게나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.friendly_command.gena",
+          "prefinal.honorific"
+        ],
+        "unchanged": false
+      },
+      "original_occurrences": [],
+      "contextual_verdict": "unjudged",
+      "independent_review": "pending"
+    }
+  ],
+  "cohort_sha256": "7faba778ca2cae286abdac2f3cb8380a86ad1d09cd3e59f2c1187c83a1ccf564",
+  "cohort_scope": {
+    "words": 53502,
+    "corpus_words": 32096,
+    "history_words": 21406
+  },
+  "producer": {
+    "text": "\"\"\"Retain each observed history addition and exact unmodified fixture witness.\"\"\"\nimport datetime,gzip,hashlib,json,subprocess\nfrom pathlib import Path\nPREP=Path(__file__).resolve().parent;WORK=Path('/home/josh/projects/klem/.direnv/friendly-command-gena')\nOUT=PREP/'friendly-command-gena-history.json';LOG=PREP/'friendly-command-gena-history.log';assert not OUT.exists() and not LOG.exists()\nsha=lambda raw:hashlib.sha256(raw).hexdigest()\ncohort_path=PREP/'friendly-command-gena-cohorts.json.gz';cohort=json.loads(gzip.decompress(cohort_path.read_bytes()));assert cohort['state']=='complete-original-corpus-history-comparison-passed' and cohort['inputs_unchanged']\nchanged={}\nfor row in cohort['individual_changed_words']:\n surface=row['surface']\n if surface in changed:assert changed[surface]['before']==row['before'] and changed[surface]['after']==row['after']\n else:changed[surface]=dict(before=row['before'],after=row['after'])\nwords=set(changed);paths=subprocess.check_output(['git','ls-tree','-r','--name-only','3ad5839','tests/fixtures'],cwd=WORK,text=True).splitlines();source_files={};witnesses={word:[] for word in words}\ndef escaped(s):return s.replace('~','~0').replace('/','~1')\ndef walk(value,pointer,name,digest):\n if isinstance(value,dict):\n  if value.get('normalized') in words and isinstance(value.get('analyses'),list):\n   word=value['normalized'];witnesses[word].append(dict(source=name,source_sha256=digest,pointer=pointer,complete_original_record=value,kind='original-word-analysis'))\n  for key,item in value.items():\n   child=pointer+'/'+escaped(key)\n   if key in words and not (isinstance(item,dict) and item.get('normalized')==key and isinstance(item.get('analyses'),list)):\n    witnesses[key].append(dict(source=name,source_sha256=digest,pointer=child,complete_original_record=item,kind='original-surface-key'))\n   walk(item,child,name,digest)\n elif isinstance(value,list):\n  for i,item in enumerate(value):walk(item,pointer+'/'+str(i),name,digest)\nwith LOG.open('x') as log:\n for name in paths:\n  if not name.endswith('.json'):continue\n  raw=(WORK/name).read_bytes();old=subprocess.check_output(['git','show','3ad5839:'+name],cwd=WORK);assert raw==old,'do not refresh any parent fixture'\n  if not any(word.encode() in raw for word in words):continue\n  digest=sha(raw);source_files[name]=digest;walk(json.loads(raw),'',name,digest);log.write(name+' '+digest+'\\n');log.flush()\nitems=[]\nfor surface in sorted(changed):\n before=changed[surface]['before'];after=changed[surface]['after'];assert [a for a in after['analyses'] if a in before['analyses']]==before['analyses']\n for a in after['analyses']:\n  if a in before['analyses']:continue\n  assert 'ending.friendly_command.gena' in a['rules'];items.append(dict(id='friendly-command-gena-history-'+str(len(items)+1),surface=surface,analysis=a,original_occurrences=witnesses[surface],contextual_verdict='unjudged',independent_review='pending'))\nassert words=={'누구에게나','머슴에게나','보게나','알려주시게나','아무에게나'} and len(items)==11\nassert any(w['source']=='tests/fixtures/deoniman-sources.json' for w in witnesses['아무에게나'])\nrecord=dict(state='complete-gena-history-and-unchanged-parent-fixture-capture-passed',captured_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),source_files_sha256=source_files,changed_words=changed,individual_additions=items,cohort_sha256=sha(cohort_path.read_bytes()),cohort_scope=dict(words=53502,corpus_words=32096,history_words=21406),producer=dict(text=Path(__file__).read_text(),sha256=sha(Path(__file__).read_bytes())),inputs_unchanged=True,observations_precede_runtime=False,scope='Exactly11observedrawhypotheses across5changed53502cohortwords, matched to complete unmodified parent3ad5839fixtures and original JSON pointers. AlloriginalSourcefiles/candidates/order retained; Nativeclasses/contextual/lexicalsenses unjudged. This permits only finite original historical observations, not every future path carrying a rule ID; no gold or linguistic judgments refreshed/promoted.')\nOUT.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\\n');fixture=WORK/'tests/fixtures/friendly-command-gena-history.json';assert not fixture.exists();fixture.write_bytes(OUT.read_bytes());print('Captured',len(items),'exact unjudged additions /',len(changed),'words /',len(source_files),'original fixture files; SHA',sha(OUT.read_bytes()),flush=True)\n",
+    "sha256": "bcf16be3d570d6dcc26b7af8c428107817a18b381247fd7c894e1105fb82f752"
+  },
+  "inputs_unchanged": true,
+  "observations_precede_runtime": false,
+  "scope": "Exactly11observedrawhypotheses across5changed53502cohortwords, matched to complete unmodified parent3ad5839fixtures and original JSON pointers. AlloriginalSourcefiles/candidates/order retained; Nativeclasses/contextual/lexicalsenses unjudged. This permits only finite original historical observations, not every future path carrying a rule ID; no gold or linguistic judgments refreshed/promoted."
+}

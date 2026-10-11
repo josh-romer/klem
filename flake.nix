@@ -610,6 +610,8 @@
                 ./tools/test_friendly_hortative_sena_wide_audit.py
                 ./tools/friendly_hortative_sena_browser_audit.py
                 ./tools/test_friendly_hortative_sena_browser_audit.py
+                ./tools/friendly_hortative_sena_revision.py
+                ./tools/test_friendly_hortative_sena_revision.py
                 ./tools/friendly_command_gena_revision.py
                 ./tools/friendly_command_gena_runtime_audit.py
                 ./tools/test_friendly_command_gena_runtime_audit.py
@@ -1279,6 +1281,8 @@
             KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_wide_audit.py'
             KLEM_SENA_BINARY_EVIDENCE=captured python tools/friendly_hortative_sena_browser_audit.py
             KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_browser_audit.py'
+            python tools/friendly_hortative_sena_revision.py
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_revision.py'
             python tools/friendly_command_gena_runtime_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_runtime_audit.py'
             python tools/friendly_command_gena_browser_audit.py

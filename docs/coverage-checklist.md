@@ -4900,9 +4900,22 @@ review remains open under the completion review below.
   executable paths absent. Every previous 146-control tool input and every
   1,158/1,158/18 compiled input remains byte-identical; the 715-entry queue
   verifies without changing any original review or judgment.
-  Historical revision guards, the full historical Nix inventory and four
-  package/installed checks, installed browser, main integration, quiet timing
-  and shared-ledger promotion remain required. Contextual sense,
+  [Strict revision and historical controls](friendly-hortative-sena-revision-proof-archive.json)
+  pass 31 new closure controls and all unchanged 48 Gena runtime, 18 Gena
+  browser, 34 longer-command runtime and 37 installed-command controls.
+  The named Sena guard verifies all 44 production / 18 frontend inputs,
+  every 1,158 compiled input, the complete 1,211-test / 262-target Rust run,
+  source-bound wide comparison/audit receipts and every browser observation.
+  It explicitly uses captured evidence and retains the original Gena and
+  longer-command closures, failures and rejection assertions. Only the exact
+  proven child revision is accepted; missing JSON, unknown roots, duplicate
+  normalized paths, altered code/assets and unverified parent labels fail.
+  The first historical browser run exposed a web-prefix conversion error;
+  its complete failed producer, source, receipt and log remain separate from
+  the corrected retry. All original test files remain byte-identical.
+  The full historical Nix inventory and four package checks, installed Sena
+  runtime/browser, main integration, quiet timing and shared-ledger promotion
+  remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.
 

@@ -1,0 +1,36 @@
+{
+  "state": "fresh-main-gentle-validation-passed",
+  "files": {
+    "validate_main_gentle.py": {
+      "path": "gentle-command-main-validation-validate_main_gentle.py.gz",
+      "source_sha256": "2f81d6721b1c45eb6e5676fab959ce1e152df3cffb39376c6d2000b50d64d127",
+      "archive_sha256": "d22e73c0a5345029d4d271d9cacf63d3653b904e1bcb47c53a66f7fa4d7a2b4a"
+    },
+    "main-gentle-validation.json": {
+      "path": "gentle-command-main-validation-main-gentle-validation.json.gz",
+      "source_sha256": "a14d8df934bb5376ad5245595037f6bc68872f93e4d5b769b315e633795fbb19",
+      "archive_sha256": "4832a8d3bb27b8c36ef484f67de1d6bae6e895a67a5c0bb9635c524d443fa46a"
+    },
+    "main-gentle-validation.log": {
+      "path": "gentle-command-main-validation-main-gentle-validation.log.gz",
+      "source_sha256": "c33f3201788a5f2c837432167614bd8694df267f46b38a0be06f0ef411e7450e",
+      "archive_sha256": "16af5c0ca630ac2ee3d2a3ca8346729bdaf4bb233e1b02728f9f0950c48319cd"
+    }
+  },
+  "head": "191adc67b0dbc7d4c063add34defe78a71bed318",
+  "source_files": 6803,
+  "rust_tests": 44,
+  "rust_batches": 6,
+  "controls": 96,
+  "control_modules": {
+    "expression_conjectural_ledger": 34,
+    "gentle_command_ledger": 25,
+    "gentle_command_long_installed": 37
+  },
+  "all_source_head_index_unchanged": true,
+  "formatting_focused_clippy": true,
+  "complete715_entry_queue_verified": true,
+  "all35704cases517reviews_retained": true,
+  "full_finalmain_nix_and_long_private_promotion_quiet_context_independent_review": "pending",
+  "full_coverage_complete": false
+}

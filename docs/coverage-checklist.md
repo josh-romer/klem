@@ -4640,8 +4640,13 @@ review remains open under the completion review below.
   cases and two bounded dispositions. All 44 production inputs match the
   actual installed long-command binaries. Main's fourteen formal-volitional
   validation records and single consolidated COV-017cw entry are retained.
-  Long-ending proposals stay private. Fresh main runtime and full final-main
-  Nix checks remain required; branch results retain their recorded scope.
+  Long-ending proposals stay private. [Fresh main validation](gentle-command-main-validation-archive.json)
+  passes 44 Rust tests across six suites and 96 active/historical ledger and
+  installed/browser audit controls, formatting, focused Clippy and all 715
+  inventory rows. All 6,803 captured files, HEAD and index remain unchanged.
+  Full final-main Nix, long-case shared promotion, quiet performance and
+  contextual/independent review remain required; branch results retain their
+  recorded scope.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

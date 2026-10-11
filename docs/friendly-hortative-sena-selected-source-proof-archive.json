@@ -1,0 +1,115 @@
+{
+  "state": "actual-Git-backed-Nix-selected-Sena-source64controls-passed",
+  "files": {
+    "preflight_friendly_hortative_sena_selected_source.py": {
+      "path": "friendly-hortative-sena-selected-source-proof-preflight_friendly_hortative_sena_selected_source.py.gz",
+      "source_sha256": "76c37073f7cf7723ab12f34d51d679ff669374a6b185e2bd3ac1d96b77be7ecf",
+      "archive_sha256": "bd418dad3adc2a787906dc11ba47e0cd1803868646da13ef8389c6d0a2b24bbd"
+    },
+    "friendly-hortative-sena-selected-source.json": {
+      "path": "friendly-hortative-sena-selected-source-proof-friendly-hortative-sena-selected-source.json.gz",
+      "source_sha256": "7beeac72a1f45ff195ad20b03d7dcf867e39f840db0dc70089b9383352f343ef",
+      "archive_sha256": "09fea39935768e868bb0221f9bd3e9fd643e69a33971738e010ed5fdf7a04cd7"
+    },
+    "friendly-hortative-sena-selected-source.log": {
+      "path": "friendly-hortative-sena-selected-source-proof-friendly-hortative-sena-selected-source.log.gz",
+      "source_sha256": "a601486b562f8e0f6c52ff69afc97816388799f0eabc77d43d61a201f673d53c",
+      "archive_sha256": "16fec323bcf0dfcfafb051649cf4850c56cd0362c0887d30e9e5f7b9bbc8826c"
+    },
+    "archive_friendly_hortative_sena_selected_source_proof.py": {
+      "path": "friendly-hortative-sena-selected-source-proof-archive_friendly_hortative_sena_selected_source_proof.py.gz",
+      "source_sha256": "88467855892eeb270ffe4e3f16c2b2613aa1f000e1573b6da02212af8259dda7",
+      "archive_sha256": "807a89f690f2a891fdf759dd656cca92cbe0e8f143f258c8ed875b46bbcd63f8"
+    },
+    "friendly_hortative_sena_source_audit.py": {
+      "path": "friendly-hortative-sena-selected-source-proof-friendly_hortative_sena_source_audit.py.gz",
+      "source_sha256": "68e5f15fa288f4089cfddc9d67356d51452ba5176fa6750422959e6cf0dbf403",
+      "archive_sha256": "dc8b2e7168b76659dd7f06ae68df677c505b0b8953dcf8fc6270204cd6d1461c"
+    },
+    "test_friendly_hortative_sena_source_audit.py": {
+      "path": "friendly-hortative-sena-selected-source-proof-test_friendly_hortative_sena_source_audit.py.gz",
+      "source_sha256": "684e5b3c3a1a10cc494d8bce843b0c37fa7d8bf9285887bad013247fbc25b806",
+      "archive_sha256": "854faca3b2137930d40352739c8fa6417f5bdbebcdb2607587d4e4326b561e11"
+    }
+  },
+  "source_baseline_manifest_sha256": "1a2e9d3f9430b00c743e47ef262623ab19e33c29429af8a9fe50a72e34a3257b",
+  "source_groups": 5,
+  "private_cases": 25,
+  "required": 19,
+  "forbidden": 6,
+  "full_native_owners": 36,
+  "baseline_runs": 36,
+  "baseline_frames": 1608,
+  "required_observations": 324,
+  "original_raw_words": 63,
+  "independent_controls": 64,
+  "own_Sena_controls": 42,
+  "preserved_Gena_controls": 22,
+  "selected_source_files": 7000,
+  "tracked_source_files": 7042,
+  "production_inputs": {
+    "Cargo.lock": "c11caa3e24060175d0555d6fc322d37e6c1d48b05bf3dcee9ea5476ec5de2ba2",
+    "Cargo.toml": "28742313bee712f5f14385dfa63a372921750429e1838173360cb2873ec0bb1b",
+    "examples/audit_adjectival_allomorph.rs": "89913c3d11c5255e524a72ac373b93142e5e5477c4d43a102716479bc2f31001",
+    "examples/benchmark.rs": "64db272a2196a846b015c086e4fa3e34673d717deb2f40407178624795915d13",
+    "examples/benchmark_stream.rs": "8e0dfd9e229fb3c5134dfd8c82cb3f9782261e7773c1aa6a09bdf3bd4cd3e7ce",
+    "examples/dictionary_coverage.rs": "232d42c4627fd9c4d2e4003d647efa28ece234da273357c3e4265dd4ada571a6",
+    "examples/evaluate.rs": "7f6cfc3c45d6dc14a382d0120db8b9c239ded51faf827b869863780a04a6eb70",
+    "examples/evaluate_validity.rs": "ec91994b66ffc000cbf98ac59b9fa34573557e583a0eb7e35be86d318b2dff07",
+    "src/bin/klem-web/grammar_labels.rs": "ac6ab75991be36e474972d75f99594eef3d50c097e413d05b395233bcdeb1fe0",
+    "src/bin/klem-web.rs": "91b3f9869bd364279b195f83382f7033be95b380903f7e9015125fb41e41072f",
+    "src/breakdown.rs": "cb528237a9fe4123ea3b8d1a30629a33d8887e29140fe15900af0058a1aa6578",
+    "src/dictionary/attachment.rs": "e8b94c22cfda4f6dcefe3e5e1d1adf4420f83eb94f1f97b2cc0b244fdc304e23",
+    "src/dictionary/import.rs": "8466f3b3a5126740c2573c13c1110c26c260b8d37666347addaa3201d7086786",
+    "src/dictionary/pos.rs": "4d7f7073df0197d590a117647379286a5c862a25d55f51d2f82d27595cbcc868",
+    "src/dictionary/proper_names.rs": "10fbbe95d059a7b951512ba0f6f7d5294559ff9775f2e2290624fb55cec17b87",
+    "src/dictionary.rs": "15e7f65759695822ee6d783b52400a8cb19256b660a4a813e15617bc4db7008a",
+    "src/dictionary_cli.rs": "2a9351e21d7fe06125a68240f6bcd8e0aba18107d17f18458c8ee928eb135c68",
+    "src/doeda_identity.rs": "dc8edacdc1818559cba82cd5ca88b76726018f5f4a2513055a2218cfc0e3c3c2",
+    "src/doeda_native_forms.rs": "d6100f03307aca47e699fc82ce407d049a8ee8dadaa38005c7f915e46f77b65e",
+    "src/doeda_originless_forms.rs": "a3bb92e2b20a1d6273bfd89e4a6b2b90ec6cfe090cc892b05c10008b7aa03e6a",
+    "src/doeda_suffix.rs": "e1eeedd4dc3c5c443081ddabbcf7d6480a646281db9751809fd735738f0baff5",
+    "src/engine.rs": "1f991554797de25170bd603fdedf4024485cd4738acc20439b71ba5679c83ec4",
+    "src/grammar.rs": "f55d66567eb9a415d071001d59fe79e130141cbb53055125ea35f16565c43cdb",
+    "src/hada_remaining.rs": "515a4035e985a0899f3e6c4e910ffce75d1d6edd999a2d9bcb7f6ee5acd4a7f4",
+    "src/hada_suffix.rs": "e472bb275e990ef45dfe1dcefff15a85b7f792b35d852748d91a81592db7e4f7",
+    "src/hangul.rs": "615c24455744054bc6b2bf42dc28f8c0f7bcde0e252e0b3821423fe962e1f84d",
+    "src/lib.rs": "9ad53859e9ca7fb4b9ad96f26f7ea48a3fd403cf20ef42e606f088f0a421239f",
+    "src/main.rs": "6de1fd2066ace649ffaf03e055153657acb602497e398ffbe2dba9fee7ad1963",
+    "src/nominal_hwa.rs": "d8171d2c22639b0f6284437dcfe9e2209e99eac0e551bd04b5e70f9a4b56a1a9",
+    "src/nominal_si.rs": "4a30b3006574cce3abac427e3a0de6bd03d8d341f5573a09b2ec104e38cce686",
+    "src/predicate_compound.rs": "f01613089c5a045d7ddbcd179ccd37db1f95cd0a5351815bd7e87a44f58a25b9",
+    "src/pronunciation.rs": "c3133e56881c4e9d02f741e36ef5966166d04e8f1d624238a00c085b36c7ce0b",
+    "src/spacing/auxiliary.rs": "319ab3b3a82caaa619f6e34c7c196502175d71dae8e1808491763d68387e9672",
+    "src/spacing/bound_noun.rs": "05ad025e4716240d1e8f88a590760fdc900359f21c54cc6e9f3187ca55c7f411",
+    "src/spacing/nominal_bound_noun.rs": "f0ecd531cae7c4e35e08b1ca2e86d5cb1c743b6b0cf9429ca342e706d60dbc43",
+    "src/spacing/proper_name.rs": "c0091401a088ed6e5c87ce8649934a11a63c47bfd3e44a2260bd3e07450f3007",
+    "src/spacing.rs": "db94a63e8b945a6791ce54caa566c65c7dd20437fb4fc61d00ec2e25468e17c9",
+    "src/text.rs": "5ef733732a66f033e791826595c9ec50e46b67435e5c002b4594adff1e34d073",
+    "tools/adjectival_allomorph.rs": "e501aa062c23e82195a51b512263bf496876716a0eac6903bdf00aa39916a158",
+    "tools/corpus.rs": "ef0932a55f375ba79547af8b855a24a1a519528b6800b04f36331d3d5d8831ab",
+    "tools/hada_nominal_preservation.rs": "88c193f539a724e8960ad4020c214eba28d495c5e6b751a8b333cfcb432cd173",
+    "tools/validity.rs": "8ee2d87e71985d14126ed1516b7b02983603fe299fb6217cbe6e93cca2d81450",
+    "web/src/grammar-labels.json": "0f0d53bd630beba484bf606b3a6df1ef67612a24709f34046db24f829dc47f70",
+    "src/dictionary/proper_names.json": "09bf3eaa51efbce4d0c06c6f5ffde95b53b13e76b80543d9625a8aa4746e6445"
+  },
+  "declared_production_changes": [
+    "src/bin/klem-web/grammar_labels.rs",
+    "src/dictionary/attachment.rs",
+    "src/engine.rs",
+    "src/grammar.rs",
+    "web/src/grammar-labels.json"
+  ],
+  "compiled_profiles": {
+    "klem": 1153,
+    "corpus-adapter": 1153,
+    "web-assets": 18
+  },
+  "canonical_typed_matches": 0,
+  "required_lemma_role_matches": 0,
+  "actual_source_head_index_and_parent_inputs_unchanged": true,
+  "shared_cases_and_reviews_changed": false,
+  "original_metadata_correction_retained": true,
+  "full_Rust_history_broad_gold_CLI_browser_installed_Nix_main_quiet_context_register_independent_review": "pending",
+  "full_coverage_complete": false
+}

@@ -4798,7 +4798,13 @@ review remains open under the completion review below.
   pass with every assertion retained; the combined run's final stale-queue
   failure is preserved separately from those passing controls. Queue recovery
   changes only evidence hashes, retaining all source/review rows and counts.
-  The Nix inventory check selects and runs both new modules. Full Rust/history/broad/gold and
+  The Nix inventory check selects and runs both new modules. The
+  [actual Nix-selected source proof](friendly-hortative-sena-selected-source-proof-archive.json)
+  passes 64 controls (42 own and 22 preserved parent source controls), with all
+  44 production inputs, five declared changes and 18 frontend inputs verified.
+  Both Rust package source profiles contain 1,153 files, including the seven
+  new test/fixture files; broader historical runtime guards remain pending.
+  Full Rust/history/broad/gold and
   CLI/browser/installed/full Nix/main checks, wider runtime integrity controls,
   quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.

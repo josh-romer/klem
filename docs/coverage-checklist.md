@@ -4895,6 +4895,11 @@ review remains open under the completion review below.
   order and Native field. The audit's initial incorrect corpus-state guard
   and its terminal failure remain preserved; the correction matches the
   original retained state without changing the corpus result.
+  [The committed Git-selected browser audit](friendly-hortative-sena-browser-sandbox-proof-archive.json)
+  also passes all 32 controls in the actual Nix sandbox, with all six host
+  executable paths absent. Every previous 146-control tool input and every
+  1,158/1,158/18 compiled input remains byte-identical; the 715-entry queue
+  verifies without changing any original review or judgment.
   Historical revision guards, the full historical Nix inventory and four
   package/installed checks, installed browser, main integration, quiet timing
   and shared-ledger promotion remain required. Contextual sense,

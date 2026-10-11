@@ -4152,7 +4152,13 @@ review remains open under the completion review below.
   [Main merge preservation](willingness-main-merge-preservation.json) retains
   every original 35,651 case and source declaration, all 513 reviews and the
   earlier main proof links, adding only the 22 validated willingness cases.
-  Rule source matches the previously validated private branch. KRDict
+  Rule source matches the previously validated private branch.
+  [Fresh merged-main validation](ending-main-focused-proof-archive.json) passes
+  70 Rust tests across twelve ending, neighboring-rule and shared-ledger suites,
+  formatting, focused Clippy with warnings denied and the complete inventory
+  queue. All captured files, HEAD and index stay unchanged. Full final-main
+  Nix/installed/browser verification, later gentle-command integration and
+  contextual/independent review remain separate requirements. KRDict
   [-련 76564](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76564)
   and [-으련 76567](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76567)
   establish verb attachment: the short form follows a vowel or retained ㄹ,

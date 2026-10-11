@@ -4413,12 +4413,28 @@ review remains open under the completion review below.
   representation and exact original novel packet/Native fields. The shared
   35,704 cases and 517 reviews remain unchanged; all new proposals stay private.
 
-  Remaining: independent complete runtime/current-production-revision audit,
-  current test-source full verification, installed CLI/dictionary/browser/Nix/main,
-  quiet performance, plus contextual/register and independent Korean review.
-  Earlier runtime archives retain their exact production closure; a future
-  integration must explicitly bind this new production revision rather than
-  refresh or weaken the historical source comparison.
+  [Complete runtime audit validation](gentle-command-long-runtime-audit-proof-archive.json)
+  passes **99 controls**: 34 for the new complete runtime audit, 36 for the
+  historical runtime evidence and 29 for the historical installed evidence.
+  All 6,649 frozen files, HEAD and index remain unchanged. The new auditor
+  rederives all 36 source policies and 492 individual checks, every original
+  candidate/order/Native assessment, 48 unique complete Native owners,
+  53,502 corpus/history words, 66,570 annotated rows, all recorded changes
+  across eight broad streams, and the eight original novel contexts/proposals.
+  It rejects refreshed checksums with altered spans, gold, context or owners.
+  The historical audits retain their original captured 44 production inputs
+  and 18 frontend inputs. A separate named-revision guard accepts only the
+  exact compiled long-ending revision and its five declared changes; unknown
+  Rust or frontend edits still fail. This accepts source evolution while the
+  historical installed/browser results remain scoped to their original build.
+  Both failed audit drafts are preserved, including the complete first
+  99-control producer, receipt, log and original source versions. The new
+  checks and helper are included in the Nix inventory source and check commands.
+
+  Remaining: current test-source full verification, current installed
+  CLI/dictionary/browser/Nix/main, quiet performance, plus contextual/register
+  and independent Korean review. New installed/browser proof must use the
+  current revision; historical package results do not substitute for it.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -49,7 +49,15 @@ def inspect_packages(v):
         for p,digest in reference['closure']['production_inputs'].items():
             relative = str(Path(p).relative_to('/tmp/klem-gentle-command'))
             assert report['profiles'][name]['files'][relative] == digest, 'all44actual compiled Rust/data inputs'
-    assert v['current_frontend'] == report['profiles']['klem-web-assets']['files'], 'actual complete current frontend source'
+    historical_frontend = report['profiles']['klem-web-assets']['files']
+    current_matches = v['current_frontend'] == historical_frontend
+    if not current_matches:
+        # This remains proof of the historical installed browser. Only the
+        # exact separately captured long-ending label revision is accepted;
+        # it does not attest a new installed package or browser run.
+        import gentle_command_long_revision as revision
+        current_matches = revision.accepts_frontend(v['current_frontend'], historical_frontend)
+    assert current_matches, 'actual complete current frontend source'
     for name,package_name,program in [('klem','klem','klem'),('adapter','klem-corpus-adapter','klem-corpus-adapter'),('server','klem','klem-web'),('launcher','klem-web','klem-web')]:
         binary = report['binaries'][name]
         assert binary['path'] == report['packages'][package_name]+'/bin/'+program and report['frozen_inputs'][binary['path']] == binary['sha256'], 'actual bound immutable binaries'

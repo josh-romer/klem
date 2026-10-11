@@ -41,6 +41,9 @@ class Controls(unittest.TestCase):
     def test_frontend_source_cannot_differ(self):
         self.reject(audit.inspect_packages,('current_frontend',),lambda r:r.update({next(iter(r)):'changed'}),'actual complete current frontend source')
 
+    def test_unrecorded_catalog_revision_cannot_replace_captured_long_label(self):
+        self.reject(audit.inspect_packages,('current_frontend',),lambda r:r.update({'src/grammar-labels.json':'unrecorded'}),'actual complete current frontend source')
+
     def test_installed_binary_cannot_be_replaced(self):
         self.reject(audit.inspect_packages,('installed','binaries','klem'),lambda r:r.update(path='/wrong/klem'),'actual bound immutable binaries')
 

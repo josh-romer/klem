@@ -44,6 +44,9 @@ class Controls(unittest.TestCase):
     def test_current_production_cannot_differ(self):
         self.reject(audit.inspect_bindings, ('current_production',), lambda r: r.update({next(iter(r)): 'changed'}), 'current complete production closure')
 
+    def test_unrecorded_ending_revision_cannot_replace_captured_long_revision(self):
+        self.reject(audit.inspect_bindings, ('current_production',), lambda r: r.update({'/tmp/klem-gentle-command/src/grammar.rs': 'unrecorded'}), 'current complete production closure')
+
     def test_binary_identity_cannot_be_replaced(self):
         self.reject(audit.inspect_bindings, ('closure', 'binaries'), lambda r: r['klem'].update(sha256='changed'), 'exact actual executable identity')
 

@@ -1,0 +1,45 @@
+{
+  "state": "main-gentle-merge-original-cases-reviews-production-preserved",
+  "files": {
+    "tests/fixtures/validity.json": {
+      "path": "gentle-command-main-parent-tests-fixtures-validity.json.gz",
+      "source_sha256": "e5bf297ad75bfec83b8836c16e718796827deb71caf96f4332979e4102cad88e",
+      "archive_sha256": "57107a8132d0c7c6e3cd1b8236c4db044349fc10373e32b0b20bc322c895dc2e"
+    },
+    "docs/inventory-reviews.json": {
+      "path": "gentle-command-main-parent-docs-inventory-reviews.json.gz",
+      "source_sha256": "fd6a487eeaf98e0166f04115f1d3c664d695f4b1e2dc88a2cd47faac8a018950",
+      "archive_sha256": "08caf4398e3541384692847d43b05f318114180b0fd426fd41bfd2e9435dd7f4"
+    },
+    "docs/coverage-checklist.md": {
+      "path": "gentle-command-main-parent-docs-coverage-checklist.md.gz",
+      "source_sha256": "9cae2ea1b93f900a1cb23a157b5b04a69ff59ab7706b29d9115c536049280ff3",
+      "archive_sha256": "9156b6022f8812818cb70cc0d70380f23ff8f34e208d803c0f963b25b9a79ba2"
+    },
+    "docs/inventory-review-queue.json": {
+      "path": "gentle-command-main-parent-docs-inventory-review-queue.json.gz",
+      "source_sha256": "747fb05d71479ef6f942229b8ac39cea3e40081db06cccdd17ccd71ff0281b54",
+      "archive_sha256": "b46dbf0cb8cd1e26c3b9f6adc6ca7024c5a6b7b441d1b0e15ae08dde53ab987c"
+    },
+    "parent.json": {
+      "path": "gentle-command-main-parent.json.gz",
+      "source_sha256": "ced3deaec2b181021deddcb3b57fb7a91e7f756082bfe9c96afd24f5a5c1c413",
+      "archive_sha256": "98d61f5ec4475b4611c632c7608e5fd5975ab5168fe626f542affd19238cd690"
+    }
+  },
+  "parent_head": "375024280c99585bb910c3d32eb765e1cd9e8760",
+  "long_head": "a584b80b4f63789708841bf8ef881fd574d46885",
+  "original_cases": 35681,
+  "active_cases": 35704,
+  "added_short_cases": 23,
+  "original_reviews": 515,
+  "active_reviews": 517,
+  "added_bounded_reviews": 2,
+  "serialized_parent_case_bytes_unchanged": true,
+  "original_sources_reviews_order_unchanged": true,
+  "all44production_inputs_match_actual_installed_long": true,
+  "main_formal_ACA14_and_single_CW_preserved": true,
+  "long36private_proposals_promoted": false,
+  "current_main_runtime_and_complete_nix_verification": "pending",
+  "full_coverage_complete": false
+}

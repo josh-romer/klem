@@ -1,0 +1,58 @@
+{
+  "state": "complete-runtime-audit-validation-passed",
+  "files": {
+    "validate_gentle_command_runtime.py": {
+      "path": "gentle-command-runtime-validation-proof-validate_gentle_command_runtime.py.gz",
+      "source_sha256": "1e64b9c560bc54a095488030da4821f6aba1d9f98570ef03a84b4a3122f6c845",
+      "archive_sha256": "006b8de74674e097357f1401b637638b0bb5e90dfe1aa5dd82d38d9ab9a7db8a"
+    },
+    "gentle-command-runtime-audit-validation.json": {
+      "path": "gentle-command-runtime-validation-proof-gentle-command-runtime-audit-validation.json.gz",
+      "source_sha256": "0435a29e64d5f74b7694397c67b707adad37eea062091fd56ecd303e68e655f6",
+      "archive_sha256": "97b4e2f07c4477b0e77f175ee4ac8455ccbcc66c78742b2975ab0d95e3344bcf"
+    },
+    "gentle-command-runtime-audit-validation.log": {
+      "path": "gentle-command-runtime-validation-proof-gentle-command-runtime-audit-validation.log.gz",
+      "source_sha256": "674944429e5243015161e3f5f52a40342a73081296a398d5e9396dd94f62417e",
+      "archive_sha256": "915f7e1824e3e3cc9db5e700cc92cdbaa7da7e8a6ae0fb7224380caf32799c8e"
+    },
+    "gentle-command-runtime-queue-reconciliation.json": {
+      "path": "gentle-command-runtime-validation-proof-gentle-command-runtime-queue-reconciliation.json.gz",
+      "source_sha256": "877c524faa1db720d5491359f66a491c4faa23b00d3ffdd3d37d1143cde7656c",
+      "archive_sha256": "9ce5d1e0b678ae23c400980c90c549152274f25a65550c524dc0b9ba3f085ce0"
+    }
+  },
+  "controls": 77,
+  "runtime_controls": 35,
+  "source_controls": 16,
+  "history_controls": 16,
+  "inventory_controls": 10,
+  "source_files": 6499,
+  "all_inputs_head_index_unchanged": true,
+  "original_preparation_failures": [
+    {
+      "session_id": 75143,
+      "exit_code": 1,
+      "observed_assertion": "actual complete Rust receipt binding",
+      "cause": "New auditor incorrectly compared the earlier running receipt hash with the later completed receipt. Earlier captured running state retained; terminal Rust proof checked separately against the same frozen source/head."
+    },
+    {
+      "session_id": 23623,
+      "exit_code": 1,
+      "tests": 35,
+      "failed": 1,
+      "observed_assertion": "test_old_native_assessment_cannot_change: AssertionError not raised",
+      "cause": "Control mutated the first new reading rather than an original reading after new candidates changed indices. Corrected control locates the exact retained original path; no capture or judgment changed."
+    }
+  ],
+  "preparation_failure_scope": "Observed tool results recorded after execution; not purported original process log files. Complete original runtime data and immutable manifest unchanged.",
+  "private_gentle_judgments_promoted": false,
+  "full_coverage_complete": false,
+  "remaining": [
+    "current-source installed Nix packages and browser",
+    "private judgment promotion with original prefix preservation",
+    "main integration",
+    "quiet performance",
+    "wider contextual and independent Korean review"
+  ]
+}

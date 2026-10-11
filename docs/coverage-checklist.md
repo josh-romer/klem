@@ -4323,6 +4323,326 @@ review remains open under the completion review below.
   and contextual/independent review remain required.
 
 
+
+- [ ] **COV-017cz — Gentle permission and command -렴/-으렴.**
+  **Implemented on `coverage/gentle-command`, with main integration pending:**
+  the complete original entries
+  [-렴](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79340) and
+  [-으렴](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79343)
+  have eight source groups. Independently authored lexical/canonical proposals
+  precede runtime observation. The unchanged installed baseline returns none
+  of these eight lexical targets or 으렴 decompositions in any of the 24
+  original Unicode/filter/cache streams (1,620 frames); every output and source
+  byte is retained in the [prototype archive](gentle-command-prototype-proof-archive.json).
+  Canonical 으렴 now applies the vowel-or-ㄹ short and other-coda full boundary,
+  including source-attested 나으렴 → 낫다 and the separate 물어보다 lexical
+  compound and 묻다 + 보다 auxiliary alternatives in 물어보렴.
+  The [23 private stable judgments](../tests/fixtures/gentle-command-validity.json)
+  contain fifteen required and eight forbidden paths: eight original groups,
+  twelve regular/irregular allomorph boundaries, two known bare copula/답다
+  exclusions and the source auxiliary alternative. Other hypotheses stay
+  unjudged. The [Rust regressions](../tests/gentle_command.rs) preserve all
+  previous source candidates and their ordering, Unicode parity, all 47
+  complete original Native owners, per-owner verb/adjective distinctions and
+  Unknown compatibility for unlisted prefinals. The viewer label cites only
+  the two original ending owners. Focused validation passes 55 Rust tests,
+  including prior willingness/candidate/stress/related-ending/catalog checks,
+  whole formatting and focused Clippy with warnings denied. The offline catalog
+  fixture initially lacked the new ending owners; its failed result, unchanged
+  input binding and correction using the two complete original entries remain
+  archived. Native preparation failures also remain recorded; no original
+  source field, baseline or linguistic expectation was rewritten.
+  The [independent source audit](../tools/gentle_command_source_audit.py) pins
+  original authoring/baseline/Native archives and all private judgments;
+  sixteen corruption controls pass and are wired into Nix.
+  Shared-ledger/manual-review promotion, complete source/runtime/cohort/gold/
+  novel distribution, installed packages/browser, full Rust/Nix/main and quiet
+  performance remain open. The source's very informal register, permission
+  versus command choice, wider owner/prefinal/particle licenses, contextual
+  precision and independent Korean-language review are not certified.
+
+  The [merged checkpoint](gentle-command-merged-proof-archive.json) combines
+  this prototype with the complete willingness interaction/review history.
+  All 35,681 active cases and 515 manual reviews remain byte-identical; the
+  twenty-three gentle-command judgments stay private. The combined queue keeps
+  every original source, review and citation, adding only the two gentle-command
+  catalog links. All 72 source/history/browser-proof/inventory controls and
+  35 affected Rust tests pass, with whole formatting and focused Clippy. Every
+  captured file, HEAD and index remains unchanged during these checks. The
+  full merged runtime and remaining distribution/package/main checks stay open.
+
+
+  The [historical-attribution checkpoint](gentle-command-history-proof-archive.json)
+  preserves the actual complete-suite failure (182 tests passed before one
+  historical copula assertion failed), rather than refreshing its baseline.
+  All 53,502 original corpus/history words were compared against the actual
+  prior installed CLI. Every previous candidate and its order survives;
+  no corpus word changes, while eight history words gain eighteen raw paths.
+  The [individual history fixture](../tests/fixtures/gentle-command-history.json)
+  retains every unchanged original witness and available complete source group,
+  and actual prior installed -으련 counterpart analyses for each addition.
+  The complete prior counterpart records and original capture bytes are pinned;
+  fabricated extra parents and refreshed archives are rejected. Six historical
+  Rust suites now check these exact individual paths, retaining
+  their original assertions and counts. All 43 affected Rust tests, sixteen
+  history corruption controls, eleven strict ledger controls and 97 inherited
+  history controls pass, with formatting and focused Clippy; all captured
+  files, HEAD and index remain unchanged throughout. The ledger check verifies
+  the original scope and every separately pinned later append in full; it
+  rejects altered, missing, reordered or unreviewed tails. All preparation
+  failures and original outputs remain archived. These eighteen raw hypotheses
+  remain contextually unjudged with independent review pending.
+
+  The [complete runtime archive](gentle-command-runtime-proof-archive.json)
+  records the corrected full Rust run at `e79f160`: **1,182 passed, zero failed,
+  one ignored in 253 batches**, with all 6,474 source files, HEAD and index
+  unchanged. Actual binaries match the complete 44-file production closure,
+  including the compiled proper-name JSON. The earlier production binding
+  honestly retains its observation that the full suite was still running;
+  the completed result is a separate preserved receipt.
+  Actual CLI captures cover all **36 NFC/NFD, raw/headword/compatible and
+  zero/4,096-byte cache policies**, with 2,160 complete frames and 468 individually
+  checked source/required/forbidden observations. All original baseline paths,
+  byte spans, Native assessments and candidate order survive. Both actual CLI
+  versions return the same complete fields for all **47 Native owners**.
+  An explicitly synthetic adapter probe recovers all eight independently
+  proposed source lemmas, versus zero with the prior adapter; it is separate
+  from the annotated datasets. Both actual adapters also process all **66,570
+  original KAIST/GSD rows**, with no changed rows or summary deltas.
+
+  The complete eight-stream comparison retains all **1,128,312 original broad
+  output frames**. Candidate streams are unchanged; each of the five novel
+  policies gains command hypotheses for the same original `주렴` occurrence
+  at bytes 746,499–746,505. The archive retains the complete original paragraph,
+  every previous candidate and its Native assessment. In its rain simile,
+  a noun meaning a beaded curtain is a bounded contextual inference supported
+  by the preserved primary lexical reference; the actual KRDict snapshot has
+  no `주렴` headword. The standalone `주다 + 으렴` command remains a valid raw
+  possibility. This occurrence is not promoted as a correct contextual command,
+  other raw hypotheses remain unjudged, and independent review is pending.
+  The [runtime auditor](../tools/gentle_command_runtime_audit.py) checks the
+  original archive bytes, current production closure, actual commands, complete
+  policies, independent annotations and bounded review claims; its corruption
+  controls are wired into the Nix inventory check.
+
+  The [installed Nix/browser archive](gentle-command-installed-proof-archive.json)
+  preserves all four actual packages at `c834444`, all 1,182 release Rust tests
+  in 253 batches, and complete source profiles of 1,123 Rust/adapter files and
+  eighteen frontend files. Every compiled production input, including the
+  proper-name JSON, matches the source-bound prototype. Actual installed CLI
+  captures repeat all 36 source/filter/cache streams and 47 complete Native
+  lookups; the installed adapter repeats all 66,570 original annotated rows.
+  All eight broad streams repeat all 1,128,312 frames with exact output hashes,
+  original bytes and unchanged individual novel contexts. The installed Nix
+  launcher and SolidJS assets pass all 23 private cases: 138 Unicode/filter
+  policy decisions, ninety independently ordered required decompositions, six
+  complete exports matching the CLI and 47 full Native endpoints. Both ending
+  owners remain distinct, all eight forbidden paths remain absent, every
+  offered alternative follows CLI policy, no browser errors occur and the
+  owned server stops explicitly with SIGINT. All source files, HEAD and index
+  remain unchanged during the captures. [Desktop](gentle-command-installed-browser-desktop.png)
+  and [mobile](gentle-command-installed-browser-mobile.png) renders were inspected.
+  The original private-home-directory build failure and public-`/tmp` ENOSPC
+  compilation failure are retained; the same-source public-`/var/tmp` build
+  passes without changing a judgment or baseline.
+  The [installed auditor](../tools/gentle_command_installed_audit.py) and 28
+  corruption controls pass, checking exact package sources, all original
+  commands/captures, independent component order and complete export/entry
+  fields. The actual flake-selected runtime audit also passes all 35 controls.
+  [Complete installed/source/runtime/history/inventory validation](gentle-command-installed-validation-proof-archive.json)
+  passes all 105 corruption controls with 6,550 captured source files, HEAD
+  and index unchanged. The 35,681 active cases and 515 review entries remain
+  unchanged throughout.
+
+  The [shared-ledger draft](gentle-command-ledger-draft-proof-archive.json)
+  preserves every original 35,681 case and 515 review byte and proposes only
+  the exact 23 preauthored structural judgments and two bounded ending-owner
+  reviews. All 25 draft corruption controls passed before promotion. The exact
+  proposal is now applied to the shared ledger: **35,704 cases, 31,427 required
+  and 4,294 forbidden judgments**, with **517 scoped reviews and 198 unreviewed
+  entries**. The [append auditor](../tools/gentle_command_ledger_audit.py) binds
+  every original serialized parent case byte, every original review field and
+  only the 23 source-authored judgments and two scoped dispositions. Historical
+  expression/conjectural assertions retain their original 35,681-case scope;
+  a separate mandatory check validates the entire current append. The earlier
+  ledger verifier admits only the byte-pinned gentle fixture in integration
+  order. The eighteen historical additions and novel command hypotheses stay
+  unjudged. The [actual shared-promotion validation](gentle-command-promoted-proof-archive.json)
+  passes all **175 corruption controls** and **ten Rust tests**, including
+  evaluation of the complete 35,704-case ledger and the six original gentle
+  regressions. All 6,570 captured source files, HEAD and index remain unchanged
+  during both runs. The derived queue retains every original source row and
+  adds only the eight original-group judgment citations for the two ending
+  owners. The [actual Git-backed Nix selection](gentle-command-promoted-selected-proof-archive.json)
+  contains all new audit/dependency files and passes **97 controls** directly
+  from its 6,534 selected source files at `a9155d6`; every selected/current source
+  byte, HEAD and index remains unchanged. This proves the current selection,
+  not the complete inventory gate. Complete current inventory Nix, main
+  integration, quiet performance and wider contextual/independent review remain
+  open.
+
+- [ ] **COV-017da — Gentle command -려무나/-으려무나.**
+  The [original-source packet](gentle-command-long-source-proof-archive.json)
+  preserves both ending owners, 79266 and 79265, every complete original
+  example group, and all sixteen ending/lexical Native entries from the eleven
+  original exports. Eight independent typed targets were authored before any
+  candidate observation: 자려무나 → 자다, 나가려무나 → 나가다,
+  쓰려무나 → 쓰다, 지내려무나 → 지내다, 벗으려무나 → 벗다,
+  앉으려무나 → 앉다, 찾으려무나 → 찾다 and 있으려무나 → 있다.
+  Both original notes require verb stems: vowel/ㄹ short form versus other-coda
+  full form. Every 쓰다 and 있다 homonym is retained. The complete original
+  dialogue containing 기다리고 있으려무나 is preserved; the isolated-token
+  있다 target does not settle its cross-token auxiliary role or contextual
+  sense. The [actual prior installed baseline](gentle-command-long-baseline-proof-archive.json)
+  preserves all 24 NFC/NFD, raw/headword/compatible and zero/4,096-byte cache
+  policies, with 1,512 complete original output frames and unchanged inputs.
+  Each independently proposed lemma and decomposition is absent in every
+  policy. The original source targets precede these observations; neither
+  their fields nor a baseline is refreshed.
+
+  **Private implementation on `coverage/gentle-command-long`:** canonical
+  으려무나 now has a separate `ending.gentle_command_long` marker, source-owned
+  vowel/ㄹ short and other-coda full attachment, and the two original catalog
+  owners. The [25 independent private judgments](../tests/fixtures/gentle-command-long-validity.json)
+  were authored before the new rule or its output: sixteen required and nine
+  forbidden paths cover every original group, regular/ㄹ/ㄷ/ㅂ/ㅅ boundaries,
+  exact bare copula/답다 exclusions and an isolated joined auxiliary alternative.
+  The dictionary checks each immediate owner's verb class, retaining lexical
+  homonyms and leaving unlisted prefinal/outer-particle combinations unknown.
+  The fixture retains all sixteen original source Native owners and 27 complete
+  inherited boundary owners; every field and homonym imports unchanged.
+
+  The [source auditor](../tools/gentle_command_long_source_audit.py) checks
+  the original manifests/payload bytes, all eight whole original groups,
+  24-policy installed baseline, sixteen-source/twenty-seven-boundary Native
+  closure, exact independent judgments and both catalog owners. Fifteen
+  corruption controls reject rewritten targets/baselines, lost homonyms,
+  shortened source records and borrowed ending ownership. These checks are
+  wired into the Nix fileset and inventory commands.
+  [Focused validation](gentle-command-long-focused-proof-archive.json) passes
+  **36 Rust tests and forty controls**, formatting and Clippy with warnings
+  denied, with all 6,592 captured source files, HEAD and index unchanged. It
+  includes the complete 35,704-case shared ledger, the six prior gentle-command
+  tests, seven longer-form regressions, library ordering/label checks and thirteen
+  web API/label tests. The original baseline paths and relative order survive;
+  낫다 and 있다 verb/adjective entries receive separate ending assessments.
+  The [original first harness failure](gentle-command-long-judgments-proof-archive.json)
+  is preserved with its exact test source. The correction reads the original
+  baseline surface from `actual_record`; no source or baseline is rewritten.
+  The shared cases and 517 reviews remain unchanged; the new twenty-five
+  judgments stay private. The original 기다리고 있으려무나 dialogue remains
+  intact and does not establish a cross-token auxiliary/sense decision.
+
+  The [actual complete runtime archive](gentle-command-long-runtime-proof-archive.json)
+  preserves the whole Rust run at `6413c1b`: **1,189 passed, zero failed, one
+  ignored in 254 batches**, with 6,597 captured source files, HEAD and index
+  unchanged. A separate actual CLI/server/adapter build binds all 44 compiled
+  production inputs, including the proper-name JSON, and explicitly records
+  the five changed source/catalog files against the unchanged earlier capture.
+  Its observation that the full Rust suite was still running remains intact;
+  completed Rust evidence is a separate original receipt.
+  The actual CLI passes **36 Unicode/filter/cache streams, 2,100 complete frames
+  and 492 individually checked observations**. Every original source candidate,
+  Native assessment, token byte and candidate order remains. Both actual CLI
+  versions return the same complete fields for all 43 source/boundary owners.
+  All **53,502 original corpus/history words** retain identical output, and all
+  **66,570 original KAIST/GSD rows** and summaries remain unchanged.
+
+  The full **1,128,312-frame, eight-stream** comparison preserves every original
+  byte, candidate, Native assessment and relative order. The three candidate
+  streams are unchanged. Five novel policies each gain analyses at the same
+  eight individual original occurrences: 읽으려무나, 참으려무나, three 하려무나
+  occurrences, 오려무나, 앉으려무나 and 보려무나. The raw policy adds nineteen
+  hypotheses; each dictionary/spacing policy adds eight. All prior records,
+  complete original paragraphs and byte-specific tracking IDs are retained.
+  A separate eight-case structural novel fixture records specific lexical
+  proposals after runtime observation; it is not described as pre-observation
+  gold. Fifteen complete novel Native owners and every lexical homonym are
+  recovered from the eleven original exports. The [actual novel Native CLI proof](gentle-command-long-novel-native-proof-archive.json)
+  confirms every field byte-for-byte through both actual versions; together
+  with the original source/boundary set, 48 distinct owners are retained.
+  Other eleven raw hypotheses,
+  dictionary sense selection and social/register interpretation remain unjudged.
+  Original baseline and private twenty-five judgments are not refreshed.
+
+  The additional [derived-class interaction fixture](../tests/fixtures/gentle-command-class-interaction-validity.json)
+  requires the allowed 학생 + 답다 adjective derivation in 학생다워요 and forbids
+  the exact correctly vowel-inflected 학생다우렴 and 학생다우려무나 derivations.
+  It uses the actual single nominal 학생 lemma plus 답다 suffix representation,
+  with a mutation control against an actually emitted positive path. Earlier
+  unalternated stem exclusions do not substitute for this vowel-stem boundary.
+  The original erroneous two-lemma proposal and first compile failure are
+  preserved; no original judgment is rewritten to conceal them.
+  [Current individual-case validation](gentle-command-long-runtime-validation-proof-archive.json)
+  passes **18 Rust tests and 45 controls**, formatting and Clippy with warnings
+  denied, with 6,638 source files, HEAD and index unchanged. It includes every
+  original longer/shorter gentle regression, ordinary suffix behavior, eight
+  byte-tracked novel targets and complete novel dictionary imports. The source
+  auditor checks twenty corruption controls, including the additional target
+  representation and exact original novel packet/Native fields. The shared
+  35,704 cases and 517 reviews remain unchanged; all new proposals stay private.
+
+  [Complete runtime audit validation](gentle-command-long-runtime-audit-proof-archive.json)
+  passes **99 controls**: 34 for the new complete runtime audit, 36 for the
+  historical runtime evidence and 29 for the historical installed evidence.
+  All 6,649 frozen files, HEAD and index remain unchanged. The new auditor
+  rederives all 36 source policies and 492 individual checks, every original
+  candidate/order/Native assessment, 48 unique complete Native owners,
+  53,502 corpus/history words, 66,570 annotated rows, all recorded changes
+  across eight broad streams, and the eight original novel contexts/proposals.
+  It rejects refreshed checksums with altered spans, gold, context or owners.
+  The historical audits retain their original captured 44 production inputs
+  and 18 frontend inputs. A separate named-revision guard accepts only the
+  exact compiled long-ending revision and its five declared changes; unknown
+  Rust or frontend edits still fail. This accepts source evolution while the
+  historical installed/browser results remain scoped to their original build.
+  Both failed audit drafts are preserved, including the complete first
+  99-control producer, receipt, log and original source versions. The new
+  checks and helper are included in the Nix inventory source and check commands.
+
+  [Current installed and browser proof](gentle-command-long-installed-proof-archive.json)
+  now passes all four actual Nix packages at checkpoint `3648c0d`, including
+  **1,191 release Rust tests** across 254 batches, with one ignored test.
+  All 6,674 build inputs, HEAD and index remain unchanged. The actual installed
+  executables match every recorded output from 36 source policies, 48 complete
+  Native CLI owners, 66,570 annotated rows and 1,128,312 frames across eight
+  broad streams. Eleven additional novel/derived-class cases pass twelve
+  Unicode, dictionary-filter and cache policies; original byte spans and
+  candidate order are retained. Both earlier build failures remain preserved.
+  The actual installed SolidJS application passes 67 cases, 402 policy
+  decisions including 138 forbidden choices, 264 individual diagrams, six
+  exports matching the CLI and 62 complete Native entry responses. Desktop
+  and mobile renders were inspected without overflow; the owned server stops
+  cleanly. These results use the current compiled 44 production inputs and
+  all 18 frontend sources, preserving the historical installed proof separately.
+
+  [Independent installed/browser audit validation](gentle-command-long-installed-audit-proof-archive.json)
+  passes **37 controls**, with all 6,707 captured files, HEAD and index unchanged.
+  It rederives whole original corpus and dictionary outputs, every recorded
+  novel occurrence/context, additional-case spans and stable judgment indices,
+  dictionary filter choices, dropdown options, normalized component order,
+  source attribution and full exports. Corruption controls reject cropped
+  source groups, rewritten gold with refreshed checksums, replaced executable
+  or source bytes, missing policies, forbidden choices and incomplete Native
+  fields. The auditor and controls are selected by the Nix inventory check.
+  This is an evidence audit; contextual/register and independent Korean
+  linguistic review remain open. Novel proposals still follow runtime
+  observation, eleven other raw novel hypotheses remain unjudged, and the
+  shared 35,704 cases and 517 reviews are unchanged.
+
+  Remaining: complete current Nix inventory gate, main integration and final
+  main checks, quiet performance, plus contextual/register and independent
+  Korean review. Historical package results retain their original scope.
+
+  [Main gentle-command integration](gentle-command-main-merge-preservation.json)
+  retains every original 35,681 serialized case and source declaration and
+  all 515 ordered review records, adding only the 23 validated short-ending
+  cases and two bounded dispositions. All 44 production inputs match the
+  actual installed long-command binaries. Main's fourteen formal-volitional
+  validation records and single consolidated COV-017cw entry are retained.
+  Long-ending proposals stay private. Fresh main runtime and full final-main
+  Nix checks remain required; branch results retain their recorded scope.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -8765,6 +9085,8 @@ python3 tools/lexical_nada_review.py --verify
 python3 tools/predicate_auxiliary_spacing_runtime.py --verify docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz
 python3 -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_runtime.py'
 python3 tools/predicate_auxiliary_spacing_package.py
+python3 tools/gentle_command_long_installed_audit.py
+python3 -m unittest discover -s tools -p 'test_gentle_command_long_installed_audit.py'
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

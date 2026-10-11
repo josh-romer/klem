@@ -40,6 +40,7 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('willingness-question-validity.json',10,'fb972dd5554f0f1016768cc98900b9d883702f11c481ca854c005191aeb1e769','willingness-question source'),
     ('willingness-question-boundary-validity.json',12,'4e0e2d5d67b68c6fc3782a1d7457f8a3203f37e5acbfbdc3941e6ee58a5f66cf','willingness-question boundary'),
     ('willingness-question-interaction-validity.json',8,'529f6614d742d6606f1b3e5f66c9df3a769cd698a6b92ee90eb276b09f438de3','willingness-question interaction'),
+    ('gentle-command-validity.json',23,'bd886ed1a45ebcf67e2cfbc3e123f33ca3f0cb33b449cc88a99f58bab6b21fb7','gentle-command'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

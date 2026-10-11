@@ -55,6 +55,10 @@ pub enum AttachmentRule {
     BareLiteraryQuestion,
     VolitionalPromiseVerb,
     WillingnessQuestionVerb,
+    /// Native 79340/79343 list gentle permissions/commands on verbs.
+    GentleCommandVerb,
+    /// Native 79266/79265 list longer gentle permission/command forms on verbs.
+    GentleCommandLongVerb,
     BareBackgroundVerb,
     BareNeuniVerb,
     BareGeolVerb,
@@ -1256,6 +1260,10 @@ impl Annotation {
                             Some(AttachmentRule::VolitionalPromiseVerb)
                         } else if bare && form == "으련" && adjective {
                             Some(AttachmentRule::WillingnessQuestionVerb)
+                        } else if bare && form == "으려무나" && adjective {
+                            Some(AttachmentRule::GentleCommandLongVerb)
+                        } else if bare && form == "으렴" && adjective {
+                            Some(AttachmentRule::GentleCommandVerb)
                         } else if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if adjective && crate::engine::verbal_intention(form) {
@@ -1344,14 +1352,14 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible
-                        && ending.is_some_and(|i| analysis.morphemes[i].form == "으련")
+                        && ending.is_some_and(|i| matches!(analysis.morphemes[i].form.as_str(), "으련" | "으렴" | "으려무나"))
                         && (!bare || morphs.iter().any(|c| matches!(c,
                             Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Particle)))
                     {
                         // The original notes establish bare verbal attachment.
                         // They do not certify prefinal or outer-particle
                         // combinations. Preserve those paths without assigning
-                        // the offer ending's ownership to an expression homonym.
+                        // ownership beyond the reviewed ending entries.
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible

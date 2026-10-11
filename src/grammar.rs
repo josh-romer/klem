@@ -1226,6 +1226,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             // KRDict 76564/76567: friendly offers, with a retained ㄹ stem.
             // Same-head expression homonyms have separate semantic owners.
             ("으련", "련", "으련"),
+            // KRDict 79340/79343: gentle permissions/commands on verbs.
+            ("으렴", "렴", "으렴"),
+            // KRDict 79266/79265: longer gentle command/permission forms.
+            ("으려무나", "려무나", "으려무나"),
             ("으려는", "려는", "으려는"),
             ("으려는가", "려는가", "으려는가"),
             ("으려는지", "려는지", "으려는지"),
@@ -2326,6 +2330,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.willingness_question" => {
             "Recover -련/-으련 as canonical 으련 with vowel-or-ㄹ versus other-coda attachment. The ending offers the speaker's action; same-head expressions and contextual sense selection remain separate."
+        }
+        "ending.gentle_command_long" => {
+            "Recover -려무나/-으려무나 as canonical 으려무나 with vowel-or-ㄹ versus other-coda attachment to verb stems. Preserve contextual, sense and register alternatives separately."
+        }
+        "ending.gentle_command" => {
+            "Recover -렴/-으렴 as canonical 으렴 with vowel-or-ㄹ versus other-coda attachment to verb stems. This ending expresses gentle permission or a softened command; register and contextual sense selection remain separate."
         }
         "formal_b.attested_stem_b" => {
             "Retain the exact Native 아름답네 formal-quotation witness without removing its lexical stem-final ㅂ; preserve ordinary 네 and mark the formal attachment tension unknown."

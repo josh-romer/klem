@@ -1,5 +1,7 @@
 #[path = "deoniman_support/parent.rs"]
 mod deoniman_parent;
+#[path = "support/gentle_command_history.rs"]
+mod gentle_command_history;
 #[path = "support/literary_question_go_history.rs"]
 mod question_go_history;
 #[path = "support/literary_ri_prefinal_history.rs"]
@@ -100,6 +102,14 @@ fn frozen_source_orders_are_retained_and_new_paths_have_exact_parents() {
             .collect();
         assert_eq!(retained, old.analyses, "{word}");
         for a in new.analyses.iter().filter(|a| !old.analyses.contains(a)) {
+            if a.rules.iter().any(|r| r == "ending.gentle_command") {
+                gentle_command_history::assert_addition(
+                    "tests/fixtures/friendly-command-sources.json",
+                    word,
+                    a,
+                );
+                continue;
+            }
             if a.rules.iter().any(|r| r == "ending.literary_question_go") {
                 question_go_history::assert_addition(
                     "tests/fixtures/friendly-command-sources.json",

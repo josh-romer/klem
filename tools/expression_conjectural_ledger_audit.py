@@ -11,22 +11,26 @@ sha = lambda raw: hashlib.sha256(raw).hexdigest()
 def inputs():
     docs = ROOT / 'docs'
     unpack = lambda name: gzip.decompress((docs / name).read_bytes())
-    return {'expression_raw': unpack('formal-volitional-expression-validated-private-validity.json.gz'),
+    import gentle_command_ledger_audit
+    gentle = gentle_command_ledger_audit.inputs()
+    # This auditor retains its exact historical scope; the entire current
+    # ledger and reviews receive a separate strict append check below.
+    return {'gentle_append': gentle, 'expression_raw': unpack('formal-volitional-expression-validated-private-validity.json.gz'),
             'conjectural_raw': unpack('conjectural-additive-validated-private-validity.json.gz'),
-            'current_raw': (ROOT / 'tests/fixtures/validity.json').read_bytes(),
+            'current_raw': gentle['parent_raw'],
             'parent_reviews_raw': unpack('expression-conjectural-parent-inventory-reviews.json.gz'),
             'willingness_parent_reviews_raw': unpack('willingness-question-parent-inventory-reviews.json.gz'),
             'willingness_reviews_raw': (docs / 'willingness-question-scoped-reviews.json').read_bytes(),
             'willingness_source': json.loads((ROOT / 'tests/fixtures/willingness-question-source.json').read_bytes()),
             'interaction_parent_raw': unpack('willingness-question-interaction-parent-validity.json.gz'),
             'interaction_raw': (ROOT / 'tests/fixtures/willingness-question-interaction-validity.json').read_bytes(),
-            'current_reviews': json.loads((docs / 'inventory-reviews.json').read_bytes()),
+            'current_reviews': json.loads(gentle['parent_reviews_raw']),
             'conjectural_cases': [case for name in ['conjectural-additive-validity.json', 'conjectural-additive-copula-validity.json', 'conjectural-additive-novel-validity.json'] for case in json.loads((ROOT / 'tests/fixtures' / name).read_bytes())['cases']],
             'expression_cases': json.loads((ROOT / 'tests/fixtures/formal-volitional-expression-validity.json').read_bytes())['cases'],
             'willingness_raw': [(ROOT / 'tests/fixtures' / name).read_bytes() for name in ['willingness-question-validity.json', 'willingness-question-boundary-validity.json']]}
 
 
-def inspect(v):
+def inspect_historical(v):
     assert sha(v['interaction_parent_raw']) == '5f695ecf212ef16b5d932c1a43bdf0df3d570e3eea6d46f191953ddc8ea0f799', 'exact pre-interaction ledger bytes'
     assert sha(v['interaction_raw']) == '529f6614d742d6606f1b3e5f66c9df3a769cd698a6b92ee90eb276b09f438de3', 'exact independently authored interaction judgments'
     assert sha(v['expression_raw']) == '4d5136fb9cdd8d2a89a612d9a3dc9e790956f5110bfb9c8e1ab7f7d2df1cdda4', 'exact expression historical ledger bytes'
@@ -94,6 +98,24 @@ def inspect(v):
             'unchanged_combined_parent_cases': 35651, 'willingness_added_cases': 22, 'interaction_added_cases': 8, 'unchanged_pre_interaction_cases': 35673,
             'original_manual_reviews': 511, 'unchanged_pre_willingness_reviews': 513, 'active_manual_reviews': 515, 'new_willingness_reviews': 2, 'unjudged_alternatives_promoted': False,
             'full_coverage_complete': False}
+
+
+def inspect(v):
+    historical = inspect_historical(v)
+    import gentle_command_ledger_audit
+    gentle = v['gentle_append']
+    complete = gentle_command_ledger_audit.inspect(gentle)
+    assert v['current_raw'] == gentle['parent_raw'], 'historical ledger matches exact gentle parent bytes'
+    assert v['current_reviews'] == json.loads(gentle['parent_reviews_raw']), 'historical reviews match exact gentle parent'
+    return {**historical, 'historical': historical,
+            'active_cases': complete['active_cases'], 'required': complete['required'],
+            'forbidden': complete['forbidden'], 'active_manual_reviews': complete['active_reviews'],
+            'scope': 'historical35681-and-complete-current35704',
+            'complete_current_cases': complete['active_cases'],
+            'complete_current_required': complete['required'],
+            'complete_current_forbidden': complete['forbidden'],
+            'complete_current_manual_reviews': complete['active_reviews'],
+            'gentle_added_cases': complete['added_cases']}
 
 
 if __name__ == '__main__':

@@ -1,5 +1,7 @@
 #[path = "support/formal_b_history.rs"]
 mod formal_b_history;
+#[path = "support/gentle_command_history.rs"]
+mod gentle_command_history;
 use klem::{LemmaKind, Lemmatizer, MorphemeKind, WordAnalysis};
 use serde_json::Value;
 use std::{path::PathBuf, sync::OnceLock};
@@ -119,6 +121,17 @@ fn frozen_nominal_package_candidates_are_preserved() {
             .filter(|a| a.rules.iter().any(|r| r == "ending.formal_b"))
         {
             formal_b_history::assert_addition("tests/fixtures/ssik-adverb-sources.json", word, a);
+        }
+        for a in new
+            .analyses
+            .iter()
+            .filter(|a| a.rules.iter().any(|r| r == "ending.gentle_command"))
+        {
+            gentle_command_history::assert_addition(
+                "tests/fixtures/ssik-adverb-sources.json",
+                word,
+                a,
+            );
         }
         let retained: Vec<_> = new
             .analyses

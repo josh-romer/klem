@@ -1,0 +1,49 @@
+{
+  "state": "actual-main23-Rust260-controls-passed",
+  "files": {
+    "validate_gena_main_integration.py": {
+      "path": "friendly-command-gena-main-validation-proof/validate_gena_main_integration.py.gz",
+      "source_sha256": "2ae077039c3b48aaa27729240b3ee9f71f68c15c5b3b14d609038b7ab49c54fe",
+      "archive_sha256": "dbd7f2d18a0d1a5978a2aabbf069073bc06d102363c44b9515712c943cffcd25",
+      "bytes": 5317
+    },
+    "friendly-command-gena-main-validation.json": {
+      "path": "friendly-command-gena-main-validation-proof/friendly-command-gena-main-validation.json.gz",
+      "source_sha256": "8582f3b6fa9f51f3d89432cde149b91a619d642977b6f555d338f8712b1505d5",
+      "archive_sha256": "eee05bb789dce15cd84d45d09d9dace509ab0dfd3f9bf3183e68bd136676d8c8",
+      "bytes": 1127760
+    },
+    "friendly-command-gena-main-validation.log": {
+      "path": "friendly-command-gena-main-validation-proof/friendly-command-gena-main-validation.log.gz",
+      "source_sha256": "64adde193730784ead4511810ca2592e5b9b0761f031d34c713e42e9fe9653aa",
+      "archive_sha256": "5fccf2d634fc5e888ffd053a1a879ff8d3e82fa6d90138fbf9b44193d128f865",
+      "bytes": 7503
+    },
+    "gena-main-before-inventory-queue.json.gz": {
+      "path": "friendly-command-gena-main-validation-proof/gena-main-before-inventory-queue.json.gz.gz",
+      "source_sha256": "74d7f9bfb3f12e23525756945583d5f4ed294fb7ca9c9a07abf34c375093577b",
+      "archive_sha256": "5b10a050dcccd1ec86fa4afd4fef01f7c9a8f833ede1ff61b1bb705aa1e24130",
+      "bytes": 486352
+    }
+  },
+  "head": "71c0a41f25a203da7562e3d3c9429a87b8618cc4",
+  "source_files": 8111,
+  "rust": {
+    "passed": 23,
+    "failed": 0,
+    "ignored": 0,
+    "batches": 3
+  },
+  "python_controls": 260,
+  "all_original_source_head_index_and_protected_binaries_unchanged": true,
+  "exact_installed_compile_input_identity": {
+    "klem": 1146,
+    "klem-corpus-adapter": 1146,
+    "klem-web-assets": 18
+  },
+  "producer": {
+    "text": "\"\"\"Preserve the complete actual main validation before updating its tracker.\"\"\"\nimport gzip\nimport hashlib\nimport json\nfrom pathlib import Path\nP = Path(__file__).resolve().parent\nROOT = P.parents[1]\nOUT = ROOT / 'docs/friendly-command-gena-main-validation-proof-archive.json'\nassert not OUT.exists()\nsha = lambda b: hashlib.sha256(b).hexdigest()\nnames = ['validate_gena_main_integration.py', 'friendly-command-gena-main-validation.json',\n         'friendly-command-gena-main-validation.log', 'gena-main-before-inventory-queue.json.gz']\nreport_raw = (P / names[1]).read_bytes()\nr = json.loads(report_raw)\nassert r['state'] == 'passed' and r['head'] == '71c0a41f25a203da7562e3d3c9429a87b8618cc4'\nassert r['rust'] == dict(passed=23, failed=0, ignored=0, batches=3)\nassert r['python_controls'] == r['expected_python_controls'] == 260\nassert len(r['results']) == 12 and all(row['exit_code'] == 0 for row in r['results'])\nassert all(r[key] for key in ['source_unchanged', 'head_unchanged', 'index_unchanged', 'protected_binaries_unchanged'])\nassert r['producer'] == dict(text=(P / names[0]).read_text(), sha256=sha((P / names[0]).read_bytes()))\nassert r['log_sha256'] == sha((P / names[2]).read_bytes())\nassert all(sha((ROOT / name).read_bytes()) == digest for name, digest in r['source_inputs'].items())\nassert r['compiled_input_identity'] == {'klem': 1146, 'klem-corpus-adapter': 1146, 'klem-web-assets': 18}\nfiles = {}\ndestination = ROOT / 'docs/friendly-command-gena-main-validation-proof'\ndestination.mkdir()\nfor name in names:\n    raw = (P / name).read_bytes(); packed = gzip.compress(raw, mtime=0)\n    path = destination / (name + '.gz'); path.write_bytes(packed)\n    assert gzip.decompress(path.read_bytes()) == raw\n    files[name] = dict(path=str(path.relative_to(ROOT / 'docs')), source_sha256=sha(raw), archive_sha256=sha(packed), bytes=len(raw))\nOUT.write_text(json.dumps(dict(state='actual-main23-Rust260-controls-passed', files=files,\n                              head=r['head'], source_files=len(r['source_inputs']),\n                              rust=r['rust'], python_controls=260,\n                              all_original_source_head_index_and_protected_binaries_unchanged=True,\n                              exact_installed_compile_input_identity=r['compiled_input_identity'],\n                              producer=dict(text=Path(__file__).read_text(), sha256=sha(Path(__file__).read_bytes())),\n                              scope='Actual named main merge validation; final-main full Nix, quiet timing and contextual/register/independent Korean review remain separate.'), indent=2) + '\\n')\nprint(json.dumps(dict(files=len(files), manifest_sha256=sha(OUT.read_bytes()))))\n",
+    "sha256": "3e46c4f1561cce00e2f57e8234d6375a2f0c1a853d248f11c0e72656466b9bdf"
+  },
+  "scope": "Actual named main merge validation; final-main full Nix, quiet timing and contextual/register/independent Korean review remain separate."
+}

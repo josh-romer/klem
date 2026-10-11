@@ -1,0 +1,307 @@
+{
+  "state": "actual-shared-Gena35764-520-promotion-and-complete-original-Rust-results-verified",
+  "focused_original_session_id": 43725,
+  "focused_original_exit_code": 1,
+  "focused_results_audit_session_id": 53655,
+  "full_rust_original_session_id": 10415,
+  "full_rust_original_exit_code": 1,
+  "original_failed_receipts_preserved": true,
+  "all_actual_commands_passed": true,
+  "focused_rust_tests": 12,
+  "python_controls": 94,
+  "full_rust_targets": 260,
+  "full_rust_commands": 264,
+  "all_target_rust_totals": {
+    "passed": 1199,
+    "failed": 0,
+    "ignored": 1
+  },
+  "all_target_rust_batches": 260,
+  "full_rust_totals": {
+    "passed": 1200,
+    "failed": 0,
+    "ignored": 1
+  },
+  "full_rust_batches": 261,
+  "original_doctest_preserved": true,
+  "supplemental_doctest_commands": 1,
+  "complete_commands": 265,
+  "supplemental_inventory_read_commands": 1,
+  "all_executed_commands": 266,
+  "shared_cases": 35764,
+  "scoped_reviews": 520,
+  "unreviewed_owners": 195,
+  "captured_head": "99001fe231cc33aec53f45612fe5b119512905c3",
+  "captured_source_files": 7082,
+  "original_test_files_preserved": true,
+  "current_promoted_nix_gate": false,
+  "main_integration": false,
+  "full_coverage_complete": false,
+  "files": {
+    "friendly-command-gena-promotion-originals.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-originals.json.gz",
+      "source_sha256": "ff0e4d95176fdd842de4fefbe4eb8b8a9d2f470ae52f679a5ca14e7cadec43e7",
+      "archive_sha256": "4f976fce7034359115debbd8b1dd8700a10d3c6df009fce83204b058a20fd0ed",
+      "original_bytes": 3918
+    },
+    "friendly-command-gena-promotion-count-failure-originals.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-count-failure-originals.json.gz",
+      "source_sha256": "fbce33504bbeaac82862fbecb770e8c0ff342e98407018109192fb45c1167ce2",
+      "archive_sha256": "234e87722d16e477a89eabc21613d463c909c86fe60a8c40f7d64885ac2f8c45",
+      "original_bytes": 1421
+    },
+    "friendly-command-gena-promotion-validation.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-validation.json.gz",
+      "source_sha256": "03513bc953fb56c800a5b7562c5079a6b597498d11a063ce6d6a426d07d997c8",
+      "archive_sha256": "0ce704e4f409dedc3178023ca66ebbfc172f015ccfca4f362927d7d0cb26ec93",
+      "original_bytes": 906338
+    },
+    "friendly-command-gena-promotion-validation.log": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-validation.log.gz",
+      "source_sha256": "2853c3f87f2a2a9f3a52c4f2de44489384b44a96e44867443e432fc35bc5d7b8",
+      "archive_sha256": "78f4f6e656bdf44565b4f2f3296f74e99052876317f84a3b3ba24bc1584e7625",
+      "original_bytes": 19964
+    },
+    "validate_friendly_command_gena_promotion.py": {
+      "path": "friendly-command-gena-promotion-proof-validate_friendly_command_gena_promotion.py.gz",
+      "source_sha256": "3400e774273eb176fea552b7ccc6fc6b2faef836e60ae61e9b0a2124c53197aa",
+      "archive_sha256": "6b8d529c9dfb3cc4fa1571c55b89a9b6c8a5161ce4600a1a563c96c6f7802cd8",
+      "original_bytes": 5213
+    },
+    "friendly-command-gena-promotion-results-audit.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-results-audit.json.gz",
+      "source_sha256": "1f262f66608289e7f88233c7b1e2cae316bd0f58074b00915722a2936166ce47",
+      "archive_sha256": "f436830b967d089b027be7391a007e37562a851a22adc54995983ee4da1080f9",
+      "original_bytes": 6628
+    },
+    "audit_friendly_command_gena_promotion_results.py": {
+      "path": "friendly-command-gena-promotion-proof-audit_friendly_command_gena_promotion_results.py.gz",
+      "source_sha256": "5c3249d31cc3c9c5e56a64428f8b8d47d98a5d5e47d481e39868563a13074c2d",
+      "archive_sha256": "965efdc4b3acca86d5fe3b76632c9f9c65624ac10074a31bf6f6bc73fc4b9f77",
+      "original_bytes": 5281
+    },
+    "friendly-command-gena-promotion-full-rust.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-full-rust.json.gz",
+      "source_sha256": "b8efc88ae0835be0c99b36c91e6495e14dc4a9ea1347af9befa0bdd6efbcc5fe",
+      "archive_sha256": "573b751565258dadf9fbff9a5287753aa0c1556dbfcf5a321617942849476acc",
+      "original_bytes": 1344309
+    },
+    "friendly-command-gena-promotion-full-rust.log": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-full-rust.log.gz",
+      "source_sha256": "4bcb600ec0a6d169a871aeec9c853e182a158ae0db7adf51d4cd430d003bf7be",
+      "archive_sha256": "0e26f8733b299eb75bb23207fbd75bb6f5ae19adb0b10a0073e1a79e8087c4b7",
+      "original_bytes": 13537984
+    },
+    "run_friendly_command_gena_promotion_full_rust.py": {
+      "path": "friendly-command-gena-promotion-proof-run_friendly_command_gena_promotion_full_rust.py.gz",
+      "source_sha256": "f538d537352387bbe8b6ec44b0f1cdbe9c8f4e6c5b326215033f788558239e6c",
+      "archive_sha256": "cdf7400f6bd72ee3b0568ebc2aac0c8b3c13fa98be3929a3fb7cf4e94f15cfcc",
+      "original_bytes": 7576
+    },
+    "friendly-command-gena-promotion-full-rust-count-observation.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-full-rust-count-observation.json.gz",
+      "source_sha256": "b23c557d4e2c1fca16ebb95ab279d5f5cdc4d62203fb6c6015d514727c31d563",
+      "archive_sha256": "dc06aa43b0ee82013b6220d5e71605a0abdf60b5c199bbdc3052744b28600609",
+      "original_bytes": 620
+    },
+    "friendly-command-gena-promotion-full-rust-terminal-originals.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-full-rust-terminal-originals.json.gz",
+      "source_sha256": "af93f42bdfb73de06f24f2847f3315b7cca1e5db0db2193d56231f2da80e6e40",
+      "archive_sha256": "4edc6ff2a083b8e772d7645deccdf5bb88d19224677b1bfc12802c60cd53fe52",
+      "original_bytes": 1265
+    },
+    "friendly-command-gena-promotion-full-rust-results-audit.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-full-rust-results-audit.json.gz",
+      "source_sha256": "56ef4e2c92c9adc443423513692aef02b5ca43f66982c190ee96a41af8c65bb7",
+      "archive_sha256": "34b91e758d10fb63748e2e9ac18df5ff6c9e3c849534917ca7b61ecc282460db",
+      "original_bytes": 46336
+    },
+    "audit_friendly_command_gena_promotion_full_rust.py": {
+      "path": "friendly-command-gena-promotion-proof-audit_friendly_command_gena_promotion_full_rust.py.gz",
+      "source_sha256": "dc2e07d91b55ab19a03177797eac5c8f21c72eb7797d16044ce324f6dc11f1c0",
+      "archive_sha256": "df1d546054fd5f49bafb7b6092d132c4f9c2e5e744662decc4e170fc35ada44d",
+      "original_bytes": 7431
+    },
+    "test_friendly_command_gena_promotion_full_rust_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-test_friendly_command_gena_promotion_full_rust_audit.py.gz",
+      "source_sha256": "126ad5a400eb8e62336d5cc323a654ae20bb94cae56929597365e33f106b09a4",
+      "archive_sha256": "bbeaefb3ffca8b493e1bcaf24294c3466908c34696daa19003e79b564e664d7d",
+      "original_bytes": 4672
+    },
+    "friendly-command-gena-promotion-followup-preparation.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-followup-preparation.json.gz",
+      "source_sha256": "519da6a2efcd16fc6436b1549d4c830c2be2d2dcb47e3e260d0baedf782d90cc",
+      "archive_sha256": "671a95cfe7b660392d1543127ceb6d9a7f54081c73b11ebab573e560ea866918",
+      "original_bytes": 23016
+    },
+    "run_friendly_command_gena_promoted_nix_gate.py": {
+      "path": "friendly-command-gena-promotion-proof-run_friendly_command_gena_promoted_nix_gate.py.gz",
+      "source_sha256": "6c431f180d290335275aef93bd24fcd8c9f5e93d50e6a04d3378ef28bdf58399",
+      "archive_sha256": "ba7d85cd4a84918ffaa6acb2d69a645845fbad947d1c3ac7f83f59d696dad81f",
+      "original_bytes": 9708
+    },
+    "friendly-command-gena-promotion-doctest.json": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-doctest.json.gz",
+      "source_sha256": "d445a9b22e4247852c9067eb3016ff6f8d39b97237a1553ec48c41789ed5fe4d",
+      "archive_sha256": "a2da8c61a65444ba10bf2d9f6e36d514c70023bc4dbcc857a8b757a5f287f925",
+      "original_bytes": 969542
+    },
+    "friendly-command-gena-promotion-doctest.log": {
+      "path": "friendly-command-gena-promotion-proof-friendly-command-gena-promotion-doctest.log.gz",
+      "source_sha256": "b20db2695fd73504192f36d6809a703b092182ad4d5e90ec33ce27d68948dd5b",
+      "archive_sha256": "ce179d0c1547c25376ab45f57e84ea6014e6efbbf6c78649b655951964730132",
+      "original_bytes": 465
+    },
+    "run_friendly_command_gena_promotion_doctest.py": {
+      "path": "friendly-command-gena-promotion-proof-run_friendly_command_gena_promotion_doctest.py.gz",
+      "source_sha256": "3eddeb3bd0a733749400de438546564ce14fe923bdb5298599336ff2735caae0",
+      "archive_sha256": "41a4a864f5002c3ff1ebed26b3b99bd3dde4ac17d58c5803b8908c57a19a4c8f",
+      "original_bytes": 5355
+    },
+    "archive_friendly_command_gena_promotion.py": {
+      "path": "friendly-command-gena-promotion-proof-archive_friendly_command_gena_promotion.py.gz",
+      "source_sha256": "9f8b90b32e8258273705188e5890f4c6515d6cf89a4583e331f5b211b0d433e2",
+      "archive_sha256": "bb7b7879a28fe35df1490338d68a1549d467d2a0de2bbc2b0a5596d8e27122ec",
+      "original_bytes": 8175
+    },
+    "original-tests-fixtures-validity.json": {
+      "path": "friendly-command-gena-promotion-proof-original-tests-fixtures-validity.json.gz",
+      "source_sha256": "c8696d8f241550f089857bb238daab7d1428967b9bd4834705d96c8b334ee2ea",
+      "archive_sha256": "c60a60eb109177b008f392001c3a7ff9081da7f708218680a4b11ec8443855ac",
+      "original_bytes": 32484682
+    },
+    "original-tests-validity.rs": {
+      "path": "friendly-command-gena-promotion-proof-original-tests-validity.rs.gz",
+      "source_sha256": "0ba0780736838d6a7ec1707b21510a55dd10b021e2b4d9102953f4f98432fef5",
+      "archive_sha256": "c04322f20ce83ed80633073a26c99499a0b4437f26bd411176cb4f4d6c77fd56",
+      "original_bytes": 4518
+    },
+    "original-docs-inventory-reviews.json": {
+      "path": "friendly-command-gena-promotion-proof-original-docs-inventory-reviews.json.gz",
+      "source_sha256": "c47411d0e832d2220ade356cb956ed778852eaee9da90dba3f091e15c6557a12",
+      "archive_sha256": "0c9c2b3e8dded789ced343c36851898451bfde3b22584d853c54599eae90e207",
+      "original_bytes": 1659543
+    },
+    "original-docs-inventory-review-queue.json": {
+      "path": "friendly-command-gena-promotion-proof-original-docs-inventory-review-queue.json.gz",
+      "source_sha256": "d689cf9104018ba856a029c1ef7343708e5feb7e5bc0bf00c41d730c862cecdd",
+      "archive_sha256": "8d6feafd92bb07897d0ce4dd90446294a05343496e657f1416652f4692bbeed9",
+      "original_bytes": 4010443
+    },
+    "original-tools-gentle_command_long_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-original-tools-gentle_command_long_ledger_audit.py.gz",
+      "source_sha256": "c6b3da64e9ea410b231c7fcefd68e379d4fcefc664e7f636aca9b46f037324c6",
+      "archive_sha256": "d80084d5c88a584340059cedf77dea2bf09f62141bac749b06f3a36f2c9fa01f",
+      "original_bytes": 7924
+    },
+    "original-tools-gentle_command_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-original-tools-gentle_command_ledger_audit.py.gz",
+      "source_sha256": "e5e3018c22e3e56d50c74c771f4af82ff11fc51d3ebfd36bab2895a3c5e2efc2",
+      "archive_sha256": "85c22748f9d91a1fef82ff219ef89d74e9f3951cdb3a56eca7a39d2194388f35",
+      "original_bytes": 7103
+    },
+    "original-tools-friendly_command_gena_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-original-tools-friendly_command_gena_ledger_audit.py.gz",
+      "source_sha256": "10ff14081fa74dfbd34dc318859b49e7bcb4345fb6b8a8be93ec5ee9fddcabe1",
+      "archive_sha256": "ed060f8f04d5054fd1509aa409b75a25c4dbf8299b0adbba3b3644d5710b4977",
+      "original_bytes": 8049
+    },
+    "original-tools-test_gentle_command_long_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-original-tools-test_gentle_command_long_ledger_audit.py.gz",
+      "source_sha256": "8762549e20f8895c816ca008c20e73e371a25e1e941bacd98c8939b73e0216e3",
+      "archive_sha256": "735aa07e34846ec61ff69a0618d722e81d8aa0d715eb5e8af1347c1923acec2a",
+      "original_bytes": 8218
+    },
+    "original-tools-test_gentle_command_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-original-tools-test_gentle_command_ledger_audit.py.gz",
+      "source_sha256": "2d4aa61465cf0255f5fdec27c3a9d06ac301b82657b05a8543c5a438cc5a7049",
+      "archive_sha256": "c26e8df36bd14f35d770bb01f627c401b0a0f5610c874a21dcba575f0b692669",
+      "original_bytes": 6231
+    },
+    "original-tools-test_friendly_command_gena_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-original-tools-test_friendly_command_gena_ledger_audit.py.gz",
+      "source_sha256": "d529fc4e6ed7ed62106a6ad06ac0c2dc97486db035612ea59c30b58e03d3e8aa",
+      "archive_sha256": "5ae3a0cb356bc57a84c9121a4f836a7468213348e71918efb1b7756b404b2686",
+      "original_bytes": 5792
+    },
+    "original-flake.nix": {
+      "path": "friendly-command-gena-promotion-proof-original-flake.nix.gz",
+      "source_sha256": "9864c41df69c054aa29b80e5a725b5f91f13a26d659b6e0dcfdf0c3cfc58f46a",
+      "archive_sha256": "f4238c663ad3e8fb35d12727a986f7890e0e57bf9438951e9a6b5eec4a3348b6",
+      "original_bytes": 88153
+    },
+    "promoted-tests-fixtures-validity.json": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tests-fixtures-validity.json.gz",
+      "source_sha256": "605f5a1540fec9680143b5112a6dae2b57d52ccd03cba58167bcd10de1046d66",
+      "archive_sha256": "b7d8fcfa5965b5faa143c17b9e3f98ceb0687184b6d527e96fff68c436490df3",
+      "original_bytes": 32504794
+    },
+    "promoted-tests-validity.rs": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tests-validity.rs.gz",
+      "source_sha256": "4e673e033432b0c1053af7699719f34d206bcb4e97ca936516c7ee52f55990af",
+      "archive_sha256": "386f91f9040bb6e0cfe2c6c14e414760a29287d48b2e060a4b9d9eac1a67d939",
+      "original_bytes": 5001
+    },
+    "promoted-docs-inventory-reviews.json": {
+      "path": "friendly-command-gena-promotion-proof-promoted-docs-inventory-reviews.json.gz",
+      "source_sha256": "8bb5af182bf1670575d6a665aeb15def4fd167067abb7f76102933de1a5f16f0",
+      "archive_sha256": "c0b53999516bddc4aa634701619a7e216b027a550b62fd15a13b612bdcf889bd",
+      "original_bytes": 1662066
+    },
+    "promoted-docs-inventory-review-queue.json": {
+      "path": "friendly-command-gena-promotion-proof-promoted-docs-inventory-review-queue.json.gz",
+      "source_sha256": "5db826c5ebce55ddb27482a663a3065b2739f27bdc19a5aa34f258dca5336fdd",
+      "archive_sha256": "0c8d83fbc0121204b33fb3a2bb0d9c0338a1ab15bdca1b017fd2c6440c722368",
+      "original_bytes": 4017519
+    },
+    "promoted-tools-friendly_command_gena_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-friendly_command_gena_ledger_audit.py.gz",
+      "source_sha256": "ddefe0a4c4520f3287f52b8404088c9f0b29e74a1fc9f0ecadaf903e433a806f",
+      "archive_sha256": "c6009c70fb860fc90564d6bf31e0879e698c673d0255d1b6de59897f308b51ab",
+      "original_bytes": 8058
+    },
+    "promoted-tools-gentle_command_long_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-gentle_command_long_ledger_audit.py.gz",
+      "source_sha256": "fdff4eb610a6a592734f080fcb1d049a17f4628b045c817c645e208dd478c3a7",
+      "archive_sha256": "51fe96adee2be706b228d319ceb0f86bc2a2e1956ba607e761c000cbd1ac10cd",
+      "original_bytes": 9703
+    },
+    "promoted-tools-gentle_command_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-gentle_command_ledger_audit.py.gz",
+      "source_sha256": "0e20cfaa3a973992adfad364289f8a9f8aa10e569999f8b914e3de6ab7293404",
+      "archive_sha256": "1311ac06d17da58cc062944ecea0b273c4837f6334949ec0a801cc66ca9f7618",
+      "original_bytes": 8056
+    },
+    "promoted-tools-test_gentle_command_long_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-test_gentle_command_long_ledger_audit.py.gz",
+      "source_sha256": "8762549e20f8895c816ca008c20e73e371a25e1e941bacd98c8939b73e0216e3",
+      "archive_sha256": "735aa07e34846ec61ff69a0618d722e81d8aa0d715eb5e8af1347c1923acec2a",
+      "original_bytes": 8218
+    },
+    "promoted-tools-test_gentle_command_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-test_gentle_command_ledger_audit.py.gz",
+      "source_sha256": "2d4aa61465cf0255f5fdec27c3a9d06ac301b82657b05a8543c5a438cc5a7049",
+      "archive_sha256": "c26e8df36bd14f35d770bb01f627c401b0a0f5610c874a21dcba575f0b692669",
+      "original_bytes": 6231
+    },
+    "promoted-tools-test_friendly_command_gena_ledger_audit.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-test_friendly_command_gena_ledger_audit.py.gz",
+      "source_sha256": "d529fc4e6ed7ed62106a6ad06ac0c2dc97486db035612ea59c30b58e03d3e8aa",
+      "archive_sha256": "5ae3a0cb356bc57a84c9121a4f836a7468213348e71918efb1b7756b404b2686",
+      "original_bytes": 5792
+    },
+    "promoted-tools-test_friendly_command_gena_ledger_descendant.py": {
+      "path": "friendly-command-gena-promotion-proof-promoted-tools-test_friendly_command_gena_ledger_descendant.py.gz",
+      "source_sha256": "8abe31e44379f879eec1a1216aa6bb7195470420f7faa3c978fce8dbf7cc6660",
+      "archive_sha256": "75768d16678f1688457b94be38bd60e085ef1a8ba4a0013e83090b1f9260b390",
+      "original_bytes": 4715
+    },
+    "promoted-flake.nix": {
+      "path": "friendly-command-gena-promotion-proof-promoted-flake.nix.gz",
+      "source_sha256": "6185b6c735404eff3dc51ebda10d52d75cf44153fe1e4fed35440904344da69b",
+      "archive_sha256": "e59f69d6683c7f5599fd70faaa3c8e8715725e7cbce875e2cfd375bbcffbc859",
+      "original_bytes": 88291
+    }
+  },
+  "scope": "Full original failed-count receipts/logs/producers, successful independent result audits, all11 pre-promotion original bodies and actual promoted source retained. Every260 Cargo target and all4 trailing checks executed successfully. Original wrapper failures remain failed; separate audits derive complete command/test totals. Old35740 cases/519 reviews and32/26/24 test files preserved. Current promoted-source Nix/packages/browser/main/context/register/independent review remain open."
+}

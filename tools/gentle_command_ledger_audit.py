@@ -85,18 +85,28 @@ def inspect(v):
     if v['actual_current_raw'] != v['current_raw']:
         import gentle_command_long_ledger_audit as long_audit
         complete = v['long_append']
-        assert complete['current_raw'] == v['actual_current_raw'], 'mandatory complete current long ledger bytes'
-        assert complete['current_reviews'] == v['actual_current_reviews'], 'mandatory complete current long review fields'
+        current = complete['current_raw']
+        reviews = complete['current_reviews']
+        gena_current = (v['actual_current_raw'] != current and 'actual_current_raw' in complete)
+        if gena_current:
+            current = complete['actual_current_raw']
+            reviews = complete['actual_current_reviews']
+        assert current == v['actual_current_raw'], 'mandatory complete current long ledger bytes'
+        assert reviews == v['actual_current_reviews'], 'mandatory complete current long review fields'
         assert complete['parent_raw'] == v['current_raw'], 'historical gentle matches exact long parent'
         assert json.loads(complete['parent_reviews_raw']) == v['current_reviews'], 'historical gentle reviews match exact long parent'
         checked = long_audit.inspect(complete)
         return {**result, 'historical': result,
-                'scope': 'historical35704-and-complete-current35740',
-                'complete_current_cases': checked['active_cases'],
-                'complete_current_required': checked['required'],
-                'complete_current_forbidden': checked['forbidden'],
-                'complete_current_reviews': checked['active_reviews'],
-                'long_added_cases': checked['added_cases']}
+                'scope': ('historical35704-and-complete-current35764' if gena_current
+                          else 'declared-long-parent35740-and-verified-current-Gena35764' if 'gena_append' in complete
+                          else 'historical35704-and-complete-current35740'),
+                'complete_current_cases': checked['complete_current_cases'] if gena_current else checked['active_cases'],
+                'complete_current_required': checked['complete_current_required'] if gena_current else checked['required'],
+                'complete_current_forbidden': checked['complete_current_forbidden'] if gena_current else checked['forbidden'],
+                'complete_current_reviews': checked['complete_current_reviews'] if gena_current else checked['active_reviews'],
+                'long_added_cases': checked['added_cases'],
+                'verified_active_shared_cases': checked.get('complete_current_cases',checked['active_cases']),
+                'verified_active_shared_reviews': checked.get('complete_current_reviews',checked['active_reviews'])}
     assert v['actual_current_reviews'] == v['current_reviews'], 'complete original current review fields'
     return {**result, 'scope': 'complete-current35704',
             'complete_current_cases': result['active_cases'],

@@ -1,0 +1,85 @@
+{
+  "state": "original-complete-Nix-prefix-collision-failure-and-guarded-repair-preserved",
+  "actual_failed_session_id": 89411,
+  "actual_failed_exit_code": 1,
+  "selected94_passed_before_failure": true,
+  "actual_focused_control_session_id": 85808,
+  "actual_focused_control_exit_code": 0,
+  "actual_focused_controls": 8,
+  "actual_full_legacy_audit_session_id": 61587,
+  "actual_full_legacy_audit_exit_code": 0,
+  "legacy_result": [
+    60,
+    1874,
+    4794,
+    7
+  ],
+  "all_original_legacy_assertions_preserved": true,
+  "shared_cases": 35764,
+  "scoped_reviews": 520,
+  "old_Cpp_and_frontend_inputs_unchanged": true,
+  "current_full_retry_passed": false,
+  "files": {
+    "friendly-command-gena-promoted-nix-first-failure-originals.json": {
+      "path": "friendly-command-gena-prefix-fix-proof-friendly-command-gena-promoted-nix-first-failure-originals.json.gz",
+      "source_sha256": "0113dcd905ac1e421639ca87113ae5b5e3cf42824f54547d41d81238028cafca",
+      "archive_sha256": "955a5b9ba75ca6ca85682fac623973fcb053036e4b19b2b05c233669f9186bea",
+      "original_bytes": 1480
+    },
+    "friendly-command-gena-promoted-complete-nix-gate.json": {
+      "path": "friendly-command-gena-prefix-fix-proof-friendly-command-gena-promoted-complete-nix-gate.json.gz",
+      "source_sha256": "da02f57a13d09ae569d12eaace53bd70850831f2721594b3ff00f06cb7b8ccfe",
+      "archive_sha256": "6966feb6fde748fc7f440f6fa9c759079c0060059c3a396dc0f2229c38d81b77",
+      "original_bytes": 2093733
+    },
+    "friendly-command-gena-promoted-complete-nix-gate.log": {
+      "path": "friendly-command-gena-prefix-fix-proof-friendly-command-gena-promoted-complete-nix-gate.log.gz",
+      "source_sha256": "4423dcc39338562243a28d616fa4a7feb102a0ed0e0e18e84df915e1d9b68279",
+      "archive_sha256": "e1675c6a7654519463201407508b4352d57244989d8ad356688731a44f54da9a",
+      "original_bytes": 48696
+    },
+    "run_friendly_command_gena_promoted_nix_gate.py": {
+      "path": "friendly-command-gena-prefix-fix-proof-run_friendly_command_gena_promoted_nix_gate.py.gz",
+      "source_sha256": "6c431f180d290335275aef93bd24fcd8c9f5e93d50e6a04d3378ef28bdf58399",
+      "archive_sha256": "ba7d85cd4a84918ffaa6acb2d69a645845fbad947d1c3ac7f83f59d696dad81f",
+      "original_bytes": 9708
+    },
+    "friendly-command-gena-prefix-fix-originals.json": {
+      "path": "friendly-command-gena-prefix-fix-proof-friendly-command-gena-prefix-fix-originals.json.gz",
+      "source_sha256": "927a61809c5edc3279298afbf9a299276b5ecc01e914ba044890153cc56d9d16",
+      "archive_sha256": "c10ea8d83e86702412667670d9a8eab95833d3582f57f5e97d471e4de091ca4b",
+      "original_bytes": 663
+    },
+    "original-tools-friendly_command_audit.py": {
+      "path": "friendly-command-gena-prefix-fix-proof-original-tools-friendly_command_audit.py.gz",
+      "source_sha256": "d382ecdf49551f465651b618577dbefd3ae99b9c09206ea6b3d57c7e911ba4d4",
+      "archive_sha256": "8a02eba2dd1545fec6ae588cd7b636b95c0e7563b624f044046a4d2c622864a2",
+      "original_bytes": 5028
+    },
+    "original-flake.nix": {
+      "path": "friendly-command-gena-prefix-fix-proof-original-flake.nix.gz",
+      "source_sha256": "6185b6c735404eff3dc51ebda10d52d75cf44153fe1e4fed35440904344da69b",
+      "archive_sha256": "e59f69d6683c7f5599fd70faaa3c8e8715725e7cbce875e2cfd375bbcffbc859",
+      "original_bytes": 88291
+    },
+    "current-tools-friendly_command_audit.py": {
+      "path": "friendly-command-gena-prefix-fix-proof-current-tools-friendly_command_audit.py.gz",
+      "source_sha256": "42a90999b1e7cdaab34567107e6b746581a2ea115cc01c341d0ce15f7d773a6f",
+      "archive_sha256": "19bc7a867e070e3c9bc432c171fbfc339ea32aea5a895aecb2d7ed601aa4c57e",
+      "original_bytes": 5735
+    },
+    "current-tools-test_friendly_command_historical_gena.py": {
+      "path": "friendly-command-gena-prefix-fix-proof-current-tools-test_friendly_command_historical_gena.py.gz",
+      "source_sha256": "241c7f618c6f76c35cbb5649318ed32ab5f4a08ef571f3db041e3ba4a3f1c1c3",
+      "archive_sha256": "ee0873238b27014437f66fa2da30009813a363d1201d1f5590ea63870d5f2efa",
+      "original_bytes": 3526
+    },
+    "current-flake.nix": {
+      "path": "friendly-command-gena-prefix-fix-proof-current-flake.nix.gz",
+      "source_sha256": "6b44c7054d30f1138648f32cec6b1ff61ec8fb206457dbadfae158961f3b1e6b",
+      "archive_sha256": "9bb97d079f08bd1ab9d48e3b11d0ec9f30eb238f3b55a1f33451a69a90e4e0c2",
+      "original_bytes": 88451
+    }
+  },
+  "scope": "Complete actual failed Nix receipt/log/producer, pre-repair sources and guarded repair/test/flake bodies retained. Focused8 controls and legacy60owner1874group4794word7case audit passed in actual tool sessions; their tool outputs remain execution evidence, not fabricated new capture logs. Complete-current35764 guard mandatory before original35740 owner view. No full retry/Nix/package/browser/main/context/register/Korean-review completion claim."
+}

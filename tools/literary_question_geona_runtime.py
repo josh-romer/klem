@@ -44,6 +44,7 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('gentle-command-long-validity.json',25,'d5440ac1a4801573e78eca3a5fdd98544c1e548a9cd5b7733d3c3060bd1c3668','gentle-command long preauthored'),
     ('gentle-command-long-novel-validity.json',8,'63c0ac391529fb7c5806656cb1061a7b4dcd7282dca57d372905ebb885478463','gentle-command long observed novel'),
     ('gentle-command-class-interaction-validity.json',3,'655f08927753cc454373a47dff559e77b08b1afc80cc46c84bdf2abbd8bd5026','gentle-command actual derived class'),
+    ('friendly-command-gena-validity.json',24,'52dc5dae1dd3218c049be2a5f7f89e741fd9b166177102bf361892584188ed3b','friendly-command Gena preauthored'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

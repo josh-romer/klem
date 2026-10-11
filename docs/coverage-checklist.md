@@ -4684,6 +4684,33 @@ review remains open under the completion review below.
   contextual/independent review remain required; branch results retain their
   recorded scope.
 
+  Both original complete four-check Nix gates have now terminated with
+  an inventory-test failure: 19 of the 97 historical-ledger controls retain
+  later fixture source aliases while reconstructing older ledgers. Their
+  [full original producers, receipts and logs](gentle-command-complete-nix-history-failures-archive.json)
+  preserve all 6,808 main and 6,714 isolated-long tracked input hashes,
+  unchanged HEAD/index, and the actual failures. The promotion branch fixes
+  the helper by listing the omitted finite fixture sources, keeps every old
+  assertion and adds four controls. Its 101 historical controls and 252 total
+  promotion controls pass from actual Git-selected Nix source. Its full
+  four-check build and main merge were still pending at that checkpoint;
+  these failed original runs do not establish a complete Nix gate.
+
+  [The complete promotion gate and current main merge proof](gentle-command-long-main-promotion-proof-archive.json)
+  now retain all four passing Nix checks at `3ad5839`, with all 6,846 tracked
+  inputs, HEAD and index unchanged. Main merge `4fe4f4b` retains every original
+  35,704 case, source declaration and metadata field, all 517 ordered reviews,
+  the fourteen formal-volitional validation records, the single COV-017cw
+  entry and both original failure archives. Only the exact 36 cases and two
+  bounded reviews are appended. Current main passes 133 controls (101
+  historical and 32 strict long-ledger controls), the 715-entry queue and
+  diff checks. Every actual compile input matches the passed promotion:
+  1,137 Rust, 1,137 adapter and 18 frontend files. The twelve complete original
+  artifacts include the earlier fetch/reference failures and complete main
+  parent snapshot. Fresh final-main Nix, quiet timing and contextual/register/
+  independent Korean review remain required; this proof preserves the original
+  failed gates as failures and does not certify those remaining tasks.
+
 - [ ] **COV-017db — Friendly command -게나.** The complete original
   KRDict 66968 entry supplies four example groups, including its full dialogue,
   and the explicit verb / -으시- attachment note. The
@@ -4692,8 +4719,9 @@ review remains open under the completion review below.
   installed NFC/NFD, dictionary-filter and cache-policy runs. Independent
   canonical path checks found none of the proposed 게나 paths before this
   implementation, irrespective of the new rule ID. All 24 independently
-  authored proposals (17 required, seven forbidden) remain in a
-  [private fixture](../tests/fixtures/friendly-command-gena-validity.json).
+  authored proposals (17 required, seven forbidden) remain preserved in their
+  [private fixture](../tests/fixtures/friendly-command-gena-validity.json) and
+  are now appended unchanged to the shared candidate ledger.
   The implementation distinguishes canonical 게나 from the existing 게 + 나
   alternatives and from 오다-final command ㄴ, keeps consonant-initial stem
   boundaries, and assesses known bare adjective homonyms separately. Explicit
@@ -4729,8 +4757,9 @@ review remains open under the completion review below.
   server stops and desktop/mobile screenshots fit without horizontal overflow.
   Every new observed lemma is queried against the unchanged original dictionary:
   69 heads yield 42 complete owners, including 13 additional original owners;
-  45 unmatched hypothetical heads remain unjudged. Shared 35,740 cases / 519
-  scoped reviews / 196 unreviewed owners remain unchanged. The
+  45 unmatched hypothetical heads remain unjudged. At that initial capture,
+  shared 35,740 cases / 519 scoped reviews / 196 unreviewed owners remained
+  unchanged. The
   [independent runtime auditor](../tools/friendly_command_gena_runtime_audit.py)
   rederives the CLI observations, every ordered cohort word, finite history
   witness, original gold row and broad context, and all newly queried Native
@@ -4757,10 +4786,127 @@ review remains open under the completion review below.
   files; all 224 controls across seven current/historical suites pass with the
   complete source, HEAD and index unchanged. Nix selects the five new revision,
   runtime/browser auditor and test modules and runs both control suites. Actual
-  Git-selected source execution and Nix/installed/main validation, quiet performance,
-  shared Gena ledger promotion and contextual/register/independent Korean
-  review remain pending. This entry
-  does not close the ending inventory or assign sentence-level interpretations.
+  Git-selected execution passes all 224 controls against 6,943 selected files
+  and unchanged 6,985 tracked files, HEAD and index. The actual four-check Nix
+  gate passes; all four installed packages retain 1,200 release Rust tests in
+  255 suites and complete 1,146/1,146/18 compile profiles. The
+  [installed archive](friendly-command-gena-installed-proof-archive.json)
+  retains 24 full original artifacts: all 36 CLI policies, 44 complete Native
+  owners, 69 full headword queries, 53,502 corpus/history words, 66,570 gold
+  rows, 1,128,312 broad frames, and the installed launcher/browser's 144
+  decisions, 102 diagrams, six exports and 31 complete entries. Its 28
+  independent controls pass. The
+  [performance archive](friendly-command-gena-performance-proof-archive.json)
+  retains 22 full original artifacts, including 80 interleaved novel timing
+  samples and six complete 179,112-frame cache streams. All 23 timing controls
+  pass. The original live-file preflight failure is retained; the successful
+  retry explicitly verifies captured installed executable fingerprints and
+  does not claim current executable reads, host isolation or statistical
+  equivalence. The
+  [ledger draft](friendly-command-gena-ledger-draft-proof-archive.json) retains
+  the exact 24-case proposal and one bounded owner review, 24 passing draft
+  controls and the original import failure. Shared cases and reviews remained
+  unchanged during that draft run. Archive-aware installed/performance/ledger helpers are
+  wired into Nix. Their
+  [current-source proof](friendly-command-gena-completed-evidence-proof-archive.json)
+  retains 14 complete artifacts and passes 81 controls (28 installed, 29
+  performance, 24 draft), the 715-row queue check and diff check. All captured
+  source, HEAD, index and protected executable bytes remain unchanged; the
+  original 28/24 test files and 23 performance test bodies remain intact.
+  The [committed-source Nix proof](friendly-command-gena-completed-sandbox-proof-archive.json)
+  retains five full originals and passes all 81 controls and the 715-row queue
+  with 19 captured host paths absent. All 7,075 tracked and 7,033 selected files,
+  HEAD, index and six protected debug executables remain unchanged. All
+  1,146/1,146/18 compile profiles and every older selected tool byte match the
+  original passed Gena gate. The subsequent
+  [actual shared promotion](friendly-command-gena-promotion-proof-archive.json)
+  retains 44 complete original artifacts, including all 11 pre-promotion
+  bodies, both failed count-wrapper receipts, complete logs and separate
+  successful result audits. All 24 original judgments are appended unchanged;
+  the complete 35,740-case prefix and 519 prior reviews are retained. The
+  shared ledger now has 35,764 cases and 520 scoped reviews, with 195 owners
+  still unreviewed. Only owner 66968 receives the original bounded review.
+  The unchanged 32/26/24 historical control files and 12 new descendant
+  controls pass, alongside 12 focused Rust tests. Every one of the 260 actual
+  Cargo targets and all four trailing checks passes; a separate original
+  library doctest also passes. The complete Rust scope is 1,200 passed, zero
+  failed and one ignored benchmark in 261 batches, including zero-test
+  example targets. Fresh Cargo metadata matches the captured full inventory.
+  Source, HEAD, index and six protected executable bytes remain unchanged
+  throughout validation. Historical ledger adapters retain their original
+  assertions and require the full current promotion guard. The flake runs
+  the active ledger checks and new descendant controls. Complete promoted
+  Nix checks, current package/browser validation, main integration and
+  contextual/register/independent Korean review remain pending. The first
+  promoted Nix gate passed all 94 selected ledger controls, then failed because
+  the older command-family auditor also selected the new `friendly-command-`
+  Gena IDs. The [complete original failure and guarded repair](friendly-command-gena-prefix-fix-proof-archive.json)
+  retains ten artifacts. The repair verifies the entire current Gena append
+  before using the exact original parent view; every older assertion remains
+  intact. Eight new controls and the complete 60-owner / 1,874-group /
+  4,794-word / seven-case legacy audit pass. The second complete gate passed all
+  102 selected controls, then failed when the strict literary-question ledger
+  verifier reached the new 24-case append. The
+  [full failed attempt and historical-ledger repair](friendly-command-gena-historical-ledger-proof-archive.json)
+  retain 17 complete originals. The repair adds the exact byte-pinned original
+  Gena suite to the reviewed append sequence and retains every old assertion.
+  All 101 prior historical tests and 11 new controls pass, including individual
+  rationale changes in each of the 24 cases, altered source identities,
+  reordered or missing cases, forbidden promotion and coordinated fixture
+  rewriting. Historical parent projections remove only the declared later
+  suite citations. The complete current ledger, preserved historical runtime,
+  dependent formal/expression/conjectural audits and unchanged 715-row queue
+  pass in eight actual commands. Both failed gates and the stopped installed
+  continuation remain preserved. The subsequent actual four-check Nix build
+  passes all 214 selected controls and all four checks. Its wrapper fails
+  because it incorrectly expects the inventory output to be a directory;
+  a separate audit verifies the three directories and empty inventory file,
+  all four attribute identities and the original complete build log without
+  replaying the build. The wrapper and stopped continuation remain failed.
+  The [complete promoted installed archive](friendly-command-gena-promoted-installed-proof-archive.json)
+  retains 888 whole original success and failure artifacts, including all 472
+  command streams, both actual browser screenshots and complete raw release
+  log. The promoted packages pass 1,200 release tests in 255 batches, with zero
+  failures and one ignored benchmark. All 36 CLI policies, 44 complete Native
+  owners, 69 headword queries, 53,502 whole cohort words, 66,570 annotated rows
+  and 1,128,312 broad frames retain their original fields and order. The
+  browser passes 144 decisions, 102 required diagrams, six exports and 31
+  complete Native entries; both desktop and mobile captures were inspected.
+  A concurrent cohort recorder fails after 149 successful explicit commands.
+  The separate retry verifies and reuses all 149 commands and 298 whole
+  streams, then captures the remaining work with a lock around its recorder.
+  All 313 available original failed artifacts and the limits of its partial
+  cohort capture remain preserved. The completed retry has 161 explicit
+  commands and 75 cohort commands; the latter independently reconstruct every
+  whole cohort record from 150 retained streams. The original 33 installed
+  corruption controls pass. The [portable installed auditor](../tools/friendly_command_gena_promoted_installed_audit.py)
+  additionally verifies failed-prefix reuse and complete cohort streams.
+  All 46 portable controls pass, retaining every one of the original 33 test
+  bodies and adding 13 checks for failed-prefix provenance, missing or corrupt
+  cohort streams, executable/input identity and coordinated span rewriting.
+  The [full portable validation archive](friendly-command-gena-promoted-portable-validation-proof-archive.json)
+  preserves both the first failed path guard and separate successful retry.
+  All current source bytes, HEAD, index and six protected executables remain
+  unchanged during the successful run. Every one of the 715 inventory rows
+  remains intact; only evidence hashes change. Actual committed Nix-selected
+  source at `48b18bb` passes all 46 controls and the 715-row queue check, with
+  all 8,072 tracked and 8,030 selected files, HEAD, index and six protected
+  executables unchanged. The Rust, adapter and frontend selections retain
+  every one of the 1,146/1,146/18 installed package inputs.
+  The [main merge preservation proof](friendly-command-gena-main-merge-preservation-proof-archive.json)
+  retains 18 complete originals and verifies the full 35,740-case and
+  519-review main prefixes, every prior source declaration and metadata field,
+  both complete checklist additions and the exact 24-case / one-review append.
+  Every actual main Rust, adapter and frontend input matches the passed
+  promoted packages. [Fresh main validation](friendly-command-gena-main-validation-proof-archive.json)
+  passes 23 Rust tests across three suites and all 260 portable, current and
+  historical audit controls, formatting, focused Clippy and the 715-row queue.
+  All 8,111 captured main source files, HEAD, index and six protected debug
+  executables remain unchanged. The four complete originals preserve the
+  actual producer, receipt, full log and prior queue. Final-main Nix, quiet
+  performance and contextual/register/independent Korean review remain open.
+  This entry does not close the ending inventory or assign sentence-level
+  interpretations.
 
 - [ ] **COV-017dc — Friendly joint-action request -세나.** **Partial isolated
   implementation; wider integration pending.** KRDict 78469 retains all five
@@ -4946,6 +5092,16 @@ review remains open under the completion review below.
   integration, quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.
+
+  The [validated Gena parent merge](friendly-hortative-sena-gena-parent-preservation-proof-archive.json)
+  retains fourteen complete original artifacts and integrates main's exact
+  35,764-case / 520-review ledger. Every previous 35,740 case, source declaration,
+  metadata field and 519 ordered review survives unchanged. All 44 Sena
+  production inputs, the original 25 private judgments and corrected authoring
+  metadata, and its frontend label retain their passed original bytes. The
+  complete Gena, Sena and long-command checklist entries remain present once.
+  Fresh checks of the merged parent and the exact 25-case shared promotion
+  remain required; no additional corpus hypothesis receives a judgment here.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

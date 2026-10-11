@@ -1,0 +1,32 @@
+{
+  "state": "actual-complete-suite-stopped-at-unattributed-new-gena-history-path",
+  "files": {
+    "validate_friendly_command_gena_initial_retry1.py": {
+      "path": "friendly-command-gena-historical-failure-validate_friendly_command_gena_initial_retry1.py.gz",
+      "source_sha256": "fe8d073df94726cf41b982889569c8982e7cd7b215e7759f1d9921a5a0c5ccae",
+      "archive_sha256": "2d778f665a131881d3696cbab15865e28fb120f51f0e575b6316b0525669f601"
+    },
+    "friendly-command-gena-initial-validation-retry1.json": {
+      "path": "friendly-command-gena-historical-failure-friendly-command-gena-initial-validation-retry1.json.gz",
+      "source_sha256": "d2b95f12b1d683e6b1da8e3d14a777d1f570824013c39971549543910a8125a5",
+      "archive_sha256": "28fa6d7386089e35bd8b28c476559c3c09fbadbbce4d325283b0d36629280d5b"
+    },
+    "friendly-command-gena-initial-validation-retry1.log": {
+      "path": "friendly-command-gena-historical-failure-friendly-command-gena-initial-validation-retry1.log.gz",
+      "source_sha256": "62ddd8e0ae0c90698c241d8be11f4152b52b7a20e6cfa6b4fad891eed0be6bf7",
+      "archive_sha256": "55846f7ee0c5a88ab962d58028802000bb873006fcb0fb7e6e49742592e49b41"
+    },
+    "original-deoniman.rs": {
+      "path": "friendly-command-gena-historical-failure-original-deoniman.rs.gz",
+      "source_sha256": "83bc4580914044ad775f65691bc6bf69270d33b378b044be1104b55f08f399a7",
+      "archive_sha256": "ac2da2c51d6d7c8414c0c3fa057fd6b2109e8b2e6cf36f56f1d5c0baf00e9bca"
+    }
+  },
+  "passed": 380,
+  "failed": 1,
+  "ignored": 1,
+  "batches": 67,
+  "all_source_head_index_unchanged": true,
+  "actual_failure": "deoniman original7215word preservation checks old candidates/order, then rejects new \uac8c\ub098 hypothesis on \uc544\ubb34\uc5d0\uac8c\ub098 because its old family-attribution loop does not yet recognize the finite new observed path.",
+  "fix_scope": "Only add strict full-source/hash/JSON-pointer/path history check for captured new \uac8c\ub098 alternatives. Preserve all original7215word/history/family assertions and fixtures. New raw additions stay linguistically and contextually unjudged."
+}

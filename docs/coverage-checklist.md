@@ -4684,6 +4684,58 @@ review remains open under the completion review below.
   contextual/independent review remain required; branch results retain their
   recorded scope.
 
+- [ ] **COV-017db — Friendly command -게나.** The complete original
+  KRDict 66968 entry supplies four example groups, including its full dialogue,
+  and the explicit verb / -으시- attachment note. The
+  [source and baseline archive](friendly-command-gena-source-baseline-proof-archive.json)
+  retains eight original artifacts, 31 complete Native owners and all 36
+  installed NFC/NFD, dictionary-filter and cache-policy runs. Independent
+  canonical path checks found none of the proposed 게나 paths before this
+  implementation, irrespective of the new rule ID. All 24 independently
+  authored proposals (17 required, seven forbidden) remain in a
+  [private fixture](../tests/fixtures/friendly-command-gena-validity.json).
+  The implementation distinguishes canonical 게나 from the existing 게 + 나
+  alternatives and from 오다-final command ㄴ, keeps consonant-initial stem
+  boundaries, and assesses known bare adjective homonyms separately. Explicit
+  verb honorifics are represented; other prefinals and honorific adjective or
+  copula readings remain unknown. The
+  [regressions](../tests/friendly_command_gena.rs) check all proposals, all 31
+  complete imported entries, every candidate and relative order in 59 old word
+  records, Unicode equivalence, auxiliary and derived-adjective boundaries.
+  The [source auditor](../tools/friendly_command_gena_source_audit.py) binds the
+  original source, judgments, Native fields, baseline and attributed display
+  label. The [initial current runtime proof](friendly-command-gena-initial-runtime-proof-archive.json)
+  retains 39 full original artifacts. All 1,200 Rust tests pass in 255 suites
+  (one benchmark ignored), together with formatting, focused Clippy and 22
+  source controls. The original overall receipt's final stale-queue failure is
+  preserved; a separate queue-only recovery verifies all 715 entries and
+  unchanged code, fixtures, reviews and judgments rather than rewriting that
+  receipt or repeating the passing Rust tests. Actual CLI checks cover 36
+  policies / 1,488 frames, preserve 3,644 old paths and their own Native
+  assessments, and pass 264 required / 108 forbidden checks. Every old path and
+  relative order across 53,502 corpus/history words remains intact. Eleven
+  observed additions across five words remain explicitly unjudged; the
+  [finite history helper](../tests/support/friendly_command_gena_history.rs)
+  checks exact captured analyses, source-file hashes and complete original JSON
+  witnesses, preserving all 7,215 original deoniman assertions. Uncaptured
+  analyses and wrong source witnesses are rejected. All 1,128,312 broad frames
+  / eight streams preserve old candidates, own Native assessments and original
+  UTF-8 spans; all 18 changed complete frames and original context lines are
+  retained, and compatible novel streams remain unchanged. All 66,570 original
+  annotated rows / four partitions and gold outcomes are unchanged; only
+  mean-candidate summaries increase in three partitions. Actual SolidJS checks
+  pass 144 Unicode/filter decisions, 102 required diagrams, 42 forbidden
+  exclusions, six exact CLI exports and 31 complete Native endpoints; the owned
+  server stops and desktop/mobile screenshots fit without horizontal overflow.
+  Every new observed lemma is queried against the unchanged original dictionary:
+  69 heads yield 42 complete owners, including 13 additional original owners;
+  45 unmatched hypothetical heads remain unjudged. Shared 35,740 cases / 519
+  scoped reviews / 196 unreviewed owners remain unchanged. Independent current
+  runtime/history/gold/broad auditors and corruption controls, Git-selected
+  Nix/installed/main validation, quiet performance, shared Gena ledger promotion
+  and contextual/register/independent Korean review remain pending. This entry
+  does not close the ending inventory or assign sentence-level interpretations.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

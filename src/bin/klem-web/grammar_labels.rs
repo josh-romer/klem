@@ -127,6 +127,22 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn friendly_gena_label_keeps_its_own_ending_owner_and_component_kind() {
+        let label = &catalog()["-게나"];
+        assert_eq!(label.kind, MorphemeKind::Ending);
+        assert_eq!(label.sources.len(), 1);
+        assert_eq!(label.sources[0].id, 66968);
+        let entry = EntrySummary {
+            id: "krdict:66968".into(),
+            headword: "-게나".into(),
+            homonym: "0".into(),
+            pos: "어미".into(),
+        };
+        assert!(entry_matches(MorphemeKind::Ending, "-게나", &entry));
+        assert!(!entry_matches(MorphemeKind::Particle, "-게나", &entry));
+        assert!(!entry_matches(MorphemeKind::Suffix, "-게나", &entry));
+    }
+    #[test]
     fn willingness_offer_label_does_not_borrow_expression_homonyms() {
         let label = &catalog()["-으련"];
         assert_eq!(label.kind, MorphemeKind::Ending);
@@ -433,6 +449,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/willingness-question-native.json"),
                 PathBuf::from("tests/fixtures/gentle-command-ending-native.json"),
                 PathBuf::from("tests/fixtures/gentle-command-long-ending-native.json"),
+                PathBuf::from("tests/fixtures/friendly-command-gena-ending-native.json"),
                 PathBuf::from("tests/fixtures/krdict-conjectural-additive-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),

@@ -1,0 +1,32 @@
+{
+  "state": "actual-initial-gena-full-suite-catalog-fixture-missing",
+  "files": {
+    "validate_friendly_command_gena_initial.py": {
+      "path": "friendly-command-gena-initial-failure-validate_friendly_command_gena_initial.py.gz",
+      "source_sha256": "d81ad2c275e24ed9e53fce286a63d793b485bd35c12accb1dd564f4e74be108f",
+      "archive_sha256": "73d948012bb5228b4b0bed0b076a7e4b9ec04ed028a8c4176e448a897c1a2983"
+    },
+    "friendly-command-gena-initial-validation.json": {
+      "path": "friendly-command-gena-initial-failure-friendly-command-gena-initial-validation.json.gz",
+      "source_sha256": "b278bd347609ed96b25cbd568e8ad09a36203ac81b7b41131478a8e4b81d0cb8",
+      "archive_sha256": "0a417fe9e3b9616cec956e6c8b6fb962d0d0ecc6c1b605c1318a12726e8ce1e4"
+    },
+    "friendly-command-gena-initial-validation.log": {
+      "path": "friendly-command-gena-initial-failure-friendly-command-gena-initial-validation.log.gz",
+      "source_sha256": "c8ad1f35697a48da11f5f494e07955eea34494b7c2f1ecf8a72564b0c297e8fb",
+      "archive_sha256": "e5e14c0d1f01cf6fa59d8ec39fd50a155e65b96b60ec52b7d939c99b882b80d6"
+    },
+    "original-grammar_labels.rs": {
+      "path": "friendly-command-gena-initial-failure-original-grammar_labels.rs.gz",
+      "source_sha256": "eed4de0f6ff98404e9a198fefe3d37f27df2bd01758708b1ce407cd59ed37d2b",
+      "archive_sha256": "076330bac6406a39b875bec80d876c408a1f13bd5b3fe06792b06a337f3a2c30"
+    }
+  },
+  "rust_passed": 19,
+  "rust_failed": 1,
+  "batches": 3,
+  "all_source_head_index_unchanged": true,
+  "cause": "Existing every_label_source_resolves_from_the_attributed_offline_dictionary test has not yet included new complete source-owned ending-native fixture. Morphology/private7tests passed separately; fullsuite stopped at backend catalog.",
+  "fix": "Append new original66968endingfixture to attributed import list; preserve original source assertions and all existing catalog/data fixtures.",
+  "full_coverage_complete": false
+}

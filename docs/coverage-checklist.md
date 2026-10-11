@@ -4652,6 +4652,24 @@ review remains open under the completion review below.
   main integration, quiet performance and contextual/independent review remain
   required before this promotion is treated as verified.
 
+  [Actual applied-promotion validation](gentle-command-long-promoted-proof-archive.json)
+  now passes **19 Rust tests and 252 audit controls**, whole formatting,
+  focused Clippy and the complete 715-entry queue. All 6,841 captured files,
+  HEAD and index remain unchanged. The original count-check failure is
+  [preserved](gentle-command-long-promotion-first-failure-archive.json);
+  old 31,427/4,294 counts are still checked for the complete parent, alongside
+  the exact 25 required and eleven forbidden increments. The
+  [historical-helper failure](gentle-command-long-promotion-history-failure-archive.json)
+  retains all original 97 controls and full failed outputs. The helper now
+  assigns only exact known later source aliases to their own fixture scopes;
+  every historical assertion survives and four additional controls verify
+  the long-parent, novel and derived-class boundaries and reject unknown
+  aliases. This retains complete current-ledger checks alongside the old
+  historical scopes. No candidate judgment or corpus baseline was refreshed.
+  Current promotion Git-backed Nix selection/full checks and main integration
+  remain required; prior Main/long-package gate results retain their earlier
+  source scope. Quiet performance and contextual/independent review stay open.
+
   [Main gentle-command integration](gentle-command-main-merge-preservation.json)
   retains every original 35,681 serialized case and source declaration and
   all 515 ordered review records, adding only the 23 validated short-ending

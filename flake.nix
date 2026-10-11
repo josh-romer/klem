@@ -601,6 +601,11 @@
                 ./tools/test_gentle_command_long_ledger_audit.py
                 ./tools/friendly_command_gena_source_audit.py
                 ./tools/test_friendly_command_gena_source_audit.py
+                ./tools/friendly_command_gena_revision.py
+                ./tools/friendly_command_gena_runtime_audit.py
+                ./tools/test_friendly_command_gena_runtime_audit.py
+                ./tools/friendly_command_gena_browser_audit.py
+                ./tools/test_friendly_command_gena_browser_audit.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1256,6 +1261,10 @@
             python -m unittest discover -s tools -p 'test_gentle_command_long_ledger_audit.py'
             python tools/friendly_command_gena_source_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_source_audit.py'
+            python tools/friendly_command_gena_runtime_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_runtime_audit.py'
+            python tools/friendly_command_gena_browser_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_browser_audit.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

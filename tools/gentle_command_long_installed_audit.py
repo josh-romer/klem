@@ -71,7 +71,12 @@ def inspect_packages(v):
         assert all(package['frozen_inputs'].get(prefix+n) == digest for n,digest in profile['files'].items()), 'every original Nix package source byte'
         if name != 'klem-web-assets':
             assert all(profile['files'].get(n) == digest for n,digest in production.items()), 'all44actual compiled production inputs'
-    assert v['current_frontend'] == installed['profiles']['klem-web-assets']['files'], 'all18current frontend sources'
+    historical_frontend = installed['profiles']['klem-web-assets']['files']
+    current_matches = v['current_frontend'] == historical_frontend
+    if not current_matches:
+        import friendly_command_gena_revision as gena
+        current_matches = gena.accepts_frontend(v['current_frontend'], historical_frontend)
+    assert current_matches, 'all18current frontend sources'
     for name, owner, binary in [('klem','klem','klem'),('adapter','klem-corpus-adapter','klem-corpus-adapter'),('server','klem','klem-web'),('launcher','klem-web','klem-web')]:
         value = installed['binaries'][name]
         assert value['path'] == installed['packages'][owner]+'/bin/'+binary and installed['frozen_inputs'][value['path']] == value['sha256'], 'exact immutable installed executables'

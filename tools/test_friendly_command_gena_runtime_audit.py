@@ -169,6 +169,49 @@ class Controls(unittest.TestCase):
     def test_hypothetical_paths_claim_review(self):
         self.reject(audit.inspect_native,('native',),lambda r:r.update(independent_review='complete'),'unmatched hypotheses and independent review remain unjudged')
 
+    def test_named_revision_accepts_exact_complete_closure(self):
+        production = self.values['revision']['binding']['production_inputs']
+        self.assertTrue(revision.accepts_production(production))
+        self.assertTrue(revision.accepts_production({'/tmp/klem-gentle-command/'+p:d for p,d in production.items()}))
+
+    def test_named_revision_rejects_missing_compiled_json(self):
+        production = self.values['revision']['binding']['production_inputs'].copy()
+        production.pop('src/dictionary/proper_names.json')
+        self.assertFalse(revision.accepts_production(production))
+
+    def test_named_revision_rejects_unknown_edit(self):
+        production = self.values['revision']['binding']['production_inputs'].copy()
+        production['src/lib.rs'] = 'changed'
+        self.assertFalse(revision.accepts_production(production))
+
+    def test_named_revision_rejects_borrowed_absolute_root(self):
+        production = self.values['revision']['binding']['production_inputs']
+        self.assertFalse(revision.accepts_production({'/unrelated/'+p:d for p,d in production.items()}))
+
+    def frontend_pair(self):
+        selected = {p.removeprefix('web/'):d for p,d in self.values['proof']['friendly-command-gena-browser-runtime-retry1.json']['source_inputs'].items() if p.startswith('web/') and not p.startswith('web/tests/')}
+        historical = selected.copy()
+        historical['src/grammar-labels.json'] = self.values['revision']['parent']['binding']['production_inputs']['web/src/grammar-labels.json']
+        return selected,historical
+
+    def test_named_frontend_accepts_only_both_named_parents(self):
+        selected,historical = self.frontend_pair()
+        self.assertTrue(revision.accepts_frontend(selected,historical))
+        historical['src/grammar-labels.json'] = self.values['revision']['parent']['binding']['parent_production_inputs']['/tmp/klem-gentle-command/web/src/grammar-labels.json']
+        self.assertTrue(revision.accepts_frontend(selected,historical))
+
+    def test_named_frontend_rejects_missing_public_asset(self):
+        selected,historical = self.frontend_pair(); selected.pop('public/favicon.svg')
+        self.assertFalse(revision.accepts_frontend(selected,historical))
+
+    def test_named_frontend_rejects_unknown_current_edit(self):
+        selected,historical = self.frontend_pair(); selected['src/App.tsx'] = 'changed'
+        self.assertFalse(revision.accepts_frontend(selected,historical))
+
+    def test_named_frontend_rejects_borrowed_parent(self):
+        selected,historical = self.frontend_pair(); historical['src/App.tsx'] = 'changed'
+        self.assertFalse(revision.accepts_frontend(selected,historical))
+
 
 if __name__ == '__main__':
     unittest.main()

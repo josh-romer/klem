@@ -12,11 +12,13 @@ CAPTURE_ROOT = '/home/josh/projects/klem/.direnv/friendly-command-gena'
 sha = lambda raw: hashlib.sha256(raw).hexdigest()
 
 
-def archive():
+def archive(selected=None):
     raw = (ROOT / 'docs/friendly-command-gena-initial-runtime-proof-archive.json').read_bytes()
     assert sha(raw) == MANIFEST_SHA, 'immutable Gena runtime manifest'
     values = {}; hashes = {}
     for name, item in json.loads(raw)['files'].items():
+        if selected is not None and name not in selected:
+            continue
         packed = (ROOT / 'docs' / item['path']).read_bytes()
         assert sha(packed) == item['archive_sha256'], 'immutable packed Gena artifact'
         # Every artifact has exactly one archive wrapper, including .gz inputs.
@@ -25,12 +27,18 @@ def archive():
         hashes[name] = item['source_sha256']
         values[name] = (json.loads(gzip.decompress(original) if name.endswith('.gz') else original)
                         if name.endswith(('.json', '.json.gz')) else original)
+    assert selected is None or set(values) == set(selected), 'all requested Gena revision artifacts'
     return values, hashes
 
 
 def inputs(proof=None, hashes=None):
     if proof is None:
-        proof, hashes = archive()
+        proof, hashes = archive({'friendly-command-gena-complete-runtime-binding.json',
+                                 'friendly-command-gena-initial-validation-retry2.json',
+                                 'friendly-command-gena-queue-recovery.json',
+                                 'friendly-command-gena-initial-validation-retry2.log',
+                                 'friendly-command-gena-queue-recovery.log',
+                                 'friendly-command-gena-adapter-build.log'})
     binding = proof['friendly-command-gena-complete-runtime-binding.json']
     return dict(binding=binding, full=proof['friendly-command-gena-initial-validation-retry2.json'],
                 recovery=proof['friendly-command-gena-queue-recovery.json'],
@@ -82,3 +90,50 @@ def inspect(v, check_current=True):
     if check_current:
         assert v['current'] == production, 'current complete Gena production closure'
     return production
+
+
+def accepts_production(current):
+    """Accept only the complete, independently bound named Gena revision."""
+    expected = inspect(inputs())
+    relative = {}
+    for name, digest in current.items():
+        path = Path(name)
+        if path.is_absolute():
+            try:
+                path = path.relative_to('/tmp/klem-gentle-command')
+            except ValueError:
+                return False
+        name = str(path)
+        if name in relative:
+            return False
+        relative[name] = digest
+    return relative == expected
+
+
+def frontend_inputs():
+    proof, _ = archive({'friendly-command-gena-frontend-build.json',
+                        'friendly-command-gena-browser-runtime-retry1.json'})
+    build = proof['friendly-command-gena-frontend-build.json']
+    browser = proof['friendly-command-gena-browser-runtime-retry1.json']
+    terminal(build, 'passed'); terminal(browser, 'passed')
+    assert build['exit_code'] == browser['exit_code'] == 0 and browser['server_stopped'] and browser['source_unchanged'], 'actual Gena frontend/browser capture'
+    selected = {p.removeprefix('web/'):d for p,d in browser['source_inputs'].items()
+                if p.startswith('web/') and not p.startswith('web/tests/')}
+    prefix = CAPTURE_ROOT + '/web/'
+    declared = {p.removeprefix(prefix):d for p,d in build['frozen_inputs'].items() if p.startswith(prefix)}
+    assert len(selected) == 18 and len(declared) == 14 and all(selected[p] == d for p,d in declared.items()), 'complete18 frontend/14 declared build inputs'
+    return selected
+
+
+def accepts_frontend(current, historical):
+    v = inputs(); production = inspect(v); selected = frontend_inputs()
+    parent = v['parent']
+    known_labels = {parent['binding']['production_inputs']['web/src/grammar-labels.json'],
+                    parent['binding']['parent_production_inputs']['/tmp/klem-gentle-command/web/src/grammar-labels.json']}
+    label = 'src/grammar-labels.json'
+    assert selected[label] == production['web/' + label], 'Gena frontend belongs to bound production'
+    if len(historical) != 18 or set(historical) != set(selected) or historical[label] not in known_labels:
+        return False
+    if any(d != selected[p] for p,d in historical.items() if p != label):
+        return False
+    return current == selected

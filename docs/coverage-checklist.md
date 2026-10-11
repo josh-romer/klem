@@ -4747,8 +4747,17 @@ review remains open under the completion review below.
   frontend inputs, including public assets. The
   [audit archive](friendly-command-gena-audit-proof-archive.json) retains the
   complete original development failures, producers, receipts and logs as well
-  as both passing control runs. Named historical production/frontend adapters,
-  Git-selected Nix wiring and Nix/installed/main validation, quiet performance,
+  as both passing control runs. The named historical production/frontend
+  adapters now accept only the independently bound 44-input Gena revision and
+  its complete 18-input frontend. Eight additional controls reject missing
+  compiled JSON, borrowed roots, unknown code edits, missing public assets and
+  unrelated parent frontend changes. All historical captures and assertions
+  remain intact. The [revision proof](friendly-command-gena-revision-proof-archive.json)
+  retains 14 complete original artifacts, including the old and current source
+  files; all 224 controls across seven current/historical suites pass with the
+  complete source, HEAD and index unchanged. Nix selects the five new revision,
+  runtime/browser auditor and test modules and runs both control suites. Actual
+  Git-selected source execution and Nix/installed/main validation, quiet performance,
   shared Gena ledger promotion and contextual/register/independent Korean
   review remain pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.

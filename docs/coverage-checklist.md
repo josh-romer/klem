@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-10.
+Last reviewed: 2026-10-11.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 513 scoped
-  dispositions; 202 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 519 scoped
+  dispositions; 196 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -4761,6 +4761,36 @@ review remains open under the completion review below.
   shared Gena ledger promotion and contextual/register/independent Korean
   review remain pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.
+
+- [ ] **COV-017dc — Friendly joint-action request -세나.** **Partial isolated
+  implementation; wider integration pending.** KRDict 78469 retains all five
+  complete example groups, including dialogue, and its verb / -으시- note in
+  the [source and baseline archive](friendly-hortative-sena-source-baseline-proof-archive.json).
+  All 25 proposals (19 required, six forbidden) were authored before the first
+  targeted current installed probe; the earlier whole-inventory discovery is
+  explicitly separate. Baseline checks retain 36 Unicode/filter/cache policies,
+  1,608 complete frames and all 36 Native owners. Neither canonical typed paths
+  nor the proposed lemma-role paths were found; matching did not depend on a
+  future rule ID. The source 사세나 → 살다 target needs ㄹ recovery before ㅅ;
+  the separate 사다 proposal preserves ambiguity. Literal consonant boundaries
+  reject the declared vowel-triggered irregular restorations. Bare copula and
+  known nominal-plus-답다 paths cannot borrow the verb license; other prefinals,
+  outer particles and honorific adjective/copula paths remain unknown.
+  The [focused regressions](../tests/friendly_hortative_sena.rs) cover every
+  proposal, all complete imported fields and homonyms, Unicode, auxiliary
+  composition and every candidate/relative order in 63 earlier word records.
+  Eight new tests, eight parent -게나 tests and 11 backend grammar-label tests
+  pass, together with formatting and focused Clippy. The
+  [focused proof](friendly-hortative-sena-focused-proof-archive.json) preserves
+  the original final Clippy failure and all passing Rust results; the fix only
+  initializes the same four ordered ending records with `vec!`. Parent source,
+  binaries, all old fixtures, gold annotations and the shared 35,740 cases / 519
+  reviews remain unchanged. The display label cites only its own -세나 owner;
+  related -세/-으세 entries remain separate. Full Rust/history/broad/gold and
+  CLI/browser/installed/Nix/main checks, independent artifact corruption tests,
+  quiet timing and shared-ledger promotion remain required. Contextual sense,
+  joint-action interpretation, register and independent Korean review are open.
+  This finite implementation does not close the ending inventory.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

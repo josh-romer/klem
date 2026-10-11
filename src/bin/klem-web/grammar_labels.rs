@@ -127,6 +127,31 @@ pub(super) fn has_literary_ri_assertion(
 mod tests {
     use super::*;
     #[test]
+    fn friendly_sena_label_keeps_its_own_owner_and_does_not_borrow_se() {
+        let label = &catalog()["-세나"];
+        assert_eq!(label.kind, MorphemeKind::Ending);
+        assert_eq!(label.sources.len(), 1);
+        assert_eq!(label.sources[0].id, 78469);
+        for (id, headword, expected) in [
+            (78469, "-세나", true),
+            (78404, "-세", false),
+            (78434, "-으세", false),
+        ] {
+            let entry = EntrySummary {
+                id: format!("krdict:{id}"),
+                headword: headword.into(),
+                homonym: "0".into(),
+                pos: "어미".into(),
+            };
+            assert_eq!(
+                entry_matches(MorphemeKind::Ending, "-세나", &entry),
+                expected
+            );
+            assert!(!entry_matches(MorphemeKind::Particle, "-세나", &entry));
+            assert!(!entry_matches(MorphemeKind::Suffix, "-세나", &entry));
+        }
+    }
+    #[test]
     fn friendly_gena_label_keeps_its_own_ending_owner_and_component_kind() {
         let label = &catalog()["-게나"];
         assert_eq!(label.kind, MorphemeKind::Ending);
@@ -450,6 +475,7 @@ mod tests {
                 PathBuf::from("tests/fixtures/gentle-command-ending-native.json"),
                 PathBuf::from("tests/fixtures/gentle-command-long-ending-native.json"),
                 PathBuf::from("tests/fixtures/friendly-command-gena-ending-native.json"),
+                PathBuf::from("tests/fixtures/friendly-hortative-sena-ending-native.json"),
                 PathBuf::from("tests/fixtures/krdict-conjectural-additive-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-past-prefinal-labels.json"),
                 PathBuf::from("tests/fixtures/krdict-double-past-prefinal-labels.json"),

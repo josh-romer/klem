@@ -758,31 +758,41 @@ pub(crate) fn endings() -> &'static [Ending] {
     static RULES: OnceLock<Vec<Ending>> = OnceLock::new();
     RULES.get_or_init(|| {
         use Boundary::*;
-        let mut out = Vec::new();
-        // Native 86556's exact 아름답네 witness retains the lexical stem's ㅂ.
-        // The engine limits this source-owned alternative to that witness.
-        out.push(Ending {
-            suffix: "네",
-            form: "습네",
-            boundary: Literal,
-            connector: false,
-        });
-        // KRDict 66968: a friendly command after a verb or honorific 으시.
-        // Consonant-initial 게나 has no 으 allomorph or irregular stem recovery.
-        out.push(Ending {
-            suffix: "게나",
-            form: "게나",
-            boundary: Literal,
-            connector: false,
-        });
-        // KRDict 73877: colloquial friendly command after 오다 or an
-        // 오다-final verb. The engine checks the recovered owner separately.
-        out.push(Ending {
-            suffix: "",
-            form: "ㄴ",
-            boundary: Attached(4),
-            connector: false,
-        });
+        let mut out = vec![
+            // Native 86556's exact 아름답네 witness retains the lexical stem's ㅂ.
+            // The engine limits this source-owned alternative to that witness.
+            Ending {
+                suffix: "네",
+                form: "습네",
+                boundary: Literal,
+                connector: false,
+            },
+            // KRDict 66968: a friendly command after a verb or honorific 으시.
+            // Consonant-initial 게나 has no 으 allomorph or irregular stem recovery.
+            Ending {
+                suffix: "게나",
+                form: "게나",
+                boundary: Literal,
+                connector: false,
+            },
+            // KRDict 78469: friendly joint-action request after a verb or 으시.
+            // Literal ㅅ attachment restores dropped ㄹ, without vowel-triggered
+            // irregular recovery. Keep 세/으세 and 세 + 나 analyses separate.
+            Ending {
+                suffix: "세나",
+                form: "세나",
+                boundary: Literal,
+                connector: false,
+            },
+            // KRDict 73877: colloquial friendly command after 오다 or an
+            // 오다-final verb. The engine checks the recovered owner separately.
+            Ending {
+                suffix: "",
+                form: "ㄴ",
+                boundary: Attached(4),
+                connector: false,
+            },
+        ];
         // NIKL 305262 and FAQ 6416: separate regular modern endings;
         // -거라 is not restricted to 가다, and 오거라 coexists with 오너라.
         for (suffix, boundary) in [("거라", Literal), ("너라", ComeStem)] {
@@ -2272,6 +2282,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.friendly_command.gena" => {
             "Separate friendly-command -게나 after a verb or the source-listed honorific -으시-. Keep regular consonant-initial stem boundaries and existing -게 plus -나 alternatives. KRDict 66968 describes 예사 낮춤; contextual sense and social/register appropriateness remain unresolved."
+        }
+        "ending.friendly_hortative.sena" => {
+            "Separate friendly joint-action request -세나 after a verb or the source-listed honorific -으시-. Restore ㄹ dropped before ㅅ while retaining direct regular stems and other lexical readings. KRDict 78469 describes 예사 낮춤; contextual sense, shared-action interpretation and social/register appropriateness remain unresolved."
         }
         "ending.activity_reason" => {
             "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."

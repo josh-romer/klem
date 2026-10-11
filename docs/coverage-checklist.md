@@ -4935,8 +4935,15 @@ review remains open under the completion review below.
   pass, retaining all 43 original method bodies and adding three full-stream
   and failed-wrapper controls. [Complete audit evidence](friendly-hortative-sena-portable-installed-proof-archive.json)
   is preserved and both commands are wired into the flake with explicit captured
-  evidence scope. Execution from the new selected Nix source, main integration,
-  quiet timing and shared-ledger promotion remain required. Contextual sense,
+  evidence scope. The [complete portable Nix gate](friendly-hortative-sena-portable-complete-nix-proof-archive.json)
+  now passes all four checks at `9a495ce`, including 31 source revision controls
+  and all 46 installed controls from actual Git-selected source. All 8,205
+  tracked and 8,163 selected files, HEAD, index and six protected executables
+  remain unchanged. Every one of the 1,158/1,158/18 Rust, adapter and frontend
+  input files matches the prior installed packages. Its three complete originals
+  preserve the actual producer, receipt and full build log; the three directory
+  outputs and empty inventory output file are verified separately. Main
+  integration, quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.
 

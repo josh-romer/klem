@@ -1,0 +1,45 @@
+{
+  "state": "actual-portable-Sena-four-Nix-checks-passed",
+  "files": {
+    "run_sena_portable_complete_nix_gate.py": {
+      "path": "friendly-hortative-sena-portable-complete-nix-proof/run_sena_portable_complete_nix_gate.py.gz",
+      "source_sha256": "fd9af346691de02f4936652937ce1b14012f0e54dea36b9d9ff81bb4cf0544d8",
+      "archive_sha256": "55f242e231797f1fcc59e90fdcdd2678fc46cfe377c4d679a61410e7f6e6dec4",
+      "bytes": 6405
+    },
+    "friendly-hortative-sena-portable-complete-nix-gate.json": {
+      "path": "friendly-hortative-sena-portable-complete-nix-proof/friendly-hortative-sena-portable-complete-nix-gate.json.gz",
+      "source_sha256": "81b3ea71dcb78e0d870085fce5a8d81cdd7b17503ba5fe3f1d616170be5f19e8",
+      "archive_sha256": "2f208fb376e1b1434c0dee86d61a5f9d78ca3f5368a478039a80c2545ee661e7",
+      "bytes": 2489571
+    },
+    "friendly-hortative-sena-portable-complete-nix-gate.log": {
+      "path": "friendly-hortative-sena-portable-complete-nix-proof/friendly-hortative-sena-portable-complete-nix-gate.log.gz",
+      "source_sha256": "668783a28b79d1b6ec226f475930f95b413756b2ac0a8deaca41a5bbbd611fd2",
+      "archive_sha256": "4d64dd523dbc63b6290de67e79beaa038d3c91d297efb35bcddae99c016031ee",
+      "bytes": 138087
+    }
+  },
+  "head": "9a495ce9f175ca964dc3c9f2167bc2843c4f4ef4",
+  "tracked_source_files": 8205,
+  "selected_source_files": 8163,
+  "revision_controls": 31,
+  "portable_installed_controls": 46,
+  "compile_profile_files": {
+    "klem": 1158,
+    "corpus-adapter": 1158,
+    "web-assets": 18
+  },
+  "complete_source_head_index_and_six_binaries_unchanged": true,
+  "expected_output_types": [
+    "directory",
+    "directory",
+    "directory",
+    "empty-file"
+  ],
+  "producer": {
+    "text": "\"\"\"Retain the whole terminal portable Sena four-check Nix validation.\"\"\"\nimport gzip\nimport hashlib\nimport json\nfrom pathlib import Path\nP = Path(__file__).resolve().parent\nW = P.parent / 'friendly-hortative-sena'\nOUT = W / 'docs/friendly-hortative-sena-portable-complete-nix-proof-archive.json'\nassert not OUT.exists()\nsha = lambda raw: hashlib.sha256(raw).hexdigest()\nnames = ['run_sena_portable_complete_nix_gate.py',\n         'friendly-hortative-sena-portable-complete-nix-gate.json',\n         'friendly-hortative-sena-portable-complete-nix-gate.log']\nr = json.loads((P / names[1]).read_bytes())\nassert r['state'] == 'passed' and r['phase'] == 'complete' and r['exit_code'] == 0\nassert all(r[key] for key in ['inputs_unchanged', 'head_unchanged', 'index_unchanged', 'protected_binaries_unchanged',\n                             'selected_preflight_passed', 'portable_selected_preflight_passed'])\nassert r['head'] == '9a495ce9f175ca964dc3c9f2167bc2843c4f4ef4'\nassert len(r['frozen_inputs']) == 8205 and len(r['inventory_source_files']) == 8163\nassert len(r['results']) == 7 and all(row['exit_code'] == 0 for row in r['results'])\nassert r['producer'] == dict(text=(P / names[0]).read_text(), sha256=sha((P / names[0]).read_bytes()))\nassert r['log_sha256'] == sha((P / names[2]).read_bytes())\nassert all(sha((W / name).read_bytes()) == digest for name, digest in r['frozen_inputs'].items())\nassert [len(r['profiles'][name]['files']) for name in ['klem', 'corpus-adapter', 'web-assets']] == [1158, 1158, 18]\nassert len(r['outputs']) == 4 and len(set(r['outputs'])) == 4\nfor index, value in enumerate(r['outputs']):\n    path = Path(value)\n    assert path.is_dir() if index < 3 else path.is_file() and path.stat().st_size == 0\nfiles = {}\ndestination = W / 'docs/friendly-hortative-sena-portable-complete-nix-proof'\ndestination.mkdir()\nfor name in names:\n    raw = (P / name).read_bytes(); packed = gzip.compress(raw, mtime=0)\n    path = destination / (name + '.gz'); path.write_bytes(packed)\n    assert gzip.decompress(path.read_bytes()) == raw\n    files[name] = dict(path=str(path.relative_to(W / 'docs')), source_sha256=sha(raw), archive_sha256=sha(packed), bytes=len(raw))\nOUT.write_text(json.dumps(dict(state='actual-portable-Sena-four-Nix-checks-passed', files=files,\n                              head=r['head'], tracked_source_files=8205, selected_source_files=8163,\n                              revision_controls=31, portable_installed_controls=46,\n                              compile_profile_files={'klem':1158, 'corpus-adapter':1158, 'web-assets':18},\n                              complete_source_head_index_and_six_binaries_unchanged=True,\n                              expected_output_types=['directory','directory','directory','empty-file'],\n                              producer=dict(text=Path(__file__).read_text(), sha256=sha(Path(__file__).read_bytes())),\n                              scope='Actual named Sena checkpoint; shared25 promotion, main integration, quiet timing and contextual/independent review remain separate.'), indent=2) + '\\n')\nprint(json.dumps(dict(files=len(files), manifest_sha256=sha(OUT.read_bytes()))))\n",
+    "sha256": "099a6290d80ec51b622857bc3a6015499026366c4e92ee0669af78cea233da3f"
+  },
+  "scope": "Actual named Sena checkpoint; shared25 promotion, main integration, quiet timing and contextual/independent review remain separate."
+}

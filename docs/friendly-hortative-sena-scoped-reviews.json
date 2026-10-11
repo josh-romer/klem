@@ -1,0 +1,62 @@
+{
+  "entries": [
+    {
+      "id": "krdict:78469",
+      "source_sha256": "b52ad93e6f0b54eecd5ac134cc431d369d67568b75e0ab3fe4c76b74dc6cd4e3",
+      "status": "scoped",
+      "checklist": [
+        "COV-017dc"
+      ],
+      "scope": "Finite structural coverage of the complete original -세나 entry: five original example groups and dialogue, the exact 25 preauthored cases (19 required and six forbidden), consonant-initial attachment and ㄹ deletion, verbal honorifics and attached auxiliaries, known bare adjective/copula/답다 and invalid irregular boundaries. Canonical target authoring predates runtime and intentionally contains no new rule-ID requirements. This scoped source review describes only these original structural judgments; it does not certify complete inventory coverage or contextual interpretation.",
+      "remaining": "Other prefinals, honorific adjective/copula predicates and outer particles remain Unknown where not licensed. The original 중세나 corpus observation retains its noun gold, complete sentence and additional unjudged word hypothesis. Contextual homonym/sense choice, social appropriateness, wider register and independent Korean-language review remain separate. Quiet performance and complete main integration remain required; this scoped review certifies neither.",
+      "evidence": [
+        {
+          "path": "tests/friendly_hortative_sena.rs"
+        },
+        {
+          "path": "tests/fixtures/friendly-hortative-sena-source.json"
+        },
+        {
+          "path": "tests/fixtures/friendly-hortative-sena-validity.json"
+        },
+        {
+          "path": "docs/friendly-hortative-sena-source-baseline-proof-archive.json"
+        },
+        {
+          "path": "docs/friendly-hortative-sena-wide-proof-archive.json"
+        },
+        {
+          "path": "docs/friendly-hortative-sena-corpus-regression-proof-archive.json"
+        },
+        {
+          "path": "tools/friendly_hortative_sena_source_audit.py"
+        },
+        {
+          "path": "tools/friendly_hortative_sena_runtime_audit.py"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-1",
+          "judgment": "structural-path"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-2",
+          "judgment": "structural-path"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-3",
+          "judgment": "structural-path"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-4",
+          "judgment": "structural-path"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-5",
+          "judgment": "structural-path"
+        }
+      ]
+    }
+  ]
+}

@@ -5146,6 +5146,28 @@ review remains open under the completion review below.
   Content-preserving Nix deduplication completed without garbage collection,
   retaining main's full source, HEAD, index and 683 checked build outputs. No
   additional full Nix build or runtime replay is claimed by this selected audit.
+  The [portable ledger preparation proof](friendly-hortative-sena-portable-ledger-prepared-proof-archive.json)
+  preserves twelve whole prepared programs, logs and review artifacts. The
+  original twelve draft controls and eighteen complete-tail controls passed;
+  the public-path variant independently passed the same eighteen controls.
+  The [portable draft reader](../tools/friendly_hortative_sena_ledger_draft_audit.py)
+  now reads the immutable sixteen-file source archive, preserving every original
+  inspector assertion. The [current append guard](../tools/friendly_hortative_sena_ledger_audit.py)
+  reads the bounded review from source and checks all parent and appended case
+  fields, serialized parent bytes, source declarations and all review fields.
+  Its explicit `--draft` mode verifies the proposal; default mode requires the
+  actual complete append and rejects the still-unpromoted shared ledger. Both
+  guards and their thirty unchanged controls are included in the Nix inventory
+  check. The separate bounded review changes only scope and remaining-work
+  wording; it grants no contextual or independent Korean review. Installed
+  [Installed validation](friendly-hortative-sena-portable-ledger-public-proof-archive.json)
+  now passes all thirty controls, both draft positives, the expected rejection
+  of the unpromoted actual ledger, all 715 queue rows and the whitespace check.
+  Every source byte, HEAD, index and six protected executables stay unchanged;
+  all 44 production inputs and 1,158/1,158/18 compiled inputs still bind the
+  passed parent Rust run. Ten whole artifacts retain the actual producer,
+  receipt, log, complete pre-update queue and all installed modules. Git-selected
+  verification of these new portable files remains pending.
   Actual shared promotion, main integration, quiet performance and contextual
   or independent Korean review remain required.
 

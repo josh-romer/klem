@@ -4817,8 +4817,22 @@ review remains open under the completion review below.
   retains ten artifacts. The repair verifies the entire current Gena append
   before using the exact original parent view; every older assertion remains
   intact. Eight new controls and the complete 60-owner / 1,874-group /
-  4,794-word / seven-case legacy audit pass. The complete retry remains pending. This entry
-  does not close the ending inventory or assign sentence-level interpretations.
+  4,794-word / seven-case legacy audit pass. The second complete gate passed all
+  102 selected controls, then failed when the strict literary-question ledger
+  verifier reached the new 24-case append. The
+  [full failed attempt and historical-ledger repair](friendly-command-gena-historical-ledger-proof-archive.json)
+  retain 17 complete originals. The repair adds the exact byte-pinned original
+  Gena suite to the reviewed append sequence and retains every old assertion.
+  All 101 prior historical tests and 11 new controls pass, including individual
+  rationale changes in each of the 24 cases, altered source identities,
+  reordered or missing cases, forbidden promotion and coordinated fixture
+  rewriting. Historical parent projections remove only the declared later
+  suite citations. The complete current ledger, preserved historical runtime,
+  dependent formal/expression/conjectural audits and unchanged 715-row queue
+  pass in eight actual commands. Both failed gates and the stopped installed
+  continuation remain preserved. A new complete Nix retry, current installed
+  package/browser checks and main integration remain pending. This entry does
+  not close the ending inventory or assign sentence-level interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

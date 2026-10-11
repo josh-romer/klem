@@ -5115,9 +5115,26 @@ review remains open under the completion review below.
   every 1,158/1,158/18 profile member. Its fourteen prepared corruption controls
   pass, including rejection of unfinished proof. The original 31 test bodies
   and assertions remain unchanged. Historical profiles are projected only
-  after this complete named parent proof succeeds. Current portable controls,
-  committed-source Nix verification and the exact 25-case shared promotion
-  remain pending; the original failed profile audit remains failed.
+  after this complete named parent proof succeeds. The [complete current-parent control proof](friendly-hortative-sena-gena-parent-controls-proof-archive.json)
+  now passes all 351 current and historical controls, the 715-entry queue and
+  the whitespace check at `a762809`. Every tracked source byte, HEAD, index
+  and all six protected executables remain unchanged. Its eighteen whole
+  artifacts retain the exact installed guard and ten test files, all actual
+  commands and output, and the earlier preinitialization failure. The original
+  failed 31-control profile audit remains failed.
+  The [complete original append draft](friendly-hortative-sena-ledger-draft-proof-archive.json)
+  preserves all sixteen original artifacts: the 35,764-case parent, 520 reviews,
+  all 715 original source records, all 25 rule-independent Sena cases and
+  their corrected authoring metadata, and the proposed single bounded review.
+  The [prepared complete-tail guard proof](sena-ledger-prepared-guard-proof-archive.json)
+  passes all twelve unchanged draft controls and eighteen additional actual-input
+  controls. A historical parent view requires checking every current tail case,
+  source declaration and review first. Its original two-test aliasing failure
+  and both failed source files remain preserved; the correction separates the
+  active review input from the authored draft. These are prepared proofs only:
+  the shared ledger remains at 35,764 cases / 520 reviews, all 25 Sena cases
+  remain private, and the scoped review still explicitly describes a draft.
+  Committed-source Nix verification and actual shared promotion remain required.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

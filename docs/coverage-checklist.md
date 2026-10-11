@@ -4810,7 +4810,17 @@ review remains open under the completion review below.
   and 72 forbidden-path checks, every one of 2,916 earlier path occurrences
   and assessments retained, and all 36 complete Native responses unchanged.
   The 716 added path occurrences stay unjudged outside the finite authored
-  cases; Unicode and cache parity pass. Full Rust/history/broad/gold and
+  cases; Unicode and cache parity pass. The
+  [independent current-runtime auditor](../tools/friendly_hortative_sena_runtime_audit.py)
+  and [41 corruption controls](../tools/test_friendly_hortative_sena_runtime_audit.py)
+  pass with [all six original artifacts retained](friendly-hortative-sena-runtime-audit-proof-archive.json).
+  They independently derive every current observation, added path and full
+  dictionary assessment; confirm all three binary fingerprints and complete
+  compile profiles; and reject refreshed stdout that loses older candidates,
+  changes spans or ownership, or borrows -세/-나. Unreviewed prefinal paths
+  retain Unknown; bare known adjectives cannot borrow verb attachment, and
+  사세나 retains both 살다 with ㄹ recovery and 사다 without it. Both modules
+  are selected and run by the Nix inventory check. Full Rust/history/broad/gold and
   broader CLI/browser/installed/full Nix/main checks, wider runtime integrity controls,
   quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.

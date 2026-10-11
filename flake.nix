@@ -370,6 +370,7 @@
                 ./tools/ssik_adverb_outer_tails.py
                 ./tools/friendly_command_preparation.py
                 ./tools/friendly_command_audit.py
+                ./tools/test_friendly_command_historical_gena.py
                 ./tools/degree_expectation_audit.py
                 ./tools/degree_expectation_parent.py
                 ./tools/degree_expectation_runtime.py
@@ -1072,6 +1073,7 @@
             python tools/ssik_adverb_outer_tails.py
             python tools/friendly_command_preparation.py
             python tools/friendly_command_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_historical_gena.py'
             python tools/degree_expectation_audit.py
             python tools/degree_expectation_runtime.py
             python tools/degree_expectation_corpora.py

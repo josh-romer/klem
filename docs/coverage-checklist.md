@@ -4810,7 +4810,14 @@ review remains open under the completion review below.
   assertions and require the full current promotion guard. The flake runs
   the active ledger checks and new descendant controls. Complete promoted
   Nix checks, current package/browser validation, main integration and
-  contextual/register/independent Korean review remain pending. This entry
+  contextual/register/independent Korean review remain pending. The first
+  promoted Nix gate passed all 94 selected ledger controls, then failed because
+  the older command-family auditor also selected the new `friendly-command-`
+  Gena IDs. The [complete original failure and guarded repair](friendly-command-gena-prefix-fix-proof-archive.json)
+  retains ten artifacts. The repair verifies the entire current Gena append
+  before using the exact original parent view; every older assertion remains
+  intact. Eight new controls and the complete 60-owner / 1,874-group /
+  4,794-word / seven-case legacy audit pass. The complete retry remains pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

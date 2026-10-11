@@ -4872,10 +4872,32 @@ review remains open under the completion review below.
   Captured mode verifies the complete immutable runtime artifacts and current
   44 production / 18 frontend inputs, while explicitly reporting that it has
   not verified live executable files. The Nix inventory check selects the new
-  controls and uses captured mode for these sandboxed auditors; actual
-  execution of that updated selection remains pending. Historical revision
-  guards and browser/installed/full Nix/main checks,
-  quiet timing and shared-ledger promotion remain required. Contextual sense,
+  controls and uses captured mode for these sandboxed auditors. The
+  [actual isolated Nix sandbox](friendly-hortative-sena-sandbox-proof-archive.json)
+  passes all 146 source/runtime/wide/evidence-mode controls and the 715-entry
+  source queue. It confirms all six host executable paths are absent, while
+  preserving every 1,158 Rust and 18 frontend build input. The preflight
+  disk-full failure is retained as a terminal observation; the complete
+  offline missing-dependency failure remains separate from the successful
+  retry, which uses the same Nix expression and enables the binary cache.
+  The [actual SolidJS build and browser run](friendly-hortative-sena-browser-proof-archive.json)
+  preserve all 14 available original artifacts, including the first
+  port-denied launch. All 25 preauthored cases pass 150 Unicode/filter
+  decisions, 114 ordered diagrams and 36 forbidden exclusions. Six policies
+  for the original KAIST sentence preserve the complete compatible noun
+  reading and exclude the unmatched hypothetical predicate in both dictionary
+  filters. Twelve complete exports match the CLI and 37 complete Native
+  entries match the original fixtures. The owned server stops explicitly;
+  desktop and mobile screenshots were actually inspected with bounded scope.
+  [Independent browser verification](friendly-hortative-sena-browser-audit-proof-archive.json)
+  passes 32 corruption controls in each of live and captured modes, rederiving
+  every original word, dropdown, export, corpus gold observation, diagram
+  order and Native field. The audit's initial incorrect corpus-state guard
+  and its terminal failure remain preserved; the correction matches the
+  original retained state without changing the corpus result.
+  Historical revision guards, the full historical Nix inventory and four
+  package/installed checks, installed browser, main integration, quiet timing
+  and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.
 

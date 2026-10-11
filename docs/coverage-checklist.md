@@ -4830,9 +4830,41 @@ review remains open under the completion review below.
   suite citations. The complete current ledger, preserved historical runtime,
   dependent formal/expression/conjectural audits and unchanged 715-row queue
   pass in eight actual commands. Both failed gates and the stopped installed
-  continuation remain preserved. A new complete Nix retry, current installed
-  package/browser checks and main integration remain pending. This entry does
-  not close the ending inventory or assign sentence-level interpretations.
+  continuation remain preserved. The subsequent actual four-check Nix build
+  passes all 214 selected controls and all four checks. Its wrapper fails
+  because it incorrectly expects the inventory output to be a directory;
+  a separate audit verifies the three directories and empty inventory file,
+  all four attribute identities and the original complete build log without
+  replaying the build. The wrapper and stopped continuation remain failed.
+  The [complete promoted installed archive](friendly-command-gena-promoted-installed-proof-archive.json)
+  retains 888 whole original success and failure artifacts, including all 472
+  command streams, both actual browser screenshots and complete raw release
+  log. The promoted packages pass 1,200 release tests in 255 batches, with zero
+  failures and one ignored benchmark. All 36 CLI policies, 44 complete Native
+  owners, 69 headword queries, 53,502 whole cohort words, 66,570 annotated rows
+  and 1,128,312 broad frames retain their original fields and order. The
+  browser passes 144 decisions, 102 required diagrams, six exports and 31
+  complete Native entries; both desktop and mobile captures were inspected.
+  A concurrent cohort recorder fails after 149 successful explicit commands.
+  The separate retry verifies and reuses all 149 commands and 298 whole
+  streams, then captures the remaining work with a lock around its recorder.
+  All 313 available original failed artifacts and the limits of its partial
+  cohort capture remain preserved. The completed retry has 161 explicit
+  commands and 75 cohort commands; the latter independently reconstruct every
+  whole cohort record from 150 retained streams. The original 33 installed
+  corruption controls pass. The [portable installed auditor](../tools/friendly_command_gena_promoted_installed_audit.py)
+  additionally verifies failed-prefix reuse and complete cohort streams.
+  All 46 portable controls pass, retaining every one of the original 33 test
+  bodies and adding 13 checks for failed-prefix provenance, missing or corrupt
+  cohort streams, executable/input identity and coordinated span rewriting.
+  The [full portable validation archive](friendly-command-gena-promoted-portable-validation-proof-archive.json)
+  preserves both the first failed path guard and separate successful retry.
+  All current source bytes, HEAD, index and six protected executables remain
+  unchanged during the successful run. Every one of the 715 inventory rows
+  remains intact; only evidence hashes change. Committed-source Nix verification
+  is pending. Main integration and contextual/register/independent Korean review
+  remain open. This entry does not close the ending inventory or assign
+  sentence-level interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

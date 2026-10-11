@@ -609,6 +609,9 @@
                 ./tools/test_friendly_command_gena_browser_audit.py
                 ./tools/friendly_command_gena_installed_audit.py
                 ./tools/test_friendly_command_gena_installed_audit.py
+                ./tools/friendly_command_gena_promoted_installed_audit.py
+                ./tools/friendly_command_gena_promoted_streams.py
+                ./tools/test_friendly_command_gena_promoted_installed_audit.py
                 ./tools/friendly_command_gena_performance_audit.py
                 ./tools/test_friendly_command_gena_performance_audit.py
                 ./tools/friendly_command_gena_ledger_audit.py
@@ -1276,6 +1279,8 @@
             python -m unittest discover -s tools -p 'test_friendly_command_gena_browser_audit.py'
             python tools/friendly_command_gena_installed_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_installed_audit.py'
+            python tools/friendly_command_gena_promoted_installed_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_command_gena_promoted_installed_audit.py'
             python tools/friendly_command_gena_performance_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_performance_audit.py'
             python tools/friendly_command_gena_ledger_audit.py

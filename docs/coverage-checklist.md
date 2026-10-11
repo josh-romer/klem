@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-10.
+Last reviewed: 2026-10-11.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -4693,8 +4693,23 @@ review remains open under the completion review below.
   the helper by listing the omitted finite fixture sources, keeps every old
   assertion and adds four controls. Its 101 historical controls and 252 total
   promotion controls pass from actual Git-selected Nix source. Its full
-  four-check build and main merge remain pending; these failed original runs
-  do not establish a complete Nix gate.
+  four-check build and main merge were still pending at that checkpoint;
+  these failed original runs do not establish a complete Nix gate.
+
+  [The complete promotion gate and current main merge proof](gentle-command-long-main-promotion-proof-archive.json)
+  now retain all four passing Nix checks at `3ad5839`, with all 6,846 tracked
+  inputs, HEAD and index unchanged. Main merge `4fe4f4b` retains every original
+  35,704 case, source declaration and metadata field, all 517 ordered reviews,
+  the fourteen formal-volitional validation records, the single COV-017cw
+  entry and both original failure archives. Only the exact 36 cases and two
+  bounded reviews are appended. Current main passes 133 controls (101
+  historical and 32 strict long-ledger controls), the 715-entry queue and
+  diff checks. Every actual compile input matches the passed promotion:
+  1,137 Rust, 1,137 adapter and 18 frontend files. The twelve complete original
+  artifacts include the earlier fetch/reference failures and complete main
+  parent snapshot. Fresh final-main Nix, quiet timing and contextual/register/
+  independent Korean review remain required; this proof preserves the original
+  failed gates as failures and does not certify those remaining tasks.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

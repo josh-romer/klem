@@ -1,0 +1,35 @@
+{
+  "state": "prepared-not-promoted",
+  "parent_cases": 35704,
+  "proposed_cases": 35740,
+  "added_cases": 36,
+  "added_required": 25,
+  "added_forbidden": 11,
+  "parent_reviews": 517,
+  "proposed_reviews": 519,
+  "remaining_unreviewed_after_proposal": 196,
+  "original_fixture_sha256": {
+    "gentle-command-long-validity.json": "d5440ac1a4801573e78eca3a5fdd98544c1e548a9cd5b7733d3c3060bd1c3668",
+    "gentle-command-long-novel-validity.json": "63c0ac391529fb7c5806656cb1061a7b4dcd7282dca57d372905ebb885478463",
+    "gentle-command-class-interaction-validity.json": "655f08927753cc454373a47dff559e77b08b1afc80cc46c84bdf2abbd8bd5026"
+  },
+  "files": {
+    "parent-validity.json": {
+      "source_sha256": "e2ce047408d1cc2e0c07d5fb43276571e4a22cc6fd5ba4e7dc861c03750b46f6",
+      "archive_sha256": "9e2c235b2519f733c0dd5c78db1cfd9acdb94ae90d80b98cc1194133b014e124"
+    },
+    "parent-inventory-reviews.json": {
+      "source_sha256": "81e771c20311f36d3982efc0c1721211ff7c6b2a8dc4f43b4a1cfbd433b0573c",
+      "archive_sha256": "5a4ee88dc95f4bacd444a3cb91a7f8401eac76e9259a0d7d7ec51290b3a982d5"
+    },
+    "parent-inventory-review-queue.json": {
+      "source_sha256": "a88c1b4710d75accf5c5542435bc9898ff4e16a2eae10ac698735486f47aa149",
+      "archive_sha256": "c256cf717f96fbc6eda4dc904fde9980c28d45b71b45b6077a03a6a2e3407213"
+    }
+  },
+  "long25_authoring_precedes_runtime": true,
+  "novel8_authoring_precedes_runtime": false,
+  "other11novel_hypotheses_promoted": false,
+  "needs_draft_corruption_controls_exact_parent_and_current_promotion_checks": true,
+  "full_coverage_complete": false
+}

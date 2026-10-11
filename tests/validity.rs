@@ -7,10 +7,19 @@ fn fixture() -> validity::Suite {
 
 #[test]
 fn source_backed_judgments_pass_and_unreviewed_outputs_stay_visible() {
+    // Retain the preceding ledger's exact counts in addition to checking
+    // every judgment in the separately audited 36-case long-ending append.
+    let mut parent = fixture();
+    parent.cases.truncate(35704);
+    let parent_report = validity::evaluate(&parent).unwrap();
+    assert!(parent_report.passed(), "{:?}", parent_report.violations);
+    assert_eq!(parent_report.required_total, 31427);
+    assert_eq!(parent_report.forbidden_total, 4294);
+
     let report = validity::evaluate(&fixture()).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!(report.required_total, 31427);
-    assert_eq!(report.forbidden_total, 4294);
+    assert_eq!(report.required_total, parent_report.required_total + 25);
+    assert_eq!(report.forbidden_total, parent_report.forbidden_total + 11);
     assert!(!report.review_queue.is_empty());
     assert_eq!(
         report.emitted_nonidentity,

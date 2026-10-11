@@ -1,0 +1,43 @@
+{
+  "state": "original-historical-projection-test-failure-preserved",
+  "files": {
+    "validate_gentle_command_long_promotion_retry1.py": {
+      "path": "gentle-command-long-promotion-history-failure-validate_gentle_command_long_promotion_retry1.py.gz",
+      "source_sha256": "3274a4fa1581eb25ef846ab36b6819acf25037f9abd1b227042c4bc7ff48d498",
+      "archive_sha256": "1c3aae8b0ceb8eb462fad0016e115247a857fc0554c2d0f9ba06facee06765f5"
+    },
+    "gentle-command-long-promotion-validation-retry1.json": {
+      "path": "gentle-command-long-promotion-history-failure-gentle-command-long-promotion-validation-retry1.json.gz",
+      "source_sha256": "2ecf0f591f624addaeda74e93c8919e0436834ab56e26a3f60945f6afe23e4e8",
+      "archive_sha256": "3a89b8fd8c05a8001a59b870ae3de50f64de99ebff307b79ebc02393989618fb"
+    },
+    "gentle-command-long-promotion-validation-retry1.log": {
+      "path": "gentle-command-long-promotion-history-failure-gentle-command-long-promotion-validation-retry1.log.gz",
+      "source_sha256": "43046c21b58790e84a4e49642cc9f71f8f808895b2fc514537622df03c270a52",
+      "archive_sha256": "bb792433fa808a02cad8f549ff00bae165978c09ac7848b1375ff0e591ad5d31"
+    },
+    "original-test_literary_question_geona_runtime.py": {
+      "path": "gentle-command-long-promotion-history-failure-original-test_literary_question_geona_runtime.py.gz",
+      "source_sha256": "4c509f7ec34f4f0825d3f8cb3a46b186cdc31623ebb0651910a8e6bc192fc656",
+      "archive_sha256": "0dae445da60728ba99719ff8a07d165756092deb38b0164adededb2e0be4c1b9"
+    },
+    "original-literary_question_geona_runtime.py": {
+      "path": "gentle-command-long-promotion-history-failure-original-literary_question_geona_runtime.py.gz",
+      "source_sha256": "e3991ade8ff788d4e61b4b3048728ab44cdfe3c0a23afd9f0fde340cfef59958",
+      "archive_sha256": "3005decea40a33a8690c0f4614f8b10a62c81ae1589b165d383c5f5369b877c9"
+    }
+  },
+  "source_files": 6835,
+  "all_source_head_index_unchanged": true,
+  "rust_tests_passed": 19,
+  "expression_controls_passed": 36,
+  "short_ledger_controls_passed": 26,
+  "installed_controls_passed": 37,
+  "long_ledger_controls_passed": 32,
+  "geona_controls_run": 97,
+  "geona_controls_failed": 19,
+  "geona_full_current_ledger_passed": true,
+  "cause": "Historical helper omitted the short and long gentle fixture source keys when trimming to older cases. Whole current ledger and all earlier corruption assertions remain unchanged; only exact known later source ownership is corrected.",
+  "original_dataset_judgments_unchanged": true,
+  "full_coverage_complete": false
+}

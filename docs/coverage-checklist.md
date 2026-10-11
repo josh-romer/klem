@@ -4634,6 +4634,42 @@ review remains open under the completion review below.
   main checks, quiet performance, plus contextual/register and independent
   Korean review. Historical package results retain their original scope.
 
+  [Exact shared-append draft validation](gentle-command-long-ledger-draft-proof-archive.json)
+  passes 32 corruption controls with all 6,816 captured files, HEAD and index
+  unchanged. The proposal retains every preceding 35,704 serialized case and
+  source declaration and all 517 ordered review records. It contains only the
+  original 25 structural cases, eight byte-identified novel proposals and three
+  correctly represented nominal/답다 cases. Novel proposals remain honestly
+  post-observation; eleven other raw novel hypotheses remain unjudged. The
+  original historical verifier sources and every original fixture are preserved.
+  The exact append is now applied on `coverage/gentle-command-long-promotion`:
+  **35,740 cases, 31,452 required and 4,305 forbidden judgments**, with
+  **519 scoped reviews and 196 unreviewed entries**. Only the two original long
+  ending owners receive new bounded structural dispositions. The new auditor
+  checks the complete current ledger separately from each earlier historical
+  scope; arbitrary tails and expanded reviews are rejected. Draft success does
+  not certify the applied shared ledger. Actual shared Rust/audit/Nix checks,
+  main integration, quiet performance and contextual/independent review remain
+  required before this promotion is treated as verified.
+
+  [Actual applied-promotion validation](gentle-command-long-promoted-proof-archive.json)
+  now passes **19 Rust tests and 252 audit controls**, whole formatting,
+  focused Clippy and the complete 715-entry queue. All 6,841 captured files,
+  HEAD and index remain unchanged. The original count-check failure is
+  [preserved](gentle-command-long-promotion-first-failure-archive.json);
+  old 31,427/4,294 counts are still checked for the complete parent, alongside
+  the exact 25 required and eleven forbidden increments. The
+  [historical-helper failure](gentle-command-long-promotion-history-failure-archive.json)
+  retains all original 97 controls and full failed outputs. The helper now
+  assigns only exact known later source aliases to their own fixture scopes;
+  every historical assertion survives and four additional controls verify
+  the long-parent, novel and derived-class boundaries and reject unknown
+  aliases. This retains complete current-ledger checks alongside the old
+  historical scopes. No candidate judgment or corpus baseline was refreshed.
+  Current promotion Git-backed Nix selection/full checks and main integration
+  remain required; prior Main/long-package gate results retain their earlier
+  source scope. Quiet performance and contextual/independent review stay open.
+
   [Main gentle-command integration](gentle-command-main-merge-preservation.json)
   retains every original 35,681 serialized case and source declaration and
   all 515 ordered review records, adding only the 23 validated short-ending
@@ -9104,6 +9140,8 @@ python3 -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_runti
 python3 tools/predicate_auxiliary_spacing_package.py
 python3 tools/gentle_command_long_installed_audit.py
 python3 -m unittest discover -s tools -p 'test_gentle_command_long_installed_audit.py'
+python3 tools/gentle_command_long_ledger_audit.py
+python3 -m unittest discover -s tools -p 'test_gentle_command_long_ledger_audit.py'
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

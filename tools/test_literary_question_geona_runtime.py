@@ -97,13 +97,28 @@ class Controls(unittest.TestCase):
   # Completed suites retain even their unused source citations.
   completed=35014
   used.update(audit.read(audit.ROOT/'docs/additive-ppundeoreo-proposed-ledger.json.gz')['proposed_ledger']['sources'])
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json','willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json','willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json','gentle-command-validity.json','gentle-command-long-validity.json','gentle-command-long-novel-validity.json','gentle-command-class-interaction-validity.json']:
    suite=audit.read(audit.ROOT/'tests/fixtures'/name);completed+=len(suite['cases'])
    if completed<=count:used.update(suite['sources'])
-  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json' ,'willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json']:
+  for name in ['declarative-dao-validity.json','self-question-validity.json','dapnikka-validity.json','dapnikka-novel-validity.json','formal-b-validity.json','formal-b-novel-validity.json','reported-experience-validity.json','giroseo-validity.json','explanatory-se-validity.json','explanatory-se-gold-validity.json','explanatory-se-novel-validity.json','familiar-geurae-validity.json','fear-lsera-validity.json','formal-volitional-raw-validity.json','formal-volitional-novel-validity.json','formal-volitional-expression-validity.json','conjectural-additive-validity.json','conjectural-additive-copula-validity.json','conjectural-additive-novel-validity.json' ,'willingness-question-validity.json','willingness-question-boundary-validity.json','willingness-question-interaction-validity.json','gentle-command-validity.json','gentle-command-long-validity.json','gentle-command-long-novel-validity.json','gentle-command-class-interaction-validity.json']:
    for key in audit.read(audit.ROOT/'tests/fixtures'/name)['sources']:
     if key not in used:c['sources'].pop(key,None)
   return c
+ def test_exact_pre_long_gentle_parent_is_preserved(self):
+  parent=audit.read(audit.ROOT/'docs/gentle-command-long-parent-validity.json.gz')
+  projected=self.ledger_through(35704)
+  self.assertEqual(projected,parent)
+  self.assertEqual(audit.verify_ledger(projected,self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_long_novel_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35729),self.proposal)['preserved_cases'],34920)
+ def test_exact_pre_derived_class_ledger_still_passes(self):
+  self.assertEqual(audit.verify_ledger(self.ledger_through(35737),self.proposal)['preserved_cases'],34920)
+ def test_historical_projection_keeps_unreviewed_aliases_visible(self):
+  changed=copy.deepcopy(self.current);changed['sources']['unreviewed-extra']='https://invalid.example/'
+  with patch.object(self,'current',changed):
+   projected=self.ledger_through(35704)
+  self.assertIn('unreviewed-extra',projected['sources'])
+  with self.assertRaisesRegex(AssertionError,'complete append-only ledger'):audit.verify_ledger(projected,self.proposal)
  def test_exact_pre_dapnikka_ledger_still_passes(self):
   self.assertEqual(audit.verify_ledger(self.ledger_through(35079),self.proposal)['preserved_cases'],34920)
  def test_exact_pre_dapnikka_novel_ledger_still_passes(self):

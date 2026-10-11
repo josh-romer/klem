@@ -41,6 +41,9 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('willingness-question-boundary-validity.json',12,'4e0e2d5d67b68c6fc3782a1d7457f8a3203f37e5acbfbdc3941e6ee58a5f66cf','willingness-question boundary'),
     ('willingness-question-interaction-validity.json',8,'529f6614d742d6606f1b3e5f66c9df3a769cd698a6b92ee90eb276b09f438de3','willingness-question interaction'),
     ('gentle-command-validity.json',23,'bd886ed1a45ebcf67e2cfbc3e123f33ca3f0cb33b449cc88a99f58bab6b21fb7','gentle-command'),
+    ('gentle-command-long-validity.json',25,'d5440ac1a4801573e78eca3a5fdd98544c1e548a9cd5b7733d3c3060bd1c3668','gentle-command long preauthored'),
+    ('gentle-command-long-novel-validity.json',8,'63c0ac391529fb7c5806656cb1061a7b4dcd7282dca57d372905ebb885478463','gentle-command long observed novel'),
+    ('gentle-command-class-interaction-validity.json',3,'655f08927753cc454373a47dff559e77b08b1afc80cc46c84bdf2abbd8bd5026','gentle-command actual derived class'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:

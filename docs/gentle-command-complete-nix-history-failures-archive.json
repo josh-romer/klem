@@ -1,0 +1,51 @@
+{
+  "state": "actual-original-main-and-long-four-check-nix-gates-failed-historical-helper",
+  "files": {
+    "main/run_complete_main_gentle_nix_gate.py": {
+      "path": "gentle-command-complete-nix-history-failure-main-run_complete_main_gentle_nix_gate.py.gz",
+      "source_sha256": "57bf1a62d54d2ad1d9b65c53eef859ecbfea8a9af307af9cece482d8970f0104",
+      "archive_sha256": "4b029cb0a58434d8c4ad7122d6057fc9fac4bfb6b1a174ec7565b9cf6d2f9905"
+    },
+    "main/main-gentle-complete-nix-gate.json": {
+      "path": "gentle-command-complete-nix-history-failure-main-main-gentle-complete-nix-gate.json.gz",
+      "source_sha256": "5efbff0a5cd885c3e1b2657683641b7720ce0c7732164eff1c2897fb2e61c0de",
+      "archive_sha256": "4355897c7a65cab3b589d79418742cdf1cc178e246aa5f11b862bcbe12b14fee"
+    },
+    "main/main-gentle-complete-nix-gate.log": {
+      "path": "gentle-command-complete-nix-history-failure-main-main-gentle-complete-nix-gate.log.gz",
+      "source_sha256": "ab617de623947bfeec68907e28c069aea79c9bd223608ef94cf86c88e81dbaab",
+      "archive_sha256": "98058153759837cfd72351453f2a75ec3e0b303c2733c24f4ecebb42d16036ab"
+    },
+    "long/run_complete_gentle_command_long_nix_gate.py": {
+      "path": "gentle-command-complete-nix-history-failure-long-run_complete_gentle_command_long_nix_gate.py.gz",
+      "source_sha256": "bf4525c157e6119e97adf1e918cf701dfbf2062c076ddaac6faef009b8892f74",
+      "archive_sha256": "b8596ff1a5ebd2e02cf7f079a4487e80833c7abf9b9a4e557595ca53f703af7d"
+    },
+    "long/gentle-command-long-complete-nix-gate.json": {
+      "path": "gentle-command-complete-nix-history-failure-long-gentle-command-long-complete-nix-gate.json.gz",
+      "source_sha256": "141999d4c588bba2344a09dc551d0dedf079dda5080b13a313fd880d19df0057",
+      "archive_sha256": "b3f9f78864bb9c326c9a00c672cea0929d26c0aaa9a1910b2912c9f4b0f85622"
+    },
+    "long/gentle-command-long-complete-nix-gate.log": {
+      "path": "gentle-command-complete-nix-history-failure-long-gentle-command-long-complete-nix-gate.log.gz",
+      "source_sha256": "52878165564175b7c5880a7419e7345d11ff928464d0257626d1ad485a590170",
+      "archive_sha256": "0fb3db065cf275261162e20f3afecd6cf4a065585cbac78e76ca45df9216582c"
+    }
+  },
+  "main": {
+    "head": "e3270074a2227af317a888ad1dc16e42531a1c9d",
+    "source_files": 6808,
+    "selected_files": 6766,
+    "session_id": 38889
+  },
+  "long": {
+    "head": "a584b80b4f63789708841bf8ef881fd574d46885",
+    "source_files": 6714,
+    "selected_files": 6672,
+    "session_id": 30567
+  },
+  "all_source_head_index_unchanged": true,
+  "actual_failure": "Both original inventory derivations ran97historical controls and failed19reconstructed historical-ledger assertions because ledger_through omitted later fixture source aliases while truncating their cases. Full source/runtime/installed evidence remains separate.",
+  "fix": "Promotion6edc4a2 explicitly adds missing finite fixture-source lists without changing original97assertions; adds4controls. All101controls and total252selected-source promotion controls pass. The actual complete current promotion four-checkNix gate80141 is still running; no fullgate success inferred.",
+  "full_coverage_complete": false
+}

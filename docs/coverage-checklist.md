@@ -4648,6 +4648,18 @@ review remains open under the completion review below.
   contextual/independent review remain required; branch results retain their
   recorded scope.
 
+  Both original complete four-check Nix gates have now terminated with
+  an inventory-test failure: 19 of the 97 historical-ledger controls retain
+  later fixture source aliases while reconstructing older ledgers. Their
+  [full original producers, receipts and logs](gentle-command-complete-nix-history-failures-archive.json)
+  preserve all 6,808 main and 6,714 isolated-long tracked input hashes,
+  unchanged HEAD/index, and the actual failures. The promotion branch fixes
+  the helper by listing the omitted finite fixture sources, keeps every old
+  assertion and adds four controls. Its 101 historical controls and 252 total
+  promotion controls pass from actual Git-selected Nix source. Its full
+  four-check build and main merge remain pending; these failed original runs
+  do not establish a complete Nix gate.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

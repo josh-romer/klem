@@ -4898,9 +4898,15 @@ review remains open under the completion review below.
   519-review main prefixes, every prior source declaration and metadata field,
   both complete checklist additions and the exact 24-case / one-review append.
   Every actual main Rust, adapter and frontend input matches the passed
-  promoted packages. Fresh main checks, final-main Nix, quiet performance and
-  contextual/register/independent Korean review remain open. This entry does
-  not close the ending inventory or assign sentence-level interpretations.
+  promoted packages. [Fresh main validation](friendly-command-gena-main-validation-proof-archive.json)
+  passes 23 Rust tests across three suites and all 260 portable, current and
+  historical audit controls, formatting, focused Clippy and the 715-row queue.
+  All 8,111 captured main source files, HEAD, index and six protected debug
+  executables remain unchanged. The four complete originals preserve the
+  actual producer, receipt, full log and prior queue. Final-main Nix, quiet
+  performance and contextual/register/independent Korean review remain open.
+  This entry does not close the ending inventory or assign sentence-level
+  interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

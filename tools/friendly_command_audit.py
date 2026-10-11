@@ -15,6 +15,12 @@ def command_ledger(current_raw=None):
     if len(ledger['cases']) > 35740:
         import friendly_command_gena_ledger_audit as gena
         values = gena.inputs()
+        if values['current_raw'] != current_raw:
+            # A current Sena append has a separately bound complete Source and
+            # an exact Gena checkpoint. Validate both before returning an older
+            # command-owner view; an explicit checkpoint keeps its old API.
+            assert values['actual_current_raw'] == current_raw, 'complete current command ledger matches guarded Gena source'
+            current_raw = values['current_raw']
         assert values['current_raw'] == current_raw, 'complete current command ledger matches guarded Gena source'
         gena.inspect(values)
         ledger = json.loads(values['parent_raw'])

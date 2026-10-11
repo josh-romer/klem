@@ -5222,7 +5222,22 @@ review remains open under the completion review below.
   byte-identical. Removing the full child proof, substituting historical profiles
   for actual inputs or truncating current ledger/test bindings cannot authorize
   a historical view. These guards and controls are wired into the Nix inventory
-  check. Full four-check Nix validation and main integration remain pending.
+  check. The [first complete promoted Nix attempt](friendly-hortative-sena-promoted-nix-first-failure-proof-archive.json)
+  passes all eighty-three selected controls and then fails in the older
+  command-family reader: it compared the entire 35,789-case Source with the
+  verified 35,764-case Gena checkpoint. The full producer, receipt, log and
+  original reader/tests remain preserved in ten whole artifacts; the failed
+  receipt is unchanged. The [strict reader repair](friendly-hortative-sena-command-ledger-repair-proof-archive.json)
+  binds the actual complete Source before returning its historical owner view.
+  Every original assertion remains intact. All eight original command/Gena
+  controls, twelve new full-Sena reader controls and twenty-three original
+  descendant controls pass, followed by three complete direct audits. The
+  original eight- and twenty-three-control test files remain byte-identical;
+  nine whole artifacts retain the actual repair producer, receipt and output.
+  Missing children/bindings, altered parent or tail cases, reviews, foreign
+  current bytes and unjudged extra tails cannot authorize the default reader.
+  The repaired reader and new controls are selected in the Nix inventory check. A fresh
+  successful full four-check Nix gate and main integration remain pending.
   Quiet performance and contextual or independent Korean review remain required.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

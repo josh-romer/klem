@@ -4730,10 +4730,27 @@ review remains open under the completion review below.
   Every new observed lemma is queried against the unchanged original dictionary:
   69 heads yield 42 complete owners, including 13 additional original owners;
   45 unmatched hypothetical heads remain unjudged. Shared 35,740 cases / 519
-  scoped reviews / 196 unreviewed owners remain unchanged. Independent current
-  runtime/history/gold/broad auditors and corruption controls, Git-selected
-  Nix/installed/main validation, quiet performance, shared Gena ledger promotion
-  and contextual/register/independent Korean review remain pending. This entry
+  scoped reviews / 196 unreviewed owners remain unchanged. The
+  [independent runtime auditor](../tools/friendly_command_gena_runtime_audit.py)
+  rederives the CLI observations, every ordered cohort word, finite history
+  witness, original gold row and broad context, and all newly queried Native
+  homonyms. Forty controls reject lost candidates, changed own-entry conflicts,
+  invented history allowances and changed gold outcomes even with refreshed
+  output hashes. The
+  [browser auditor](../tools/friendly_command_gena_browser_audit.py) independently
+  checks all 144 choices, 102 diagrams, six exports and 31 complete entries;
+  18 controls reject altered spans, selector options, component order, sources,
+  assets and Native fields. It preserves the difference between the CLI's
+  newline-separated source input and the browser's space-separated input,
+  checking complete word records and each input's original byte spans. The
+  build freezes its 14 declared inputs; the browser separately binds all 18
+  frontend inputs, including public assets. The
+  [audit archive](friendly-command-gena-audit-proof-archive.json) retains the
+  complete original development failures, producers, receipts and logs as well
+  as both passing control runs. Named historical production/frontend adapters,
+  Git-selected Nix wiring and Nix/installed/main validation, quiet performance,
+  shared Gena ledger promotion and contextual/register/independent Korean
+  review remain pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

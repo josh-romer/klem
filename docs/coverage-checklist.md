@@ -4013,9 +4013,10 @@ review remains open under the completion review below.
   corruption checks. A positive history test also retains unused citations
   declared by a completed suite. The [reconciled audit evidence](expression-combined-reconciled-proof-archive.json)
   passes all 170 controls and both current queue and installed audits with
-  captured inputs unchanged. The corrected complete Nix gate, main
-  integration, quiet performance and wider contextual/independent review
-  remain open.
+  captured inputs unchanged. The [corrected complete Nix gate](expression-conjectural-reconciled-nix-proof-archive.json)
+  now passes all four checks at `32baefc`, with all 6,087 tracked and 6,045
+  selected inputs, HEAD and index unchanged. Main integration, quiet
+  performance and wider contextual/independent review remain open.
 
   The [complete-gate failure archive](expression-conjectural-complete-gate-failure.json)
   retains the terminal four-check Nix failure at the frozen 1f5a7d3 checkpoint
@@ -4027,8 +4028,9 @@ review remains open under the completion review below.
   rejection of missing, reordered, altered and unreviewed tails. The first
   repair preflight then correctly rejects stale derived queue hashes; its
   receipt and logs remain failed and archived. Source rows, cases and manual
-  dispositions remain unchanged. The corrected complete Nix rerun, main and
-  quiet performance remain pending.
+  dispositions remain unchanged. The corrected complete Nix rerun passes as
+  recorded above. Main integration and quiet performance remain pending;
+  this gate does not verify later willingness or gentle-command revisions.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -60,11 +60,21 @@ def inputs():
     profiles=selected['friendly-hortative-sena-wide-selected-source.json']['profiles']
     current_profiles={name:{p:sha((ROOT/('web/' if name=='web-assets' else '')/p).read_bytes()) for p in value['files']}
                       for name,value in profiles.items()}
+    actual_current_profiles = current_profiles
+    verified_parent_update = None
+    original_profiles = {name:value['files'] for name,value in profiles.items()}
+    if current_profiles != original_profiles:
+        import friendly_hortative_sena_gena_parent_audit as parent_update
+        verified_parent_update = parent_update.inputs()
+        current_profiles = parent_update.historical_profiles(
+            verified_parent_update, actual_current_profiles, original_profiles,
+            bound['binding']['production_inputs'])
     return dict(parent=parent.inputs(),browser=browser,rust=rust,rust_hashes=rust_hashes,rust_originals=rust_originals,
                 selected=selected,selected_hashes=selected_hashes,selected_originals=selected_originals,
                 wide=wide,wide_hashes=wide_hashes,wide_originals=wide_originals,
                 audited=audited,audited_hashes=audited_hashes,audited_originals=audited_originals,
-                current_profiles=current_profiles)
+                current_profiles=current_profiles, actual_current_profiles=actual_current_profiles,
+                verified_parent_update=verified_parent_update)
 
 
 def inspect(v):
@@ -100,6 +110,11 @@ def inspect(v):
     profiles=selected['profiles']
     assert {name:len(value['files']) for name,value in profiles.items()}=={'klem':1158,'corpus-adapter':1158,'web-assets':18}, 'all1158/1158/18 actual compile profiles'
     assert v['current_profiles']=={name:value['files'] for name,value in profiles.items()}, 'every current compiled Rust frontend byte'
+    if v.get('verified_parent_update') is not None:
+        import friendly_hortative_sena_gena_parent_audit as parent_update
+        parent_update.inspect(v['verified_parent_update'], v['actual_current_profiles'],
+                              {name:value['files'] for name,value in profiles.items()}, production)
+
     assert rust['head']==selected['head'] and rust['index_sha256']==selected['index_sha256'] and rust['frozen_inputs']==selected['frozen_inputs'], 'same complete passing Rust and selected revision'
     for name,profile in profiles.items():
         prefix='web/' if name=='web-assets' else ''

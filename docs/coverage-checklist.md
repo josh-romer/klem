@@ -5102,6 +5102,22 @@ review remains open under the completion review below.
   complete Gena, Sena and long-command checklist entries remain present once.
   Fresh checks of the merged parent and the exact 25-case shared promotion
   remain required; no additional corpus hypothesis receives a judgment here.
+  The [complete merged-parent validation archive](friendly-hortative-sena-gena-parent-validation-proof-archive.json)
+  retains 22 whole originals. All 262 actual Cargo targets and the original
+  doctest pass: 1,212 tests, zero failures and one ignored benchmark in 263
+  batches, followed by formatting, warning-denied all-targets Clippy and all
+  715 inventory rows. Every captured source byte, HEAD, index and six protected
+  binaries remains unchanged. The first historical-profile audit retains its
+  31 attempted controls and ten failures: it rejects the exact two compiled
+  test inputs changed by the Gena parent. The [strict parent guard](../tools/friendly_hortative_sena_gena_parent_audit.py)
+  binds the complete passed Rust producer, log, metadata and all targets, the
+  exact 35,764-case / 520-review parent, all 44 unchanged production files and
+  every 1,158/1,158/18 profile member. Its fourteen prepared corruption controls
+  pass, including rejection of unfinished proof. The original 31 test bodies
+  and assertions remain unchanged. Historical profiles are projected only
+  after this complete named parent proof succeeds. Current portable controls,
+  committed-source Nix verification and the exact 25-case shared promotion
+  remain pending; the original failed profile audit remains failed.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

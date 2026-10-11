@@ -4913,9 +4913,30 @@ review remains open under the completion review below.
   The first historical browser run exposed a web-prefix conversion error;
   its complete failed producer, source, receipt and log remain separate from
   the corrected retry. All original test files remain byte-identical.
-  The full historical Nix inventory and four package checks, installed Sena
-  runtime/browser, main integration, quiet timing and shared-ledger promotion
-  remain required. Contextual sense,
+  The complete historical Nix inventory and all four package checks now pass
+  at the original e4436e3 checkpoint. The installed klem, corpus adapter,
+  SolidJS assets and web launcher are source-bound to the same frozen inputs.
+  All 1,212 release Rust tests and the original doctest pass in 257 batches,
+  with one ignored test. The [complete installed archive](friendly-hortative-sena-installed-proof-archive.json)
+  retains 935 full originals, including all failed wrapper attempts, producers,
+  logs and partial streams. All 253 actual installed replay commands completed:
+  48 complete source/corpus policies, 46 full Native owners, 72 headword queries,
+  every 53,502 corpus/history word record, all 66,570 annotated gold rows and
+  1,128,312 broad frames. An independent completed-output audit verifies all
+  506 complete stdout/stderr streams without rerunning commands; the original
+  metadata-wrapper failure remains failed and unchanged. The packaged browser
+  passes 150 choices, 114 diagrams, 12 exact exports and 37 full Native endpoints.
+  Both desktop and mobile screenshots were visually inspected. All semantic
+  fields remain exact; only finite nonnegative measured API latency is excluded
+  from corpus-response equality, with both original timing values retained.
+  The [portable installed auditor](../tools/friendly_hortative_sena_installed_audit.py)
+  reconstructs every installed cohort word from actual stdout and checks every
+  complete finite/gold/broad stream. Its [46 rejection controls](../tools/test_friendly_hortative_sena_installed_audit.py)
+  pass, retaining all 43 original method bodies and adding three full-stream
+  and failed-wrapper controls. [Complete audit evidence](friendly-hortative-sena-portable-installed-proof-archive.json)
+  is preserved and both commands are wired into the flake with explicit captured
+  evidence scope. Execution from the new selected Nix source, main integration,
+  quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.
 

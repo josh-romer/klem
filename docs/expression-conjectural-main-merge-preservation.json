@@ -1,0 +1,44 @@
+{
+  "state": "main-merge-preservation-passed",
+  "original_cases": 35587,
+  "current_cases": 35651,
+  "original_reviews": 511,
+  "current_reviews": 513,
+  "all_original_cases_sources_and_reviews_unchanged": true,
+  "mainACA14_and_consolidatedCOVcw_preserved": true,
+  "source_branch": "7b13433",
+  "whole_current_main_checks": "pending",
+  "files": {
+    "docs-coverage-checklist.md.gz": {
+      "path": "expression-conjectural-main-merge-parent-docs-coverage-checklist.md.gz",
+      "source_sha256": "72f29a030a3ef7bb8dc2bfb7779ad397ee178a8ae7285a44e7d46618ddac27f9",
+      "archive_sha256": "72f29a030a3ef7bb8dc2bfb7779ad397ee178a8ae7285a44e7d46618ddac27f9"
+    },
+    "docs-inventory-review-queue.json.gz": {
+      "path": "expression-conjectural-main-merge-parent-docs-inventory-review-queue.json.gz",
+      "source_sha256": "e9dbe6bd7ae1a385fd0044bb6b7344c2fbd72e5397aa422605abdfad1f08c148",
+      "archive_sha256": "e9dbe6bd7ae1a385fd0044bb6b7344c2fbd72e5397aa422605abdfad1f08c148"
+    },
+    "docs-inventory-reviews.json.gz": {
+      "path": "expression-conjectural-main-merge-parent-docs-inventory-reviews.json.gz",
+      "source_sha256": "84d178fea38e94024fcd113706b0c822f2ba658262ec9ef6bf88b28e524f57f8",
+      "archive_sha256": "84d178fea38e94024fcd113706b0c822f2ba658262ec9ef6bf88b28e524f57f8"
+    },
+    "main45e-parent.json": {
+      "path": "expression-conjectural-main-merge-parent-main45e-parent.json.gz",
+      "source_sha256": "ebd2d36c0ee751ccc93592fd68e8d0311930f42b9ec458a7ab92a488f485486b",
+      "archive_sha256": "b61442b5583fb7d1f7287f49f7c438eb030a84edda6457834a2dadabe3ca2648"
+    },
+    "merge-preservation.json": {
+      "path": "expression-conjectural-main-merge-parent-merge-preservation.json.gz",
+      "source_sha256": "1007a5cd7e66e8a8e7d446a15df59df32d490b910722b5662bcb706d07ed760c",
+      "archive_sha256": "b25f96245ea40277baf0cbaf233c5eba49203727bf6211d4794dc8d828a5c33a"
+    },
+    "tests-fixtures-validity.json.gz": {
+      "path": "expression-conjectural-main-merge-parent-tests-fixtures-validity.json.gz",
+      "source_sha256": "a3644c017b414f2770c9e690403619ea73d6b99cbbf062bc29aad17cca424fe1",
+      "archive_sha256": "a3644c017b414f2770c9e690403619ea73d6b99cbbf062bc29aad17cca424fe1"
+    }
+  },
+  "complete_private_nix_gate": "docs/expression-conjectural-reconciled-nix-proof-archive.json"
+}

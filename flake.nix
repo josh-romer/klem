@@ -556,6 +556,20 @@
                 ./tools/test_formal_volitional_expression_streams_audit.py
                 ./tools/conjectural_additive_source_audit.py
                 ./tools/test_conjectural_additive_source_audit.py
+                ./tools/conjectural_additive_prototype_audit.py
+                ./tools/test_conjectural_additive_prototype_audit.py
+                ./tools/conjectural_additive_distribution_audit.py
+                ./tools/test_conjectural_additive_distribution_audit.py
+                ./tools/conjectural_additive_ledger_audit.py
+                ./tools/test_conjectural_additive_ledger_audit.py
+                ./tools/conjectural_additive_novel_audit.py
+                ./tools/test_conjectural_additive_novel_audit.py
+                ./tools/conjectural_additive_installed_audit.py
+                ./tools/test_conjectural_additive_installed_audit.py
+                ./tools/expression_conjectural_ledger_audit.py
+                ./tools/test_expression_conjectural_ledger_audit.py
+                ./tools/expression_conjectural_installed_audit.py
+                ./tools/test_expression_conjectural_installed_audit.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -626,6 +640,16 @@
                 ./tools/test_formal_volitional_ledger_audit.py
                 ./tools/formal_volitional_installed_audit.py
                 ./tools/test_formal_volitional_installed_audit.py
+                ./tools/formal_volitional_expression_audit.py
+                ./tools/test_formal_volitional_expression_audit.py
+                ./tools/formal_volitional_expression_streams_audit.py
+                ./tools/test_formal_volitional_expression_streams_audit.py
+                ./tools/formal_volitional_expression_ledger_audit.py
+                ./tools/test_formal_volitional_expression_ledger_audit.py
+                ./tools/formal_volitional_expression_browser_audit.py
+                ./tools/test_formal_volitional_expression_browser_audit.py
+                ./tools/formal_volitional_expression_installed_audit.py
+                ./tools/test_formal_volitional_expression_installed_audit.py
                 ./tools/bound_noun_spacing_runtime.py
                 ./tools/test_bound_noun_spacing_runtime.py
                 ./tools/bound_noun_spacing_package_audit.py
@@ -1157,6 +1181,20 @@
             python -m unittest discover -s tools -p 'test_formal_volitional_expression_streams_audit.py'
             python tools/conjectural_additive_source_audit.py
             python -m unittest discover -s tools -p 'test_conjectural_additive_source_audit.py'
+            python tools/conjectural_additive_prototype_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_prototype_audit.py'
+            python tools/conjectural_additive_distribution_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_distribution_audit.py'
+            python tools/conjectural_additive_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_ledger_audit.py'
+            python tools/conjectural_additive_novel_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_novel_audit.py'
+            python tools/conjectural_additive_installed_audit.py
+            python -m unittest discover -s tools -p 'test_conjectural_additive_installed_audit.py'
+            python tools/expression_conjectural_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_expression_conjectural_ledger_audit.py'
+            python tools/expression_conjectural_installed_audit.py
+            python -m unittest discover -s tools -p 'test_expression_conjectural_installed_audit.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py
@@ -1227,6 +1265,16 @@
             python -m unittest discover -s tools -p 'test_formal_volitional_ledger_audit.py'
             python tools/formal_volitional_installed_audit.py
             python -m unittest discover -s tools -p 'test_formal_volitional_installed_audit.py'
+            python tools/formal_volitional_expression_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_expression_audit.py'
+            python tools/formal_volitional_expression_streams_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_expression_streams_audit.py'
+            python tools/formal_volitional_expression_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_expression_ledger_audit.py'
+            python tools/formal_volitional_expression_browser_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_expression_browser_audit.py'
+            python tools/formal_volitional_expression_installed_audit.py
+            python -m unittest discover -s tools -p 'test_formal_volitional_expression_installed_audit.py'
             python -m unittest discover -s tools -p 'test_declarative_dao_*.py'
             python -m unittest discover -s tools -p 'test_possessive_bound_noun_*.py'
             python tools/bound_noun_spacing_runtime.py --fixture tests/fixtures/bound-noun-spacing-cases.json --closure docs/bound-noun-spacing-native-closure.json.gz --verify docs/bound-noun-spacing-installed-runtime.json.gz

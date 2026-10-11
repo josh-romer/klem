@@ -1,0 +1,46 @@
+{
+  "state": "actual-complete-four-check-nix-gate-passed",
+  "files": {
+    "run_complete_inventory_gate_reconciled.py": {
+      "path": "expression-conjectural-reconciled-nix-proof-run_complete_inventory_gate_reconciled.py.gz",
+      "source_sha256": "0dca32b3a272104b5bc81f54ea0144c8b0f91abb27854b6532708ceebd184de4",
+      "archive_sha256": "19f5a4e782608c31e645aad22705c0c34f2030cf903a53277fc6199bcb5c33b2"
+    },
+    "expression-conjectural-ledger-repaired-complete.json": {
+      "path": "expression-conjectural-reconciled-nix-proof-expression-conjectural-ledger-repaired-complete.json.gz",
+      "source_sha256": "083ae8acf93f1ff4d31b019110d49e5f1dce3670dc78861eb44ee0f2901bdd3c",
+      "archive_sha256": "2edef3d30990bdce168d21ca55adaf655e4af73e4e2c13b3a2c06a93a9813dac"
+    },
+    "expression-conjectural-ledger-repaired-complete.log": {
+      "path": "expression-conjectural-reconciled-nix-proof-expression-conjectural-ledger-repaired-complete.log.gz",
+      "source_sha256": "b07f5da833bd87cbc777c2e83909bb175a2648565b8a9fafff63eed091445cd9",
+      "archive_sha256": "57db689c09642604614ea1f23b441c669b0cb852c1daa20854e44944afcd0ae1"
+    }
+  },
+  "head": "32baefcc94078d74a9892d47c06948dcc890a654",
+  "outputs": [
+    "/nix/store/lkfwcwfrwz1jv90x2wzhjhsn8b2ba396-klem-0.1.0",
+    "/nix/store/0k3x6yyd5l6l9qp5h6zgczr95rqs630z-klem-web-assets-0.1.0",
+    "/nix/store/j4y09r4j9j9a9x985rscghmbrf26mgbl-klem-corpus-adapter-0.1.0",
+    "/nix/store/gfmixg5ykm29d82qbbp8wwggjy6kcpjb-klem-inventory-review"
+  ],
+  "checks": [
+    "klem",
+    "web-assets",
+    "corpus-adapter",
+    "inventory-review"
+  ],
+  "source_files": 6087,
+  "selected_source_files": 6045,
+  "source_head_index_unchanged": true,
+  "actual_terminal_session": 21325,
+  "actual_terminal_exit": 0,
+  "original_failed_gate_and_original_gold_ledgers_and_reviews_retained": true,
+  "current_main_and_further_long_rules_verified_by_this_gate": false,
+  "remaining": [
+    "main integration and current-source checks",
+    "later willingness/gentle rules integration and current Nix/browser",
+    "quiet performance and contextual/independent review"
+  ],
+  "full_coverage_complete": false
+}

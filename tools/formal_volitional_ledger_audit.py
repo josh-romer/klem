@@ -11,6 +11,13 @@ def read(name):
 
 
 def inspect(full, policy, raw, novel, ledger):
+    complete_ledger = ledger
+    complete_ledger_cases = len(ledger['cases'])
+    # The historical assertions below concern exactly the original raw53 and
+    # novel4 append. The complete ledger is independently checked below against
+    # every byte-pinned reviewed suite, including later additions in order.
+    # A prefix projection alone never authorizes a new tail or source identity.
+    ledger = {**ledger, 'cases': ledger['cases'][:35587]}
     assert hashlib.sha256((ROOT / 'tests/fixtures/formal-volitional-validity.json').read_bytes()).hexdigest() == '4baa4c4bc9da65a9a9c493b7aadd537afd82ff3464daf586dc3e59823d9cd181', 'unchanged original59 fixture'
     assert hashlib.sha256((ROOT / 'tests/fixtures/formal-volitional-novel-validity.json').read_bytes()).hexdigest() == 'db0853ac54c5ca0ab8995511e6d40f4c20b1a9b1020b9358a31d9ee19efaea41', 'unchanged manual novel4 fixture'
     original = read('formal-volitional-validity.json')
@@ -33,10 +40,10 @@ def inspect(full, policy, raw, novel, ledger):
     assert not conditional & {c['id'] for c in ledger['cases']}, 'dictionary-only judgments are not raw gold'
     assert all(ledger['sources'][key] == value for key,value in {**full['sources'], **novel['sources']}.items()), 'original appended source links'
     from literary_question_geona_runtime import read as archived, verify_ledger
-    verify_ledger(ledger, archived(ROOT / 'docs/literary-question-geona-proposed-ledger.json.gz'))
+    verify_ledger(complete_ledger, archived(ROOT / 'docs/literary-question-geona-proposed-ledger.json.gz'))
     counts = {v:sum(j['verdict'] == v for c in ledger['cases'] for j in c['judgments']) for v in ['required','forbidden']}
     assert counts == {'required':31337,'forbidden':4266}, 'complete private ledger counts'
-    return {'raw_cases':53,'dictionary_cases':59,'novel_cases':4,'ledger_cases':35587,'counts':counts,'contextual_and_independent_review':'pending'}
+    return {'raw_cases':53,'dictionary_cases':59,'novel_cases':4,'ledger_cases':35587,'complete_ledger_cases':complete_ledger_cases,'counts':counts,'contextual_and_independent_review':'pending'}
 
 
 def inputs():

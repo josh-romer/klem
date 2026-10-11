@@ -46,6 +46,39 @@ class LedgerProjectionTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, 'original raw metadata'):
             audit.inspect(*values)
 
+    def test_unreviewed_tail_cannot_hide_behind_historical_prefix(self):
+        values = self.altered()
+        values[4]['cases'].append(copy.deepcopy(values[4]['cases'][-1]))
+        with self.assertRaisesRegex(AssertionError, 'complete append-only ledger'):
+            audit.inspect(*values)
+
+    def test_reviewed_tail_judgment_cannot_change(self):
+        values = self.altered()
+        self.assertGreater(len(values[4]['cases']), 35587)
+        values[4]['cases'][-1]['judgments'][0]['verdict'] = 'invented'
+        with self.assertRaisesRegex(AssertionError, 'complete append-only ledger'):
+            audit.inspect(*values)
+
+    def test_reviewed_tail_order_cannot_change(self):
+        values = self.altered()
+        cases = values[4]['cases']
+        cases[-2], cases[-1] = cases[-1], cases[-2]
+        with self.assertRaisesRegex(AssertionError, 'complete append-only ledger'):
+            audit.inspect(*values)
+
+    def test_reviewed_tail_case_cannot_be_omitted(self):
+        values = self.altered()
+        values[4]['cases'].pop()
+        with self.assertRaisesRegex(AssertionError, 'complete append-only ledger'):
+            audit.inspect(*values)
+
+    def test_reviewed_tail_source_cannot_change(self):
+        values = self.altered()
+        source = next(iter(audit.read('formal-volitional-expression-validity.json')['sources']))
+        values[4]['sources'][source] = 'https://example.invalid/changed'
+        with self.assertRaisesRegex(AssertionError, 'complete append-only ledger'):
+            audit.inspect(*values)
+
 
 if __name__ == '__main__':
     unittest.main()

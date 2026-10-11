@@ -33,6 +33,10 @@ def verify_ledger(current,proposal,later_proposal=None):
     ('fear-lsera-validity.json',46,'2ccc67014adcae61861ee24774ddd2eae92bf82c7a9f3d138179460851390f25','fear-lsera'),
     ('formal-volitional-raw-validity.json',53,'23346ec33a887be1eb10c925ef9cfe2777b901df3d6e600e5bea053d7a968124','formal-volitional raw'),
     ('formal-volitional-novel-validity.json',4,'db0853ac54c5ca0ab8995511e6d40f4c20b1a9b1020b9358a31d9ee19efaea41','formal-volitional novel'),
+    ('formal-volitional-expression-validity.json',8,'7ce331dcd291d1a5946d2d3f12aa36a5df86847361589ba4e0b6a6bfa553dd26','formal-volitional expression'),
+    ('conjectural-additive-validity.json',35,'669e3f979cbb6156dfa2444e67272b4cdd24151a276976b6c5cbe9b137acbb06','conjectural-additive'),
+    ('conjectural-additive-copula-validity.json',6,'5c585034c57c61fb665a68a6acf949477cca054d1fb219c587f2f67ac7cada15','conjectural-additive copula'),
+    ('conjectural-additive-novel-validity.json',15,'b0b3a87c59895f1a056ccb3525ae9a3e4b9e0536edb6729af8c8574f67341732','conjectural-additive novel'),
    ]
    accepted={**complete,'cases':list(complete['cases']),'sources':dict(complete['sources'])}
    for filename,count,digest,label in reviewed_appends:
@@ -41,7 +45,7 @@ def verify_ledger(current,proposal,later_proposal=None):
     assert sha(path.read_bytes())==digest,f'reviewed {label} fixture bytes'
     suite=read(path)
     assert len(suite['cases'])==count,'complete append-only ledger'
-    assert not set(accepted['sources'])&set(suite['sources']),'separate reviewed source identities'
+    assert all(accepted['sources'].get(key,value)==value for key,value in suite['sources'].items()),'identical overlapping reviewed source identities'
     accepted['cases'].extend(suite['cases']);accepted['sources'].update(suite['sources'])
    assert current==accepted,'complete append-only ledger'
    assert len({c['id'] for c in accepted['cases']})==len(accepted['cases']),'complete case IDs'

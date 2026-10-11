@@ -4311,6 +4311,17 @@ review remains open under the completion review below.
   New test-profile Nix validation, main integration, quiet performance and
   broader prefinal/particle/auxiliary/contextual review remain open.
 
+  [Main interaction integration](willingness-interactions-main-merge-preservation.json)
+  now retains every preceding 35,673 case, source declaration and all 513
+  ordered review records, adding only the eight validated interaction cases
+  and two bounded dispositions. Runtime rule source is unchanged by this merge.
+  [Fresh main validation](willingness-interactions-main-validation-archive.json)
+  passes 15 Rust tests and 143 active-ledger, historical and interaction-browser
+  controls, whole formatting, focused Clippy and the complete 715-entry queue.
+  All captured files, HEAD and index remain unchanged. Current final-main
+  Nix/installed/browser, later gentle-command integration, quiet performance
+  and contextual/independent review remain required.
+
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

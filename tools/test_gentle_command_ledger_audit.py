@@ -28,6 +28,12 @@ class Controls(unittest.TestCase):
         self.assertFalse(result['full_coverage_complete'])
         self.assertFalse(result['unjudged_novel_or_history_paths_promoted'])
 
+    def test_entire_current_scope_remains_mandatory(self):
+        result = audit.inspect(self.values)
+        current = json.loads(self.values['actual_current_raw'])
+        self.assertEqual(result['complete_current_cases'],len(current['cases']))
+        self.assertEqual(result['complete_current_reviews'],len(self.values['actual_current_reviews']['entries']))
+
     def test_parent_archive_cannot_be_refreshed(self):
         self.reject('parent_raw',lambda v:v.update(parent_raw=b'{}'),'exact original35681-case parent bytes')
 

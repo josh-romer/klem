@@ -4634,6 +4634,24 @@ review remains open under the completion review below.
   main checks, quiet performance, plus contextual/register and independent
   Korean review. Historical package results retain their original scope.
 
+  [Exact shared-append draft validation](gentle-command-long-ledger-draft-proof-archive.json)
+  passes 32 corruption controls with all 6,816 captured files, HEAD and index
+  unchanged. The proposal retains every preceding 35,704 serialized case and
+  source declaration and all 517 ordered review records. It contains only the
+  original 25 structural cases, eight byte-identified novel proposals and three
+  correctly represented nominal/답다 cases. Novel proposals remain honestly
+  post-observation; eleven other raw novel hypotheses remain unjudged. The
+  original historical verifier sources and every original fixture are preserved.
+  The exact append is now applied on `coverage/gentle-command-long-promotion`:
+  **35,740 cases, 31,452 required and 4,305 forbidden judgments**, with
+  **519 scoped reviews and 196 unreviewed entries**. Only the two original long
+  ending owners receive new bounded structural dispositions. The new auditor
+  checks the complete current ledger separately from each earlier historical
+  scope; arbitrary tails and expanded reviews are rejected. Draft success does
+  not certify the applied shared ledger. Actual shared Rust/audit/Nix checks,
+  main integration, quiet performance and contextual/independent review remain
+  required before this promotion is treated as verified.
+
   [Main gentle-command integration](gentle-command-main-merge-preservation.json)
   retains every original 35,681 serialized case and source declaration and
   all 515 ordered review records, adding only the 23 validated short-ending
@@ -9092,6 +9110,8 @@ python3 -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_runti
 python3 tools/predicate_auxiliary_spacing_package.py
 python3 tools/gentle_command_long_installed_audit.py
 python3 -m unittest discover -s tools -p 'test_gentle_command_long_installed_audit.py'
+python3 tools/gentle_command_long_ledger_audit.py
+python3 -m unittest discover -s tools -p 'test_gentle_command_long_ledger_audit.py'
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

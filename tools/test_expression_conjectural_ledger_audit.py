@@ -29,6 +29,22 @@ class Controls(unittest.TestCase):
                           result['historical']['active_manual_reviews']), (35681, 31412, 515))
         self.assertFalse(result['full_coverage_complete'])
 
+    def test_entire_current_ledger_is_checked_separately_from_histories(self):
+        result = audit.inspect(self.v)
+        current = json.loads(self.v['gentle_append']['actual_current_raw'])
+        reviews = self.v['gentle_append']['actual_current_reviews']
+        self.assertEqual(result['complete_current_cases'],len(current['cases']))
+        self.assertEqual(result['complete_current_manual_reviews'],len(reviews['entries']))
+        self.assertEqual(result['complete_current_required'],sum(j['verdict']=='required' for c in current['cases'] for j in c['judgments']))
+
+    def test_later_long_scope_cannot_be_skipped(self):
+        values = copy.deepcopy(self.v)
+        if 'long_append' in values['gentle_append']:
+            del values['gentle_append']['long_append']
+            with self.assertRaises(KeyError):audit.inspect(values)
+        else:
+            self.assertEqual(audit.inspect(values)['complete_current_cases'],35704)
+
     def test_historical_expression_cannot_be_reauthored(self):
         self.reject(lambda v: v.update(expression_raw=b'{}'), 'exact expression historical ledger bytes')
 

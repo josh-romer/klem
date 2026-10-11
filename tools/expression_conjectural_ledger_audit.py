@@ -110,11 +110,11 @@ def inspect(v):
     return {**historical, 'historical': historical,
             'active_cases': complete['active_cases'], 'required': complete['required'],
             'forbidden': complete['forbidden'], 'active_manual_reviews': complete['active_reviews'],
-            'scope': 'historical35681-and-complete-current35704',
-            'complete_current_cases': complete['active_cases'],
-            'complete_current_required': complete['required'],
-            'complete_current_forbidden': complete['forbidden'],
-            'complete_current_manual_reviews': complete['active_reviews'],
+            'scope': 'historical35681-and-' + complete['scope'],
+            'complete_current_cases': complete['complete_current_cases'],
+            'complete_current_required': complete['complete_current_required'],
+            'complete_current_forbidden': complete['complete_current_forbidden'],
+            'complete_current_manual_reviews': complete['complete_current_reviews'],
             'gentle_added_cases': complete['added_cases']}
 
 

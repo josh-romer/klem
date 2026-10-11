@@ -14,7 +14,7 @@ REVIEWS_SHA = 'fd6a487eeaf98e0166f04115f1d3c664d695f4b1e2dc88a2cd47faac8a018950'
 SCOPED_SHA = '7e8e7641a8a778893d23b86a7dc623121696f9928ecb09e5a81ef77fcaa0afe3'
 
 
-def inputs():
+def original_inputs():
     docs = ROOT/'docs'
     return dict(parent_raw=gzip.decompress((docs/'gentle-command-parent-validity.json.gz').read_bytes()),
                 parent_reviews_raw=gzip.decompress((docs/'gentle-command-parent-inventory-reviews.json.gz').read_bytes()),
@@ -24,7 +24,20 @@ def inputs():
                 source_evidence=source_audit.inputs())
 
 
-def inspect(v):
+def inputs():
+    values = original_inputs()
+    values['actual_current_raw'] = values['current_raw']
+    values['actual_current_reviews'] = values['current_reviews']
+    if len(json.loads(values['current_raw'])['cases']) > 35704:
+        import gentle_command_long_ledger_audit as long_audit
+        complete = long_audit.inputs()
+        values['long_append'] = complete
+        values['current_raw'] = complete['parent_raw']
+        values['current_reviews'] = json.loads(complete['parent_reviews_raw'])
+    return values
+
+
+def inspect_historical(v):
     source_audit.inspect(v['source_evidence'])
     assert sha(v['parent_raw']) == PARENT_SHA, 'exact original35681-case parent bytes'
     assert sha(v['parent_reviews_raw']) == REVIEWS_SHA, 'exact original515-review parent bytes'
@@ -65,6 +78,31 @@ def inspect(v):
                 parent_cases=35681,active_cases=35704,added_cases=23,required=31427,forbidden=4294,
                 original_reviews=515,active_reviews=517,unreviewed=198,
                 unjudged_novel_or_history_paths_promoted=False,full_coverage_complete=False)
+
+
+def inspect(v):
+    result = inspect_historical(v)
+    if v['actual_current_raw'] != v['current_raw']:
+        import gentle_command_long_ledger_audit as long_audit
+        complete = v['long_append']
+        assert complete['current_raw'] == v['actual_current_raw'], 'mandatory complete current long ledger bytes'
+        assert complete['current_reviews'] == v['actual_current_reviews'], 'mandatory complete current long review fields'
+        assert complete['parent_raw'] == v['current_raw'], 'historical gentle matches exact long parent'
+        assert json.loads(complete['parent_reviews_raw']) == v['current_reviews'], 'historical gentle reviews match exact long parent'
+        checked = long_audit.inspect(complete)
+        return {**result, 'historical': result,
+                'scope': 'historical35704-and-complete-current35740',
+                'complete_current_cases': checked['active_cases'],
+                'complete_current_required': checked['required'],
+                'complete_current_forbidden': checked['forbidden'],
+                'complete_current_reviews': checked['active_reviews'],
+                'long_added_cases': checked['added_cases']}
+    assert v['actual_current_reviews'] == v['current_reviews'], 'complete original current review fields'
+    return {**result, 'scope': 'complete-current35704',
+            'complete_current_cases': result['active_cases'],
+            'complete_current_required': result['required'],
+            'complete_current_forbidden': result['forbidden'],
+            'complete_current_reviews': result['active_reviews']}
 
 
 if __name__ == '__main__':

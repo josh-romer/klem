@@ -3905,8 +3905,13 @@ review remains open under the completion review below.
 
 - [ ] **COV-017cx — Conjectural and intention -려니와/-으려니와 connectives.**
   **Partial: tested Source/copula/novel implementation and 56 authored cases are
-  integrated privately, with two bounded reviews; all 15 original novel cases
-  and actual installed validation also pass. Combined/main validation and wider review remain pending.**
+  integrated on main, with two bounded reviews; all 15 original novel cases
+  and prior installed validation pass. Current main checks and wider review remain pending.**
+  [Main merge preservation](expression-conjectural-main-merge-preservation.json)
+  retains all 35,587 original main cases, source declarations and 511 reviews,
+  the formal main validation archive and the consolidated COV-017cw record.
+  The completed private four-check Nix gate remains scoped to its captured
+  revision; current main validation is a separate requirement.
   Implement and review both original ending owners 86083/86084, keeping their
   conjectural acknowledgement and stated-intention senses separate. Original
   attachment notes permit 이다, vowel/ㄹ-final predicates and honorific -으시-
@@ -4142,8 +4147,12 @@ review remains open under the completion review below.
   this gate does not verify later willingness or gentle-command revisions.
 
 - [ ] **COV-017cy — Friendly offer -련/-으련 and separate expression homonyms.**
-  **Partial: source-backed implementation on the isolated willingness-question
-  branch; integration and wider review pending.** KRDict
+  **Partial: source-backed implementation integrated on main; current main
+  validation and wider review pending.**
+  [Main merge preservation](willingness-main-merge-preservation.json) retains
+  every original 35,651 case and source declaration, all 513 reviews and the
+  earlier main proof links, adding only the 22 validated willingness cases.
+  Rule source matches the previously validated private branch. KRDict
   [-련 76564](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76564)
   and [-으련 76567](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76567)
   establish verb attachment: the short form follows a vowel or retained ㄹ,

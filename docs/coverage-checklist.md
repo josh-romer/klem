@@ -5134,7 +5134,20 @@ review remains open under the completion review below.
   active review input from the authored draft. These are prepared proofs only:
   the shared ledger remains at 35,764 cases / 520 reviews, all 25 Sena cases
   remain private, and the scoped review still explicitly describes a draft.
-  Committed-source Nix verification and actual shared promotion remain required.
+  The [actual committed-source parent verification](friendly-hortative-sena-parent-selected-current-proof-archive.json)
+  now passes all 137 selected controls and all 715 inventory rows from the exact
+  `fa50c94` Git revision: 31 original revision controls, 14 parent controls and
+  both 46-control installed auditors. All 9,429 tracked and 9,387 selected files,
+  HEAD, index and six executables stay unchanged; all 1,158/1,158/18 compiled
+  inputs bind the completed parent Rust run and unchanged frontend. The 31 whole
+  archived artifacts preserve all four earlier Git-fetch/cache failures and the
+  interrupted receipt that completed only the first 31 controls. That partial
+  receipt retains its original running state and never becomes a terminal pass.
+  Content-preserving Nix deduplication completed without garbage collection,
+  retaining main's full source, HEAD, index and 683 checked build outputs. No
+  additional full Nix build or runtime replay is claimed by this selected audit.
+  Actual shared promotion, main integration, quiet performance and contextual
+  or independent Korean review remain required.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

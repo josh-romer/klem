@@ -4804,8 +4804,14 @@ review remains open under the completion review below.
   44 production inputs, five declared changes and 18 frontend inputs verified.
   Both Rust package source profiles contain 1,153 files, including the seven
   new test/fixture files; broader historical runtime guards remain pending.
-  Full Rust/history/broad/gold and
-  CLI/browser/installed/full Nix/main checks, wider runtime integrity controls,
+  The [actual source-bound build and CLI comparison](friendly-hortative-sena-runtime-proof-archive.json)
+  builds the CLI, server and corpus adapter from those exact compile inputs.
+  All 36 Unicode/filter/cache runs pass over 1,608 frames: 324 required-path
+  and 72 forbidden-path checks, every one of 2,916 earlier path occurrences
+  and assessments retained, and all 36 complete Native responses unchanged.
+  The 716 added path occurrences stay unjudged outside the finite authored
+  cases; Unicode and cache parity pass. Full Rust/history/broad/gold and
+  broader CLI/browser/installed/full Nix/main checks, wider runtime integrity controls,
   quiet timing and shared-ledger promotion remain required. Contextual sense,
   joint-action interpretation, register and independent Korean review are open.
   This finite implementation does not close the ending inventory.

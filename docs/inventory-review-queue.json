@@ -64,7 +64,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "10bd6c8f4c3f9726d2a492e5e3e5b42d545f704e983f2c37426aa92a6e09f884",
+    "docs/coverage-checklist.md": "97162eceff17884d483fabd817b3afa59fa36be45e18811e905bb2c2a1ae9585",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -201,6 +201,9 @@
     "docs/friendly-command-final-nix.json": "54f4f0b1f1f54dbcd4dd8e9e12cb34e47dffcd34f993da688ae96e665c6e129f",
     "docs/friendly-command-gena-initial-runtime-proof-archive.json": "675f69705ab5e175fc4dc72fecd74d5c5cb41538498d526688b88387a1e0e009",
     "docs/friendly-command-gena-installed-proof-archive.json": "545fbd3cc756746e5afadf12f5c5008e96fe4fc70de63452b441b51252764c8e",
+    "docs/friendly-hortative-sena-corpus-regression-proof-archive.json": "7e996be5cdd1f4f560f1ebedd8c9454c17d17d40c6bf76fe8870a2f5aea7c245",
+    "docs/friendly-hortative-sena-source-baseline-proof-archive.json": "1a2e9d3f9430b00c743e47ef262623ab19e33c29429af8a9fe50a72e34a3257b",
+    "docs/friendly-hortative-sena-wide-proof-archive.json": "bb4cb1f2cfa778ba8eab65d02d398e26c89809b578e3c3ff268d74be9a5e4621",
     "docs/gentle-command-long-installed-proof-archive.json": "d296070193fea273282763e53abfe7510671b06f61a4455e343992093dc1747d",
     "docs/gentle-command-long-runtime-proof-archive.json": "a38f4bd748e734ca314d908bc24676e551e6cb815a923fc3075c879726a4da31",
     "docs/gentle-command-runtime-proof-archive.json": "5500e8b18cc6a6051d5792c2397c2f429684a24d8f8f1d73cd21e11dfeeaad69",
@@ -234,7 +237,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "8bb5af182bf1670575d6a665aeb15def4fd167067abb7f76102933de1a5f16f0",
+    "docs/inventory-reviews.json": "e986964a33f903430fdf3687a0fbdef28a4ccb62d3dbce40b060aeda95b07f0e",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -490,6 +493,8 @@
     "tests/fixtures/formal-volitional-validity.json": "4baa4c4bc9da65a9a9c493b7aadd537afd82ff3464daf586dc3e59823d9cd181",
     "tests/fixtures/friendly-command-gena-source.json": "2270d774f18e96d5bc5ad5ab77df5e65dc4cd5082561854182aeddb9e0d36c8e",
     "tests/fixtures/friendly-command-sources.json": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
+    "tests/fixtures/friendly-hortative-sena-source.json": "7a9f33eb603ac7313086069a566372f0a848a69da1e1bf2aa38952dde12870e3",
+    "tests/fixtures/friendly-hortative-sena-validity.json": "d85973f2aa29dc5f82b3710f23b46f7dad8e67785cbf4b04d8edfc81056f91be",
     "tests/fixtures/gentle-command-long-source.json": "b6e5b33fe1bf21989ac16001b825e6530d2767613d3d7134738148c756b302f8",
     "tests/fixtures/gentle-command-source.json": "fc42b29d511ee3fe53c19006c5d6581d61763e5a2a162768ff221eb079db80c0",
     "tests/fixtures/geon-contrast-entry-judgments.json": "01dbf5dee624cecc79771fd4eb42b5ff968e4bcc5b398a9404b2cf85fbec6448",
@@ -540,13 +545,14 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "605f5a1540fec9680143b5112a6dae2b57d52ccd03cba58167bcd10de1046d66",
+    "tests/fixtures/validity.json": "5d6e4d88cd4be3ea3e5f6b02a4b070cdb364474955c7384a5f19f9bba7c7b15e",
     "tests/fixtures/willingness-question-source.json": "d9cd3cc984bd14df26013928d99065161ec0739f6fd35cdcfb4c321330206bad",
     "tests/formal_b.rs": "e664556b1863b00a9126f36d297884b4c26f0a2afc6a150c7b7eda81d51b8194",
     "tests/formal_volitional.rs": "d94d3abe2047648913bda1e091236746927a9ca6d3977894b28905beec9e4140",
     "tests/formal_volitional_novel.rs": "b146adcef6431fb253fc5e59a7897015009bf9e67f00d41969ea385dda584788",
     "tests/friendly_command.rs": "523e60acb850359764ed781d029cb58a6a2465080046d9fd480e990073fe937b",
     "tests/friendly_command_gena.rs": "e4a6343fa620d09564ca1e2ad4b605b81a2793c20e956d668c0456d648e16ec4",
+    "tests/friendly_hortative_sena.rs": "8d1f69108c4687b6dfd118fc94ac745e5bd6aed5ec8acb92d8bdb01eaa7a0fd9",
     "tests/gam_questions.rs": "e84ee87884570646f4c3a13ba91ef2b4e7fc534a1c8c630636a8164e3940d268",
     "tests/gentle_command.rs": "81cde4c9507a580844a706a4ea1c60ce2e2d688fd953502c0634bc4309514049",
     "tests/gentle_command_long.rs": "27f51bb4faeb24657ea54df601736d32db39ac0581ed76fe7f71972a5fb2350e",
@@ -692,6 +698,8 @@
     "tools/friendly_command_audit.py": "42a90999b1e7cdaab34567107e6b746581a2ea115cc01c341d0ce15f7d773a6f",
     "tools/friendly_command_gena_installed_audit.py": "1c2a751864e3ef6388fbb04fee0735f0d309ec102ccd3b688ca79bc83326e410",
     "tools/friendly_command_gena_runtime_audit.py": "1c830e1483ee51c292274cad0e5c04df63268d8f5c99a1b41a4e15131a2ebe83",
+    "tools/friendly_hortative_sena_runtime_audit.py": "e44f27cbe260cb785e0219141fdb0b5fa22a788c509ac4a7e0056d8b37c26780",
+    "tools/friendly_hortative_sena_source_audit.py": "68e5f15fa288f4089cfddc9d67356d51452ba5176fa6750422959e6cf0dbf403",
     "tools/gam_question_compare.py": "61ffcc148c8838a0726b0cacdd7159556d30faebd5644f61266d099d2bd5cf9e",
     "tools/gam_question_corpora.py": "a305207ab649ea7df3c3e9c667890a1aca6bd8992e3f70f5e241615157f532ea",
     "tools/gam_question_runtime.py": "45f01a55ea5562cebd2ebb75789af64021cbdefea286baf8879112b4ebf1625c",
@@ -792,11 +800,11 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 520,
-      "unreviewed": 195
+      "scoped": 521,
+      "unreviewed": 194
     },
     "with_catalog_links": 525,
-    "with_judgment_citations": 549
+    "with_judgment_citations": 550
   },
   "entries": [
     {
@@ -71481,10 +71489,191 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-1",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-2",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-3",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-4",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-78469-sense-1-group-5",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-attached-auxiliary",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-bare-copula",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-hortative-sena-derived-adjective",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-hortative-sena-honorific-1",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-honorific-2",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-honorific-3",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-invalid-stem-boundary-1",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-hortative-sena-invalid-stem-boundary-2",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-hortative-sena-invalid-stem-boundary-3",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-hortative-sena-invalid-stem-boundary-4",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-1",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-10",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-2",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-3",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-4",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-5",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-6",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-7",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-8",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-hortative-sena-regular-boundary-9",
+          "judgment": "structural-path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:78469",
+        "source_sha256": "b52ad93e6f0b54eecd5ac134cc431d369d67568b75e0ab3fe4c76b74dc6cd4e3",
+        "status": "scoped",
+        "checklist": [
+          "COV-017dc"
+        ],
+        "scope": "Finite structural coverage of the complete original -세나 entry: five original example groups and dialogue, the exact 25 preauthored cases (19 required and six forbidden), consonant-initial attachment and ㄹ deletion, verbal honorifics and attached auxiliaries, known bare adjective/copula/답다 and invalid irregular boundaries. Canonical target authoring predates runtime and intentionally contains no new rule-ID requirements. This scoped source review describes only these original structural judgments; it does not certify complete inventory coverage or contextual interpretation.",
+        "remaining": "Other prefinals, honorific adjective/copula predicates and outer particles remain Unknown where not licensed. The original 중세나 corpus observation retains its noun gold, complete sentence and additional unjudged word hypothesis. Contextual homonym/sense choice, social appropriateness, wider register and independent Korean-language review remain separate. Quiet performance and complete main integration remain required; this scoped review certifies neither.",
+        "evidence": [
+          {
+            "path": "tests/friendly_hortative_sena.rs"
+          },
+          {
+            "path": "tests/fixtures/friendly-hortative-sena-source.json"
+          },
+          {
+            "path": "tests/fixtures/friendly-hortative-sena-validity.json"
+          },
+          {
+            "path": "docs/friendly-hortative-sena-source-baseline-proof-archive.json"
+          },
+          {
+            "path": "docs/friendly-hortative-sena-wide-proof-archive.json"
+          },
+          {
+            "path": "docs/friendly-hortative-sena-corpus-regression-proof-archive.json"
+          },
+          {
+            "path": "tools/friendly_hortative_sena_source_audit.py"
+          },
+          {
+            "path": "tools/friendly_hortative_sena_runtime_audit.py"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "friendly-hortative-sena-78469-sense-1-group-1",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-hortative-sena-78469-sense-1-group-2",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-hortative-sena-78469-sense-1-group-3",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-hortative-sena-78469-sense-1-group-4",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-hortative-sena-78469-sense-1-group-5",
+            "judgment": "structural-path"
+          }
+        ]
       }
     },
     {

@@ -51,6 +51,11 @@ def inputs(draft=False):
         values['actual_current_raw'] = values['current_raw']
         values['actual_current_reviews'] = values['current_reviews']
         values['gena_append'] = complete
+        if 'sena_append' in complete:
+            values['actual_entire_current_raw'] = values['actual_current_raw']
+            values['actual_entire_current_reviews'] = values['actual_current_reviews']
+            values['actual_current_raw'] = complete['current_raw']
+            values['actual_current_reviews'] = complete['current_reviews']
         values['current_raw'] = complete['parent_raw']
         values['current_reviews'] = json.loads(complete['parent_reviews_raw'])
     return values
@@ -121,6 +126,12 @@ def inspect(v):
                       complete_current_cases=checked['current_cases'],complete_current_reviews=checked['current_reviews'],
                       complete_current_required=checked['required'],complete_current_forbidden=checked['forbidden'],
                       gena_added_cases=checked['added_cases'])
+        if 'verified_current_shared_cases' in checked:
+            assert v['actual_entire_current_raw'] == complete['actual_current_raw'], 'mandatory entire Sena ledger behind historical long'
+            assert v['actual_entire_current_reviews'] == complete['actual_current_reviews'], 'mandatory entire Sena reviews behind historical long'
+            result.update({key: checked[key] for key in (
+                'verified_current_shared_cases', 'verified_current_shared_reviews',
+                'verified_current_required', 'verified_current_forbidden', 'sena_added_cases', 'legacy_checkpoint_fields')})
     else:
         result['scope'] = 'complete-evaluated-long35740'
     return result

@@ -29,7 +29,9 @@ fn source_backed_judgments_pass_and_unreviewed_outputs_stay_visible() {
     );
     assert!(report.review_queue.iter().all(|i| !i.analysis.unchanged));
 
-    let gena = validity::evaluate(&fixture()).unwrap();
+    let mut gena_suite = fixture();
+    gena_suite.cases.truncate(35764);
+    let gena = validity::evaluate(&gena_suite).unwrap();
     assert!(gena.passed(), "{:?}", gena.violations);
     assert_eq!(gena.required_total, report.required_total + 17);
     assert_eq!(gena.forbidden_total, report.forbidden_total + 7);
@@ -125,4 +127,33 @@ fn homonymous_forms_are_judged_by_optional_roles_without_hiding_alternatives() {
     suite.cases[0].judgments.pop();
     suite.cases[0].judgments[0].lemma_kinds = Some(vec![]);
     assert!(validity::evaluate(&suite).is_err());
+}
+
+#[test]
+fn complete_sena_append_preserves_every_parent_judgment_and_unjudged_output() {
+    let mut parent = fixture();
+    parent.cases.truncate(35764);
+    let before = validity::evaluate(&parent).unwrap();
+    assert!(before.passed(), "{:?}", before.violations);
+    assert_eq!(before.required_total, 31469);
+    assert_eq!(before.forbidden_total, 4312);
+
+    let suite = fixture();
+    assert_eq!(suite.cases.len(), 35789);
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!(report.required_total, before.required_total + 19);
+    assert_eq!(report.forbidden_total, before.forbidden_total + 6);
+    assert_eq!(report.required_present, report.required_total);
+    assert_eq!(report.forbidden_present, 0);
+    assert_eq!(
+        report.emitted_nonidentity,
+        report.judged_nonidentity + report.review_queue.len()
+    );
+    assert!(
+        report
+            .review_queue
+            .iter()
+            .all(|item| !item.analysis.unchanged)
+    );
 }

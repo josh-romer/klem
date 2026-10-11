@@ -636,6 +636,7 @@
                 ./tools/friendly_command_gena_ledger_audit.py
                 ./tools/test_friendly_command_gena_ledger_audit.py
                 ./tools/test_friendly_command_gena_ledger_descendant.py
+                ./tools/test_friendly_hortative_sena_ledger_descendant.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1306,6 +1307,7 @@
             python -m unittest discover -s tools -p 'test_friendly_hortative_sena_gena_parent_audit.py'
             python tools/friendly_hortative_sena_ledger_draft_audit.py
             python tools/friendly_hortative_sena_ledger_audit.py --draft
+            python tools/friendly_hortative_sena_ledger_audit.py
             python -m unittest discover -s tools -p 'test_friendly_hortative_sena_ledger_draft_audit.py'
             python -m unittest discover -s tools -p 'test_friendly_hortative_sena_ledger_audit.py'
             KLEM_SENA_BINARY_EVIDENCE=captured python tools/friendly_hortative_sena_installed_audit.py
@@ -1323,6 +1325,7 @@
             python tools/friendly_command_gena_ledger_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_ledger_audit.py'
             python -m unittest discover -s tools -p 'test_friendly_command_gena_ledger_descendant.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_ledger_descendant.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

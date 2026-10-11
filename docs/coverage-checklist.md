@@ -5167,9 +5167,42 @@ review remains open under the completion review below.
   all 44 production inputs and 1,158/1,158/18 compiled inputs still bind the
   passed parent Rust run. Ten whole artifacts retain the actual producer,
   receipt, log, complete pre-update queue and all installed modules. Git-selected
-  verification of these new portable files remains pending.
-  Actual shared promotion, main integration, quiet performance and contextual
-  or independent Korean review remain required.
+  [Committed-source verification](friendly-hortative-sena-portable-ledger-selected-proof-archive.json)
+  now passes all 167 controls and all 715 inventory rows from `d0167cd`,
+  including both portable guard suites and the original historical/runtime
+  audits. Every selected source file, HEAD, index and six protected executables
+  stays unchanged; all 1,158/1,158/18 compiled inputs bind the passed parent
+  Rust run. Thirteen whole artifacts retain the actual commands, output and
+  selected guard sources, plus the first sandbox temporary-directory failure.
+  This proves the unpromoted parent checkpoint, not the later isolated append.
+  In the isolated promotion worktree, the exact original twenty-five cases
+  (nineteen required and six forbidden) now extend the shared ledger to 35,789
+  cases, with one bounded review extending the review ledger to 521 entries.
+  All 35,764 serialized parent case fields and all 520 previous reviews remain
+  unchanged. The original authored draft and corpus hypothesis stay immutable;
+  this promotion assigns no contextual or independent Korean judgment. The
+  earlier Gena, long-command and gentle-command ledger guards retain every
+  original assertion and validate the entire Sena append before returning a
+  historical parent. Their original checkpoint count fields remain explicitly
+  labeled; `verified_current_*` reports the complete current shared totals.
+  [New descendant controls](../tools/test_friendly_hortative_sena_ledger_descendant.py)
+  require the whole append behind each of these three historical views and
+  reject hidden tails, changed candidates, lost serialized fields and altered
+  source/review groups. A new full-ledger Rust regression checks every current
+  required and forbidden judgment while retaining all original parent assertions.
+  [Complete isolated ledger validation](friendly-hortative-sena-promoted-ledger-proof-archive.json)
+  now passes all 124 original controls and 23 new descendant controls, plus
+  four direct full/current audits. The first attempt retains its historical API
+  failure. The corrected attempt passes every control but fails only the final
+  Rust formatting check; its receipt stays failed. Actual rustfmt changes only
+  whitespace in the new assertion, preserving every quoted string, comment and
+  nonwhitespace token. The separate finalization passes formatting, all 715 queue
+  rows and the whitespace check with every source byte, HEAD, index and six
+  protected executables unchanged. The whole artifact archive preserves both
+  failed producers, all original inputs and the completed controls/finalization.
+  A fresh complete Rust gate for the two changed compiled test inputs, updated
+  strict profile proof and main integration remain pending. Quiet performance
+  and contextual or independent Korean review also remain required.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

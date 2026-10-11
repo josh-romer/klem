@@ -64,7 +64,7 @@
     "docs/copula-expectation-performance.json": "1d73c7410d35940df838c85bf58c7cfec6a5bb8f9d2e9cf679d0f4bdf64f5c6b",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "469c57721c744902922b10a6345b051af079ea852b348a86512b43335fb85fb4",
+    "docs/coverage-checklist.md": "99c7378ed93088eaa8b4a4c55c88837661457ec019614c0f568db82059df3959",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -199,6 +199,8 @@
     "docs/formal-volitional-rust-browser-validation.json.gz": "262e4985dc77b9adb21445cb12c4f31a7ea83aba26549c40e553ed44e52c2aa4",
     "docs/formal-volitional-source-preparation.json.gz": "c98ed537976fa5b7ed894cc400a2a5a6e92860214d394b8193fb4266a212f1f6",
     "docs/friendly-command-final-nix.json": "54f4f0b1f1f54dbcd4dd8e9e12cb34e47dffcd34f993da688ae96e665c6e129f",
+    "docs/friendly-command-gena-initial-runtime-proof-archive.json": "675f69705ab5e175fc4dc72fecd74d5c5cb41538498d526688b88387a1e0e009",
+    "docs/friendly-command-gena-installed-proof-archive.json": "545fbd3cc756746e5afadf12f5c5008e96fe4fc70de63452b441b51252764c8e",
     "docs/gentle-command-long-installed-proof-archive.json": "d296070193fea273282763e53abfe7510671b06f61a4455e343992093dc1747d",
     "docs/gentle-command-long-runtime-proof-archive.json": "a38f4bd748e734ca314d908bc24676e551e6cb815a923fc3075c879726a4da31",
     "docs/gentle-command-runtime-proof-archive.json": "5500e8b18cc6a6051d5792c2397c2f429684a24d8f8f1d73cd21e11dfeeaad69",
@@ -232,7 +234,7 @@
     "docs/intensive-aux-source-preflight.json": "5071dd2803048d77f99ea0dfb5e01d54882518d8ecd4c57828dfb2c00888f0ba",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "df7109ca4d8b4d6a328bda4c762f4e7596f76ae3f69a8c7ffa125208883b691c",
-    "docs/inventory-reviews.json": "c47411d0e832d2220ade356cb956ed778852eaee9da90dba3f091e15c6557a12",
+    "docs/inventory-reviews.json": "8bb5af182bf1670575d6a665aeb15def4fd167067abb7f76102933de1a5f16f0",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -486,6 +488,7 @@
     "tests/fixtures/formal-volitional-novel-validity.json": "db0853ac54c5ca0ab8995511e6d40f4c20b1a9b1020b9358a31d9ee19efaea41",
     "tests/fixtures/formal-volitional-raw-validity.json": "23346ec33a887be1eb10c925ef9cfe2777b901df3d6e600e5bea053d7a968124",
     "tests/fixtures/formal-volitional-validity.json": "4baa4c4bc9da65a9a9c493b7aadd537afd82ff3464daf586dc3e59823d9cd181",
+    "tests/fixtures/friendly-command-gena-source.json": "2270d774f18e96d5bc5ad5ab77df5e65dc4cd5082561854182aeddb9e0d36c8e",
     "tests/fixtures/friendly-command-sources.json": "3db7b13a214a05dce52eb5bb6cc76de7b7646f08f08179728673be46bf592d26",
     "tests/fixtures/gentle-command-long-source.json": "b6e5b33fe1bf21989ac16001b825e6530d2767613d3d7134738148c756b302f8",
     "tests/fixtures/gentle-command-source.json": "fc42b29d511ee3fe53c19006c5d6581d61763e5a2a162768ff221eb079db80c0",
@@ -537,12 +540,13 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "c8696d8f241550f089857bb238daab7d1428967b9bd4834705d96c8b334ee2ea",
+    "tests/fixtures/validity.json": "605f5a1540fec9680143b5112a6dae2b57d52ccd03cba58167bcd10de1046d66",
     "tests/fixtures/willingness-question-source.json": "d9cd3cc984bd14df26013928d99065161ec0739f6fd35cdcfb4c321330206bad",
     "tests/formal_b.rs": "e664556b1863b00a9126f36d297884b4c26f0a2afc6a150c7b7eda81d51b8194",
     "tests/formal_volitional.rs": "d94d3abe2047648913bda1e091236746927a9ca6d3977894b28905beec9e4140",
     "tests/formal_volitional_novel.rs": "b146adcef6431fb253fc5e59a7897015009bf9e67f00d41969ea385dda584788",
     "tests/friendly_command.rs": "523e60acb850359764ed781d029cb58a6a2465080046d9fd480e990073fe937b",
+    "tests/friendly_command_gena.rs": "e4a6343fa620d09564ca1e2ad4b605b81a2793c20e956d668c0456d648e16ec4",
     "tests/gam_questions.rs": "e84ee87884570646f4c3a13ba91ef2b4e7fc534a1c8c630636a8164e3940d268",
     "tests/gentle_command.rs": "81cde4c9507a580844a706a4ea1c60ce2e2d688fd953502c0634bc4309514049",
     "tests/gentle_command_long.rs": "27f51bb4faeb24657ea54df601736d32db39ac0581ed76fe7f71972a5fb2350e",
@@ -686,6 +690,8 @@
     "tools/formal_volitional_source_audit.py": "8b981ffec9957852cc52bb1b86bddd7245dc3e3a39ea96d4b4d40e65f80f0170",
     "tools/formal_volitional_streams_audit.py": "39748859a13b7861732b8742a5246becfbace706314d29a16cca0ef08ce47b0c",
     "tools/friendly_command_audit.py": "d382ecdf49551f465651b618577dbefd3ae99b9c09206ea6b3d57c7e911ba4d4",
+    "tools/friendly_command_gena_installed_audit.py": "1c2a751864e3ef6388fbb04fee0735f0d309ec102ccd3b688ca79bc83326e410",
+    "tools/friendly_command_gena_runtime_audit.py": "1c830e1483ee51c292274cad0e5c04df63268d8f5c99a1b41a4e15131a2ebe83",
     "tools/gam_question_compare.py": "61ffcc148c8838a0726b0cacdd7159556d30faebd5644f61266d099d2bd5cf9e",
     "tools/gam_question_corpora.py": "a305207ab649ea7df3c3e9c667890a1aca6bd8992e3f70f5e241615157f532ea",
     "tools/gam_question_runtime.py": "45f01a55ea5562cebd2ebb75789af64021cbdefea286baf8879112b4ebf1625c",
@@ -786,11 +792,11 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 519,
-      "unreviewed": 196
+      "scoped": 520,
+      "unreviewed": 195
     },
     "with_catalog_links": 524,
-    "with_judgment_citations": 548
+    "with_judgment_citations": 549
   },
   "entries": [
     {
@@ -31946,10 +31952,176 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "friendly-command-gena-66968-sense-1-group-1",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-66968-sense-1-group-2",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-66968-sense-1-group-3",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-66968-sense-1-group-4",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-attached-auxiliary",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-bare-copula",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-derived-adjective",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-honorific-1",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-honorific-2",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-honorific-3",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-invalid-stem-boundary-1",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-invalid-stem-boundary-2",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-invalid-stem-boundary-3",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-invalid-stem-boundary-4",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-invalid-stem-boundary-5",
+          "judgment": "structural-path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-1",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-2",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-3",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-4",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-5",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-6",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-7",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-8",
+          "judgment": "structural-path",
+          "verdict": "required"
+        },
+        {
+          "case": "friendly-command-gena-regular-boundary-9",
+          "judgment": "structural-path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:66968",
+        "source_sha256": "9b8e98621104c17eaa2a0ca36d1b44dfc6f775d13efffb4f05f04cf8e0b9517e",
+        "status": "scoped",
+        "checklist": [
+          "COV-017db"
+        ],
+        "scope": "Proposed finite structural coverage of the complete original -게나 owner. All four original example groups, including dialogue, retain preauthored lexical, lemma-role, canonical-morpheme and rule targets. The original24 cases retain17required/7forbidden paths for unchanged consonant/vowel verb stems, verbal honorific 시, auxiliary composition, incorrect irregular restorations, and bare copula/nominal-답다 boundaries. Every original Native field and homonym remains intact. Actual installed packages/CLI/browser, full annotated rows and broad streams, and28 independent installed corruption controls have passed. Shared promotion requires the current complete Nix gate and a fresh parent/promotion audit; this draft makes no promotion claim.",
+        "remaining": "Other prefinals, honorific adjective/copula and outer-particle constructions retain Unknown compatibility. Five historical words have eleven unjudged additions; eighteen original broad contexts remain unjudged. Contextual lemma/sense choice, familiar-command register and pragmatic function, independent Korean review and quiet performance remain open. The source note alone does not establish precision or full Korean coverage.",
+        "evidence": [
+          {
+            "path": "tests/friendly_command_gena.rs"
+          },
+          {
+            "path": "tests/fixtures/friendly-command-gena-source.json"
+          },
+          {
+            "path": "docs/friendly-command-gena-initial-runtime-proof-archive.json"
+          },
+          {
+            "path": "docs/friendly-command-gena-installed-proof-archive.json"
+          },
+          {
+            "path": "tools/friendly_command_gena_runtime_audit.py"
+          },
+          {
+            "path": "tools/friendly_command_gena_installed_audit.py"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "friendly-command-gena-66968-sense-1-group-1",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-command-gena-66968-sense-1-group-2",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-command-gena-66968-sense-1-group-3",
+            "judgment": "structural-path"
+          },
+          {
+            "case": "friendly-command-gena-66968-sense-1-group-4",
+            "judgment": "structural-path"
+          }
+        ]
       }
     },
     {

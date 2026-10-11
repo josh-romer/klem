@@ -4692,8 +4692,9 @@ review remains open under the completion review below.
   installed NFC/NFD, dictionary-filter and cache-policy runs. Independent
   canonical path checks found none of the proposed 게나 paths before this
   implementation, irrespective of the new rule ID. All 24 independently
-  authored proposals (17 required, seven forbidden) remain in a
-  [private fixture](../tests/fixtures/friendly-command-gena-validity.json).
+  authored proposals (17 required, seven forbidden) remain preserved in their
+  [private fixture](../tests/fixtures/friendly-command-gena-validity.json) and
+  are now appended unchanged to the shared candidate ledger.
   The implementation distinguishes canonical 게나 from the existing 게 + 나
   alternatives and from 오다-final command ㄴ, keeps consonant-initial stem
   boundaries, and assesses known bare adjective homonyms separately. Explicit
@@ -4729,8 +4730,9 @@ review remains open under the completion review below.
   server stops and desktop/mobile screenshots fit without horizontal overflow.
   Every new observed lemma is queried against the unchanged original dictionary:
   69 heads yield 42 complete owners, including 13 additional original owners;
-  45 unmatched hypothetical heads remain unjudged. Shared 35,740 cases / 519
-  scoped reviews / 196 unreviewed owners remain unchanged. The
+  45 unmatched hypothetical heads remain unjudged. At that initial capture,
+  shared 35,740 cases / 519 scoped reviews / 196 unreviewed owners remained
+  unchanged. The
   [independent runtime auditor](../tools/friendly_command_gena_runtime_audit.py)
   rederives the CLI observations, every ordered cohort word, finite history
   witness, original gold row and broad context, and all newly queried Native
@@ -4776,8 +4778,8 @@ review remains open under the completion review below.
   equivalence. The
   [ledger draft](friendly-command-gena-ledger-draft-proof-archive.json) retains
   the exact 24-case proposal and one bounded owner review, 24 passing draft
-  controls and the original import failure. Actual shared cases and reviews
-  remain unchanged. New archive-aware installed/performance/draft helpers are
+  controls and the original import failure. Shared cases and reviews remained
+  unchanged during that draft run. Archive-aware installed/performance/ledger helpers are
   wired into Nix. Their
   [current-source proof](friendly-command-gena-completed-evidence-proof-archive.json)
   retains 14 complete artifacts and passes 81 controls (28 installed, 29
@@ -4789,9 +4791,26 @@ review remains open under the completion review below.
   with 19 captured host paths absent. All 7,075 tracked and 7,033 selected files,
   HEAD, index and six protected debug executables remain unchanged. All
   1,146/1,146/18 compile profiles and every older selected tool byte match the
-  original passed Gena gate. Actual shared Gena ledger promotion, main
-  integration and contextual/register/
-  independent Korean review remain pending. This entry
+  original passed Gena gate. The subsequent
+  [actual shared promotion](friendly-command-gena-promotion-proof-archive.json)
+  retains 44 complete original artifacts, including all 11 pre-promotion
+  bodies, both failed count-wrapper receipts, complete logs and separate
+  successful result audits. All 24 original judgments are appended unchanged;
+  the complete 35,740-case prefix and 519 prior reviews are retained. The
+  shared ledger now has 35,764 cases and 520 scoped reviews, with 195 owners
+  still unreviewed. Only owner 66968 receives the original bounded review.
+  The unchanged 32/26/24 historical control files and 12 new descendant
+  controls pass, alongside 12 focused Rust tests. Every one of the 260 actual
+  Cargo targets and all four trailing checks passes; a separate original
+  library doctest also passes. The complete Rust scope is 1,200 passed, zero
+  failed and one ignored benchmark in 261 batches, including zero-test
+  example targets. Fresh Cargo metadata matches the captured full inventory.
+  Source, HEAD, index and six protected executable bytes remain unchanged
+  throughout validation. Historical ledger adapters retain their original
+  assertions and require the full current promotion guard. The flake runs
+  the active ledger checks and new descendant controls. Complete promoted
+  Nix checks, current package/browser validation, main integration and
+  contextual/register/independent Korean review remain pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

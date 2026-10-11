@@ -48,7 +48,7 @@ def inputs(draft=False,prepared=None):
         candidate['cases'].extend(proposal['cases']);candidate['sources'].update(proposal['sources'])
         current_raw=(json.dumps(candidate,ensure_ascii=False,indent=2)+'\n').encode()
         active_reviews=json.loads(reviews_raw);active_reviews['entries'].extend(json.loads(scoped_raw)['entries'])
-    previous=historical.inputs()
+    previous=historical.original_inputs()
     previous['current_raw']=parent_raw;previous['current_reviews']=json.loads(reviews_raw)
     return dict(parent_raw=parent_raw,parent_reviews_raw=reviews_raw,
                 parent_queue_raw=gzip.decompress(read('parent-inventory-review-queue.json.gz')),

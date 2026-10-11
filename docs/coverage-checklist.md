@@ -4784,8 +4784,13 @@ review remains open under the completion review below.
   performance, 24 draft), the 715-row queue check and diff check. All captured
   source, HEAD, index and protected executable bytes remain unchanged; the
   original 28/24 test files and 23 performance test bodies remain intact.
-  Execution against the new committed Git-selected Nix source, actual
-  shared Gena ledger promotion, main integration and contextual/register/
+  The [committed-source Nix proof](friendly-command-gena-completed-sandbox-proof-archive.json)
+  retains five full originals and passes all 81 controls and the 715-row queue
+  with 19 captured host paths absent. All 7,075 tracked and 7,033 selected files,
+  HEAD, index and six protected debug executables remain unchanged. All
+  1,146/1,146/18 compile profiles and every older selected tool byte match the
+  original passed Gena gate. Actual shared Gena ledger promotion, main
+  integration and contextual/register/
   independent Korean review remain pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.
 

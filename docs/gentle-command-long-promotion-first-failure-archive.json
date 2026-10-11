@@ -1,0 +1,44 @@
+{
+  "state": "original-applied-ledger-count-failure-preserved",
+  "files": {
+    "validate_gentle_command_long_promotion.py": {
+      "path": "gentle-command-long-promotion-first-failure-validate_gentle_command_long_promotion.py.gz",
+      "source_sha256": "d116784c958ccfc8531129f8d143eaf122cd73eef57ac0f2d02dd1545c30fa77",
+      "archive_sha256": "ec219363d755febb4083b931f06810ff3ba979fcb1f13411241cb284ce3d02a2"
+    },
+    "gentle-command-long-promotion-validation.json": {
+      "path": "gentle-command-long-promotion-first-failure-gentle-command-long-promotion-validation.json.gz",
+      "source_sha256": "e70c9890b49b5700f720b86ac73b183c0850dff40742fdd209522524f4887934",
+      "archive_sha256": "00e004471487d71d7707bc7966efd3176446c00424f891fdaba0c816c08ffba9"
+    },
+    "gentle-command-long-promotion-validation.log": {
+      "path": "gentle-command-long-promotion-first-failure-gentle-command-long-promotion-validation.log.gz",
+      "source_sha256": "da5f3ba9237cd38a9675a8a3ef66a572e5556f01f089199ab38d5c626d8f3f2c",
+      "archive_sha256": "ca90c78ecdb886da90939507c8d43f52e313962261f6eb820789ad3dc6be4bb1"
+    },
+    "original-validity.rs": {
+      "path": "gentle-command-long-promotion-first-failure-original-validity.rs.gz",
+      "source_sha256": "81842ec2b00cf40dbb042099b198ee30fa789c36a03bf30f6a109aaf15ab403e",
+      "archive_sha256": "462330aabd349da22d04afb169fe09dd339f1e364380960946b47a12050d56c3"
+    },
+    "gentle-command-long-queue-expectation-failure.json": {
+      "path": "gentle-command-long-promotion-first-failure-gentle-command-long-queue-expectation-failure.json.gz",
+      "source_sha256": "3c1e561ecd8c995a9793adc307d324d9df7b539f5eedbfec905d56b4d1ec3a42",
+      "archive_sha256": "05913029889eeccd8dba21b1c00869d5ec51dbc60f7231dfc06f61ef6c6eda0a"
+    },
+    "gentle-command-long-queue-expectation-original.json.gz": {
+      "path": "gentle-command-long-promotion-first-failure-gentle-command-long-queue-expectation-original.json.gz",
+      "source_sha256": "1abf6d4886547c11d208ad1918d2740d0489620b9720ca6dc01a29f2305b3784",
+      "archive_sha256": "1abf6d4886547c11d208ad1918d2740d0489620b9720ca6dc01a29f2305b3784"
+    }
+  },
+  "source_files": 6828,
+  "all_source_head_index_unchanged": true,
+  "actual_candidate_judgments_pass": true,
+  "failed_assertion": "required_total old31427 vs new31452 afterexact25 required append; original forbidden expected4294 vsnew4305 afterexact11 forbidden append",
+  "rust_passed": 18,
+  "rust_failed": 1,
+  "corpus_or_judgments_changed_to_hide_failure": false,
+  "queue_first_expectation_failure_also_preserved": true,
+  "full_coverage_complete": false
+}

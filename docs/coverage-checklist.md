@@ -4309,8 +4309,13 @@ review remains open under the completion review below.
   regressions. All 6,570 captured source files, HEAD and index remain unchanged
   during both runs. The derived queue retains every original source row and
   adds only the eight original-group judgment citations for the two ending
-  owners. Complete current inventory Nix, main integration, quiet performance
-  and wider contextual/independent review remain open.
+  owners. The [actual Git-backed Nix selection](gentle-command-promoted-selected-proof-archive.json)
+  contains all new audit/dependency files and passes **97 controls** directly
+  from its 6,534 selected source files at `a9155d6`; every selected/current source
+  byte, HEAD and index remains unchanged. This proves the current selection,
+  not the complete inventory gate. Complete current inventory Nix, main
+  integration, quiet performance and wider contextual/independent review remain
+  open.
 
 - [ ] **COV-017da — Gentle command -려무나/-으려무나.**
   The [original-source packet](gentle-command-long-source-proof-archive.json)

@@ -4436,10 +4436,39 @@ review remains open under the completion review below.
   99-control producer, receipt, log and original source versions. The new
   checks and helper are included in the Nix inventory source and check commands.
 
-  Remaining: current test-source full verification, current installed
-  CLI/dictionary/browser/Nix/main, quiet performance, plus contextual/register
-  and independent Korean review. New installed/browser proof must use the
-  current revision; historical package results do not substitute for it.
+  [Current installed and browser proof](gentle-command-long-installed-proof-archive.json)
+  now passes all four actual Nix packages at checkpoint `3648c0d`, including
+  **1,191 release Rust tests** across 254 batches, with one ignored test.
+  All 6,674 build inputs, HEAD and index remain unchanged. The actual installed
+  executables match every recorded output from 36 source policies, 48 complete
+  Native CLI owners, 66,570 annotated rows and 1,128,312 frames across eight
+  broad streams. Eleven additional novel/derived-class cases pass twelve
+  Unicode, dictionary-filter and cache policies; original byte spans and
+  candidate order are retained. Both earlier build failures remain preserved.
+  The actual installed SolidJS application passes 67 cases, 402 policy
+  decisions including 138 forbidden choices, 264 individual diagrams, six
+  exports matching the CLI and 62 complete Native entry responses. Desktop
+  and mobile renders were inspected without overflow; the owned server stops
+  cleanly. These results use the current compiled 44 production inputs and
+  all 18 frontend sources, preserving the historical installed proof separately.
+
+  [Independent installed/browser audit validation](gentle-command-long-installed-audit-proof-archive.json)
+  passes **37 controls**, with all 6,707 captured files, HEAD and index unchanged.
+  It rederives whole original corpus and dictionary outputs, every recorded
+  novel occurrence/context, additional-case spans and stable judgment indices,
+  dictionary filter choices, dropdown options, normalized component order,
+  source attribution and full exports. Corruption controls reject cropped
+  source groups, rewritten gold with refreshed checksums, replaced executable
+  or source bytes, missing policies, forbidden choices and incomplete Native
+  fields. The auditor and controls are selected by the Nix inventory check.
+  This is an evidence audit; contextual/register and independent Korean
+  linguistic review remain open. Novel proposals still follow runtime
+  observation, eleven other raw novel hypotheses remain unjudged, and the
+  shared 35,704 cases and 517 reviews are unchanged.
+
+  Remaining: complete current Nix inventory gate, main integration and final
+  main checks, quiet performance, plus contextual/register and independent
+  Korean review. Historical package results retain their original scope.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -8883,6 +8912,8 @@ python3 tools/lexical_nada_review.py --verify
 python3 tools/predicate_auxiliary_spacing_runtime.py --verify docs/predicate-auxiliary-spacing-main-portable-runtime.json.gz
 python3 -m unittest discover -s tools -p 'test_predicate_auxiliary_spacing_runtime.py'
 python3 tools/predicate_auxiliary_spacing_package.py
+python3 tools/gentle_command_long_installed_audit.py
+python3 -m unittest discover -s tools -p 'test_gentle_command_long_installed_audit.py'
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

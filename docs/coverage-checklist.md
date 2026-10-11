@@ -4757,9 +4757,36 @@ review remains open under the completion review below.
   files; all 224 controls across seven current/historical suites pass with the
   complete source, HEAD and index unchanged. Nix selects the five new revision,
   runtime/browser auditor and test modules and runs both control suites. Actual
-  Git-selected source execution and Nix/installed/main validation, quiet performance,
-  shared Gena ledger promotion and contextual/register/independent Korean
-  review remain pending. This entry
+  Git-selected execution passes all 224 controls against 6,943 selected files
+  and unchanged 6,985 tracked files, HEAD and index. The actual four-check Nix
+  gate passes; all four installed packages retain 1,200 release Rust tests in
+  255 suites and complete 1,146/1,146/18 compile profiles. The
+  [installed archive](friendly-command-gena-installed-proof-archive.json)
+  retains 24 full original artifacts: all 36 CLI policies, 44 complete Native
+  owners, 69 full headword queries, 53,502 corpus/history words, 66,570 gold
+  rows, 1,128,312 broad frames, and the installed launcher/browser's 144
+  decisions, 102 diagrams, six exports and 31 complete entries. Its 28
+  independent controls pass. The
+  [performance archive](friendly-command-gena-performance-proof-archive.json)
+  retains 22 full original artifacts, including 80 interleaved novel timing
+  samples and six complete 179,112-frame cache streams. All 23 timing controls
+  pass. The original live-file preflight failure is retained; the successful
+  retry explicitly verifies captured installed executable fingerprints and
+  does not claim current executable reads, host isolation or statistical
+  equivalence. The
+  [ledger draft](friendly-command-gena-ledger-draft-proof-archive.json) retains
+  the exact 24-case proposal and one bounded owner review, 24 passing draft
+  controls and the original import failure. Actual shared cases and reviews
+  remain unchanged. New archive-aware installed/performance/draft helpers are
+  wired into Nix. Their
+  [current-source proof](friendly-command-gena-completed-evidence-proof-archive.json)
+  retains 14 complete artifacts and passes 81 controls (28 installed, 29
+  performance, 24 draft), the 715-row queue check and diff check. All captured
+  source, HEAD, index and protected executable bytes remain unchanged; the
+  original 28/24 test files and 23 performance test bodies remain intact.
+  Execution against the new committed Git-selected Nix source, actual
+  shared Gena ledger promotion, main integration and contextual/register/
+  independent Korean review remain pending. This entry
   does not close the ending inventory or assign sentence-level interpretations.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**

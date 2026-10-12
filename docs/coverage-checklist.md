@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 513 scoped
-  dispositions; 202 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 520 scoped
+  dispositions; 195 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains

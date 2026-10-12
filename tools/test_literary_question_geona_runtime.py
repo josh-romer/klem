@@ -7,6 +7,13 @@ class Controls(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
   cls.report=audit.read(Path(os.environ.get('KLEM_GEONA_RUNTIME',str(audit.ROOT/'docs/literary-question-geona-main-cli-replay.json.gz'))));cls.current=audit.read(audit.ROOT/'tests/fixtures/validity.json');cls.proposal=audit.read(audit.ROOT/'docs/literary-question-geona-proposed-ledger.json.gz')
+  if len(cls.current['cases']) > 35764:
+   import friendly_hortative_sena_promotion_audit as sena
+   child=sena.inputs();sena.inspect(child)
+   assert cls.current == __import__('json').loads(child['ledger']['current_raw']), 'complete actual promoted ledger checked separately'
+   cls.actual_current=cls.current
+   cls.current=__import__('json').loads(child['authored']['original/tests/fixtures/validity.json'])
+   assert len(cls.current['cases'])==35764, 'exact whole captured Gena checkpoint for original112 historical controls'
  def corrupt(self,change,reason):
   r=copy.deepcopy(self.report);change(r)
   with self.assertRaisesRegex(AssertionError,reason):audit.inspect(r)

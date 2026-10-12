@@ -483,6 +483,7 @@
                 ./tools/test_literary_question_geona_package.py
                 ./tools/test_literary_question_geona_performance.py
                 ./tools/test_literary_question_geona_runtime.py
+                ./tools/test_sena_geona_ledger_append.py
                 ./tools/test_literary_question_geona_sources.py
                 ./web/tests/literary-question-geona.mjs
                 ./tools/additive_ppundeoreo_audit.py
@@ -1175,6 +1176,7 @@
             python -m unittest discover -s tools -p 'test_literary_future_kko_package.py'
             python tools/literary_question_geona_runtime.py --report docs/literary-question-geona-packaged-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_geona_runtime.py'
+            python -m unittest discover -s tools -p 'test_sena_geona_ledger_append.py'
             KLEM_GEONA_RUNTIME=docs/literary-question-geona-packaged-cli-replay.json python -m unittest discover -s tools -p 'test_literary_question_geona_runtime.py'
             python tools/literary_question_geona_adapter_audit.py --report docs/literary-question-geona-packaged-adapter.json.gz
             python -m unittest discover -s tools -p 'test_literary_question_geona_adapter_audit.py'

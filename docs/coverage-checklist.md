@@ -5239,6 +5239,27 @@ review remains open under the completion review below.
   The repaired reader and new controls are selected in the Nix inventory check. A fresh
   successful full four-check Nix gate and main integration remain pending.
   Quiet performance and contextual or independent Korean review remain required.
+  The [second complete Nix attempt](friendly-hortative-sena-geona-reader-first-failure-proof-archive.json)
+  passes all 103 selected controls but stops in the old literary -거나 ledger
+  reader, whose exact reviewed-batch list ended at Gena. Its whole producer,
+  receipt, log and original reader/tests remain in six artifacts; source, HEAD,
+  index and all six executables stayed unchanged. The reader now recognizes
+  only the complete original 25-case Sena batch with its fixed fixture digest.
+  All original inspector assertions remain. The
+  [current and historical reader proof](friendly-hortative-sena-geona-reader-proof-archive.json)
+  passes all 112 original controls and nine separate full-current corruption
+  controls. Each original test body stays unchanged: setup first verifies the
+  entire actual 35,789-case child and then supplies the exact archived
+  35,764-case Gena checkpoint to those historical assertions. The direct first
+  historical attempt reports 23 failures; its original test bytes and actual
+  terminal counts remain recorded, without claiming an uncaptured complete
+  filesystem log. The logged retry passes all 112 original controls but fails
+  one new expected-message regex; that whole failed producer, receipt, output
+  and tested inputs remain in nine artifacts. The corrected new nine-control
+  retry keeps every previously passed original input byte unchanged. All
+  arbitrary tails, changed case/source fields, ordering, metadata and coordinated
+  fixture rewrites remain rejected. Both suites are selected and run by Nix.
+  A fresh complete four-check Nix build and main integration remain pending.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

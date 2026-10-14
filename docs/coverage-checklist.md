@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 520 scoped
-  dispositions; 195 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 521 scoped
+  dispositions; 194 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -4907,6 +4907,370 @@ review remains open under the completion review below.
   performance and contextual/register/independent Korean review remain open.
   This entry does not close the ending inventory or assign sentence-level
   interpretations.
+
+- [ ] **COV-017dc — Friendly joint-action request -세나.** **Partial isolated
+  implementation; wider integration pending.** KRDict 78469 retains all five
+  complete example groups, including dialogue, and its verb / -으시- note in
+  the [source and baseline archive](friendly-hortative-sena-source-baseline-proof-archive.json).
+  All 25 proposals (19 required, six forbidden) were authored before the first
+  targeted current installed probe; the earlier whole-inventory discovery is
+  explicitly separate. Baseline checks retain 36 Unicode/filter/cache policies,
+  1,608 complete frames and all 36 Native owners. Neither canonical typed paths
+  nor the proposed lemma-role paths were found; matching did not depend on a
+  future rule ID. The source 사세나 → 살다 target needs ㄹ recovery before ㅅ;
+  the separate 사다 proposal preserves ambiguity. Literal consonant boundaries
+  reject the declared vowel-triggered irregular restorations. Bare copula and
+  known nominal-plus-답다 paths cannot borrow the verb license; other prefinals,
+  outer particles and honorific adjective/copula paths remain unknown.
+  The [focused regressions](../tests/friendly_hortative_sena.rs) cover every
+  proposal, all complete imported fields and homonyms, Unicode, auxiliary
+  composition and every candidate/relative order in 63 earlier word records.
+  Eight new tests, eight parent -게나 tests and 11 backend grammar-label tests
+  pass, together with formatting and focused Clippy. The
+  [focused proof](friendly-hortative-sena-focused-proof-archive.json) preserves
+  the original final Clippy failure and all passing Rust results; the fix only
+  initializes the same four ordered ending records with `vec!`. Parent source,
+  binaries, all old fixtures, gold annotations and the shared 35,740 cases / 519
+  reviews remain unchanged. The display label cites only its own -세나 owner;
+  related -세/-으세 entries remain separate.
+  The [independent source/baseline auditor](../tools/friendly_hortative_sena_source_audit.py)
+  and [42 integrity controls](../tools/test_friendly_hortative_sena_source_audit.py)
+  pass; their [complete actual proof](friendly-hortative-sena-source-audit-proof-archive.json)
+  preserves every original authoring/correction artifact, all full Native fields,
+  the installed parent source/binary binding and baseline output. The auditor
+  recomputes all policy inputs, UTF-8 spans, typed and lemma-role observations,
+  cache parity and complete receipt/log totals independently of rule IDs.
+  [The same 42 controls after reducing per-test copies](friendly-hortative-sena-source-controls-retry-proof-archive.json)
+  pass with every assertion retained; the combined run's final stale-queue
+  failure is preserved separately from those passing controls. Queue recovery
+  changes only evidence hashes, retaining all source/review rows and counts.
+  The Nix inventory check selects and runs both new modules. The
+  [actual Nix-selected source proof](friendly-hortative-sena-selected-source-proof-archive.json)
+  passes 64 controls (42 own and 22 preserved parent source controls), with all
+  44 production inputs, five declared changes and 18 frontend inputs verified.
+  Both Rust package source profiles contain 1,153 files, including the seven
+  new test/fixture files; broader historical runtime guards remain pending.
+  The [actual source-bound build and CLI comparison](friendly-hortative-sena-runtime-proof-archive.json)
+  builds the CLI, server and corpus adapter from those exact compile inputs.
+  All 36 Unicode/filter/cache runs pass over 1,608 frames: 324 required-path
+  and 72 forbidden-path checks, every one of 2,916 earlier path occurrences
+  and assessments retained, and all 36 complete Native responses unchanged.
+  The 716 added path occurrences stay unjudged outside the finite authored
+  cases; Unicode and cache parity pass. The
+  [independent current-runtime auditor](../tools/friendly_hortative_sena_runtime_audit.py)
+  and [41 corruption controls](../tools/test_friendly_hortative_sena_runtime_audit.py)
+  pass with [all six original artifacts retained](friendly-hortative-sena-runtime-audit-proof-archive.json).
+  They independently derive every current observation, added path and full
+  dictionary assessment; confirm all three binary fingerprints and complete
+  compile profiles; and reject refreshed stdout that loses older candidates,
+  changes spans or ownership, or borrows -세/-나. Unreviewed prefinal paths
+  retain Unknown; bare known adjectives cannot borrow verb attachment, and
+  사세나 retains both 살다 with ㄹ recovery and 사다 without it. Both modules
+  are selected and run by the Nix inventory check. The
+  [actual expanded Nix-selected execution](friendly-hortative-sena-runtime-selected-source-proof-archive.json)
+  passes all 105 source and runtime controls from the same 44 production inputs.
+  [Complete wider comparisons](friendly-hortative-sena-wide-proof-archive.json)
+  preserve all 53,502 original corpus/history words, all 66,570 full annotated
+  rows and every output byte across eight streams totaling 1,128,312 frames.
+  No historical fixture word or broad frame changes; no historical allowance
+  is assigned. The only corpus addition is the unjudged 중다 + 세나 hypothesis
+  for KAIST MH2_0180-s63/5, whose original annotation remains 중세 + 나.
+  The complete original sentence, ten token fields and original gold recovery
+  are retained with a stable case ID. Only the KAIST test mean candidate count
+  increases; all gold rows, recall and other metadata remain unchanged.
+  [The independent wide auditor](../tools/friendly_hortative_sena_wide_audit.py)
+  and [34 corruption controls](../tools/test_friendly_hortative_sena_wide_audit.py)
+  pass with [all original audit artifacts retained](friendly-hortative-sena-wide-audit-proof-archive.json).
+  They rederive every cohort addition and full gold row, check whole-stream
+  fingerprints and original candidate counts, and preserve all 41 complete
+  Native owners for 71 new-path headwords, including nine additional owners
+  and 48 unmatched hypothetical heads. The original stopped dictionary
+  collector and its unknown terminal result remain separate from the passed
+  retry; only the collector's shadowed Git revision variable was corrected.
+  [The original sentence regression](friendly-hortative-sena-corpus-regression-proof-archive.json)
+  passes all 12 Unicode/filter/cache policies over 336 complete frames. The
+  original nominal 중세 + 나 reading stays compatible; unmatched 중다 has
+  Unknown compatibility and is excluded by both dictionary filters. The
+  original test expectation failure, separate diagnostic and successful retry
+  are retained. [Corpus regressions](../tests/friendly_hortative_sena_corpus.rs)
+  preserve the full attributed sentence, gold row, Native owner, old candidate
+  order and CLI/library/filter/Unicode/cache parity. The
+  [complete current Rust proof](friendly-hortative-sena-full-rust-current-proof-archive.json)
+  passes 1,211 tests across every one of 262 lib/bin/integration/example
+  targets, with one ignored test and zero failures; warning-denied Clippy,
+  formatting, source-queue verification and diff checks also pass. All 7,129
+  source files, Git revision/index and six protected current/parent executables
+  stay unchanged. Tests run serially to bound disk use, removing only passed
+  Cargo-emitted test harnesses. The original disk-full compilation attempt,
+  its valid failed receipt and limited log, the original example-cleanup guard
+  failure and both failed archiver attempts remain separate from the passing
+  retry. An incorrect original receipt-validity note is retained with its
+  correction. All original tests and assertions remain present.
+  The [actual expanded Nix selection](friendly-hortative-sena-wide-selected-source-proof-archive.json)
+  passes all 139 controls. Both Rust source profiles contain 1,158 files:
+  every previous 1,153 input is byte-identical and only the corpus test and
+  four attributed fixtures are added; all 18 frontend inputs stay unchanged.
+  [Explicit live/captured binary-evidence controls](friendly-hortative-sena-sandbox-candidate-proof-archive.json)
+  pass 123 checks, including all original 41 runtime tests in each mode and
+  all 34 wide tests without changing any assertion. Seven added controls
+  reject incorrect evidence scope and executable reads during captured replay.
+  Live mode remains the default and hashes the six actual executable files.
+  Captured mode verifies the complete immutable runtime artifacts and current
+  44 production / 18 frontend inputs, while explicitly reporting that it has
+  not verified live executable files. The Nix inventory check selects the new
+  controls and uses captured mode for these sandboxed auditors. The
+  [actual isolated Nix sandbox](friendly-hortative-sena-sandbox-proof-archive.json)
+  passes all 146 source/runtime/wide/evidence-mode controls and the 715-entry
+  source queue. It confirms all six host executable paths are absent, while
+  preserving every 1,158 Rust and 18 frontend build input. The preflight
+  disk-full failure is retained as a terminal observation; the complete
+  offline missing-dependency failure remains separate from the successful
+  retry, which uses the same Nix expression and enables the binary cache.
+  The [actual SolidJS build and browser run](friendly-hortative-sena-browser-proof-archive.json)
+  preserve all 14 available original artifacts, including the first
+  port-denied launch. All 25 preauthored cases pass 150 Unicode/filter
+  decisions, 114 ordered diagrams and 36 forbidden exclusions. Six policies
+  for the original KAIST sentence preserve the complete compatible noun
+  reading and exclude the unmatched hypothetical predicate in both dictionary
+  filters. Twelve complete exports match the CLI and 37 complete Native
+  entries match the original fixtures. The owned server stops explicitly;
+  desktop and mobile screenshots were actually inspected with bounded scope.
+  [Independent browser verification](friendly-hortative-sena-browser-audit-proof-archive.json)
+  passes 32 corruption controls in each of live and captured modes, rederiving
+  every original word, dropdown, export, corpus gold observation, diagram
+  order and Native field. The audit's initial incorrect corpus-state guard
+  and its terminal failure remain preserved; the correction matches the
+  original retained state without changing the corpus result.
+  [The committed Git-selected browser audit](friendly-hortative-sena-browser-sandbox-proof-archive.json)
+  also passes all 32 controls in the actual Nix sandbox, with all six host
+  executable paths absent. Every previous 146-control tool input and every
+  1,158/1,158/18 compiled input remains byte-identical; the 715-entry queue
+  verifies without changing any original review or judgment.
+  [Strict revision and historical controls](friendly-hortative-sena-revision-proof-archive.json)
+  pass 31 new closure controls and all unchanged 48 Gena runtime, 18 Gena
+  browser, 34 longer-command runtime and 37 installed-command controls.
+  The named Sena guard verifies all 44 production / 18 frontend inputs,
+  every 1,158 compiled input, the complete 1,211-test / 262-target Rust run,
+  source-bound wide comparison/audit receipts and every browser observation.
+  It explicitly uses captured evidence and retains the original Gena and
+  longer-command closures, failures and rejection assertions. Only the exact
+  proven child revision is accepted; missing JSON, unknown roots, duplicate
+  normalized paths, altered code/assets and unverified parent labels fail.
+  The first historical browser run exposed a web-prefix conversion error;
+  its complete failed producer, source, receipt and log remain separate from
+  the corrected retry. All original test files remain byte-identical.
+  The complete historical Nix inventory and all four package checks now pass
+  at the original e4436e3 checkpoint. The installed klem, corpus adapter,
+  SolidJS assets and web launcher are source-bound to the same frozen inputs.
+  All 1,212 release Rust tests and the original doctest pass in 257 batches,
+  with one ignored test. The [complete installed archive](friendly-hortative-sena-installed-proof-archive.json)
+  retains 935 full originals, including all failed wrapper attempts, producers,
+  logs and partial streams. All 253 actual installed replay commands completed:
+  48 complete source/corpus policies, 46 full Native owners, 72 headword queries,
+  every 53,502 corpus/history word record, all 66,570 annotated gold rows and
+  1,128,312 broad frames. An independent completed-output audit verifies all
+  506 complete stdout/stderr streams without rerunning commands; the original
+  metadata-wrapper failure remains failed and unchanged. The packaged browser
+  passes 150 choices, 114 diagrams, 12 exact exports and 37 full Native endpoints.
+  Both desktop and mobile screenshots were visually inspected. All semantic
+  fields remain exact; only finite nonnegative measured API latency is excluded
+  from corpus-response equality, with both original timing values retained.
+  The [portable installed auditor](../tools/friendly_hortative_sena_installed_audit.py)
+  reconstructs every installed cohort word from actual stdout and checks every
+  complete finite/gold/broad stream. Its [46 rejection controls](../tools/test_friendly_hortative_sena_installed_audit.py)
+  pass, retaining all 43 original method bodies and adding three full-stream
+  and failed-wrapper controls. [Complete audit evidence](friendly-hortative-sena-portable-installed-proof-archive.json)
+  is preserved and both commands are wired into the flake with explicit captured
+  evidence scope. The [complete portable Nix gate](friendly-hortative-sena-portable-complete-nix-proof-archive.json)
+  now passes all four checks at `9a495ce`, including 31 source revision controls
+  and all 46 installed controls from actual Git-selected source. All 8,205
+  tracked and 8,163 selected files, HEAD, index and six protected executables
+  remain unchanged. Every one of the 1,158/1,158/18 Rust, adapter and frontend
+  input files matches the prior installed packages. Its three complete originals
+  preserve the actual producer, receipt and full build log; the three directory
+  outputs and empty inventory output file are verified separately. Main
+  integration, quiet timing and shared-ledger promotion remain required. Contextual sense,
+  joint-action interpretation, register and independent Korean review are open.
+  This finite implementation does not close the ending inventory.
+
+  The [validated Gena parent merge](friendly-hortative-sena-gena-parent-preservation-proof-archive.json)
+  retains fourteen complete original artifacts and integrates main's exact
+  35,764-case / 520-review ledger. Every previous 35,740 case, source declaration,
+  metadata field and 519 ordered review survives unchanged. All 44 Sena
+  production inputs, the original 25 private judgments and corrected authoring
+  metadata, and its frontend label retain their passed original bytes. The
+  complete Gena, Sena and long-command checklist entries remain present once.
+  Fresh checks of the merged parent and the exact 25-case shared promotion
+  remain required; no additional corpus hypothesis receives a judgment here.
+  The [complete merged-parent validation archive](friendly-hortative-sena-gena-parent-validation-proof-archive.json)
+  retains 22 whole originals. All 262 actual Cargo targets and the original
+  doctest pass: 1,212 tests, zero failures and one ignored benchmark in 263
+  batches, followed by formatting, warning-denied all-targets Clippy and all
+  715 inventory rows. Every captured source byte, HEAD, index and six protected
+  binaries remains unchanged. The first historical-profile audit retains its
+  31 attempted controls and ten failures: it rejects the exact two compiled
+  test inputs changed by the Gena parent. The [strict parent guard](../tools/friendly_hortative_sena_gena_parent_audit.py)
+  binds the complete passed Rust producer, log, metadata and all targets, the
+  exact 35,764-case / 520-review parent, all 44 unchanged production files and
+  every 1,158/1,158/18 profile member. Its fourteen prepared corruption controls
+  pass, including rejection of unfinished proof. The original 31 test bodies
+  and assertions remain unchanged. Historical profiles are projected only
+  after this complete named parent proof succeeds. The [complete current-parent control proof](friendly-hortative-sena-gena-parent-controls-proof-archive.json)
+  now passes all 351 current and historical controls, the 715-entry queue and
+  the whitespace check at `a762809`. Every tracked source byte, HEAD, index
+  and all six protected executables remain unchanged. Its eighteen whole
+  artifacts retain the exact installed guard and ten test files, all actual
+  commands and output, and the earlier preinitialization failure. The original
+  failed 31-control profile audit remains failed.
+  The [complete original append draft](friendly-hortative-sena-ledger-draft-proof-archive.json)
+  preserves all sixteen original artifacts: the 35,764-case parent, 520 reviews,
+  all 715 original source records, all 25 rule-independent Sena cases and
+  their corrected authoring metadata, and the proposed single bounded review.
+  The [prepared complete-tail guard proof](sena-ledger-prepared-guard-proof-archive.json)
+  passes all twelve unchanged draft controls and eighteen additional actual-input
+  controls. A historical parent view requires checking every current tail case,
+  source declaration and review first. Its original two-test aliasing failure
+  and both failed source files remain preserved; the correction separates the
+  active review input from the authored draft. These are prepared proofs only:
+  the shared ledger remains at 35,764 cases / 520 reviews, all 25 Sena cases
+  remain private, and the scoped review still explicitly describes a draft.
+  The [actual committed-source parent verification](friendly-hortative-sena-parent-selected-current-proof-archive.json)
+  now passes all 137 selected controls and all 715 inventory rows from the exact
+  `fa50c94` Git revision: 31 original revision controls, 14 parent controls and
+  both 46-control installed auditors. All 9,429 tracked and 9,387 selected files,
+  HEAD, index and six executables stay unchanged; all 1,158/1,158/18 compiled
+  inputs bind the completed parent Rust run and unchanged frontend. The 31 whole
+  archived artifacts preserve all four earlier Git-fetch/cache failures and the
+  interrupted receipt that completed only the first 31 controls. That partial
+  receipt retains its original running state and never becomes a terminal pass.
+  Content-preserving Nix deduplication completed without garbage collection,
+  retaining main's full source, HEAD, index and 683 checked build outputs. No
+  additional full Nix build or runtime replay is claimed by this selected audit.
+  The [portable ledger preparation proof](friendly-hortative-sena-portable-ledger-prepared-proof-archive.json)
+  preserves twelve whole prepared programs, logs and review artifacts. The
+  original twelve draft controls and eighteen complete-tail controls passed;
+  the public-path variant independently passed the same eighteen controls.
+  The [portable draft reader](../tools/friendly_hortative_sena_ledger_draft_audit.py)
+  now reads the immutable sixteen-file source archive, preserving every original
+  inspector assertion. The [current append guard](../tools/friendly_hortative_sena_ledger_audit.py)
+  reads the bounded review from source and checks all parent and appended case
+  fields, serialized parent bytes, source declarations and all review fields.
+  Its explicit `--draft` mode verifies the proposal; default mode requires the
+  actual complete append and rejects the still-unpromoted shared ledger. Both
+  guards and their thirty unchanged controls are included in the Nix inventory
+  check. The separate bounded review changes only scope and remaining-work
+  wording; it grants no contextual or independent Korean review. Installed
+  [Installed validation](friendly-hortative-sena-portable-ledger-public-proof-archive.json)
+  now passes all thirty controls, both draft positives, the expected rejection
+  of the unpromoted actual ledger, all 715 queue rows and the whitespace check.
+  Every source byte, HEAD, index and six protected executables stay unchanged;
+  all 44 production inputs and 1,158/1,158/18 compiled inputs still bind the
+  passed parent Rust run. Ten whole artifacts retain the actual producer,
+  receipt, log, complete pre-update queue and all installed modules. Git-selected
+  [Committed-source verification](friendly-hortative-sena-portable-ledger-selected-proof-archive.json)
+  now passes all 167 controls and all 715 inventory rows from `d0167cd`,
+  including both portable guard suites and the original historical/runtime
+  audits. Every selected source file, HEAD, index and six protected executables
+  stays unchanged; all 1,158/1,158/18 compiled inputs bind the passed parent
+  Rust run. Thirteen whole artifacts retain the actual commands, output and
+  selected guard sources, plus the first sandbox temporary-directory failure.
+  This proves the unpromoted parent checkpoint, not the later isolated append.
+  In the isolated promotion worktree, the exact original twenty-five cases
+  (nineteen required and six forbidden) now extend the shared ledger to 35,789
+  cases, with one bounded review extending the review ledger to 521 entries.
+  All 35,764 serialized parent case fields and all 520 previous reviews remain
+  unchanged. The original authored draft and corpus hypothesis stay immutable;
+  this promotion assigns no contextual or independent Korean judgment. The
+  earlier Gena, long-command and gentle-command ledger guards retain every
+  original assertion and validate the entire Sena append before returning a
+  historical parent. Their original checkpoint count fields remain explicitly
+  labeled; `verified_current_*` reports the complete current shared totals.
+  [New descendant controls](../tools/test_friendly_hortative_sena_ledger_descendant.py)
+  require the whole append behind each of these three historical views and
+  reject hidden tails, changed candidates, lost serialized fields and altered
+  source/review groups. A new full-ledger Rust regression checks every current
+  required and forbidden judgment while retaining all original parent assertions.
+  [Complete isolated ledger validation](friendly-hortative-sena-promoted-ledger-proof-archive.json)
+  now passes all 124 original controls and 23 new descendant controls, plus
+  four direct full/current audits. The first attempt retains its historical API
+  failure. The corrected attempt passes every control but fails only the final
+  Rust formatting check; its receipt stays failed. Actual rustfmt changes only
+  whitespace in the new assertion, preserving every quoted string, comment and
+  nonwhitespace token. The separate finalization passes formatting, all 715 queue
+  rows and the whitespace check with every source byte, HEAD, index and six
+  protected executables unchanged. The whole artifact archive preserves both
+  failed producers, all original inputs and the completed controls/finalization.
+  [Complete promotion source and Rust proof](friendly-hortative-sena-promotion-rust-proof-archive.json)
+  now preserves seventeen whole originals. All 1,213 Rust tests and the original
+  doctest pass in 263 batches, with zero failures and one ignored benchmark;
+  every one of 262 Cargo targets and all 267 commands complete, including
+  formatting, warning-denied Clippy, the 715-entry queue and whitespace check.
+  Four actual committed Nix source evaluations bind every 1,158/1,158/18
+  compiled input to this same tested checkpoint. All 44 production inputs,
+  frontend files and six protected executable fingerprints remain unchanged.
+  The first source-selection failure remains failed, with its complete producer,
+  receipt and log preserved separately from the successful retry.
+  [The promotion guard](../tools/friendly_hortative_sena_promotion_audit.py)
+  verifies the entire current ledger and every tested and selected compiled byte
+  before exposing a historical parent profile. Its twenty-eight corruption
+  controls pass against the actual complete proof. The
+  [installed control archive](friendly-hortative-sena-promotion-public-proof-archive.json)
+  preserves the actual eighty-three-control run: those twenty-eight controls,
+  all fourteen original parent controls, all thirty-one original revision
+  controls and ten additional mandatory-child controls. Every original parent
+  and revision assertion remains intact; both original test files remain
+  byte-identical. Removing the full child proof, substituting historical profiles
+  for actual inputs or truncating current ledger/test bindings cannot authorize
+  a historical view. These guards and controls are wired into the Nix inventory
+  check. The [first complete promoted Nix attempt](friendly-hortative-sena-promoted-nix-first-failure-proof-archive.json)
+  passes all eighty-three selected controls and then fails in the older
+  command-family reader: it compared the entire 35,789-case Source with the
+  verified 35,764-case Gena checkpoint. The full producer, receipt, log and
+  original reader/tests remain preserved in ten whole artifacts; the failed
+  receipt is unchanged. The [strict reader repair](friendly-hortative-sena-command-ledger-repair-proof-archive.json)
+  binds the actual complete Source before returning its historical owner view.
+  Every original assertion remains intact. All eight original command/Gena
+  controls, twelve new full-Sena reader controls and twenty-three original
+  descendant controls pass, followed by three complete direct audits. The
+  original eight- and twenty-three-control test files remain byte-identical;
+  nine whole artifacts retain the actual repair producer, receipt and output.
+  Missing children/bindings, altered parent or tail cases, reviews, foreign
+  current bytes and unjudged extra tails cannot authorize the default reader.
+  The repaired reader and new controls are selected in the Nix inventory check. A fresh
+  successful full four-check Nix gate and main integration remain pending.
+  Quiet performance and contextual or independent Korean review remain required.
+  The [second complete Nix attempt](friendly-hortative-sena-geona-reader-first-failure-proof-archive.json)
+  passes all 103 selected controls but stops in the old literary -거나 ledger
+  reader, whose exact reviewed-batch list ended at Gena. Its whole producer,
+  receipt, log and original reader/tests remain in six artifacts; source, HEAD,
+  index and all six executables stayed unchanged. The reader now recognizes
+  only the complete original 25-case Sena batch with its fixed fixture digest.
+  All original inspector assertions remain. The
+  [current and historical reader proof](friendly-hortative-sena-geona-reader-proof-archive.json)
+  passes all 112 original controls and nine separate full-current corruption
+  controls. Each original test body stays unchanged: setup first verifies the
+  entire actual 35,789-case child and then supplies the exact archived
+  35,764-case Gena checkpoint to those historical assertions. The direct first
+  historical attempt reports 23 failures; its original test bytes and actual
+  terminal counts remain recorded, without claiming an uncaptured complete
+  filesystem log. The logged retry passes all 112 original controls but fails
+  one new expected-message regex; that whole failed producer, receipt, output
+  and tested inputs remain in nine artifacts. The corrected new nine-control
+  retry keeps every previously passed original input byte unchanged. All
+  arbitrary tails, changed case/source fields, ordering, metadata and coordinated
+  fixture rewrites remain rejected. Both suites are selected and run by Nix.
+  A fresh complete four-check Nix build and main integration remain pending.
+
+  The [current complete promoted Sena Nix gate](friendly-hortative-sena-current-complete-nix-proof-archive.json)
+  now passes all four checks at `ac1a09f`: Rust CLI/web, SolidJS assets,
+  corpus adapter and complete inventory review. All 224 controls from the
+  actual Git-selected source pass before the full build; every 1,158/1,158/18
+  compiled input matches the passed 1,213-test revision. The full producer,
+  receipt and log remain preserved with exact output-attribute bindings.
+  All source files, HEAD, index and six protected executables stayed unchanged.
+  Earlier failed attempts retain their original states. Main-prefix readiness,
+  actual main merge and installed validation, quiet timing and contextual or
+  independent Korean review remain pending.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

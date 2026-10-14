@@ -1,0 +1,73 @@
+{
+  "state": "actual46-portable-installed-controls-passed",
+  "files": {
+    "friendly-hortative-sena-portable-installed-validation-retry1.json": {
+      "path": "friendly-hortative-sena-portable-installed-proof-friendly-hortative-sena-portable-installed-validation-retry1.json.gz",
+      "source_sha256": "6ca26569d76511e38e8fdf9fef5ac10336b29b3f3cb3941c6f9ec7d01e94d64e",
+      "archive_sha256": "919245fb25693cd2706afdc629fdbfbaf53b42a596b38754d8d17cfe6d495b2c",
+      "bytes": 1113313
+    },
+    "friendly-hortative-sena-portable-installed-validation-retry1.log": {
+      "path": "friendly-hortative-sena-portable-installed-proof-friendly-hortative-sena-portable-installed-validation-retry1.log.gz",
+      "source_sha256": "332e22b1f79ffa1334f5c6662886789a1bcd7d2ad5d2a01277b178aeaaf0c219",
+      "archive_sha256": "f2de64dd38338b7a952caa2c98598a6f7837d77edc1aa2bb1ec932031f0decaa",
+      "bytes": 6446
+    },
+    "run_sena_portable_installed_controls.py": {
+      "path": "friendly-hortative-sena-portable-installed-proof-run_sena_portable_installed_controls.py.gz",
+      "source_sha256": "3ddc6934425b6c931bac1dc7e8dfd43043961a24ae66759053a0faad5198353e",
+      "archive_sha256": "9d824a77bdab3296132b82840ead1d5af7a1da363177b142f61407cc9149b9c7",
+      "bytes": 5014
+    },
+    "install_sena_portable_controls.py": {
+      "path": "friendly-hortative-sena-portable-installed-proof-install_sena_portable_controls.py.gz",
+      "source_sha256": "410ab573c209725fc7ab309fd032b86ffd504b513a88cee200fa812f5f0c2ccd",
+      "archive_sha256": "706f579d860195c96a8cc05233f576172272ce9f6ca4c32a434ffd6eaeded7d5",
+      "bytes": 3025
+    },
+    "tools/friendly_hortative_sena_installed_audit.py": {
+      "path": "friendly-hortative-sena-portable-installed-proof-tools_friendly_hortative_sena_installed_audit.py.gz",
+      "source_sha256": "1fa514f8b47e14592d5b10ca0bfd6acea1b9a8df2af47df4473e85b6537885dd",
+      "archive_sha256": "96bab07f10006d11581f64d596692c7d1a1e267e68222d9c04c5cf42fdedd9a8",
+      "bytes": 26026
+    },
+    "tools/test_friendly_hortative_sena_installed_audit.py": {
+      "path": "friendly-hortative-sena-portable-installed-proof-tools_test_friendly_hortative_sena_installed_audit.py.gz",
+      "source_sha256": "ada3e98bfb8b03b33f4b044897f3acdaeb11468a8c9a69392e96ba80c72984a7",
+      "archive_sha256": "fdfa2defb5e0a68606efbfe72ae6e0d0e9418aa63255edd1009cd777d04a63b1",
+      "bytes": 12496
+    },
+    "archive_sena_installed_proof.py": {
+      "path": "friendly-hortative-sena-portable-installed-proof-archive_sena_installed_proof.py.gz",
+      "source_sha256": "26570c075e10b6540f43d2e41c973746535869e85055e5881eb9635b466ec5d3",
+      "archive_sha256": "d6ce49a4c49c905b729b222860134a95cd2e3bf68df406e9cf112ce4df66d9e0",
+      "bytes": 5451
+    },
+    "finalize_sena_installed_checkpoint.py": {
+      "path": "friendly-hortative-sena-portable-installed-proof-finalize_sena_installed_checkpoint.py.gz",
+      "source_sha256": "1f56b50f88f67ed9052c331d84023e2ba32b176e038eeba29f3c1368dfc4abbe",
+      "archive_sha256": "8b84bae942b119975a534e4665b05dfffcf369454f2f5b8fdcd16db4e4686199",
+      "bytes": 5311
+    }
+  },
+  "original43_test_methods_unchanged": true,
+  "actual_commands": 253,
+  "complete_streams": 506,
+  "summary": {
+    "release_rust_tests": 1212,
+    "release_rust_targets": 257,
+    "installed_cli_policies": 48,
+    "complete_native_owners": 46,
+    "new_lemma_lookups": 72,
+    "cohort_words": 53502,
+    "annotated_gold_rows": 66570,
+    "broad_frames": 1128312,
+    "browser_decisions": 150,
+    "required_diagrams": 114,
+    "exact_exports": 12,
+    "complete_browser_native_entries": 37,
+    "main_quiet_context_register_independent_review_and_shared25promotion": "pending",
+    "full_coverage_complete": false
+  },
+  "scope": "Actual repository controls verify complete installed source and outputs; this is a captured proof, not a claim to read historical host executables inside Nix. Main/shared promotion/quiet/context/register/independent Korean review remain open."
+}

@@ -371,6 +371,7 @@
                 ./tools/friendly_command_preparation.py
                 ./tools/friendly_command_audit.py
                 ./tools/test_friendly_command_historical_gena.py
+                ./tools/test_friendly_command_historical_sena.py
                 ./tools/degree_expectation_audit.py
                 ./tools/degree_expectation_parent.py
                 ./tools/degree_expectation_runtime.py
@@ -482,6 +483,7 @@
                 ./tools/test_literary_question_geona_package.py
                 ./tools/test_literary_question_geona_performance.py
                 ./tools/test_literary_question_geona_runtime.py
+                ./tools/test_sena_geona_ledger_append.py
                 ./tools/test_literary_question_geona_sources.py
                 ./web/tests/literary-question-geona.mjs
                 ./tools/additive_ppundeoreo_audit.py
@@ -602,6 +604,28 @@
                 ./tools/test_gentle_command_long_ledger_audit.py
                 ./tools/friendly_command_gena_source_audit.py
                 ./tools/test_friendly_command_gena_source_audit.py
+                ./tools/friendly_hortative_sena_source_audit.py
+                ./tools/test_friendly_hortative_sena_source_audit.py
+                ./tools/friendly_hortative_sena_runtime_audit.py
+                ./tools/test_friendly_hortative_sena_runtime_audit.py
+                ./tools/test_friendly_hortative_sena_binary_evidence.py
+                ./tools/friendly_hortative_sena_wide_audit.py
+                ./tools/test_friendly_hortative_sena_wide_audit.py
+                ./tools/friendly_hortative_sena_browser_audit.py
+                ./tools/test_friendly_hortative_sena_browser_audit.py
+                ./tools/friendly_hortative_sena_revision.py
+                ./tools/friendly_hortative_sena_gena_parent_audit.py
+                ./tools/friendly_hortative_sena_promotion_audit.py
+                ./tools/test_friendly_hortative_sena_promotion_audit.py
+                ./tools/test_friendly_hortative_sena_promotion_parent.py
+                ./tools/friendly_hortative_sena_ledger_draft_audit.py
+                ./tools/test_friendly_hortative_sena_ledger_draft_audit.py
+                ./tools/friendly_hortative_sena_ledger_audit.py
+                ./tools/test_friendly_hortative_sena_ledger_audit.py
+                ./tools/test_friendly_hortative_sena_gena_parent_audit.py
+                ./tools/friendly_hortative_sena_installed_audit.py
+                ./tools/test_friendly_hortative_sena_installed_audit.py
+                ./tools/test_friendly_hortative_sena_revision.py
                 ./tools/friendly_command_gena_revision.py
                 ./tools/friendly_command_gena_runtime_audit.py
                 ./tools/test_friendly_command_gena_runtime_audit.py
@@ -617,6 +641,7 @@
                 ./tools/friendly_command_gena_ledger_audit.py
                 ./tools/test_friendly_command_gena_ledger_audit.py
                 ./tools/test_friendly_command_gena_ledger_descendant.py
+                ./tools/test_friendly_hortative_sena_ledger_descendant.py
                 ./tools/giroseo_source_audit.py
                 ./tools/test_giroseo_source_audit.py
                 ./tools/giroseo_streams_audit.py
@@ -1077,6 +1102,7 @@
             python tools/friendly_command_preparation.py
             python tools/friendly_command_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_historical_gena.py'
+            python -m unittest discover -s tools -p 'test_friendly_command_historical_sena.py'
             python tools/degree_expectation_audit.py
             python tools/degree_expectation_runtime.py
             python tools/degree_expectation_corpora.py
@@ -1150,6 +1176,7 @@
             python -m unittest discover -s tools -p 'test_literary_future_kko_package.py'
             python tools/literary_question_geona_runtime.py --report docs/literary-question-geona-packaged-cli-replay.json
             python -m unittest discover -s tools -p 'test_literary_question_geona_runtime.py'
+            python -m unittest discover -s tools -p 'test_sena_geona_ledger_append.py'
             KLEM_GEONA_RUNTIME=docs/literary-question-geona-packaged-cli-replay.json python -m unittest discover -s tools -p 'test_literary_question_geona_runtime.py'
             python tools/literary_question_geona_adapter_audit.py --report docs/literary-question-geona-packaged-adapter.json.gz
             python -m unittest discover -s tools -p 'test_literary_question_geona_adapter_audit.py'
@@ -1273,6 +1300,28 @@
             python -m unittest discover -s tools -p 'test_gentle_command_long_ledger_audit.py'
             python tools/friendly_command_gena_source_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_source_audit.py'
+            python tools/friendly_hortative_sena_source_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_source_audit.py'
+            KLEM_SENA_BINARY_EVIDENCE=captured python tools/friendly_hortative_sena_runtime_audit.py
+            KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_runtime_audit.py'
+            KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_binary_evidence.py'
+            KLEM_SENA_BINARY_EVIDENCE=captured python tools/friendly_hortative_sena_wide_audit.py
+            KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_wide_audit.py'
+            KLEM_SENA_BINARY_EVIDENCE=captured python tools/friendly_hortative_sena_browser_audit.py
+            KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_browser_audit.py'
+            python tools/friendly_hortative_sena_revision.py
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_revision.py'
+            python tools/friendly_hortative_sena_promotion_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_gena_parent_audit.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_promotion_audit.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_promotion_parent.py'
+            python tools/friendly_hortative_sena_ledger_draft_audit.py
+            python tools/friendly_hortative_sena_ledger_audit.py --draft
+            python tools/friendly_hortative_sena_ledger_audit.py
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_ledger_draft_audit.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_ledger_audit.py'
+            KLEM_SENA_BINARY_EVIDENCE=captured python tools/friendly_hortative_sena_installed_audit.py
+            KLEM_SENA_BINARY_EVIDENCE=captured python -m unittest discover -s tools -p 'test_friendly_hortative_sena_installed_audit.py'
             python tools/friendly_command_gena_runtime_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_runtime_audit.py'
             python tools/friendly_command_gena_browser_audit.py
@@ -1286,6 +1335,7 @@
             python tools/friendly_command_gena_ledger_audit.py
             python -m unittest discover -s tools -p 'test_friendly_command_gena_ledger_audit.py'
             python -m unittest discover -s tools -p 'test_friendly_command_gena_ledger_descendant.py'
+            python -m unittest discover -s tools -p 'test_friendly_hortative_sena_ledger_descendant.py'
             python tools/giroseo_source_audit.py
             python -m unittest discover -s tools -p 'test_giroseo_source_audit.py'
             python tools/giroseo_streams_audit.py

@@ -44,7 +44,12 @@ def inspect(v):
     original = {p.removeprefix(revision.CAPTURE_ROOT+'/'):d for p,d in frontend['frozen_inputs'].items() if p.startswith(prefix)}
     captured = {p:d for p,d in report['source_inputs'].items() if p.startswith('web/') and not p.startswith('web/tests/')}
     assert len(original) == 14 and all(captured[p] == d for p,d in original.items()), 'all14 declared frontend build inputs'
-    assert len(captured) == 18 and v['current_frontend'] == captured, 'all18 current SolidJS source inputs'
+    current_matches = v['current_frontend'] == captured
+    if not current_matches and len(v['current_frontend']) == 18 and all(p.startswith('web/') for p in v['current_frontend']):
+        current = {p.removeprefix('web/'):d for p,d in v['current_frontend'].items()}
+        historical = {p.removeprefix('web/'):d for p,d in captured.items()}
+        current_matches = revision.accepts_frontend(current, historical)
+    assert len(captured) == 18 and current_matches, 'all18 current SolidJS source inputs'
     for asset in report['served_assets']:
         assert frontend['assets'][asset['path'].lstrip('/')] == asset['sha256'], 'exact served production asset bytes'
     assert [r['encoding'] for r in browser['responses']] == ['NFC','NFD'], 'both original browser Unicode policies'

@@ -50,12 +50,21 @@ def inputs(draft=False,prepared=None):
         active_reviews=json.loads(reviews_raw);active_reviews['entries'].extend(json.loads(scoped_raw)['entries'])
     previous=historical.original_inputs()
     previous['current_raw']=parent_raw;previous['current_reviews']=json.loads(reviews_raw)
-    return dict(parent_raw=parent_raw,parent_reviews_raw=reviews_raw,
+    values = dict(parent_raw=parent_raw,parent_reviews_raw=reviews_raw,
                 parent_queue_raw=gzip.decompress(read('parent-inventory-review-queue.json.gz')),
                 proposed_raw=proposed_raw,scoped_raw=scoped_raw,draft_raw=read('draft.json'),
                 original_suite_raw=(ROOT/'tests/fixtures/friendly-command-gena-validity.json').read_bytes(),
                 source=source.inputs(),historical=previous,current_raw=current_raw,
                 current_reviews=active_reviews,draft=draft)
+    if not draft and sha(current_raw) != '605f5a1540fec9680143b5112a6dae2b57d52ccd03cba58167bcd10de1046d66':
+        import friendly_hortative_sena_ledger_audit as sena
+        complete = sena.inputs()
+        parent = sena.historical_parent(complete)
+        assert complete['current_raw'] == current_raw and complete['current_reviews'] == active_reviews, 'entire actual Sena input binding'
+        values.update(sena_append=complete, actual_current_raw=current_raw,
+                      actual_current_reviews=active_reviews, current_raw=parent['current_raw'],
+                      current_reviews=parent['current_reviews'])
+    return values
 
 
 def inspect(v):
@@ -98,10 +107,24 @@ def inspect(v):
     assert queued['source_sha256']==review['source_sha256'] and queued['review']['status']=='unreviewed', 'own original unreviewed source preserved'
     draft=json.loads(v['draft_raw'])
     assert draft['original_case_authoring_precedes_runtime'] and draft['review_draft_authored_after_runtime'] and draft['all_five_historical_words_eighteen_broad_contexts_remain_unjudged'], 'honest authoring and unjudged hypotheses preserved'
-    return dict(parent_cases=35740,current_cases=35764,added_cases=24,required=31469,forbidden=4312,
+    result = dict(parent_cases=35740,current_cases=35764,added_cases=24,required=31469,forbidden=4312,
                 parent_reviews=519,current_reviews=520,source_example_groups=4,
                 historical_and_broad_hypotheses_promoted=False,actual_shared_promotion=not v['draft'],
                 context_register_independent_review='pending',full_coverage_complete=False)
+    if not v['draft'] and sha((ROOT / 'tests/fixtures/validity.json').read_bytes()) != '605f5a1540fec9680143b5112a6dae2b57d52ccd03cba58167bcd10de1046d66':
+        import friendly_hortative_sena_ledger_audit as sena
+        complete = v['sena_append']
+        checked = sena.inspect(complete)
+        assert complete['current_raw'] == v['actual_current_raw'] == (ROOT / 'tests/fixtures/validity.json').read_bytes(), 'mandatory entire current Sena ledger bytes'
+        assert complete['current_reviews'] == v['actual_current_reviews'] == json.loads((ROOT / 'docs/inventory-reviews.json').read_bytes()), 'mandatory entire current Sena review fields'
+        assert complete['original']['parent_raw'] == v['current_raw'], 'historical Gena matches exact verified Sena parent'
+        assert json.loads(complete['original']['parent_reviews_raw']) == v['current_reviews'], 'historical Gena reviews match exact verified Sena parent'
+        result.update(verified_current_shared_cases=checked['current_cases'],
+                      verified_current_shared_reviews=checked['current_reviews'],
+                      verified_current_required=checked['required'], verified_current_forbidden=checked['forbidden'],
+                      sena_added_cases=checked['added_cases'],
+                      legacy_checkpoint_fields='Original Gena checkpoint35764/520; actual complete shared totals are verified_current_*')
+    return result
 
 
 if __name__=='__main__':

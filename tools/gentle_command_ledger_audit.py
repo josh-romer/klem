@@ -32,6 +32,11 @@ def inputs():
         import gentle_command_long_ledger_audit as long_audit
         complete = long_audit.inputs()
         values['long_append'] = complete
+        if 'actual_entire_current_raw' in complete:
+            values['actual_entire_current_raw'] = values['actual_current_raw']
+            values['actual_entire_current_reviews'] = values['actual_current_reviews']
+            values['actual_current_raw'] = complete['actual_current_raw']
+            values['actual_current_reviews'] = complete['actual_current_reviews']
         values['current_raw'] = complete['parent_raw']
         values['current_reviews'] = json.loads(complete['parent_reviews_raw'])
     return values
@@ -96,7 +101,7 @@ def inspect(v):
         assert complete['parent_raw'] == v['current_raw'], 'historical gentle matches exact long parent'
         assert json.loads(complete['parent_reviews_raw']) == v['current_reviews'], 'historical gentle reviews match exact long parent'
         checked = long_audit.inspect(complete)
-        return {**result, 'historical': result,
+        outcome = {**result, 'historical': result,
                 'scope': ('historical35704-and-complete-current35764' if gena_current
                           else 'declared-long-parent35740-and-verified-current-Gena35764' if 'gena_append' in complete
                           else 'historical35704-and-complete-current35740'),
@@ -107,6 +112,18 @@ def inspect(v):
                 'long_added_cases': checked['added_cases'],
                 'verified_active_shared_cases': checked.get('complete_current_cases',checked['active_cases']),
                 'verified_active_shared_reviews': checked.get('complete_current_reviews',checked['active_reviews'])}
+        if 'verified_current_shared_cases' in checked:
+            # An explicit historical long35740 view retains its original top-level
+            # bindings. long_audit.inspect above still requires and verifies the
+            # complete actual shared append behind that view. The current Gena
+            # view additionally binds its entire current ledger at this level.
+            if gena_current:
+                assert v['actual_entire_current_raw'] == complete['actual_entire_current_raw'], 'mandatory entire Sena ledger behind historical gentle'
+                assert v['actual_entire_current_reviews'] == complete['actual_entire_current_reviews'], 'mandatory entire Sena reviews behind historical gentle'
+            outcome.update({key: checked[key] for key in (
+                'verified_current_shared_cases', 'verified_current_shared_reviews',
+                'verified_current_required', 'verified_current_forbidden', 'sena_added_cases', 'legacy_checkpoint_fields')})
+        return outcome
     assert v['actual_current_reviews'] == v['current_reviews'], 'complete original current review fields'
     return {**result, 'scope': 'complete-current35704',
             'complete_current_cases': result['active_cases'],

@@ -61,6 +61,7 @@ pub enum AttachmentRule {
     GentleCommandLongVerb,
     /// Native 66968 lists verbs at the bare friendly-command boundary.
     FriendlyCommandGenaVerb,
+    FriendlyHortativeSenaVerb,
     BareBackgroundVerb,
     BareNeuniVerb,
     BareGeolVerb,
@@ -1266,6 +1267,8 @@ impl Annotation {
                             Some(AttachmentRule::GentleCommandLongVerb)
                         } else if bare && form == "게나" && adjective {
                             Some(AttachmentRule::FriendlyCommandGenaVerb)
+                        } else if bare && form == "세나" && adjective {
+                            Some(AttachmentRule::FriendlyHortativeSenaVerb)
                         } else if bare && form == "으렴" && adjective {
                             Some(AttachmentRule::GentleCommandVerb)
                         } else if crate::engine::present_declarative(form) && adjective {
@@ -1367,7 +1370,7 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible
-                        && ending.is_some_and(|i| analysis.morphemes[i].form == "게나")
+                        && ending.is_some_and(|i| matches!(analysis.morphemes[i].form.as_str(), "게나" | "세나"))
                         && ((!bare
                             && (!matches!(pos, "동사" | "보조 동사")
                                 || morphs.iter().any(|component| matches!(component,

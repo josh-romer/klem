@@ -88,12 +88,16 @@ def inspect(v, check_current=True):
                         (binding, 'friendly-command-gena-adapter-build.log')]:
         assert report['log_sha256'] == v['hashes'][log], 'complete actual Gena validation logs'
     if check_current:
-        assert v['current'] == production, 'current complete Gena production closure'
+        current_matches = v['current'] == production
+        if not current_matches:
+            import friendly_hortative_sena_revision as sena
+            current_matches = sena.accepts_production(v['current'])
+        assert current_matches, 'current complete Gena production closure'
     return production
 
 
 def accepts_production(current):
-    """Accept only the complete, independently bound named Gena revision."""
+    """Accept the complete named Gena revision or its strictly proven Sena child."""
     expected = inspect(inputs())
     relative = {}
     for name, digest in current.items():
@@ -107,7 +111,10 @@ def accepts_production(current):
         if name in relative:
             return False
         relative[name] = digest
-    return relative == expected
+    if relative == expected:
+        return True
+    import friendly_hortative_sena_revision as sena
+    return sena.accepts_production(relative)
 
 
 def frontend_inputs():
@@ -133,7 +140,11 @@ def accepts_frontend(current, historical):
     label = 'src/grammar-labels.json'
     assert selected[label] == production['web/' + label], 'Gena frontend belongs to bound production'
     if len(historical) != 18 or set(historical) != set(selected) or historical[label] not in known_labels:
-        return False
+        import friendly_hortative_sena_revision as sena
+        return sena.accepts_frontend(current, historical)
     if any(d != selected[p] for p,d in historical.items() if p != label):
         return False
-    return current == selected
+    if current == selected:
+        return True
+    import friendly_hortative_sena_revision as sena
+    return sena.accepts_frontend(current, historical)

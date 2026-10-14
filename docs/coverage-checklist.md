@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 519 scoped
-  dispositions; 196 entries await a disposition, including entries with
+  The [manual review ledger](inventory-reviews.json) records 521 scoped
+  dispositions; 194 entries await a disposition, including entries with
   implemented behavior elsewhere. The previous 마다 gap has a sourced modern
   structural implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -5260,6 +5260,17 @@ review remains open under the completion review below.
   arbitrary tails, changed case/source fields, ordering, metadata and coordinated
   fixture rewrites remain rejected. Both suites are selected and run by Nix.
   A fresh complete four-check Nix build and main integration remain pending.
+
+  The [current complete promoted Sena Nix gate](friendly-hortative-sena-current-complete-nix-proof-archive.json)
+  now passes all four checks at `ac1a09f`: Rust CLI/web, SolidJS assets,
+  corpus adapter and complete inventory review. All 224 controls from the
+  actual Git-selected source pass before the full build; every 1,158/1,158/18
+  compiled input matches the passed 1,213-test revision. The full producer,
+  receipt and log remain preserved with exact output-attribute bindings.
+  All source files, HEAD, index and six protected executables stayed unchanged.
+  Earlier failed attempts retain their original states. Main-prefix readiness,
+  actual main merge and installed validation, quiet timing and contextual or
+  independent Korean review remain pending.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

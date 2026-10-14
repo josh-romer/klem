@@ -5272,6 +5272,18 @@ review remains open under the completion review below.
   actual main merge and installed validation, quiet timing and contextual or
   independent Korean review remain pending.
 
+  [Sena's actual main integration](friendly-hortative-sena-main-integration-proof-archive.json)
+  now preserves the complete 35,764-case/520-review main prefix and appends
+  exactly its 25 previously authored cases and one bounded review. The actual
+  merge is `9efaee2`; the current main ledger contains 35,789 cases and 521
+  scoped reviews, with 194 entries unreviewed. All 1,158/1,158/18 compiled
+  inputs match the successful four-check Nix revision. The actual Nix-installed
+  CLI passes all 100 checks across the 25 unchanged judgments in NFC/NFD and
+  both cache settings, retaining complete words, byte offsets and cache parity.
+  Whole merge-readiness and installed-output evidence is preserved. Earlier
+  pending or failed records retain their historical states. Quiet timing,
+  contextual/register validation and independent Korean review remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
